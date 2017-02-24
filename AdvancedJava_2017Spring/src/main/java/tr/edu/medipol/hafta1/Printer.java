@@ -47,21 +47,32 @@ public class Printer /* extends Object */ {
 		}
 		yazmaIslemiMevcut = false;
 	}
-	// GETTER(S) AND SETTER(S) -------------
-	public String getMarka() {
-		return marka;
-	}
+	
+	// OBJECT METODLARI -------------
 	
 	@Override
-	public boolean equals(Object arg0) {
-		Printer arg0printer = (Printer) arg0;
-		// return this.getMarka().equals(arg0printer.getMarka());
-		return this.getMarka() == arg0printer.getMarka();
+	public boolean equals(Object otherObj) {
+		
+		if (otherObj instanceof Printer) { // 
+			
+			Printer otherPrinter = (Printer) otherObj;
+			//  return this.getMarka() == otherPrinter.getMarka(); // == nesnelerin memoryde ayni yeri tutup tutmadigini kontrol eder.
+			return this.getMarka().equals(otherPrinter.getMarka()); 
+			
+		} else {
+			return this.equals(otherObj);
+		}
+		
+		
 	}
 
 	@Override
 	public String toString() {
 		return "My tostring: Printer [bekleyenIslem=" + bekleyenIslem + ", marka=" + marka + "]";
 	}
-
+	
+	// GETTER VE SETTER METODLARI -------------
+	public String getMarka() {
+		return marka;
+	}
 }
