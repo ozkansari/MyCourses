@@ -35,16 +35,16 @@ public class PrinterManagement2 {
 	/**
 	 * @param printerListesi
 	 */
-	private static void listeOrnegi(List<Printer> printerListesi) {
-		for (Printer printer : printerListesi) {
+	private static void listeOrnegi(List<Printer> p) {
+		for (Printer printer : p) {
 			System.out.println(printer);
 		}
 		
-		int indexOfSamsung = printerListesi.indexOf(new Printer("Samsung 3"));
-		Printer p = printerListesi.get(indexOfSamsung);
-		printerListesi.remove(p);
+		int indexOfSamsung = p.indexOf(new Printer("Samsung 3"));
+		Printer current = p.get(indexOfSamsung);
+		p.remove(current);
 		
-		for (Iterator iterator = printerListesi.iterator(); iterator.hasNext();) {
+		for (Iterator iterator = p.iterator(); iterator.hasNext();) {
 			Printer printer = (Printer) iterator.next();
 			System.out.println(printer);
 		}
