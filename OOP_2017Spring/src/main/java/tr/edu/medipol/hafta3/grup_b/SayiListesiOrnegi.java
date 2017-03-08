@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta3;
+package tr.edu.medipol.hafta3.grup_b;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +18,9 @@ public class SayiListesiOrnegi {
 				ciftSayilar.add(mevcutDeger);
 			}
 		}
+		sayiListesi.removeAll(ciftSayilar);
 		
 		System.out.println("Listedeki cift sayılar: ");
-		sayiListesi.removeAll(ciftSayilar);
 		for (Integer cift : ciftSayilar) {
 			System.out.println(cift);
 		}
