@@ -15,6 +15,16 @@
 		
 		<link rel="icon" type="image/ico" href="https://ozkansari.github.io/images/favicon-16x16.ico" sizes="16x16" />
 		
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+		<style>
+		  .ui-tabs-vertical { width: 55em; }
+		  .ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+		  .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+		  .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+		  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
+		  .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
+	    </style>
+		
 		<script>
 		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 		ga('create', 'UA-XXXXXXX-Y', 'auto');
@@ -64,40 +74,79 @@
 							<h2>ILERI JAVA UYGULAMALARI</h2>
 							<p>2017 BAHAR - BPR224472</p>
 						</header>
-						<h3>1. Hafta: Temel Java Konu Tekrarları </h3>
-						<p class="description" dir="ltr">
-						    <ul>
-						 	    <li> <a target="_blank" href="https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Spring/src/main/java/tr/edu/medipol/hafta1"> Lab Ornek</a> </li>
+						<div id="tabs" style="width:100%">
+						  <ul style="width:15%">
+						    <li><a href="#tabs-1">1. Hafta ---------</a></li>
+						    <li><a href="#tabs-2">2. Hafta ---------</a></li>
+						    <li><a href="#tabs-3">3. Hafta ---------</a></li>
+						    <li><a href="#tabs-4">4. Hafta ---------</a></li>
+						    <li><a href="#tabs-q">Ek Sorular -------</a></li>
+						    <li><a href="#tabs-notlar">Notlar ------------</a></li>
+						    <li><a href="#tabs-ekstra">Yardımcı -------</a></li>
+						    <li><a href="#tabs-git">Git ----------------</a></li>
+						  </ul>
+						  
+						  <div id="tabs-1" style="width:85%">
+							<h3>1. Hafta: Temel Java Konu Tekrarları </h3>
+							<p class="description" dir="ltr">
+							    <ul>
+							 	    <li> <a target="_blank" href="https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Spring/src/main/java/tr/edu/medipol/hafta1"> Lab Ornek</a> </li>
+								</ul>
+							</p>
+						  </div>
+						  
+						  <div id="tabs-2" style="width:85%">
+							<h3>2. Hafta: Java Koleksiyon Veri Tipi: List ve Map </h3>
+							<p class="description" dir="ltr">
+							    <ul>
+							 	    <li> <a target="_blank" href="https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Spring/src/main/java/tr/edu/medipol/hafta2"> Lab Ornek</a> </li>
+							 	    <li> <a target="_blank" href="https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Spring/src/main/resources/List.pdf"> List veri tipi </a> </li>
+							 	    <li> <a target="_blank" href="http://www.baskent.edu.tr/~tkaracay/etudio/ders/prg/dataStructures/Collections/ClassArrayList01.pdf"> ArrayList</a> </li>
+							 	    <li> <a target="_blank" href=" http://www.baskent.edu.tr/~tkaracay/etudio/ders/prg/dataStructures/Collections/InterfaceMap.pdf"> Map veri tipi</a> </li>
+							 	    <li> <a target="_blank" href="http://www.baskent.edu.tr/~tkaracay/etudio/ders/prg/dataStructures/Collections/Collections01.pdf"> Koleksiyonlar 1</a> </li>
+							 	    <li> <a target="_blank" href="http://www.baskent.edu.tr/~tkaracay/etudio/ders/prg/dataStructures/Collections/collections_ndx.html"> Koleksiyonlar 2</a> </li>  
+								</ul>
+							</p>
+						  </div>
+						  
+						  <div id="tabs-3" style="width:85%">
+						  	<h3>3. Hafta:  </h3>
+						  </div>
+						  
+						  <div id="tabs-4" style="width:85%">
+						  	<h3>4. Hafta:  </h3>
+						  </div>
+						  
+						  <div id="tabs-q" style="width:85%">
+						    <h3>Ek Sorular - </h3>
+						    
+						  </div>
+						  
+						  <div id="tabs-ekstra" style="width:85%">  
+						  	<h3>Yardımcı Kaynaklar</h3>
+							<ul>
+								<li> <a href="http://www.javaturk.org/java-dersleri/"> Akin Kaldiroglu - Java </a></li>
+								<li> <a href="http://web.cs.hacettepe.edu.tr/~bbm102/misc/java_notes_by_oa.pdf"> Hacettepe Üni - Java </a></li>
+								<li> <a href="http://yazilim.gumushane.edu.tr/user_files/files/Ozkan/DersNotlari/NTP_Bolum1.pdf"> Gumushane Üni - Java </a></li>	
+								<li> <a target="_blank" href="https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Spring/src/main/resources/CoreJava.pdf"> Core Java </a> </li>
 							</ul>
-						</p>
-						<h3>2. Hafta: Java Koleksiyon Veri Tipi: List ve Map </h3>
-						<p class="description" dir="ltr">
-						    <ul>
-						 	    <li> <a target="_blank" href="https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Spring/src/main/java/tr/edu/medipol/hafta2"> Lab Ornek</a> </li>
-						 	    <li> <a target="_blank" href="https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Spring/src/main/resources/List.pdf"> List veri tipi </a> </li>
-						 	    <li> <a target="_blank" href="http://www.baskent.edu.tr/~tkaracay/etudio/ders/prg/dataStructures/Collections/ClassArrayList01.pdf"> ArrayList</a> </li>
-						 	    <li> <a target="_blank" href=" http://www.baskent.edu.tr/~tkaracay/etudio/ders/prg/dataStructures/Collections/InterfaceMap.pdf"> Map veri tipi</a> </li>
-						 	    <li> <a target="_blank" href="http://www.baskent.edu.tr/~tkaracay/etudio/ders/prg/dataStructures/Collections/Collections01.pdf"> Koleksiyonlar 1</a> </li>
-						 	    <li> <a target="_blank" href="http://www.baskent.edu.tr/~tkaracay/etudio/ders/prg/dataStructures/Collections/collections_ndx.html"> Koleksiyonlar 2</a> </li>  
+						  </div>
+						  
+						  <div id="tabs-git" style="width:85%">
+							<h3>GitHub ve Git</h3>
+							<ul>
+								<li> <a href="http://wiki.eclipse.org/EGit/User_Guide#GitHub_Tutorial"> GitHub Eclipse Tutorial (ingilizce) </a></li>
+								<li> <a href="https://github.com/COMU/bohca/wiki/G%C4%B0T-KULLANIM-KLAVUZU"> GIT KULLANIM KLAVUZU </a></li>
+								<li> <a href="https://blog.kodcu.com/2012/10/github-nedir-githubta-deporepository-nasil-olusturulur/"> Github Nedir, Github Depo(repository) Nasil Olusturulur? </a></li>
+								<li> <a href="http://bilgegunluk.com/github-kullanimi-yeni-baslayanlar-icin-alternatif-anlatimlar-eklendi-guncel/"> Github Kullanimi (Yeni Baslayanlar icin resimli videolu anlatimlar) </a></li>	
 							</ul>
-						</p>
-						...
-						<h3>Yardımcı Kaynaklar</h3>
-						<ul>
-							<li> <a href="http://www.javaturk.org/java-dersleri/"> Akin Kaldiroglu - Java </a></li>
-							<li> <a href="http://web.cs.hacettepe.edu.tr/~bbm102/misc/java_notes_by_oa.pdf"> Hacettepe Üni - Java </a></li>
-							<li> <a href="http://yazilim.gumushane.edu.tr/user_files/files/Ozkan/DersNotlari/NTP_Bolum1.pdf"> Gumushane Üni - Java </a></li>	
-							<li> <a target="_blank" href="https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Spring/src/main/resources/CoreJava.pdf"> Core Java </a> </li>
-						</ul>
-						...
-						<h3>GitHub ve Git</h3>
-						<ul>
-							<li> <a href="http://wiki.eclipse.org/EGit/User_Guide#GitHub_Tutorial"> GitHub Eclipse Tutorial (ingilizce) </a></li>
-							<li> <a href="https://github.com/COMU/bohca/wiki/G%C4%B0T-KULLANIM-KLAVUZU"> GIT KULLANIM KLAVUZU </a></li>
-							<li> <a href="https://blog.kodcu.com/2012/10/github-nedir-githubta-deporepository-nasil-olusturulur/"> Github Nedir, Github Depo(repository) Nasil Olusturulur? </a></li>
-							<li> <a href="http://bilgegunluk.com/github-kullanimi-yeni-baslayanlar-icin-alternatif-anlatimlar-eklendi-guncel/"> Github Kullanimi (Yeni Baslayanlar icin resimli videolu anlatimlar) </a></li>	
-						</ul>
-						<img alt="Medipol" src="http://www.medipol.edu.tr/Themes/standart/Images/logo.png">
+						  </div>
+						  
+						  <div id="tabs-notlar" style="width:85%">
+						  	<h3>NOTLAR</h3>
+						  </div>
+						  <br/>		
+						  <img alt="Medipol" src="http://www.medipol.edu.tr/Themes/standart/Images/logo.png">
 					</div>
 					
 				</section>
@@ -118,6 +167,13 @@
 			<script src="https://ozkansari.github.io/assets/js/skel.min.js"></script>
 			<script src="https://ozkansari.github.io/assets/js/util.js"></script>
 			<script src="https://ozkansari.github.io/assets/js/main.js"></script>
+	    	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	    	<script>
+			    $( function() {
+			      $( "#tabs" ).tabs({ active: 2 }).addClass( "ui-tabs-vertical ui-helper-clearfix" );
+			      $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+			    } );
+			</script>
 
 	</body>
 </html>
