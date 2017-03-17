@@ -1,15 +1,14 @@
-package tr.edu.medipol.hafta3;
+package tr.edu.medipol.hafta4;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import tr.edu.medipol.hafta3.MenuSecimi;
+
 public class MenuOrnegi {
 
 	private static Scanner ekranOkuyucu = new Scanner(System.in);
-	
-	private static List<String> ogrenciListesi = new ArrayList<>();
-	
 	
 	public static void main(String[] args) {
 		
@@ -66,9 +65,9 @@ public class MenuOrnegi {
 		ogrencileriEkranaBas(0);
 		System.out.print("Seciminiz: ");
 		int kullaniciSecimi = kullaniciIntegerGirdiAl();
-		System.out.println(ogrenciListesi.get(kullaniciSecimi-1) 
+		System.out.println(ogrenciListesi2.get(kullaniciSecimi-1) 
 				+ " isimli ogrenci siliniyor.");
-		ogrenciListesi.remove(kullaniciSecimi-1);
+		ogrenciListesi2.remove(kullaniciSecimi-1);
 		
 	}
 	
@@ -78,31 +77,27 @@ public class MenuOrnegi {
 	private static void ogrenciEklemeIslemi() {
 		System.out.print("Ogrenci Ad Soyad Giriniz: ");
 		String adSoyad = ekranOkuyucu.nextLine();
-		ogrenciListesi.add(adSoyad);
-		
-		System.out.print("Ogrenci Tip Giriniz: ");
+
+		System.out.print("Ogrenci Tip Giriniz (YL, Doktora vb.) : "); // 
 		String ogrenciTipi = ekranOkuyucu.nextLine();
-		/*
-		String bolum = "";
-		System.out.println("Ogrenci Bolum Giriniz: ");
-		ekranaBolumleriBas();
-		int bolumId = kullaniciIntegerGirdiAl();
-		switch (bolumId) {
-		case 1:
-			bolum = "MYO"; break;
-		case 2:
-			bolum = "Isletme"; break;
-		case 3:
-			bolum = "Matematik"; break;
-		default: break;
-		}
-		*/
+		
+		System.out.print("Ogrenci Bolum Giriniz (MYO, Isletme vb..) : ");
 		String bolum = ekranOkuyucu.nextLine();
 		
-		Ogrenci yeniOgrenci = new Ogrenci(adSoyad, ogrenciTipi, bolum);
-		ogrenciListesi2.add(yeniOgrenci);
-		
-		System.out.println(adSoyad + " isimli ogrenci eklendi.");
+		Ogrenci yeniOgrenci = null;
+		if (ogrenciTipi.equals("YL")) {
+			yeniOgrenci = new YuksekLisansOgrencisi("Ozkan", adSoyad, bolum);
+		} else if (ogrenciTipi.equals("Doktora")) {
+			yeniOgrenci = new DoktoraOgrencisi(adSoyad, bolum);
+		} 
+
+		if (yeniOgrenci != null) {
+			ogrenciListesi2.add(yeniOgrenci);
+			System.out.println(adSoyad + " isimli ogrenci eklendi.");
+		} else {
+			System.out.println("Gecersiz ogrenci bolumu");
+		}
+			
 	}
 
 	private static void ogrenciListelemeIslemi() {
@@ -110,22 +105,22 @@ public class MenuOrnegi {
 	}
 	
 	private static void ogrencileriEkranaBas(int yontem) {
-		if (ogrenciListesi.isEmpty()) {
+		if (ogrenciListesi2.isEmpty()) {
 			System.out.println("<< Sistemde kayitli ogrenci yok >>");
 			return;
 		}
 		
 		if (yontem == 0) {
 			int no = 1;
-			for (String ogrenci : ogrenciListesi) {
-				System.out.println(no + " -) " + ogrenci);
+			for (Ogrenci ogrenci : ogrenciListesi2) {
+				System.out.println(no + " -) " + ogrenci.ogrenciBilgileriAl());
 				no++;
 			}
 		} else if (yontem == 1) {
-			System.out.println(ogrenciListesi);
+			System.out.println(ogrenciListesi2);
 		} else {
-			for (int i = 0; i < ogrenciListesi.size(); i++) {
-				System.out.println(i + " -) " + ogrenciListesi.get(i));
+			for (int i = 0; i < ogrenciListesi2.size(); i++) {
+				System.out.println(i + " -) " + ogrenciListesi2.get(i));
 			}
 		}
 	}
@@ -139,22 +134,5 @@ public class MenuOrnegi {
 		System.out.println("(0) Cikis");
 		System.out.println("************************");
 	}
-	
-	private static void ekranaBolumleriBas() {
-		System.out.println("************************");
-		System.out.println("(1) MYO");
-		System.out.println("(2) Isletme");
-		System.out.println("(3) Matematik");
-		System.out.println("************************");
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
