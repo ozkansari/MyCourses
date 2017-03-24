@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta5;
+package tr.edu.medipol.hafta5.ornek;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -2,7 +2,7 @@ package tr.edu.medipol.hafta4;
 
 public abstract class Ogrenci {
 
-	public String adSoyad;
+	protected String adSoyad;
 	public String bolum;
 	
 	public Ogrenci(String adSoyad,
@@ -11,13 +11,34 @@ public abstract class Ogrenci {
 		this.bolum = bolum;
 	}
 	
-	public abstract String ogrenciBilgileriAl();
+	public abstract String 
+		ogrenciBilgileriAl();
 	
-	public abstract String ogrenciTipiniAl();
+	public abstract String 
+		ogrenciTipiniAl();
 	
 	public String ogrenciBilgileriAl(boolean ekstraBilgi) {
-		return "Ogrenci";
+		String bilgi = "Ogrenci: ";
+		bilgi += bolum.trim();
+		bilgi += adSoyad.toUpperCase();  
+		bilgi += ogrenciBilgileriAl();
+		
+		return  bilgi;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

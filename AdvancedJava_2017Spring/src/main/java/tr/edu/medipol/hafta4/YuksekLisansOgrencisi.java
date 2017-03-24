@@ -8,6 +8,7 @@ public class YuksekLisansOgrencisi extends Ogrenci {
 			String adSoyad, String bolum) {
 		super(adSoyad.toLowerCase(), bolum);
 		this.danismanHoca = danismanHoca;
+		
 	}
 
 	@Override

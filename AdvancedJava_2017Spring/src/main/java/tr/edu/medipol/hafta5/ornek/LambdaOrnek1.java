@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta5;
+package tr.edu.medipol.hafta5.ornek;
 
 interface IFunction {
 	int op(int a, int b);
