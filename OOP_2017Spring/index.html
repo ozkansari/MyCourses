@@ -313,6 +313,7 @@
 										<td title="Quiz-3">Q-3</td>
 										<td title="Vize">V</td>
 										<td title="Final">F</td>
+										<td title="SONUC">S</td>
 									</tr>
 								</thead>
 								<tbody>
@@ -1112,11 +1113,22 @@
 			    			  "scrollX": true,
 			    			  "paging":   false,
 			    			  "columnDefs": [
-			    			       {
+									{
+									    "render": function ( data, type, row ) {
+									    	odevOrt = ( row[2]+row[3]+row[4]+row[5] ) / 4;
+									    	quizOrt = ( row[12]/1);
+									    	vsinav = 100;
+									    	fsinav = 100;
+									        return odevOrt*0.2 + quizOrt*0.2 + vsinav*0.3 + fsinav*0.4;
+									    },
+									    "targets": 17
+									},
+			    			        {
 			    			           "targets": [ 6,7,8,9,10,11 ],
 			    			           "visible": false
-			    			       }
-			    			  ]
+			    			        }
+			    			  ],
+			    			  "order": [[ 17, "desc" ]]
 			    		  }
 			      );
 			    } );
