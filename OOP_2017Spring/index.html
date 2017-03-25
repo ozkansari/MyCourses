@@ -1107,7 +1107,17 @@
 	    	<script>
 			    $( function() {
 			      $( "#tabs" ).tabs({ active: 4 }).addClass( "ui-tabs-vertical ui-helper-clearfix" );
-			      $('#notesTable').DataTable();
+			      $('#notesTable').DataTable(
+			    		  {
+			    			  "scrollX": true,
+			    			  "columnDefs": [
+			    			       {
+			    			           "targets": [ 6,7,8,9,10,11 ],
+			    			           "visible": false
+			    			       }
+			    			  ]
+			    		  }
+			      );
 			    } );
 			</script>
 
