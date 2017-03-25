@@ -313,7 +313,7 @@
 										<td title="Quiz-3">Q-3</td>
 										<td title="Vize">V</td>
 										<td title="Final">F</td>
-										<td title="SONUC">S</td>
+										<td title="SONUC: Su anki notlariniza gore kabaca ortalama hesabi.">S</td>
 									</tr>
 								</thead>
 								<tbody>
@@ -1163,8 +1163,13 @@
 									    	
 									    	var quizOrt = ( parseInt(row[12]) || 0 );
 									    	
-									    	var vsinav = ( parseInt(row[15]) || 0 );
-									    	var fsinav = ( parseInt(row[16]) || 0 );
+									    	// alert(row[1]);
+									    	// alert(odevOrt);
+									    	// alert(quizOrt);
+									    	
+									    	var def = ( odevOrt*0.2 + quizOrt*0.15 ) / 0.35;
+									    	var vsinav = ( parseInt(row[15]) || def );
+									    	var fsinav = ( parseInt(row[16]) || def );
 									    	
 									    	var sonuc = odevOrt*0.2 + quizOrt*0.15 + vsinav*0.3 + fsinav*0.4;
 									        return sonuc.toFixed(1);
