@@ -561,7 +561,7 @@
 										<td></td>
 										<td>Furkan Yilmaz</td>
 										<td title="Print constructor icinde olmamali, kod formatlama eksik">85</td>
-										<td title="Tebrikler.">100+</td>
+										<td title="Tebrikler.">100</td>
 										<td title="1. gonderim: Ad ve notu ayni for icinde sorsan daha iyi olur. Ogrenci sinifi tanimlamalisin. 2. Gonderim: sinif kullanmali. Not ayni.">75</td>
 										<td title=""></td>
 										<td title=""></td>
@@ -940,7 +940,7 @@
 									<tr>
 										<td>HR160037</td>
 										<td>Didem Laloglu</td>
-										<td title="Gec Gonderim. Guzel kod.">75+</td>
+										<td title="Gec Gonderim. Guzel kod.">75</td>
 										<td title="Gonderim yok" style="color:red;">0</td>
 										<td title="Gec gonderim. Derlenmeyen kod. Isim ve not Ogrenci diye ayrı bir tipte depolanmali, listede de Ogrenci nesneleri tutulmali." >55</td>
 										<td title=""></td>
@@ -1146,20 +1146,28 @@
 	    	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	    	<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 	    	<script>
-			    $( function() {
-			      $( "#tabs" ).tabs({ active: 4 }).addClass( "ui-tabs-vertical ui-helper-clearfix" );
-			      $('#notesTable').DataTable(
+	    	    $(document).ready(function() {
+			      var table = $('#notesTable').DataTable(
 			    		  {
 			    			  "scrollX": true,
 			    			  "paging":   false,
 			    			  "columnDefs": [
 									{
 									    "render": function ( data, type, row ) {
-									    	odevOrt = ( row[2]+row[3]+row[4]+row[5] ) / 4;
-									    	quizOrt = ( row[12]/1);
-									    	vsinav = 100;
-									    	fsinav = 100;
-									        return odevOrt*0.2 + quizOrt*0.2 + vsinav*0.3 + fsinav*0.4;
+									    	
+									    	var odevOrt = 0;
+									    	for (i = 2; i < 6; i++) { 
+									    		odevOrt += ( parseInt(row[i]) || 0 );
+									    	}
+									    	odevOrt = odevOrt / 4;
+									    	
+									    	var quizOrt = ( parseInt(row[12]) || 0 );
+									    	
+									    	var vsinav = ( parseInt(row[15]) || 0 );
+									    	var fsinav = ( parseInt(row[16]) || 0 );
+									    	
+									    	var sonuc = odevOrt*0.2 + quizOrt*0.15 + vsinav*0.3 + fsinav*0.4;
+									        return sonuc.toFixed(1);
 									    },
 									    "targets": 17
 									},
@@ -1171,6 +1179,21 @@
 			    			  "order": [[ 17, "desc" ]]
 			    		  }
 			      );
+			      
+			      $( "#tabs" ).tabs({ 
+			    	  active: 4,
+			    	  activate: function(event, ui){
+			    		  var active = $('#tabs').tabs('option', 'active');
+			    		  if(active == 11) {
+			    			  table
+			    			    .rows()
+			    			    .invalidate()
+			    			    .draw();
+			    		  }
+			    	  }
+			      })
+			      .addClass( "ui-tabs-vertical ui-helper-clearfix" );
+			      
 			    } );
 			</script>
 
