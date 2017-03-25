@@ -12,8 +12,10 @@
 		<meta name="keywords" content="me, hugo, hugo theme, blog, pages, personal site">
         
 		<link rel="stylesheet" href="https://ozkansari.github.io/assets/css/main-blue.css" />
+		
 		<link rel="icon" type="image/ico" href="https://ozkansari.github.io/images/favicon-16x16.ico" sizes="16x16" />
 		
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 		<style>
 		  .ui-tabs-vertical { width: 55em; }
@@ -291,7 +293,7 @@
 						  </div>
 						  <div id="tabs-notlar" style="width:85%">
 						  	<h3>NOTLAR</h3>
-							<table>
+							<table id="notesTable" class="display" cellspacing="0" width="100%">
 								<thead>
 									<tr>
 										<td>No</td>
@@ -1093,7 +1095,7 @@
 				</section>
 			</div>
 
-		
+			
 			<script src="https://ozkansari.github.io/assets/js/jquery.min.js"></script>
 			<script src="https://ozkansari.github.io/assets/js/jquery.scrollzer.min.js"></script>
 			<script src="https://ozkansari.github.io/assets/js/jquery.scrolly.min.js"></script>
@@ -1101,9 +1103,11 @@
 			<script src="https://ozkansari.github.io/assets/js/util.js"></script>
 			<script src="https://ozkansari.github.io/assets/js/main.js"></script>
 	    	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	    	<script src="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"></script>
 	    	<script>
 			    $( function() {
 			      $( "#tabs" ).tabs({ active: 4 }).addClass( "ui-tabs-vertical ui-helper-clearfix" );
+			      $('#notesTable').DataTable();
 			    } );
 			</script>
 
