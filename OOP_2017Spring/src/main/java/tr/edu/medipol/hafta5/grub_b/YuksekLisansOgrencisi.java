@@ -6,4 +6,9 @@ public class YuksekLisansOgrencisi extends Ogrenci {
 		super(ogrenciAd);
 	}
 
+	@Override
+	public String ogrenciTipi() {
+		return "Yuksek L.";
+	}
+
 }

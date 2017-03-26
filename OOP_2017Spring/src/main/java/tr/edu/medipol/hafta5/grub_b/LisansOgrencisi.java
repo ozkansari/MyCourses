@@ -6,4 +6,9 @@ public class LisansOgrencisi extends Ogrenci {
 		super(ogrenciAd);
 	}
 
+	@Override
+	public String ogrenciTipi() {
+		return "Lisans";
+	}
+
 }
