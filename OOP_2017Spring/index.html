@@ -1180,6 +1180,25 @@
 									    },
 									    "targets": 17
 									},
+									{
+										"render": function ( data, type, row ) {
+											
+											var odev1Ort = 0;
+									    	for (i = 2; i < 6; i++) { 
+									    		odev1Ort += ( parseInt(row[i]) || 0 );
+									    	}
+									    	odev1Ort = odev1Ort / 4;
+									    	
+									    	var quiz1Ort = ( parseInt(row[6]) || 0 );
+									    	
+									    	var sinav1Ort = ( parseInt(row[7]) || (odev1Ort*0.5 + quiz1Ort*0.5) );
+									    	
+											var vize = odev1Ort*0.2 + quiz1Ort*0.2 + sinav1Ort*0.6;
+											
+									        return vize.toFixed(1);
+									    },
+									    "targets": 8
+									},
 			    			        {
 			    			           "targets": [ 9,10,11,12,13,14 ],
 			    			           "visible": false
