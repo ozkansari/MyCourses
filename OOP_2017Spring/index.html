@@ -1165,7 +1165,7 @@
 									    	odev1Ort = odev1Ort / 4;
 									    	
 									    	var quiz1Ort = ( parseInt(row[6]) || 0 );
-									    	var sinav1Ort = ( parseInt(row[7]) || quiz1Ort );
+									    	var sinav1Ort = ( parseInt(row[7]) );
 									    	
 									    	// alert(row[1]);
 									    	// alert(odevOrt);
@@ -1173,7 +1173,7 @@
 									    	
 									    	var vize = odev1Ort*0.2 + quiz1Ort*0.2 + sinav1Ort*0.6;
 									    	
-									    	var fsinav = ( parseInt(row[16]) || vize );
+									    	var fsinav = ( parseInt(row[16]) );
 									    	
 									    	var sonuc = vize*0.4 + fsinav*0.6;
 									        return sonuc.toFixed(1);
