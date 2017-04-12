@@ -24,8 +24,7 @@ class LisansOgrencisi extends Ogrenci {
 
 	@Override
 	public String ogrenciTipi() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Lisans";
 	}
 	
 }

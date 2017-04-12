@@ -1,4 +1,4 @@
-package tr.edu.medipol.ogrenciler.tahitdevegonu.odev2;
+package tr.edu.medipol.ogrenciler.tahirdevegonu.odev2;
 
 public class MedipolNYP2017BaharOdev {
 	public static void main(String[] args) {
