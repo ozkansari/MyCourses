@@ -77,10 +77,16 @@
 						</header>
 						
 						<p>
-							<h4> BUNDAN SONRA ODEV 1-4 ICIN GEC GONDERIM KABUL EDILMEYECEKTIR. NOTLARIN HEPSI GIRILMISTIR. EKSIK NOTUNUZ OLDUGUNU DUSUNUYORSANIZ HEMEN BANA BILDIRIN. ITIRAZ SURESI 13 NISAN.</h4>
+							<h4>20 NISAN PERSEMBE gunu <u>notu 60'dan dusuk</u> olanlara <u>katilim zorunlu olmayan</u> bir telafi quizi yapilacaktir. Yeni vize notlariniz (quiz+vize)/2 seklinde hesaplanacaktir. Katilim zorunlu değil. Vizeye giremeyenler de katilabilir. </h4>
 						</p>
 						<p>
-							<h4> VIZE SINAV NOTLARINIZ GIRILMISTIR. NOTLAR KISMINDAKI S1 SUTUNUNU KONTROL EDINIZ. TUM ODEV ve QUIZ NOTLARINIZ DA GIRILMISTIR. KONTROL EDINIZ. ITIRAZ SURESI 13 NISAN.</h4>
+							<h5> Notlar kismindaki V kolonu Mebise girilecek Vize notunuzu gostermektedir. "Odevler*0.2+Quiz*0.2+Vize*0.6+3" seklinde hesaplanmistir.</h5>
+						</p>
+						<p>
+							<h5> BUNDAN SONRA ODEV 1-4 ICIN GEC GONDERIM KABUL EDILMEYECEKTIR. NOTLARIN HEPSI GIRILMISTIR. EKSIK NOTUNUZ OLDUGUNU DUSUNUYORSANIZ HEMEN BANA BILDIRIN. ITIRAZ SURESI 13 NISAN.</h5>
+						</p>
+						<p>
+							<h5> VIZE SINAV NOTLARINIZ GIRILMISTIR. NOTLAR KISMINDAKI S1 SUTUNUNU KONTROL EDINIZ. TUM ODEV ve QUIZ NOTLARINIZ DA GIRILMISTIR. KONTROL EDINIZ. ITIRAZ SURESI 13 NISAN.</h5>
 						</p>
 						<p>
 							<h5>Eksik odevler (1-4) için son gonderim tarihi 2 Nisan gun sonudur. Gec odevlerden minimum 25 puan eksiltilerek degerlendirilir.</h5>
@@ -334,7 +340,7 @@
 										<td>O4</td>
 										<td title="Quiz-1"><a href="https://github.com/ozkansari/MyCourses/blob/master/OOP_2017Spring/_docs/exams/QUIZ1a.docx?raw=true">Q-1</a></td>
 										<td title="Vize Sinavi">S1</td>
-										<td title="1. Degerlendirme Notu (Odevler*0.2+Quiz*0.2+Vize*0.6)">V</td>
+										<td title="1. Degerlendirme Notu (Odevler*0.2+Quiz*0.2+Vize*0.6+3)">V</td>
 										<td></td>
 										<td></td>
 										<td></td>
@@ -1298,7 +1304,7 @@
 									    	// alert(odevOrt);
 									    	// alert(quizOrt);
 									    	
-									    	var vize = odev1Ort*0.2 + quiz1Ort*0.2 + sinav1Ort*0.6;
+									    	var vize = odev1Ort*0.2 + quiz1Ort*0.2 + sinav1Ort*0.6 + 3;
 									    	
 									    	var fsinav = ( parseInt(row[16]) || vize);
 									    	
@@ -1320,7 +1326,7 @@
 									    	
 									    	var sinav1Ort = ( parseInt(row[7]) || (odev1Ort*0.5 + quiz1Ort*0.5) );
 									    	
-											var vize = odev1Ort*0.2 + quiz1Ort*0.2 + sinav1Ort*0.6;
+											var vize = odev1Ort*0.2 + quiz1Ort*0.2 + sinav1Ort*0.6 + 3;
 											
 									        return vize.toFixed(1);
 									    },
@@ -1336,7 +1342,7 @@
 			      );
 			      
 			      $( "#tabs" ).tabs({ 
-			    	  active: 5,
+			    	  active: 7,
 			    	  activate: function(event, ui){
 			    		  var active = $('#tabs').tabs('option', 'active');
 			    		  if(active == 11) {
