@@ -8,6 +8,22 @@ public class ThreadOrnegi {
 		new Thread(new RunnableTest("Thread-4", 4)).start();
 	}
 }
+class ThreadTest extends Thread { // extends Thread  arkaplanda yeni akis acma ozelligi kazandiriyor
+	int beklemeSuresi;
+	public ThreadTest(String str, int beklemeSn) {
+		super(str);
+		this.beklemeSuresi = beklemeSn * 1000;
+	}
+	public void run() {
+		while(true) {
+			System.out.println(getName() + " calisiyor.");
+			try {
+				sleep(beklemeSuresi);
+			} catch (InterruptedException e) {
+			}
+		}
+	}
+}
 class RunnableTest implements Runnable {
 	int beklemeSuresi;
 	String isim;
@@ -25,22 +41,7 @@ class RunnableTest implements Runnable {
 		}
 	}	
 }
-class ThreadTest extends Thread { // extends Thread  arkaplanda yeni akis acma ozelligi kazandiriyor
-	int beklemeSuresi;
-	public ThreadTest(String str, int beklemeSn) {
-		super(str);
-		this.beklemeSuresi = beklemeSn * 1000;
-	}
-	public void run() {
-		while(true) {
-			System.out.println(getName() + " calisiyor.");
-			try {
-				sleep(beklemeSuresi);
-			} catch (InterruptedException e) {
-			}
-		}
-	}
-}
+
 
 
 
