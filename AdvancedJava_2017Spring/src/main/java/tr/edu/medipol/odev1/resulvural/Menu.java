@@ -1,4 +1,4 @@
-package tr.edu.medipol.odev1.ahmetselcukozdemir;
+package tr.edu.medipol.odev1.resulvural;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -6,20 +6,21 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Gecersiz Resul Vural, Sefa Okuyucu ve Sezer Altun ile cok benzer.
+ * Gecersiz Ahmet Selcuk Ozdemir, Sefa Okuyucu ve Sezer Altun ile cok benzer.
  */
 
 /**
- * Created by ASO on 9.04.2017.
+ * Created by Rsl on 9.04.2017.
  */
+
 public class Menu {
     public static Scanner MenuSec = new Scanner(System.in);
 
     public static void MenuGoster()
     {
-        System.out.println("1-) Ogrenci Ekleme");
-        System.out.println("2-) Ogrenci Silme");
-        System.out.println("3-) Ogrenci Listeleme");
+        System.out.println("1-) Öğrenci Ekleme");
+        System.out.println("2-) Öğrenci Silme");
+        System.out.println("3-) Öğrenci Listeleme");
         System.out.println("0-) Çıkış");
 
 
@@ -56,21 +57,17 @@ public class Menu {
                     MenuSec.close();
                     System.exit(0);
 
-
                     break;
 
                 default:
                     break;
             }
 
-
-
-
         }
     }
     public static void OgrenciEkleme()
     {
-        System.out.println("Lütfen ad soyad giriniz: ");
+        System.out.println("Lütfen Ad ve Soyad giriniz: ");
         String adSoyad = MenuSec.nextLine();
 
         System.out.println("Öğrenci tipini Griniz (MYO/Lisans/YL/Doktora");
@@ -94,32 +91,25 @@ public class Menu {
 
         if (yeniOgrenci != null) {
             OgrenciListesi.add(yeniOgrenci);
-            System.out.println(adSoyad + " isimli ogrenci eklendi.Dosyaya yazma işlemi için programdan çıkış yapınız.");
+            System.out.println(adSoyad + " isimli ögrenci eklendi.Dosyaya yazma işlemi için programdan çıkış yapınız.");
         }
 
         else
         {
-            System.out.println("Gecersiz ogrenci bolumu");
+            System.out.println("Gecersiz ögrenci bölümü");
         }
-
 
     }
     private static void ogrenciSilme() {
 
-        //ArrayListten veri silme
-        System.out.println("Silmek istediginiz ogrenciyi seciniz: ");
+
+        System.out.println("Silmek istediginiz ögrenciyi seçiniz: ");
         ogrencileriEkranaBas(0);
         System.out.print("Seciminiz: ");
         int kullaniciSecimi = kullaniciIntegerGirdiAl();
         System.out.println(OgrenciListesi.get(kullaniciSecimi-1)
-                + " isimli ogrenci siliniyor.");
+                + " isimli öğrenci siliniyor.");
         OgrenciListesi.remove(kullaniciSecimi-1);
-
-
-
-        //Dosyadanverisilme
-
-
 
     }
     private static Integer kullaniciIntegerGirdiAl() {
@@ -130,7 +120,7 @@ public class Menu {
             girdi = Integer.valueOf( kullaniciGirisi );
         }
         catch(Exception e) {
-            System.out.println("Gecerli bir deger giriniz. Girdiginiz deger: "
+            System.out.println("Geçerli bir değer giriniz. Girdiğiniz değer: "
                     + kullaniciGirisi);
         }
         return girdi;
