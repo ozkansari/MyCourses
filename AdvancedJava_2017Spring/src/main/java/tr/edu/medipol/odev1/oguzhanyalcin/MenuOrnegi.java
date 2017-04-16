@@ -1,4 +1,5 @@
-package tr.edu.medipol.odev1.cenkhanakdemir;
+package tr.edu.medipol.odev1.oguzhanyalcin;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,9 +8,8 @@ import java.io.*;
 
 /** ozkans Degerlendirme
 
-Gecersiz Beyza Odeyen ve Oguzhan Yalcin ile ayni.
-
- */
+Gecersiz Beyza Odeyen ve Cenkhan Akdemir ile ayni.
+*/
 public class MenuOrnegi {
 
 	private static Scanner ekranOkuyucu = new Scanner(System.in);
@@ -123,7 +123,7 @@ public class MenuOrnegi {
 		System.out.print("Ogrenci Tipi Giriniz (YL, Doktora , Lisans) : "); // 
 		String ogrenciTipi = ekranOkuyucu.nextLine();
 		
-		System.out.print("Ogrenci Bolum Giriniz (Muhendis,Fakulte, Bilgisayar Programciligi , Saglýk vb..) : ");
+		System.out.print("Ogrenci Bolum Giriniz (MYO, Isletme vb..) : ");
 		String bolum = ekranOkuyucu.nextLine();
 		
 		Ogrenci yeniOgrenci = null;
@@ -191,13 +191,13 @@ public class MenuOrnegi {
 	}
 
 	private static void ekranaMenuyuBas() {
-
+		System.out.println("************************");
 		System.out.println("MENU");
 		System.out.println("(1)--> Ogrenci Ekle");
 		System.out.println("(2)--> Ogrenci Sil");
-		System.out.println("(3)--> Ogrenci Listele");
+		System.out.println("(3)--> Ogrencileri Listele");
 		System.out.println("(0)--> Cikis");
-		System.out.println("*------------------------*");
+		System.out.println("************************");
 	}
 	
 }
