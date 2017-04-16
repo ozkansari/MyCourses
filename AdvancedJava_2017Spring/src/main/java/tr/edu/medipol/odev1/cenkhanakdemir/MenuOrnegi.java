@@ -7,13 +7,7 @@ import java.io.*;
 
 /** ozkans Degerlendirme
 
-Menu: 5/5
-Ogrenci Islemleri: 15/15
-Polimorphism: 15/15
-Dosyadan Okuma: 25/25
-Dosyaya Yazma:  25/25
-Genel Program: 15/15
-Derste Yapýlan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Gecersiz Beyza Odeyen ile ayni.
 
  */
 public class MenuOrnegi {

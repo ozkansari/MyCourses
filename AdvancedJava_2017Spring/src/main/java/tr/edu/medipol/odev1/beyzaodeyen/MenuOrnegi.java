@@ -7,6 +7,8 @@ import java.io.*;
 
 /** ozkans Degerlendirme
 
+Gecersiz Cenkhan Akdemir ile ayni.
+
 Menu: 5/5
 Ogrenci Islemleri: 15/15
 Polimorphism: 15/15
