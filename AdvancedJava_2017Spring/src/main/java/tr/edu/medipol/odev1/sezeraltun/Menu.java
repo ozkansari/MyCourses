@@ -10,6 +10,8 @@ import java.util.Scanner;
 
 /** ozkans Degerlendirme
 
+Gecersiz Sefa Okuyucu cok benzer.
+
 Menu: 5
 Ogrenci Islemleri: 15
 Polimorphism: 15
