@@ -8,13 +8,15 @@ import java.util.Scanner;
 
 /** ozkans Degerlendirme
 
+Erhan Kilic ile cok benzer
+
 Menu: 5/5
 Ogrenci Islemleri: 13/15 (Ogrenci olmadiginda uyari verebilir)
 Polimorphism: 15/15
 Dosyadan Okuma: 20/25 (Dosya olmadiginda ilk calistirildiginda exception veriyor.)
-Dosyaya Yazma:  20/25 (Yazma mantigi karisik)
-Genel Program: 10/15 (Her seferinde dosyadan okuma mantikli degil)
-Derste Yapýlan Ornegi farklilastirma/Eklentiler: Bonus 5/20 (Cikis yapilmasa da dosyaya yazmasi avantaj)
+Dosyaya Yazma:  15/25 (Yazma mantigi karisik)
+Genel Program: 5/15 (Tr karakter sorunlari, Her seferinde dosyadan okuma mantikli degil, TODOlar silinmeli)
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 2/20 (Cikis yapilmasa da dosyaya yazmasi avantaj)
 
  */
 public class Uygulama {
@@ -27,12 +29,12 @@ public class Uygulama {
 	}
 	public static void menuGoster(){
 		while(true){
-			System.out.println("1) Öðrenci Ekleme");
-			System.out.println("2) Öðrenci Silme");
-			System.out.println("3) Öðrenci Listele");
-			System.out.println("4) ÇIKIÞ");
+			System.out.println("1) ï¿½ï¿½renci Ekleme");
+			System.out.println("2) ï¿½ï¿½renci Silme");
+			System.out.println("3) ï¿½ï¿½renci Listele");
+			System.out.println("4) ï¿½IKIï¿½");
 			
-			System.out.print("Seçiniz :");
+			System.out.print("Seï¿½iniz :");
 			int secim = scan.nextInt();
 			
 			switch (secim) {
@@ -46,11 +48,11 @@ public class Uygulama {
 				ogrenciListele();
 				break;
 			case 4:
-				System.out.println("Çýkýþ yapýlýyor...");
+				System.out.println("ï¿½ï¿½kï¿½ï¿½ yapï¿½lï¿½yor...");
 				System.exit(0);
 				break;
 			default:
-				System.out.println("Hatalý seçim yaptýnýz. Lütfen Tekrar deneyiniz");
+				System.out.println("Hatalï¿½ seï¿½im yaptï¿½nï¿½z. Lï¿½tfen Tekrar deneyiniz");
 				break;
 			}
 			
@@ -66,7 +68,7 @@ public class Uygulama {
 		for (String i : icerik) {
 			System.out.println(i);
 		}
-		System.out.print("Silmek istediðiniz Öðrenci Id\'si :");
+		System.out.print("Silmek istediï¿½iniz ï¿½ï¿½renci Id\'si :");
 		int secim = scan.nextInt();
 		List<String> yeniListe = new ArrayList<String>();
 		for (String i : icerik) {
@@ -79,24 +81,24 @@ public class Uygulama {
 		dosyaYazma(yeniListe);
 		
 		if(yeniListe.size() != icerik.size())	
-			System.out.println("Öðrenci silindi.");
+			System.out.println("ï¿½ï¿½renci silindi.");
 		else
-			System.out.println("Öðrenci silinemedi.");
+			System.out.println("ï¿½ï¿½renci silinemedi.");
 
 	}
 	
 	private static void ogrenciEkle() {
 		// TODO Auto-generated method stub
-		System.out.print("Öðrenci Adý:");
+		System.out.print("ï¿½ï¿½renci Adï¿½:");
 		String ad = scan.next();
-		System.out.print("Öðrenci Soyadý:");
+		System.out.print("ï¿½ï¿½renci Soyadï¿½:");
 		String soyad = scan.next();
 		while(true){
-			System.out.print("Lisans Derecesisi Seçimleri:\n"
+			System.out.print("Lisans Derecesisi Seï¿½imleri:\n"
 					+ "1 - Lisans\n"
-					+ "2 - Yüksek Lisans\n"
+					+ "2 - Yï¿½ksek Lisans\n"
 					+ "3 - Doktora )\n");
-			System.out.print("Seçim:");
+			System.out.print("Seï¿½im:");
 			int secim = scan.nextInt();
 			if(secim ==1 || secim ==2 || secim ==3 ){
 				Ogrenci ogrenci = null;
@@ -109,11 +111,11 @@ public class Uygulama {
 					ogrenci = new Doktora(ad, soyad);
 				}
 				dosyaYazma(ogrenci);	
-				System.out.println("Öðrenci eklendi.");
+				System.out.println("ï¿½ï¿½renci eklendi.");
 				break;
 			}
 			else{
-				System.out.println("Hatalý seçim yaptýnýz. Lütfen Tekrar giriniz.");
+				System.out.println("Hatalï¿½ seï¿½im yaptï¿½nï¿½z. Lï¿½tfen Tekrar giriniz.");
 			}
 		}
 	}
@@ -150,7 +152,7 @@ public class Uygulama {
 			for(String i: eskiIcerik){
 				eski_icerik += i+"\n";	
 			}
-			String icerik = eski_icerik +"Id:"+( (count+1) ) +"   Adý ve Soyadý:" + ogr.ad+" "+ogr.soyad +"   Derecesi:"+ogr.ogrenciTipi();
+			String icerik = eski_icerik +"Id:"+( (count+1) ) +"   Adï¿½ ve Soyadï¿½:" + ogr.ad+" "+ogr.soyad +"   Derecesi:"+ogr.ogrenciTipi();
 			fw.write(icerik); 
 			fw.close();
 		

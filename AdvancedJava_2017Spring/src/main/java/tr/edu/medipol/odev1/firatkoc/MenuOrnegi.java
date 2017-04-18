@@ -10,13 +10,15 @@ import java.util.Scanner;
 
 /** ozkans Degerlendirme
 
+Gecersiz Gurkan Ertas'a cok benziyor
+
 Menu: 5/5
 Ogrenci Islemleri: 15/15
-Polimorphism: 10/15 (Polimorfism var ama kullanilmamis, liste kullanilmis. DOsyaya yazarken de liste olarak yazilip okunmus.)
+Polimorphism: 10/15 (Polimorfism var ama kullanilmamis, liste kullanilmis. Dosyaya yazarken de liste olarak yazilip okunmus.)
 Dosyadan Okuma: 20/25
 Dosyaya Yazma:  20/25
 Genel Program: 5/15
-Derste Yapýlan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Derste Yapï¿½lan Ornegi farklilastirma/Eklentiler: Bonus 0/20
 
  */
 public class MenuOrnegi {

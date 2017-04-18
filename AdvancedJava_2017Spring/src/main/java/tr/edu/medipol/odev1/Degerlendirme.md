@@ -18,6 +18,6 @@ Polimorphism: 15/15
 Dosyadan Okuma: 25/25
 Dosyaya Yazma:  25/25
 Genel Program: 15/15
-Derste Yapýlan Ornegi farklilastirma/Eklentiler: Bonus 20/20
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 20/20
 
  */

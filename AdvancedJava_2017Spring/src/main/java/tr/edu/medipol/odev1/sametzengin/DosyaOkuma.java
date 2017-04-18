@@ -1,4 +1,4 @@
-package tr.edu.medipol.odev1.fatihfurkanmete;
+package tr.edu.medipol.odev1.sametzengin;
 
 import java.util.Scanner;
 import java.io.BufferedReader;
@@ -15,24 +15,16 @@ import java.util.Scanner;
 
 /** ozkans Degerlendirme
 
-Gecersiz Samet Zengin ile ayni
+Gecersiz Fatih Furkan Mete ile ayni
 
-Menu: 5/5
-Ogrenci Islemleri: 15/15
-Polimorphism: 15/15
-Dosyadan Okuma: 10/25 (Listeye okumuyor sadece ekrana basiyor)
-Dosyaya Yazma:  10/25 (Ekleme var silme yok)
-Genel Program: 10/15
-Derste Yap�lan Ornegi farklilastirma/Eklentiler: Bonus 0/20
-
- */
+*/
 
 public class DosyaOkuma {
 private static Scanner ekranOkuyucu = new Scanner(System.in);
-static File f=new File(".\\config\\ogrenciler.txt");
+static File dosya=new File(".\\config\\ogrenciler.txt");
+static String cumle;
 static FileWriter fw;
-static BufferedReader reader;
-static String satir;
+static BufferedReader oku;
 
 
 
@@ -51,16 +43,16 @@ static String satir;
 			System.out.println(kullaniciSecimi + " sectiniz.");
 
 			switch (menuSecimi) {
-			case OGRENCI_EKLEME: 
+			case OGRENCI_EKLEME: // (1) Ogrenci Ekle
 				ogrenciEklemeIslemi();
 				break;
-			case OGRENCI_SILME: 
+			case OGRENCI_SILME: // (2) Ogrenci Sil
 				ogrenciSilmeIslemi();
 				break;
-			case OGRENCI_LISTELE:
+			case OGRENCI_LISTELE: // (3) Ogrencileri Listele
 				ogrenciListelemeIslemi();
 				break;
-			case CIKIS: 
+			case CIKIS: // (0) Cikis
 				System.out.println("Program sonlaniyor.");
 				ekranOkuyucu.close();
 				System.exit(0);
@@ -90,44 +82,24 @@ static String satir;
 	}
 	
 	private static void ogrenciSilmeIslemi() throws IOException {
-		
 		System.out.println("Silmek istediginiz ogrenciyi seciniz: ");
 		ogrencileriEkranaBas(0);
 		System.out.print("Seciminiz: ");
 		int kullaniciSecimi = kullaniciIntegerGirdiAl();
 		System.out.println(ogrenciListesi2.get(kullaniciSecimi-1) + " isim1li ogrenci siliniyor.");	 
 		ogrenciListesi2.remove(kullaniciSecimi-1);
-	
+		
 	}
 	
 	
-/*	HOCAM BUN FONKS�YONU S�LMEK ���N YAPMI�TIM AMA OLMADI.
- * 
- * public static void yazmaFonksiyonu(){	
-		try{
-			   //File file = new File(".\\config\\ogrenciler.txt");
-		        if (!f.exists()) {
-		            f.createNewFile();
-		        }
-		        
-		        BufferedWriter bWriter = new BufferedWriter(fw);	
-		             
-		        String ogrenci = "";
-		        for (Ogrenci _ogrenci : ogrenciListesi2) {
-					ogrenci+= _ogrenci.adSoyad+" "+_ogrenci.bolum+"\n";
-				}
-		        bWriter.write(ogrenci);
-		        bWriter.close(); 
-		 }
-		 catch(Exception ex){
-				System.out.println("Hata olustu l�tfen daha sonra tekrar deneyiniz.");
-		 }    
-	} */
+
 	
 	private static List<Ogrenci> ogrenciListesi2 = new ArrayList<>();
 
 	
 	private static void ogrenciEklemeIslemi() throws IOException {
+		fw=new FileWriter(dosya,true);
+		
 		System.out.print("Ogrenci Ad Soyad Giriniz: ");
 		String adSoyad = ekranOkuyucu.nextLine();
 
@@ -144,12 +116,10 @@ static String satir;
 			yeniOgrenci = new DoktoraOgrencisi(adSoyad, bolum);
 		} 
 
-		fw=new FileWriter(f,true); 
-		
+		 
 		if (yeniOgrenci != null) {
 			fw.write(adSoyad+" "+bolum+"\n");
-
-			ogrenciListesi2.add(yeniOgrenci);
+		
 			System.out.println(yeniOgrenci.adSoyad + " isimli ogrenci eklendi.");
 		} else {
 			System.out.println("Gecersiz ogrenci bolumu");
@@ -165,21 +135,21 @@ static String satir;
 	
 	private static void ogrencileriEkranaBas(int yontem) throws IOException {
 		
-		reader = new BufferedReader(new FileReader(f));
-		satir =  reader.readLine();
-
+		oku = new BufferedReader(new FileReader(dosya));
+		cumle =  oku.readLine();
+		
+		
+		if (cumle.isEmpty()) {
+			System.out.println("<< Sistemde kayitli ogrenci yok >>");
+		return;
+		}
+		
 		if (yontem == 0) {
-			if(satir==null){
-				
-				 System.out.println("<< Sistemde kayitli ogrenci yok >>");
-				 
-			 }
 			
-			 while (satir!=null) {
-	                System.out.println(satir);
-	                satir = reader.readLine();
+			 while (cumle!=null) {
+	                System.out.println(cumle);
+	                cumle = oku.readLine();
 	            }
-			 
 		}
 		
 
