@@ -1,4 +1,5 @@
-package tr.edu.medipol.odev1.musasoysal;
+package tr.edu.medipol.odev1.ertankaraaslan;
+
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,21 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import tr.edu.medipol.hafta3.MenuSecimi;
-
 /** ozkans Degerlendirme
 
-Gecersiz Ertan Karaaslan ve Halil Onan ile ayni
+Gecersiz Musa Soysal ve Halil Onan ile ayni
+*/
 
-Menu: 5/5
-Ogrenci Islemleri: 10/15 (Ogrenci ekleme bos kontrolu yok)
-Polimorphism: 5/15 (Var ama kullanilmamis - String yaz oku mantigi var)
-Dosyadan Okuma: 20/25 (Bos kontrolu yok, veri objesi okuma yok)
-Dosyaya Yazma:  20/25 (Bos kontrolu yok, veri objesi yazimi yok)
-Genel Program: 5/15 (arrList ve ogrenciListesi2 birbirine girmis)
-Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
-
- */
 public class MenuOrnegi {
 
 	private static Scanner ekranOkuyucu = new Scanner(System.in);
@@ -41,7 +32,7 @@ public class MenuOrnegi {
 			switch (menuSecimi) {
 			case OGRENCI_EKLEME: // (1) Ogrenci Ekle
 				ogrenciEklemeIslemi();
-				listeyiYaz();
+				yaz();
 				break;
 			case OGRENCI_SILME: // (2) Ogrenci Sil
 				ogrenciSilmeIslemi();
@@ -51,7 +42,7 @@ public class MenuOrnegi {
 				break;
 			case CIKIS: // (0) Cikis
 				System.out.println("Program sonlaniyor.");
-				listeyiYaz();
+				yaz();
 				ekranOkuyucu.close();
 		        System.exit(0);
 				break;
@@ -78,17 +69,13 @@ public class MenuOrnegi {
 	
 	private static void ogrenciSilmeIslemi() {
 		System.out.println("Silmek istediginiz ogrenciyi seciniz: ");
-		listeyiOku();
+		ogrencileriEkranaBas(0);
 		System.out.print("Seciminiz: ");
-		Scanner scan = new Scanner(System.in);
-		System.out.print("Seciminiz: ");
-	    String secim = scan.nextLine();
-	    
-	    if (ogrenciListesi2.contains(secim))
-	    	ogrenciListesi2.remove(secim);
-	    else
-	    	System.out.print("Sectiginiz isimli ogrenci kayitli degil, tekrar deneyiniz");
-	    listeyiOku();
+		int kullaniciSecimi = kullaniciIntegerGirdiAl();
+		System.out.println(arrList.get(kullaniciSecimi-1) 
+				+ " isimli ogrenci siliniyor.");
+		arrList.remove(kullaniciSecimi-1);
+		yaz();
 	}
 	static ArrayList<String> arrList = new ArrayList<String>();
 	private static List<Ogrenci> ogrenciListesi2 = 
@@ -104,7 +91,7 @@ public class MenuOrnegi {
 		System.out.print("Ogrenci Bolum Giriniz (MYO, Isletme vb..) : ");
 		String bolum = ekranOkuyucu.nextLine();
 		
-		   arrList.add(adSoyad+"  "+ogrenciTipi+"  "+bolum+"\n");
+	    arrList.add(adSoyad+" "+ogrenciTipi+" "+bolum+"\n");
 		
 		Ogrenci yeniOgrenci = null;
 		if (ogrenciTipi.equals("YL")) {
@@ -128,8 +115,8 @@ public class MenuOrnegi {
 	}
 	
 	private static void ogrencileriEkranaBas(int yontem) {
-		
-		listeyiOku();
+			
+		oku();
 		
 		if (yontem == 0) {
 			int no = 1;
@@ -147,18 +134,19 @@ public class MenuOrnegi {
 	}
 
 	private static void ekranaMenuyuBas() {
-		System.out.println("************************");
+		System.out.println("**********");
 		System.out.println("MENU");
 		System.out.println("(1) Ogrenci Ekle");
 		System.out.println("(2) Ogrenci Sil");
 		System.out.println("(3) Ogrencileri Listele");
 		System.out.println("(0) Cikis");
-		System.out.println("************************");
+		System.out.println("**********");
 	}
 
-	public static void listeyiYaz(){
+	
+	public static void yaz(){
 		try {
-			FileWriter fos = new FileWriter("Ogrenciler");
+			FileWriter fos = new FileWriter("Ogrenci.txt");
 			PrintWriter out = new PrintWriter(fos);
 			
 			for (int i = 0; i < arrList.size();i++){
@@ -172,9 +160,8 @@ public class MenuOrnegi {
 		}
 	}
 	
-
-	public static void listeyiOku(){
-		File ogrencilerDosya = new File("Ogrenciler");
+	public static void oku(){
+		File ogrencilerDosya = new File("Ogrenci.txt");
 		Scanner dosyaOkuyucu;
 		try {
 			dosyaOkuyucu = new Scanner(ogrencilerDosya);

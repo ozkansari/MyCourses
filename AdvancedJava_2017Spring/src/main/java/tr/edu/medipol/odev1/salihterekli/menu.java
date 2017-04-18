@@ -7,13 +7,15 @@ import java.io.*;
 
 /** ozkans Degerlendirme
 
+Gecersiz Nurcan Karakulleoglu ile ayni
+
 Menu: 5/5
 Ogrenci Islemleri: 15/15
 Polimorphism: 0/15
 Dosyadan Okuma: 20/25
 Dosyaya Yazma:  20/25
 Genel Program: 5/15 (txt gonderim, dizi kullanimi)
-Derste Yapýlan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
 
  */
 public class menu {
@@ -91,7 +93,7 @@ public class menu {
 	}
 
 	private static void ogrenciListele() {
-		System.out.println("Öðrencilerin Listesi: ");
+		System.out.println("ï¿½ï¿½rencilerin Listesi: ");
 		int j = 0;
 		while (ogrenciler[j] != null) {
 			System.out.println("(" + j + ") " + ogrenciler[j]);
@@ -100,7 +102,7 @@ public class menu {
 	}
 
 	private static void ogrenciEkle() {
-		System.out.println("Öðrencinin Adýný Giriniz: ");
+		System.out.println("ï¿½ï¿½rencinin Adï¿½nï¿½ Giriniz: ");
 		String ad = ekranOkuyucu.nextLine();
 		System.out.println("Ogrenci Tip Giriniz (YL, Doktora vb.): ");
 		String tip = ekranOkuyucu.nextLine();
@@ -109,7 +111,7 @@ public class menu {
 		String yeni_kayit = ad + " " + tip + " " + bolum;
 
 		int x = 0;
-		// Dizinin sonunu bulmak için.
+		// Dizinin sonunu bulmak iï¿½in.
 		while (ogrenciler[x] != null) {
 			x++;
 		}
@@ -128,14 +130,14 @@ public class menu {
 		} catch (Exception e) {
 
 		}
-		System.out.println("Öðrenci eklendi.");
+		System.out.println("ï¿½ï¿½renci eklendi.");
 
 	}
 
 	private static void ogrenciSil() {
 		ogrenciListele();
 		System.out
-				.println("Silmek istediðiniz öðrencinin index numarasýný giriniz: ");
+				.println("Silmek istediï¿½iniz ï¿½ï¿½rencinin index numarasï¿½nï¿½ giriniz: ");
 		Scanner scan = new Scanner(System.in);
 		int silinen = scan.nextInt();
 		int x = 0;
@@ -161,7 +163,7 @@ public class menu {
 
 		}
 
-		System.out.println("Seçtiðiniz öðrenci silindi.");
+		System.out.println("Seï¿½tiï¿½iniz ï¿½ï¿½renci silindi.");
 	}
 
 }

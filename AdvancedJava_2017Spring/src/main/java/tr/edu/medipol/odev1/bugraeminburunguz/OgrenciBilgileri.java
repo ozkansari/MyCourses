@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 /** ozkans Degerlendirme
 
+Gecersiz Tayyip Emre Ornek ile ayni
+
 Menu: 5/5
 Ogrenci Islemleri: 10/15 (Ogrenci ekleme bos kontrolu yok)
 Polimorphism: 0/15
