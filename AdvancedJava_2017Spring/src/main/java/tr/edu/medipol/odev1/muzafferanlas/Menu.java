@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Gecersiz ASO, Resul Vural, Sefa Okuyucu ve Sezer Altun ile cok benzer.
+ * Gecersiz Ahmet Selçuk Ozdemir, Bayram Ozkan Mutlu, Resul Vural, Sefa Okuyucu ile cok benzer.
  */
 public class Menu {
 

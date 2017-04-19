@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Gecersiz Sezer Altun ile cok benzer.
+ * Muzaffer Anlas, Ahmet SelÃ§uk Ozdemir, Bayram Ozkan Mutlu, Resul Vural ile cok benzer.
  */
 public class Menu {
 
@@ -19,7 +19,7 @@ public class Menu {
 
 
 			MenuGoster();
-			System.out.println("Seçim Yapýnýz: ");
+			System.out.println("Seï¿½im Yapï¿½nï¿½z: ");
 			int kullaniciSecimi = kullaniciIntegerGirdiAl();
 			MenuSecimi menuSecimi = MenuSecimi.enumaCevir(kullaniciSecimi);
 			switch (menuSecimi) {
@@ -39,7 +39,7 @@ public class Menu {
 
 					System.out.println("Dosya Kaydediliyor....");
 					System.out.println("Dosya Kaydedildi.");
-					System.out.println("Programdan çýkýþ yapýldý.");
+					System.out.println("Programdan ï¿½ï¿½kï¿½ï¿½ yapï¿½ldï¿½.");
 					dosyaYaz();
 					MenuSec.close();
 					System.exit(0);
@@ -63,20 +63,20 @@ public class Menu {
 		System.out.println("1-) Ogrenci Ekleme");
 		System.out.println("2-) Ogrenci Silme");
 		System.out.println("3-) Ogrenci Listeleme");
-		System.out.println("0-) Programdan Çýkýþ");
+		System.out.println("0-) Programdan ï¿½ï¿½kï¿½ï¿½");
 
 
 	}
 	
 	public static void OgrenciEkleme()
 	{
-		System.out.println("Ýsim soyisim giriniz: ");
+		System.out.println("ï¿½sim soyisim giriniz: ");
 		String adSoyad = MenuSec.nextLine();
 
-		System.out.println("Öðrenci Tipini Griniz (MYO/Lisans/YüksekLisans/Doktora");
+		System.out.println("ï¿½ï¿½renci Tipini Griniz (MYO/Lisans/Yï¿½ksekLisans/Doktora");
 		String ogrenciTip =  MenuSec.nextLine();
 
-		System.out.println("Ogrenci Bölüm Giriniz: (Doktor,Hukuk,Finans.. vs.. )");
+		System.out.println("Ogrenci Bï¿½lï¿½m Giriniz: (Doktor,Hukuk,Finans.. vs.. )");
 		String bolum = MenuSec.nextLine();
 		Ogrenci yeniOgrenci = null;
 		if (ogrenciTip.equals("YL")) {
@@ -163,7 +163,7 @@ public class Menu {
 	public static void dosyaYaz() {
 
 		if (OgrenciListesi.isEmpty()) {
-			System.out.println("<< Sisteme yeni öðrenci girilmedi. Kayýt baþarýsýz! >>");
+			System.out.println("<< Sisteme yeni ï¿½ï¿½renci girilmedi. Kayï¿½t baï¿½arï¿½sï¿½z! >>");
 			return;
 		} else {
 

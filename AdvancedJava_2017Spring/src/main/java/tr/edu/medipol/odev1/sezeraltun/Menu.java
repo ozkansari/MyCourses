@@ -10,15 +10,13 @@ import java.util.Scanner;
 
 /** ozkans Degerlendirme
 
-Gecersiz Sefa Okuyucu cok benzer.
-
 Menu: 5
 Ogrenci Islemleri: 15
 Polimorphism: 15
 Dosyadan Okuma: 0
 Dosyaya Yazma:  10
 Genel Program: 5
-Derste Yapýlan Ornegi farklilastirma/Eklentiler: 0
+Derste Yapilan Ornegi farklilastirma/Eklentiler: 0
 
  */
 public class Menu {
@@ -30,7 +28,7 @@ public class Menu {
 		System.out.println("1-) Ogrenci Ekleme");
 		System.out.println("2-) Ogrenci Silme");
 		System.out.println("3-) Ogrenci Listeleme");
-		System.out.println("0-) Çýkýþ");
+		System.out.println("0-) ï¿½ï¿½kï¿½ï¿½");
 		
 		
 	}
@@ -41,7 +39,7 @@ public class Menu {
 			
 		
 		MenuGoster();
-		System.out.println("Lütfen Seçim Yapýnýz: ");
+		System.out.println("Lï¿½tfen Seï¿½im Yapï¿½nï¿½z: ");
 		int kullaniciSecimi = kullaniciIntegerGirdiAl();
 		MenuSecimi menuSecimi = MenuSecimi.enumaCevir(kullaniciSecimi);
 		switch (menuSecimi) {
@@ -59,9 +57,9 @@ public class Menu {
 break;
 		case CIKIS:
 			
-			System.out.println("Dosya Yazýlýyor.......");
-			System.out.println("Dosya Yazýldý.");
-			System.out.println("Çýkýþ yapýldý.");
+			System.out.println("Dosya Yazï¿½lï¿½yor.......");
+			System.out.println("Dosya Yazï¿½ldï¿½.");
+			System.out.println("ï¿½ï¿½kï¿½ï¿½ yapï¿½ldï¿½.");
 			dosyaYaz();
 	     	MenuSec.close();
 	     	System.exit(0);
@@ -85,13 +83,13 @@ break;
 	}
 	public static void OgrenciEkleme()
 	{
-		System.out.println("Lütfen ad soyad giriniz: ");
+		System.out.println("Lï¿½tfen ad soyad giriniz: ");
 		String adSoyad = MenuSec.nextLine();
 		
-		System.out.println("Öðrenci Tipini Griniz (MYO/Lisans/YL/Doktora");
+		System.out.println("ï¿½ï¿½renci Tipini Griniz (MYO/Lisans/YL/Doktora");
 		String ogrenciTip =  MenuSec.nextLine();
 		
-		System.out.println("Ogrenci Bölüm Giriniz: (Mühendislik,Ýþletme,Hukuk.. vs.. )");
+		System.out.println("Ogrenci Bï¿½lï¿½m Giriniz: (Mï¿½hendislik,ï¿½ï¿½letme,Hukuk.. vs.. )");
 		String bolum = MenuSec.nextLine();
 		Ogrenci yeniOgrenci = null;
 		if (ogrenciTip.equals("YL")) {

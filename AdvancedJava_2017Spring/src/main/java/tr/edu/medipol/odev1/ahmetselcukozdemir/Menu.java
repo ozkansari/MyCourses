@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Gecersiz Resul Vural, Sefa Okuyucu ve Sezer Altun ile cok benzer.
+ * Gecersiz Muzaffer Anlas, Bayram Ozkan Mutlu, Resul Vural, Sefa Okuyucu ile cok benzer.
  */
 
 /**
