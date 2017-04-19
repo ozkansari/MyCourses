@@ -18,6 +18,14 @@ Dosyaya Yazma:  10
 Genel Program: 5
 Derste Yapilan Ornegi farklilastirma/Eklentiler: 0
 
+Menu: 5/5
+Ogrenci Islemleri: 15/15
+Polimorphism: 15/15
+Dosyadan Okuma: 0/25
+Dosyaya Yazma:  10/25 (Bilgiler yazilmamis, Okumadan yazmanin bir manasi yok)
+Genel Program: 10/15 (Tr karakter sorunlari, Sadece yazma kismi eklenmis-genel olarak ayni odev)
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+
  */
 public class Menu {
 	
