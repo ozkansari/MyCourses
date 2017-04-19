@@ -21,17 +21,17 @@ public class OzyinelemeOrnek {
 		return yeniMetin;
 	}
 	
-	/**
-	 * Parametre aldigi String'in her bir karakterinden sonra '*' ekleyerek yeni bir String olusturur ve sonucu doner.
-	 * @param metin Parametre alinan karakter dizisi Or. "ahmet"
-	 * @return her bir karakterden sonra yildiz eklenmis halini doner Or. "a*h*m*e*t"
-	 */
 	public static String yildizlandirOzyinelemeli(String metin) {
 		if (metin.length()<=0) {
 			return "";
 		}
 		return metin.charAt(0) + "*" + yildizlandirOzyinelemeli(metin.substring(1));
 	}
+	
+	
+	
+	
+	
 	
 	
 }
