@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta7;
+package tr.edu.medipol.hafta8;
 
 public class Ozyineleme {
 
