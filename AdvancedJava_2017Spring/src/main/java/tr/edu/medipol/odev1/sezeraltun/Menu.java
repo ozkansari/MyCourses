@@ -10,14 +10,6 @@ import java.util.Scanner;
 
 /** ozkans Degerlendirme
 
-Menu: 5
-Ogrenci Islemleri: 15
-Polimorphism: 15
-Dosyadan Okuma: 0
-Dosyaya Yazma:  10
-Genel Program: 5
-Derste Yapilan Ornegi farklilastirma/Eklentiler: 0
-
 Menu: 5/5
 Ogrenci Islemleri: 15/15
 Polimorphism: 15/15
