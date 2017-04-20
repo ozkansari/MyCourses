@@ -28,10 +28,29 @@ public class OzyinelemeOrnek {
 		return metin.charAt(0) + "*" + yildizlandirOzyinelemeli(metin.substring(1));
 	}
 	
-	
-	
-	
-	
-	
-	
+	// yildizlandirOzyinelemeli("Ali")
+	// return 'A' + "*" + yildizlandirOzyinelemeli("li");
+
+	// ->yildizlandirOzyinelemeli("li")
+	// return "l" + "*" + yildizlandirOzyinelemeli("i");
+
+	// -->yildizlandirOzyinelemeli("i")
+	// return "i" + "*" + yildizlandirOzyinelemeli("");
+
+	// -->yildizlandirOzyinelemeli("")
+	// return ""
+
+	// -------------------------------------------------
+
+	// -->yildizlandirOzyinelemeli("")
+	// return ""
+
+	// -->yildizlandirOzyinelemeli("i")
+	// return "i" + "*" + "";
+
+	// ->yildizlandirOzyinelemeli("li")
+	// return "l" + "*" + "i" + "*" + "";
+
+	// yildizlandirOzyinelemeli("Ali")
+	// return 'A' + "*" + "l" + "*" + "i" + "*" + ""
 }
