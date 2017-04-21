@@ -14,11 +14,11 @@ Ogrenci Islemleri: 10/15 (Ogrenci ekleme bos kontrolu yok)
 Polimorphism: 0/15
 Dosyadan Okuma: 20/25 (Bos kontrolu yok, veri objesi okuma yok)
 Dosyaya Yazma:  20/25 (Bos kontrolu yok, veri objesi yazimi yok)
-Genel Program: 0/15 ( Scanner input static olmadigindan derlenmeyen kod, TR karakter problemleri, main yok. )
+Genel Program: 10/15
 Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 5/20
 Benzer Kod Yazma Nedeniyle: -5
 -----------------------------------
-Sonuc: 55
+Sonuc: 65
 */
 
 /**
