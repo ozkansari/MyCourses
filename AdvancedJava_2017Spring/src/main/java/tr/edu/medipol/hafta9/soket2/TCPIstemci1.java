@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta9.soket1;
+package tr.edu.medipol.hafta9.soket2;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -24,7 +24,7 @@ class TCPIstemci1 {
 			// SUNUCU BAGLANTISI DENENIYOR ------------------------
 			try {
 				// Sunucuya baglan
-				sunucuBaglantisi = new Socket("10.200.144.70", 61802);
+				sunucuBaglantisi = new Socket("10.200.144.46", 49695);
 			
 				// Sunucuya mesaj gondermek icin yazici uretilir
 				sunucuMesajOkuyucu = new BufferedReader(new InputStreamReader(sunucuBaglantisi.getInputStream()));
