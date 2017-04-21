@@ -11,6 +11,7 @@ import java.util.Scanner;
 /** ozkans Degerlendirme
 
 Gecersiz Gurkan Ertas'a cok benziyor
+Aciklama yapmadi.
 
 Menu: 5/5
 Ogrenci Islemleri: 15/15
@@ -18,8 +19,10 @@ Polimorphism: 10/15 (Polimorfism var ama kullanilmamis, liste kullanilmis. Dosya
 Dosyadan Okuma: 20/25
 Dosyaya Yazma:  20/25
 Genel Program: 5/15
-Derste Yap�lan Ornegi farklilastirma/Eklentiler: Bonus 0/20
-
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Benzer Kod Yazma Nedeniyle: -35
+-----------------------------------
+Sonuc: 40
  */
 public class MenuOrnegi {
 

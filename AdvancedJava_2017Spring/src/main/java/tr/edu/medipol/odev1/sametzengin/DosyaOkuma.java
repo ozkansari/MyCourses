@@ -16,6 +16,18 @@ import java.util.Scanner;
 /** ozkans Degerlendirme
 
 Gecersiz Fatih Furkan Mete ile ayni
+Samet Zengin kodu Furkanin yazdigini ifade etti.
+
+Menu: 5/5
+Ogrenci Islemleri: 15/15
+Polimorphism: 15/15
+Dosyadan Okuma: 10/25 (Listeye okumuyor sadece ekrana basiyor)
+Dosyaya Yazma:  10/25 (Ekleme var silme yok)
+Genel Program: 10/15
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Benzer Kod Yazma Nedeniyle: -25
+-----------------------------------
+Sonuc: 40
 
 */
 

@@ -11,7 +11,18 @@ import java.io.*;
 /** ozkans Degerlendirme
 
 Gecersiz Beyza Odeyen, Cenkhan Akdemir ve Oguzhan Yalcin ile ayni.
+Kodun Beyzaya ait oldugu anlasildi.
 
+Menu: 5/5
+Ogrenci Islemleri: 15/15
+Polimorphism: 15/15
+Dosyadan Okuma: 20/25 (substring mantigi efektif degil,  hata cikabilir)
+Dosyaya Yazma:  25/25
+Genel Program: 10/15 (otomatikOgrenciEklemeIslemi() ile ortak kod kullanimi olabilirdi)
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Benzer Kod Yazma Nedeniyle: -60
+-----------------------------------
+Sonuc: 30
 */
 public class MenuOrnegi {
 

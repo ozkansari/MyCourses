@@ -5,8 +5,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Muzaffer Anlas, Ahmet Selçuk Ozdemir, Bayram Ozkan Mutlu, Sefa Okuyucu ile cok benzer.
+/** ozkans Degerlendirme
+Muzaffer Anlas, Ahmet Selçuk Ozdemir, Bayram Ozkan Mutlu, Sefa Okuyucu ile cok benzer.
+Arkadaslari kodu resulun yazdigini ifade etti. 
+
+Ogrencileri ekrana basarken dosyadan okuyor ama eklerken listeye ekliyor.
+Dosyaya cikarken yaziyor.
+
+Menu: 5/5
+Ogrenci Islemleri: 15/15
+Polimorphism: 15/15
+Dosyadan Okuma: 10/25 (Ogrencileri ekrana basarken dosyadan okuyor ama eklerken listeye ekliyor.)
+Dosyaya Yazma:  15/25 (Nesne yazma mantigi yok, tostring yaziliyor.)
+Genel Program: 5/15
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Benzer Kod Yazma Nedeniyle: -10
+-----------------------------------
+Sonuc: 55
  */
 
 /**

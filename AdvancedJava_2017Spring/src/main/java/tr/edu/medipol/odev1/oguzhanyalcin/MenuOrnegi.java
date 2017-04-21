@@ -9,6 +9,18 @@ import java.io.*;
 /** ozkans Degerlendirme
 
 Gecersiz Beyza Odeyen ve Cenkhan Akdemir ile ayni.
+Kodun Beyzaya ait oldugu anlasildi.
+
+Menu: 5/5
+Ogrenci Islemleri: 15/15
+Polimorphism: 15/15
+Dosyadan Okuma: 20/25 (substring mantigi efektif degil,  hata cikabilir)
+Dosyaya Yazma:  25/25
+Genel Program: 10/15 (otomatikOgrenciEklemeIslemi() ile ortak kod kullanimi olabilirdi)
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Benzer Kod Yazma Nedeniyle: -60
+-----------------------------------
+Sonuc: 30
 */
 public class MenuOrnegi {
 
@@ -53,7 +65,7 @@ public class MenuOrnegi {
 
 	private static void ogrencileriDosyayaYaz() {
 		
-		System.out.print("\nListedeki öðrenciler dosyaya yazýlýyor...\n");
+		System.out.print("\nListedeki ï¿½ï¿½renciler dosyaya yazï¿½lï¿½yor...\n");
 		
 		try{
 		    PrintWriter writer = new PrintWriter(new FileWriter("ogrenciListesi.txt"));
@@ -69,7 +81,7 @@ public class MenuOrnegi {
 	}
 
 	private static void dosyadanOkumaIslemi() {
-		System.out.println("Öðrenciler dosyadan okunuyor...\n");
+		System.out.println("ï¿½ï¿½renciler dosyadan okunuyor...\n");
 		try (BufferedReader br = new BufferedReader(new FileReader("ogrenciListesi.txt"))) {
 			String line;
 			while ((line = br.readLine()) != null) {

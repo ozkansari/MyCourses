@@ -10,7 +10,8 @@ import java.io.FileReader;
 
 /** ozkans Degerlendirme
 
-Recep Efe Mayoglu ile cok benzer
+Recep Efe Mayoglu ile cok benzer.
+Erhan aciklama yapmadi.
 
 Menu: 5/5
 Ogrenci Islemleri: 13/15 (Ogrenci olmadiginda uyari verebilir)
@@ -19,6 +20,9 @@ Dosyadan Okuma: 20/25
 Dosyaya Yazma:  15/25 (Yazma mantigi karisik)
 Genel Program: 5/15 (Tr karakter sorunlari, Her seferinde dosyadan okuma mantikli degil, TODOlar silinmeli)
 Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 2/20
+Benzer Kod Yazma Nedeniyle: -25
+-----------------------------------
+Sonuc: 55
 
  */
 public class Uygulama {

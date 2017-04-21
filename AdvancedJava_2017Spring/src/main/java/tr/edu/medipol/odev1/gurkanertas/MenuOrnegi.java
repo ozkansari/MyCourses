@@ -12,7 +12,19 @@ import java.io.File;
 /** ozkans Degerlendirme
 
 Gecersiz Firat Koc'a cok benziyor
+Aciklama yapmadi.
+Firat Koc once gonderdi.
 
+Menu: 5/5
+Ogrenci Islemleri: 15/15
+Polimorphism: 10/15 (Polimorfism var ama kullanilmamis, liste kullanilmis. Dosyaya yazarken de liste olarak yazilip okunmus.)
+Dosyadan Okuma: 20/25
+Dosyaya Yazma:  20/25
+Genel Program: 5/15
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Benzer Kod Yazma Nedeniyle: -40
+-----------------------------------
+Sonuc: 35
 */
 public class MenuOrnegi {
 

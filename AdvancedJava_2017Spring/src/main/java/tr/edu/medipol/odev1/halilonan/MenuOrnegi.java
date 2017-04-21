@@ -12,7 +12,19 @@ import java.util.Scanner;
 
 /** ozkans Degerlendirme
 
-Gecersiz Musa Soysal ile ayni
+Gecersiz Musa Soysal ile benzer.
+Halil Musa'nin masum oldugunu belirtti.
+
+Menu: 5/5
+Ogrenci Islemleri: 10/15 (Ogrenci ekleme bos kontrolu yok)
+Polimorphism: 5/15 (Var ama kullanilmamis - String yaz oku mantigi var)
+Dosyadan Okuma: 20/25 (Bos kontrolu yok, veri objesi okuma yok)
+Dosyaya Yazma:  20/25 (Bos kontrolu yok, veri objesi yazimi yok)
+Genel Program: 5/15 (arrList ve ogrenciListesi2 birbirine girmis)
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Benzer Kod Yazma Nedeniyle: -15
+-----------------------------------
+Sonuc: 50
 
 */
 

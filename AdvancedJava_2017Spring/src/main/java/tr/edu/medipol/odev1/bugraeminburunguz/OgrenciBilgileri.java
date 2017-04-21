@@ -9,7 +9,8 @@ import java.util.Scanner;
 
 /** ozkans Degerlendirme
 
-Gecersiz Tayyip Emre Ornek ile ayni
+Gecersiz Tayyip Emre Ornek ile ayni.
+Tayyip Bugraya Kod atti.
 
 Menu: 5/5
 Ogrenci Islemleri: 10/15 (Ogrenci ekleme bos kontrolu yok)
@@ -18,7 +19,9 @@ Dosyadan Okuma: 20/25 (Bos kontrolu yok, veri objesi okuma yok)
 Dosyaya Yazma:  20/25 (Bos kontrolu yok, veri objesi yazimi yok)
 Genel Program: 0/15 ( Scanner input static olmadigindan derlenmeyen kod, TR karakter problemleri, main yok. )
 Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 5/20
-
+Benzer Kod Yazma Nedeniyle: -10
+-----------------------------------
+Sonuc: 50
 
 
  */

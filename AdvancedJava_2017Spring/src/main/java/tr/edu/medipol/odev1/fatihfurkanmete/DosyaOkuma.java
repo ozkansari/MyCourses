@@ -15,7 +15,8 @@ import java.util.Scanner;
 
 /** ozkans Degerlendirme
 
-Gecersiz Samet Zengin ile ayni
+Gecersiz Samet Zengin ile ayni. 
+Samet Zengin kodu Furkanin yazdigini ifade etti.
 
 Menu: 5/5
 Ogrenci Islemleri: 15/15
@@ -23,8 +24,10 @@ Polimorphism: 15/15
 Dosyadan Okuma: 10/25 (Listeye okumuyor sadece ekrana basiyor)
 Dosyaya Yazma:  10/25 (Ekleme var silme yok)
 Genel Program: 10/15
-Derste Yap�lan Ornegi farklilastirma/Eklentiler: Bonus 0/20
-
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Benzer Kod Yazma Nedeniyle: -15
+-----------------------------------
+Sonuc: 50
  */
 
 public class DosyaOkuma {
@@ -101,29 +104,6 @@ static String satir;
 	}
 	
 	
-/*	HOCAM BUN FONKS�YONU S�LMEK ���N YAPMI�TIM AMA OLMADI.
- * 
- * public static void yazmaFonksiyonu(){	
-		try{
-			   //File file = new File(".\\config\\ogrenciler.txt");
-		        if (!f.exists()) {
-		            f.createNewFile();
-		        }
-		        
-		        BufferedWriter bWriter = new BufferedWriter(fw);	
-		             
-		        String ogrenci = "";
-		        for (Ogrenci _ogrenci : ogrenciListesi2) {
-					ogrenci+= _ogrenci.adSoyad+" "+_ogrenci.bolum+"\n";
-				}
-		        bWriter.write(ogrenci);
-		        bWriter.close(); 
-		 }
-		 catch(Exception ex){
-				System.out.println("Hata olustu l�tfen daha sonra tekrar deneyiniz.");
-		 }    
-	} */
-	
 	private static List<Ogrenci> ogrenciListesi2 = new ArrayList<>();
 
 	
@@ -194,5 +174,29 @@ static String satir;
 		System.out.println("(0) Cikis");
 		System.out.println("************************");
 	}
+	
+	/*	HOCAM BUN FONKS�YONU S�LMEK ���N YAPMI�TIM AMA OLMADI.
+	 * 
+	 * public static void yazmaFonksiyonu(){	
+			try{
+				   //File file = new File(".\\config\\ogrenciler.txt");
+			        if (!f.exists()) {
+			            f.createNewFile();
+			        }
+			        
+			        BufferedWriter bWriter = new BufferedWriter(fw);	
+			             
+			        String ogrenci = "";
+			        for (Ogrenci _ogrenci : ogrenciListesi2) {
+						ogrenci+= _ogrenci.adSoyad+" "+_ogrenci.bolum+"\n";
+					}
+			        bWriter.write(ogrenci);
+			        bWriter.close(); 
+			 }
+			 catch(Exception ex){
+					System.out.println("Hata olustu l�tfen daha sonra tekrar deneyiniz.");
+			 }    
+		} */
+		
 
 }

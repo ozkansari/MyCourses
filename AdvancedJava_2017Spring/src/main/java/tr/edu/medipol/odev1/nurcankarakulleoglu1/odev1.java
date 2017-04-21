@@ -7,7 +7,20 @@ import java.io.*;
 
 /** ozkans Degerlendirme
 
-Gecersiz Salih Terekli ile ayni
+Gecersiz Salih Terekli ile ayni.
+Aciklama yapmadi.
+Salih Terekli kendisinin yaptigini soyledi.
+
+Menu: 5/5
+Ogrenci Islemleri: 15/15
+Polimorphism: 0/15
+Dosyadan Okuma: 20/25
+Dosyaya Yazma:  20/25
+Genel Program: 5/15 (txt gonderim, dizi kullanimi)
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Benzer Kod Yazma Nedeniyle: -30
+-----------------------------------
+Sonuc: 35
 */
 
 public class odev1 {

@@ -13,6 +13,7 @@ import tr.edu.medipol.hafta3.MenuSecimi;
 /** ozkans Degerlendirme
 
 Gecersiz Ertan Karaaslan ve Halil Onan ile ayni
+Halil Musa'nin masum oldugunu belirtti.
 
 Menu: 5/5
 Ogrenci Islemleri: 10/15 (Ogrenci ekleme bos kontrolu yok)
@@ -21,6 +22,9 @@ Dosyadan Okuma: 20/25 (Bos kontrolu yok, veri objesi okuma yok)
 Dosyaya Yazma:  20/25 (Bos kontrolu yok, veri objesi yazimi yok)
 Genel Program: 5/15 (arrList ve ogrenciListesi2 birbirine girmis)
 Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Benzer Kod Yazma Nedeniyle: -10
+-----------------------------------
+Sonuc: 55
 
  */
 public class MenuOrnegi {

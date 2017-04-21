@@ -8,15 +8,18 @@ import java.util.Scanner;
 
 /** ozkans Degerlendirme
 
-Erhan Kilic ile cok benzer
+Erhan Kilic ile cok benzer.
 
 Menu: 5/5
 Ogrenci Islemleri: 13/15 (Ogrenci olmadiginda uyari verebilir)
 Polimorphism: 15/15
 Dosyadan Okuma: 20/25 (Dosya olmadiginda ilk calistirildiginda exception veriyor.)
 Dosyaya Yazma:  15/25 (Yazma mantigi karisik)
-Genel Program: 5/15 (Tr karakter sorunlari, Her seferinde dosyadan okuma mantikli degil, TODOlar silinmeli)
+Genel Program: 10/15 (Tr karakter sorunlari, Her seferinde dosyadan okuma mantikli degil, TODOlar silinmeli)
 Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 2/20 (Cikis yapilmasa da dosyaya yazmasi avantaj)
+Benzer Kod Yazma Nedeniyle: -5
+-----------------------------------
+Sonuc: 75
 
  */
 public class Uygulama {
