@@ -20,7 +20,7 @@ import javax.swing.JTextField;
 
 /** ozkans Degerlendirme
 
-Gurkan Ertas ile benzer
+Gurkan Ertas ile benzer. Oldukca refactor edilip degistirilmis ama genel mantik hic degismemis.
 
 Ekran: 20/20
 Ogrenci Islemleri: 15/15
@@ -119,6 +119,30 @@ public class MenuOrnegi   extends JFrame implements ActionListener{
 		
 	}
 	
+	private String ogrenciSilmeIslemi2(int parseInt) {
+		// TODO Auto-generated method stub
+		int kullaniciSecimi = parseInt;
+				
+		List<String> liste = new ArrayList<>();
+		List<Ogrenci> ogrenciListesi = new ArrayList<>();
+		for (Ogrenci ogr : ogrenciListesi2) {
+			if(ogr.numara == kullaniciSecimi)
+			{
+				
+			}
+			else{
+				ogrenciListesi.add(ogr);
+				liste.add(ogr.adSoyad+" "+" Numara:"+ogr.numara+" "+ogr.bolum+" "+ogr.ogrenciTipiniAl()+"\n");
+			}
+		}
+		ogrenciListesi2 = ogrenciListesi;
+		yaz(liste);
+		
+		
+		
+		return "��RENC� �SLME ��LEM� BA�ARILI.";
+	}
+	
 	private static void yaz(List<String> liste){	
 		try{
 			   File file = new File("dosya.txt");
@@ -167,7 +191,25 @@ public class MenuOrnegi   extends JFrame implements ActionListener{
 		}
 		
 	}
-	
+
+	private static void okuVeYaz(Ogrenci ogrenci){
+		List<String> a  = new ArrayList<>();
+		a.add(ogrenci.adSoyad+" "+" Numara:"+ogrenci.numara+" "+ogrenci.bolum+" "+ogrenci.ogrenciTipiniAl());
+
+		List<String> b = oku(false);
+		
+		List<String> c = new ArrayList<>();
+		
+		String fullStr = "";
+		for (String string : b) {
+			c.add(string);
+		}
+		for (String string : a) {
+			c.add(string);
+		}
+		
+		yaz(c);
+	}
 
 	private static List<Ogrenci> ogrenciListesi2 = 
 			new ArrayList<>();
@@ -204,24 +246,25 @@ public class MenuOrnegi   extends JFrame implements ActionListener{
 			
 	}
 	
-	private static void okuVeYaz(Ogrenci ogrenci){
-		List<String> a  = new ArrayList<>();
-		a.add(ogrenci.adSoyad+" "+" Numara:"+ogrenci.numara+" "+ogrenci.bolum+" "+ogrenci.ogrenciTipiniAl());
+	private String ogrenciEklemeIslemi2(String adSoyad, String ogrenciTipi, String bolum,int numara) {
+		// TODO Auto-generated method stub			 
+		Ogrenci yeniOgrenci = null;
+		if (ogrenciTipi.equals("YL")) {
+			yeniOgrenci = new YuksekLisansOgrencisi("Ozkan", adSoyad, bolum,numara);
+		} else if (ogrenciTipi.equals("Doktora")) {
+			yeniOgrenci = new DoktoraOgrencisi(adSoyad, bolum,numara);
+		} 
 
-		List<String> b = oku(false);
-		
-		List<String> c = new ArrayList<>();
-		
-		String fullStr = "";
-		for (String string : b) {
-			c.add(string);
+		if (yeniOgrenci != null) {
+			ogrenciListesi2.add(yeniOgrenci);
+			okuVeYaz(yeniOgrenci);
+			return ""+adSoyad + " isimli ogrenci eklendi.";
+
+		} else {
+			return "Gecersiz ogrenci bolumu";
 		}
-		for (String string : a) {
-			c.add(string);
-		}
-		
-		yaz(c);
 	}
+	
 	private static void ogrencileriEkranaBas() {
 		oku(true);
 	}
@@ -254,6 +297,11 @@ public class MenuOrnegi   extends JFrame implements ActionListener{
 	private JButton goster = new JButton("��rencileri G�ster");
 	private JButton sil = new JButton("��renci Sil");
 
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+
+	}
+	
 	public  MenuOrnegi() {
 		ekle.addActionListener(new ActionListener()
 	    {
@@ -261,25 +309,6 @@ public class MenuOrnegi   extends JFrame implements ActionListener{
 	      {
 	    	  mesajAlani.setText(ogrenciEklemeIslemi2(ad.getText(),tip.getText(),bolum.getText(),Integer.parseInt(numara.getText())));
 	      }
-
-		private String ogrenciEklemeIslemi2(String adSoyad, String ogrenciTipi, String bolum,int numara) {
-			// TODO Auto-generated method stub			 
-			Ogrenci yeniOgrenci = null;
-			if (ogrenciTipi.equals("YL")) {
-				yeniOgrenci = new YuksekLisansOgrencisi("Ozkan", adSoyad, bolum,numara);
-			} else if (ogrenciTipi.equals("Doktora")) {
-				yeniOgrenci = new DoktoraOgrencisi(adSoyad, bolum,numara);
-			} 
-
-			if (yeniOgrenci != null) {
-				ogrenciListesi2.add(yeniOgrenci);
-				okuVeYaz(yeniOgrenci);
-				return ""+adSoyad + " isimli ogrenci eklendi.";
-
-			} else {
-				return "Gecersiz ogrenci bolumu";
-			}
-		}
 	    });
 		sil.addActionListener(new ActionListener()
 	    {
@@ -288,30 +317,6 @@ public class MenuOrnegi   extends JFrame implements ActionListener{
 	    	 mesajAlani.setText(ogrenciSilmeIslemi2(Integer.parseInt(numara2.getText())));
 
 	      }
-
-		private String ogrenciSilmeIslemi2(int parseInt) {
-			// TODO Auto-generated method stub
-			int kullaniciSecimi = parseInt;
-					
-			List<String> liste = new ArrayList<>();
-			List<Ogrenci> ogrenciListesi = new ArrayList<>();
-			for (Ogrenci ogr : ogrenciListesi2) {
-				if(ogr.numara == kullaniciSecimi)
-				{
-					
-				}
-				else{
-					ogrenciListesi.add(ogr);
-					liste.add(ogr.adSoyad+" "+" Numara:"+ogr.numara+" "+ogr.bolum+" "+ogr.ogrenciTipiniAl()+"\n");
-				}
-			}
-			ogrenciListesi2 = ogrenciListesi;
-			yaz(liste);
-			
-			
-			
-			return "��RENC� �SLME ��LEM� BA�ARILI.";
-		}
 	    });
 		goster.addActionListener(new ActionListener()
 	    {
@@ -376,8 +381,5 @@ public class MenuOrnegi   extends JFrame implements ActionListener{
 		panel2.add( goster);  // 2. satir 2. sutun
 		
 	}
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
-
-	}
+	
 }

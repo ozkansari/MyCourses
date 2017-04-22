@@ -21,7 +21,7 @@ import java.io.File;
 
 /** ozkans Degerlendirme
 
-Firat Koc ile benzer.
+Firat Koc ile benzer. Oldukca refactor edilip degistirilmis ama genel mantik hic degismemis.
 
 Ekran: 20/20
 Ogrenci Islemleri: 15/15
@@ -262,8 +262,6 @@ public class MenuOrnegi  extends JFrame implements ActionListener  {
 
 	}
 	
-	
-
 	public static void ogrencileriEkranaBas() {
 		dosya_oku();
 	}
