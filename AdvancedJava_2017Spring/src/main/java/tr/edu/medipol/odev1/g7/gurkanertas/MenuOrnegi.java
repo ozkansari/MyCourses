@@ -22,9 +22,9 @@ Dosyadan Okuma: 20/25
 Dosyaya Yazma:  20/25
 Genel Program: 5/15
 Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
-Benzer Kod Yazma Nedeniyle: -40
+Benzer Kod Yazma Nedeniyle: -30
 -----------------------------------
-Sonuc: 35
+Sonuc: 45
 */
 public class MenuOrnegi {
 
