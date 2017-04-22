@@ -23,7 +23,7 @@ Polimorphism: 0/15
 Dosyadan Okuma: 20/25 (Bos kontrolu yok, veri objesi okuma yok)
 Dosyaya Yazma:  20/25 (Bos kontrolu yok, veri objesi yazimi yok)
 Genel Program: 14/15 (Tr karakter sorunlari)
-Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 5/20
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 15/20
 
  */
 public class Menu {

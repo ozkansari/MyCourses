@@ -18,7 +18,7 @@ Polimorphism: 0/15
 Dosyadan Okuma: 20/25 (Dosya yokken de calisabilmeli)
 Dosyaya Yazma:  25/25
 Genel Program: 10/15
-Derste Yapýlan Ornegi farklilastirma/Eklentiler: Bonus 0/20
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 15/20 (Orjinal gonderim)
 
  */
 public class Menu {
