@@ -29,17 +29,18 @@ import java.awt.Font;
 
 /** ozkans Degerlendirme
 
-Oguzhan Yalcin ile benzer
+tr.edu.medipol.odev2.g2.* paketindekilerle benzer odev
 
 Ekran: 20/20
-Ogrenci Islemleri: 15/15
-Polimorphism: 15/15
-Dosyadan Okuma: 20/20
-Dosyaya Yazma:  20/20
+Ogrenci Islemleri: 10/15 (Bos kayit kontrolu gerekli)
+Polimorphism: 0/15
+Dosyadan Okuma: 15/20
+Dosyaya Yazma:  15/20
 Genel Program: 10/10
-Bonus:25/25
+Bonus:0/25
+Benzer Kod Yazma Nedeniyle: -35
 --------------------------
-SONUC: 125/125
+SONUC: 35/125
  */
 public class swing {
 

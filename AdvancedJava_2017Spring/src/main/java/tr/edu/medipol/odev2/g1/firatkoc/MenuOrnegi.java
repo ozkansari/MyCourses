@@ -22,15 +22,16 @@ import javax.swing.JTextField;
 
 Gurkan Ertas ile benzer. Oldukca refactor edilip degistirilmis ama genel mantik hic degismemis.
 
-Ekran: 20/20
+Ekran: 15/20
 Ogrenci Islemleri: 15/15
-Polimorphism: 15/15
-Dosyadan Okuma: 20/20
-Dosyaya Yazma:  20/20
-Genel Program: 10/10
-Bonus:25/25
+Polimorphism: 10/15 (Polimorfism var ama kullanilmamis, liste kullanilmis. Dosyaya yazarken de liste olarak yazilip okunmus.)
+Dosyadan Okuma: 15/20
+Dosyaya Yazma:  15/20
+Genel Program: 5/10
+Bonus:0/25
+Benzer Kod Yazma Nedeniyle: -25
 --------------------------
-SONUC: 125/125
+SONUC: 50/125
  */
 public class MenuOrnegi   extends JFrame implements ActionListener{
 

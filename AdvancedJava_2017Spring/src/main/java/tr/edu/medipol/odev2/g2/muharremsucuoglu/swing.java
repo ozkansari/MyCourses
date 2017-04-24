@@ -26,6 +26,21 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import java.awt.Font;
 
+/** ozkans Degerlendirme
+
+tr.edu.medipol.odev2.g2.* paketindekilerle benzer odev
+
+Ekran: 20/20
+Ogrenci Islemleri: 10/15 (Bos kayit kontrolu gerekli)
+Polimorphism: 0/15
+Dosyadan Okuma: 15/20
+Dosyaya Yazma:  15/20
+Genel Program: 10/10
+Bonus:0/25
+Benzer Kod Yazma Nedeniyle: -35
+--------------------------
+SONUC: 35/125
+ */
 public class swing {
 
 	private List<Ogrenci> ogrenciList = new ArrayList<>();
