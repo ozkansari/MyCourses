@@ -1,36 +1,47 @@
-package tr.edu.medipol.odev2.g3.resulvural;
+package tr.edu.medipol.odev2.g3a.muzafferanlas;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.*;
+import java.awt.event.*;
 import java.io.BufferedReader;
+import java.io.DataInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
-import javax.swing.DefaultListModel;
-import javax.swing.GroupLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import java.io.InputStreamReader;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 
+/** ozkans Degerlendirme
+
+Ertan Karaaslan & Hasan Somuncu & Halil Onan & Huseyin Sirtikara & Bayram Ozkan Ozmutlu ile benzer.
+
+Ekran: 20/20 (Ekran tasarimi basarili)
+Ogrenci Islemleri: 10/15
+Polimorphism: 0/15
+Dosyadan Okuma: 10/20 (Dosyadan okunananlar tek tek degil, topluca tek bir element gibi listede gosteriliyor)
+Dosyaya Yazma:  20/20
+Genel Program: 5/10 (Surukle-birak plugin kullanildigindan kod biraz duzensiz)
+Bonus:15/25
+--------------------------
+SONUC: 80/100
+ */
 public class Ekran extends JFrame implements ActionListener {
-	private JButton silButonu = new JButton("��renci Sil");
+	private JButton silButonu = new JButton("Ögrenci Sil");
 	private String sorgu = "";
 	
 	
 	private final JPanel panel = new JPanel();
 	private JTextField console;
-	private JTextField ogrenci_adi;
-	private JTextField ogrenci_bolum;
+	private JTextField ogrenciadi;
+	private JTextField ogrencibolum;
 	private JList list = new JList();
 	
 	@Override
@@ -64,39 +75,39 @@ public class Ekran extends JFrame implements ActionListener {
 				.addComponent(panel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 		);
 		
-		JButton btnekle = new JButton("��renci ekle");
+		JButton btnekle = new JButton("\u00D6grenci Ekle");
 		btnekle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(!ogrenci_adi.getText().equals("")) {
-					   if(!ogrenci_bolum.getText().equals("")) {
+				if(!ogrenciadi.getText().equals("")) {
+					   if(!ogrencibolum.getText().equals("")) {
 						   if(!txttip.getText().equals("")) {
 						   
-					console.setText("Son eklenen ��renci: " + "' " + ogrenci_adi.getText() + " '" + " - " + "' " + ogrenci_bolum.getText() + " '" + " - " + "' " + txttip.getText() + " '");
+					console.setText("Son Eklenen Kişi : " + "' " + ogrenciadi.getText() + " '" + " - " + "' " + ogrencibolum.getText() + " '" + " - " + "' " + txttip.getText() + " '");
 				    
 					
 					if (e.getSource() == btnekle){
-						sorgu = ogrenci_adi.getText();
+						sorgu = ogrenciadi.getText();
 						
-						JOptionPane.showMessageDialog(null, sorgu + " ��rencisi eklendi.");
-					    addse("' " + ogrenci_adi.getText() + " '" +  " - " + "' " + ogrenci_bolum.getText() + " '" + " - " + "' " + txttip.getText() + " '");
+						JOptionPane.showMessageDialog(null, sorgu + " Öğrencisi Eklendi.");
+					    addse("' " + ogrenciadi.getText() + " '" +  " - " + "' " + ogrencibolum.getText() + " '" + " - " + "' " + txttip.getText() + " '");
 					
 					}
 					
 					txttip.setText("");
-					ogrenci_adi.setText("");
-					ogrenci_bolum.setText("");
+					ogrenciadi.setText("");
+					ogrencibolum.setText("");
 					
 				
-				    }else{JOptionPane.showMessageDialog(null, "Bo�luk hatas�");}	
-					}else{JOptionPane.showMessageDialog(null, "Bo�luk hatas�");}
-					}else {JOptionPane.showMessageDialog(null, "Bo�luk hatas�");}
+				    }else{JOptionPane.showMessageDialog(null, "Hata Boşlukları Doldurun.");}	
+					}else{JOptionPane.showMessageDialog(null, "Hata Boşlukları Doldurun.");}
+					}else {JOptionPane.showMessageDialog(null, "Hata Boşlukları Doldurun.");}
 				
 				
 			}
 		});
 		
-		JButton btnlstopen = new JButton("��renci Listesi");
+		JButton btnlstopen = new JButton("\u00D6grenci Listesi A\u00E7");
 		btnlstopen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				txtpanelx.setText("");
@@ -121,13 +132,13 @@ public class Ekran extends JFrame implements ActionListener {
 					Str.replaceAll("\\[", " ").replaceAll("\\]", " ");
 		
 				   
-				   JOptionPane.showMessageDialog(null, "Dosya hatas�");
+				   JOptionPane.showMessageDialog(null, "Dosya Açıldı.");
 				   DLM.addElement(line); 
 
 			   }
 
 		   } catch (IOException exed) {
-				System.out.println("HATA OLU�TU");
+				System.out.println("HATA OLUSTU!");
 		
 		   } finally {
 				       
@@ -152,7 +163,7 @@ public class Ekran extends JFrame implements ActionListener {
 			}
 		});
 		
-		JButton btnlstkaydet = new JButton("Dosyay� Kaydet");
+		JButton btnlstkaydet = new JButton("Dosyay\u0131 Kaydet");
 		btnlstkaydet.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -177,7 +188,7 @@ public class Ekran extends JFrame implements ActionListener {
 					   
 					
 					      
-					      JOptionPane.showMessageDialog(null, "Kay�t i�lemi ba�ar�l�.");
+					      JOptionPane.showMessageDialog(null, "Bilgiler Kaydedildi.");
 					
 					      fw.write(selectedText); 
 					      
@@ -195,9 +206,9 @@ public class Ekran extends JFrame implements ActionListener {
 						fw.close();
 					
 					}   catch (Exception exes) {
-						System.out.println("HATA OLU�TU");
+						System.out.println("HATA OLUSTU!");
 					}	
-				}}else{JOptionPane.showMessageDialog(null, "Liste bo� kay�t yap�lamaz.");}
+				}}else{JOptionPane.showMessageDialog(null, "Liste Boş Kayıt Yapılamaz!");}
 				}
 		});
 		
@@ -205,7 +216,7 @@ public class Ekran extends JFrame implements ActionListener {
 		console.setEditable(false);
 		console.setColumns(10);
 		
-		JButton btnlstclose = new JButton("��renci Listesi Kapat");
+		JButton btnlstclose = new JButton("\u00D6grenci Listesi Kapat");
 		btnlstclose.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				txtpanelx.setText("");  
@@ -219,39 +230,39 @@ public class Ekran extends JFrame implements ActionListener {
 			}
 		});
 		
-		JLabel lblgrenciAd = new JLabel("��renci �simi:");
+		JLabel lblgrenciAd = new JLabel("\u00D6grenci \u0130sim :");
 		
-		JLabel lblgrenciBlm = new JLabel("��renci b�l�m�:");
+		JLabel lblgrenciBlm = new JLabel("\u00D6grenci B\u00F6l\u00FCm:");
 		
-		ogrenci_adi = new JTextField();
-		ogrenci_adi.setColumns(10);
+		ogrenciadi = new JTextField();
+		ogrenciadi.setColumns(10);
 		
-		ogrenci_bolum = new JTextField();
-		ogrenci_bolum.setColumns(10);
+		ogrencibolum = new JTextField();
+		ogrencibolum.setColumns(10);
 		
 		txtDosya = new JTextField();
 		txtDosya.setText("dosya");
 		txtDosya.setColumns(10);
 		
-		JLabel lblKaydetmeAd = new JLabel("Dosya ad�:");
+		JLabel lblKaydetmeAd = new JLabel("Dosya Ad\u0131 :");
 		
 		txtpanelx = new JTextField();
 		txtpanelx.setColumns(10);
 		
-		JLabel lblgrenciTipi = new JLabel("��renci tipi:");
+		JLabel lblgrenciTipi = new JLabel("\u00D6grenci Tipi:");
 		
 		txttip = new JTextField();
 		txttip.setColumns(10);
 		
 		JLabel lblrenciTipiniGriniz = new JLabel("(MYO/Lisans/YL/Doktora)");
 		
-		JLabel lblmhendislikiletmehukukvs = new JLabel("(M�hendislik,Hukuk,vb. )");
+		JLabel lblmhendislikiletmehukukvs = new JLabel("(M\u00FChendislik,Hukuk,vb.. )");
 		
-		JLabel lbladVeSoyad = new JLabel("Ad� ve Soyad�");
+		JLabel lbladVeSoyad = new JLabel("(Ad\u0131 ve Soyad\u0131 )");
 		
-		JLabel lblrenciAd = new JLabel("��renci g�ncelle:");
+		JLabel lblrenciAd = new JLabel("\u00D6\u011Frenci G\u00FCncelle :");
 		
-		JButton btngnc = new JButton("��renci g�ncelle");
+		JButton btngnc = new JButton("\u00D6grenci G\u00FCncelle");
 		btngnc.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int index=list.getSelectedIndex();
@@ -261,7 +272,7 @@ public class Ekran extends JFrame implements ActionListener {
 			}
 		});
 		
-		JButton btnsil = new JButton("��renci Sil");
+		JButton btnsil = new JButton("\u00D6grenci Sil");
 		btnsil.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				int index=list.getSelectedIndex();
@@ -301,9 +312,9 @@ public class Ekran extends JFrame implements ActionListener {
 										.addComponent(lblgrenciAd))
 									.addPreferredGap(ComponentPlacement.RELATED)
 									.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-										.addComponent(ogrenci_bolum, GroupLayout.PREFERRED_SIZE, 159, GroupLayout.PREFERRED_SIZE)
+										.addComponent(ogrencibolum, GroupLayout.PREFERRED_SIZE, 159, GroupLayout.PREFERRED_SIZE)
 										.addComponent(txttip, GroupLayout.PREFERRED_SIZE, 159, GroupLayout.PREFERRED_SIZE)
-										.addComponent(ogrenci_adi, GroupLayout.PREFERRED_SIZE, 159, GroupLayout.PREFERRED_SIZE))
+										.addComponent(ogrenciadi, GroupLayout.PREFERRED_SIZE, 159, GroupLayout.PREFERRED_SIZE))
 									.addGap(10)
 									.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
 										.addComponent(lbladVeSoyad, GroupLayout.PREFERRED_SIZE, 122, GroupLayout.PREFERRED_SIZE)
@@ -322,14 +333,12 @@ public class Ekran extends JFrame implements ActionListener {
 				.addGroup(gl_panel.createSequentialGroup()
 					.addGap(10)
 					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
-							
-						.addComponent(ogrenci_adi, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(ogrenciadi, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lbladVeSoyad)
-						
 						.addComponent(lblgrenciAd))
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
-						.addComponent(ogrenci_bolum, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(ogrencibolum, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lblmhendislikiletmehukukvs)
 						.addComponent(lblgrenciBlm))
 					.addPreferredGap(ComponentPlacement.RELATED)
@@ -338,12 +347,10 @@ public class Ekran extends JFrame implements ActionListener {
 						.addComponent(txttip, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lblrenciTipiniGriniz))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
-					
 					.addComponent(btnekle, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addComponent(console, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED)
-					
 					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING, false)
 						.addGroup(gl_panel.createSequentialGroup()
 							.addComponent(lblKaydetmeAd)
@@ -370,7 +377,6 @@ public class Ekran extends JFrame implements ActionListener {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				
-				
 				try{
 				
 				String Selected2=list.getSelectedValue().toString();
@@ -381,11 +387,11 @@ public class Ekran extends JFrame implements ActionListener {
 				Sample = Sample.replaceAll("\\[", "").replaceAll("\\]", "").replaceAll(",", "     <>   ");
          
                 Selected2 = Sample;}
-				catch (Exception exes) {System.out.println("Komut d�zeltme hatas�");}	
+				catch (Exception exes) {System.out.println("Komut Düzeltme Hatası!");}	
 				txtpanelx.setText(Selected2);
 				
 				
-				   }catch (Exception exes) {System.out.println("Liste bo�!");}	
+				   }catch (Exception exes) {System.out.println("Hata Liste Boş!");}	
 				
 			}	
 		});  
@@ -396,14 +402,12 @@ public class Ekran extends JFrame implements ActionListener {
 	
   
 	
-	
 	public static void main(String[] args) {
 		Ekran ekran = new Ekran();
-		ekran.setTitle("Resul-Vural-Vize");
-		ekran.setSize(440, 580);
-		
+		ekran.setTitle("Proje Ödevi - Muzaffer Anlaş");
+		ekran.setSize(440, 540);
+		ekran.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		ekran.setResizable(false);
 		ekran.setVisible(true);
-		ekran.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}	
 }

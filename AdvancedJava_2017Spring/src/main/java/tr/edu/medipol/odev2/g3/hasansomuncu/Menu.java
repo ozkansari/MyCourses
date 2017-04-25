@@ -48,15 +48,6 @@ public class Menu extends JFrame implements ActionListener {
 	 DefaultListModel DLM = new DefaultListModel();
 	 private JTextField tip;
 	 
-	 public static void main(String[] args) {
-			Menu ekran = new Menu();
-			ekran.setTitle("Proje");
-			ekran.setSize(440, 540);
-			ekran.setDefaultCloseOperation(EXIT_ON_CLOSE);
-			ekran.setResizable(false);
-			ekran.setVisible(true);
-		}
-	
 	static ArrayList<String> arrList = new ArrayList<>();
 		
 	public Menu(){
@@ -351,6 +342,14 @@ public class Menu extends JFrame implements ActionListener {
 		
 	}
 		
+	 public static void main(String[] args) {
+		Menu ekran = new Menu();
+		ekran.setTitle("Proje");
+		ekran.setSize(440, 540);
+		ekran.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		ekran.setResizable(false);
+		ekran.setVisible(true);
+	}
 	
 	
 }

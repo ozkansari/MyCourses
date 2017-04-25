@@ -45,15 +45,6 @@ public class odev extends JFrame implements ActionListener {
 	 DefaultListModel DLM = new DefaultListModel();
 	 private JTextField GirilenTip;
 	 
-	 public static void main(String[] args) {
-			odev cikti = new odev();
-			cikti.setTitle("Proje");
-			cikti.setSize(440, 540);
-			cikti.setDefaultCloseOperation(EXIT_ON_CLOSE);
-			cikti.setResizable(false);
-			cikti.setVisible(true);
-		}
-	
 	static ArrayList<String> arrList = new ArrayList<>();
 		
 	public odev(){
@@ -162,6 +153,37 @@ public class odev extends JFrame implements ActionListener {
 						.addComponent(btnSil))
 					.addContainerGap())
 		);
+		
+		btnEkle.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				if(!Girilenisim.getText().equals("")) {
+					   if(!GirilenBolum.getText().equals("")) {
+						   if(!GirilenTip.getText().equals("")) {
+	
+					if (e.getSource() == btnEkle){
+						arrList.add("  Ogrenci Ad� : "+Girilenisim.getText()+" "+"Girilen Bolumu : "+ GirilenBolum.getText()+" "+"Girilen Tipi : "+GirilenTip.getText()+"\n");
+						ekleme(); 
+						
+						
+					}
+					
+					GirilenTip.setText("");
+					Girilenisim.setText("");
+					GirilenBolum.setText("");
+					
+				
+				    }else{JOptionPane.showMessageDialog(null, "Bilgiler Eksik");
+				    }	
+					}else{JOptionPane.showMessageDialog(null, "Bilgiler Eksik");
+					}
+					}else{JOptionPane.showMessageDialog(null, "Bilgiler Eksik");
+					}
+				
+				
+			}
+		});
+		
 		btnListe.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -215,37 +237,6 @@ public class odev extends JFrame implements ActionListener {
 			}
 		});
 		
-		btnEkle.addActionListener(new ActionListener() {
-			
-			public void actionPerformed(ActionEvent e) {
-				if(!Girilenisim.getText().equals("")) {
-					   if(!GirilenBolum.getText().equals("")) {
-						   if(!GirilenTip.getText().equals("")) {
-	
-					if (e.getSource() == btnEkle){
-						arrList.add("  Ogrenci Ad� : "+Girilenisim.getText()+" "+"Girilen Bolumu : "+ GirilenBolum.getText()+" "+"Girilen Tipi : "+GirilenTip.getText()+"\n");
-						ekleme(); 
-						
-						
-					}
-					
-					GirilenTip.setText("");
-					Girilenisim.setText("");
-					GirilenBolum.setText("");
-					
-				
-				    }else{JOptionPane.showMessageDialog(null, "Bilgiler Eksik");
-				    }	
-					}else{JOptionPane.showMessageDialog(null, "Bilgiler Eksik");
-					}
-					}else{JOptionPane.showMessageDialog(null, "Bilgiler Eksik");
-					}
-				
-				
-			}
-		});
-		
-
 		
 		
 	
@@ -302,6 +293,14 @@ public class odev extends JFrame implements ActionListener {
 		
 	}
 		
-	
+	public static void main(String[] args) {
+		odev cikti = new odev();
+		cikti.setTitle("Proje");
+		cikti.setSize(440, 540);
+		cikti.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		cikti.setResizable(false);
+		cikti.setVisible(true);
+	}
+
 	
 }

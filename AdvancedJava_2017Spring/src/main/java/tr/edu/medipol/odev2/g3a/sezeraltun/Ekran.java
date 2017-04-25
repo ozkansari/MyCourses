@@ -1,4 +1,4 @@
-package tr.edu.medipol.odev2.g3.sezeraltun;
+package tr.edu.medipol.odev2.g3a.sezeraltun;
 
 import java.awt.*;
 import java.awt.event.*;

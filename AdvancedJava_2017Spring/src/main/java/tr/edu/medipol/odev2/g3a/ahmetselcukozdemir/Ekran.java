@@ -1,4 +1,4 @@
-package tr.edu.medipol.odev2.g3.ahmetselcukozdemir;
+package tr.edu.medipol.odev2.g3a.ahmetselcukozdemir;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
