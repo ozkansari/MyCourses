@@ -19,17 +19,25 @@ import java.awt.Color;
 
 /** ozkans Degerlendirme
 
-Halil Onan & Hasan Somuncu & Sefa Okuyucu & Muzaffer Anlas & Huseyin Sirtikara & Bayram Ozkan Ozmutlu ile benzer.
+tr.edu.medipol.odev2.g3.* paketindekilerle benzer
+
++ Bos kayit kontrolu var.
+- Silince dosyaya kaydetmiyor.
+- Secim yapmadan sile basinca hata veriyor.
+- Ekle dedikten sonra listede gostermiyor. Ekstra liste tiklamak gerekiyor.
+- ilk kayittan sonrakilerin basinda bosluk gosteriliyor.
+- Program yeniden acildiginda List demeden onceki kayitlari gostermiyor.
 
 Ekran: 20/20
-Ogrenci Islemleri: 15/15
-Polimorphism: 15/15
-Dosyadan Okuma: 20/20
-Dosyaya Yazma:  20/20
-Genel Program: 10/10
-Bonus:25/25
+Ogrenci Islemleri: 5/15
+Polimorphism: 0/15
+Dosyadan Okuma: 15/20
+Dosyaya Yazma:  15/20
+Genel Program: 5/10
+Bonus: 0/25
+Benzer Kod Yazma Nedeniyle: -35
 --------------------------
-SONUC: 125/125
+SONUC: 25/125
  */
 public class odev extends JFrame implements ActionListener {
 
