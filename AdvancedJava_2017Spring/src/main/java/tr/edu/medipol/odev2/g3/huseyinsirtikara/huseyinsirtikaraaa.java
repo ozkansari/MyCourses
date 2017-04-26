@@ -16,17 +16,24 @@ import java.awt.Color;
 
 /** ozkans Degerlendirme
 
-Ertan Karaaslan & Hasan Somuncu & Sefa Okuyucu & Halil Onan & Muzaffer Anlas & Bayram Ozkan Ozmutlu ile benzer.
+tr.edu.medipol.odev2.g3.* paketindekilerle benzer
 
-Ekran: 20/20 (Ekran tasarimi basarili)
++ Bos kayit kontrolu var.
+- Secim yapmadan sile basinca hata veriyor.
+- Ekle dedikten sonra listede gostermiyor. Ekstra liste tiklamak gerekiyor.
+- ilk kayittan sonrakilerin basinda bosluk gosteriliyor.
+- Program yeniden acildiginda List demeden onceki kayitlari gostermiyor.
+
+Ekran: 20/20
 Ogrenci Islemleri: 10/15
 Polimorphism: 0/15
-Dosyadan Okuma: 10/20 (Dosyadan okunananlar tek tek degil, topluca tek bir element gibi listede gosteriliyor)
-Dosyaya Yazma:  20/20
-Genel Program: 5/10 (Surukle-birak plugin kullanildigindan kod biraz duzensiz)
-Bonus:15/25
+Dosyadan Okuma: 15/20
+Dosyaya Yazma:  15/20
+Genel Program: 5/10
+Bonus: 0/25
+Benzer Kod Yazma Nedeniyle: -35 (Sil kismi firat tarhan ile ayni)
 --------------------------
-SONUC: 80/100
+SONUC: 30/125
  */
 public class huseyinsirtikaraaa extends JFrame implements ActionListener {
 

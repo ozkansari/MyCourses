@@ -38,9 +38,9 @@ Dosyadan Okuma: 15/20
 Dosyaya Yazma:  15/20
 Genel Program: 5/10
 Bonus: 0/25
-Benzer Kod Yazma Nedeniyle: -20 (Sil kismi farkli +10)
+Benzer Kod Yazma Nedeniyle: -35 (Sil kismi firat tarhan ile ayni)
 --------------------------
-SONUC: 45/125
+SONUC: 30/125
  */
 public class Odev2 extends JFrame implements ActionListener {
 

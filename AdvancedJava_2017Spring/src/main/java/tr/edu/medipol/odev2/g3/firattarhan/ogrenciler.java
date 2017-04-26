@@ -20,6 +20,27 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.Color;
 
+/** ozkans Degerlendirme
+
+tr.edu.medipol.odev2.g3.* paketindekilerle benzer
+
++ Bos kayit kontrolu var.
+- Secim yapmadan sile basinca hata veriyor.
+- Ekle dedikten sonra listede gostermiyor. Ekstra liste tiklamak gerekiyor.
+- ilk kayittan sonrakilerin basinda bosluk gosteriliyor.
+- Program yeniden acildiginda List demeden onceki kayitlari gostermiyor.
+
+Ekran: 20/20
+Ogrenci Islemleri: 10/15
+Polimorphism: 0/15
+Dosyadan Okuma: 15/20
+Dosyaya Yazma:  15/20
+Genel Program: 5/10
+Bonus: 0/25
+Benzer Kod Yazma Nedeniyle: -35 (Sil kismi bayram ozkan mutlu ile ayni)
+--------------------------
+SONUC: 30/125
+ */
 public class ogrenciler extends JFrame implements ActionListener {
 
 	private JTextField ogrAdi;
