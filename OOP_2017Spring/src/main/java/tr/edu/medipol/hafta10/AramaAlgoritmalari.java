@@ -56,9 +56,9 @@ public class AramaAlgoritmalari {
 			if (sayiDizisi[ortaIndis] == arananSayi) {
 				return ortaIndis;
 			} else if (sayiDizisi[ortaIndis] < arananSayi) {
-				sagIndis = ortaIndis - 1;
+				solIndis = ortaIndis - 1;
 			} else {
-				solIndis = ortaIndis + 1;
+				sagIndis = ortaIndis + 1;
 			}
 		}
 		return -1; // aranan bulunamadı
