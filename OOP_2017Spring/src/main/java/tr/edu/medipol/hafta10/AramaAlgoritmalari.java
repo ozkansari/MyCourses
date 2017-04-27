@@ -55,7 +55,7 @@ public class AramaAlgoritmalari {
 			int ortaIndis = (solIndis + sagIndis) / 2;
 			if (sayiDizisi[ortaIndis] == arananSayi) {
 				return ortaIndis;
-			} else if (sayiDizisi[ortaIndis] < 0) {
+			} else if (sayiDizisi[ortaIndis] < arananSayi) {
 				sagIndis = ortaIndis - 1;
 			} else {
 				solIndis = ortaIndis + 1;
