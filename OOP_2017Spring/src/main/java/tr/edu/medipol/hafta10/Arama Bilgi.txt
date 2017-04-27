@@ -1,0 +1,20 @@
+int arananSayi = 5623
+int [] dizi = {5,46,32,5623,3};
+
+Arrays.sort(dizi);
+Arrays.binarySearch(dizi, arananSayi)
+3,5,32,46,5623
+
+1. Dongu:
+sol=0, sag=4
+orta=2;
+
+2. Dongu:
+sol=3, sag=4
+orta=3
+
+3. Dongu
+sol=4,sag=4
+orta=4
+
+O logn
