@@ -1,0 +1,14 @@
+class MailKutusu <MSGTYPE,O extends Ogrenci,X,C> extends MejasKutusu<X> {
+
+	MSGTYPE mesaj;
+	P adSoyad;
+	X maas;
+ 
+	T kkkkk;
+
+	public void(C sss) {
+	}
+
+}
+
+new MailKutusu<Integer,DoktoroOgrencisi,Long,Long>();
