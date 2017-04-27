@@ -33,6 +33,8 @@ public class AramaAlgoritmalari {
 	 * @return Bulunamadiysa -1 doner, Bulunduysa dizideki pozisyonunu doner
 	 */
 	private int dogrusalArama( int [] sayiDizisi, int arananSayi) {
+		
+		// O(n) karmasiklikta
 		for (int i=0; i<sayiDizisi.length;i++) {
 			if ( sayiDizisi[i] == arananSayi ) {
 				return i;
@@ -51,6 +53,7 @@ public class AramaAlgoritmalari {
 		int solIndis = 0;
 		int sagIndis = sayiDizisi.length-1;
 		
+		// O(logn) karmasiklikta
 		while (solIndis <= sagIndis) {
 			int ortaIndis = (solIndis + sagIndis) / 2;
 			if (sayiDizisi[ortaIndis] == arananSayi) {
