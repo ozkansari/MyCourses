@@ -30,7 +30,7 @@ Dosyadan Okuma: 10/20 (Dosyadan okunananlar tek tek degil, topluca tek bir eleme
 Dosyaya Yazma:  15/20
 Genel Program: 5/10 (Surukle-birak plugin kullanildigindan kod biraz duzensiz)
 Bonus:10/25 (Tr karakter uyumlulugu)
-Benzer Kod Yazma Nedeniyle: -35 
+Benzer Kod Yazma Nedeniyle: -25 
 --------------------------
 SONUC: 45/125
  */

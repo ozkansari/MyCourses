@@ -325,13 +325,13 @@
 										<td title="Quiz-2">Q-2</td>
 										<td title="Odev-1">0-1</td>
 										<td title="Odev-2">O-2</td>
-										<td title="Vize Notu (odev1*0.2 + odev2*0.3 + quiz1*0.15 + quiz2*0.35)">V</td>
+										<td title="Vize Notu (odev1*0.2 + odev2*0.3 + quiz1*0.15 + quiz2*0.35) + 2.8">V</td>
 										<td>O3</td>
 										<td>O4</td>
 										<td>O5</td>
 										<td>O6</td>
 										<td>O7</td>
-										<td title="Proje">P</td>
+										<td title="Final Notu">F</td>
 									</tr>
 								</thead>
 								<tbody>
@@ -687,7 +687,7 @@
 										<td title="Quiz-2">92</td>
 										<td title="Odev-1 - Dosyadan okuma yok, sinirsiz ogrenci girebilmeli">90</td>
 										<td title="Odev-2 - Polimorfism eksik">90</td>
-										<td title="Vize Notu (odev1*0.2 + odev2*0.3 + quiz1*0.15 + quiz2*0.35) + ekstra 7 derse katilim" >7</td>
+										<td title="Vize Notu (odev1*0.2 + odev2*0.3 + quiz1*0.15 + quiz2*0.35) + ekstra 5 derse katilim" >5</td>
 										<td title="Odev-3"></td>
 										<td title="Odev-4"></td>
 										<td title="Odev-5"></td>
@@ -878,8 +878,8 @@
 									<tr>
 										<td>H51500..</td>
 										<td>Recep Aykut</td>
-										<td title="Quiz-1">0</td>
-										<td title="Quiz-2">0</td>
+										<td title="Quiz-1"></td>
+										<td title="Quiz-2"></td>
 										<td title="Odev-1"></td>
 										<td title="Odev-2"></td>
 										<td title="Vize Notu (odev1*0.2 + odev2*0.3 + quiz1*0.15 + quiz2*0.35)"></td>
@@ -933,13 +933,13 @@
 										    var odev1 = ( parseInt(row[4]) || 0 );
 									    	var odev2 = ( parseInt(row[5]) || 0 );
 									    	var ekstra = ( parseInt(row[6]) || 0 );
-									    	var vize = odev1*0.2 + odev2*0.3 + quiz1*0.15 + quiz2*0.35 + ekstra;
+									    	var vize = odev1*0.2 + odev2*0.3 + quiz1*0.15 + quiz2*0.35 + ekstra + 2.8;
 									        return vize.toFixed(1);
 									    },
 									    "targets": 6
 									},
 			    			        {
-			    			           "targets": [ 7,8,9,10,11,12 ],
+			    			           "targets": [ 8,9,10,11 ],
 			    			           "visible": false
 			    			        }
 			    			  ],
