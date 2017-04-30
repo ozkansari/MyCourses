@@ -24,7 +24,7 @@ import tr.edu.medipol.hafta3.Ogrenci;
  * Daha fazla bilgi: http://sparkjava.com/documentation#getting-started
  * 
  */
-public class BasitWebUygulamaOrnekleri {
+public class WebOrnek1Spark {
 	
 	private static final Gson JSON_HELPER = new Gson();
 	// private static final Gson JSON_HELPER = new GsonBuilder().setPrettyPrinting().create();

@@ -38,7 +38,7 @@ import tr.edu.medipol.hafta3.Ogrenci;
  *  http://freemarker.org/docs/ref_directive_list.html
  * 
  */
-public class BasitWebUygulamaOrnekleri4 {
+public class WebOrnek4SparkVeFreemarker {
 	
     public static void main(String[] args) {
     	
