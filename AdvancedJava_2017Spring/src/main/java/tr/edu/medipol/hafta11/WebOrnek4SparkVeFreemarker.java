@@ -57,6 +57,32 @@ public class WebOrnek4SparkVeFreemarker {
 				return new ModelAndView(attributes, "ogrenciler.ftl"); // resources'daki ftl
 
     	}, new FreeMarkerEngine());
+    	
+    	get("/ogrenciekle", (request, response) -> {
+
+	    	// http://localhost:4567/ogrenciekle
+	    	
+	    	Map<String, Object> attributes = new HashMap<>();
+            attributes.put("ogrenciler", ogrenciler);
+            
+			return new ModelAndView(attributes, "ogrenciekle.ftl"); // resources'daki ftl
+
+    	}, new FreeMarkerEngine());
+    	
+    	post("/ogrenciekle", (request, response) -> {
+
+	    	// http://localhost:4567/ogrenciekle
+	    	
+    		String adSoyad = request.queryParams("adSoyad");
+			String ogrenciTipi = request.queryParams("ogrenciTipi");
+			String bolum = request.queryParams("bolum");
+			ogrenciler.add(new Ogrenci(adSoyad, ogrenciTipi, bolum));
+    		
+	    	Map<String, Object> attributes = new HashMap<>();
+            attributes.put("ogrenciler", ogrenciler);
+			return new ModelAndView(attributes, "ogrenciler.ftl"); // resources'daki ftl
+
+    	}, new FreeMarkerEngine());
         
     }
     
