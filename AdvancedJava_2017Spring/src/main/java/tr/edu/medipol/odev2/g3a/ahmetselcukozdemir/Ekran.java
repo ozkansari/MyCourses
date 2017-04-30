@@ -22,6 +22,21 @@ import javax.swing.JTextField;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
+/** ozkans Degerlendirme
+
+tr.edu.medipol.odev2.g3.* dakilerle benzer.
+
+Ekran: 20/20 (Ekran tasarimi basarili)
+Ogrenci Islemleri: 10/15
+Polimorphism: 0/15
+Dosyadan Okuma: 10/20 (Dosyadan okunananlar tek tek degil, topluca tek bir element gibi listede gosteriliyor)
+Dosyaya Yazma:  15/20
+Genel Program: 5/10 (Surukle-birak plugin kullanildigindan kod biraz duzensiz)
+Bonus:5/25
+Benzer Kod Yazma Nedeniyle: -25 (Yorum yazmasi arti)
+--------------------------
+SONUC: 50/125
+ */
 public class Ekran extends JFrame implements ActionListener {
 	
 	//tan�mlamalar

@@ -4,6 +4,24 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+/** ozkans Degerlendirme
+
+- Erhan Kilic ile benzer ama birbirinden ayrilan yerler de var.
+- Ilk odevdeki alakasiz kodlar silinmemis. Temiz kod ilkesine uymuyor.
+- Turkce karakter sorunlari var.
+- Hatali/bos giris kontrolu yok. Uygulama sorun oldugunda hata veriyor, bunu kullaniciya gostermiyor.
+
+Ekran: 20/20
+Ogrenci Islemleri: 10/15 (Bos kayit kontrolu yok)
+Polimorphism: 15/15
+Dosyadan Okuma: 15/20 (Dosya olmadiginda ilk calistirildiginda exception veriyor.)
+Dosyaya Yazma:  15/20 (Yazma mantigi karisik)
+Genel Program: 5/10
+Bonus: 0/25
+Benzer Kod Yazma Nedeniyle: -5 
+--------------------------
+SONUC: 75/125
+ */
 public class EkranOrnegi extends JFrame implements ActionListener {
 	private JButton ekleButonu = new JButton("��renci Ekle");
 	private JButton silButonu = new JButton("ID 'ye g�re Sil");

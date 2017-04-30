@@ -25,9 +25,9 @@ Dosyadan Okuma: 10/25 (Listeye okumuyor sadece ekrana basiyor)
 Dosyaya Yazma:  10/25 (Ekleme var silme yok)
 Genel Program: 10/15
 Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 0/20
-Benzer Kod Yazma Nedeniyle: -15
+Benzer Kod Yazma Nedeniyle: -10
 -----------------------------------
-Sonuc: 50
+Sonuc: 55
  */
 
 public class DosyaOkuma {

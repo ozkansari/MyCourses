@@ -21,17 +21,18 @@ import javax.xml.bind.Marshaller;
 
 /** ozkans Degerlendirme
 
-Ertan Karaaslan & Hasan Somuncu & Halil Onan & Huseyin Sirtikara & Bayram Ozkan Ozmutlu ile benzer.
+tr.edu.medipol.odev2.g3.* dakilerle benzer.
 
 Ekran: 20/20 (Ekran tasarimi basarili)
 Ogrenci Islemleri: 10/15
 Polimorphism: 0/15
 Dosyadan Okuma: 10/20 (Dosyadan okunananlar tek tek degil, topluca tek bir element gibi listede gosteriliyor)
-Dosyaya Yazma:  20/20
+Dosyaya Yazma:  15/20
 Genel Program: 5/10 (Surukle-birak plugin kullanildigindan kod biraz duzensiz)
-Bonus:15/25
+Bonus:5/25
+Benzer Kod Yazma Nedeniyle: -10 (ilk gonderen)
 --------------------------
-SONUC: 80/100
+SONUC: 65/125
  */
 public class Ekran extends JFrame implements ActionListener {
 	private JButton silButonu = new JButton("Ögrenci Sil");

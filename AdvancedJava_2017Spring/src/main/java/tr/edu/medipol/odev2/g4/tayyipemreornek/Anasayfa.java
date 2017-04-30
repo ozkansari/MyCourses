@@ -9,17 +9,18 @@ import java.util.Scanner;
 
 /** ozkans Degerlendirme
 
-Bugra Emin Burunguz ile benzer
+Bugra Emin Burunguz ile benzer  ama birbirinden ayrilan yerler de var.
 
 Ekran: 20/20
-Ogrenci Islemleri: 15/15
-Polimorphism: 15/15
-Dosyadan Okuma: 20/20
-Dosyaya Yazma:  20/20
-Genel Program: 10/10
-Bonus:25/25
+Ogrenci Islemleri: 10/15 (Bos kayit kontrolu yok, bir sey girilmese de ekliyor siliyor)
+Polimorphism: 0/15
+Dosyadan Okuma: 15/20
+Dosyaya Yazma:  15/20 
+Genel Program: 5/10
+Bonus: 15/25
+Benzer Kod Yazma Nedeniyle: -15 
 --------------------------
-SONUC: 125/125
+SONUC: 65/125
  */
 
 /**

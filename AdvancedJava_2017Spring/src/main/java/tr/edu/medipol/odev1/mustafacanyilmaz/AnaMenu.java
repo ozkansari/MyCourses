@@ -16,7 +16,7 @@ Polimorphism: 15/15
 Dosyadan Okuma: 0/25
 Dosyaya Yazma:  25/25
 Genel Program: 15/15
-Derste Yapýlan Ornegi farklilastirma/Eklentiler: Bonus 20/20
+Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 20/20
 
  */
 
@@ -35,7 +35,7 @@ public class AnaMenu {
 		File veriDosyasi = new File(dosyaminYolu);
 		System.out.println("Dosya Dizini  = " + veriDosyasi.getAbsolutePath());
 		if(veriDosyasi.exists()){
-			System.out.println("Dosya Kontrolü Yapýldý, Dosya Yazýlmaya Hazýr. DOSYA ADI  = " + veriDosyasi.getName());
+			System.out.println("Dosya Kontrolï¿½ Yapï¿½ldï¿½, Dosya Yazï¿½lmaya Hazï¿½r. DOSYA ADI  = " + veriDosyasi.getName());
 		}else{
 			System.out.println("Dosya YOK ! ");
 		}
@@ -67,27 +67,27 @@ public class AnaMenu {
     	//gidilecekYer:
         while(true) {
             ekranaMenuyuBas();
-            System.out.println("Lütfen Bir Seçim Yapýnýz  : ");
+            System.out.println("Lï¿½tfen Bir Seï¿½im Yapï¿½nï¿½z  : ");
             Scanner kullanicininGirdigiDegerAl = new Scanner(System.in);
             int kullanicininGirdigiDeger = kullanicininGirdigiDegerAl.nextInt();
-            System.out.println(kullanicininGirdigiDeger + ". Menüyü Seçtiniz");
+            System.out.println(kullanicininGirdigiDeger + ". Menï¿½yï¿½ Seï¿½tiniz");
             
             if(kullanicininGirdigiDeger == 1){
-            	System.out.println("Kaç adet ogrenci gireceksiniz ? "); // ozkans sinirsiz ogrenci girebilmeli
+            	System.out.println("Kaï¿½ adet ogrenci gireceksiniz ? "); // ozkans sinirsiz ogrenci girebilmeli
 				Scanner ogrenciGirmeSayimiAl = new Scanner(System.in);
 				
 				ogrenciGirmeSayim = ogrenciGirmeSayimiAl.nextInt();
 				denemeListe = new String[ogrenciGirmeSayim];
 				
 				for(int i =0; i<denemeListe.length; i++){
-					System.out.println(i+1+ ". Öðrenciyi Giriniz ");
+					System.out.println(i+1+ ". ï¿½ï¿½renciyi Giriniz ");
 					Scanner ogrenciAdiGireniAl = new Scanner(System.in);
 					String [] denemeListe2 = new String[ogrenciGirmeSayim];
 					denemeListe2[i] = ogrenciAdiGireniAl.nextLine();
 					System.out.print("Ogrenci Tip Giriniz ( YL  yada Doktora Giriniz) : "); //
 			        String ogrenciTipi = verileriAl.nextLine();
 
-			        System.out.print("Ogrenci Bolum Giriniz (Eczacýlýk, Hemþirelik Vb. Giriniz ) : ");
+			        System.out.print("Ogrenci Bolum Giriniz (Eczacï¿½lï¿½k, Hemï¿½irelik Vb. Giriniz ) : ");
 			        String bolum = verileriAl.nextLine();
 			        
 			        Ogrenci yeniOgrenci = null;
@@ -107,19 +107,19 @@ public class AnaMenu {
 			            ogrenciListesi.add(yeniOgrenci);
 			            System.out.println(denemeListe2[i] + " isimli ogrenci eklendi.");
 			        } else {
-			            System.out.println("Lütfen Büyük Küçük Harfe Duyarlý Giriþ Yapýnýz");
+			            System.out.println("Lï¿½tfen Bï¿½yï¿½k Kï¿½ï¿½ï¿½k Harfe Duyarlï¿½ Giriï¿½ Yapï¿½nï¿½z");
 			        }
 			        
-			    	   list.add(i+1 + ". Öðrencinin Adý : " +  denemeListe2[i] +  " Ögrencinin Tipi : " + ogrenciTipi + " Öðrencinin Bölümü : " + bolum);
+			    	   list.add(i+1 + ". ï¿½ï¿½rencinin Adï¿½ : " +  denemeListe2[i] +  " ï¿½grencinin Tipi : " + ogrenciTipi + " ï¿½ï¿½rencinin Bï¿½lï¿½mï¿½ : " + bolum);
 			    	   
 				}
-				System.out.println("Tebrikler Listeye Baþarýyla Öðrenci Eklediniz ");
+				System.out.println("Tebrikler Listeye Baï¿½arï¿½yla ï¿½ï¿½renci Eklediniz ");
 				DosyayaYaz(list);
  
             }
             else if(kullanicininGirdigiDeger == 2){
             	OgrencileriListele();
-				System.out.println("Silmek Ýstediðiniz Öðrencinin Satýrýný (Kopyalayýp) Giriniz");	
+				System.out.println("Silmek ï¿½stediï¿½iniz ï¿½ï¿½rencinin Satï¿½rï¿½nï¿½ (Kopyalayï¿½p) Giriniz");	
 				Scanner silinecekOgrenciAdiAl = new Scanner(System.in);
 				String silinecekOgrenciAdi = silinecekOgrenciAdiAl.nextLine();
 				DosyadanSil(list , silinecekOgrenciAdi);
@@ -130,24 +130,24 @@ public class AnaMenu {
             }  
             else if(kullanicininGirdigiDeger == 4){
             	/* 			
-				System.out.println("Çýkmak Ýstediðinize Emin Misiniz ? ( Y ) / ( N ) ");
+				System.out.println("ï¿½ï¿½kmak ï¿½stediï¿½inize Emin Misiniz ? ( Y ) / ( N ) ");
 				Scanner girilenYesOrNoAlma = new Scanner(System.in);
 				String girilenYesOrNo = girilenYesOrNoAlma.nextLine();
 				
 				if(girilenYesOrNo == "Y" || girilenYesOrNo == "y" ){
-					System.out.println("Çýktýnýz");
+					System.out.println("ï¿½ï¿½ktï¿½nï¿½z");
 					System.exit(0);
 				}
 				else if (girilenYesOrNo == "N" || girilenYesOrNo == "n" ){
-					System.out.println("Tekrar Hoþgeldiniz :) ");
+					System.out.println("Tekrar Hoï¿½geldiniz :) ");
 					continue gidilecekYer;
 				}*/
 				  
-            	System.out.println("Çýkýþ Baþarýlý");
+            	System.out.println("ï¿½ï¿½kï¿½ï¿½ Baï¿½arï¿½lï¿½");
             	System.exit(0);
             }
             else{
-            	System.out.println("Yanlýþ Bir Deðer Girdiniz, Tekrar Deneyiniz ");
+            	System.out.println("Yanlï¿½ï¿½ Bir Deï¿½er Girdiniz, Tekrar Deneyiniz ");
             }
         }
     }
@@ -155,26 +155,26 @@ public class AnaMenu {
 		String dosyaminYolu = ".\\Dosyam\\Verilerim.txt";
 		File veriDosyasi = new File(dosyaminYolu);
 		Scanner fileScanner = new Scanner(veriDosyasi);
-		System.out.println("Öðrenci Listenizdeki Öðrenciler Sýrasýyla");
+		System.out.println("ï¿½ï¿½renci Listenizdeki ï¿½ï¿½renciler Sï¿½rasï¿½yla");
 		while(fileScanner.hasNextLine()){
 			System.out.println(fileScanner.nextLine());
 			/*
 			for(int i =0; i<denemeListe.length; i++){
-				//System.out.println(i+1+  ". Öðrenci  = "+ fileScanner.nextLine());
+				//System.out.println(i+1+  ". ï¿½ï¿½renci  = "+ fileScanner.nextLine());
 			}
 			*/
 		}
 	}
     
     public static void DosyadanSil(ArrayList<String> list, String silinecekVeri){
-		System.out.println("Silinmeden Önceki Dosyanýn Durumu : \n" + list);
+		System.out.println("Silinmeden ï¿½nceki Dosyanï¿½n Durumu : \n" + list);
 		for(int i = 0; i<list.size(); i++){
 			if(list.get(i).equals(silinecekVeri)){
 				list.remove(i);
 				DosyayaYaz(list);
 			}	
 		}
-		System.out.println("Silindikten Sonraki Dosyanýn Durumu \n" + list);
+		System.out.println("Silindikten Sonraki Dosyanï¿½n Durumu \n" + list);
 	}
     
     private static void ekranaMenuyuBas() {

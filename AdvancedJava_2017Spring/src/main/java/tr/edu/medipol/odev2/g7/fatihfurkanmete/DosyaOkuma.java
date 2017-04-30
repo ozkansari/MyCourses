@@ -39,6 +39,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/** ozkans Degerlendirme
+
+- tr.edu.medipol.odev2.g7.* dekilerle benzer
+- Kod formatlanmamis.
+- Silme sadece listeden siliyor, dosyadan silinmiyor. Okuyunca uzerine yaziliyor.
+- Ekranda bolum olarak ne girilecegi bahsedilmemis ama gecersiz deniyor.
+- Tum hatalarda gecersiz bolum mesaji basiliyor.
+
+Ekran: 20/20 
+Ogrenci Islemleri: 10/15 (Silme sadece listeden siliyor, dosyadan silinmiyor. Okuyunca uzerine yaziliyor.)
+Polimorphism: 15/15
+Dosyadan Okuma: 20/20 
+Dosyaya Yazma:  20/20 
+Genel Program: 5/10 (Hata kontrolu duzgun degil)
+Bonus: 5/25 (scrollpane) 
+Benzer Kod Yazma Nedeniyle: -15 
+--------------------------
+SONUC: 80/125
+ */
 public class DosyaOkuma extends JFrame  {
 private static Scanner ekranOkuyucu = new Scanner(System.in);
 static File f=new File(".\\config\\ogrenciler.txt");

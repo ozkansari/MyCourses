@@ -19,6 +19,25 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 
+
+/** ozkans Degerlendirme
+
+- Recep Efe Mayoglu ile benzer ama birbirinden ayrilan yerler de var.
+- Ilk odevdeki alakasiz kodlar silinmemis. Temiz kod ilkesine uymuyor.
+- Turkce karakter sorunlari var.
+- Hatali/bos giris kontrolu yok. Uygulama sorun oldugunda hata veriyor, bunu kullaniciya gostermiyor.
+
+Ekran: 10/20
+Ogrenci Islemleri: 7/15 (Bos kayit kontrolu yok)
+Polimorphism: 15/15
+Dosyadan Okuma: 20/20 
+Dosyaya Yazma:  15/20 (Yazma mantigi karisik)
+Genel Program: 3/10
+Bonus: 0/25
+Benzer Kod Yazma Nedeniyle: -15 
+--------------------------
+SONUC: 55/125
+ */
 public class Uygulama extends JFrame implements ActionListener  {
 	
 	private JButton EKLE = new JButton("EKLE");

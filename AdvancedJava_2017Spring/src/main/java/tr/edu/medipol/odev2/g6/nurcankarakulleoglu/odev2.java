@@ -13,7 +13,25 @@ import java.awt.SystemColor;
 import javax.swing.JTextPane;
 
 
+/** ozkans Degerlendirme
 
+- Salih Terekli ile benzer ama birbirinden ayrilan yerler de var.
+- Polimorfism yok.
+- Turkce karakter sorunlari var.
+- Hatali/bos giris kontrolu yok. 
+- Listelerken gereksiz bos bir kayit eklenmis sekilde gosteriyor.
+
+Ekran: 15/20
+Ogrenci Islemleri: 10/15 (Bos kayit kontrolu yok, listeleme gereksiz bos kayit gosterilmesi)
+Polimorphism: 0/15
+Dosyadan Okuma: 20/20 
+Dosyaya Yazma:  20/20 
+Genel Program: 5/10 (dizi kullanimi, max 10 kayit)
+Bonus: 0/25
+Benzer Kod Yazma Nedeniyle: -15 
+--------------------------
+SONUC: 55/125
+ */
 public class odev2 {
 
 	private JFrame frmIndex;

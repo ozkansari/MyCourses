@@ -14,7 +14,25 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
 
+/** ozkans Degerlendirme
 
+- Nurcan Karakulleoglu ile benzer ama birbirinden ayrilan yerler de var.
+- Polimorfism yok.
+- Turkce karakter sorunlari var.
+- Hatali/bos giris kontrolu yok. 
+- Listelerken gereksiz bos bir kayit eklenmis sekilde gosteriyor.
+
+Ekran: 20/20 (Ekran dagilimi guzel, combobox kullanmi arti)
+Ogrenci Islemleri: 10/15 (Bos kayit kontrolu yok, listeleme gereksiz bos kayit gosterilmesi)
+Polimorphism: 0/15
+Dosyadan Okuma: 20/20 
+Dosyaya Yazma:  20/20 
+Genel Program: 5/10 (dizi kullanimi, max 10 kayit)
+Bonus: 10/25 (Combobox kullanimi)
+Benzer Kod Yazma Nedeniyle: -10 
+--------------------------
+SONUC: 75/125
+ */
 public class arayuz {
 
 	private JFrame frame;

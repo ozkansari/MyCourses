@@ -19,7 +19,21 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
+/** ozkans Degerlendirme
 
+tr.edu.medipol.odev2.g3.* dakilerle benzer.
+
+Ekran: 20/20 (Ekran tasarimi basarili)
+Ogrenci Islemleri: 10/15
+Polimorphism: 0/15
+Dosyadan Okuma: 10/20 (Dosyadan okunananlar tek tek degil, topluca tek bir element gibi listede gosteriliyor)
+Dosyaya Yazma:  15/20
+Genel Program: 5/10 (Surukle-birak plugin kullanildigindan kod biraz duzensiz)
+Bonus:10/25 (Tr karakter uyumlulugu)
+Benzer Kod Yazma Nedeniyle: -35 
+--------------------------
+SONUC: 45/125
+ */
 public class Ekran extends JFrame implements ActionListener {
 	private JButton silButonu = new JButton("Ögrenci Sil");
 	private String sorgu = "";
