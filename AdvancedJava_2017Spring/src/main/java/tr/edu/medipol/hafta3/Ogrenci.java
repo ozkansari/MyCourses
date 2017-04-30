@@ -13,7 +13,7 @@ public class Ogrenci {
 	}
 	
 	public String ogrenciBilgileriAl() {
-		return null;
+		return this.adSoyad + " - " + this.bolum;
 	};
 	
 	public String ogrenciBilgileriAl(boolean ekstraBilgi) {
