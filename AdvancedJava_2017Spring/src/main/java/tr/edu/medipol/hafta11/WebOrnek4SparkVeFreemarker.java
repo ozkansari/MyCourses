@@ -47,42 +47,30 @@ public class WebOrnek4SparkVeFreemarker {
     	ogrenciler.add(new Ogrenci("Ogrenci Iki", "On Lisans", "MYO"));
     	ogrenciler.add(new Ogrenci("Ogrenci Uc", "On Lisans", "MYO"));
     	
+    	// http://localhost:4567/ogrenciler
     	get("/ogrenciler", (request, response) -> {
-
-    	    	// http://localhost:4567/ogrenciler
-    	    	
-    	    	Map<String, Object> attributes = new HashMap<>();
-                attributes.put("ogrenciler", ogrenciler);
-                
-				return new ModelAndView(attributes, "ogrenciler.ftl"); // resources'daki ftl
-
+			Map<String, Object> attributes = new HashMap<>();
+			attributes.put("ogrenciler", ogrenciler);
+			return new ModelAndView(attributes, "ogrenciler.ftl"); // resources'daki ftl
     	}, new FreeMarkerEngine());
     	
+    	// http://localhost:4567/ogrenciekle
     	get("/ogrenciekle", (request, response) -> {
-
-	    	// http://localhost:4567/ogrenciekle
-	    	
-	    	Map<String, Object> attributes = new HashMap<>();
-            attributes.put("ogrenciler", ogrenciler);
-            
+			Map<String, Object> attributes = new HashMap<>();
+			attributes.put("ogrenciler", ogrenciler);
 			return new ModelAndView(attributes, "ogrenciekle.ftl"); // resources'daki ftl
-
     	}, new FreeMarkerEngine());
     	
+    	// http://localhost:4567/ogrenciekle
     	post("/ogrenciekle", (request, response) -> {
-
-	    	// http://localhost:4567/ogrenciekle
-	    	
-    		String adSoyad = request.queryParams("adSoyad");
+			String adSoyad = request.queryParams("adSoyad");
 			String ogrenciTipi = request.queryParams("ogrenciTipi");
 			String bolum = request.queryParams("bolum");
 			ogrenciler.add(new Ogrenci(adSoyad, ogrenciTipi, bolum));
-    		
-	    	Map<String, Object> attributes = new HashMap<>();
-            attributes.put("ogrenciler", ogrenciler);
-			return new ModelAndView(attributes, "ogrenciler.ftl"); // resources'daki ftl
 
-    	}, new FreeMarkerEngine());
+			response.redirect("/ogrenciler");
+			return null;
+    	});
         
     }
     

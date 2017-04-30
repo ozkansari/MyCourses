@@ -36,7 +36,8 @@
 @REM Begin all REM lines with '@' in case MAVEN_BATCH_ECHO is 'on'
 @echo off
 
-set JAVA_HOME="C:\API\jdk8_45\jre"
+@REM Uncomment and set your local java path if Java_HOME not set
+@REM set JAVA_HOME="C:\API\jdk8_45\jre"
 
 @REM enable echoing my setting MAVEN_BATCH_ECHO to 'on'
 @if "%MAVEN_BATCH_ECHO%" == "on"  echo %MAVEN_BATCH_ECHO%
