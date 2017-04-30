@@ -1,0 +1,39 @@
+Arrays.sort(dizi);
+
+-------------------------
+Bubble/Kabarcik On^2
+int [] dizi = {5,46,32,5623,3};
+
+5,32,46,3,5623
+5,32,3,46,5623
+5,3,32,46,5623
+3,5,32,46,5623
+
+--------------------------
+Insertion(Araya Ekleme)
+
+int [] dizi = {5,46,32,5623,3};
+
+anaIndis=1
+mevcutEleman=46
+altIndis=1     5,46,32,5623,3
+
+
+anaIndis=2
+mevcutEleman=32
+altIndis=2     5,46,46,5623,3
+altIndis=1     5,32,46,5623,3
+
+anaIndis=3
+mevcutEleman=5623
+altIndis=3      5,32,46,5623,3
+
+anaIndis=4
+mevcutEleman=3
+altIndis=4     5,32,46,5623,5623
+altIndis=3     5,32,46,46,5623
+altIndis=2     5,32,32,46,5623
+altIndis=1     5,5,32,46,5623
+altIndis=0     3,5,32,46,5623
+
+anaIndis=5 dışarıdaki donguden de cik...

@@ -14,7 +14,8 @@ public class VeritabaniOrnek {
 	// "jdbc:derby:memory:demo;create=true";
 
 	// Dosya tabanli veritabani, yoksa olustur
-	private static final String VERITABANI_URL = "jdbc:derby:c:\\_veritabani;create=true";
+	private static final String VERITABANI_DIZINI = "c:\\_veritabani";
+	private static final String VERITABANI_URL = "jdbc:derby:" + VERITABANI_DIZINI + ";create=true";
 
 	private static Connection veritabaniBaglantisi = null;
 
