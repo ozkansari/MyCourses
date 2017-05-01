@@ -26,26 +26,26 @@ import tr.edu.medipol.hafta3.Ogrenci;
  */
 public class WebOrnek1Spark {
 	
-	private static final Gson JSON_HELPER = new Gson();
-	// private static final Gson JSON_HELPER = new GsonBuilder().setPrettyPrinting().create();
-	
+    private static final Gson JSON_HELPER = new Gson();
+
     public static void main(String[] args) {
-    	
-    	port(4567); // default port, belirtmesek de olur
-    	
-    	// http://localhost:4567/ornek1
+
+        port(4567); // default port, belirtmesek de olur
+
+        // http://localhost:4567/ornek1
         get("/ornek1", (request, response) -> "Merhaba Web!");
-        
+
         // http://localhost:4567/ornek2/Ahmet
-		get("/ornek2/:isim", (request, response) -> {
-			return "Merhaba " + request.params(":isim");
-		});
-        
+        get("/ornek2/:isim", (request, response) -> {
+            return "Merhaba " + request.params(":isim");
+        });
+
         // http://localhost:4567/ornek3
         get("/ornek3", (request, response) -> {
-			response.type("application/json");
-            return JSON_HELPER.toJson(new Ogrenci("Zihni Sinir", "On Lisans", "MYO"));
-		});
-        
+            response.type("application/json");
+            return JSON_HELPER.toJson(new Ogrenci("Zihni Sinir", "On Lisans",
+                    "MYO"));
+        });
+
     }
 }
