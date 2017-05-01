@@ -49,6 +49,13 @@ public abstract class IslemlerOgrenci {
 	public abstract List<Ogrenci> ogrenciList();
 	
 	/**
+	 * tumOgrenciler'i List ve noya gore sirali olarak doner
+	 * 
+	 * @return
+	 */
+	public abstract List<Ogrenci> ogrenciSiraliList();
+	
+	/**
 	 * tumOgrenciler'i LinkedList olarak doner
 	 * 
 	 * @return
