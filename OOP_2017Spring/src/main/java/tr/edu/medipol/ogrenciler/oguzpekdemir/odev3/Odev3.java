@@ -1,4 +1,4 @@
-﻿package tr.edu.medipol.ogrenciler.oguzpekdemir.odev3;
+package tr.edu.medipol.ogrenciler.oguzpekdemir.odev3;
 
 import java.util.Scanner;
 import java.util.*;
@@ -24,7 +24,7 @@ public class Odev3 {
 		notu = new Scanner(System.in);
 		sayi = new Scanner(System.in);
 
-		System.out.println("Kaç öğrenci girmek istiyorsunuz ?");
+		System.out.println("Kac ogrenci girmek istiyorsunuz ?");
 		int sayisi = sayi.nextInt();
 		int sonsayi = 0;
 
@@ -36,8 +36,8 @@ public class Odev3 {
 
 		for (int i = 0; i < isimler.size(); i++) {
 
-			System.out.println("----------Öğrenci Listesi----------");
-			System.out.println("Adı: " + isimler.get(i) + " ----- Notu: " + notlar.get(i));
+			System.out.println("----------Ogrenci Listesi----------");
+			System.out.println("Adi: " + isimler.get(i) + " ----- Notu: " + notlar.get(i));
 
 		}
 
