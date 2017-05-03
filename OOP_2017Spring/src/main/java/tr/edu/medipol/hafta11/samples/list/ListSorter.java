@@ -2,6 +2,7 @@ package tr.edu.medipol.hafta11.samples.list;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -22,7 +23,7 @@ public class ListSorter {
         System.out.println("Sorting with Collections.sort with different order");
         List<Integer> l1 = createIntegerList();
         Collections.sort(l1, (o1, o2) -> (o1>o2 ? -1 : (o1==o2 ? 0 : 1)));
-        // Collections.sort(list, Integer::);
+
         
         System.out.println("Sorting with natural order");
         List<String> l2 = createStringList();
@@ -31,14 +32,23 @@ public class ListSorter {
 
         System.out.println("Sorting with a lamba expression for the comparison");
         List<String> l3 = createStringList();
-        l3.sort((s1, s2) -> s1.compareToIgnoreCase(s2)); // sort ignoring case
+        l3.sort((o1, o2) -> o1.compareToIgnoreCase(o2)); // sort ignoring case
         l3.forEach(System.out::println);
-
+        /*
+         Comparator<String> comp = new Comparator<String>() {
+			@Override
+			public int compare(String o1, String o2) {
+				return o1.compareToIgnoreCase(o2);
+			}
+		 };
+		 l3.sort(comp);
+         */
         System.out.println("Sorting with a method references");
         List<String> l4 = createStringList();
         l4.sort(String::compareToIgnoreCase);
         l4.forEach(System.out::println);
 
+        
     }
 
     private static List<String> createStringList() {
