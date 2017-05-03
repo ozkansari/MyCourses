@@ -1,6 +1,5 @@
 package tr.edu.medipol.hafta11;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
