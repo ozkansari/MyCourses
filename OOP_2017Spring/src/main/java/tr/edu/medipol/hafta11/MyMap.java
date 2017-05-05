@@ -1,3 +1,4 @@
+package tr.edu.medipol.hafta11;
 
 class MyEntry<K, V> {
         private final K key;

@@ -22,6 +22,6 @@ public abstract class Ogrenci implements Comparable<Ogrenci> {
 	public abstract String ogrenciTipi();
   
 	public int compareTo(Ogrenci o) {
-		return this.no.compareTo(o.ad);
+		return this.no.compareTo(o.adSoyad);
 	}
 }
