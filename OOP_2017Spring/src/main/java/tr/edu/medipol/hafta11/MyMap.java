@@ -1,5 +1,12 @@
 package tr.edu.medipol.hafta11;
 
+import java.util.ArrayList;
+import java.util.List;
+
+/*--
+ * http://www.vogella.com/tutorials/JavaDatastructures/article.html
+ */
+
 class MyEntry<K, V> {
         private final K key;
         private V value;
@@ -31,9 +38,9 @@ public class MyMap<K, V> {
   
   public V get( K anahtar) {
     
-    for( MyEntry entry : elemanlar ) {
+    for( MyEntry<K,V> entry : elemanlar ) {
       
-      if( entry.getKey().equals( anahtar ) {
+      if( entry.getKey().equals( anahtar ) ) {
           return  entry.getValue();
       }
     
