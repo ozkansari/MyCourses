@@ -17,7 +17,7 @@ import tr.edu.medipol.hafta3.Ogrenci;
 	<dependency>
 	    <groupId>com.google.code.gson</groupId>
 	    <artifactId>gson</artifactId>
-	    <version>2.8.0</version>
+	    <version>2.6.2</version>
 	</dependency>
 		
  *
