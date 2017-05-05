@@ -30,7 +30,7 @@ import com.google.gson.GsonBuilder;
  * Daha fazla bilgi: http://sparkjava.com/documentation#getting-started
  * 
  */
-public class WebOrnek2SparkeVeGson {
+public class WebOrnek2SparkVeGson {
 	
 	private static final Gson JSON_HELPER = new GsonBuilder().setPrettyPrinting().create();
 	
