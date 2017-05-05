@@ -7,6 +7,9 @@ import com.google.gson.*;
 import java.util.*;
 
 /*--
+ *  Programi calistirmak icin Maven projesi olusturun ve pom.xml dosyasina 
+ *  asagidaki bagimliliklari (dependency) ekleyin:
+ 
         <dependency>
             <groupId>com.sparkjava</groupId>
             <artifactId>spark-core</artifactId>

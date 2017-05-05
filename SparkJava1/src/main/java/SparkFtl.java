@@ -8,7 +8,27 @@ import java.util.Map;
 import spark.*;
 import spark.template.freemarker.*;
 
-
+/*--
+ * Programi calistirmak icin Maven projesi olusturun ve pom.xml dosyasina 
+ *  asagidaki bagimliliklari (dependency) ekleyin:
+ 
+         <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-template-freemarker</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+        
+ */
 public class SparkFtl {
 
     /*-- 
