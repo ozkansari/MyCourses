@@ -18,7 +18,7 @@ import java.util.*;
             <version>2.6.2</version>
         </dependency>
  */
-public class Spark1 {
+public class SparkRest {
     public static void main(String[] args) { /* localhost:4567/hello */
         // setPort(80);
         Route route = new Route("/hello") {
@@ -40,24 +40,14 @@ public class Spark1 {
             public Object handle(Request req, Response resp) {
                 resp.type("application/json");
                 List<Ogrenci> ogrenciler = new ArrayList<Ogrenci>();
-                ogrenciler.add(new Ogrenci("Mustafa", "MYO"));
-                ogrenciler.add(new Ogrenci("Gorkem", "MYO"));
-                ogrenciler.add(new Ogrenci("Funda", "MYO"));
+                ogrenciler.add(new Ogrenci("Mustafa", "On Lisans", "MYO"));
+                ogrenciler.add(new Ogrenci("Gorkem", "On Lisans", "MYO"));
+                ogrenciler.add(new Ogrenci("Funda", "On Lisans", "MYO"));
                 return helper.toJson(ogrenciler);
             }
         };
         get(route3);
 
-    }
-
-    static class Ogrenci {
-        private String ad;
-        private String bolum;
-
-        public Ogrenci(String ad, String bolum) {
-            this.ad = ad;
-            this.bolum = bolum;
-        }
     }
 
 }

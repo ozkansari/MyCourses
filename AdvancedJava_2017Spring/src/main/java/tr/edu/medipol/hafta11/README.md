@@ -1,7 +1,8 @@
 # Spark Java Version 1 Ornegi
 
-https://github.com/ozkansari/MyCourses/tree/master/SparkJava1
+Kod: https://github.com/ozkansari/MyCourses/tree/master/SparkJava1
 
+Yardimci: http://taywils.me/2013/11/05/javasparkframeworktutorial/
 
 
 # Spark Java Version 2 Ornegi
