@@ -22,11 +22,6 @@ import spark.template.freemarker.*;
             <artifactId>spark-template-freemarker</artifactId>
             <version>1.0</version>
         </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.6.2</version>
-        </dependency>
         
  */
 public class SparkFtl {
