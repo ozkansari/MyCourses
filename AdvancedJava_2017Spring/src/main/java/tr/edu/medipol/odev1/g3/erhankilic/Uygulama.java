@@ -20,9 +20,9 @@ Dosyadan Okuma: 20/25
 Dosyaya Yazma:  15/25 (Yazma mantigi karisik)
 Genel Program: 5/15 (Tr karakter sorunlari, Her seferinde dosyadan okuma mantikli degil, TODOlar silinmeli)
 Derste Yapilan Ornegi farklilastirma/Eklentiler: Bonus 2/20
-Benzer Kod Yazma Nedeniyle: -35
+Benzer Kod Yazma Nedeniyle: -15
 -----------------------------------
-Sonuc: 45
+Sonuc: 65
 
  */
 public class Uygulama {
