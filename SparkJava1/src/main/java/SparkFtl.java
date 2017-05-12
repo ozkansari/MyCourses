@@ -1,9 +1,6 @@
 import static spark.Spark.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import spark.*;
 import spark.template.freemarker.*;
@@ -12,7 +9,7 @@ import spark.template.freemarker.*;
  * Programi calistirmak icin Maven projesi olusturun ve pom.xml dosyasina 
  *  asagidaki bagimliliklari (dependency) ekleyin:
  
-         <dependency>
+        <dependency>
             <groupId>com.sparkjava</groupId>
             <artifactId>spark-core</artifactId>
             <version>1.1.1</version>
@@ -42,31 +39,44 @@ public class SparkFtl {
             public Object handle(Request req, Response resp) {
                 Map<String, Object> attributes = new HashMap<>();
                 attributes.put("ogrenciler", ogrenciler);
-                return new ModelAndView(attributes, "ogrenciler.ftl"); // resources'daki ftl
+                return new ModelAndView(attributes, "ogrenciler2.ftl"); // resources'daki ftl
             }
         };
         get(ogrencilerGet);
         
         FreeMarkerRoute ogrenciekleGet = new FreeMarkerRoute("/ogrenciekle") {
             public Object handle(Request req, Response resp) {
-                Map<String, Object> attributes = new HashMap<>();
-                attributes.put("ogrenciler", ogrenciler);
-                return new ModelAndView(attributes, "ogrenciekle.ftl"); // resources'daki ftl
+                return new ModelAndView(null, "ogrenciekle2.ftl"); // resources'daki ftl
             }
         };
         get(ogrenciekleGet);
         
         FreeMarkerRoute ogrencieklePost = new FreeMarkerRoute("/ogrenciekle") {
-            public Object handle(Request req, Response resp) {
-                String adSoyad = req.queryParams("adSoyad");
-                String ogrenciTipi = req.queryParams("ogrenciTipi");
-                String bolum = req.queryParams("bolum");
+            public Object handle(Request istek, Response cevap) {
+                
+            	String adSoyad = istek.queryParams("adSoyad");
+                String ogrenciTipi = istek.queryParams("ogrenciTipi");
+                String bolum = istek.queryParams("bolum");
+                
+                
                 ogrenciler.add(new Ogrenci(adSoyad, ogrenciTipi, bolum));
 
-                resp.redirect("/ogrenciler");
+                // belirtilen uri'ye yonlendir.
+                cevap.redirect("/ogrenciler");
                 return null;
             }
         };
         post(ogrencieklePost);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
