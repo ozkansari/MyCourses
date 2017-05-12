@@ -296,9 +296,14 @@
 						  </div>
 						  
 						  <div id="tabs-13" style="width:85%">
-						  	<h3>13. Hafta : Java EE ve JSF</h3>
+						  	<h3>13. Hafta : 19 Mayıs tatil</h3>
+						    <p> 19 Mayıs tatili: Ders yapilmayacak. </p>
 						    
-						    <p>
+						  </div>
+						  
+						  <div id="tabs-14" style="width:85%">
+						  	<h3>14. Hafta: Java EE & JSF </h3>
+						  	<p>
 							   	Java EE (Java Enterprise Edition, eski adiyla J2EE), ozellikle buyuk capli projelerin ihtiyacları icin gelistirilmis Java teknolojilerinin butunun olusturdugu cercevenin ve standardin ismidir.
 							</p>
 								    
@@ -312,15 +317,6 @@
 								    <li> <a target="_blank" href="https://github.com/javaee-samples/javaee7-samples"> JAVA EE 7 Samples </a> </li>
 								    <li> <a target="_blank" href="http://tomee.apache.org/examples/"> Tomee JAVA EE 7 Samples </a> </li>
 								    <li> <a target="_blank" href="https://www.primefaces.org/docs/guide/primefaces_user_guide_6_1.pdf"> Primefaces User Guide </a> </li>
-								</ul>
-							</p>
-						  </div>
-						  
-						  <div id="tabs-14" style="width:85%">
-						  	<h3>14. Hafta: </h3>
-						  	<p class="description" dir="ltr">
-							    <ul>
-							 	    <li> <a target="_blank" href="https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Spring/src/main/java/tr/edu/medipol/hafta14"> Lab Ornek</a> </li>
 								</ul>
 							</p>
 						  </div>
@@ -381,7 +377,7 @@
 										<td title="Odev-2">O-2</td>
 										<td title="Vize Notu (odev1*0.2 + odev2*0.3 + quiz1*0.15 + quiz2*0.35) + 2.8">V</td>
 										<td>O3</td>
-										<td>O4</td>
+										<td title="Ekstra">X</td>
 										<td>O5</td>
 										<td>O6</td>
 										<td>O7</td>
@@ -991,6 +987,15 @@
 									        return vize.toFixed(1);
 									    },
 									    "targets": 6
+									},
+									{
+									    "render": function ( data, type, row ) {
+									    	var odev3 = ( parseInt(row[7]) || 0 );
+									    	var ekstra = ( parseInt(row[8]) || 0 );
+									    	var final = odev3 + ekstra;
+									        return final.toFixed(1);
+									    },
+									    "targets": 12
 									},
 			    			        {
 			    			           "targets": [ 9,10,11 ],
