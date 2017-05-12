@@ -67,6 +67,39 @@ public class SparkFtl {
             }
         };
         post(ogrencieklePost);
+        
+        FreeMarkerRoute ogrenciGoruntule = new FreeMarkerRoute("/ogrenci/:ogrencino") {
+            public Object handle(Request req, Response resp) {
+                String ogrenciNo = req.params("ogrencino");
+                
+                // Ogrenciyi bul
+                Ogrenci bulunan = null;
+                
+                Map<String, Object> attributes = new HashMap<>();
+                attributes.put("ogrenci", bulunan);
+                
+                return new ModelAndView(attributes, "ogrenci.ftl");
+            }
+        };
+        get(ogrenciGoruntule);
+        
+        FreeMarkerRoute ogrenciSil = new FreeMarkerRoute("/ogrencisil/:ogrencino") {
+            public Object handle(Request req, Response resp) {
+                String ogrenciNo = req.params("ogrencino");
+                
+                // Ogrenciyi bul
+                Ogrenci bulunan = null;
+                ogrenciler.remove(bulunan);
+                
+                Map<String, Object> attributes = new HashMap<>();
+                attributes.put("ogrenci", bulunan);
+                
+                // belirtilen uri'ye yonlendir.
+                resp.redirect("/ogrenciler");
+                return null;
+            }
+        };
+        get(ogrenciSil);
     }
 }
 
