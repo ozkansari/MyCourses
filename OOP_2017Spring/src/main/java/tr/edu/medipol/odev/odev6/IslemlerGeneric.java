@@ -11,7 +11,8 @@ import java.util.SortedSet;
 public abstract class IslemlerGeneric<TYPE, KEY> {
 
 	/**
-	 * Eklenen kayitlarin tutuldugu ana liste
+	 * Eklenen kayitlarin tutuldugu ana liste.
+	 * TYPE tipinde sinifin KEY tipinde bir degiskeni olacak.
 	 */
 	protected List<TYPE> kayitlar = new ArrayList<>();
 	
@@ -68,7 +69,8 @@ public abstract class IslemlerGeneric<TYPE, KEY> {
 	public abstract SortedSet<TYPE> kayitSortedSet();
 	
 	/**
-	 * kayitlar'i Map olarak doner
+	 * kayitlar'i Map olarak doner. 
+	 * Map KEY tipinde nesneden, TYPE tipinde nesneye eslesme icerir.
 	 * 
 	 * @return
 	 */
@@ -76,7 +78,8 @@ public abstract class IslemlerGeneric<TYPE, KEY> {
 	
 	/**
 	 * kayitlar'i SortedMap olarak doner
-	 * 
+	 * Map KEY tipinde nesneden, TYPE tipinde nesneye eslesme icerir.
+	 *
 	 * @return
 	 */
 	public abstract SortedMap<KEY, TYPE> kayitSortedMap();
