@@ -29,7 +29,7 @@ public abstract class IslemlerGeneric<TYPE, KEY> {
 	 * @param kayit silinecek kayit
 	 * @return silme basariliysa true, degilse false
 	 */
-	public abstract boolean kayitSil(String kayitNo);
+	public abstract boolean kayitSil(KEY kayitNo);
 	
 	/**
 	 * kayitlar listesinde parametre alinan kayit'yi bulur.
@@ -37,7 +37,7 @@ public abstract class IslemlerGeneric<TYPE, KEY> {
 	 * @param kayit aranacak kayit
 	 * @return bulunan kayit, bulamazsa null
 	 */
-	public abstract TYPE kayitBul(String kayitNo);
+	public abstract TYPE kayitBul(KEY kayitNo);
 	
 	/**
 	 * kayitlar'i List olarak doner
