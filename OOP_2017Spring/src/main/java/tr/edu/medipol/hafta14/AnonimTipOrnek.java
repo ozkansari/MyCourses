@@ -15,6 +15,11 @@ class ToplamaFonksiyonu implements IFonksiyon {
         return sayi1+sayi2;
     }
 }
+class CikarmaFonksiyonu implements IFonksiyon {
+    public int hesapla(int sayi1, int sayi2) {
+        return sayi1-sayi2;
+    }
+}
 
 public class AnonimTipOrnek {
      
@@ -41,8 +46,8 @@ public class AnonimTipOrnek {
         };
         calistir(fonksiyon2);
         
-        // 3. Yontem: Lambda ile 
-        IFonksiyon fonksiyon3 = (sayi1,sayi2) -> (int) Math.pow(sayi1, sayi2); // Us alma fonk.
+        // 3. Yontem: Lambda ile : Yukaridakiyle ayni isi yapiyor
+        IFonksiyon fonksiyon3 = (sayi1,sayi2) -> sayi1%sayi2;
         calistir(fonksiyon3);
         
         
