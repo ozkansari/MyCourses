@@ -27,9 +27,9 @@ public class AnonimTipOrnek {
     /** PARAMETRE OLARAK IFonksiyon INTERFACEINDEN 
      * TUREYEN BIR NESNE ALAN METOD.
      */
-    public static void calistir(IFonksiyon fonk) {
+    public static void calistir(IFonksiyon fonk, int sayi1, int sayi2) {
         // IFonksiyon interfaceindeki hesapla metodunu cagirir.
-        System.out.println(fonk.hesapla(4, 2));
+        System.out.println(fonk.hesapla(sayi1, sayi2));
     }
     
     /** MAIN METHOD */
@@ -37,7 +37,7 @@ public class AnonimTipOrnek {
         
         // 1. Yontem:
         ToplamaFonksiyonu fonksiyon1 = new ToplamaFonksiyonu();
-        calistir(fonksiyon1);
+        calistir(fonksiyon1, 4, 2);
         
         // 2. Yontem: Anonim tipten tureyen
         IFonksiyon fonksiyon2 = new IFonksiyon() {     
@@ -45,15 +45,24 @@ public class AnonimTipOrnek {
                 return sayi1%sayi2;
             }
         };
-        calistir(fonksiyon2);
+        calistir(fonksiyon2, 4, 2);
         
         // 3. Yontem: Lambda ile : Yukaridakiyle ayni isi yapiyor
-        IFonksiyon fonksiyon3 = (sayi1,sayi2) -> sayi1%sayi2;
-        calistir(fonksiyon3);
+        IFonksiyon mod = (sayi1,sayi2) -> sayi1%sayi2;
+        calistir(mod, 4, 2);
         
-	     // Carpma
-	     // Bolme
-	     // Us alma
+	    // Carpma
+        IFonksiyon carpma = (sayi1,sayi2) -> sayi1*sayi2;
+        calistir(carpma, 4, 2);
+        
+	    // Bolme
+        IFonksiyon bolme = (sayi1,sayi2) -> sayi1/sayi2;
+        calistir(bolme, 4, 2);
+        
+	    // Us alma
+        IFonksiyon usAlma = (sayi1,sayi2) -> (int) Math.pow(sayi1, sayi2);
+        calistir(usAlma, 4, 2);
+        
         
         // --------- NOTLAR -----------------------------
         
