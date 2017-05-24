@@ -21,6 +21,7 @@ class CikarmaFonksiyonu implements IFonksiyon {
     }
 }
 
+
 public class AnonimTipOrnek {
      
     /** PARAMETRE OLARAK IFonksiyon INTERFACEINDEN 
@@ -50,10 +51,14 @@ public class AnonimTipOrnek {
         IFonksiyon fonksiyon3 = (sayi1,sayi2) -> sayi1%sayi2;
         calistir(fonksiyon3);
         
+	     // Carpma
+	     // Bolme
+	     // Us alma
         
         // --------- NOTLAR -----------------------------
         
-        // NOT 1: Hepsi IFonksiyon interface'inden turediginden calistir fonksiyonuna parametre olarak gonderilebiliyor.
+        // NOT 1: Hepsi IFonksiyon interface'inden turediginden calistir 
+        // fonksiyonuna parametre olarak gonderilebiliyor.
         
         // NOT 2: 12 . Hafta Hatırla
         Comparator<String> comp = new Comparator<String>() {
