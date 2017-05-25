@@ -1,0 +1,23 @@
+9 operasyon var, 9 da test olmali.
+Her bir operayon ve test 5 puan.
+
+[ ] - boolean kayitEkle(TYPE kayit) -> kod= 5/5 , test: 5/5
+[ ] - boolean kayitSil(KEY kayitNo) -> kod= 5/5 , test: 5/5
+[X] - TYPE kayitBul(KEY kayitNo) -> kod= 4/5 , test: 5/5
+[ ] - List<TYPE> kayitList() -> kod= 2/5 , test: 5/5
+[X] - LinkedList<TYPE> kayitLinkedList() -> kod= 1/5 , test: 3/5
+[X] - Set<TYPE> kayitSet() -> kod= 1/5 , test: 3/5
+[X] - SortedSet<TYPE> kayitSortedSet() -> kod= 1/5 , test: 3/5
+[X] - Map<KEY, TYPE> kayitMap() -> kod= 1/5 , test: 3/5
+[X] - SortedMap<KEY, TYPE> kayitSortedMap() -> kod= 1/5 , test: 3/5
+[ ] - Generic Kullanimi ve Duzgun Test: 10/10
+
+Yorum:
+- Test kısmı Muhittin Ayrı ile aynı: -15 puan 
+
+Bonus:
+- Exception kontrolu: 0/5
+- Clean/Kod Duzenli Kod: 0/5
+- Test kod mantigi: 0/5
+
+SONUC: 51/115
