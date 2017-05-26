@@ -86,7 +86,7 @@
 							Odev 5 ve Odev 6 notlariniz final notunuzun hesaplanmasinda %40 etki edecektir. Yani genel not ortalamaniza %24 etki edecektir. <br/>
 							Final Sinavi ise final notunuzun hesaplanmasinda %60 etki edecektir. Yani genel not ortalamaniza %36 etki edecektir. <br/>
 							Geçme notu 60 olduğundan su anda ortalamasi 24 alti olanlarin dersten gecmesi imkansiz gorunmekte. (Bu durumda olan 22 kisi var gorunuyor) <br/>
-							Yine de bu kisiler calisip final sinavindan 80 ustu not alirlarsa kanaat kullanabilirim. Iyi dersler.
+							Yine de bu kisiler calisip final sinavindan 90 ustu not alirlarsa kanaat kullanabilirim. Iyi dersler.
 							</h3>
 						</p>
 						<p>
@@ -1443,13 +1443,19 @@
 									    	if ( eksikNot < 0 ) {
 									    		eksikNot = 60.0;
 										    } else if( eksikNot > 36 ) {
-										    	eksikNot = 100;
+										    	eksikNot = 90.0;
 										    } else {
 										    	eksikNot = eksikNot / 0.36;
-										    	if(eksikNot<60) {
-										    		eksikNot = 60;
-												}
 											}
+
+									    	if(eksikNot<60) {
+									    		eksikNot = 60;
+											}
+											
+									    	if(eksikNot>90) {
+									    		eksikNot = 90;
+											}
+											
 									    	return eksikNot.toFixed(0);
 									        
 									    },
