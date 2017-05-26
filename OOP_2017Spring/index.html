@@ -1416,7 +1416,7 @@
 									},
 									{
 									    "render": function ( data, type, row ) {
-										    // vize hesapla
+										    // vize hesapla ---------------------------------
 									    	var odev1Ort = 0;
 									    	for (i = 2; i < 6; i++) { 
 									    		odev1Ort += ( parseInt(row[i]) || 0 );
@@ -1426,7 +1426,7 @@
 									    	var sinav1Ort = ( parseInt(row[7]) || 0 );
 											var vize = odev1Ort*0.2 + quiz1Ort*0.2 + sinav1Ort*0.6 + 3;
 
-									    	// final hesapla
+									    	// final hesapla ---------------------------------
 									    	var odev2Ort = 0;
 									    	for (i = 9; i < 11; i++) { 
 									    		odev2Ort += ( parseInt(row[i]) || 0 );
@@ -1435,23 +1435,19 @@
 									    	var fsinav = ( parseInt(row[15]) || 0);
 									    	var ekstraFinal = ( parseInt(row[16]) || 0);
 									    	var finalNot = odev2Ort*0.4 + fsinav*0.6 + ekstraFinal;
-									    	
+
+									    	// sonuc hesapla --------------------------------
 									    	var sonuc = vize*0.4 + finalNot*0.6;
 
-									    	var eksikNot = 60 - sonuc;
-
-									    	if( eksikNot > 36 ) {
-										    	eksikNot = 90.0;
-										    } else {
-										    	eksikNot = eksikNot / 0.36;
-											}
-
-									    	if(eksikNot<50) {
-									    		eksikNot = ( 50.0 - finalNot ) / 0.36;
-											}else if(eksikNot>90) {
+									    	// eksik not hesapla ----------------------------
+									    	var eksikNot1 = ( 60 - sonuc ) / 0.36;
+									    	var eksikNot2 = ( 50.0 - finalNot ) / 0.6;
+									    	var eksikNot = Math.max(eksikNot1,eksikNot2)
+									    	
+									    	if(eksikNot>90) {
 									    		eksikNot = 90;
 											}
-											
+									    	
 									    	return eksikNot.toFixed(0);
 									        
 									    },
