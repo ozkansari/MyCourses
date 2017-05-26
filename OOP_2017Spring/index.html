@@ -1440,19 +1440,15 @@
 
 									    	var eksikNot = 60 - sonuc;
 
-									    	if ( eksikNot < 0 ) {
-									    		eksikNot = 60.0;
-										    } else if( eksikNot > 36 ) {
+									    	if( eksikNot > 36 ) {
 										    	eksikNot = 90.0;
 										    } else {
 										    	eksikNot = eksikNot / 0.36;
 											}
 
-									    	if(eksikNot<60) {
-									    		eksikNot = 60;
-											}
-											
-									    	if(eksikNot>90) {
+									    	if(eksikNot<50) {
+									    		eksikNot = ( 50.0 - finalNot ) / 0.36;
+											}else if(eksikNot>90) {
 									    		eksikNot = 90;
 											}
 											
