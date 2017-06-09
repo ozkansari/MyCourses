@@ -26,8 +26,9 @@ Bonus:
 - Clean/Kod Duzenli Kod: 5/5
 - Test kod mantigi: 0/5
 - displayOgrenci metodu: +5
+- ilk gonerim: +10 puan
 
-SONUC: 65/115
+SONUC: 75/115
 
  */
 public class Main {

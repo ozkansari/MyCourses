@@ -28,7 +28,7 @@ Her bir operayon ve test 5 puan.
 [ ] - Generic Kullanimi ve Duzgun Test: 10/10
 
 Yorum:
-- Gec gonderim: -25 puan
+- Gec gonderim: -10 puan (Mazeretli)
 - Derlenmeyen Kod: -10 puan
 - Emek: +25 puan
 
@@ -37,7 +37,7 @@ Bonus:
 - Clean/Kod Duzenli Kod: 0/5
 - Test kod mantigi: 0/5
 
-SONUC:49/115
+SONUC:64/115
  */
 public class Odev6Test {
 

@@ -22,7 +22,7 @@ Her bir operayon ve test 5 puan.
 [ ] - SortedMap<String, Ogrenci> ogrenciSortedMap() -> kod= 2/5 , test: 0/5
 
 Yorum:
-- Gec gonderim: -25 puan
+- Gec gonderim: -10 puan (Mazeretli)
 - Derlenmeyen Kod: -10 puan
 - Emek: +25 puan
 
@@ -31,7 +31,7 @@ Bonus:
 - Clean/Kod Duzenli Kod: 0/5
 - Test kod mantigi: 0/5
 
-SONUC: 35/115
+SONUC: 50/115
  */
 public class Odev5Test 
 {

@@ -22,8 +22,9 @@ Bonus:
 - Exception kontrolu: 5/5
 - Clean/Kod Duzenli Kod: 2/5
 - Test kod mantigi: 0/5
+- ilk gonerim: +10 puan
 
-SONUC: 61/115
+SONUC: 71/115
  */
 // ODEV 6
 public class Odev6Test {
