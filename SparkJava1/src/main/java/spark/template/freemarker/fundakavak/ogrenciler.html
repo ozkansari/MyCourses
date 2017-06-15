@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Öğrenciler</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- Menü-->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/ogrenciler">Öğrenci Bilgi Sistemi</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/ogrenciler">Öğrenci Listesi</a></li>
+                <li><a href="/ogrenciekle">Öğrenci Ekle</a></li>
+                <li><a href="/dersekle">Ders Ekle</a></li>
+                <li><a href="/dersler">Ders Listesi</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Menü Son-->
+
+<div class="container">
+    <div class="jumbotron" style="background-color: #071025; color: aliceblue;">
+        <center>
+            <form action="/ogrenciler" method="POST" accept-charset="utf-8">
+                <table border="1">
+
+                    <h1>Öğrenci Sil</h1>
+
+                    <tr>
+                        <th>
+                            <center>Ad Soyad</center>
+                        </th>
+
+                        <th>
+                            <center>Numara</center>
+                        </th>
+
+                        <th>
+                            <center>Seçim</center>
+                        </th>
+
+                    </tr>
+
+                    <#list ogrenciler as ogrenci>
+
+                        <tr>
+                            <td width="200">
+                                <center>${ogrenci.ogrenciIsim()}</center>
+                            </td>
+
+                            <td width="200">
+                                <center>${ogrenci.ogrenciNo()}</center>
+                            </td>
+
+                            <td width="100">
+                                <center>
+                                    <input type="radio" id="OgrenciSildirme" name="OgrenciSildirme" value="${ogrenci.ogrenciNo()}">
+                                </center>
+                            </td>
+
+                        </tr>
+                    </#list>
+
+                </table>
+                <input type="submit" class="btn btn-default" value="Sil"/>
+
+            </form>
+        </center>
+    </div>
+
+
+    <div class="jumbotron" style="background-color: #071025; color: aliceblue;">
+        <center>
+            <form action="/ogrencidetay" method="POST" accept-charset="utf-8">
+                <table style="border:2px solid white;">
+
+                    <h1>Öğrenci Detaylandır</h1>
+
+                    <tr>
+                        <th>
+                            <center>Ad Soyad</center>
+                        </th>
+
+                        <th>
+                            <center>Numara</center>
+                        </th>
+
+                        <th>
+                            <center>Seçim</center>
+                        </th>
+
+                    </tr>
+                    <#list ogrenciler as ogrenci>
+
+                        <tr>
+
+                            <td width="200"><center>${ogrenci.ogrenciIsim()}</center></td>
+
+                            <td width="200"><center>${ogrenci.ogrenciNo()}</center></td>
+
+                            <td width="100">
+                                <center><input type="radio" id="OgrenciCheckbox" name="OgrenciCheckbox" value="${ogrenci.ogrenciNo()}"></center>
+                            </td>
+
+                        </tr>
+                    </#list>
+
+                </table>
+
+                <a href="/ogrenciekle"><input class="btn btn-default" value="Öğrenci Ekle"/></a></a>
+                <input type="submit" class="btn btn-default" value="Öğrenci Detayı"/>
+
+
+            </form>
+
+        </center>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2017 Ileri Java Medipol</p>
+    </footer>
+
+</div>
+</body>
+</html>

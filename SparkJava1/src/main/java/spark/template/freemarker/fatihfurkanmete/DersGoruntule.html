@@ -1,0 +1,41 @@
+<html>
+<head>
+</head>
+
+<body>
+<div>
+    <div>
+        <table>
+            <h1>Ders Listesi</h1>
+            <tr>
+                <th>
+                    <center>Ders ID</center>
+                </th>
+                <th>
+                    <center>Ders Adı</center>
+                </th>
+                <br>
+            </tr>
+            <tr>
+                <td width="200">${dersdetay.dersId()}</td>
+                <td width="200">${dersdetay.getDersAdi()}</td>
+            </tr>
+        </table>
+        <br>
+        <a href="/Dersler"><input value="Geri"/></a></a>
+    </div>
+
+    <div>
+        <table >
+            <tr>
+                <td width="150"><a href="/Ogrenciler">Ogrenci Listesi</a></td>
+                <td width="150"><a href="/OgrenciEkle">Ogrenci Ekle</a></td>
+                <td width="150"><a href="/DersEkle">Ders Ekle</a></td>
+                <td width="150"><a href="/Dersler">Ders Listesi</a></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+</body>
+</html>

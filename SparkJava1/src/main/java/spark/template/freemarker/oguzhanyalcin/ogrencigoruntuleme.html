@@ -1,0 +1,115 @@
+<!-- Freemarker template -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Ogrenciler</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<style>
+    table tr:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+       
+        
+        
+    }    
+</style>
+<body>
+
+<!-- Static navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/ogrenciler">Ogrenci Yonetim Sistemi</a>
+        </div>
+		
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/ogrenciler">Ögrenci Listele & Sil</a></li>
+                 <li><a href="/ogrenciekle">Ögrenci Ekle</a></li>
+                <li ><a href="/ogrencisil">Öğrenci Görüntüleme</a></li>
+                <li class="active"><a href="/ogrencisil">Ders Listesi & Silme & Görüntüleme</a></li>
+                <li><a href="/ogrencisil">Ders Ekleme</a></li>
+                <li ><a href="/ogrencisil">Ders Görüntüleme</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="jumbotron">
+        <h2>Öğrenci Listesi</h2>   
+        <!--
+			<table class="table table-bordered">
+                <tr>
+                    <td>#</td> 
+                    <td>Ad Soyad </td>
+                    <td>Öğrenci Tipi </td>
+                    <td>Bölüm</td>
+                    <td>Öğrenci No </td> 
+                </tr>
+                <tr>
+                    <td>1</td> 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
+                </tr>
+                <tr>
+                    <td>2</td> 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
+                </tr>
+                <tr>
+                    <td>3</td> 
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> 
+                </tr>
+		 
+		</table>  -->
+		
+           
+            <!-- http://freemarker.org/docs/ref_directive_list.html -->
+            <ol>
+               <h3>
+       
+                   <#list ogrenciler as ogrenci> 
+                        <li>${ogrenci.ogrenciBilgiAl()} </li>
+                    </#list>
+           </h3>
+			 </ol>
+        
+      
+
+        <a href="/ogrenciekle">Ogrenci Ekle</a>
+    </div> 
+    <footer class="footer">
+        <p>&copy; 2017 Ileri Java Uygulamaları</p>
+    </footer>
+
+</div>
+</body>
+</html>
