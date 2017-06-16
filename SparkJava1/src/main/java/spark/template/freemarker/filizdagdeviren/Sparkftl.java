@@ -20,14 +20,14 @@ public class Sparkftl {
 	            public Object handle(Request req, Response resp) {
 	                Map<String, Object> attributes = new HashMap<>();
 	                attributes.put("ogrenciler", ogrenciler);
-	                return new ModelAndView(attributes, "filizdagdeviren/ogrenciler2.ftl"); // resources'daki ftl
+	                return new ModelAndView(attributes, "filizdagdeviren/ogrenciler.ftl"); // resources'daki ftl
 	            }
 	        };
 	        get(ogrencilerGet);
 	        
 	        FreeMarkerRoute ogrenciekleGet = new FreeMarkerRoute("/ogrenciekle") {
 	            public Object handle(Request req, Response resp) {
-	                return new ModelAndView(null, "filizdagdeviren/ogrenciekle2.ftl"); // resources'daki ftl
+	                return new ModelAndView(null, "filizdagdeviren/ogrenciekle.ftl"); // resources'daki ftl
 	            }
 	        };
 	        get(ogrenciekleGet);

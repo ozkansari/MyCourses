@@ -46,7 +46,7 @@
 			    <ul>
 			    	<!-- http://freemarker.org/docs/ref_directive_list.html -->
 			    	<#list ogrenciler as ogrenci>
-			    	<li>${ogrenci.ogrenciBilgileriAl()}</li>
+			    	<li>${ogrenci.dersBilgileriAl()}</li>
 			    	</#list>
 			    </ul>
 			    
