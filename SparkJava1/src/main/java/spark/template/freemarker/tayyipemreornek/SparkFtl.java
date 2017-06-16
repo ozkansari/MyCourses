@@ -24,7 +24,7 @@ public class SparkFtl {
         lessonlist.add(new Lesson(1, "Visual Programming", 6, 3));
         lessonlist.add(new Lesson(2, "Operating System", 4, 4));
 
-        setPort(5859);
+        //setPort(5859);
 
         //lessonlist.ftl
         FreeMarkerRoute getLessonList = new FreeMarkerRoute("/lessonlist") {

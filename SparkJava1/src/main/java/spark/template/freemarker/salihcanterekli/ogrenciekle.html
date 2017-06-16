@@ -16,6 +16,14 @@
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+			body{
+				font-family: 'Open Sans', sans-serif;
+
+			}
+		</style>
 	</head>
 	
 	
@@ -25,13 +33,18 @@
 	    <nav class="navbar navbar-default navbar-static-top">
 	      <div class="container">
 	        <div class="navbar-header">
-	          <a class="navbar-brand" href="#">Ogrencix</a>
+	          <span style="font-size: 25px;" class="navbar-brand" href="#">Java|
+					<span style="font-size: 15px;" >Final Ödevi</span>
+			  </span>
+
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">
-	          <ul class="nav navbar-nav">
+	          <ul class="nav navbar-nav" style="padding-left: 600px !important;">
 	            <li><a href="/ogrenciler">Ogrenci Listesi</a></li>
 	            <li class="active"><a href="/ogrenciekle">Ögrenci Ekle</a></li>
-				  <li><a href="/ogrencisil">Ögrenci Sil</a></li>
+
+				  <li><a href="/ogrenciders">Ögrenci Ders</a></li>
+
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -39,43 +52,41 @@
 	    
 	    <div class="container">
 	    	<div class="jumbotron">
-			    <h1>Ogrenci Ekle</h1>
-			    <form class="form-inline" method="POST" action="/ogrenciekle">
-		            <div class="form-group">
+			    <h2>Ogrenci Ekle</h2><br>
+			    <form class="form-inline" method="POST" action="/ogrenciekle" style="width: 300px;">
+		            <div class="form-group" style="display: block;">
 		                <label for="name">Adı Soyadı :</label>
-		                <input type="text"
+		                <input style="width: 100% !important;" type="text"
 		                       class="form-control"
 		                       id="adSoyad"
 		                       name="adSoyad">
-		            </div>
-					<div class="form-group">
+		            </div><br>
+					<div class="form-group" style="display: block;">
 						<label for="name">Ögrenci Tipi :</label>
-						<input type="text"
+						<input style="width: 100% !important;" type="text"
 							   class="form-control"
 							   id="ogrenciTipi"
 							   name="ogrenciTipi">
-					</div>
+					</div><br>
 
-		            <div class="form-group">
+		            <div class="form-group" style="display: block;">
 		                <label for="name">Bölüm :</label>
-		                <input type="text"
+		                <input style="width: 100% !important;" type="text"
 		                       class="form-control"
 		                       id="bolum"
 		                       name="bolum">
-		            </div>
+		            </div><br>
 
-					<div class="form-group">
-						<label for="name">Ögrenci No :</label>
-						<input type="text"
+					<div class="form-group" style="display: block;">
+						<label for="name">Ögrenci Ders :</label>
+						<input style="width: 100% !important;" type="text"
 							   class="form-control"
-							   id="ogrenciNo"
-							   name="numara">
-					</div>
+							   id="ogrenciDers"
+							   name="ders">
+					</div><br><br>
 
 		            <input type="submit" class="btn btn-default" value="Ögrenci Ekle" />
 		        </form>
-		        
-		        <a href="/ogrenciler">Vazgec</a>
 	        </div>
 	        
 	        <footer class="footer">

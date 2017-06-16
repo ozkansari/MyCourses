@@ -1,6 +1,7 @@
 <html>
 
 	<head>
+	<meta charset="ISO-8859-9">
 	<h1 align="center">ANA SAYFA</h1>
 	
 	</head>

@@ -54,7 +54,7 @@ public class SparkFtl {
 
 
 
-        setPort(8015);
+        //setPort(8015);
 
         FreeMarkerRoute ogrencilerGet = new FreeMarkerRoute("/ogrenciler") {
             public Object handle(Request req, Response resp) {
