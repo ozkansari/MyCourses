@@ -112,7 +112,14 @@
 							<h3>1. Hafta: Temel Java Konu Tekrarları </h3>
 							<p class="description" dir="ltr">
 							    <ul>
-							 	    <li> <a style="color:red;" href="https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/JavaOzet1.pdf" target="_blank">Java Ozet 1</a> </li>
+							    	<li> <a style="color:red;" href="https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/JavaProgramlamayaGiris.pdf" target="_blank">Javaya Giris</a> </li>
+							 	    <li> <a style="color:red;" href="https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/NesnelerVeSiniflaraGiris.pdf" target="_blank">Java Nesne ve Sınıflara Giris</a> </li>
+							 	    <li> <a style="color:red;" href="https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/Basit_veri_turleri.pdf" target="_blank">Javada Basit Veri Türleri</a> </li>
+							 	    <li> <a style="color:red;" href="https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/Degisken_tipleri.pdf" target="_blank">Javada Degisken_tipleri</a> </li>
+							 	    
+							 	    <li> <a style="color:red;" href="https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/JavaOzet1.pdf" target="_blank">Java Ozet</a> </li>
+								
+									<li> <a target="_blank" href="https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Autumn/src/main/java/tr/edu/medipol/hafta1"> Lab Ornek</a> </li>
 								</ul>
 							</p>
 						  </div>
@@ -314,43 +321,7 @@
 						  
 						  <div id="tabs-notlar" style="width:85%">
 						  	<h3>NOTLAR</h3>
-						  	<table id="notesTable" class="display" cellspacing="0" width="100%">
-								<thead>
-									<tr>
-										<td>No</td>
-										<td>Ad Soyad</td>
-										<td title="Quiz-1">Q-1</td>
-										<td title="Quiz-2">Q-2</td>
-										<td title="Odev-1">0-1</td>
-										<td title="Odev-2">O-2</td>
-										<td title="Vize Notu (odev1*0.2 + odev2*0.3 + quiz1*0.15 + quiz2*0.35) + 2.8">V</td>
-										<td>O3</td>
-										<td title="Ekstra Derse Katılım">X</td>
-										<td>O5</td>
-										<td>O6</td>
-										<td title="Final Notu">F</td>
-										<td title="Ders Notu">S</td>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>...</td>
-										<td>....</td>
-										<td title="Quiz-1">0</td>
-										<td title="Quiz-2">0</td>
-										<td title="Odev-1" style="color:red;">0</td>
-										<td title="Odev-2">0</td>
-										<td title="Vize Notu (odev1*0.2 + odev2*0.3 + quiz1*0.15 + quiz2*0.35)">0</td>
-										<td title="Odev-3" style="color:blue;" title="Butunleme">0</td>
-										<td title="Ekstra Derse Katılım">0</td>
-										<td title="Odev-5">0</td>
-										<td title="Odev-6">0</td>
-										<td title="Final">0</td>
-										<td title="Ders Notu">0</td>
-									</tr>
-									
-								</tbody>
-							</table>
+						  	...
 						  </div>
 					</div>
 					
@@ -376,64 +347,10 @@
 			<script src="https://ozkansari.github.io/assets/js/util.js"></script>
 			<script src="https://ozkansari.github.io/assets/js/main.js"></script>
 	    	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	    	<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 	    	
 	    	<script>
 	    	$(document).ready(function() {
-			      var table = $('#notesTable').DataTable(
-			    		  {
-			    			  "scrollX": true,
-			    			  "paging":   false,
-			    			  "columnDefs": [
-									{
-									    "render": function ( data, type, row ) {
-										    var quiz1 = ( parseInt(row[2]) || 0 );
-										    var quiz2 = ( parseInt(row[3]) || 0 );
-										    var odev1 = ( parseInt(row[4]) || 0 );
-									    	var odev2 = ( parseInt(row[5]) || 0 );
-									    	var ekstra = ( parseInt(row[6]) || 0 );
-									    	var vize = odev1*0.2 + odev2*0.3 + quiz1*0.15 + quiz2*0.35 + ekstra + 2.8;
-									        return vize.toFixed(1);
-									    },
-									    "targets": 6
-									},
-									{
-									    "render": function ( data, type, row ) {
-									    	var odev3 = ( parseInt(row[7]) || 0 );
-									    	var ekstra = ( parseInt(row[8]) || 0 );
-									    	var finalNotu = odev3 + ekstra;
-									        return finalNotu.toFixed(1);
-									    },
-									    "targets": 11
-									},
-									{
-									    "render": function ( data, type, row ) {
-									    	var quiz1 = ( parseInt(row[2]) || 0 );
-										    var quiz2 = ( parseInt(row[3]) || 0 );
-										    var odev1 = ( parseInt(row[4]) || 0 );
-									    	var odev2 = ( parseInt(row[5]) || 0 );
-									    	var ekstra = ( parseInt(row[6]) || 0 );
-									    	var vize = odev1*0.2 + odev2*0.3 + quiz1*0.15 + quiz2*0.35 + ekstra + 2.8;
-
-									    	var odev3 = ( parseInt(row[7]) || 0 );
-									    	var ekstra = ( parseInt(row[8]) || 0 );
-									    	var finalNotu = odev3 + ekstra;
-									    	
-									    	var sonuc = vize * 0.4 + finalNotu*0.6;
-									    	
-									        return sonuc.toFixed(1);
-									    },
-									    "targets": 12
-									},
-			    			        {
-			    			           "targets": [ 9,10 ],
-			    			           "visible": false
-			    			        }
-			    			  ],
-			    			  "order": [[ 12, "desc" ]]
-			    		  }
-			      );
-
+			      
 			      $( "#tabs" ).tabs({ 
 			    	  active: 15,
 			    	  activate: function(event, ui){
