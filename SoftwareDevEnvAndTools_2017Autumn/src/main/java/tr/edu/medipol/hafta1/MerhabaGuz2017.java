@@ -6,8 +6,4 @@ public class MerhabaGuz2017 {
         System.out.println("Merhaba 2017 Guz donemi...");
     }
     
-    public void deneme(){
-        
-    }
-
 }
