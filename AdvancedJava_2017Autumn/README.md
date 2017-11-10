@@ -30,6 +30,15 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 - [3i_Duzenli_Ifadeler](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/3i_Duzenli_Ifadeler.pdf)
 - [lab hafta3](https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Autumn/src/main/java/tr/edu/medipol/hafta3)
 
+### Hafta 4
+
+- [4a_Diziler](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/4a_Diziler.pdf)
+- [4b_Zaman](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/4b_Zaman.pdf)
+- [4c_Duzenli_Ifadeler](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/4c_Duzenli_Ifadeler.pdf)
+- [4d_Dosya_Islemleri](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/4d_Dosya_Islemleri.pdf)
+- [4e_Istisnalar](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/4e_Istisnalar.pdf)
+- [lab hafta4](https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Autumn/src/main/java/tr/edu/medipol/hafta4)
+
 ### Notlar
 
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/NotlarIleriJavaGuz2017.PNG)
