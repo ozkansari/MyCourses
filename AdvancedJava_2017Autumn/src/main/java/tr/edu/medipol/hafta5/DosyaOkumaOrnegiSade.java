@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta4;
+package tr.edu.medipol.hafta5;
 
 import java.io.File;
 import java.io.FileNotFoundException;
