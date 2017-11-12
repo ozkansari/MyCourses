@@ -67,10 +67,10 @@ Uygulama cikista sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kald
 - [5a_Dosya_Islemleri](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/5a_Dosya_Islemleri.pdf)
 - [5b_Istisnalar](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/5b_Istisnalar.pdf)
 
-## Hafta 6
+### Hafta 6
 
 - [GUI](http://web.firat.edu.tr/iaydin/bmu112/bmu112_java_GUI.pdf)
 
-### Notlar
+## Notlar
 
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/NotlarIleriJavaGuz2017.PNG)
