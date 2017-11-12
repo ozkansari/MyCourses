@@ -23,3 +23,5 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 ### Hafta 5
 
 ## Notlar
+![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/Notlar2017Guz.PNG)
+
