@@ -19,6 +19,7 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 - [Sunum](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/3_Ders_Sunum.pdf)
 
 ### Hafta 4: Maven, JUnit ve Git
+- [Sunum](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/4_Ders_Sunum.pdf)
 
 ### Hafta 5
 
