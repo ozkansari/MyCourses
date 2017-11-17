@@ -1,1 +1,0 @@
-<li>${ogrenci.ogrenciBilgileriAl()}</li>
