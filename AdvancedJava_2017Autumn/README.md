@@ -1,9 +1,36 @@
-ILERI JAVA UYGULAMALARI
+# ILERI JAVA UYGULAMALARI
 
 2017 GÜZ - BPR216050 / BPR226050
 
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
 Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
+
+## ODEVLER
+
+Odevleri ozkan.sari@outlook.com adresine gönderebilirsiniz.
+
+### ODEV-1: Metin İcinde harf Arama Uygulamasi
+Kullanicidan oncelikle bir metin girmesi istenir. 
+Daha sonra bu metin icinde aranilacak harf istenir. 
+Aranan harfin metinde hangi indekslerde gectigi birer birer yazdirilir. Harf metin icerisinde gecmiyorsa, metin bulunamadi yazilir.
+
+### ODEV-2 : Randevu Konsol Uygulamasi
+Kullanici sisteme randevu bilgileri girebilir. Bu bilgiler sunlardir: randevu adi, yeri, tarih-saati.
+Uygulamaniz 5 adet randevu girisini destekleyecek. Sonrasinda randevu bilgileri listelenecektir.
+BONUS: Kullaniciya menu halinde randevu girisi, listele ve cikissecenekleri sunulmasi.
+
+
+## PROJE
+
+### Teslim Tarihi: Duyurulacaktır
+### Aciklama: 
+(Degisiklik ve Eklentiler Yapilabilir) 
+Java Swing GUI uygulamasi olarak calisan bir Magaza Yonetim Programi uygulamasi yapilacak. 
+Uygulamada menu halinde gosterilecek 1-) Calisan Ekle/Sil/Listele 2-) Stok Ekle/Sil/listele 3-) Cikis secenekleri olacaktir.  
+Uygulama kalitim ve cok yuzluluk (polimorfizm) iliskisi ile farkli calisan ve stok tiplerini destekleyecektir: Stajyer/Personel/Mudur ve Giysi/Aksesuar/Yiyecek vb.
+Uygulama cikista sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kaldigi yerden devam edebilmesi icin dosyadan kayitlari okuyacaktir. 
+
+## DERS ICERIKLERI
 
 ### Hafta 1-2
 
@@ -35,10 +62,17 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 - [4a_Diziler](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/4a_Diziler.pdf)
 - [4b_Zaman](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/4b_Zaman.pdf)
 - [4c_Duzenli_Ifadeler](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/4c_Duzenli_Ifadeler.pdf)
-- [4d_Dosya_Islemleri](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/4d_Dosya_Islemleri.pdf)
-- [4e_Istisnalar](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/4e_Istisnalar.pdf)
 - [lab hafta4](https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Autumn/src/main/java/tr/edu/medipol/hafta4)
 
-### Notlar
+### Hafta 5
+
+- [5a_Dosya_Islemleri](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/5a_Dosya_Islemleri.pdf)
+- [5b_Istisnalar](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/5b_Istisnalar.pdf)
+
+### Hafta 6
+
+- [GUI](http://web.firat.edu.tr/iaydin/bmu112/bmu112_java_GUI.pdf)
+
+## Notlar
 
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/NotlarIleriJavaGuz2017.PNG)
