@@ -7,6 +7,8 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
 ## ODEVLER
 
+Odevleri ozkan.sari@outlook.com adresine gönderebilirsiniz.
+
 ### ODEV-1: Metin İcinde harf Arama Uygulamasi
 Kullanicidan oncelikle bir metin girmesi istenir. 
 Daha sonra bu metin icinde aranilacak harf istenir. 
