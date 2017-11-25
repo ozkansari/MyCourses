@@ -26,10 +26,23 @@ d-) Branch'ınızdaki değişiklikleri commitleyin ve push'layın.
 ### Hafta 3 : UML
 - [Sunum](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/3_Ders_Sunum.pdf)
 
-### Hafta 4-5-6: Maven, JUnit ve Git
+### Hafta 4-5: Maven, JUnit ve Git
 - [Sunum](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/4_Ders_Sunum.pdf)
 
 - https://github.com/ozkansari/YAZILIM_ARACLARI_REPO
+
+### Hafta 6: Jenkins
+
+#### Jenkins Kurulum
+https://jenkins.io/download/ adresinden indirilebilir.
+1. Seçenek: Windows Kurulum : https://jenkins.io/download/thank-you-downloading-windows-installer-stable
+2. Seçenek: Generic WAR http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+
+    java -jar jenkins.war
+
+#### Jenkins Arayüzü
+Tarayıcıdan http://localhost:8080 girerek ara yüz açılabilir.
+Daha sonra karşınıza çıkan "Unlock Jenkins" ekranında verilen dizindeki dosyayı açın ve orada yazan şifreyi ekrana girin ve Continue tuşuna basın. Sonraki ekranda "Installed Suggested Plugins" seçiniz. Ayrıntılar için: https://jenkins.io/doc/book/installing/#setupwizard
 
 ## Notlar
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/Notlar2017Guz.PNG)
