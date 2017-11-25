@@ -1,10 +1,8 @@
-package tr.edu.medipol.hafta6;
+package tr.edu.medipol.hafta6.konsol;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import tr.edu.medipol.hafta3.MenuSecimi;
 
 public class MenuOrnegi {
 
