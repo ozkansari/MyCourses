@@ -1,4 +1,4 @@
-package tr.edu.medipol.odev1.koraycomert;import java.util.Scanner;
+package tr.edu.medipol.odev2.koraycomert;import java.util.Scanner;
 public class stringVeriAlma{
 	// 30 (gonderdigin icin)
 	public static void main(String [] args)
