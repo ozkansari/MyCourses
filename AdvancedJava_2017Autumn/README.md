@@ -78,7 +78,7 @@ Uygulama cikista sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kald
 ### Hafta 7
 
 - [GUI 1](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/7a_JavaGUI_1.pdf)
-- [GUI 2](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/7a_JavaGUI_2.pdf)
+- [GUI 2](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/7b_JavaGUI_2.pdf)
 
 ## Notlar
 
