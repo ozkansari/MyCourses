@@ -1,7 +1,10 @@
 package tr.edu.medipol.hafta7;
 
 import java.awt.*;
+import java.io.File;
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class Program {
 
@@ -17,36 +20,16 @@ class LoginPencere {
 
     private JFrame loginPencere = new JFrame("Login");
     private JButton okButon = new JButton("OK");
-
+    final JEditorPane editorPane = new JEditorPane();
+    
     public LoginPencere() {
 
-        // JMenuBar
-
-        // ImageIcon icon = new ImageIcon(getClass().getResource("exit.png"));
-        Icon icon = UIManager.getIcon("OptionPane.errorIcon");
-        JMenuItem eMenuItem = new JMenuItem("Exit", icon);
-        eMenuItem.addActionListener(event -> {
-            System.exit(0);
-        });
-        
-        Icon fileIcon = UIManager.getIcon("FileView.fileIcon");  
-        JMenuItem dosyaAceMenuItem = new JMenuItem("Dosya Ac", fileIcon);
-        dosyaAceMenuItem.addActionListener(e-> {
-            JFileChooser fileopen = new JFileChooser();
-            int answer = fileopen.showDialog(null, "Open file");
-        });
-        
-        JMenu filemenu = new JMenu("File");
-        filemenu.add(eMenuItem);
-        filemenu.add(dosyaAceMenuItem);
-        
-        JMenuBar menubar = new JMenuBar();
-        loginPencere.setJMenuBar(menubar);
-        menubar.add(filemenu);
-        
+        JScrollPane editorScroll = new JScrollPane(editorPane);
+        editorScroll.setBounds(10, 10, 700, 200);
+        loginPencere.getContentPane().add(editorScroll);
 
         // JButon
-        okButon.setBounds(50, 60, 100, 50);
+        okButon.setBounds(10, 220, 100, 50);
         okButon.addActionListener(eeee -> {
             pencere2Ac();
         });
@@ -61,12 +44,12 @@ class LoginPencere {
         JLabel label = new JLabel(lyrics);
         label.setFont(new Font("Georgia", Font.PLAIN, 14));
         label.setForeground(new Color(50, 50, 25));
-        label.setBounds(105, 129, 526, 200);
+        label.setBounds(10, 250, 700, 200);
 
         // JSlider
         JSlider slider = new JSlider(0, 150, 0);
         slider.setPreferredSize(new Dimension(150, 30));
-        slider.setBounds(300, 50, 100, 100);
+        slider.setBounds(10, 450, 100, 100);
         slider.addChangeListener(e -> {
             int value = slider.getValue();
             if (value == 0) {
@@ -78,18 +61,57 @@ class LoginPencere {
             } else {
                 label.setText("<|)))");
             }
-        }
-        );
+        } );
         loginPencere.getContentPane().add(slider);
 
+        MenuBarOlustur();
+        
+        
         loginPencere.setLayout(null);
         loginPencere.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         loginPencere.getContentPane().add(okButon);
         loginPencere.getContentPane().add(label);
-        loginPencere.setSize(500, 600);
+        loginPencere.setSize(800, 800);
         // loginPencere.setLocation(700, 700);
         loginPencere.setLocationRelativeTo(null);
         loginPencere.setVisible(true);
+    }
+
+    private void MenuBarOlustur() {
+        // JMenuBar
+        
+        Icon fileIcon = UIManager.getIcon("FileView.fileIcon");
+        JMenuItem dosyaAceMenuItem = new JMenuItem("Dosya Ac", fileIcon);
+        dosyaAceMenuItem.addActionListener(e -> {
+            JFileChooser fileopen = new JFileChooser();
+
+            FileFilter filter = new FileNameExtensionFilter("txt files", "txt");
+            fileopen.addChoosableFileFilter(filter);
+            int answer = fileopen.showDialog(null, "Open file");
+            if (answer == JFileChooser.APPROVE_OPTION) {
+                File file = fileopen.getSelectedFile();
+                try {
+                    editorPane.setPage("File:///" + file);
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+            }
+        });
+        
+        // ImageIcon icon = new ImageIcon(getClass().getResource("exit.png"));
+        Icon icon = UIManager.getIcon("OptionPane.errorIcon");
+        JMenuItem eMenuItem = new JMenuItem("Exit", icon);
+        eMenuItem.addActionListener(event -> {
+            System.exit(0);
+        });
+
+        JMenu filemenu = new JMenu("File");
+        filemenu.add(dosyaAceMenuItem);
+        filemenu.add(eMenuItem);
+
+        JMenuBar menubar = new JMenuBar();
+        loginPencere.setJMenuBar(menubar);
+        menubar.add(filemenu);
     }
 
     private void pencere2Ac() {
