@@ -54,6 +54,10 @@ Bu aşamada "Jenkinse Hoşgeldiniz" yazısını ekranda görmeniz lazım.
 
 Başlamak için "Yeni İş" oluşturuyoruz.
 
+### Hafta 7: SonarQube
+
+https://www.sonarqube.org/downloads/
+
 ## Notlar
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/Notlar2017Guz.PNG)
 
