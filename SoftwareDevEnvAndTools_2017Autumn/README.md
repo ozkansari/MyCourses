@@ -39,6 +39,10 @@ https://jenkins.io/download/ adresinden indirilebilir.
 2. Seçenek: Generic WAR http://mirrors.jenkins.io/war-stable/latest/jenkins.war
 
     java -jar jenkins.war
+    
+8080 portu kullanımdaysa başka bir port aşağıdaki şekilde belirtilebilir:
+
+    java -jar jenkins.war --httpPort=49001
 
 #### Jenkins Arayüzü
 Tarayıcıdan http://localhost:8080 girerek ara yüz açılabilir.
