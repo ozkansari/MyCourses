@@ -6,6 +6,15 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
 [KANBAN TAHTASI](https://kanbanflow.com/board/431c1561cc21b3a1b4ad19175f70f668)
 
+## VİZE SINAVI
+Yazılı sınav olacaktır.
+
+    Meslek Yüksekokulu - Bilgisayar Programcılığı Programı / 2. Sınıf - YAZILIM GELİŞTİRME ORTAM VE ARAÇLARI
+    1. Ara Sınav
+    Yer: MYO LAB.(GİRİŞ)
+    Tarih: 9.12.2017
+    Saat: 12:00 - 13:00
+
 ## ÖDEV
 
 ## ÖDEV 1
