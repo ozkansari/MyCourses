@@ -10,11 +10,13 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 Odevleri ozkan.sari@outlook.com adresine gönderebilirsiniz.
 
 ### ODEV-1: Metin İcinde harf Arama Uygulamasi
+(Teslim Süresi Geçti)
 Kullanicidan oncelikle bir metin girmesi istenir. 
 Daha sonra bu metin icinde aranilacak harf istenir. 
 Aranan harfin metinde hangi indekslerde gectigi birer birer yazdirilir. Harf metin icerisinde gecmiyorsa, metin bulunamadi yazilir.
 
 ### ODEV-2 : Randevu Konsol Uygulamasi
+(Teslim Süresi Geçti)
 Kullanici sisteme randevu bilgileri girebilir. Bu bilgiler sunlardir: randevu adi, yeri, tarih-saati.
 Uygulamaniz 5 adet randevu girisini destekleyecek. Sonrasinda randevu bilgileri listelenecektir.
 BONUS: Kullaniciya menu halinde randevu girisi, listele ve cikissecenekleri sunulmasi.
@@ -22,9 +24,10 @@ BONUS: Kullaniciya menu halinde randevu girisi, listele ve cikissecenekleri sunu
 
 ## PROJE
 
-### Teslim Tarihi: Duyurulacaktır
+### Teslim Tarihi: 09.12.2017 10:00 MYO LAB.(GİRİŞ) 
+Vize Saatinde Projelerinizi Derste Sunacaksınız. Vizeye gelmeyen projeden de sıfır alacaktır.
 ### Aciklama: 
-(Degisiklik ve Eklentiler Yapilabilir) 
+(Aynı ve benzer proje teslimlerini kopya olarak değerlendirilecektir)
 Java Swing GUI uygulamasi olarak calisan bir Magaza Yonetim Programi uygulamasi yapilacak. 
 Uygulamada menu halinde gosterilecek 1-) Calisan Ekle/Sil/Listele 2-) Stok Ekle/Sil/listele 3-) Cikis secenekleri olacaktir.  
 Uygulama kalitim ve cok yuzluluk (polimorfizm) iliskisi ile farkli calisan ve stok tiplerini destekleyecektir: Stajyer/Personel/Mudur ve Giysi/Aksesuar/Yiyecek vb.

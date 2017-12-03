@@ -6,6 +6,15 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
 [KANBAN TAHTASI](https://kanbanflow.com/board/431c1561cc21b3a1b4ad19175f70f668)
 
+## VİZE SINAVI
+Yazılı sınav olacaktır.
+
+    Meslek Yüksekokulu - Bilgisayar Programcılığı Programı / 2. Sınıf - YAZILIM GELİŞTİRME ORTAM VE ARAÇLARI
+    1. Ara Sınav
+    Yer: MYO LAB.(GİRİŞ)
+    Tarih: 9.12.2017
+    Saat: 12:00 - 13:00
+
 ## ÖDEV
 
 ## ÖDEV 1
@@ -52,11 +61,14 @@ Plugin kurulum tamamlandıktan sonra, Admin password belirlemenizi isteyecek. be
 
 Bu aşamada "Jenkinse Hoşgeldiniz" yazısını ekranda görmeniz lazım.
 
-Başlamak için "Yeni İş" oluşturuyoruz.
+Jenkinsi Yönet ekranından JDK, Git ve Maven ayarlarını yaptıktan sonra başlamak için "Yeni İş" oluşturuyoruz.
+
 
 ### Hafta 7: SonarQube
 
-https://www.sonarqube.org/downloads/
+https://www.sonarqube.org/downloads/ adresinden sonar uygulamasını zip olarak indirin ve zip dosyasını açın. 
+
+Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi çalıştırabilirsiniz.
 
 ## Notlar
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/Notlar2017Guz.PNG)
