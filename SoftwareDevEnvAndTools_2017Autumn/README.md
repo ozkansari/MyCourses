@@ -61,11 +61,14 @@ Plugin kurulum tamamlandıktan sonra, Admin password belirlemenizi isteyecek. be
 
 Bu aşamada "Jenkinse Hoşgeldiniz" yazısını ekranda görmeniz lazım.
 
-Başlamak için "Yeni İş" oluşturuyoruz.
+Jenkinsi Yönet ekranından JDK, Git ve Maven ayarlarını yaptıktan sonra başlamak için "Yeni İş" oluşturuyoruz.
+
 
 ### Hafta 7: SonarQube
 
 https://www.sonarqube.org/downloads/
+
+Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi çalıştırabilirsiniz.
 
 ## Notlar
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/Notlar2017Guz.PNG)
