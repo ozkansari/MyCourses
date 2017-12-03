@@ -66,7 +66,7 @@ Jenkinsi Yönet ekranından JDK, Git ve Maven ayarlarını yaptıktan sonra baş
 
 ### Hafta 7: SonarQube
 
-https://www.sonarqube.org/downloads/
+https://www.sonarqube.org/downloads/ adresinden sonar uygulamasını zip olarak indirin ve zip dosyasını açın. 
 
 Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi çalıştırabilirsiniz.
 
