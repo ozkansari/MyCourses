@@ -1,0 +1,1 @@
+GUI generation kullanilmis kullanilmamaliydi.

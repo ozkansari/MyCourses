@@ -1,0 +1,1 @@
+- Gonderilen kod rar dosyası acilamiyor.
