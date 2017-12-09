@@ -207,7 +207,7 @@ public class Action implements ActionListener  {
 				if(search.equals(sil)) 
 				{
 			       //System.out.println("sil bulundu"+sil);
-					for (int i = 0; i < 6; i++) {
+					for (int i = 0; i < 5; i++) {
 						currenRow=fileReader.nextLine();
 					}
 
