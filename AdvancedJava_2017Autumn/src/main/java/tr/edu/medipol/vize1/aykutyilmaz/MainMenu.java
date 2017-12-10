@@ -65,12 +65,12 @@ public class MainMenu {
 
             } else if (rb3.isSelected()) {
                 Listeleme listeleme = new Listeleme();
-                listeleme.onListele("personel.txt");
+                listeleme.onListele(".\\personel.txt");
                 frames.setVisible(true);
 
             } else if (rb4.isSelected()) {
                 Listeleme listeleme = new Listeleme();
-                listeleme.onListele("urunler.txt");
+                listeleme.onListele(".\\urunler.txt");
                 frames.setVisible(true);
 
             } else if (finalRb.isSelected()) {

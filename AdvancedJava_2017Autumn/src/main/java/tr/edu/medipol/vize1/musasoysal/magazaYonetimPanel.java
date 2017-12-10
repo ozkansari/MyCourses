@@ -41,7 +41,7 @@ class anaPencere {
 		cikisButon.setForeground(Color.red);
 	       
 	       
-		// Cal��an islemlerine bas�ld�g�nda yap�lacak i�lemler
+		// Cal__an islemlerine bas_ld_g_nda yap_lacak i_lemler
 		calisanlarButon.addActionListener(ae -> {
 			calisanlarButon.setSize(400, 0);
 			anaMenu.dispose();
@@ -52,7 +52,7 @@ class anaPencere {
 			anaMenu.dispose();
 		});
 	       
-		// Stok Islemlerine basildiginda yap�lacak islemler
+		// Stok Islemlerine basildiginda yap_lacak islemler
 		stokButon.addActionListener(ae -> {
 			anaMenu.dispose();
 			new stoklarMenusu();
@@ -80,7 +80,7 @@ class calisanlarMenusu2 {
 		  calisanlarMenusu.setSize(400,400);
 		  calisanlarMenusu.setVisible(true);
 		  
-		  // Cal�sanlar Menusunde Cal�san Ekleye Tiklandiginda Yapilacak Islemler
+		  // Cal_sanlar Menusunde Cal_san Ekleye Tiklandiginda Yapilacak Islemler
 		  calisanEkleButton.addActionListener(ae -> {
 			  calisanEkleButton.setSize(400, 0);
 			  calisanEkleButton.getBackground();
@@ -88,7 +88,7 @@ class calisanlarMenusu2 {
 			  new calisanEklemeSecenekleri();
 		  });
 		  
-		  //Cal�sanlar Menusunde Cal�sanlar� Goruntuleye tiklandiginda yapilacak islemler
+		  //Cal_sanlar Menusunde Cal_sanlar_ Goruntuleye tiklandiginda yapilacak islemler
 		  calisanlariGoruntule.addActionListener(ae -> {
 			  //calisanlarMenusu.dispose();
 			  
@@ -96,36 +96,45 @@ class calisanlarMenusu2 {
 	  }
 }
 
+
 class stoklarMenusu {
-	  private JFrame stokMenusu = new JFrame("stoklarMenusu");
-	  private JButton stokEkle = new JButton("Stok Ekle");
-	  private JButton stokSil = new JButton("Stok Sil");
-	  private JButton stoklariGoruntule = new JButton("Stoklar� Goruntule");
-	  
-	  public stoklarMenusu() {
-		  
-		  stokMenusu.setLayout(new GridLayout(3,3));
-		  stokMenusu.add(stokEkle);
-		  stokMenusu.add(stokSil);
-		  stokMenusu.add(stoklariGoruntule);
-		  stokMenusu.setSize(400,400);
-		  stokMenusu.setVisible(true);
-		  
-		// Stok Ekle men�s�nde stok ekleye bas�ld�g�nda yap�lacak islem
-		  stokEkle.addActionListener(ae -> {
-			  stokEkle.setSize(400, 0);
-			  stokEkle.getBackground();
-              stokMenusu.dispose();
-			
-	        });
-		  
-		  //Calisanlar Menusunde Calisanlari Goruntuleye Tiklandiginda Yapilacak Islemler
-		  stoklariGoruntule.addActionListener(ae -> {
-			  
+	private JFrame stoklarMenusu = new JFrame("CalisanEklemeSecenekleri");
+	private JButton yiyecek = new JButton("Yiyecek Ekle");
+	private JButton giyecek = new JButton("Giyecek Ekle");
+	private JButton aksesuar = new JButton("Aksesuar Ekle");
+
+	public stoklarMenusu() {
+		stoklarMenusu.setLayout(new GridLayout(3,3));
+		stoklarMenusu.add(yiyecek);
+		stoklarMenusu.add(giyecek);
+		stoklarMenusu.add(aksesuar);
+		stoklarMenusu.setSize(400,400);
+		stoklarMenusu.setVisible(true);
+
+		// 
+		yiyecek.addActionListener(ae -> {
+			yiyecek.setSize(400, 0);
+			stoklarMenusu.dispose();
+			new yiyecekEkleme();
+		});
+
 		
-		              
-		        });
-	  }
+		giyecek.addActionListener(ae -> {
+			giyecek.setSize(400, 0);
+			stoklarMenusu.dispose();
+			new giyecekEkleme();
+		});
+
+		
+		aksesuar.addActionListener(ae -> {
+			aksesuar.setSize(400, 0);
+			stoklarMenusu.dispose();
+			new AksesuarEkleme();
+		});
+	}
+
+
+
 }
 
 class calisanEklemeSecenekleri {
@@ -321,8 +330,156 @@ class mudurEklemeIslemleri {
 			}});
 	}
 }
+class giyecekEkleme {
+    private JFrame giyecekEkleme = new JFrame("Giyecek Ekleme");
+	private JFrame giyecekUyari = new JFrame("Uyari");
+	private JTextField giyecekAd = new JTextField();
+	private JTextField giyecekAdedi = new JTextField();
+	private JTextField giyecekReferans_ = new JTextField();
+	private JButton ekleButon = new JButton("Ekle");
+	private JButton geriButon = new JButton("Geri Don");
+	
+    public giyecekEkleme() {
+		giyecekEkleme.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		giyecekEkleme.setLayout(new GridLayout(4,2));
+		giyecekEkleme.add(new JLabel("Giyecek Adı: "));
+		giyecekEkleme.add(giyecekAd);
+		giyecekEkleme.add(new JLabel("Giyecek Adedi: "));
+		giyecekEkleme.add(giyecekAdedi);
+		giyecekEkleme.add(new JLabel("Referansı "));
+		giyecekEkleme.add(giyecekReferans_);
+		giyecekEkleme.getContentPane().add(ekleButon);
+		giyecekEkleme.getContentPane().add(geriButon);
+		giyecekEkleme.setSize(400, 400);
+		giyecekEkleme.setVisible(true);
 
+        // Ekle Butonun ne is yapacagi 
+		ekleButon.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
 
+				Giyecek giyecek = new Giyecek();
+
+				String isim = giyecekAd.getText();
+				String soyisim = giyecekAdedi.getText();
+				String ref = giyecekReferans_.getText();
+	
+
+				if(giyecek != null) {
+					giyecek.giyecekEkle(isim, soyisim, ref);
+					giyecek.dosyayaEkle();
+					JOptionPane.showMessageDialog(giyecekUyari, "Giyecek Eklendi.");
+				}
+			}
+
+		});
+		geriButon.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				giyecekEkleme.dispose();
+				new stoklarMenusu();
+				
+			}});
+	}
+}
+class yiyecekEkleme {
+    private JFrame yiyecekEkleme = new JFrame("Yiyecek Ekleme");
+	private JFrame yiyecekUyari = new JFrame("Uyari");
+	private JTextField yiyecekAd = new JTextField();
+	private JTextField yiyecekAdedi = new JTextField();
+	private JTextField yiyecekBarkodu = new JTextField();
+	private JButton ekleButon = new JButton("Ekle");
+	private JButton geriButon = new JButton("Geri Don");
+	
+    public yiyecekEkleme() {
+		yiyecekEkleme.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		yiyecekEkleme.setLayout(new GridLayout(4,2));
+		yiyecekEkleme.add(new JLabel("Yiyecek Adı: "));
+		yiyecekEkleme.add(yiyecekAd);
+		yiyecekEkleme.add(new JLabel("Yiyecek Adedi: "));
+		yiyecekEkleme.add(yiyecekAdedi);
+		yiyecekEkleme.add(new JLabel("Yiyecek Barkodu: "));
+		yiyecekEkleme.add(yiyecekBarkodu);
+		yiyecekEkleme.getContentPane().add(ekleButon);
+		yiyecekEkleme.getContentPane().add(geriButon);
+		yiyecekEkleme.setSize(400, 400);
+		yiyecekEkleme.setVisible(true);
+
+        // Ekle Butonun ne is yapacagi 
+		ekleButon.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				Yiyecek yiyecek = new Yiyecek();
+
+				String isim = yiyecekAd.getText();
+				String soyisim = yiyecekAdedi.getText();
+				String ref = yiyecekBarkodu.getText();
+	
+
+				if(yiyecek != null) {
+					yiyecek.giyecekEkle(isim, soyisim, ref);
+					yiyecek.dosyayaEkle();
+					JOptionPane.showMessageDialog(yiyecekUyari, "Yiyecek Eklendi.");
+				}
+			}
+
+		});
+		geriButon.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				yiyecekEkleme.dispose();
+				new stoklarMenusu();
+				
+			}});
+	}
+}
+class AksesuarEkleme {
+    private JFrame aksesuarEkleme = new JFrame("Aksesuar Ekleme");
+	private JFrame aksesuarUyari = new JFrame("Uyari");
+	private JTextField aksesuarAd = new JTextField();
+	private JTextField aksesuarAdedi = new JTextField();
+	private JTextField aksesuarBarkodu = new JTextField();
+	private JButton ekleButon = new JButton("Ekle");
+	private JButton geriButon = new JButton("Geri Don");
+	
+    public AksesuarEkleme() {
+    		aksesuarEkleme.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    		aksesuarEkleme.setLayout(new GridLayout(4,2));
+    		aksesuarEkleme.add(new JLabel("Aksesuar Adı: "));
+    		aksesuarEkleme.add(aksesuarAd);
+    		aksesuarEkleme.add(new JLabel("Aksesuar Adedi: "));
+    		aksesuarEkleme.add(aksesuarAdedi);
+    		aksesuarEkleme.add(new JLabel("Aksesuar Barkodu: "));
+    		aksesuarEkleme.add(aksesuarBarkodu);
+    		aksesuarEkleme.getContentPane().add(ekleButon);
+    		aksesuarEkleme.getContentPane().add(geriButon);
+    		aksesuarEkleme.setSize(400, 400);
+		aksesuarEkleme.setVisible(true);
+
+        // Ekle Butonun ne is yapacagi 
+		ekleButon.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				Aksesuar aksesuar = new Aksesuar();
+
+				String isim = aksesuarAd.getText();
+				String soyisim = aksesuarAdedi.getText();
+				String ref = aksesuarBarkodu.getText();
+	
+
+				if(aksesuar != null) {
+					aksesuar.aksesuarEkle(isim, soyisim, ref);
+					aksesuar.dosyayaEkle();
+					JOptionPane.showMessageDialog(aksesuarUyari, "Yiyecek Eklendi.");
+				}
+			}
+
+		});
+		geriButon.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				aksesuarEkleme.dispose();
+				new stoklarMenusu();
+				
+			}});
+	}
+}
 
 	
 
