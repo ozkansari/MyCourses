@@ -53,7 +53,7 @@ https://jenkins.io/download/ adresinden indirilebilir.
 
     java -jar jenkins.war --httpPort=49001
 
-(!) [JENKINS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/jenkins/README.md)
+:exclamation: [JENKINS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/jenkins/README.md)
 
 #### Jenkins Arayüzü
 Tarayıcıdan http://localhost:8080 girerek ara yüz açılabilir.
@@ -65,14 +65,13 @@ Bu aşamada "Jenkinse Hoşgeldiniz" yazısını ekranda görmeniz lazım.
 
 Jenkinsi Yönet ekranından JDK, Git ve Maven ayarlarını yaptıktan sonra başlamak için "Yeni İş" oluşturuyoruz.
 
-
 ### Hafta 7: SonarQube
 
 https://www.sonarqube.org/downloads/ adresinden sonar uygulamasını zip olarak indirin ve zip dosyasını açın. 
 
 Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi çalıştırabilirsiniz.
 
-(!) [SONARQUBE KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/sonarqube/README.md)
+:exclamation: [SONARQUBE KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/sonarqube/README.md)
 
 ## Notlar
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/Notlar2017Guz.PNG)
