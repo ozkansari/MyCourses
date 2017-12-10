@@ -72,6 +72,9 @@ https://www.sonarqube.org/downloads/ adresinden sonar uygulamasını zip olarak 
 
 Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi çalıştırabilirsiniz.
 
+(!) [SONARQUBE KURULUM NOTLARI]
+(https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/sonarqube/README.md)
+
 ## Notlar
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/Notlar2017Guz.PNG)
 
