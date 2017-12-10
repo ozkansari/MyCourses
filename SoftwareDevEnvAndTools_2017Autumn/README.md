@@ -53,7 +53,7 @@ https://jenkins.io/download/ adresinden indirilebilir.
 
     java -jar jenkins.war --httpPort=49001
 
-[JENKINS KURULUM NOTLARI)(https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/jenkins/README.md)
+(!) [JENKINS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/jenkins/README.md)
 
 #### Jenkins Arayüzü
 Tarayıcıdan http://localhost:8080 girerek ara yüz açılabilir.
