@@ -53,6 +53,8 @@ https://jenkins.io/download/ adresinden indirilebilir.
 
     java -jar jenkins.war --httpPort=49001
 
+!!! [JENKINS KURULUM NOTLARI)(https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/jenkins/README.md)
+
 #### Jenkins Arayüzü
 Tarayıcıdan http://localhost:8080 girerek ara yüz açılabilir.
 Daha sonra karşınıza çıkan "Unlock Jenkins" ekranında verilen dizindeki dosyayı açın ve orada yazan şifreyi ekrana girin (Şifre console'dan çalıştırdığınızda loglarda da görünecektir) ve Continue tuşuna basın. Sonraki ekranda "Installed Suggested Plugins" seçiniz. Ayrıntılar için: https://jenkins.io/doc/book/installing/#setupwizard
