@@ -18,7 +18,7 @@
 - Class kullanımı   6/6
 ### Sunum ve Anlatım: 40/40
 
-### Console uygulama: -50p
+### Console uygulama: -30p
 ### Kopya ve benzer kod gönderimi : [-40,-10]
 ### Gec gonderim: -5p
 ### Encoding Sorunları: -5p

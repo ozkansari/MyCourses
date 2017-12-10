@@ -4,10 +4,10 @@ Tr karakter sorunları
 
 ## Vize Projesi Not Skalası
 
-94
+97
 
-### Fonksiyonlar: 40/40
-- Dosya Okuma:      2/6
+### Fonksiyonlar: 38/40
+- Dosya Okuma:      4/6
 - Dosya Yazma:      6/6
 - Calisan Ekle      5/5
 - Calisan Sil       4/4
@@ -18,7 +18,7 @@ Tr karakter sorunları
 - Cikis             2/2
 ### GUI tasarımı ve görsellik: 10/10
 ### Kod düzeni ve kurallı yazım: 10/10
-- Kod düzeni        2/4
+- Kod düzeni        3/4
 - Class kullanımı   6/6
 ### Sunum ve Anlatım: 40/40
 
