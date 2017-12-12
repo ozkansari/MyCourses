@@ -24,6 +24,8 @@ BONUS: Kullaniciya menu halinde randevu girisi, listele ve cikissecenekleri sunu
 
 ## PROJE
 
+# YAPTIKLARI PROJEYİ A4 KAĞITLARINA/DEFTERLERİNE YAZANLARA (ÇIKTI DEĞİL) VE ÖDEVİ ADIM ADIM AÇIKLAYANLARA EK PUAN VERİLECEKTİR #
+
 ### Teslim Tarihi: 09.12.2017 10:00 MYO LAB.(GİRİŞ) 
 Vize Saatinde Projelerinizi Derste Sunacaksınız. Vizeye gelmeyen projeden de sıfır alacaktır.
 ### Aciklama: 
