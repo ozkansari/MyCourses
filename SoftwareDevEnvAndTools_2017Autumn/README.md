@@ -47,6 +47,8 @@ https://jenkins.io/download/ adresinden indirilebilir.
 1. Seçenek: Windows Kurulum : https://jenkins.io/download/thank-you-downloading-windows-installer-stable
 2. Seçenek: Generic WAR http://mirrors.jenkins.io/war-stable/latest/jenkins.war
 
+Java komutu ile konsoldan çalıştırılabilir. Buradaki java komutunun jdk altındaki java komutu olması iyi olur. Bunun için java komurunu tam yol olarak tırnak içinde de yazabilirsiniz. Örneğin, "Cİ\Program Files\Java\jdk8\bin\java" - jar jenkins.war gibi.
+
     java -jar jenkins.war
     
 8080 portu kullanımdaysa başka bir port aşağıdaki şekilde belirtilebilir:
