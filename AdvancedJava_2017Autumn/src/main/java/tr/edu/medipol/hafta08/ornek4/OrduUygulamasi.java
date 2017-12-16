@@ -1,14 +1,12 @@
 package tr.edu.medipol.hafta08.ornek4;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class OrduUygulamasi {
     
     public static void main(String[] args) {
-        
-        /*--
-        
         
         Asker er = new Er("Musa Askerovski");
         Asker albay1 = new Albay("Mehmet Albaygil");
@@ -20,11 +18,10 @@ public class OrduUygulamasi {
         for (Asker asker : askerler) {
             System.out.println(asker.isim());
             
-            if(asker instanceOf Er) {
-                asker.selamVer();
+            if(asker instanceof Er) {
+                ( (Er) asker).selamVer();
             }
         }
-        */
 
     }
 }
