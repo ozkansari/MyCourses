@@ -88,7 +88,8 @@ Uygulama cikista sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kald
 ### Hafta 8
 
 - [Javadoc  ](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava_2017Autumn/_docs/8a_Javadoc.pdf)
-- [Kalitim ve Kapsulleme](file:///C:/Users/bprlab/Downloads/8b_Kalitim_Kapsulleme.pdf)
+- [Kalitim ve Kapsulleme]()https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava_2017Autumn/_docs/8b_Kalitim_Kapsulleme.pdf
+- [Arayuzler ve Uzerine Yazma](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava_2017Autumn/_docs/8c_Arazyuzler_UzerineYazma.pdf)
 
 ## Notlar
 
