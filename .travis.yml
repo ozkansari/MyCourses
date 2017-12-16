@@ -1,8 +1,8 @@
 language: java
 sudo: true # false for faster builds
 script: 
-  - "mvn -f  -Dmaven.javadoc.skip=false AdvancedJava_2017Autumn/pom.xml clean install cobertura:cobertura checkstyle:checkstyle pmd:pmd javadoc:javadoc javadoc:aggregate site"
-  - "mvn -f  -Dmaven.javadoc.skip=false SoftwareDevEnvAndTools_2017Autumn/pom.xml clean install cobertura:cobertura checkstyle:checkstyle pmd:pmd javadoc:javadoc javadoc:aggregate site pmd:pmd"
+  - "mvn -f AdvancedJava_2017Autumn/pom.xml -Dmaven.javadoc.skip=false clean install cobertura:cobertura checkstyle:checkstyle pmd:pmd javadoc:javadoc javadoc:aggregate site"
+  - "mvn -f SoftwareDevEnvAndTools_2017Autumn/pom.xml -Dmaven.javadoc.skip=false clean install cobertura:cobertura checkstyle:checkstyle pmd:pmd javadoc:javadoc javadoc:aggregate site pmd:pmd"
 jdk:
   - oraclejdk8
 after_success:
