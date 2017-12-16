@@ -73,9 +73,6 @@ Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi ça
 
 :exclamation: [SONARQUBE KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/sonarqube/README.md)
 
-## Notlar
-![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/Notlar2017Guz.PNG)
-
 ## Hafta 8 Javadoc
 
 Maven komutu: 
@@ -83,3 +80,9 @@ Maven komutu:
 
 Jenkins Java Doc goruntuleme sorunu icin Jenkins Script'i acın (http://localhost:8080/script) ve asagidaki komutu calistirin.
      System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'none'; img-src 'self'; style-src 'self'; child-src 'self'; frame-src 'self';")
+
+
+## Notlar
+![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/Notlar2017Guz.PNG)
+
+
