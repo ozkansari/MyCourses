@@ -1,0 +1,12 @@
+language: java
+sudo: true # false for faster builds
+script: 
+  - "mvn -f AdvancedJava_2017Autumn/pom.cml clean install cobertura:cobertura checkstyle:checkstyle javadoc:javadoc javadoc:aggregate site pmd:pmd-Dmaven.javadoc.skip=false"
+  - "mvn -f SoftwareDevEnvAndTools_2017Autumn/pom.cml clean install cobertura:cobertura checkstyle:checkstyle javadoc:javadoc javadoc:aggregate site pmd:pmd-Dmaven.javadoc.skip=false"
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+  - openjdk8
+  - openjdk9
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
