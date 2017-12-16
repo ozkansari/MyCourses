@@ -75,7 +75,7 @@ Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi ça
 
 :exclamation: [SONARQUBE KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/sonarqube/README.md)
 
-## Hafta 8 Javadoc & Maven Site
+### Hafta 8 Javadoc & Maven Site
 
 [JavaDoc Hakkında](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava_2017Autumn/_docs/8a_Javadoc.pdf)
 
