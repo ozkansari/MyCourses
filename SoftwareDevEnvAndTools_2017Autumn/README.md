@@ -47,6 +47,8 @@ https://jenkins.io/download/ adresinden indirilebilir.
 1. Seçenek: Windows Kurulum : https://jenkins.io/download/thank-you-downloading-windows-installer-stable
 2. Seçenek: Generic WAR http://mirrors.jenkins.io/war-stable/latest/jenkins.war
 
+Java komutu ile konsoldan çalıştırılabilir. Buradaki java komutunun jdk altındaki java komutu olması iyi olur. Bunun için java komurunu tam yol olarak tırnak içinde de yazabilirsiniz. Örneğin, "Cİ\Program Files\Java\jdk8\bin\java" - jar jenkins.war gibi.
+
     java -jar jenkins.war
     
 8080 portu kullanımdaysa başka bir port aşağıdaki şekilde belirtilebilir:
@@ -73,13 +75,21 @@ Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi ça
 
 :exclamation: [SONARQUBE KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/sonarqube/README.md)
 
-## Hafta 8 Javadoc
+### Hafta 8 Javadoc & Maven Site
 
-Maven komutu: 
+[JavaDoc Hakkında](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava_2017Autumn/_docs/8a_Javadoc.pdf)
+
+Maven komutuna yapılacak ek: 
+    
+    javadoc:javadoc javadoc:aggregate site
+
+Sonuçtaki Maven komutu:
+
     install checkstyle:checkstyle pmd:pmd sonar:sonar javadoc:javadoc javadoc:aggregate site
-
+    
 Jenkins Java Doc goruntuleme sorunu icin Jenkins Script'i acın (http://localhost:8080/script) ve asagidaki komutu calistirin.
-     System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'none'; img-src 'self'; style-src 'self'; child-src 'self'; frame-src 'self';")
+    
+    System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'none'; img-src 'self'; style-src 'self'; child-src 'self'; frame-src 'self';")
 
 
 ## Notlar
