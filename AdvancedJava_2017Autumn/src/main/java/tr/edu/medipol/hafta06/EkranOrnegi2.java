@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta6;
+package tr.edu.medipol.hafta06;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

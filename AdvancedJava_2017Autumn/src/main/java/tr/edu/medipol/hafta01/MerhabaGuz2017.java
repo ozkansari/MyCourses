@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta1;
+package tr.edu.medipol.hafta01;
 
 public class MerhabaGuz2017 {
 

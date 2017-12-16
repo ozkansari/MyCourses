@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta6.gui;
+package tr.edu.medipol.hafta06.gui;
 
 import java.awt.*;
 import java.awt.event.*;

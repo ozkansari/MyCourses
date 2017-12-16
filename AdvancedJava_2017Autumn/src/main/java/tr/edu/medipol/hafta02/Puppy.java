@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta2;
+package tr.edu.medipol.hafta02;
 
 public class Puppy {
     int puppyAge;

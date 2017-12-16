@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta3;
+package tr.edu.medipol.hafta03;
 
 import java.util.HashMap;
 import java.util.Map;

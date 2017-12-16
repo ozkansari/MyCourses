@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta1;
+package tr.edu.medipol.hafta01;
 
 // >"C:\Program Files\Java\jdk1.8.0_66\bin\javac" MyFirstJavaProgram.java
 // >"C:\Program Files\Java\jdk1.8.0_66\bin\java" MyFirstJavaProgram 100 200

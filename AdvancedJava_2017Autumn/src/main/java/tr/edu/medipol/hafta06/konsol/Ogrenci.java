@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta6.konsol;
+package tr.edu.medipol.hafta06.konsol;
 
 public abstract class Ogrenci {
 

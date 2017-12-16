@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta7;
+package tr.edu.medipol.hafta07;
 
 import java.awt.*;
 import java.io.File;

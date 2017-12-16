@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta4;
+package tr.edu.medipol.hafta04;
 
 import java.util.regex.*;
 
