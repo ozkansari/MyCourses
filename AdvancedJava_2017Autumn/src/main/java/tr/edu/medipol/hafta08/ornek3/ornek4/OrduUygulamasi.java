@@ -1,0 +1,30 @@
+package tr.edu.medipol.hafta08.ornek3.ornek4;
+
+import java.util.ArrayList;
+
+
+public class OrduUygulamasi {
+    
+    public static void main(String[] args) {
+        
+        /*--
+        
+        
+        Asker er = new Er("Musa Askerovski");
+        Asker albay1 = new Albay("Mehmet Albaygil");
+        Asker yarbay1 = new Yarbay("Fikret Yarbaygil");
+    
+        List<Asker> askerler = 
+                new ArrayList<>();
+        
+        for (Asker asker : askerler) {
+            System.out.println(asker.isim());
+            
+            if(asker instanceOf Er) {
+                asker.selamVer();
+            }
+        }
+        */
+
+    }
+}
