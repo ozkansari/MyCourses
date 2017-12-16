@@ -1,4 +1,4 @@
-package tr.edu.medipol.hafta08.ornek3.ornek4;
+package tr.edu.medipol.hafta08.ornek4;
 
 import java.util.ArrayList;
 
