@@ -73,14 +73,18 @@ Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi ça
 
 :exclamation: [SONARQUBE KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/sonarqube/README.md)
 
-## Hafta 8 Javadoc
+## Hafta 8 Javadoc & Maven Site
 
 [JavaDoc Hakkında](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava_2017Autumn/_docs/8a_Javadoc.pdf)
 
-Maven komutu: 
+Maven komutuna yapılacak ek: 
     
-    install checkstyle:checkstyle pmd:pmd sonar:sonar javadoc:javadoc javadoc:aggregate site
+    javadoc:javadoc javadoc:aggregate site
 
+Sonuçtaki Maven komutu:
+
+    install checkstyle:checkstyle pmd:pmd sonar:sonar javadoc:javadoc javadoc:aggregate site
+    
 Jenkins Java Doc goruntuleme sorunu icin Jenkins Script'i acın (http://localhost:8080/script) ve asagidaki komutu calistirin.
     
     System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'none'; img-src 'self'; style-src 'self'; child-src 'self'; frame-src 'self';")
