@@ -1,3 +1,5 @@
+![Build Status](https://travis-ci.org/ozkansari/MyCourses.svg?branch=master)
+
 ## Courses
 
 * [Advanced Java 2017 Autumn](AdvancedJava_2017Autumn/index.html)
