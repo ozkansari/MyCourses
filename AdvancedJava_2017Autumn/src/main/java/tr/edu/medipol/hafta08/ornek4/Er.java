@@ -1,9 +1,5 @@
 package tr.edu.medipol.hafta08.ornek4;
 
-/**
- *
- * @author bprlab
- */
 public class Er implements Asker  {
 
     private String isim;
