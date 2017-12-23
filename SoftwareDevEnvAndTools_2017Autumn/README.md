@@ -100,6 +100,7 @@ Code Coverage: Yazılan Kodun Ne Kadarının Test Edildiğini Gösterir. Code Co
 http://www.eclemma.org/jacoco/trunk/doc/report-mojo.html
 Maven Plugin:
 
+```xml
    <project>
        <!-- Dependencies -->
        <!- .... --> 
@@ -113,7 +114,8 @@ Maven Plugin:
            </plugins>
         </build>
     </project>
-           
+```        
+
 #### Cobertura
 
 ## Notlar
