@@ -98,6 +98,9 @@ Code Coverage: Yazılan Kodun Ne Kadarının Test Edildiğini Gösterir. Code Co
 #### JaCoCo
 
 http://www.eclemma.org/jacoco/trunk/doc/report-mojo.html
+
+Maven Goal: "install jacoco:report"
+
 Maven Plugin:
 
 ```xml
