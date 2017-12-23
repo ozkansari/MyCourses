@@ -99,7 +99,7 @@ Code Coverage: Yazılan Kodun Ne Kadarının Test Edildiğini Gösterir. Code Co
 
 http://www.eclemma.org/jacoco/trunk/doc/report-mojo.html
 
-Maven Goal: "install jacoco:report"
+Maven Goal: "jacoco:report"
 
 Maven Plugin:
 
@@ -120,6 +120,33 @@ Maven Plugin:
 ```        
 
 #### Cobertura
+
+Maven Goal: "cobertura:check"
+
+Maven Plugin:
+
+```xml
+   <project>
+       <!-- Dependencies -->
+       <!- .... --> 
+       <build>
+           <plugins>
+               <plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+					<check />
+				</configuration>
+			</plugin>
+           </plugins>
+        </build>
+    </project>
+```      
 
 ## Notlar
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/Notlar2017Guz.PNG)
