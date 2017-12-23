@@ -91,6 +91,30 @@ Jenkins Java Doc goruntuleme sorunu icin Jenkins Script'i acın (http://localhos
     
     System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'none'; img-src 'self'; style-src 'self'; child-src 'self'; frame-src 'self';")
 
+### Hafta 9 Code Coverage
+
+Code Coverage: Yazılan Kodun Ne Kadarının Test Edildiğini Gösterir. Code Coverage, yazdığımız testlerin kontrol ettiği kodun, yazdığımız koda oranı demek.
+
+#### JaCoCo
+
+http://www.eclemma.org/jacoco/trunk/doc/report-mojo.html
+Maven Plugin:
+
+   <project>
+       <!-- Dependencies -->
+       <!- .... --> 
+       <build>
+           <plugins>
+               <plugin>
+                  <groupId>org.jacoco</groupId>
+                  <artifactId>jacoco-maven-plugin</artifactId>
+                  <version>0.7.10-SNAPSHOT</version>
+                </plugin>
+           </plugins>
+        </build>
+    </project>
+           
+#### Cobertura
 
 ## Notlar
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/Notlar2017Guz.PNG)
