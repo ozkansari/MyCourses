@@ -88,9 +88,17 @@ Uygulama cikista sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kald
 ### Hafta 8
 
 - [Javadoc  ](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava_2017Autumn/_docs/8a_Javadoc.pdf)
-- [Kalitim ve Kapsulleme]()https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava_2017Autumn/_docs/8b_Kalitim_Kapsulleme.pdf
+- [Kalitim ve Kapsulleme](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava_2017Autumn/_docs/8b_Kalitim_Kapsulleme.pdf)
 - [Arayuzler ve Uzerine Yazma](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava_2017Autumn/_docs/8c_Arazyuzler_UzerineYazma.pdf)
+
+### Hafta 9
+
+- [Network Uygulamaları](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava_2017Autumn/_docs/9a_NetworkUygulamalari.pdf)
+
+### Hafta 10
+
+- [Veritabanı](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava_2017Autumn/_docs/10a_JavaVeritabaniBaglantilari.pdf)
 
 ## Notlar
 
-![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/NotlarIleriJavaGuz2017.PNG)
+![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/NotlarIleriJavaGuz2017.PNG?hafta=10)
