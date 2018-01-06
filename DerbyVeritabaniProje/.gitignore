@@ -1,0 +1,49 @@
+.veritabani
+
+*.class
+bin/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Backup files
+*~
+
+# intellij
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# eclipse
+.classpath
+.project
+.settings/
+.tern-project
+.metadata/
+RemoteSystemsTempFiles/
+
+# maven
+log/
+*.log
+target/
+
+# gradle
+build/
+.gradle/
+
+#svn 
+.svn/
+.svn
+
+# virtual machine crash logs
+hs_err_pid*
+
+# maven shade plugin
+dependency-reduced-pom.xml
+
+# backup files
+~$*
+
