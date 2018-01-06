@@ -148,6 +148,12 @@ Maven Plugin:
     </project>
 ```      
 
+#### Travis CI
+
+https://github.com/ozkansari/YAZILIM_ARACLARI_REPO/blob/master/.travis.yml 
+
+### Hafta 10 Spring Boot
+
 ## Notlar
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/Notlar2017Guz.PNG)
 
