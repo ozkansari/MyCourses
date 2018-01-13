@@ -157,4 +157,6 @@ https://github.com/ozkansari/YAZILIM_ARACLARI_REPO/blob/master/.travis.yml
 ## Notlar
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/Notlar2017Guz.PNG)
 
-
+#### Hafta 11 Postman & Jmeter
+![POSTMAN](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools_2017Autumn/_docs/postman)
+![JMETER](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools_2017Autumn/_docs/jmeter)
