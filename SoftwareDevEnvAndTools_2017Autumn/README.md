@@ -6,6 +6,10 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
 [KANBAN TAHTASI](https://kanbanflow.com/board/431c1561cc21b3a1b4ad19175f70f668)
 
+## QUIZ SINAVI
+
+https://tr.surveymonkey.com/r/W2TH6LG
+
 ## FİNAL SINAVI
 
 Proje olacak. Proje derste açıklanmıştır. Arkadaşlarınıza sorunuz. :)
