@@ -6,7 +6,9 @@
 	<body>
 		
 		<#list urunler as mevcutUrun>
-		${mevcutUrun.getUrunAdi()} <br/>
+		${mevcutUrun.getUrunAdi()} 
+		<a href="/urunsil?id=${mevcutUrun.getId()}" >sil</a>
+		<br/>
 		</#list>
 		
 	</body>
