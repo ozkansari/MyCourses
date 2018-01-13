@@ -6,6 +6,10 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
 [KANBAN TAHTASI](https://kanbanflow.com/board/431c1561cc21b3a1b4ad19175f70f668)
 
+## FİNAL SINAVI
+
+...
+
 ## VİZE SINAVI
 Yazılı sınav olacaktır.
 
@@ -119,7 +123,7 @@ Maven Plugin:
     </project>
 ```        
 
-#### Cobertura
+#### Cobertura Code Coverage (Kodun Ne Kadarın Test Edildiğinin Ölçülmesi)
 
 Maven Goal: "cobertura:check"
 
@@ -148,11 +152,12 @@ Maven Plugin:
     </project>
 ```      
 
-#### Travis CI
-
-https://github.com/ozkansari/YAZILIM_ARACLARI_REPO/blob/master/.travis.yml 
+#### Travis CI & CodeCov IO
+https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
+Örnek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI_REPO/blob/master/.travis.yml 
 
 ### Hafta 10 Spring Boot
+https://github.com/ozkansari/YAZILIM_ARACLARI_REPO/tree/master/SpringBootOrnek
 
 ### Hafta 11 Postman & Jmeter
 ![POSTMAN](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools_2017Autumn/_docs/postman)
