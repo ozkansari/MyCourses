@@ -8,7 +8,7 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
 ## FİNAL SINAVI
 
-...
+Proje olacak. Proje derste açıklanmıştır. Arkadaşlarınıza sorunuz. :)
 
 ## VİZE SINAVI
 Yazılı sınav olacaktır.
