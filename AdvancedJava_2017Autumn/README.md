@@ -44,6 +44,7 @@ Sayfa adları "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" şeklinde eşleştirilme
 * Ürün kategorilendirme
 * Sipariş sayfasında adres bilgisi, kk bilgisi vs. alma
 * Satın alma entegrasyonu: https://dev.iyzipay.com/tr
+* 
 
 ## VİZE ODEVLER
 
