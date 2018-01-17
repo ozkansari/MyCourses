@@ -5,7 +5,35 @@
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
 Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
-## ODEVLER
+## FİNAL PROJE - ALışveriş Sİtesi
+
+### Kullanıcı Sayfaları
+
+Sayfa adları "/<<ad_soyadiniz>>/<<sayfa_adi>>" şeklinde eşleştirilmeli.
+
+* Ana Sayfa
+* Sepet
+
+### Yönetim Sayfaları
+
+Sayfa adları "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" şeklinde eşleştirilmeli.
+
+* Urun ekle
+* Urun Listele ve Sil
+* Ürün Görüntüle/Detay
+* Sipariş Listele
+
+### Önemli Noktalar
+
+* Maven projesi olmalı.
+* Kodlarınız "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmalı.
+* Derste kullanılan teknolojiler / kütüphaneler dışında bir kütüphane kullanılmamalı. (Derby DB & Spark Java)
+
+
+
+
+
+## VİZE ODEVLER
 
 Odevleri ozkan.sari@outlook.com adresine gönderebilirsiniz.
 
@@ -22,7 +50,7 @@ Uygulamaniz 5 adet randevu girisini destekleyecek. Sonrasinda randevu bilgileri 
 BONUS: Kullaniciya menu halinde randevu girisi, listele ve cikissecenekleri sunulmasi.
 
 
-## PROJE
+## VİZE PROJE
 
 # YAPTIKLARI PROJEYİ A4 KAĞITLARINA/DEFTERLERİNE YAZANLARA (ÇIKTI DEĞİL) VE ÖDEVİ ADIM ADIM AÇIKLAYANLARA EK PUAN VERİLECEKTİR #
 
