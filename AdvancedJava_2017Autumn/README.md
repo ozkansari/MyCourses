@@ -7,6 +7,8 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
 ## FİNAL PROJE - Alışveriş Sitesi
 
+Teslim Tarihi: 29 Ocak
+
 ### Kullanıcı Sayfaları
 
 Sayfa adları "/<<ad_soyadiniz>>/<<sayfa_adi>>" şeklinde eşleştirilmeli.
