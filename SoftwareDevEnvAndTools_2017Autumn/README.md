@@ -14,6 +14,8 @@ https://tr.surveymonkey.com/r/W2TH6LG
 
 Proje olacak. Proje derste açıklanmıştır. Arkadaşlarınıza sorunuz. :)
 
+Teslim Tarihi: 29 Ocak
+
 ## VİZE SINAVI
 Yazılı sınav olacaktır.
 
