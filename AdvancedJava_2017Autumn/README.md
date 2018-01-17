@@ -12,14 +12,14 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 Sayfa adları "/<<ad_soyadiniz>>/<<sayfa_adi>>" şeklinde eşleştirilmeli.
 
 * Ana Sayfa : 
-** Ürünler listelenecek
-** Listelenen her bir ürün hakkında temel bilgiler gösterilecek. 
-** Listelenen her bir ürün için Sepete Ekle butonu bulunacak. Butona basıldığında aynı sayfada kalınacak.
-** Sayfanın bir köşesinde sepet bilgisi görünütülenecek. Sepete Eklendikçe sepettekiler de güncellenecek.
+  * Ürünler listelenecek
+  * Listelenen her bir ürün hakkında temel bilgiler gösterilecek. 
+  * Listelenen her bir ürün için Sepete Ekle butonu bulunacak. Butona basıldığında aynı sayfada kalınacak.
+  * Sayfanın bir köşesinde sepet bilgisi görünütülenecek. Sepete Eklendikçe sepettekiler de güncellenecek.
 
 * Sepet
-** Sepetteki ürünler miktarıyla birlikte listelenecek (Ör.2 defa sepete eklenmiş olabilir)
-** Sipariş ver butonu olacak. Tıklanınca sipariş onay sayfasına gidilecek.
+  * Sepetteki ürünler miktarıyla birlikte listelenecek (Ör.2 defa sepete eklenmiş olabilir)
+  * Sipariş ver butonu olacak. Tıklanınca sipariş onay sayfasına gidilecek.
 
 ### Yönetim Sayfaları
 
