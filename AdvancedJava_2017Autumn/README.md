@@ -5,7 +5,7 @@
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
 Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
-## FİNAL PROJE - Alışveriş Sİtesi
+## FİNAL PROJE - Alışveriş Sitesi
 
 ### Kullanıcı Sayfaları
 
