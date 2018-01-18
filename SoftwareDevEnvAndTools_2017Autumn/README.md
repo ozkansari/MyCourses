@@ -12,6 +12,13 @@ Proje olacak. Proje derste açıklanmıştır. Arkadaşlarınıza sorunuz. :)
 
 Teslim Tarihi: 29 Ocak
 
+### Proje
+
+10. Haftada öğrendiğimiz şekilde Maven kullanarak bir SPring Boot projesi geliştireceksiniz. Projenizde şu REST servisler bulunacak: 
+- Haber Ekleme
+- Haber Görüntüleme
+- Haber Silme
+
 ### Sorular
 
 Sorularınızı https://github.com/ozkansari/MyCourses/milestone/2 altına altına "Issue" açarak yazabilir. Ya da mevcut sorulara cevap verebilirsiniz.
