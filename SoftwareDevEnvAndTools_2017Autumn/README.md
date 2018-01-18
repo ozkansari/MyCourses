@@ -4,17 +4,24 @@
 Dersler Cumartesi 12:00-13:00 ve 13:15-14:30 arasında iki oturum halinde yapılacaktır.
 Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
-[KANBAN TAHTASI](https://kanbanflow.com/board/431c1561cc21b3a1b4ad19175f70f668)
-
-## QUIZ SINAVI
-
-https://tr.surveymonkey.com/r/W2TH6LG
+## DEVAMSIZLIK ŞARTI SAĞLAMAYANLAR DERSTEN BIRAKILMIŞTIR. MEBISTEN KONTROL EDINIZ.
 
 ## FİNAL SINAVI
 
 Proje olacak. Proje derste açıklanmıştır. Arkadaşlarınıza sorunuz. :)
 
 Teslim Tarihi: 29 Ocak
+
+### Sorular
+
+Sorularınızı https://github.com/ozkansari/MyCourses/milestone/2 altına altına "Issue" açarak yazabilir. Ya da mevcut sorulara cevap verebilirsiniz.
+
+
+
+## QUIZ SINAVI
+
+Süresi dolmuştur: https://tr.surveymonkey.com/r/W2TH6LG
+
 
 ## VİZE SINAVI
 Yazılı sınav olacaktır.
