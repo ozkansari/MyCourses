@@ -45,6 +45,10 @@ Jenkins (Bkz. Hafta 6) kuracaksınız ve yaptığınız işlemleri adım adım e
 
 SonarQube (Bkz. Hafta 7) kurulumu yapacaksınız ve yaptığınız işlemleri adım adım ekran görüntüleriyle açıklayacaksınız ve jenkinsden tetiklenerek projenizin analiz edilmesini sağlayacaksınız. Analiz sonuçlarınızı da rapora ekleyeceksiniz.
 
+### Bonus
+
+Unit testlerde Spring REST testleri kullanılması. Örnek: https://www.petrikainulainen.net/programming/spring-framework/unit-testing-of-spring-mvc-controllers-rest-api/
+
 ### Sorular
 
 Sorularınızı https://github.com/ozkansari/MyCourses/milestone/2 altına altına "Issue" açarak yazabilir. Ya da mevcut sorulara cevap verebilirsiniz.
