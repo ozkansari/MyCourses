@@ -14,10 +14,36 @@ Teslim Tarihi: 29 Ocak
 
 ### Proje
 
-10. Haftada öğrendiğimiz şekilde Maven kullanarak bir SPring Boot projesi geliştireceksiniz. Projenizde şu REST servisler bulunacak: 
+10. Haftada öğrendiğimiz şekilde *Maven* kullanarak bir *Spring Boot* projesi geliştireceksiniz. Projenizde şu REST servisler bulunacak: 
 - Haber Ekleme
 - Haber Görüntüleme
 - Haber Silme
+
+Projenizikurallara uygun geliştirecek ve bir rapor hazırlayacaksınız. Ayrıca final zamanı gelip projenizi sunacaksınız ve açıklayacaksınız. Projeyi açıklayamam veya projeyi öğrencinin kendisi yapmaması durumunda final notu sıfır olarak girilecektir.
+
+Raporunuzda aşağıda belirtilmiş olan tüm adımları ayrı başlıklar altında açıklamanızı ve ekran görünütüleriyle desteklemenizi istiyorum. 
+
+Geliştirdiğiniz proje ve kodlarınız hakkında kurallar:
+- Maven projesi olacak
+- Spring Boot dışında teknoloji kullanılmayacak
+- Kodlarınız okunaklı olacak: değişkenler, sınıflar ve metotlar düzgün isimlendirilmiş olacak ve Turkçe karakter içermeyecek
+- Tüm sınıf ve metotlarınız javadoc (Bkz. Hafta 8) standardıyla dokümante edilmiş olacak.
+- Tüm metotlarınız için JUnit ile birim testler yazılacak.
+- Yazdığınız birim testlerin coverage'ını hesaplatıp, nasıl hesaplattığınızın bilgisiyle birlikte raporunuza ekleyeceksiniz.
+
+Projenizden bir maven site oluşturacaksınız ve yaptığınız işlemleri adım adım ekran görüntüleriyle açıklayacaksınız.
+
+Kodlarınız githubda yeni bir repository oluşturularak oraya commitlenecek. Nasıl yaptığınızı adım adım anlatmanızı ve sonuçtaki github repository adresinizi raporunuza koymanızı istiyorum.
+
+Kodlarınızı Travis CI ile entegre edip derlettireceksiniz ve CodeCov.io entegrasyonuyla kodunuun coverage (test kapsama) değerlerinin otomatik hesaplanmasını sağlayacaksınız. Yaptığınız işlemleri ve sonuçlarını adım adım ekran görüntüleriyle açıklayacaksınız ve raporunuzda paylaşacaksınız.
+
+Kodunuzu Postman ve JMeter (Bkz.Hafta 11) ile test edip, nasıl test ettiğinizi ve test sonuçlarını raporunuzda adım adım paylaşacaksınız.
+
+Tüm sınıflarınızın UML diagramları (Bkz.Hafta 3) çizilecek. Tercihen ArgoUML ya da benzer bir araç kullanılacak. UML diagramları da rapora koyulacak ve açıklanacak.
+
+Jenkins kuracaksınız ve yaptığınız işlemleri adım adım ekran görüntüleriyle açıklayacaksınız ve projenizin jenkinsde derlenmesini sağlayacaksınız.
+
+SonarQube kurulumu yapacaksınız ve yaptığınız işlemleri adım adım ekran görüntüleriyle açıklayacaksınız ve jenkinsden tetiklenerek projenizin analiz edilmesini sağlayacaksınız. Analiz sonuçlarınızı da rapora ekleyeceksiniz.
 
 ### Sorular
 
