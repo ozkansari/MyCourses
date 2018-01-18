@@ -46,7 +46,9 @@ Sayfa adları "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" şeklinde eşleştirilme
 * Ürün kategorilendirme
 * Sipariş sayfasında adres bilgisi, kk bilgisi vs. alma
 * Satın alma entegrasyonu: https://dev.iyzipay.com/tr
-* 
+
+### Sık Sorulan Sorular?
+Sorularınızı https://github.com/ozkansari/MyCourses/milestone/1 altına "Issue" açarak yazabilir. Ya da mevcut sorulara cevap verebilirsiniz.
 
 ## VİZE ODEVLER
 
