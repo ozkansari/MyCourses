@@ -19,29 +19,31 @@ Teslim Tarihi: 29 Ocak
 - Haber Görüntüleme
 - Haber Silme
 
-Projenizi kurallara uygun geliştirecek ve bir rapor hazırlayacaksınız. Ayrıca final zamanı gelip projenizi sunacaksınız ve açıklayacaksınız. Projeyi açıklayamam veya projeyi öğrencinin kendisi yapmaması durumunda final notu sıfır olarak girilecektir.
+Projenizi kurallara uygun geliştirecek ve bir rapor hazırlayacaksınız. Ayrıca final zamanı gelip projenizi sunacaksınız ve açıklayacaksınız. Projeyi açıklayamama veya projeyi öğrencinin kendisi yapmaması durumunda final notu sıfır olarak girilecektir.
 
-Raporunuzda aşağıda belirtilmiş olan tüm adımları ayrı başlıklar altında açıklamanızı ve ekran görünütüleriyle desteklemenizi istiyorum. 
+Raporunuzda aşağıda belirtilmiş olan tüm adımları, ayrı başlıklar altında açıklamanızı ve ekran görünütüleriyle desteklemenizi istiyorum. 
+
+ÖNEMLİ: Raporunuz sade ve anlaşılır olmalı.
 
 Geliştirdiğiniz proje ve kodlarınız hakkında kurallar:
 - Maven projesi olacak (Bkz. Hafta 4-5)
-- Spring Boot dışında teknoloji kullanılmayacak (Bkz. Hafta 10)
+- Spring Boot dışında özel bir teknoloji kullanılmayacak (Bkz. Hafta 10)
 - Kodlarınız okunaklı olacak: değişkenler, sınıflar ve metotlar düzgün isimlendirilmiş olacak ve Turkçe karakter içermeyecek
-- Tüm sınıf ve metotlarınız javadoc (Bkz. Hafta 8) standardıyla dokümante edilmiş olacak.
+- Tüm sınıf ve metotlarınız javadoc (Bkz. Hafta 8) standardıyla dokümante edilmiş olacak. Javadoc raporu oluşturulup, oluşturma adımalrıyla birlikte rapora konulacak.
 - Tüm metotlarınız için JUnit ile birim testler yazılacak. (Bkz. Hafta 4-5)
-- Yazdığınız birim testlerin coverage'ını (Bkz. Hafta 9) hesaplatıp, nasıl hesaplattığınızın bilgisiyle birlikte raporunuza ekleyeceksiniz.
+- Yazdığınız birim testlerin coverage'ını yani test kapsama oranını (Bkz. Hafta 9) hesaplatıp, nasıl hesaplattığınızın bilgisiyle birlikte raporunuza ekleyeceksiniz.
 
-Projenizden bir maven site (Bkz. Hafta 8) oluşturacaksınız ve yaptığınız işlemleri adım adım ekran görüntüleriyle açıklayacaksınız.
+Projenizden otomatik olarak bir maven site (Bkz. Hafta 8) oluşturacaksınız ve yaptığınız işlemleri adım adım ekran görüntüleriyle açıklayacaksınız.
 
-Kodlarınız githubda yeni bir repository oluşturularak oraya commitlenecek. (Bkz. Hafta 4-5) Nasıl yaptığınızı adım adım anlatmanızı ve sonuçtaki github repository adresinizi raporunuza koymanızı istiyorum.
+Kodlarınızı github'da yeni bir repository oluşturularak (Bkz. Hafta 4-5) oraya commitleyeceksiniz.  Nasıl yaptığınızı adım adım anlatmanızı ve sonuçtaki github repository adresinizi raporunuza koymanızı istiyorum.
 
-Kodlarınızı Travis CI ile entegre edip derlettireceksiniz ve CodeCov.io entegrasyonuyla kodunuun coverage (test kapsama) değerlerinin otomatik hesaplanmasını sağlayacaksınız. (Bkz. Hafta 9) Yaptığınız işlemleri ve sonuçlarını adım adım ekran görüntüleriyle açıklayacaksınız ve raporunuzda paylaşacaksınız.
+Kodlarınızı Travis CI (Bkz. Hafta 9) ile entegre edip otomatik derlettireceksiniz ve CodeCov.io (Bkz. Hafta 9) entegrasyonuyla kodunuun coverage (test kapsama) değerlerinin otomatik hesaplanmasını sağlayacaksınız.  Yaptığınız işlemleri ve sonuçlarını adım adım ekran görüntüleriyle açıklayacaksınız ve raporunuzda paylaşacaksınız.
 
 Kodunuzu Postman ve JMeter (Bkz.Hafta 11) ile test edip, nasıl test ettiğinizi ve test sonuçlarını raporunuzda adım adım paylaşacaksınız.
 
-Tüm sınıflarınızın UML diagramları (Bkz.Hafta 3) çizilecek. Tercihen ArgoUML ya da benzer bir araç kullanılacak. UML diagramları da rapora koyulacak ve açıklanacak.
+Tüm sınıflarınızın UML diagramlarını (Bkz.Hafta 3) çizeceksiniz. Tercihen ArgoUML ya da benzer bir araç kullanabilirsiniz. UML diagramları da rapora koyulacak ve açıklanacak.
 
-Jenkins (Bkz. Hafta 6) kuracaksınız ve yaptığınız işlemleri adım adım ekran görüntüleriyle açıklayacaksınız ve projenizin jenkinsde derlenmesini sağlayacaksınız. 
+Jenkins (Bkz. Hafta 6) kuracaksınız ve yaptığınız işlemleri adım adım ekran görüntüleriyle açıklayacaksınız ve projenizin jenkins'te otomatik derlenmesini sağlayacaksınız ve ilişkili adımları rapora koyacaksınız ve açıklayacaksınız. 
 
 SonarQube (Bkz. Hafta 7) kurulumu yapacaksınız ve yaptığınız işlemleri adım adım ekran görüntüleriyle açıklayacaksınız ve jenkinsden tetiklenerek projenizin analiz edilmesini sağlayacaksınız. Analiz sonuçlarınızı da rapora ekleyeceksiniz.
 
