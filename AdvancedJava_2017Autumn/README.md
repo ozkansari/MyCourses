@@ -5,6 +5,8 @@
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
 Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
+## DEVAMSIZLIK ŞARTI SAĞLAMAYANLAR DERSTEN BIRAKILMIŞTIR. MEBISTEN KONTROL EDINIZ.
+
 ## FİNAL PROJE - Alışveriş Sitesi
 
 Teslim Tarihi: 29 Ocak
