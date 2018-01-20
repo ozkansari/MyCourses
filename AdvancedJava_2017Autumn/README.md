@@ -52,6 +52,9 @@ Sayfa adları "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" şeklinde eşleştirilme
 ### Sık Sorulan Sorular?
 Sorularınızı https://github.com/ozkansari/MyCourses/milestone/1 altına "Issue" açarak yazabilir. Ya da mevcut sorulara cevap verebilirsiniz.
 
+* Fazla karışık olmamak kaydıyla hazır şablon kullanabilirsiniz. 
+* Derste öğrendiğiniz üzere, Maven projesinde html, ftl, imaj, properties, js vb. dosyalar src/main/resources/ altına konulabilir.
+
 ## VİZE ODEVLER
 
 Odevleri ozkan.sari@outlook.com adresine gönderebilirsiniz.
