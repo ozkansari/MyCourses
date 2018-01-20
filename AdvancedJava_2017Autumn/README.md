@@ -47,7 +47,7 @@ Sayfa adları "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" şeklinde eşleştirilme
 
 * Ürün kategorilendirme
 * Sipariş sayfasında adres bilgisi, kk bilgisi vs. alma
-* Satın alma entegrasyonu: https://dev.iyzipay.com/tr
+* Satın alma entegrasyonu: https://dev.iyzipay.com/tr veya https://developer.mastercard.com/product/masterpass (Test API)
 
 ### Sık Sorulan Sorular?
 Sorularınızı https://github.com/ozkansari/MyCourses/milestone/1 altına "Issue" açarak yazabilir. Ya da mevcut sorulara cevap verebilirsiniz.
