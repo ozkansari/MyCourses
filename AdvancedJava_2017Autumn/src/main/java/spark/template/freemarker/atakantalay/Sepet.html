@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secilen_Urunler</title>
+</head>
+<body>
+<form action="/Sepet" method="get" id="form1">
+<#list urunler as Urunumuz>
+    ${Urunumuz.getad()}
+</#list>
+</form>
+<br/>
+<button type="submit"value="Submit">Basın</button>
+</body>
+</html>

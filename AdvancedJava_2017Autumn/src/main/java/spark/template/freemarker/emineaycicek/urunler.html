@@ -1,0 +1,45 @@
+<html>
+
+	<head>
+	<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}</style>
+	</head>
+	
+	<body>
+	
+<div class="tg-wrap"><table class="tg" style="width:100%;">
+  <tr>
+    <th class="tg-yw4l"><a href=""> <img src="https://image.flaticon.com/icons/png/512/65/65171.png" width="30" height="30"></a></th>
+    <th class="tg-yw4l">Adý</th>
+    <th class="tg-yw4l">Fiyat</th>
+    <th class="tg-yw4l" colspan="2">ÝÞLEM</th>
+  </tr>
+  	<#list urunler as mevcutUrun> 
+  	 <tr>
+    <td class="tg-yw4l">${mevcutUrun.getId()}</td>
+    <td class="tg-yw4l">${mevcutUrun.getUrunAdi()}</td>
+    <td class="tg-yw4l">${mevcutUrun.getFiyat()}</td>
+    <td class="tg-yw4l"><a href="/emineaycicek/yonetim/urunsil?id=${mevcutUrun.getId()}" > <img src="https://image.flaticon.com/icons/png/512/484/484662.png" width="20" height="20"> </a></td>
+    <td class="tg-yw4l"><a href=""> <img src="https://image.flaticon.com/icons/svg/61/61838.svg" width="20" height="20" ></a></td>
+    
+  </tr>
+		
+		
+ 		</#list>
+ 
+</table></div>
+	
+	<br>
+	<br>
+	<br>
+		
+		<center><a href="/emineaycicek/yonetim/urunekle">Ürün Ekle Sayfasý Ýçin Týklayýnýz...</a></center>
+		
+		
+	</body>
+
+</html>

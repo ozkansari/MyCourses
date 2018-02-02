@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Siparişler</title>
+    <style type="text/css">
+         body { background-color:black; color:white; font:helvetica; }
+         p { font-family: Tahoma, Verdana; font-size: 12px; }
+      </style>
+</head>
+<body>
+
+<#list urunler as mevcutUrun>
+
+    <button type="submit" onclick="mesaj()" value="Submit">Siparişi Onayla</button>
+    <script>
+function mesaj() {
+   alert("Siparişiniz onaylandı !");
+}
+
+</script>
+</#list>
+<h1>MÜŞTERİ BİLGİLERİ</h1>
+
+<form action="/urunekle" method="post">
+    ADI:<br>
+    <input type="text" name="adi"> <br>
+    SOYADI:<br>
+    <input type="text" name="soyadi"> <br>
+    ADRES:<br>
+    <input type="text" name="adres"> <br>
+    KREDİ KARTI BİLGİSİ:<br>
+    <input type="text" name="kkbilgisi"> <br>
+    TC.KİMLİK NO:<br>
+    <input type="text" name="tckimlik"> <br>
+    <br>
+    TELEFON NUMARASI:<br>
+    <input type="text" name="telno"> <br>
+    <br>
+
+    <input type="submit" value="Kaydet">
+</form>
+
+</body>
+</html>

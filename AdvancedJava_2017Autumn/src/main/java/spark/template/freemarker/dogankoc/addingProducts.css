@@ -1,0 +1,28 @@
+
+    body {
+    background: url(pixel_earth.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 50px;
+    text-align: center;
+    font-size: 15px;
+	
+	}
+
+	input{
+    	font-size: 20px;
+    	font-weight: 15px;
+        background-color:yellow;
+        opacity:1.0;
+	}
+	
+	label{
+	    font-color: red;
+    	font-size: 20px;
+    	font-weight: 15px;
+    	background-color:aqua;
+    	font-color: blue;
+        font-weight:bold;
+        text-indent: 20px;
+	}

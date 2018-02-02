@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>..... Maðazasý</title>
+<style type="text/css">
+p {
+	text-align: center;
+	background-color: #000066;
+	color: #ffffff;
+	vertical-align: middle;
+}
+
+font {
+	background-color: #000066;
+	color: #ffffff;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+th {
+	width: 350px;
+	height: 50px;
+	background-color: #000066;
+	color: white;
+	text-align: center;
+}
+
+td {
+	width: 350px;
+	height: 50px;
+	text-align: left;
+}
+
+input {
+	width: 100px;
+	height: 30px;
+	background-color: #000066;
+	color: #ffffff;
+	font-size: 10px;
+}
+</style>
+</head>
+<p>
+	<br>
+	<font>..... MAÐAZASI</font><br>
+</p>
+<table>
+	<tr>
+		<td style="width: 670px; text-align: left;"><form
+				action="/gamzekeskin/sepetim" method="get">
+				<input type="submit" value="SEPETÝM">
+			</form></td>
+		<td style="width: 670px; text-align: right;"><form
+				action="/gamzekeskin/magaza" method="get">
+				<input type="submit" value="MAÐAZA'YA DÖN">
+			</form></td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<th>ÜRÜN ADI</th>
+		<th>ÜRÜN FÝYATI</th>
+		<th>SEPETE EKLE</th>
+	</tr>
+	<#list urunler as mevcutUrun>
+	<tr>
+		<td style="width: 450px;">${mevcutUrun.getUrunAdi()}</td>
+		<td style="width: 450px;">${mevcutUrun.getFiyat()}</td>
+		<td style="width: 450px; text-align: center;"><a href="/gamzekeskin/sepetim?id=${mevcutUrun.getId()}"> 
+			<img border="0" width=”40” height="40" src="https://image.flaticon.com/icons/svg/600/600239.svg"></a></td>
+	</tr>
+	</#list>
+</table>
+<br />
+</html>

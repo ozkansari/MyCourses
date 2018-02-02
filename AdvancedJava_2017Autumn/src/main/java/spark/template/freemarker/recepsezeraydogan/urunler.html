@@ -1,0 +1,25 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Siparişler</title>
+		<style type="text/css">
+         body { background-color:black; color:white; font:helvetica; }
+         p { font-family: Tahoma, Verdana; font-size: 12px; }
+      </style>
+	</head>
+	
+	<body>
+		
+		<#list urunler as mevcutUrun>
+		${mevcutUrun.getMarka()}
+		<a href="/urunsil?id=${mevcutUrun.getId()}" >sil</a>
+			<a href="/sepeteekle?id=${mevcutUrun.getId()">sepete ekle</a>
+		<br/>
+		</#list>
+
+
+		
+	</body>
+
+</html>

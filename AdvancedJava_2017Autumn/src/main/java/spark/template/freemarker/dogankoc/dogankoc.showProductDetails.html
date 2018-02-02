@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<style>
+	    table{
+			border:2px solid yellow;
+			padding: 20px;
+			
+		}
+
+		th{
+			border:3px solid green;
+			border-collapse: collapse;
+		}
+
+		td{
+			border:2px solid blue;
+			border-collapse: collapse;
+			padding: 10px;
+			background-color:yellow;
+			
+		}
+</style>
+</head>
+
+<body>
+   <table>
+               <tr> 
+                  <th> <h3> ID </h3> </th>
+                  <th> <h3> SERIAL NO </h3></th>
+                  <th> <h3> NAME </h3></th>
+                  <th> <h3> PRICE </h3> </th>
+                  <th> <h3> INFORMATION </h3> </th>
+              </tr>
+      
+         <#list findedProducts as p>
+  
+              <tr>
+                  <td> ${p.getId()} </td> 
+                  <td> ${p.getSerialNo()}</td>
+                  <td> ${p.getName()}</td>
+                  <td> ${p.getPrice()}</td>
+				  <td> ${p.getInformation()}</td>
+              </tr>
+          </#list>
+</body>
+
+</html>

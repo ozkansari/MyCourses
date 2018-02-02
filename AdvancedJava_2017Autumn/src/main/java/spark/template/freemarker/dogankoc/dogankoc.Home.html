@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Bootstrap E-Commerce Template- DIGI Shop mini</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Fontawesome core CSS -->
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--Slide Show Css -->
+    <link href="/assets/ItemSlider/css/main-style.css" rel="stylesheet" type='text/css'/>
+    <!-- custom CSS here -->
+    <link href="/assets/css/style.css" rel="stylesheet" type='text/css'/>
+
+    <style>
+          	@keyframes effect {
+    			from {background-color: blue;}
+    			to {background-color: whitesmoke;}
+			}
+    </style>
+    
+            <script>
+             var pa=0;
+        <#list products as p>
+            pa+=1;
+        </#list>
+        </script>
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><strong>DIGI</strong> Shop</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                <ul class="nav navbar-nav navbar-right">
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">24x7 Support <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><strong>Call: </strong>05318881591</a></li>
+                            <li><a href="#"><strong>Mail: </strong>tekdoan@gmail.com</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><strong>Address: </strong>
+                                <div>
+                                    �stanbul,<br />
+                                    Kavac�k Medipol MYO
+                                </div>
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="row">
+   
+            <div class="col-md-9">
+                    <span>
+                        <div class="well well-lg offer-box text-center" 
+                            style="animation-name: effect;
+                            animation-duration: 6s;
+                            position: relative;
+                            animation-delay: 2s;
+                            animation-iteration-count: infinite;
+                            animation-direction: reverse;
+                            animation-timing-function: linear;">             
+                               
+                                
+                            </div>
+                        </span>
+
+                <div class="main box-border">
+                    <div id="mi-slider" class="mi-slider">
+                        <ul>
+
+                            <li><a href="/getSamsung">
+                                <img src="/assets/ItemSlider/images/samsung.jpg" alt="img01"><h4>Samsung</h4>
+                            </a></li>
+                            <li><a href="/getLg">
+                                <img src="/assets/ItemSlider/images/lg.jpg" alt="img02"><h4>Lg</h4>
+                            </a></li>
+                            <li><a href="/getLenovo">
+                                <img src="/assets/ItemSlider/images/lenovoPhone.jpg" alt="img03"><h4>Lenovo</h4>
+                            </a></li>
+                            <li><a href="/getVestel">
+                                <img src="/assets/ItemSlider/images/vestel.jpg" alt="img04"><h4>Vestel</h4>
+                            </a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="/getLenovoPC">
+                                <img src="/assets/ItemSlider/images/lenovo.jpg" alt="img05"><h4>LENOVO</h4>
+                            </a></li>
+                            <li><a href="/getAsus">
+                                <img src="/assets/ItemSlider/images/asus.jpg" alt="img06"><h4>Asus &amp;NVIDIA </h4>
+                            </a></li>
+                            <li><a href="/getApple">
+                                <img src="/assets/ItemSlider/images/apple.jpg" alt="img07"><h4>Apple</h4>
+                            </a></li>
+                            <li><a href="/getMsi">
+                                <img src="/assets/ItemSlider/images/msi.jpg" alt="img08"><h4>Msi</h4>
+                            </a></li>
+                        </ul>
+                      
+                        <nav>
+                            <a href="/dogankoc/setHomePageWithPhones">Android Phones</a>
+                            <a href="/dogankoc/setHomePageWithNoteBooks">NoteBook</a>
+
+                        </nav>
+                    </div>
+                    
+                </div>
+                <br />
+            </div>
+            <!-- /.col -->
+            <script>
+                var payC=0;
+                        <#list paymentCount as pc>
+                 payC=${pc};
+             </#list>
+            </script>
+    
+            <div class="col-md-3 text-center">
+                <div class=" col-md-12 col-sm-6 col-xs-6" >
+
+                    <div class="thumbnail product-box">
+                        <img src="/assets/ItemSlider/images/cart.jpg" alt="" />
+                        <div class="caption">
+                            <h3><script>document.write(payC) </script> items  </br>
+                                <a href="/dogankoc/payment">Go ShopCart</a></h3>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            <!-- /.col -->
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-3">
+                <div><!--  -->
+                    <a href="/dogankoc/payment" class="list-group-item active">Products
+                    </a>
+
+                </div>
+
+            </div>
+            <!-- /.col -->
+            <div class="col-md-9">
+                <div>
+                    <ol class="breadcrumb">
+
+                    </ol>
+                </div>
+   
+     
+                <div class="row">
+                    <div class="btn-group alg-right-pad">
+                        <button type="button" class="btn btn-default"><strong>  <script>document.write(pa)</script>  </strong>items</button>
+                        <div class="btn-group">
+                          
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- /.row -->
+                <#list products as p>
+                <div class="row">
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="/assets/img/dummyimg.png" alt="" />
+                            <div class="caption">
+                                <h3><a href="/DetailsProcess">${p.getName()}</a></h3>
+                                <p>Price : <strong>${p.getPrice()}</strong>  </p>
+                                <p><a href="/homeProcess?id=${p.getId()}" class="btn btn-success" role="button">Add To Cart</a> 
+                                <a href="/DetailsProcess?id=${p.getId()}" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="/assets/img/dummyimg.png" alt="" />
+                            <div class="caption">
+                                <h3><a href="#">${p.getName()}</a></h3>
+                                <p>Price : <strong>${p.getPrice()}pppp</strong>  </p>
+                                <p><a href="/homeProcess?id=${p.getId()}" class="btn btn-success" role="button">Add To Cart</a> 
+                                <a href="/DetailsProcess?id=${p.getId()}" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="/assets/img/dummyimg.png" alt="" />
+                            <div class="caption">
+                                <h3><a href="#">${p.getName()} </a></h3>
+                                <p>Price : <strong>${p.getPrice()}</strong>  </p>
+                                <p><a href="/homeProcess?id=${p.getId()}" class="btn btn-success" role="button">Add To Cart</a>
+                                   <a href="/DetailsProcess?id=${p.getId()}" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="/assets/img/dummyimg.png" alt="" />
+                            <div class="caption">
+                                <h3><a href="#">${p.getName()}</a></h3>
+                                <p>Price : <strong>${p.getPrice()}</strong>  </p>
+                                <p>
+                                    <a href="/homeProcess?id=${p.getId()}" class="btn btn-success" role="button">Add To Cart</a>
+                                    <a href="/DetailsProcess?id=${p.getId()}" class="btn btn-primary" role="button">See Details</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="/assets/img/dummyimg.png" alt="" />
+                            <div class="caption">
+                                <h3><a href="#">${p.getName()} </a></h3>
+                                <p>Price : <strong>${p.getPrice()}</strong>  </p>
+                                <p><a href="/homeProcess?id=${p.getId()}" class="btn btn-success" role="button">Add To Cart</a>
+                                 <a href="/DetailsProcess?id=${p.getId()}" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-4 text-center col-sm-6 col-xs-6">
+                        <div class="thumbnail product-box">
+                            <img src="/assets/img/dummyimg.png" alt="" />
+                            <div class="caption">
+                                <h3><a href="#">${p.getName()} </a></h3>
+                                <p>Price : <strong>${p.getPrice()}</strong>  </p>
+                                <p><a href="/homeProcess?id=${p.getId()}" class="btn btn-success" role="button">Add To Cart</a>
+                                 <a href="/DetailsProcess?id=${p.getId()}" class="btn btn-primary" role="button">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </#list>
+            
+            
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!--Footer -->
+    <div class="col-md-12 footer-box">
+
+        <div class="row small-box pad-botom ">
+            <strong>Computers :</strong> <a href="#">samsung</a> |  <a href="#">Sony</a> | <a href="#">Microx</a> | 
+            <a href="#">samsung Computers</a> |  <a href="#">Sony</a> | <a href="#">Microx</a> |<a href="#">samsung</a> |
+              <a href="#">Sony</a> | <a href="#">Microx</a> |<a href="#">samsung</a> |  <a href="#">Sony</a> | 
+            <a href="#">Microx Computers</a> |<a href="#">samsung Computers</a> |  <a href="#">Sony</a> | <a href="#">Microx</a> |
+            <a href="#">samsung</a> |  <a href="#">Sony</a> | <a href="#">Microx Computers</a> |<a href="#">samsung</a> |  
+            <a href="#">Sony</a> | <a href="#">Microx</a> | view all items
+            <strong>Computers :</strong> <a href="#">samsung</a> |  <a href="#">Sony</a> | <a href="#">Microx</a> | 
+            <a href="#">samsung Computers</a> |  <a href="#">Sony</a> | <a href="#">Microx</a> |<a href="#">samsung</a> |
+              <a href="#">Sony</a> | <a href="#">Microx</a> |<a href="#">samsung</a> |  <a href="#">Sony</a> | 
+            <a href="#">Microx Computers</a> |<a href="#">samsung Computers</a> |  <a href="#">Sony</a> | <a href="#">Microx</a> |
+            <a href="#">samsung</a> |  <a href="#">Sony</a> | <a href="#">Microx Computers</a> |<a href="#">samsung</a> |  
+            <a href="#">Sony</a> | <a href="#">Microx</a> | view all items
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Send a Quick Query </strong>
+                <hr>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" required="required" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" required="required" placeholder="Email address">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="form-group">
+                                <textarea name="message" id="message" required="required" class="form-control" rows="3" placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Submit Request</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-4">
+                <strong>Our Location</strong>
+                <hr>
+                <p>
+                    Istanbul<br>
+                    Call: +09-456-567-890<br>
+                    Email: tekdoan@gmail.com<br>
+                </p>
+
+                2018 www.tekdoan@gmail.com | All Right Reserved
+            </div>
+            <div class="col-md-4 social-box">
+                <strong>We are Social </strong>
+                <hr>
+                <a href="#"><i class="fa fa-facebook-square fa-3x "></i></a>
+                <a href="#"><i class="fa fa-twitter-square fa-3x "></i></a>
+                <a href="#"><i class="fa fa-google-plus-square fa-3x c"></i></a>
+                <a href="#"><i class="fa fa-linkedin-square fa-3x "></i></a>
+                <a href="#"><i class="fa fa-pinterest-square fa-3x "></i></a>
+        
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!-- /.col -->
+    <div class="col-md-12 end-box ">
+        &copy; 2014 | &nbsp; All Rights Reserved | &nbsp; www.tekdoan@gmail.com | &nbsp; 24x7 support 
+    </div>
+    <!-- /.col -->
+    <!--Footer end -->
+    <!--Core JavaScript file  -->
+    <script src="/assets/js/jquery-1.10.2.js"></script>
+    <!--bootstrap JavaScript file  -->
+    <script src="/assets/js/bootstrap.js"></script>
+    <!--Slider JavaScript file  -->
+    <script src="/assets/ItemSlider/js/modernizr.custom.63321.js"></script>
+    <script src="/assets/ItemSlider/js/jquery.catslider.js"></script>
+    <script>
+        $(function () {
+
+            $('#mi-slider').catslider();
+
+        });
+		</script>
+</body>
+</html>
