@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+	<title>Management Page</title>
+    <link href="/homePage.css"  rel="stylesheet" type="text/css"/>
+	<style>
+	    table{
+			border:2px solid yellow;
+			padding: 20px;
+		}
+
+		th{
+			border:3px solid green;
+			border-collapse: collapse;
+		}
+
+		td{
+			border:2px solid blue;
+			border-collapse: collapse;
+			padding: 10px;
+			background-color:yellow;
+		}
+		
+		a {
+    		color:red;
+		}
+		a:hover {
+   			 color: red;
+   			 background: #eff;
+		}
+	 </style>
+
+	 </head>
+	
+	<body>
+	  <div align="left"> 
+	    <label id="l1"  style=" background-color:red ; color:black; font-weight:bold; text-indent: 20px;">
+            PRODUCTS LIST
+        </label>
+      </div>
+      <div align="center" width="50px;">
+        <a href="/doganKoc/Management/AddingProducts"><button> Add New Product</button></a>
+      </div>
+        <table  align="center">
+               <tr> 
+               	  <th> <h3> ROW COUNT </h3> </th>
+                  <th> <h3> ID </h3> </th>
+                  <th> <h3> SERIAL NO </h3></th>
+                  <th> <h3> NAME </h3></th>
+                  <th> <h3> PRICE </h3> </th>
+                  <th> <h3> STOK </h3> </th>
+              </tr>
+      
+         <#list products as p>
+  
+              <tr>
+              
+              	  <td> ${p.getRowCount()} </td> 
+                  <td> ${p.getId()} </td> 
+                  <td> ${p.getSerialNo()}</td>
+                  <td> ${p.getName()}</td>
+                  <td> ${p.getPrice()}</td>
+                  <td> ${p.getStok()}</td>
+                  <td><a href="/deleteProducts?Id=${p.getId()}">delete</a></td>
+                  <td><a href="/doganKoc/Management/showProductDetails?id=${p.getId()}" >detail</a></td>
+               
+              </tr>
+         
+        </#list>
+           
+       </table>
+	   
+
+		
+	
+	</body>
+     
+</html>

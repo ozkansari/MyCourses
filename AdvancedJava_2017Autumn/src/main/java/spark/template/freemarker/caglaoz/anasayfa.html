@@ -1,0 +1,51 @@
+<html>
+<head>
+<style type="text/css">
+table, td {
+	border: 1px solid;
+	bordercolor: #990000;
+}
+</style>
+</head>
+<body>
+	<p>
+		<img
+			src="https://s3.amazonaws.com/designmantic-logos/logos/2018/Jan/small-8452-5a6f3455ae204.png"
+			width="61" height="84" align="left" />
+	<p>
+		<a href="sepet"> <img
+			src="https://image.flaticon.com/user_icons/5796/5796313/1517394992.svg"
+			width="55" height="55" align="right" />
+		</a> <a href="urunekle"><img
+			src="https://image.flaticon.com/user_icons/5796/5796313/1517394726.svg"
+			width="55" height="55" align="right" /> </a> <br> <br> <br>
+
+		<font color="#990000" size="28"><b><center>Little
+					Kadin Giyim Magazasi</center> </b> </font> <br> <br> <br>
+	<table style="width: 100%">
+
+		<tr>
+			<th>Ürünler</th>
+			<th>Ürün Detay</th>
+			<th>Ürün Fiyatý</th>
+			<th>Sepete Ekle</th>
+		</tr>
+		<#list urunler as mevcutUrun>
+		<tr>
+
+			<td>${mevcutUrun.getUrunAdi()}</td>
+			<td>${mevcutUrun.getUrunDetayi()}</td>
+			<td>${mevcutUrun.getFiyat()}</td>
+			<td><a href="/urunekle?id=${mevcutUrun.getId()}"> <img
+					src="https://image.flaticon.com/icons/svg/711/711947.svg"
+					width="30" height="30" />
+			</a></td>
+
+		</tr>
+
+		</#list>
+
+	</table>
+</body>
+
+</html>

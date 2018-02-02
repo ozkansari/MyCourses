@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>SEPETÝM</title>
+<style type="text/css">
+p {
+	text-align: center;
+	background-color: #000066;
+	color: #ffffff;
+	vertical-align: middle;
+}
+
+font {
+	background-color: #000066;
+	color: #ffffff;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+th {
+	width: 675px;
+	height: 50px;
+	background-color: #000066;
+	color: white;
+	text-align: center;
+}
+
+td {
+	width: 675px;
+	height: 50px;
+	text-align: left;
+}
+
+input {
+	width: 100px;
+	height: 30px;
+	background-color: #000066;
+	color: #ffffff;
+	font-size: 10px;
+}
+</style>
+</head>
+<body>
+	<p>
+		<br>
+		<font>..... MAÐAZASI & SEPETÝM</font><br>
+	</p>
+	<form action="/gamzekeskin/musteri" method="get"
+		style="text-align: right;">
+		<input type="submit" value="ALIÞVERÝÞ'E DÖN">
+	</form>
+	<form action="/gamzekeskin/musteri" method="post">
+		<table>
+			<tr>
+				<th>ÜRÜN ADI</th>
+				<th>ÜRÜN FÝYATI</th>
+			</tr>
+			<#list urunler as mevcutUrun>
+			<tr>
+				<td>${mevcutUrun.getUrunAdi()}</td>
+				<td>${mevcutUrun.getFiyat()}</td>
+			</tr>
+			</#list>
+		</table>
+	</form>
+</body>
+</html>

@@ -5,11 +5,11 @@
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
 Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
-## DEVAMSIZLIK ŞARTI SAĞLAMAYANLAR DERSTEN BIRAKILACAKTIR. MEBISTEN KONTROL EDINIZ.
-
 ## FİNAL PROJE - Alışveriş Sitesi
 
-Teslim Tarihi: 29 Ocak
+Teslim Tarihi: ~~29 Ocak~~ ~~1 Şubat 23:59~~ 2 Şubat 18:00
+
+Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacaktır.
 
 ### Kullanıcı Sayfaları
 
@@ -47,10 +47,13 @@ Sayfa adları "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" şeklinde eşleştirilme
 
 * Ürün kategorilendirme
 * Sipariş sayfasında adres bilgisi, kk bilgisi vs. alma
-* Satın alma entegrasyonu: https://dev.iyzipay.com/tr
+* Satın alma entegrasyonu: https://dev.iyzipay.com/tr veya https://developer.mastercard.com/product/masterpass (Test API)
 
 ### Sık Sorulan Sorular?
 Sorularınızı https://github.com/ozkansari/MyCourses/milestone/1 altına "Issue" açarak yazabilir. Ya da mevcut sorulara cevap verebilirsiniz.
+
+* Fazla karışık olmamak kaydıyla hazır şablon kullanabilirsiniz. 
+* Derste öğrendiğiniz üzere, Maven projesinde html, ftl, imaj, properties, js vb. dosyalar src/main/resources/ altına konulabilir.
 
 ## VİZE ODEVLER
 

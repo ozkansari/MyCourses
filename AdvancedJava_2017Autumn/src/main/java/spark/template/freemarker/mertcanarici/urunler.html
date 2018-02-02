@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>ARÝCÝ MAGAZASÝ</title>
+<style type="text/css">
+p {
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: underline;
+}
+
+th {
+	text-align: center;
+}
+
+td {
+	text-align: left;
+	width: 250px;
+}
+
+li {
+	display: inline;
+}
+
+#genel {
+	margin-left: 350px;
+}
+
+#menu {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+#menu li {
+	float: left;
+	width: 250px;
+	height: 30px;
+}
+
+#menu a {
+	font-size: 16px;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #990000;
+	display: block;
+	padding-top: 5px;
+	padding-right: 5px;
+	border: 1px solid #990000;
+	text-align: center;
+	line-height: 30px;
+	margin-right: 2px;
+}
+
+#button {
+	width: 170px;
+	height: 30px;
+	background-color: #990000;
+	color: #ffffff;
+	font-size: 15px;
+}
+</style>
+</head>
+<body>
+	<p>
+		<font size="7" color="#000000">ARICI MAGAZASI</font>
+		<br>
+		<font size="6" color="#000000">YONETIM</font>
+	</p>
+	<br>
+	<br>
+	<br>
+	<div id="genel">
+		<ul id="menu">
+			<li
+				style="color: #990000; font-size: 22px; text-decoration: underline;">URUN
+				ADI</li>
+			<li
+				style="color: #990000; font-size: 22px; text-decoration: underline;">URUN
+				FIYATI</li>
+		</ul>
+		<br>
+		<ul id="menu">
+			<#list urunler as mevcutUrun> <br>
+			<li>${mevcutUrun.getUrunAdi()}</li>
+			<li>${mevcutUrun.getFiyat()}</li>
+			<li><a
+				href="/mertcanarici/yonetim/urunsil?id=${mevcutUrun.getId()}">
+					SIL</a></li>
+			<br>
+			<br>
+			</#list>
+		</ul>
+		<br> <br> <br>
+	</div>
+	<footer>
+		<form action="/mertcanarici/yonetim/urunekle_guncelle" method="get">
+			<input style="width: 1500px; height: 40px;" id="button" type="submit"
+				value="EKLE & GUNCELLE">
+		</form>
+		<br>
+		<form action="/mertcanarici/kullanici" method="get">
+			<input style="width: 1500px; height: 40px;" id="button" type="submit"
+				value="MAGAZA">
+		</form>
+	</footer>
+</body>
+</html>

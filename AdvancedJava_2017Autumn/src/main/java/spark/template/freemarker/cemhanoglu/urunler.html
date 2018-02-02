@@ -1,0 +1,23 @@
+<html>
+
+	<head>
+		<style>body {
+   color: blue;
+}
+h1 {
+    color: green;
+    </style>
+	</head>
+	<body>
+		
+		<#list urunler as mevcutUrun>
+		${mevcutUrun.getMarka()}
+            <a href="/sepeteekle?id=${mevcutUrun.getId()}"></a>
+		<a href="/urunsil?id=${mevcutUrun.getId()}" >sil</a>
+		</#list>
+        <button type="button"onclick="alert('Urununuzu onayladık')">Sepetim</button>
+
+		
+	</body>
+
+</html>

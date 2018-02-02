@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="/media/images/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+	<title>Netteuygun - Admin Paneli</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="/media/admin/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="/media/admin/assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Paper Dashboard core CSS    -->
+    <link href="/media/admin/assets/css/paper-dashboard.css" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="/media/admin/assets/css/demo.css" rel="stylesheet" />
+
+
+    <!--  Fonts and icons     -->
+    <link href="/media/admin/assets/css//font-awesome.min.css" rel="stylesheet">
+    <link href='/media/admin/assets/css/fonts.css' rel='stylesheet' type='text/css'>
+    <link href="/media/admin/assets/css/themify-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="sidebar" data-background-color="white" data-active-color="danger">
+
+            <div class="sidebar-wrapper">
+                    <div class="logo">
+                        <a href="http://localhost:4567/ibrahimkandemir/"><img src="/media/images/nu_logo_back.png" style ="width:170px" "height:100px" alt="" /></a> 
+                            <hr /> 
+                            <a href="http://localhost:4567/ibrahimkandemir/yonetim/"><img src="/media/images/nu_admin_logo.png" style ="width:200px" "height:100px" alt="" /></a>
+                        </a>
+                    </div>
+        
+                    <ul class="nav">
+                        <li>
+                            <a href="http://localhost:4567/ibrahimkandemir/yonetim/">
+                                <i class="ti-home"></i>
+                                <p>Giriş</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:4567/ibrahimkandemir/yonetim/urun_ekle">
+                                <i class="ti-plus"></i>
+                                <p>Ürün Ekle</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:4567/ibrahimkandemir/yonetim/urun_listele_yonet">
+                                <i class="ti-view-list-alt"></i>
+                                <p>Ürün Listele & Yönet</p>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="http://localhost:4567/ibrahimkandemir/yonetim/urun_goruntule_detay">
+                                <i class="ti-gallery"></i>
+                                <p>Ürün Görüntü & Detay</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:4567/ibrahimkandemir/yonetim/siparis_listesi">
+                                <i class="ti-shopping-cart"></i>
+                                <p>Sipariş Listesi</p>
+                            </a>
+                        </li>
+        </ul>
+    </div>
+</div>
+
+    <div class="main-panel">
+		<nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Admin Paneli - Ürün Görüntü & Detay</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                        </li>
+                        <li class="dropdown">
+                             
+                        </li>
+						<li>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="header">
+                                    <h4 class="title">Ürün Listesi</h4>
+                                </div>
+                                <div class="content table-responsive table-full-width">
+                                    
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <th>ID</th>
+                                            <th>ÜRÜN BAŞLIĞI</th>
+                                            <th>MARKA</th>
+                                            <th>FİYAT</th>
+                                            <th>İNDİRİMLİ FİYAT</th>
+                                            <th>KARGO BİLGİSİ</th>
+                                            <th>KARGO HAZIRLIK</th>
+                                            <th>İŞLEM</th>
+                                        </thead>
+                                        <#list urunler as mevcutUrun>
+                                        <tbody>
+                                            <tr>
+                                                <td>${mevcutUrun.getId()}</td>
+                                                <td>${mevcutUrun.getUrunBasligi()}</td>
+                                                <td>${mevcutUrun.getMarka()}</td>
+                                                <td>${mevcutUrun.getUrunFiyati()} TL</td>
+                                                <td>${mevcutUrun.getUrunIndirimliFiyati()} TL </td>
+                                                <td>${mevcutUrun.getKargoBilgisi()}</td>
+                                                <td>${mevcutUrun.getKargoTeslimat()}</td>
+                                              <td><a class="navbar-brand" href="/ibrahimkandemir/urun_ayrinti_detay?id=${mevcutUrun.getId()}">Ürünü Detay <i class="ti-info-alt"></i> </a></td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                        </#list>
+                                    </table>
+    
+                                </div>
+                            </div>
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                        </li>
+                        <li>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="copyright pull-right">
+                    &copy; <script>document.write(new Date().getFullYear())</script> Tüm Hakları Saklıdır. Bu web sitesi ileri java dersi dönem projesi için hazırlanmıştır.
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+</div>
+
+
+</body>
+
+   <!--   Core JS Files   -->
+   <script src="/media/admin/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+   <script src="/media/admin/assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+   <!--  Checkbox, Radio & Switch Plugins -->
+   <script src="/media/admin/assets/js/bootstrap-checkbox-radio.js"></script>
+
+   <!--  Charts Plugin -->
+   <script src="/media/admin/assets/js/chartist.min.js"></script>
+
+   <!--  Notifications Plugin    -->
+   <script src="/media/admin/assets/js/bootstrap-notify.js"></script>
+
+   <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
+   <script src="/media/admin/assets/js/paper-dashboard.js"></script>
+
+   <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+   <script src="/media/admin/assets/js/demo.js"></script>
+
+</html>

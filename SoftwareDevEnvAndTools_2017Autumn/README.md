@@ -4,13 +4,13 @@
 Dersler Cumartesi 12:00-13:00 ve 13:15-14:30 arasında iki oturum halinde yapılacaktır.
 Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
-## DEVAMSIZLIK ŞARTI SAĞLAMAYANLAR DERSTEN BIRAKILACAKTIR. MEBISTEN KONTROL EDINIZ.
-
 ## FİNAL SINAVI
 
 Proje olacak. Proje derste açıklanmıştır. Arkadaşlarınıza sorunuz. :)
 
-Teslim Tarihi: 29 Ocak
+Teslim Tarihi: ~~29 Ocak~~ ~~1 Şubat 23:59~~ 2 Şubat 18:00
+
+Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacaktır.
 
 ### Proje
 
