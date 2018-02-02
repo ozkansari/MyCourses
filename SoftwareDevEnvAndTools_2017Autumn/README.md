@@ -8,7 +8,7 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
 Proje olacak. Proje derste açıklanmıştır. Arkadaşlarınıza sorunuz. :)
 
-Teslim Tarihi: ~~29 Ocak~~ 1 Şubat 23:59
+Teslim Tarihi: ~~29 Ocak~~ ~~1 Şubat 23:59~~ 2 Şubat 18:00
 
 ### Proje
 
