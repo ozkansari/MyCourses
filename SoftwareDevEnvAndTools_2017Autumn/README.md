@@ -12,8 +12,8 @@ Teslim Tarihi: ~~29 Ocak~~ ~~1 Şubat 23:59~~ 2 Şubat 18:00
 
 Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacaktır.
 
-https://github.com/batuhank34/Final-Projesi
-https://github.com/ebubekirtr/ebubekir-final.git
+- https://github.com/batuhank34/Final-Projesi
+- https://github.com/ebubekirtr/ebubekir-final.git
 
 ### Proje
 
