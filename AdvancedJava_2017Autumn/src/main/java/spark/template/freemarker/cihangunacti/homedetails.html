@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+   <link rel="SHORTCUT ICON" href="/logo2.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/prettyPhoto.css" rel="stylesheet">
+    <link href="/price-range.css" rel="stylesheet">
+    <link href="/animate.css" rel="stylesheet">
+	<link href="/main.css" rel="stylesheet">
+	<link href="/responsive.css" rel="stylesheet">
+	
+	
+	<link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="/js/jquery.min.js"></script>
+	<!-- Custom Theme files -->
+	<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- Custom Theme files -->
+	
+	<!--webfont-->
+	<!-- for bootstrap working -->
+	<script type="text/javascript" src="/js/bootstrap-3.1.1.min.js"></script>
+	<!-- //for bootstrap working -->
+	<!-- cart -->
+	<script src="/js/simpleCart.min.js"> </script>
+	<!-- cart -->
+	<link rel="stylesheet" href="/css/flexslider.css" type="text/css" media="screen" />
+    <title>Home | CHNSHOP</title>
+  </head>
+  <body>
+  <div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="/cihangunacti/home"><img src="/logo.png" style="width:160px" "height:160px" alt="" /></a>
+						</div>
+						<div class="btn-group pull-right">
+							<div class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+									USA
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Canada</a></li>
+									<li><a href="#">UK</a></li>
+								</ul>
+							</div>
+							
+							<div class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+									DOLLAR
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Canadian Dollar</a></li>
+									<li><a href="#">Pound</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="http://localhost:4567/cihangunacti/Basket"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="http://localhost:4567/cihangunacti/management"><i class="fa fa-lock"></i> Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+		
+		<div class="main-panel">
+        <div class="content">
+            <div class="container-fluid">
+                    <div class="col-md-10">
+                 <#list products as availableProduct>   
+                 <div class="new-product">
+				<div class="col-md-7 zoom-grid">
+					<div class="flexslider">
+						<ul class="slides">
+							<li data-thumb="/img/full-screen-image-3.jpg">
+								<div class="thumb-image"> <img src="/img/full-screen-image-3.jpg" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+							</li>
+							<li data-thumb="/img/full-screen-image-3.jpg">
+								<div class="thumb-image"> <img src="/img/full-screen-image-3.jpg" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+							</li>
+							<li data-thumb="/img/full-screen-image-3.jpg">
+							<div class="thumb-image"> <img src="/img/full-screen-image-3.jpg" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+							</li> 
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-12 dress-info">
+					<div class="dress-name">
+						<h3>${availableProduct.getNameproduct()}</h3>
+						<span>${availableProduct.getProductPrice()} TL</span>
+						<div class="clearfix"></div>
+						<p>PRODUCT INFORMATION</p>
+						<p>${availableProduct.getProductInformation()}</p>
+						
+					</div>
+					<div class="span span1">
+						<p class="left">DISCOUNTED PRICE</p>
+						<p class="right">${availableProduct.getProductDiscount()} TL</p>
+						<div class="clearfix"></div>
+					</div>
+					<div class="span span2">
+						<p class="left">CARGO INFORMATION</p>
+						<p class="right">${availableProduct.getCargoInformation()}</p>
+						<div class="clearfix"></div>
+					</div>
+					<div class="span span3">
+						<p class="left">DELIVERY DATE</p>
+						<p class="right">${availableProduct.getProductDelivery()}</p>
+						<div class="clearfix"></div>
+					</div>
+					<div class="span span3">
+					<a href="/cihangunacti/home/addBasket?id=${availableProduct.getId()}" class="btn btn-default add-to-cart" ><i class="fa fa-shopping-cart"></i><i ></i>Add to cart</a>
+					</div>
+					<div class="purchase">
+						
+						<div class="clearfix"></div>
+					</div>
+				<script src="/js/imagezoom.js"></script>
+					<!-- FlexSlider -->
+					<script defer src="/js/jquery.flexslider.js"></script>
+					<script>
+						// Can also be used with $(document).ready()
+						$(window).load(function() {
+						  $('.flexslider').flexslider({
+							animation: "slide",
+							controlNav: "thumbnails"
+						  });
+						});
+					</script>
+				</div>
+				<div class="clearfix"></div>
+				<div class="reviews-tabs">
+                   <!-- Main component for a primary marketing message or call to action -->
+                    
+                    </#list>
+                    
+                    
+                        <div class="card">
+
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="/jquery.js"></script>
+	<script src="/bootstrap.min.js"></script>
+	<script src="/jquery.scrollUp.min.js"></script>
+	<script src="/price-range.js"></script>
+    <script src="/jquery.prettyPhoto.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>
