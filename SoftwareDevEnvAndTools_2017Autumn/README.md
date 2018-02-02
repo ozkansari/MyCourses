@@ -12,6 +12,9 @@ Teslim Tarihi: ~~29 Ocak~~ ~~1 Şubat 23:59~~ 2 Şubat 18:00
 
 Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacaktır.
 
+https://github.com/batuhank34/Final-Projesi
+https://github.com/ebubekirtr/ebubekir-final.git
+
 ### Proje
 
  *Maven* (Bkz. Hafta 4-5) kullanarak bir *Spring Boot* projesi (Bkz. Hafta 10) geliştireceksiniz. Projenizde şu REST servisler bulunacak: 
