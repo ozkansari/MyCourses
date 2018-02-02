@@ -7,7 +7,7 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
 ## FİNAL PROJE - Alışveriş Sitesi
 
-Teslim Tarihi: ~~29 Ocak~~ ~~1 Şubat 23:59~~ 1 Şubat 18:00
+Teslim Tarihi: ~~29 Ocak~~ ~~1 Şubat 23:59~~ 2 Şubat 18:00
 
 ### Kullanıcı Sayfaları
 
