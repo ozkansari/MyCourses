@@ -9,6 +9,8 @@ Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
 Teslim Tarihi: ~~29 Ocak~~ ~~1 Şubat 23:59~~ 2 Şubat 18:00
 
+Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacaktır.
+
 ### Kullanıcı Sayfaları
 
 Sayfa adları "/<<ad_soyadiniz>>/<<sayfa_adi>>" şeklinde eşleştirilmeli.
