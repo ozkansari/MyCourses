@@ -13,7 +13,6 @@ Teslim Tarihi: ~~29 Ocak~~ ~~1 Şubat 23:59~~ 2 Şubat 18:00
 Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacaktır.
 
 - https://github.com/batuhank34/Final-Projesi
-- https://github.com/ebubekirtr/ebubekir-final.git
 - https://github.com/havvaakbas/YazilimGelistirmeFinal
 - https://github.com/hsynsarikaya/yazilimproje
 - https://github.com/semakcaay/FinalProjeSema
@@ -23,6 +22,8 @@ Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacakt�
 - https://github.com/merttsn/Proje
 - https://github.com/MertcanARICI/SpringBootProje
 - https://github.com/ibrahimdemir1/ibrahimdemirprojesi
+- https://github.com/ebubekirtr/ebubekir-final
+- https://github.com/yasarfaruk/YFYFinal
 
 ### Proje
 
