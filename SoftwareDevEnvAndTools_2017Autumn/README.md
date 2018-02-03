@@ -14,6 +14,15 @@ Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacakt�
 
 - https://github.com/batuhank34/Final-Projesi
 - https://github.com/ebubekirtr/ebubekir-final.git
+- https://github.com/havvaakbas/YazilimGelistirmeFinal
+- https://github.com/hsynsarikaya/yazilimproje
+- https://github.com/semakcaay/FinalProjeSema
+- https://github.com/musasysal/HaberUyg
+- https://github.com/kerimbiber/FinalProje
+- https://github.com/eymenpolateksi/HaberRepo
+- https://github.com/merttsn/Proje
+- https://github.com/MertcanARICI/SpringBootProje
+- https://github.com/ibrahimdemir1/ibrahimdemirprojesi
 
 ### Proje
 
