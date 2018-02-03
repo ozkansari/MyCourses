@@ -151,7 +151,7 @@ public class DerbyVeritabani {
     public static List<Urun> kayitlariAl() {
         try {
             Statement komut = veritabaniBaglantisi.createStatement();
-            String sql = "SELECT * FROM urun";
+            String sql = "SELECT * FROM urunler";
             ResultSet resultSet = komut.executeQuery(sql);
             List<Urun> urunler = new ArrayList<Urun>();
             while (resultSet.next()) {
@@ -188,7 +188,7 @@ public class DerbyVeritabani {
     private static void kayitlariListele() {
         try {
             Statement komut = veritabaniBaglantisi.createStatement();
-            String sql = "SELECT * FROM urun";
+            String sql = "SELECT * FROM urunler";
             ResultSet resultSet = komut.executeQuery(sql);
             while (resultSet.next()) {
                 int id = resultSet.getInt(1);

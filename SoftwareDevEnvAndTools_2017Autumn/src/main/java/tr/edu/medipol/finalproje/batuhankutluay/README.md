@@ -1,0 +1,1 @@
+Her şey tamam. Teşekkürler.

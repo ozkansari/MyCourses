@@ -1,4 +1,4 @@
-package spark.template.freemarker.emineaycicek;
+package spark.template.freemarker.hasansomuncu;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -46,13 +46,13 @@ public class DerbyVeritabaniOrnek {
         tablolariOlustur();
         
         // BESINCI ADIM ------------------------------------
-        urunEkle(1,"Gofret",10);
+        urunEkle(1,"Gofret", "�ok guzel bir gofrettir",10);
         
         // ALTINCI ADIM ------------------------------------
         kayitlariListele();
         
         // YEDINCI ADIM ------------------------------------
-        urunSil(1);
+        //urunSil(1);
         
         // SEKIZINCI ADIM ------------------------------------
         try {
@@ -66,11 +66,32 @@ public class DerbyVeritabaniOrnek {
         
         kayitlariListele();
         
+        
+        
     }
 
     /**
      * @param id
      */
+    
+    
+    
+    public static boolean tablolariSil() {
+        try {
+            Statement komut = veritabaniBaglantisi.createStatement();
+            String sql = "DROP TABLE urun";
+            komut.executeUpdate(sql);
+        } catch (SQLException e) {
+            System.out.println("Tablo mevcut olabilir: " + e);
+            return false;
+        }
+        System.out.println("Tablo silindi.");
+        return true;
+    }
+    
+    
+    
+    
     public static boolean urunSil(int id) {
         try {
             Statement komut = veritabaniBaglantisi.createStatement();
@@ -83,19 +104,35 @@ public class DerbyVeritabaniOrnek {
         System.out.println("Kayitlar silindi.");
         return true;
     }
+    
+    
+    public static boolean sepeteEkle(int id) {
+        try {
+            Statement komut = veritabaniBaglantisi.createStatement();
+            
+            String sql = "INSERT INTO sepet values ("+id+")";
+            komut.executeUpdate(sql);
+        } catch (SQLException e) {
+            System.out.println("INSERT hatasi: " + e);
+            return false;
+        }
+        System.out.println("Kayit sepete.");
+        return true;
+    }
 
     public static boolean urunEkle(Urun urun) {
-        return urunEkle(urun.getId(), urun.getUrunAdi(), urun.getFiyat());
+        return urunEkle(urun.getId(), urun.getUrunAdi(), urun.getAciklama(), urun.getFiyat());
     }
     /**
      * @param urunAdi TODO
      * 
      */
-    public static boolean urunEkle(int id, String urunAdi, int fiyat) {
+    public static boolean urunEkle(int id, String urunAdi, String aciklama, int fiyat) {
+    	System.out.println(urunAdi + aciklama);
         try {
             Statement komut = veritabaniBaglantisi.createStatement();
             String sql = "INSERT INTO urun values (" + id + ",'" + urunAdi
-                    + "', " + fiyat + ")";
+                    + "', '"+ aciklama +"' , " + fiyat + ")";
             komut.executeUpdate(sql);
         } catch (SQLException e) {
             System.out.println("INSERT hatasi: " + e);
@@ -123,8 +160,8 @@ public class DerbyVeritabaniOrnek {
      */
     public static boolean veritabaninaBaglan() {
         try {
-            String veritabaniDizini= ".\\.veritabani\\"; 
-            // veritabaniDizini: Dizin ad� "C:\\veritabani\\" da olabilirdi.
+            String veritabaniDizini= "C:\\\\veritabani\\\\"; 
+            // veritabaniDizini: Dizin adı "C:\\veritabani\\" da olabilirdi.
             String url = "jdbc:derby:"+veritabaniDizini+";create=true";
             veritabaniBaglantisi = DriverManager.getConnection(url);
         } catch (SQLException e) {
@@ -141,8 +178,7 @@ public class DerbyVeritabaniOrnek {
     public static boolean tablolariOlustur() {
         try {
             Statement komut = veritabaniBaglantisi.createStatement();
-            String sql = "CREATE TABLE urun (id int, ad varchar(30), fiyat int)";
-            //String sql = "CREATE TABLE urun (id int, ad varchar(30), fiyat int)";
+            String sql = "CREATE TABLE urun (id int, ad varchar(30), aciklama varchar(255), fiyat int)";
             komut.executeUpdate(sql);
         } catch (SQLException e) {
             System.out.println("Tablo mevcut olabilir: " + e);
@@ -165,9 +201,11 @@ public class DerbyVeritabaniOrnek {
             while (resultSet.next()) {
                 int id = resultSet.getInt(1);
                 String ad = resultSet.getString(2);
-                int fiyat = resultSet.getInt(3);
-                Urun urun = new Urun(id, ad, fiyat);
+                String aciklama = resultSet.getString(3);
+                int fiyat = resultSet.getInt(4);
+                Urun urun = new Urun(id, ad, aciklama, fiyat);
                 urunler.add(urun);
+                System.out.println(urun);
             }
             return urunler;
             
@@ -185,8 +223,8 @@ public class DerbyVeritabaniOrnek {
             while (resultSet.next()) {
                 int id = resultSet.getInt(1);
                 String ad = resultSet.getString(2);
-                int fiyat = resultSet.getInt(3);
-                System.out.println("Urun ID " + id + ", ad: " + ad);
+                String aciklama = resultSet.getString(3);
+                int fiyat = resultSet.getInt(4);
             }
             
         } catch (SQLException e) {

@@ -65,6 +65,28 @@ public class Spark {
 		 getLenovoPC();
 
 		 homeProcess();
+		 
+		 contactPage();
+		 
+		 dropItems();
+	}
+	/**
+	 * payment.html den bu linke t�klan�rsa (/dropItems) siparisler listesini temizle ve tekrar payment.html e y�nlendiren metod
+	 * @param void
+	 */
+	private static void dropItems()
+	{
+		FreeMarkerRoute route=new FreeMarkerRoute("/dropItems"){
+
+			@Override
+			public Object handle(Request request, Response response) {
+				DerbyDatabase.paymentList.clear();
+				response.redirect("/dogankoc/payment");
+				return null;
+			}
+			
+		};	
+		get(route);
 	}
 	/**
 	* bu method kullanicinin gordugu ana sayfa y� modelleyen FreeMarker nesnesine sahiptir.
@@ -72,19 +94,29 @@ public class Spark {
 	* modeller ki bu methodun html tarafinda siparislerin adedi bulunabilsin
 	* @return ModelAndView
 	*/
+	//ana sayfaya ilk a��ld��� �ekli veren metod
 	private static void homePage()
 	{
 			
 		FreeMarkerRoute route=new FreeMarkerRoute("/dogankoc/Home"){
 			@Override
 			public Object handle(Request request, Response answer) {
+				//DerbyDatabase s�n�f�ndaki products Listesi al�n�r
 				List<Products> products =getProductList();
                 
 			    Map<String,Object> model = new HashMap<String, Object>();
+			    //ve modele eklenir
 				model.put("products", products);
+				//sipari�lerin say�s�n�n tutulaca�� listeyi tan�mla
 				List<Integer> paymentCount=new ArrayList<Integer>();
+				//DerbyDatabase de bulunan sipari�lerin tutuldu�u listenin size'� n� bu listeye ekle
 				paymentCount.add(DerbyDatabase.paymentList.size());
+				//ve bu listeyide model olarak ekle key in Liste nesnesinin ismi ile ayn� String bir de�er olmas�na dikkat et
+				//��nk� html de bu liste key ile bulunacak
+				
+				//sonra sipari� adedinin tutuldu�u listeyide model olan Map nesnesine ekle
 				model.put("paymentCount",paymentCount );
+				//Model olan Map ile html in ad�n� d�n
 				return new ModelAndView(model,"dogankoc/dogankoc.Home.html");
 			}
 			
@@ -97,23 +129,22 @@ public class Spark {
 	*bir sinif degiskeninde saklar ve   paymentList isimli siparisler listesine urun bilgilerini kaydeder
 	* @return null
 	*/
+	//Ana sayfada bir t�klama yap�l�rsa �a��r�lan metod
 	private static void homeProcess()
 	{
 			
 		FreeMarkerRoute route=new FreeMarkerRoute("/homeProcess"){
 			@Override
 			public Object handle(Request request, Response answer) {
+				//FreeMarkerRoute'a id ismi ile g�nderilen datay� al
 				id=request.queryParams("id");
 				//DerbyDatabase.takeAnOrder(DerbyDatabase.findProductsById(id));
-				
-				for(Products p: getProductList()){
-					if(p.getId().equals(id)){
-						DerbyDatabase.paymentList.add(p);
-						System.out.println("sipari� sepete eklendi");
-					}
-				}
-				
-			   answer.redirect("/dogankoc/Home");
+				//DerbyDatabase deki Urunlerin Listesindeki elemanlar�n id lerini kar��la�t�r
+				//ayn� olanlar� yine DerbyDatabase de tutulan  paymentList e ekle
+				DerbyDatabase.takeAnOrder(DerbyDatabase.findProductsById(id));
+				System.out.println("sipari� sepete eklendi");
+	
+			   answer.redirect("/dogankoc/Home");//cevap olarak Ana sayfaya geri d�n
                return null;
 			}
 			
@@ -158,6 +189,7 @@ public class Spark {
 			public Object handle(Request request, Response answer) {
 	           
 			    Map<String,Object> model = new HashMap<String, Object>();
+			    model.put("paymentList", DerbyDatabase.paymentList);
 				model.put("products", productDetail);
 				return new ModelAndView(model,"dogankoc/dogankoc.Details.html");
 			}
@@ -322,7 +354,31 @@ public class Spark {
 		
 		
 	}
-	
+	/**
+	 * kullanici contact link ini t�klarsa y�nlendirilecek olan html modellenir
+	 * @param void
+	 * @return void
+	 */
+	private static void contactPage()
+	{
+			
+		FreeMarkerRoute route=new FreeMarkerRoute("/dogankoc/contact"){
+			@Override
+			public Object handle(Request request, Response answer) {
+		
+			    Map<String,Object> model = new HashMap<String, Object>();
+				model.put("paymentList", DerbyDatabase.paymentList);
+				List<Integer> paymentCount=new ArrayList<Integer>();
+				paymentCount.add(DerbyDatabase.paymentList.size());
+				
+				model.put("paymentCount",paymentCount );
+				return new ModelAndView(model,"dogankoc/dogankoc.contact.html");
+			}
+			
+		};
+		
+		get(route);
+	}
 	/**
 	 *Yonetici panelinde yeni urun eklemeye yarayan sayfan�n post isteklerinin karsilanmasini yapan metod
 	* @return null
@@ -445,6 +501,11 @@ public class Spark {
 	 *islemlerin yapildigi metodlardir.
 	* @return ModelAndView
 	*/
+	/**
+	 * html de t�klanan bir link den y�nlendirilen abstract FreeMarkerRoute s�n�f� metodlar� implement ediliyor,
+	 * Spark s�n�f� �yesi olan products Listesi temizlenir,model olarak d�n�lecek olan Map nesnesini tan�mlan�r,
+	 * DerbyDatabase s�n�f�ndaki products Listesinin elemanlar� Id lerine g�re bu s�n�ftaki products Listesine eklenir. 
+	 */
 	private static void  getSamsung(){
 		
 		FreeMarkerRoute route=new FreeMarkerRoute("/getSamsung"){

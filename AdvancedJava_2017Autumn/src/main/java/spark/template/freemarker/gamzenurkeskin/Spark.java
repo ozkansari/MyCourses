@@ -120,7 +120,7 @@ public class Spark {
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("urunler", URUNLER);
-				return new ModelAndView(ozellikler, "urunekle.html");
+				return new ModelAndView(ozellikler, "/gamzenurkeskin/urunekle.html");
 			}
 		};
 		get(UrunEkleSayfasi);
@@ -139,7 +139,7 @@ public class Spark {
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("urunler", URUNLER);
-				return new ModelAndView(ozellikler, "sepetim.html");
+				return new ModelAndView(ozellikler, "/gamzenurkeskin/sepetim.html");
 			}
 		};
 		get(SepetSayfasi);
@@ -158,7 +158,7 @@ public class Spark {
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("urunler", URUNLER);
-				return new ModelAndView(ozellikler, "magaza.html");
+				return new ModelAndView(ozellikler, "/gamzenurkeskin/magaza.html");
 			}
 		};
 		get(MagazaSayfasi);
@@ -234,7 +234,7 @@ public class Spark {
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("urunler", URUNLER);
-				return new ModelAndView(ozellikler, "urunguncelle.html");
+				return new ModelAndView(ozellikler, "/gamzenurkeskin/urunguncelle.html");
 			}
 		};
 		get(UrunGuncellemeSayfasi);
@@ -256,7 +256,7 @@ public class Spark {
 
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("urunler", urunler);
-				return new ModelAndView(ozellikler, "urunler.html");
+				return new ModelAndView(ozellikler, "/gamzenurkeskin/urunler.html");
 			}
 		};
 		get(UrunleriGoruntule);
@@ -278,7 +278,7 @@ public class Spark {
 
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("urunler", urunler);
-				return new ModelAndView(ozellikler, "musteri.html");
+				return new ModelAndView(ozellikler, "/gamzenurkeskin/musteri.html");
 			}
 		};
 		get(MusteriUrunleriGoruntule);

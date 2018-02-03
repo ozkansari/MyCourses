@@ -22,6 +22,13 @@
 
 	<!-- Favicons -->
     <link rel="shortcut icon" href="/assets2/ico/favicon.ico">
+    
+         <script>
+         var itemCount=0;
+         <#list paymentList as p>
+          itemCount+=1;
+         </#list>
+     </script>
   </head>
 <body>
 <!-- 
@@ -37,9 +44,9 @@
 					<a href="#"><span class="icon-youtube"></span></a>
 					<a href="#"><span class="icon-tumblr"></span></a>
 				</div>
-				<a href="/dogankoc/Home.html"> <span class="icon-home"></span> Home</a> 
-				<a href="contact.html"><span class="icon-envelope"></span> Contact us</a>
-				<a class="active" href="cart.html"><span class="icon-shopping-cart"></span> 2 Item(s) - <span class="badge badge-warning"></span></a>
+				<a href="/dogankoc/Home"> <span class="icon-home"></span> Home</a> 
+				<a href="/dogankoc/contact"><span class="icon-envelope"></span> Contact us</a>
+				<a class="active" href="/dogankoc/payment"><span class="icon-shopping-cart"></span><script>document.write(itemCount)-Items</script> Items</a>
 			</div>
 		</div>
 	</div>
@@ -91,7 +98,7 @@ Body Section
     <ul class="breadcrumb">
 		<li><a href="/dogankoc/Home">Home</a> <span class="divider">/</span></li>
 		
-	<a href="products.html" class="shopBtn btn-large"><span class="icon-arrow-left"></span> Continue Shopping </a>
+	<a href="/dogankoc/Home" class="shopBtn btn-large"><span class="icon-arrow-left"></span> Continue Shopping </a>
 
 
 </div>

@@ -1,6 +1,5 @@
+Yonetim urun ekle, sil, görüntüle var
 
-Sayfa adları "/<<ad_soyadiniz>>/<<sayfa_adi>>" şeklinde eşleştirilmeli. --> HAYIR (-5)
-Sayfa adları "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" şeklinde eşleştirilmeli. --> HAYIR (-5)
 Kodlarınız "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmalı. --> HAYIR (-5)
 
 ----------------------------------

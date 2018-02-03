@@ -1,4 +1,4 @@
-package spark.template.freemarker.emineaycicek;
+package spark.template.freemarker.hasansomuncu;
 import static spark.Spark.*;
 import spark.*;
 import spark.template.freemarker.FreeMarkerRoute;
@@ -20,10 +20,8 @@ public class SparkOrnek1 {
         
         merhabaOrnek();
         
-        urunlerJson();
         
-        // http://localhost:4567/index        
-        indexSayfasi();
+        urunlerJson();
         
         // http://localhost:4567/urunler2
         urunleriGoruntule();
@@ -34,15 +32,16 @@ public class SparkOrnek1 {
         // http://localhost:4567/urunekle 'ye gelen POST isteklerine karsila
         urunEklemeIslemi();
         
-        // http://localhost:4567/urunsil 'e gelen POST isteklerine karsila
+     // http://localhost:4567/urunsil 'e gelen POST isteklerine karsila
         urunSilmeIslemi();
+   
     }
 
     /**
      * 
      */
     private static void urunSilmeIslemi() {
-        FreeMarkerRoute urunSilmeIslemi = new FreeMarkerRoute("emineaycicek/yonetim/urunsil") {
+        FreeMarkerRoute urunSilmeIslemi = new FreeMarkerRoute("/urunsil") {
             @Override
             public Object handle(Request istek, Response cevap) {
                 
@@ -50,23 +49,41 @@ public class SparkOrnek1 {
                 DerbyVeritabaniOrnek.urunSil(id);
                 
                 // Islem bitince /urunler sayfasina geri don
-                cevap.redirect("/emineaycicek/yonetim/urunler");
+                cevap.redirect("/urunler");
                 
                 return null;
             }
         };
         get(urunSilmeIslemi);
     }
+    
+    private static void sepeteEklemeIslemi() {
+        FreeMarkerRoute sepeteEklemeIslemi = new FreeMarkerRoute("/sepeteat") {
+            @Override
+            public Object handle(Request istek, Response cevap) {
+                
+                int id = Integer.valueOf( istek.queryParams("id") );
+                DerbyVeritabaniOrnek.sepeteEkle(id);
+                
+                // Islem bitince /urunler sayfasina geri don
+                cevap.redirect("/urunler");
+                
+                return null;
+            }
+        };
+        get(sepeteEklemeIslemi);
+    }
     /**
      * 
      */
     private static void urunEklemeIslemi() {
-        FreeMarkerRoute urunEkleIslemi = new FreeMarkerRoute("emineaycicek/yonetim/urunekle") {
+        FreeMarkerRoute urunEkleIslemi = new FreeMarkerRoute("/urunekle") {
             @Override
             public Object handle(Request istek, Response cevap) {
                 
                 // Kullanicinin urunekle.html'den girdigi form degerlerini al
-                String urunAdi = istek.queryParams("urunadi"); 
+            	String urunAdi = istek.queryParams("urunadi"); 
+            	String aciklama = istek.queryParams("aciklama"); 
                 // urunadi html input text'deki name
                
                 // Fiyati inte cevir
@@ -75,17 +92,17 @@ public class SparkOrnek1 {
                     fiyat = Integer.valueOf( istek.queryParams("fiyat") );
                 } catch(Exception e) {
                     e.printStackTrace();
-                    cevap.redirect("emineaycicek/yonetim/urunekle");
+                    cevap.redirect("/urunekle");
                     return null;
                 }
                 
                 // Urun olustur ve listeye ekle
-                Urun urun = new Urun(Urun.ID++,urunAdi, fiyat);
+                Urun urun = new Urun(Urun.ID++,urunAdi, aciklama, fiyat);
                 // URUNLER.add(urun);
                 DerbyVeritabaniOrnek.urunEkle(urun);
  
                 // Islem bitince /urunler sayfasina geri don
-                cevap.redirect("/emineaycicek/yonetim/urunler");
+                cevap.redirect("/urunler");
                 
                 return null;
             }
@@ -97,34 +114,22 @@ public class SparkOrnek1 {
      * 
      */
     private static void urunEklemeSayfasi() {
-        FreeMarkerRoute urunEkleSayfasi = new FreeMarkerRoute("emineaycicek/yonetim/urunekle") {
+        FreeMarkerRoute urunEkleSayfasi = new FreeMarkerRoute("/urunekle") {
             @Override
             public Object handle(Request arg0, Response arg1) {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("urunler", URUNLER);
-                return new ModelAndView(ozellikler, "/emineaycicek/urunekle.html");
+                return new ModelAndView(ozellikler, "/hasansomuncu/urunekle.html");
             }
         };
         get(urunEkleSayfasi);
-    }
-    
-    private static void indexSayfasi() {
-        FreeMarkerRoute indexSayfasi = new FreeMarkerRoute("emineaycicek/yonetim/anasayfa") {
-            @Override
-            public Object handle(Request arg0, Response arg1) {
-                Map<String, Object> ozellikler = new HashMap<String, Object>();
-                ozellikler.put("urunler", URUNLER);
-                return new ModelAndView(ozellikler, "/emineaycicek/index.html");
-            }
-        };
-        get(indexSayfasi);
     }
 
     /**
      * 
      */
     private static void urunleriGoruntule() {
-        FreeMarkerRoute sayfa3 = new FreeMarkerRoute("/emineaycicek/yonetim/urunler") {
+        FreeMarkerRoute sayfa3 = new FreeMarkerRoute("/urunler") {
             @Override
             public Object handle(Request arg0, Response arg1) {
                 
@@ -133,7 +138,7 @@ public class SparkOrnek1 {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 // ozellikler.put("urunler", URUNLER);
                 ozellikler.put("urunler", urunler);
-                return new ModelAndView(ozellikler, "/emineaycicek/urunler.html");
+                return new ModelAndView(ozellikler, "/hasansomuncu/urunler.html");
             }
         };
         get(sayfa3);
@@ -165,4 +170,7 @@ public class SparkOrnek1 {
         };
         get(sayfa1);
     }
+    
+    
+    
 }

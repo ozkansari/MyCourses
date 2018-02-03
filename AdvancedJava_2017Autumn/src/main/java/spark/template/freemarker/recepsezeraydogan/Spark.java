@@ -114,7 +114,7 @@ private static void sepeteEkle(){
             public Object handle(Request arg0, Response arg1) {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("urunler", URUNLER);
-                return new ModelAndView(ozellikler, "urunekle.html");
+                return new ModelAndView(ozellikler, "/recepsezeraydogan/urunekle.html");
             }
         };
         get(urunEkleSayfasi);
@@ -127,7 +127,7 @@ private static void sepeteEkle(){
                 List<Urun> urunler = DerbyVeritabani.kayitlariAl();
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("urunler", urunler);
-                return new ModelAndView(ozellikler, "urunler.html");
+                return new ModelAndView(ozellikler, "/recepsezeraydogan/urunler.html");
             }
         };
         get(sayfa3);

@@ -45,7 +45,7 @@ public class JavaSpark {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 // ozellikler.put("urunler", URUNLER);
                 ozellikler.put("urunler", urunler);
-                return new ModelAndView(ozellikler, "Listeleme.html");
+                return new ModelAndView(ozellikler, "/atakantalay/Listeleme.html");
             }
         };
         get(sayfa2);
@@ -56,7 +56,7 @@ public class JavaSpark {
             public Object handle(Request arg0, Response arg1) {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("urunler", URUNLER);
-                return new ModelAndView(ozellikler, "ekle.html");
+                return new ModelAndView(ozellikler, "/atakantalay/ekle.html");
             }
         };
         get(YeniUrun);

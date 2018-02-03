@@ -67,7 +67,7 @@ public class App {
 				ozellikler.put("urunler", urunler);
 				ozellikler.put("kategoriler", KATEGORI);
 				ozellikler.put("sepettekiUrunSayisi", sepettekiUrunSayisi);
-				return new ModelAndView(ozellikler, "urunler-yonetim.html");
+				return new ModelAndView(ozellikler, "/didemlaloglu/urunler-yonetim.html");
 			}
 		};
 		get(yonetimSayfasi);
@@ -92,7 +92,7 @@ public class App {
 				ozellikler.put("urunler", urunler);
 				ozellikler.put("kategoriler", KATEGORI);
 				ozellikler.put("sepettekiUrunSayisi", sepettekiUrunSayisi);
-				return new ModelAndView(ozellikler, "urun-detay-yonetim.html");
+				return new ModelAndView(ozellikler, "/didemlaloglu/urun-detay-yonetim.html");
 			}
 		};
 		get(yonetimUrunDetay);
@@ -145,7 +145,7 @@ public class App {
 				ozellikler.put("urunler", URUNLER);
 				ozellikler.put("kategoriler", KATEGORI);
 
-				return new ModelAndView(ozellikler, "urunekle.html");
+				return new ModelAndView(ozellikler, "/didemlaloglu/urunekle.html");
 			}
 		};
 		get(urunEkleSayfasi);
@@ -174,7 +174,7 @@ public class App {
 				ozellikler.put("urunler", urunler);
 				ozellikler.put("kategoriler", KATEGORI);
 				ozellikler.put("sepettekiUrunSayisi", sepettekiUrunSayisi);
-				return new ModelAndView(ozellikler, "urunler.html");
+				return new ModelAndView(ozellikler, "/didemlaloglu/urunler.html");
 			}
 		};
 		get(urunleriGoruntule);
@@ -195,7 +195,7 @@ public class App {
 				ozellikler.put("urunler", urunler);
 				ozellikler.put("kategoriler", KATEGORI);
 				ozellikler.put("sepettekiUrunSayisi", sepettekiUrunSayisi);
-				return new ModelAndView(ozellikler, "sepet.html");
+				return new ModelAndView(ozellikler, "/didemlaloglu/sepet.html");
 			}
 		};
 		get(sepettekiUrunleriGoruntule);

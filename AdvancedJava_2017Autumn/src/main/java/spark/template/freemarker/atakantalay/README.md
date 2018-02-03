@@ -1,3 +1,4 @@
+Urun ekle var ama ekliyor mu göremiyoruz. Çünkü urun listeleme yok.
 
 Sayfa adları "/<<ad_soyadiniz>>/<<sayfa_adi>>" şeklinde eşleştirilmeli. --> HAYIR (-5)
 Sayfa adları "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" şeklinde eşleştirilmeli. --> HAYIR (-5)

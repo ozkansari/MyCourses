@@ -102,7 +102,7 @@ public class SparkOrnek1 {
             public Object handle(Request arg0, Response arg1) {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("urunler", URUNLER);
-                return new ModelAndView(ozellikler, "/urunekle.html");
+                return new ModelAndView(ozellikler, "/havvagamzeakbas/urunekle.html");
             }
         };
         get(urunEkleSayfasi);
@@ -121,7 +121,7 @@ public class SparkOrnek1 {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 // ozellikler.put("urunler", URUNLER);
                 ozellikler.put("urunler", urunler);
-                return new ModelAndView(ozellikler, "urunler.html");
+                return new ModelAndView(ozellikler, "/havvagamzeakbas/urunler.html");
             }
         };
         get(sayfa3);
@@ -136,7 +136,7 @@ public class SparkOrnek1 {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 // ozellikler.put("urunler", URUNLER);
                 ozellikler.put("urunler", urunler);
-                return new ModelAndView(ozellikler, "Admin.html");
+                return new ModelAndView(ozellikler, "/havvagamzeakbas/Admin.html");
             }
         };
         get(admin);
@@ -179,7 +179,7 @@ public class SparkOrnek1 {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 // ozellikler.put("urunler", URUNLER);
                 ozellikler.put("urunler", urunler);
-                return new ModelAndView(ozellikler, "Anasayfa.html");
+                return new ModelAndView(ozellikler, "/havvagamzeakbas/Anasayfa.html");
             }
         };
         get(baslangic);

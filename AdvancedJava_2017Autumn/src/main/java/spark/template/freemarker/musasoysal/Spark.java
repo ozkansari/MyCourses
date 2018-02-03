@@ -85,7 +85,7 @@ public class Spark {
             public Object handle(Request arg0, Response arg1) {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("urunler", URUNLER);
-                return new ModelAndView(ozellikler, "YonetimPaneliGiris.html");
+                return new ModelAndView(ozellikler, "/musasoysal/YonetimPaneliGiris.html");
             }
         };
         get(yonetimGiris);
@@ -96,7 +96,7 @@ public class Spark {
             public Object handle(Request arg0, Response arg1) {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("urunler", URUNLER);
-                return new ModelAndView(ozellikler, "yonetimpaneli.html");
+                return new ModelAndView(ozellikler, "/musasoysal/yonetimpaneli.html");
             }
         };
         get(yonetimPaneli);
@@ -109,7 +109,7 @@ public class Spark {
             public Object handle(Request arg0, Response arg1) {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("urunler", URUNLER);
-                return new ModelAndView(ozellikler, "urunekle.html");
+                return new ModelAndView(ozellikler, "/musasoysal/urunekle.html");
             }
         };
         get(urunEkleSayfasi);
@@ -126,7 +126,7 @@ public class Spark {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 // ozellikler.put("urunler", URUNLER);
                 ozellikler.put("urunler", urunler);
-                return new ModelAndView(ozellikler, "urunler.html");
+                return new ModelAndView(ozellikler, "/musasoysal/urunler.html");
             }
         };
         get(sayfa3);

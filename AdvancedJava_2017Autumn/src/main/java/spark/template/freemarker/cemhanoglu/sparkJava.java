@@ -27,7 +27,7 @@ public class sparkJava {
         urunSilmeIslemi();
     }
 private static void sepet(){
-    FreeMarkerRoute sepeteEkle = new FreeMarkerRoute("/Sepet") {
+    FreeMarkerRoute sepeteEkle = new FreeMarkerRoute("/cemhanoglu/Sepet") {
         @Override
         public Object handle(Request istek, Response cevap) {
             String aliciadi =istek.queryParams("aliciadi");
@@ -48,7 +48,7 @@ private static void sepet(){
     get(sepeteEkle);
 }
     private static void urunSilmeIslemi() {
-        FreeMarkerRoute urunSilmeIslemi = new FreeMarkerRoute("/urunsil") {
+        FreeMarkerRoute urunSilmeIslemi = new FreeMarkerRoute("/cemhanoglu/urunsil") {
             @Override
             public Object handle(Request istek, Response cevap) {
                 
@@ -63,7 +63,7 @@ private static void sepet(){
         get(urunSilmeIslemi);
     }
     private static void urunEklemeIslemi() {
-        FreeMarkerRoute urunEkleIslemi = new FreeMarkerRoute("/eklenenUrun") {
+        FreeMarkerRoute urunEkleIslemi = new FreeMarkerRoute("/cemhanoglu/eklenenUrun") {
             @Override
             public Object handle(Request istek, Response cevap) {
                 String marka = istek.queryParams("marka");
@@ -89,12 +89,12 @@ private static void sepet(){
         post(urunEkleIslemi);
     }
     private static void urunEklemeSayfasi() {
-        FreeMarkerRoute urunEkleSayfasi = new FreeMarkerRoute("/eklenenUrun") {
+        FreeMarkerRoute urunEkleSayfasi = new FreeMarkerRoute("/cemhanoglu/eklenenler") {
             @Override
             public Object handle(Request arg0, Response arg1) {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("urunler", URUNLER);
-                return new ModelAndView(ozellikler, "eklenenUrun.html");
+                return new ModelAndView(ozellikler, "/cemhanoglu/eklenenUrun.html");
             }
         };
         get(urunEkleSayfasi);
@@ -110,14 +110,14 @@ private static void sepet(){
         get(sayfa2);
     }
     private static void urunleriGoruntule() {
-        FreeMarkerRoute sayfa3 = new FreeMarkerRoute("/urunler") {
+        FreeMarkerRoute sayfa3 = new FreeMarkerRoute("/cemhanoglu/urunler") {
             @Override
             public Object handle(Request arg0, Response arg1) {
                 List<Urun> urunler = Veritabani.kayitlariAl();
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 // ozellikler.put("urunler", URUNLER);
                 ozellikler.put("urunler", urunler);
-                return new ModelAndView(ozellikler, "urunler.html");
+                return new ModelAndView(ozellikler, "/cemhanoglu/urunler.html");
             }
         };
         get(sayfa3);
