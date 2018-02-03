@@ -24,6 +24,7 @@ Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacakt�
 - https://github.com/ibrahimdemir1/ibrahimdemirprojesi
 - https://github.com/ebubekirtr/ebubekir-final
 - https://github.com/yasarfaruk/YFYFinal
+- https://github.com/iskenderuzuner/SpringBootOdev
 
 ### Proje
 
