@@ -1,5 +1,5 @@
 Yönetim sayfaları Urun ekle, sil, listele var guncelle yok.
-Magazada sepete kleyemiyor. Sepet goruntule ekranı var.
+Magazada sepete ekleyemiyor. Sepet goruntule ekranı var.
 
 Kodlarınız "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmalı. --> HAYIR (-5)
 

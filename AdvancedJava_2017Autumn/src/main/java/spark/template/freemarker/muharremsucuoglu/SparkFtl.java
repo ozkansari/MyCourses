@@ -40,7 +40,7 @@ public class SparkFtl {
             public Object handle(Request req, Response resp) {
                 Map<String, Object> attributes = new HashMap<>();
                 attributes.put("urunListesi", urunListesi);
-                return new ModelAndView(attributes, "Urunler.html"); // resources'daki html veya ftl
+                return new ModelAndView(attributes, "/muharremsucuoglu/Urunler.html"); // resources'daki html veya ftl
             }
         };
         get(getUrunList);
@@ -49,7 +49,7 @@ public class SparkFtl {
             public Object handle(Request req, Response resp) {
                 Map<String, Object> attributes = new HashMap<>();
                 attributes.put("urunListesi", urunListesi);
-                return new ModelAndView(attributes, "UrunEkle.html"); // resources'daki html veya ftl
+                return new ModelAndView(attributes, "/muharremsucuoglu/UrunEkle.html"); // resources'daki html veya ftl
             }
         };
         get(getAddUrun);
@@ -58,7 +58,7 @@ public class SparkFtl {
             public Object handle(Request req, Response resp) {
                 Map<String, Object> attributes = new HashMap<>();
                 attributes.put("urunListesi", urunListesi);
-                return new ModelAndView(attributes, "UrunDetay.html"); // resources'daki html veya ftl
+                return new ModelAndView(attributes, "/muharremsucuoglu/UrunDetay.html"); // resources'daki html veya ftl
             }
         };
         get(getUrunDetail);
@@ -69,7 +69,7 @@ public class SparkFtl {
             public Object handle(Request req, Response resp) {
                 Map<String, Object> attributes = new HashMap<>();
                 attributes.put("urunListesi", urunListesi);
-                return new ModelAndView(attributes, "Anasayfa.html"); // resources'daki html veya ftl
+                return new ModelAndView(attributes, "/muharremsucuoglu/Anasayfa.html"); // resources'daki html veya ftl
             }
         };
         get(getKullaniciUrunList);
@@ -124,7 +124,7 @@ public class SparkFtl {
                 Urun urunDetayi = urunListesi.get(urunIndeksi);
                 Map<String, Object> attributes = new HashMap<>();
                 attributes.put("urunDetay", urunDetayi);
-                return new ModelAndView(attributes, "UrunDetay.html");
+                return new ModelAndView(attributes, "/muharremsucuoglu/UrunDetay.html");
             }
         };
         post(postSelectedUrunDetail);
