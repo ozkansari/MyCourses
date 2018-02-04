@@ -11,6 +11,8 @@ Teslim Tarihi: ~~29 Ocak~~ ~~1 Şubat 23:59~~ 2 Şubat 18:00
 
 Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacaktır.
 
+Final Sonuçları Açıklanmıştır. Final notlarına ekstra 25 puan eklenmiştir.
+
 ### Kullanıcı Sayfaları
 
 Sayfa adları "/<<ad_soyadiniz>>/<<sayfa_adi>>" şeklinde eşleştirilmeli.
