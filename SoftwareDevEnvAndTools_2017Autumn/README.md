@@ -2,7 +2,7 @@
 2017 GÜZ - BPR216053
 
 Dersler Cumartesi 12:00-13:00 ve 13:15-14:30 arasında iki oturum halinde yapılacaktır.
-Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
+Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
 ## BUTUNLEME SINAVI
 
