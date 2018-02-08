@@ -5,6 +5,10 @@
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
 Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
+## BUTUNLEME
+
+Butunleme yazılı sınav olacaktır. Temel java sorularının yanı sıra final projesi ile ilgili sorular olacaktır.
+
 ## FİNAL PROJE - Alışveriş Sitesi
 
 Teslim Tarihi: ~~29 Ocak~~ ~~1 Şubat 23:59~~ 2 Şubat 18:00
