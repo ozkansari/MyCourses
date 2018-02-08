@@ -4,7 +4,11 @@
 Dersler Cumartesi 12:00-13:00 ve 13:15-14:30 arasında iki oturum halinde yapılacaktır.
 Derse %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
-## FİNAL SINAVI
+## BUTUNLEME SINAVI
+
+Butunleme yazılı sınav olacaktır. Vize sınavı benzeri temel konular hakkında sorular bulunacaktır.
+
+## FİNAL PROJESİ
 
 Proje olacak. Proje derste açıklanmıştır. Arkadaşlarınıza sorunuz. :)
 
