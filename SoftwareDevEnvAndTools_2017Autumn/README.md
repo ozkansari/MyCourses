@@ -1,4 +1,4 @@
-# YAZILIM ORTAM ve ARACLARI
+# YAZILIM GELİŞTİRME ORTAM ve ARACLARI
 2017 GÜZ - BPR216053
 
 Dersler Cumartesi 12:00-13:00 ve 13:15-14:30 arasında iki oturum halinde yapılacaktır.
