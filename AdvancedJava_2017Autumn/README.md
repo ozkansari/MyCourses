@@ -9,6 +9,10 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan 
 
 Butunleme yazılı sınav olacaktır. Temel java sorularının yanı sıra final projesi ile ilgili sorular olacaktır.
 
+    Meslek Yüksekokulu - Bilgisayar Programcılığı Programı / 2. Sınıf - İLERİ JAVA UYGULAMALARI, 
+    Bütünleme	MYO LAB (GİRİŞ)	
+    13.2.2018	18:00
+
 ## FİNAL PROJE - Alışveriş Sitesi
 
 Teslim Tarihi: ~~29 Ocak~~ ~~1 Şubat 23:59~~ 2 Şubat 18:00
