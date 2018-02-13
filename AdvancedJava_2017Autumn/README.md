@@ -117,7 +117,7 @@ Uygulama cikista sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kald
 - [3d_Karar_Ifadeleri](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/3d_Karar_Ifadeleri.pdf)
 - [3e_Faydalı_Metotlar](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/3e_Faydalı_Metotlar.pdf)
 - [3f_Karakter_String_Islemleri](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/3f_Karakter_String_Islemleri.pdf)
-- [3g_Diziler](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/3g_Diziler.pdf)
+- [3g_Diziler](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/4a_Diziler.pdf)
 - [3h_Zaman](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/3h_Zaman.pdf)
 - [3i_Duzenli_Ifadeler](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava_2017Autumn/_docs/3i_Duzenli_Ifadeler.pdf)
 - [lab hafta3](https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava_2017Autumn/src/main/java/tr/edu/medipol/hafta3)
