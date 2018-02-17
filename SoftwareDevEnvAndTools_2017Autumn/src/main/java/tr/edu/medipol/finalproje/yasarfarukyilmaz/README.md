@@ -1,8 +1,0 @@
-Travis çalıştıramadı. (-2)
-codecov.io çalıştırmadı. (-2)
-Rapor powerpoint. (-1)
-Maven site eksik. (-5)
-Unit Test eksik (-5)
-Javadoc eksik (-5)
-Jmeter tam olmamış. (-3)
-Jenkins (-2) ve sonarqube çalıştırılamadı. (-2)

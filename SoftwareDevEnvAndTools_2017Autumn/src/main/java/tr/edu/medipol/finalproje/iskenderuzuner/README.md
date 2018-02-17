@@ -1,8 +1,0 @@
-Unit Test yok (-5)
-Code coverage eksk (-5)
-Travis çalışmadı (-2)
-Code cov io yok (-3)
-Maven site yok (-5)
-Maven build olmadı (-4)
-Postman eksik (-5)
-JMeter eksik (-5)
