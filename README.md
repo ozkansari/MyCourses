@@ -3,8 +3,8 @@
 
 ## Courses
 
-* [Advanced Java](AdvancedJava/index.html)
-* [SoftwareDevEnvAndTools](SoftwareDevEnvAndTools/index.html)
+* [Advanced Java](AdvancedJava/)
+* [SoftwareDevEnvAndTools](SoftwareDevEnvAndTools/)
 
 
 
