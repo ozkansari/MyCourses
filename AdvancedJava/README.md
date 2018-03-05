@@ -9,9 +9,9 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan 
 
 ### ODEV-1
 
-1-) Hayvan sınıfı ve bundan türeyen Kedi, Kopek, Zurafa vb. sınıflar olusturulacak. 
-2-) Programin calisacagi main metodu iceren HayvanatBahcesi isimli bir sinif yapilacak.
-3-) HayvanatBahcesi sinifi icine sesCikar isimli bir metod yapilacak. Bu metod sesSeviyesi ve Hayvan siniflarini parametre alacak. Bu metod icerisinde parametre alinan hayvan nesnesinin tipine gore (Kedi,Kopek,Zurafa vb.) uygun ses ekrana yazilacak.
+* 1-) Hayvan sınıfı ve bundan türeyen Kedi, Kopek, Zurafa vb. sınıflar olusturulacak. 
+* 2-) Programin calisacagi main metodu iceren HayvanatBahcesi isimli bir sinif yapilacak.
+* 3-) HayvanatBahcesi sinifi icine sesCikar isimli bir metod yapilacak. Bu metod sesSeviyesi ve Hayvan siniflarini parametre alacak. Bu metod icerisinde parametre alinan hayvan nesnesinin tipine gore (Kedi,Kopek,Zurafa vb.) uygun ses ekrana yazilacak.
 
     private static int sesCikar(int sesSeviyesi, Hayvan hayvan)
 
