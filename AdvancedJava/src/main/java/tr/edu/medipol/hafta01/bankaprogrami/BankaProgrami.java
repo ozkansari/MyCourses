@@ -1,8 +1,9 @@
 package tr.edu.medipol.hafta01.bankaprogrami;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import bankaprogrami.model.Musteri;
+import tr.edu.medipol.hafta01.bankaprogrami.model.Musteri;
 
 public class BankaProgrami {
 
