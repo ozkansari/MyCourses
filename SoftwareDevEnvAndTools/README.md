@@ -8,14 +8,14 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan 
 ## DERS ICERIKLERI
 
 ### Hafta 1
-- [Sunum](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/1_Ders_Sunum.pdf)
-- [Eclipse IDE](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/1_Eclipse-Kullanimi.pdf)
+- [Sunum](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/1_Ders_Sunum.pdf)
+- [Eclipse IDE](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/1_Eclipse-Kullanimi.pdf)
 
 ### Hafta 2 
-- [Sunum](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/2_Ders_Sunum.pdf)
+- [Sunum](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/2_Ders_Sunum.pdf)
 
 ### Hafta 3 : UML
-- [Sunum](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools_2017Autumn/_docs/3_Ders_Sunum.pdf)
+- [Sunum](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/3_Ders_Sunum.pdf)
 
 ...
 
