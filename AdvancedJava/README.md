@@ -17,6 +17,8 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan 
 
 *İpucu:* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/src/main/java/tr/edu/medipol/hafta02/IleriMatematik.java sınıfındaki islemYap() metodundan fikir alabilirsiniz.
 
+Odevleri *ozkan.sari@outlook.com* adresine (projenin tümünü değil) sadece kaynak dosyaları zipleyip gönderiniz.
+
 ## DERS ICERIKLERI
 
 ### Hafta 1-2-3 : Java Konu Tekrarları
