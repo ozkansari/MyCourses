@@ -17,6 +17,9 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan 
 ### Hafta 3 : UML
 - [Sunum](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/3_Ders_Sunum.pdf)
 
+### Hafta 4-5 : Maven, JUnit, Git
+- [Sunum](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/4_Ders_Sunum.pdf)
+
 ...
 
 ## Notlar
