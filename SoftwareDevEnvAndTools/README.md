@@ -4,6 +4,15 @@
 Dersler Cumartesi 12:00-13:00 ve 13:15-14:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
+## ODEVLER
+
+### Odev 1
+
+En az 10 Matematiksel işlem için 10 ayrı metod içeren Hesaplama sınıfı yazılacak. 
+Bu 10 Matematikel işlemin her biri için de 10 ayrı JUnit test metodu yazılacak.
+Uygulama Maven projesi şeklinde geliştirilecek ve Maven test ve install komutların çalışması kontrol edilecek.
+Teslim tarihi:23 Mart 23:59'a kadar
+Odevleri ozkan.sari@outlook.com adresine  gönderiniz.
 
 ## DERS ICERIKLERI
 
