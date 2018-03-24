@@ -29,23 +29,37 @@ public class DosyaOkumaYazma3 {
 		return ogrenciListesi;
 	}
 	
-	private static List<String> dosyaOkumaOrnegi() throws FileNotFoundException {
+	private static List<String> dosyaOkumaOrnegi() {
 		List<String> ogrenciListesi = new ArrayList<>();
 		
-		File ogrencilerDosya = new File(".\\config\\Ogrenciler_Program.txt"); // Mac: "./config/Ogrenciler_Program.txt"
+		File ogrencilerDosya = new File(".\\config\\Ogrenciler_Program22222222.txt"); // Mac: "./config/Ogrenciler_Program.txt"
+		/*
 		if (ogrencilerDosya.exists() == false) {
 			System.out.println("Dosya mevcut degil");
 			return ogrenciListesi;
 		}
-		Scanner dosyaOkuyucu = new Scanner(ogrencilerDosya);
-		// while(dosyaOkuyucu.hasNext()) {
-		for(int satirSayisi=1;dosyaOkuyucu.hasNext();satirSayisi++) {
-			System.out.println(satirSayisi + " inci satir okunuyor.");
-			String satir = dosyaOkuyucu.nextLine();
-			ogrenciListesi.add(satir);	
-		}
-		dosyaOkuyucu.close();
+		*/
+		Scanner dosyaOkuyucu = null;
+		try {
+			dosyaOkuyucu = new Scanner(ogrencilerDosya);
+			
+			// while(dosyaOkuyucu.hasNext()) {
+			for(int satirSayisi=1;dosyaOkuyucu.hasNext();satirSayisi++) {
+				System.out.println(satirSayisi + " inci satir okunuyor.");
+				String satir = dosyaOkuyucu.nextLine();
+				ogrenciListesi.add(satir);	
+			}
 		
+		} catch (FileNotFoundException | NullPointerException e) {
+			System.out.println("Dosya bulunamadı" + e.getMessage());
+			e.printStackTrace();
+		} catch(Exception e) {
+			System.out.println("Bilinmeyen bir hata " + e.getMessage());
+		} finally {
+			if (dosyaOkuyucu != null) {
+				dosyaOkuyucu.close();
+			}
+		}
 		return ogrenciListesi;
 	}
 	
