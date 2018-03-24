@@ -19,6 +19,15 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan 
 
 Odevleri *ozkan.sari@outlook.com* adresine (projenin tümünü değil) sadece kaynak dosyaları zipleyip gönderiniz.
 
+### ODEV -2 
+
+List<String> kullanımı ile hafta 5'te yapılan [örneği](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/src/main/java/tr/edu/medipol/hafta05/DosyaOkumaYazma3.java), List<OgrenciBilgi> seklinde String yerine tanımlayacağınız OgrenciBilgi sinifi kullanarak yapınızç
+
+Bunun icin,
+* OgrenciBilgi isimli bir class osuturun ve icine ogrenciAdSoyad isimli bir String nesne degişkeni ekleyin. Değişkenin private olmasına dikkat edin.
+* Daha sonra OgrenciBilgi sınıfını programınızda Dosya okurken, kullanıcıdan girdi alırken ve dosyaya yazarken kullanın.
+* Programdaki tüm List<String> kullanımları List<OgrenciBilgi>  şeklinde değişmiş olmalı.
+    
 ## DERS ICERIKLERI
 
 ### Hafta 1-2-3 : Java Konu Tekrarları
