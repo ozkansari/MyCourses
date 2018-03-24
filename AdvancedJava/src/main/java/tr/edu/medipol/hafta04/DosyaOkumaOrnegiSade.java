@@ -6,17 +6,10 @@ public class DosyaOkumaOrnegiSade {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		List<String> ogrenciListesi = dosyaOkumaOrnegi();
-		Collections.sort(ogrenciListesi);
-		for (String o : ogrenciListesi) {
-			System.out.println(o);
-		}
 		
-		File ciktiDosyasi = new File(".\\config\\CiktiDosyasi.txt");
-		PrintWriter dosyaYazici = new PrintWriter(ciktiDosyasi);
-		for (String o : ogrenciListesi) {
-			dosyaYazici.println(">> " + o);
-		}
-		dosyaYazici.close();
+		consoleYazdirmaOrnegi(ogrenciListesi);
+		
+		dosyaYazmaOrnegi(ogrenciListesi);
 
 	}
 
@@ -34,4 +27,21 @@ public class DosyaOkumaOrnegiSade {
 		
 		return ogrenciListesi;
 	}
+	
+	private static void dosyaYazmaOrnegi(List<String> ogrenciListesi) throws FileNotFoundException {
+		File ciktiDosyasi = new File(".\\config\\CiktiDosyasi.txt");
+		PrintWriter dosyaYazici = new PrintWriter(ciktiDosyasi);
+		for (String o : ogrenciListesi) {
+			dosyaYazici.println(">> " + o);
+		}
+		dosyaYazici.close();
+	}
+
+	private static void consoleYazdirmaOrnegi(List<String> ogrenciListesi) {
+		Collections.sort(ogrenciListesi);
+		for (String o : ogrenciListesi) {
+			System.out.println(o);
+		}
+	}
+
 }
