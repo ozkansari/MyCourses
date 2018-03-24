@@ -1,10 +1,16 @@
-package tr.edu.medipol.hafta04;
+package tr.edu.medipol.hafta05;
 import java.io.*;
 import java.util.*;
 
-public class DosyaOkumaOrnegiSade {
+public class DosyaOkumaYazma3 {
 	public static void main(String[] args) throws FileNotFoundException {
 		List<String> ogrenciListesi = dosyaOkumaOrnegi();
+		
+		// Kullanicidan ogrenci ismi al
+		// Scanner ile consoldan deger okuyucağız
+		// Listeye ekle
+		ogrenciListesi.add("Deneme");
+		
 		consoleYazdirmaOrnegi(ogrenciListesi);
 		dosyaYazmaOrnegi(ogrenciListesi);
 	}
@@ -12,7 +18,11 @@ public class DosyaOkumaOrnegiSade {
 	private static List<String> dosyaOkumaOrnegi() throws FileNotFoundException {
 		List<String> ogrenciListesi = new ArrayList<>();
 		
-		File ogrencilerDosya = new File(".\\config\\Ogrenciler.txt"); // Mac: "./config/Ogrenciler.txt"
+		File ogrencilerDosya = new File(".\\config\\Ogrenciler_Program.txt"); // Mac: "./config/Ogrenciler_Program.txt"
+		if (ogrencilerDosya.exists() == false) {
+			System.out.println("Dosya mevcut degil");
+			return ogrenciListesi;
+		}
 		Scanner dosyaOkuyucu = new Scanner(ogrencilerDosya);
 		// while(dosyaOkuyucu.hasNext()) {
 		for(int satirSayisi=1;dosyaOkuyucu.hasNext();satirSayisi++) {
@@ -26,10 +36,10 @@ public class DosyaOkumaOrnegiSade {
 	}
 	
 	private static void dosyaYazmaOrnegi(List<String> ogrenciListesi) throws FileNotFoundException {
-		File ciktiDosyasi = new File(".\\config\\CiktiDosyasi.txt");
+		File ciktiDosyasi = new File(".\\config\\Ogrenciler_Program.txt");
 		PrintWriter dosyaYazici = new PrintWriter(ciktiDosyasi);
 		for (String o : ogrenciListesi) {
-			dosyaYazici.println(">> " + o);
+			dosyaYazici.println(o);
 		}
 		dosyaYazici.close();
 	}
