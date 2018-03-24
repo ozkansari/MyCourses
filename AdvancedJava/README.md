@@ -21,7 +21,7 @@ Odevleri *ozkan.sari@outlook.com* adresine (projenin tümünü değil) sadece ka
 
 ### ODEV -2 
 
-List<String> kullanımı ile hafta 5'te yapılan [örneği](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/src/main/java/tr/edu/medipol/hafta05/DosyaOkumaYazma3.java) , List<OgrenciBilgi> seklinde String yerine tanımlayacağınız OgrenciBilgi sinifi kullanarak yapınızç
+List<String> kullanımı ile hafta 5'te yapılan [örneği](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/src/main/java/tr/edu/medipol/hafta05/DosyaOkumaYazma3.java) , List<OgrenciBilgi> seklinde String yerine tanımlayacağınız OgrenciBilgi sinifi kullanarak yapınız.
 
 Bunun icin,
 * OgrenciBilgi isimli bir class osuturun ve icine ogrenciAdSoyad isimli bir String nesne degişkeni ekleyin. Değişkenin private olmasına dikkat edin.
