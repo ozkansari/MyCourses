@@ -45,5 +45,5 @@ Bunun icin,
 
 ## Notlar
 
-...
+![Notlar](https://raw.githubusercontent.com/ozkansari/MyCourses/master/AdvancedJava/_docs/Notlar.png)
 
