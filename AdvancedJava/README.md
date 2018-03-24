@@ -1,5 +1,7 @@
 # ILERI JAVA UYGULAMALARI
 
+*Odev 1 için 31 Mart ders saatine kadar geç gönderim kabul edielcektir. Geç gönderenlerden 25 puan eksiltilecektir.*
+
 2018 BAHAR
 
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
