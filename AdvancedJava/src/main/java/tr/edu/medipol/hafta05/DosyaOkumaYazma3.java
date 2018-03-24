@@ -5,14 +5,28 @@ import java.util.*;
 public class DosyaOkumaYazma3 {
 	public static void main(String[] args) throws FileNotFoundException {
 		List<String> ogrenciListesi = dosyaOkumaOrnegi();
-		
-		// Kullanicidan ogrenci ismi al
-		// Scanner ile consoldan deger okuyucağız
-		// Listeye ekle
-		ogrenciListesi.add("Deneme");
-		
 		consoleYazdirmaOrnegi(ogrenciListesi);
+		
+		ogrenciListesi = kullanicidanGirdiAl(ogrenciListesi);
+		consoleYazdirmaOrnegi(ogrenciListesi);
+		
 		dosyaYazmaOrnegi(ogrenciListesi);
+	}
+
+	private static List<String> kullanicidanGirdiAl(List<String> ogrenciListesi) {
+		String kullaniciGirdi = "";
+		Scanner consoleScanner = new Scanner(System.in);
+		do {
+			System.out.print("Eklenecek ogrenciyi gir: ");
+			kullaniciGirdi = consoleScanner.nextLine();
+			if (kullaniciGirdi == null || kullaniciGirdi.trim().isEmpty() || kullaniciGirdi.equals("*") ) { 
+				break;
+			} else {
+				ogrenciListesi.add(kullaniciGirdi); // null ya da bos degilse
+			}
+		} while(true); 
+		consoleScanner.close();
+		return ogrenciListesi;
 	}
 	
 	private static List<String> dosyaOkumaOrnegi() throws FileNotFoundException {
@@ -49,8 +63,10 @@ public class DosyaOkumaYazma3 {
 		// for (String o : ogrenciListesi) {
 		// 	System.out.println(o);
 		// }
+		System.out.println("Mevcut Ogrenciler --------------------");
 		for (int i = 0; i < ogrenciListesi.size(); i++) {
 			System.out.println(ogrenciListesi.get(i));
 		}
+		System.out.println("-------------------------------------");
 	}
 }
