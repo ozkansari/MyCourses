@@ -2,7 +2,7 @@ package tr.edu.medipol.hafta04;
 import java.io.*;
 import java.util.*;
 
-public class DosyaOkumaOrnegiSade2 {
+public class DosyaOkumaYazma2 {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		List<OgrenciVeri> ogrenciListesi = dosyaOkumaOrnegi();
