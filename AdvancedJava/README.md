@@ -32,18 +32,22 @@ Bunun icin,
     
 ## DERS ICERIKLERI
 
+* [SUNUMLAR](https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava/_docs)
+
 ### Hafta 1-2-3 : Java Konu Tekrarları
 
-* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/1a_JavaProgramlamayaGiris.pdf
-* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/2a_Basit_veri_turleri.pdf
-* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/2b_Degisken_tipleri.pdf
-* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/2c_NesnelerVeSiniflaraGiris.pdf
-* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3a_Denetleyiciler.pdf
-* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3b_Operatorler.pdf
-* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3c_Donguler.pdf
-* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3d_Karar_Ifadeleri.pdf
-* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3e_Faydal%C4%B1_Metotlar.pdf
-* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3f_Karakter_String_Islemleri.pdf
+* [1a_JavaProgramlamayaGiris](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/1a_JavaProgramlamayaGiris.pdf)
+* [2a_Basit_veri_turleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/2a_Basit_veri_turleri.pdf)
+* [2b_Degisken_tipleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/2b_Degisken_tipleri.pdf)
+* [2c_NesnelerVeSiniflaraGiris](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/2c_NesnelerVeSiniflaraGiris.pdf)
+* [3a_Denetleyiciler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3a_Denetleyiciler.pdf)
+* [3b_Operatorler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3b_Operatorler.pdf)
+* [3c_Donguler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3c_Donguler.pdf)
+* [3d_Karar_Ifadeleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3d_Karar_Ifadeleri.pdf)
+* [3e_Faydalı_Metotlar](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3e_Faydal%C4%B1_Metotlar.pdf)
+* [3f_Karakter_String_Islemleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3f_Karakter_String_Islemleri.pdf)
+
+
 
 ## Notlar
 
