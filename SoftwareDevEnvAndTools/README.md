@@ -44,6 +44,10 @@ Java komutu ile konsoldan çalıştırılabilir. Buradaki java komutunun jdk alt
 
     java -jar jenkins.war --httpPort=49001
 
+Jenkins home dizinini değiştirmek için çalıştırmadan önce başka bir dizin belirtebilirsiniz. Örneğin:
+
+    SET JENKINS_HOME=C:/jenkins
+
 :exclamation: [JENKINS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/jenkins/README.md)
 
 #### Jenkins Arayüzü
