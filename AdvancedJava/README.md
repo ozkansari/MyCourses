@@ -1,7 +1,5 @@
 # ILERI JAVA UYGULAMALARI
 
-*Odev 1 için 31 Mart ders saatine kadar geç gönderim kabul edielcektir. Geç gönderenlerden 25 puan eksiltilecektir.*
-
 2018 BAHAR
 
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
@@ -29,7 +27,31 @@ Bunun icin,
 * OgrenciBilgi isimli bir class osuturun ve icine ogrenciAdSoyad isimli bir String nesne degişkeni ekleyin. Değişkenin private olmasına dikkat edin.
 * Daha sonra OgrenciBilgi sınıfını programınızda Dosya okurken, kullanıcıdan girdi alırken ve dosyaya yazarken kullanın.
 * Programdaki tüm List<String> kullanımları List<OgrenciBilgi>  şeklinde değişmiş olmalı.
-    
+
+## VİZE PROJE
+
+### Teslim Tarihi: Vize Zamanı Labda Sunum 
+
+Vize Saatinde Projelerinizi Derste Sunacaksınız. 
+Sunum yapmayanlardan -40 puan eksiltilerek not verilecektir.
+Aynı ve benzer proje teslimlerini kopya olarak değerlendirilecektir
+
+### Aciklama: 
+
+Java Swing GUI uygulamasi olarak çalışan bir "Kütüphane Yönetim" uygulaması geliştirmelisiniz. 
+
+Uygulamada menu halinde aşağıdaki seçenekler bulunacaktır: 
+* Yayın evi ekle : Yayın evi adı ve e-posta adresi girdi olarak alınacaktır. Eklenen yayınevleri kitap eklemede seçenek olarak sunulacaktır. E-posta adresi eklemede düzenli ifade (regular expression) kontrolü yapılmalıdır. Hatalı formatta e-posta girişine izin verilmemelidir. Aynı şekilde boş girişe de izin verilmemelidir.
+* Kitap Ekle : Sistemde eklenmiş yayın evi yoksa kitap eklemeye izin verilmemelidir. Kitap eklerken kitap adı, yazarı, türü, yayın evi, sayfa sayısı vb. sorular sorulacaktır. Yayın evi için sisteme eklenenler arasından seçim yaptırılmalıdır. Sayfa sayısı alanına sayı dışında bir değer girilmesine izin verilmemelidir. Aynı şekilde boş girişe de izin verilmemelidir.
+* Kitapları Listele : Kitaplar bilgileriyle birlikte listelenebilecektir. Listelenen kitapların yanında silme seçeneği de bulunacaktır.
+* Çıkış: Uygulamadan çıkış
+
+Uygulama çıkışta sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kaldigi yerden devam edebilmesi icin dosyadan kayitlari okuyacaktir. 
+
+Önemli noktalar:
+* Uygulamanızda Kitap ve Yayinevi isimli sınıflar tanımlanmalı ve bunlar sistemde ArrayList olarak tutulmalı.
+* Kullanıcı girişlerinde boş girişlere ya da sayfa sayısı gibi sayı beklenen yerlere harf girişine izin verilmemelidir.
+
 ## DERS ICERIKLERI
 
 * [SUNUMLAR](https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava/_docs)
