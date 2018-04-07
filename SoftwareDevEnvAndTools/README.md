@@ -1,6 +1,11 @@
 # YAZILIM GELİŞTİRME ORTAM ve ARACLARI
 2018 BAHAR
 
+# Vize sinavi 11 Nisan Carsamba Saat 18:00'de yazili sinav olarak yapilacaktir.
+
+    Meslek Yüksekokulu - Bilgisayar Programciligi ( I.Ö.) Programi / 2. Sinif - YAZILIM GELISTIRME ORTAM VE ARAÇLARI, 1. Ara Sinav	MYO LAB. GIRIS	11.4.2018	18:00
+    Meslek Yüksekokulu - Bilgisayar Programciligi Programi / 2. Sinif - YAZILIM GELISTIRME ORTAM VE ARAÇLARI, 1. Ara Sinav	MYO LAB. GIRIS	11.4.2018	18:00
+
 Dersler Cumartesi 12:00-13:00 ve 13:15-14:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
@@ -66,6 +71,14 @@ Bu aşamada "Jenkinse Hoşgeldiniz" yazısını ekranda görmeniz lazım.
 Jenkinsi Yönet ekranından JDK, Git ve Maven ayarlarını yaptıktan sonra başlamak için "Yeni İş" oluşturuyoruz.
 
 ...
+
+### Hafta 7: SonarQube
+
+https://www.sonarqube.org/downloads/ adresinden sonar uygulamasını zip olarak indirin ve zip dosyasını açın. 
+
+Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi çalıştırabilirsiniz.
+
+:exclamation: [SONARQUBE KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/sonarqube/README.md)
 
 ## Notlar
 
