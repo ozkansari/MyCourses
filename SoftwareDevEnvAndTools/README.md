@@ -29,14 +29,14 @@ Odevleri ozkan.sari@outlook.com adresine  gönderiniz.
 ### Hafta 4-5 : Maven, JUnit, Git
 - [Sunum](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/4_Ders_Sunum.pdf)
 
-### Hafta 6: Jenkins
+### Hafta 6 & 7: Jenkins
 
 #### Jenkins Kurulum
 https://jenkins.io/download/ adresinden indirilebilir.
 1. Seçenek: Windows Kurulum : https://jenkins.io/download/thank-you-downloading-windows-installer-stable
 2. Seçenek: Generic WAR http://mirrors.jenkins.io/war-stable/latest/jenkins.war
 
-Java komutu ile konsoldan çalıştırılabilir. Buradaki java komutunun jdk altındaki java komutu olması iyi olur. Bunun için java komurunu tam yol olarak tırnak içinde de yazabilirsiniz. Örneğin, "Cİ\Program Files\Java\jdk8\bin\java" - jar jenkins.war gibi.
+Java komutu ile war dosyası konsoldan çalıştırılabilir. Buradaki java komutunun jdk altındaki java komutu olması iyi olur. Bunun için java komurunu tam yol olarak tırnak içinde de yazabilirsiniz. Örneğin, "Cİ\Program Files\Java\jdk8\bin\java" - jar jenkins.war gibi.
 
     java -jar jenkins.war
     
@@ -44,9 +44,14 @@ Java komutu ile konsoldan çalıştırılabilir. Buradaki java komutunun jdk alt
 
     java -jar jenkins.war --httpPort=49001
 
-Jenkins home dizinini değiştirmek için çalıştırmadan önce başka bir dizin belirtebilirsiniz. Örneğin:
+#### Jenkins Kurulum Dizini
+Jenkins normalde kurulum dizinini kullanıcı dizinindeki .jenkins klasörü (Örneğin C:\Kullanıcılar\bprlab\.jenkins) olarak ayarlar. 
+Sıfırdan başlamak için bu dizini silebilirsiniz.
 
-    SET JENKINS_HOME=C:/jenkins
+Ya da Jenkins home dizinini değiştirmek için çalıştırmadan önce başka bir dizin belirtebilirsiniz. 
+Örneğin:
+
+    SET JENKINS_HOME=C:/jenkins_ozkans
 
 :exclamation: [JENKINS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/jenkins/README.md)
 
