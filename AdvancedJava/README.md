@@ -9,7 +9,7 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan 
 
 ## VİZE PROJE
 
-### Teslim Tarihi: 14 Nisan Cumartesi Lab Ders Saatine Kadar 
+### Teslim Tarihi: 13 Nisan Cuma 23:59:59'a kadar 
 
 Vize Saatinde Projelerinizi Derste Sunacaksınız. 
 Sunum yapmayanlardan -40 puan eksiltilerek not verilecektir.
