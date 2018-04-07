@@ -30,14 +30,15 @@ class LoginPencere {
 
         // JButon
         okButon.setBounds(10, 220, 100, 50);
-        okButon.addActionListener(eeee -> {
+        okButon.addActionListener(event -> {
             pencere2Ac();
         });
+        loginPencere.getContentPane().add(okButon);
 
         // JLabel
-        String lyrics = "<html>It's way too late to think of<br>"
+        String lyrics = "<html><div style=\"color:red;font-size: 20px;\">It's way too late to think of<br>"
                 + "Someone I would call now<br>"
-                + "And neon signs got tired<br>"
+                + "And neon signs got tired<br></div>"
                 + "Red eye flights help the stars out<br>"
                 + "I'm safe in a corner<br>"
                 + "Just hours before me<br></html>";
@@ -47,7 +48,7 @@ class LoginPencere {
         label.setBounds(10, 250, 700, 200);
 
         // JSlider
-        JSlider slider = new JSlider(0, 150, 0);
+        JSlider slider = new JSlider(0, 150, 40);
         slider.setPreferredSize(new Dimension(150, 30));
         slider.setBounds(10, 450, 100, 100);
         slider.addChangeListener(e -> {
@@ -69,7 +70,6 @@ class LoginPencere {
         
         loginPencere.setLayout(null);
         loginPencere.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        loginPencere.getContentPane().add(okButon);
         loginPencere.getContentPane().add(label);
         loginPencere.setSize(800, 800);
         // loginPencere.setLocation(700, 700);
@@ -85,8 +85,6 @@ class LoginPencere {
         dosyaAceMenuItem.addActionListener(e -> {
             JFileChooser fileopen = new JFileChooser();
 
-            FileFilter filter = new FileNameExtensionFilter("txt files", "txt");
-            fileopen.addChoosableFileFilter(filter);
             int answer = fileopen.showDialog(null, "Open file");
             if (answer == JFileChooser.APPROVE_OPTION) {
                 File file = fileopen.getSelectedFile();
