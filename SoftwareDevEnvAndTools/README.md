@@ -36,7 +36,7 @@ https://jenkins.io/download/ adresinden indirilebilir.
 1. Seçenek: Windows Kurulum : https://jenkins.io/download/thank-you-downloading-windows-installer-stable
 2. Seçenek: Generic WAR http://mirrors.jenkins.io/war-stable/latest/jenkins.war
 
-Java komutu ile war dosyası konsoldan çalıştırılabilir. Buradaki java komutunun jdk altındaki java komutu olması iyi olur. Bunun için java komurunu tam yol olarak tırnak içinde de yazabilirsiniz. Örneğin, "Cİ\Program Files\Java\jdk8\bin\java" - jar jenkins.war gibi.
+Java komutu ile war dosyası konsoldan çalıştırılabilir. Buradaki java komutunun jdk altındaki java komutu olması iyi olur. Bunun için java komurunu tam yol olarak tırnak içinde de yazabilirsiniz. Örneğin, "C:\Program Files\Java\jdk8\bin\java" - jar jenkins.war gibi.
 
     java -jar jenkins.war
     
@@ -45,7 +45,7 @@ Java komutu ile war dosyası konsoldan çalıştırılabilir. Buradaki java komu
     java -jar jenkins.war --httpPort=49001
 
 #### Jenkins Kurulum Dizini
-Jenkins normalde kurulum dizinini kullanıcı dizinindeki .jenkins klasörü (Örneğin C:\Kullanıcılar\bprlab\.jenkins) olarak ayarlar. 
+Jenkins normalde kurulum dizinini kullanıcı dizinindeki .jenkins klasörü (Örneğin C:\Kullanıcılar\bprlab\ .jenkins ) olarak ayarlar. 
 Sıfırdan başlamak için bu dizini silebilirsiniz.
 
 Ya da Jenkins home dizinini değiştirmek için çalıştırmadan önce başka bir dizin belirtebilirsiniz. 
