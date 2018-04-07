@@ -71,6 +71,23 @@ Bunun icin,
 * [3e_Faydalı_Metotlar](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3e_Faydal%C4%B1_Metotlar.pdf)
 * [3f_Karakter_String_Islemleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3f_Karakter_String_Islemleri.pdf)
 
+### Hafta 7
+
+    // Acilirken dosyadan oku
+    ArrayList ogrenciListesi = new ArrayList();
+    while(scanner.hasNext()) {
+      String satir = scanner.nextLine();
+      String [] alanlar = satir.split(",");
+      Ogrenci ogrenci = new Ogrenci(alanlar[0], alanlar[1], alanlar [2], alanlar[3]);
+      ogrenciListesi.add(ogrenci);
+    }
+    
+    // Cikarken dosyaya yaz
+    PrintWriter dosyaYazici ....
+    for(Ogrenci : ogrenciListesi) {
+       dosyaYazici.writeLine(ogrenci.getAd()+","+ogrenci.getSoyad()+","+ .....);
+    }
+    dosyaYazici.close();
 
 
 ## Notlar
