@@ -5,6 +5,8 @@
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
+# Mebiste açiklanan Vize zamaninda (11.4.2018 18:00) vize yapilmayacak. Vize proje seklinde olacak.
+
 ## VİZE PROJE
 
 ### Teslim Tarihi: 14 Nisan Cumartesi Lab Ders Saatine Kadar 
