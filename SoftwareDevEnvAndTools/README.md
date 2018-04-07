@@ -48,7 +48,7 @@ Jenkins home dizinini değiştirmek için çalıştırmadan önce başka bir diz
 
     SET JENKINS_HOME=C:/jenkins
 
-:exclamation: [JENKINS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools_2017Autumn/_docs/jenkins/README.md)
+:exclamation: [JENKINS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/jenkins/README.md)
 
 #### Jenkins Arayüzü
 Tarayıcıdan http://localhost:8080 girerek ara yüz açılabilir.
