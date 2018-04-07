@@ -82,5 +82,5 @@ Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi ça
 
 ## Notlar
 
-![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/Notlar.PNG)
+![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/Notlar.png)
 
