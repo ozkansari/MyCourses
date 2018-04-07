@@ -19,6 +19,13 @@ Uygulama Maven projesi şeklinde geliştirilecek ve Maven test ve install komutl
 Teslim tarihi:23 Mart 23:59'a kadar
 Odevleri ozkan.sari@outlook.com adresine  gönderiniz.
 
+### Odev 2
+a-) https://github.com/ozkansari/YAZILIM_ARACLARI_REPO repository'sini git ile indirin (checkout)
+b-) Bu repository'deki master branch üzerinden isminize özel (ad_soyad şeklinde) branch oluşturun.
+b-) Seçtiğiniz bir matematiksel operasyonu aynı isimle bir Sınıfta kodunu yazın.
+c-) Yazdığınız operasyonun JUnit ile birim testini yazın.
+d-) Branch'ınızdaki değişiklikleri commitleyin ve push'layın.
+
 ## DERS ICERIKLERI
 
 ### Hafta 1
