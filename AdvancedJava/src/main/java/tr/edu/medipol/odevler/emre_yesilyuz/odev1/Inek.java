@@ -5,6 +5,6 @@ package tr.edu.medipol.odevler.emre_yesilyuz.odev1;
 public class Inek extends Hayvan {
     @Override
     public void sesCikart() {
-        System.out.println("Möö Möö Möö");
+        System.out.println("Moo Moo Moo");
     }
 }

@@ -3,7 +3,7 @@ package tr.edu.medipol.odevler.alican_celik.odev1;
         void sesCikart(){
             System.out.println("grrrrr");
         }
-        void sesdüzeyi(){
+        void sesduzeyi(){
             System.out.println("2");
 
 

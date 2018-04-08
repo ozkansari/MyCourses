@@ -70,7 +70,7 @@ public class MasaustuEkran extends JFrame {
 	private class ButonDinleyici implements ActionListener 
 	{
 		public void actionPerformed(ActionEvent e) {
-			// Butona tıklanınca ne yapilacak
+			// Butona tiklaninca ne yapilacak
 			butonOperasyonu();
 		}
 	}

@@ -4,12 +4,12 @@ package tr.edu.medipol.odevler.iskender_uzuner.odev1;
  */
 public class At extends Hayvan {
     @Override
-    void sesdüzeyi() {
-        System.out.println("Ses düzeyi:4");
+    void sesduzeyi() {
+        System.out.println("Ses duzeyi:4");
     }
 
     @Override
     void sesCikart() {
-        System.out.println("İYHHHHHAAAH");
+        System.out.println("IYHHHHHAAAH");
     }
 }

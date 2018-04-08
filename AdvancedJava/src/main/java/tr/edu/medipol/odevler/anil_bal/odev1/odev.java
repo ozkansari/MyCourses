@@ -3,8 +3,8 @@ package tr.edu.medipol.odevler.anil_bal.odev1;
 import java.util.ArrayList;
 
 // 30
-// HATALI KOD, derlenmiyor. txt dosyası olarak gonderim.
-// Derlenmesi icin bir cok duzeltme yapıldı. Kod formatlandi.
+// HATALI KOD, derlenmiyor. txt dosyasi olarak gonderim.
+// Derlenmesi icin bir cok duzeltme yapildi. Kod formatlandi.
 
 public class odev {
 	public static void main(String[] args) {

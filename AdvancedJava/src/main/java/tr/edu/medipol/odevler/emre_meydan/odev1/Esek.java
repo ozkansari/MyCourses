@@ -1,12 +1,12 @@
 package tr.edu.medipol.odevler.emre_meydan.odev1;
-// esek sesi ve ses düzeyi
+// esek sesi ve ses duzeyi
 public class Esek extends Hayvan{
     @Override
-    void sesdüzeyi() {
-        System.out.println("Ses düzeyi:4");
+    void sesduzeyi() {
+        System.out.println("Ses duzeyi:4");
     }
     @Override
     void sesCikart() {
-        System.out.println("AİAİAİAİA");
+        System.out.println("AIAIAIAIA");
     }
 }

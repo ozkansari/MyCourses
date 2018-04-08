@@ -9,7 +9,7 @@ public class Kedi extends Hayvan {
     }
 
     @Override
-    void sesdüzeyi() {
-        System.out.println("ses düzeyi:2");
+    void sesduzeyi() {
+        System.out.println("ses duzeyi:2");
     }
 }

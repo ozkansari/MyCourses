@@ -4,7 +4,7 @@ package tr.edu.medipol.odevler.numan_gungor.odev1;
 public class Kopek extends Hayvan {
 
 
-    public void SesCıkar(){
+    public void SesCikar(){
         System.out.println("Hav Hav Hav");
     }
     @Override

@@ -6,7 +6,7 @@ public class Aslan extends Hayvan {
     }
 
     @Override
-    void sesdüzeyi() {
-        System.out.println("ses düzeyi:4");
+    void sesduzeyi() {
+        System.out.println("ses duzeyi:4");
     }
 }

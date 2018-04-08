@@ -11,8 +11,8 @@ public class Fare extends Hayvan {
     }
 
     @Override
-    public void SesCıkar(){
-        System.out.println("Ses Çıkarmıyorum");
+    public void SesCikar(){
+        System.out.println("Ses Cikarmiyorum");
     }
     @Override
     public void YemekYe(){

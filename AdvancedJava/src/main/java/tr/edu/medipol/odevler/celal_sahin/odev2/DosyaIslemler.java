@@ -6,10 +6,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-// EKSIK: List kullanımı ile hafta 5'te yapılan örneği , List seklinde String yerine tanımlayacağınız OgrenciBilgi sinifi kullanarak yapınız.
+// EKSIK: List kullanimi ile hafta 5'te yapilan orneği , List seklinde String yerine tanimlayacağiniz OgrenciBilgi sinifi kullanarak yapiniz.
 // List icinde OgrenciBilgi kullanilmamis -50
 
-public class Dosyaİslemler {
+public class DosyaIslemler {
 	
 		public static void main(String[] args) throws FileNotFoundException {
 			List<String> ogrenciler = dosyaOkumaOrnegi();

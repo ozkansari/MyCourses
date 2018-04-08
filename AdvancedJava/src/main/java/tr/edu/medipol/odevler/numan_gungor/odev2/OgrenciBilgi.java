@@ -11,7 +11,7 @@ public class OgrenciBilgi {
 
 	public static void main(String[] args) {
 
-		// OKUMA İŞLEMİ
+		// OKUMA ISLEMI
 		File F = new File("C:\\kitap\\scanner.txt");
 		try {
 
@@ -24,11 +24,11 @@ public class OgrenciBilgi {
 			String veri = scan.nextLine();
 			System.out.println(veri);
 		} catch (FileNotFoundException e) {
-			System.out.println("dosyaya bağlanırken hata oluştu");
+			System.out.println("dosyaya bağlanirken hata olustu");
 		}
 	} /* ozkans duzeltme */
 
-	// YAZMA İŞLEMİ
+	// YAZMA ISLEMI
 	// ozkans hatali satir:private  static String OgrenciAdSoyad
 	private  static String OgrenciAdSoyad()
 	{

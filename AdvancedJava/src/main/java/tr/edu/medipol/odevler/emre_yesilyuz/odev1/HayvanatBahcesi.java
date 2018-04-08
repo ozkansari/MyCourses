@@ -7,7 +7,7 @@ import java.util.Iterator;
 //BENZER ODEV: Aysenur Yildiz, Betul ozdemir -20
 
 //EKSIK: -40
-//3-) HayvanatBahcesi sinifi icine sesCikar isimli bir metod yapilacak. Bu metod sesSeviyesi ve Hayvan siniflarini parametre alacak. Bu metod icerisinde parametre alinan hayvan nesnesinin tipine gore (Kedi,Kopek,Zurafa vb.) uygun ses ekrana yazilacak. Uygun sesin ekrana yazilmasi icin ilgili hayvan sınıflarına metod da tanımlanabilir.
+//3-) HayvanatBahcesi sinifi icine sesCikar isimli bir metod yapilacak. Bu metod sesSeviyesi ve Hayvan siniflarini parametre alacak. Bu metod icerisinde parametre alinan hayvan nesnesinin tipine gore (Kedi,Kopek,Zurafa vb.) uygun ses ekrana yazilacak. Uygun sesin ekrana yazilmasi icin ilgili hayvan siniflarina metod da tanimlanabilir.
 
 //SONUC: 20
 
@@ -20,8 +20,8 @@ import java.util.Iterator;
             kedi.sesCikart();
             Inek inek = new Inek();
             inek.sesCikart();
-            Yılan yılan = new Yılan();
-            yılan.sesCikart();
+            Yilan yilan = new Yilan();
+            yilan.sesCikart();
             Serce serce = new Serce();
             serce.sesCikart();
             Kopek kopek = new Kopek();
@@ -30,7 +30,7 @@ import java.util.Iterator;
             hayvanListesi.add(kedi);
             hayvanListesi.add(serce);
             hayvanListesi.add(kopek);
-            hayvanListesi.add(yılan);
+            hayvanListesi.add(yilan);
             hayvanListesi.add(inek);
             Iterator var7 = hayvanListesi.iterator();
 

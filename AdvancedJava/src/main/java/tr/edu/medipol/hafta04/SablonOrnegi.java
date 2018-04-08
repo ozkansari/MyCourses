@@ -9,16 +9,16 @@ public class SablonOrnegi {
 	public static void main(String args[]) {
 
         // String mailSablonu = "^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$";
-        String mailSablonu = "^[a-zA-Z[öçğışü]]+@medipol.edu.tr$";
+        String mailSablonu = "^[a-zA-Z[ocgisu]]+@medipol.edu.tr$";
         // String mailSablonu = "^[A-Z0-9]+@[A-Z]+\\.[A-Z]+\\.[A-Z]{2,3}$";
         //String mailSablonu = "^\\w+@\\w+\\.\\w+\\.[A-Z]{2}$";
         
-        // ^ Satır basi
+        // ^ Satir basi
         // $ Satir sonu
         
         Pattern sablonNesnesi = Pattern.compile(mailSablonu, Pattern.CASE_INSENSITIVE); 
         
-        String mailAdresi = "mçşı@medipol.edu.tr"; // kullanicidan input
+        String mailAdresi = "mcsi@medipol.edu.tr"; // kullanicidan input
         
         Matcher eslestirici = sablonNesnesi.matcher(mailAdresi);
         boolean eslestiMi = eslestirici.find();

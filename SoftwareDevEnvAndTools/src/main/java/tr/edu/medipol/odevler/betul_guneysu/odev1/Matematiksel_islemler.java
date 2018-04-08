@@ -2,9 +2,9 @@ package tr.edu.medipol.odevler.betul_guneysu.odev1;
 
 /*-
 Odev 1
-En az 10 Matematiksel iþlem için 10 ayrý metod içeren Hesaplama sýnýfý yazýlacak. 
-Bu 10 Matematikel iþlemin her biri için de 10 ayrý JUnit test metodu yazýlacak. 
-Uygulama Maven projesi þeklinde geliþtirilecek ve Maven test ve install komutlarýn çalýþmasý kontrol edilecek. 
+En az 10 Matematiksel islem icin 10 ayri metod iceren Hesaplama sinifi yazilacak. 
+Bu 10 Matematikel islemin her biri icin de 10 ayri JUnit test metodu yazilacak. 
+Uygulama Maven projesi seklinde gelistirilecek ve Maven test ve install komutlarin calismasi kontrol edilecek. 
  */
 
 // Maven degil: -25
@@ -50,7 +50,7 @@ public class Matematiksel_islemler {
 	    
 	    double sayi4 = Math.floor(28.98);
 	    String AsagiYuvarla = Double.toString(sayi4);
-	    System.out.println("Asaðý Yuvarla: " + AsagiYuvarla);
+	    System.out.println("Asaði Yuvarla: " + AsagiYuvarla);
 	    
 	    double sayi3 = Math.exp(1);
 	    String EUstel = Double.toString(sayi3);

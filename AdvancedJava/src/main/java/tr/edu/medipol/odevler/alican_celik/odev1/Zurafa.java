@@ -2,12 +2,12 @@ package tr.edu.medipol.odevler.alican_celik.odev1;
 public class Zurafa extends Hayvan {
     @Override
     void sesCikart() {
-        //Zürafaların ses telleri yoktur.
+        //Zurafalarin ses telleri yoktur.
         System.out.println("Benim sesim yok :(");
     }
 
     @Override
-    void sesdüzeyi() {
-        System.out.println("ses düzeyi:0");
+    void sesduzeyi() {
+        System.out.println("ses duzeyi:0");
     }
 }

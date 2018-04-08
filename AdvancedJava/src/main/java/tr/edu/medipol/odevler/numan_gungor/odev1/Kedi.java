@@ -10,7 +10,7 @@ public class Kedi extends Hayvan {
 
 
 
-    public void SesCıkar(){
+    public void SesCikar(){
         System.out.println("Miyav Miyav ");
 
     }

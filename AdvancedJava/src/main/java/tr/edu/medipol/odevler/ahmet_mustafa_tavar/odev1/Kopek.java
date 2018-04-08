@@ -9,7 +9,7 @@ public class Kopek extends Hayvan {
     }
 
     @Override
-    void sesdüzeyi() {
-        System.out.println("ses düzeyi:5");
+    void sesduzeyi() {
+        System.out.println("ses duzeyi:5");
     }
 }

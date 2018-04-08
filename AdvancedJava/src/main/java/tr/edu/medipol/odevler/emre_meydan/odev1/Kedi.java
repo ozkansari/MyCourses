@@ -1,12 +1,12 @@
 package tr.edu.medipol.odevler.emre_meydan.odev1;
-// kedi sesi ve ses düzeyi
+// kedi sesi ve ses duzeyi
 public class Kedi extends Hayvan{
     @Override
     void sesCikart() {
         System.out.println("Miyavv miyav");
     }
     @Override
-    void sesdüzeyi() {
-        System.out.println("ses düzeyi:3");
+    void sesduzeyi() {
+        System.out.println("ses duzeyi:3");
     }
 }

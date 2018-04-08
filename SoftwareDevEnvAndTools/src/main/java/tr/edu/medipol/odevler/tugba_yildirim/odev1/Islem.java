@@ -1,6 +1,6 @@
 package tr.edu.medipol.odevler.tugba_yildirim.odev1;
 
-// Test paketi test drc altýnda degil: -10
+// Test paketi test drc altinda degil: -10
 // Formatsiz kod: -5
 
 // SONUC: 85

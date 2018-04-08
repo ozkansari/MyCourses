@@ -10,7 +10,7 @@ public class Hesaplama {
 		int carpmaSonuc = carpma(5, 5);
 		int bolmeSonuc = bolme(1000, 10);
 		
-		System.out.println("Toplama: " + toplamaSonuc + "\n Çýkarma: " + cikarmaSonuc + "\n Çarpma: " + carpmaSonuc + "\n Bölme: " + bolmeSonuc);
+		System.out.println("Toplama: " + toplamaSonuc + "\n Cikarma: " + cikarmaSonuc + "\n Carpma: " + carpmaSonuc + "\n Bolme: " + bolmeSonuc);
 				
 	}
 	

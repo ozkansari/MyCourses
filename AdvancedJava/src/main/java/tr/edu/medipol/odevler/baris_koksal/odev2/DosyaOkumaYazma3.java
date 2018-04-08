@@ -4,7 +4,7 @@ import java.util.*;
 
 //DERLENMIYOR
 //HATALI
-//ALICAN CELİK, EMRE MEYDAN ILE AYNI
+//ALICAN CELIK, EMRE MEYDAN ILE AYNI
 
 //KOPYA ODEV: -50
 
@@ -57,7 +57,7 @@ public class DosyaOkumaYazma3 {
             }
 
         } catch (FileNotFoundException | NullPointerException e) {
-            System.out.println("Dosya bulunamadı" + e.getMessage());
+            System.out.println("Dosya bulunamadi" + e.getMessage());
             e.printStackTrace();
         } catch(Exception e) {
             System.out.println("Bilinmeyen bir hata " + e.getMessage());

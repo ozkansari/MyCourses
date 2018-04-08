@@ -46,7 +46,7 @@ public class Tarihler {
 		SimpleDateFormat yilinHaftasiFormatlayici = new SimpleDateFormat("w");
 		SimpleDateFormat yilinGunuFormatlayici = new SimpleDateFormat("D");
 		
-		System.out.println("Siz yilin " + yilinHaftasiFormatlayici.format(kullaniciDogumTarihiDate) + " haftasında " +
+		System.out.println("Siz yilin " + yilinHaftasiFormatlayici.format(kullaniciDogumTarihiDate) + " haftasinda " +
 				yilinGunuFormatlayici.format(kullaniciDogumTarihiDate) + " gununde dogmussunuz");
 		
 	}

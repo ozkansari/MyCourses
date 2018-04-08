@@ -10,7 +10,7 @@ package tr.edu.medipol.odevler.rumeysa_yildirim.odev1;
 /* public */  class Kopek /* extends */ implements  Hayvan{}
 /* public */  class Zurafa /* extends */ implements  Hayvan{}
 
-public class /*H*/hayvan // atBahcesi
+public class /*Duzeltildi*/HayvanatBahcesi
 {
 	private static void main() 
 	{
@@ -29,10 +29,10 @@ public class /*H*/hayvan // atBahcesi
 			System.out.println("Kedi ses seviyesi: " + sesSeviyesi + " db");
 		}
 		else if (hayvan instanceof Kopek) {
-			System.out.println("Köpek ses seviyesi: " + sesSeviyesi + " db");
+			System.out.println("Kopek ses seviyesi: " + sesSeviyesi + " db");
 		}
 		else if (hayvan instanceof Zurafa) {
-			System.out.println("Zürafa ses seviyesi: " + sesSeviyesi + " db");
+			System.out.println("Zurafa ses seviyesi: " + sesSeviyesi + " db");
 		}		
 		return sesSeviyesi;
 	}

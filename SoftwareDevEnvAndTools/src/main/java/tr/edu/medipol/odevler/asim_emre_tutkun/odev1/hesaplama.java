@@ -1,6 +1,6 @@
 package tr.edu.medipol.odevler.asim_emre_tutkun.odev1;
 
-// TR karakter - encoding sorunlarý: -10
+// TR karakter - encoding sorunlari: -10
 // Derlenmeyen kod: -40
 // Hatali bir adet test: -5
 

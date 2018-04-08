@@ -84,7 +84,7 @@ public class /*O*/odev2 {
 			}
 		
 		} catch (FileNotFoundException | NullPointerException e) {
-			System.out.println("Dosya bulunamadı" + e.getMessage());
+			System.out.println("Dosya bulunamadi" + e.getMessage());
 			e.printStackTrace();
 		} catch(Exception e) {
 			System.out.println("Bilinmeyen bir hata " + e.getMessage());

@@ -5,12 +5,12 @@ import org.junit.*;
 
 public class HesaplamaTest {
 	@Test
-	public void KüpAlma(){
-		Assert.assertEquals(1000,MatematikselIslemler.KüpAlma(10));
+	public void KupAlma(){
+		Assert.assertEquals(1000,MatematikselIslemler.KupAlma(10));
 	
 	}
-	public void Bölme() {
-		int sonuc=MatematikselIslemler.Bölme(20, 5);
+	public void Bolme() {
+		int sonuc=MatematikselIslemler.Bolme(20, 5);
 	    Assert.assertEquals(4,sonuc);
 	   
 	}
@@ -18,16 +18,16 @@ public class HesaplamaTest {
 		int sonuc=MatematikselIslemler.Toplama(10, 10);
 		Assert.assertEquals(20,sonuc);
 	}
-	public void ÇIkarma() {
+	public void CIkarma() {
 		int sonuc=MatematikselIslemler.cikarma(10, 2);
 		Assert.assertEquals(8,sonuc);
 	}
-	public void Çarpma() {
+	public void Carpma() {
 		int sonuc=MatematikselIslemler.carpma(5, 2);
 		Assert.assertEquals(10,sonuc);
 	}
-	public void KökAlma() {
-		double sonuc=MatematikselIslemler.KökAlma(7);
+	public void KokAlma() {
+		double sonuc=MatematikselIslemler.KokAlma(7);
 		Assert.assertEquals(2,64,sonuc);
 	}
 	public void MutlakDeðer() {

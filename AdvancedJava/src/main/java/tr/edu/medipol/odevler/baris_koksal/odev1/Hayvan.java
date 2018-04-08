@@ -6,7 +6,7 @@ public class Hayvan {
     void sesCikart(){
         System.out.println("grrrrr");
     }
-    void sesdüzeyi(){
+    void sesduzeyi(){
         System.out.println("2");
 
 
