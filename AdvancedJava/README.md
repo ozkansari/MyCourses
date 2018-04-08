@@ -1,8 +1,8 @@
 # ILERI JAVA UYGULAMALARI 2018 BAHAR
 
-# Mebiste açiklanan Vize zamaninda (11.4.2018 18:00) vize yapilmayacak. Vize proje seklinde olacak.
+## Mebiste açiklanan Vize zamaninda (11.4.2018 18:00) vize yapilmayacak. Vize proje seklinde olacak.
 
-# 14 NISAN CUMARTESI DERS YAPILMAYACAKTIR. PROJE SUNUMLARI 21 NİSANDA YAPILACAKTIR.
+## 14 NISAN CUMARTESI DERS YAPILMAYACAKTIR. PROJE SUNUMLARI 21 NİSANDA YAPILACAKTIR.
 
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
