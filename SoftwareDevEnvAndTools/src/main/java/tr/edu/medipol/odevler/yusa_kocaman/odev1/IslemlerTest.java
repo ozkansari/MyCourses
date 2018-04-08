@@ -1,4 +1,4 @@
-package tr.edu.medipol.odevler.yusa_kocaman.odev1x;
+package tr.edu.medipol.odevler.yusa_kocaman.odev1;
 
 //importlar eksikdi, eklendi: -10
 // derlenmeyen kod: -10

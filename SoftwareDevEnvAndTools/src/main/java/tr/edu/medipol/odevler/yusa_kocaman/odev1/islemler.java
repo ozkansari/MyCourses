@@ -1,4 +1,4 @@
-package tr.edu.medipol.odevler.yusa_kocaman.odev1x;
+package tr.edu.medipol.odevler.yusa_kocaman.odev1;
 
 // DERLENMEYEN KOD: -20
 // MAVEN pom.xml eksik -25
