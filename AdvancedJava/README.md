@@ -84,6 +84,9 @@ Bunun icin,
 
 ### Hafta 6 & 7 : Swing GUI
 
+* [6a_JavaGUI](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/6a_JavaGUI.pdf)
+* [7a_JavaGUI_1](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/7a_JavaGUI_1.pdf)
+* [7b_JavaGUI_2](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/7b_JavaGUI_2.pdf)
 
 ### Hafta 7
 
