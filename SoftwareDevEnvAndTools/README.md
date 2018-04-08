@@ -6,6 +6,8 @@
     Meslek Yüksekokulu - Bilgisayar Programciligi ( I.Ö.) Programi / 2. Sinif - YAZILIM GELISTIRME ORTAM VE ARAÇLARI, 1. Ara Sinav	MYO LAB. GIRIS	11.4.2018	18:00
     Meslek Yüksekokulu - Bilgisayar Programciligi Programi / 2. Sinif - YAZILIM GELISTIRME ORTAM VE ARAÇLARI, 1. Ara Sinav	MYO LAB. GIRIS	11.4.2018	18:00
 
+# 14 NISAN CUMARTESI DERS YAPILMAYACAKTIR
+
 Dersler Cumartesi 12:00-13:00 ve 13:15-14:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
