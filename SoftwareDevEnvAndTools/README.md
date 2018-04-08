@@ -28,7 +28,7 @@ Odevleri ozkan.sari@outlook.com adresine  gönderiniz.
 * Yazdığınız operasyonun JUnit ile birim testini yazın.
 * Branch'ınızdaki değişiklikleri commitleyin ve push'layın
 
-Teslim Tarihi: 20 Nisan 23:59:59
+Teslim Tarihi: 20 Nisan 23:59:59. Her hangi bir dosya göndermenize gerek yok. Github branch commit yeterli.
 
 ## DERS ICERIKLERI
 
