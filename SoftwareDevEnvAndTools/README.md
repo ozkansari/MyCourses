@@ -28,6 +28,8 @@ Odevleri ozkan.sari@outlook.com adresine  gönderiniz.
 * Yazdığınız operasyonun JUnit ile birim testini yazın.
 * Branch'ınızdaki değişiklikleri commitleyin ve push'layın
 
+Teslim Tarihi: 20 Nisan 23:59:59
+
 ## DERS ICERIKLERI
 
 ### Hafta 1
