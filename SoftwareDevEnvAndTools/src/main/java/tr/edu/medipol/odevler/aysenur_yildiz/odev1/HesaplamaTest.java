@@ -3,10 +3,8 @@ package tr.edu.medipol.odevler.aysenur_yildiz.odev1;
 // Eksik import : -10
 //Tum siniflarda: @Test annotation yok -20
 
+import org.junit.Assert;
 import org.junit.Test;
-
-import junit.*;
-import junit.framework.Assert;
 
 
 public class HesaplamaTest {
