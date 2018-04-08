@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 // EKSIK: List kullanımı ile hafta 5'te yapılan örneği , List seklinde String yerine tanımlayacağınız OgrenciBilgi sinifi kullanarak yapınız.
-// List icinde OgrenciBilgi kullanilmamis -60
+// List icinde OgrenciBilgi kullanilmamis -50
 
 public class Dosyaİslemler {
 	
