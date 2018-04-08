@@ -71,6 +71,20 @@ Bunun icin,
 * [3e_Faydalı_Metotlar](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3e_Faydal%C4%B1_Metotlar.pdf)
 * [3f_Karakter_String_Islemleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3f_Karakter_String_Islemleri.pdf)
 
+### Hafta 4 : Diziler, Zaman, Duzenli Ifadeler (regular Expressions)
+
+* [4a_Diziler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/4a_Diziler.pdf)
+* [4b_Zaman](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/4b_Zaman.pdf)
+* [4c_Duzenli_Ifadeler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/4c_Duzenli_Ifadeler.pdf)
+
+### Hafta 5 : Dosya Islemleri ve Istisnalar
+
+* [5a_Dosya_Islemleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/5a_Dosya_Islemleri.pdf)
+* [5b_Istisnalar](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/5b_Istisnalar.pdf)
+
+### Hafta 6 & 7 : Swing GUI
+
+
 ### Hafta 7
 
     // Acilirken dosyadan oku
