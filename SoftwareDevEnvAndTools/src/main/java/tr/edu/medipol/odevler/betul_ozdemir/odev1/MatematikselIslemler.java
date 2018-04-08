@@ -8,7 +8,9 @@ Bu 10 Matematikel iþlemin her biri için de 10 ayrý JUnit test metodu yazýlacak.
 Uygulama Maven projesi þeklinde geliþtirilecek ve Maven test ve install komutlarýn çalýþmasý kontrol edilecek. 
  */
 
-public class MatematikselÝslemler {
+// Tr karakter sorunlari: -10
+
+public class MatematikselIslemler {
 	public static void main(String[]args) {
 		int sonuc =Toplama(19,25);
 		System.out.println(sonuc);
@@ -24,17 +26,17 @@ public class MatematikselÝslemler {
 	public static int Toplama(int sayi1,int sayi2) {
 		return sayi1+sayi2;
 	}
-	public static int Çýkarma(int sayi1,int sayi2) {
+	public static int cikarma(int sayi1,int sayi2) {
 		return sayi1-sayi2;
 
     }
-	public static int Çarpma(int sayi1,int sayi2) {
+	public static int carpma(int sayi1,int sayi2) {
 		return sayi1*sayi2;
 }
 	public static double KökAlma(double sayi) {
 		return Math.sqrt(sayi);
 	}
-	public static int MutlakDeðer(int sayi) {
+	public static int MutlakDeger(int sayi) {
 		return Math.abs(sayi);
 	}
 	public static int MinSayi(int sayi1,int sayi2) {

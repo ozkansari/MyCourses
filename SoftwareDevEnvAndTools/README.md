@@ -1,10 +1,12 @@
 # YAZILIM GELİŞTİRME ORTAM ve ARACLARI
 2018 BAHAR
 
-# Vize sinavi 11 Nisan Carsamba Saat 18:00'de yazili sinav olarak yapilacaktir.
+# Vize sinavi 11 Nisan Carsamba Saat 18:00'de yazili sinav olarak yapilacaktir. A202 No'lu Derslikte.
 
-    Meslek Yüksekokulu - Bilgisayar Programciligi ( I.Ö.) Programi / 2. Sinif - YAZILIM GELISTIRME ORTAM VE ARAÇLARI, 1. Ara Sinav	MYO LAB. GIRIS	11.4.2018	18:00
-    Meslek Yüksekokulu - Bilgisayar Programciligi Programi / 2. Sinif - YAZILIM GELISTIRME ORTAM VE ARAÇLARI, 1. Ara Sinav	MYO LAB. GIRIS	11.4.2018	18:00
+    Meslek Yüksekokulu - Bilgisayar Programciligi ( I.Ö.) Programi / 2. Sinif - YAZILIM GELISTIRME ORTAM VE ARAÇLARI, 1. Ara Sinav	A202 No'lu Derslik	11.4.2018	18:00
+    Meslek Yüksekokulu - Bilgisayar Programciligi Programi / 2. Sinif - YAZILIM GELISTIRME ORTAM VE ARAÇLARI, 1. Ara Sinav	A202 No'lu Derslik	11.4.2018	18:00
+
+# 14 NISAN CUMARTESI DERS YAPILMAYACAKTIR
 
 Dersler Cumartesi 12:00-13:00 ve 13:15-14:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
@@ -25,6 +27,8 @@ Odevleri ozkan.sari@outlook.com adresine  gönderiniz.
 * Seçtiğiniz bir matematiksel operasyonu aynı isimle bir Sınıfta kodunu yazın.
 * Yazdığınız operasyonun JUnit ile birim testini yazın.
 * Branch'ınızdaki değişiklikleri commitleyin ve push'layın
+
+Teslim Tarihi: 20 Nisan 23:59:59. Her hangi bir dosya göndermenize gerek yok. Github branch commit yeterli.
 
 ## DERS ICERIKLERI
 

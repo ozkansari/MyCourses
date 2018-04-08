@@ -1,15 +1,15 @@
-# ILERI JAVA UYGULAMALARI
+# ILERI JAVA UYGULAMALARI 2018 BAHAR
 
-2018 BAHAR
+## Mebiste açiklanan Vize zamaninda (11.4.2018 18:00) vize yapilmayacak. Vize proje seklinde olacak.
+
+## 14 NISAN CUMARTESI DERS YAPILMAYACAKTIR. PROJE SUNUMLARI 21 NİSANDA YAPILACAKTIR.
 
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
-# Mebiste açiklanan Vize zamaninda (11.4.2018 18:00) vize yapilmayacak. Vize proje seklinde olacak.
-
 ## VİZE PROJE
 
-### Teslim Tarihi: 13 Nisan Cuma 23:59:59'a kadar ozkan.sari@outlook.com adresine sadece kod dosyalarınızı gönderiniz. Geç teslim kabul edilmeyecektir.
+### Teslim Tarihi: 20 Nisan Cuma 23:59:59'a kadar ozkan.sari@outlook.com adresine sadece kod dosyalarınızı gönderiniz. Geç teslim kabul edilmeyecektir.
 
 Vize Saatinde Projelerinizi Derste Sunacaksınız. 
 Sunum yapmayanlardan -40 puan eksiltilerek not verilecektir.
@@ -70,6 +70,23 @@ Bunun icin,
 * [3d_Karar_Ifadeleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3d_Karar_Ifadeleri.pdf)
 * [3e_Faydalı_Metotlar](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3e_Faydal%C4%B1_Metotlar.pdf)
 * [3f_Karakter_String_Islemleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3f_Karakter_String_Islemleri.pdf)
+
+### Hafta 4 : Diziler, Zaman, Duzenli Ifadeler (regular Expressions)
+
+* [4a_Diziler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/4a_Diziler.pdf)
+* [4b_Zaman](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/4b_Zaman.pdf)
+* [4c_Duzenli_Ifadeler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/4c_Duzenli_Ifadeler.pdf)
+
+### Hafta 5 : Dosya Islemleri ve Istisnalar
+
+* [5a_Dosya_Islemleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/5a_Dosya_Islemleri.pdf)
+* [5b_Istisnalar](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/5b_Istisnalar.pdf)
+
+### Hafta 6 & 7 : Swing GUI
+
+* [6a_JavaGUI](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/6a_JavaGUI.pdf)
+* [7a_JavaGUI_1](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/7a_JavaGUI_1.pdf)
+* [7b_JavaGUI_2](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/7b_JavaGUI_2.pdf)
 
 ### Hafta 7
 
