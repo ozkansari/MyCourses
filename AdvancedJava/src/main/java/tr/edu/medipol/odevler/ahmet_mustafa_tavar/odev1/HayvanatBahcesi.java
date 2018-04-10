@@ -8,9 +8,9 @@ package tr.edu.medipol.odevler.ahmet_mustafa_tavar.odev1;
 
 // GEC GONDERIM: -20
 
-// TAMAMEN AYNI ODEV: Alican Celik -20
+// TAMAMEN AYNI ODEV: Gursel Baris Koksal, Iskender Uzuner
 
-// SONUC: -50
+// SONUC : Direkt -20
 
 public class HayvanatBahcesi {
     public static void main(String[] args) {

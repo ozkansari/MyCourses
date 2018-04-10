@@ -6,9 +6,9 @@ package tr.edu.medipol.odevler.baris_koksal.odev1;
 //EKSIK: -40
 //3-) HayvanatBahcesi sinifi icine sesCikar isimli bir metod yapilacak. Bu metod sesSeviyesi ve Hayvan siniflarini parametre alacak. Bu metod icerisinde parametre alinan hayvan nesnesinin tipine gore (Kedi,Kopek,Zurafa vb.) uygun ses ekrana yazilacak. Uygun sesin ekrana yazilmasi icin ilgili hayvan siniflarina metod da tanimlanabilir.
 
-//TAMAMEN AYNI ODEV: Ahmet Mustafa Tavar -20
+//TAMAMEN AYNI ODEV: Ahmet Mustafa Tavar, Iskender Uzuner -20
 
-//SONUC: -50
+//SONUC : Direkt -20
 
 public class HayvanatBahcesi {
     public static void main(String[] args) {

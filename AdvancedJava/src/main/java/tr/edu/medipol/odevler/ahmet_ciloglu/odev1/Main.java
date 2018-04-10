@@ -5,9 +5,11 @@ package tr.edu.medipol.odevler.ahmet_ciloglu.odev1;
 // EKSIK: -40
 // 3-) HayvanatBahcesi sinifi icine sesCikar isimli bir metod yapilacak. Bu metod sesSeviyesi ve Hayvan siniflarini parametre alacak. Bu metod icerisinde parametre alinan hayvan nesnesinin tipine gore (Kedi,Kopek,Zurafa vb.) uygun ses ekrana yazilacak. Uygun sesin ekrana yazilmasi icin ilgili hayvan siniflarina metod da tanimlanabilir.
 
-// Koyun, kopek, kedi gibi siniflar anlamsiz: -10
+// Koyun, kopek, kedi gibi metotlar anlamsiz: -10
 
-// SONUC: 30
+// CELAL ŞAHİN ile ÇOK BENZER: -20
+
+// SONUC: 10
 
 public class Main {
 
