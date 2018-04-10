@@ -5,9 +5,7 @@ import java.util.*;
 //DERLENMIYOR
 //HATALI
 
-//ALICAN CELIK, BARIS KOKSAL ILE AYNI
-
-//KOPYA ODEV: -50
+//ALICAN CELIK, BARIS KOKSAL ILE AYNI: -25
 
 public class DosyaOkumaYazma3 {
     public static void main(String[] args) throws FileNotFoundException {

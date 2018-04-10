@@ -3,9 +3,7 @@ import java.io.*;
 import java.util.*;
 
 //DERLENMIYOR
-// AHMET MUSTAVA TAVAR, ALICAN CELIK, BARIS KOKSAL, EMRE MEYDAN ILE AYNI
-
-//KOPYA ODEV: -50 
+// AHMET MUSTAVA TAVAR, ALICAN CELIK, BARIS KOKSAL, EMRE MEYDAN ILE AYNI: -25
 
 public class DosyaOkumaYazma3 {
     public static void main(String[] args) throws FileNotFoundException {
