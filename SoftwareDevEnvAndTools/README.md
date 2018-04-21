@@ -93,7 +93,7 @@ Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi ça
 
 ### Hafta 8 Javadoc & Maven Site
 
-[JavaDoc Hakkında](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava_2017Autumn/_docs/8a_Javadoc.pdf)
+[JavaDoc Hakkında](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/8a_Javadoc.pdf)
 
 Maven komutuna yapılacak ek: 
     
