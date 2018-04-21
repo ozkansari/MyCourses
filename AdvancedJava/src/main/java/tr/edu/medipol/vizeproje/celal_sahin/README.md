@@ -1,5 +1,5 @@
 // ----------------------------------------------------------
-// DEGERLENDIRME: 56
+// DEGERLENDIRME: 66
 
 * Yayın evi ekle : 
 ** (5/5) Yayın evi adı ve e-posta adresi girdi olarak alınacaktır. 
@@ -34,6 +34,8 @@ DIGER:
 (-5) Formatsiz kod. DUZELITLDI.
 (-10) Dosya ilk olusturulurken yolu bulamıyor, dosya olusturulamıyor.
 (+5) Menubar kullanimi
+(+5) JOptionPane mesaj
+(+5) try catch
 
 TESELLI:
 (+10) Menü ve Grafik ara yuz basarili olsuturulmus

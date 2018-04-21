@@ -74,7 +74,7 @@ public class Main implements Runnable, ActionListener
    */
   public void actionPerformed(ActionEvent ev)
   {
-	   
+	// OZKANS if (ev.getActionCommand() == yayinEviEkleItem.getActionCommand()) { kontrolu eklenebilirdi
 	yayinEviEkleSayfasi yayinEviSayfa = new yayinEviEkleSayfasi();
 	yayinEviSayfa.setModal(true);
 	yayinEviSayfa.setVisible(true);

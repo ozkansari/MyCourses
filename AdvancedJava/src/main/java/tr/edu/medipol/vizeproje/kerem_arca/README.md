@@ -1,5 +1,5 @@
 // ----------------------------------------------------------
-// DEGERLENDIRME: 75
+// DEGERLENDIRME: 80
 
 * Yayın evi ekle : 
 ** (5/5) Yayın evi adı ve e-posta adresi girdi olarak alınacaktır. 
@@ -34,5 +34,6 @@ DIGER:
 (-10) Dosyayi bulamazsa sonlaniyor. DUZELTILDI.
 (+5) Menubar kullanimi
 (+10) Menü ve Grafik ara yuz basarili olusturulmus
+(+5) try catch
 
 //----------------------------------------------------------

@@ -1,8 +1,8 @@
 // ----------------------------------------------------------
-// DEGERLENDIRME: Sonuc 11
+// DEGERLENDIRME: Sonuc 16
 
 * Yayın evi ekle : 
-** (0/5) Yayın evi adı ve e-posta adresi girdi olarak alınacaktır. 
+** (5/5) Yayın evi adı ve e-posta adresi girdi olarak alınacaktır. 
 ** Eklenen yayınevleri kitap eklemede seçenek olarak sunulacaktır. 
 ** (0/10) E-posta adresi eklemede düzenli ifade (regular expression) kontrolü yapılmalıdır. Hatalı formatta e-posta girişine izin verilmemelidir. 
 ** (0/5) Aynı şekilde boş girişe de izin verilmemelidir.

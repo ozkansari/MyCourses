@@ -1,5 +1,5 @@
 // ----------------------------------------------------------
-// DEGERLENDIRME: 43
+// DEGERLENDIRME: 52
 
 * Yayın evi ekle : 
 ** (5/5) Yayın evi adı ve e-posta adresi girdi olarak alınacaktır. 
@@ -18,7 +18,7 @@
 ** (0/10) Kitaplar bilgileriyle birlikte listelenebilecektir. 
 ** (0/10) Listelenen kitapların yanında silme seçeneği de bulunacaktır.
 
-* (5/5) Çıkış: Uygulamadan çıkış
+* (4/5) Çıkış: Uygulamadan çıkış
 
 * (5/15) Uygulama çıkışta sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kaldigi yerden devam edebilmesi icin dosyadan kayitlari okuyacaktir.
 
@@ -26,8 +26,7 @@
 
 //----------------------------------------------------------
 DIGER:
-(-5) Ogretmedigim teknolojiler kullanilmis: Logger
-
+(+5) try catch
 (+10) Menü ve Grafik ara yuz basarili olsuturulmus
 
 TESELLİ:

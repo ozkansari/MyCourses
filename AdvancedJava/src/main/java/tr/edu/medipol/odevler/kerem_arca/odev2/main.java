@@ -2,7 +2,8 @@ package tr.edu.medipol.odevler.kerem_arca.odev2;
 import java.io.*;
 import java.util.*;
 
-// DOSYA YAZMA Kisminda dosyaYazici.println(o); kullanilmis ama OgrenciBilgi.toString metodu ezilmemis. Bu dosyaya hatali yazilmasina neden olur: -20
+// DOSYA YAZMA Kisminda dosyaYazici.println(o); kullanilmis ama 
+// OgrenciBilgi.toString metodu ezilmemis. Bu dosyaya hatali yazilmasina neden olur: -20
 
 // SONUC: 80
 

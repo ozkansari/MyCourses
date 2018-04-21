@@ -19,9 +19,9 @@
 --> Kitaplar dosyadan okunmuyor. Kod icine yazilan tek kitap kaydi gosteriliyor.
 ** (0/10) Listelenen kitapların yanında silme seçeneği de bulunacaktır.
 
-* (2/5) Çıkış: Uygulamadan çıkış
+* (5/5) Çıkış: Uygulamadan çıkış
 
-* (8/15) Uygulama çıkışta sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kaldigi yerden devam edebilmesi icin dosyadan kayitlari okuyacaktir.
+* (5/15) Uygulama çıkışta sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kaldigi yerden devam edebilmesi icin dosyadan kayitlari okuyacaktir.
 --> Her kayıtda dosyaya kaydetmeye calisiyor
 --> Dosya bulunamayınca patliyor
 

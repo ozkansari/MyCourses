@@ -111,11 +111,14 @@ JButton yayinevi_buton = new JButton("Yayinevi");
             while (onay.isSelected()) {
                 hata.setVisible(false);
                 try {
-                    TabloEkle("C:\\Users\\alica\\Desktop\\kitap.txt");
+                    // OZKANS DUZELTME TabloEkle("C:\\Users\\alica\\Desktop\\kitap.txt");
+                	/* OZKANS DUZELTME */ TabloEkle(".\\config\\kitap.txt");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Oku("C:\\Users\\alica\\Desktop\\kitap.txt");
+                
+                // OZKANS DUZELTME Oku("C:\\Users\\alica\\Desktop\\kitap.txt");
+            	/* OZKANS DUZELTME */ Oku(".\\config\\kitap.txt");
                 System.out.println("bana bastın");
 
                 break;
@@ -234,7 +237,9 @@ JButton yayinevi_buton = new JButton("Yayinevi");
 //        ListelemeSayfasi sayfa2 = new ListelemeSayfasi();
         Kitap kitap = new Kitap();
             ListelemeSayfasi ls = new ListelemeSayfasi();
-            ls.Oku("C:\\Users\\alica\\Desktop\\kitap.txt");
+            
+            // OZKANS DUZELTME ls.Oku("C:\\Users\\alica\\Desktop\\kitap.txt");
+        	/* OZKANS DUZELTME */ ls.Oku(".\\config\\kitap.txt");
         }
 
 

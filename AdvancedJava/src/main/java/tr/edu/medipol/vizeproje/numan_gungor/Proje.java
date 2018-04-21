@@ -77,7 +77,6 @@ public class Proje {
 				JOptionPane jop2 = new JOptionPane();
 				jop2.showMessageDialog(null, "Programdan Cikis yapiyorsunuz");
 				frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
-
 			}
 		});
 

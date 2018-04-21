@@ -1,10 +1,10 @@
 // ----------------------------------------------------------
-// DEGERLENDIRME: 45
+// DEGERLENDIRME: 42
 
 * Yayın evi ekle : 
 ** (5/5) Yayın evi adı ve e-posta adresi girdi olarak alınacaktır. 
 ** Eklenen yayınevleri kitap eklemede seçenek olarak sunulacaktır. 
-** (10/10) E-posta adresi eklemede düzenli ifade (regular expression) kontrolü yapılmalıdır. Hatalı formatta e-posta girişine izin verilmemelidir. 
+** (7/10) E-posta adresi eklemede düzenli ifade (regular expression) kontrolü yapılmalıdır. Hatalı formatta e-posta girişine izin verilmemelidir. 
 ** (0/5) Aynı şekilde boş girişe de izin verilmemelidir.
 
 * Kitap Ekle : 
@@ -15,7 +15,7 @@
 ** (0/5) Aynı şekilde boş girişe de izin verilmemelidir.
 
 * Kitapları Listele : 
-** (0/10) Kitaplar bilgileriyle birlikte listelenebilecektir. 
+** (10/10) Kitaplar bilgileriyle birlikte listelenebilecektir. 
 ** (0/10) Listelenen kitapların yanında silme seçeneği de bulunacaktır.
 
 * (5/5) Çıkış: Uygulamadan çıkış
@@ -26,10 +26,10 @@
 
 //----------------------------------------------------------
 DIGER:
-(-10) Her bir sınıfta ayrı ayrı mainler 
 (-10) Dosya ilk olusturulurken yolu bulamıyor, dosya olusturulamıyor.
-
+(-5) Menü geçişlerinde sorun var.
 (+10) Menü ve Grafik ara yuz  olusturulmus
+(-15) Ortak odev
 
 TESELLI:
 (+10) Buton action
