@@ -2,14 +2,12 @@ package tr.edu.medipol.odevler.emre_yesilyuz.odev1;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-//GEC GONDERIM: -20
-
 //BENZER ODEV: Aysenur Yildiz, Betul ozdemir -20
 
 //EKSIK: -40
 //3-) HayvanatBahcesi sinifi icine sesCikar isimli bir metod yapilacak. Bu metod sesSeviyesi ve Hayvan siniflarini parametre alacak. Bu metod icerisinde parametre alinan hayvan nesnesinin tipine gore (Kedi,Kopek,Zurafa vb.) uygun ses ekrana yazilacak. Uygun sesin ekrana yazilmasi icin ilgili hayvan siniflarina metod da tanimlanabilir.
 
-//SONUC: 20
+//SONUC: 40
 
     public class HayvanatBahcesi {
         public HayvanatBahcesi() {
