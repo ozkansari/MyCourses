@@ -1,5 +1,5 @@
 // ----------------------------------------------------------
-// DEGERLENDIRME: 53
+// DEGERLENDIRME: 73
 
 * Yayın evi ekle : 
 ** (5/5) Yayın evi adı ve e-posta adresi girdi olarak alınacaktır. 
@@ -28,7 +28,7 @@
 
 //----------------------------------------------------------
 DIGER:
-Form/IDE editor kullanımı: -30
-Güzel Ara yüz: +20
+Form/IDE editor kullanımı: -20
+Güzel Ara yüz, kod: +30
 Sunum yapmadı: -20 
 //----------------------------------------------------------
