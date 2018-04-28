@@ -1,6 +1,6 @@
 # ILERI JAVA UYGULAMALARI 2018 BAHAR
 
-## YAPTIKLARI PROJEYİ A4 KAĞITLARINA/DEFTERLERİNE YAZANLARA (ÇIKTI DEĞİL) VE ÖDEVİ ADIM ADIM AÇIKLAYANLARA EK PUAN VERİLECEKTİR
+## 5 MAYIS CUMARTESI DERS YAPILMAYACAKTIR
 
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
