@@ -16,7 +16,7 @@ Uygulama Maven projesi şeklinde geliştirilecek ve Maven test ve install komutl
 Teslim tarihi:23 Mart 23:59'a kadar
 Odevleri ozkan.sari@outlook.com adresine  gönderiniz.
 
-### -Odev 2- IPTAL
+### Odev 2 IPTAL
 * https://github.com/ozkansari/YAZILIM_ARACLARI_REPO repository'sini git ile indirin (checkout)
 * Bu repository'deki master branch üzerinden isminize özel (ad_soyad şeklinde) branch oluşturun.
 * Seçtiğiniz bir matematiksel operasyonu aynı isimle bir Sınıfta kodunu yazın.
