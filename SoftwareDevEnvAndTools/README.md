@@ -1,12 +1,7 @@
 # YAZILIM GELİŞTİRME ORTAM ve ARACLARI
 2018 BAHAR
 
-# Vize sinavi 11 Nisan Carsamba Saat 18:00'de yazili sinav olarak yapilacaktir. A202 No'lu Derslikte.
-
-    Meslek Yüksekokulu - Bilgisayar Programciligi ( I.Ö.) Programi / 2. Sinif - YAZILIM GELISTIRME ORTAM VE ARAÇLARI, 1. Ara Sinav	A202 No'lu Derslik	11.4.2018	18:00
-    Meslek Yüksekokulu - Bilgisayar Programciligi Programi / 2. Sinif - YAZILIM GELISTIRME ORTAM VE ARAÇLARI, 1. Ara Sinav	A202 No'lu Derslik	11.4.2018	18:00
-
-# 14 NISAN CUMARTESI DERS YAPILMAYACAKTIR
+# 5 MAYIS CUMARTESI DERS YAPILMAYACAKTIR
 
 Dersler Cumartesi 12:00-13:00 ve 13:15-14:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
@@ -106,7 +101,69 @@ Sonuçtaki Maven komutu:
 Jenkins Java Doc goruntuleme sorunu icin Jenkins Script'i acın (http://localhost:8080/script) ve asagidaki komutu calistirin.
     
     System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'none'; img-src 'self'; style-src 'self'; child-src 'self'; frame-src 'self';")
-    
+
+
+### Hafta 9 Code Coverage
+
+Code Coverage: Yazılan Kodun Ne Kadarının Test Edildiğini Gösterir. Code Coverage, yazdığımız testlerin kontrol ettiği kodun, yazdığımız koda oranı demek.
+
+#### JaCoCo
+
+http://www.eclemma.org/jacoco/trunk/doc/report-mojo.html
+
+Maven Goal: "jacoco:report"
+
+Maven Plugin:
+
+```xml
+   <project>
+       <!-- Dependencies -->
+       <!- .... --> 
+       <build>
+           <plugins>
+               <plugin>
+                  <groupId>org.jacoco</groupId>
+                  <artifactId>jacoco-maven-plugin</artifactId>
+                  <version>0.7.10-SNAPSHOT</version>
+                </plugin>
+           </plugins>
+        </build>
+    </project>
+```        
+
+#### Cobertura Code Coverage (Kodun Ne Kadarın Test Edildiğinin Ölçülmesi)
+
+Maven Goal: "cobertura:check"
+
+Maven Plugin:
+
+```xml
+   <project>
+       <!-- Dependencies -->
+       <!- .... --> 
+       <build>
+           <plugins>
+               <plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+					<check />
+				</configuration>
+			</plugin>
+           </plugins>
+        </build>
+    </project>
+```      
+
+#### Travis CI & CodeCov IO
+https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
+Örnek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI_REPO/blob/master/.travis.yml 
+
 ## Notlar
 
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/Notlar_SwDev.png)
