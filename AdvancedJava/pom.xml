@@ -40,8 +40,16 @@
 	  		<artifactId>gson</artifactId>
 	  		<version>2.6.2</version>
 	  	</dependency>
+	  	
+	  	<!--  Hafta 9 Veritabani Baglantisi -->
+		<dependency>
+	      <groupId>org.apache.derby</groupId>
+	      <artifactId>derby</artifactId>
+	      <version>10.11.1.1</version>
+	    </dependency>
 	    
 	</dependencies>
+	
 	<build>
 		<plugins>
 			<plugin>
