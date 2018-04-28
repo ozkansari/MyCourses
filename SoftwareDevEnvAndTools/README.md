@@ -133,7 +133,11 @@ Maven Plugin:
 
 #### Cobertura Code Coverage (Kodun Ne Kadarın Test Edildiğinin Ölçülmesi)
 
-Maven Goal: "cobertura:check"
+http://www.baeldung.com/cobertura
+
+Maven Goal 1: "cobertura:cobertura"
+
+Maven Goal 2: "cobertura:check"
 
 Maven Plugin:
 
