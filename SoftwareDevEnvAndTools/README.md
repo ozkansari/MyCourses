@@ -124,7 +124,7 @@ Maven Plugin:
                <plugin>
                   <groupId>org.jacoco</groupId>
                   <artifactId>jacoco-maven-plugin</artifactId>
-                  <version>0.7.10-SNAPSHOT</version>
+                  <version>0.8.1</version>
                 </plugin>
            </plugins>
         </build>
