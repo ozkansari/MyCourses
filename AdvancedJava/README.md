@@ -5,6 +5,20 @@
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
+## VIZE SONRASI ODEVLER
+
+### VIZE SONRASI ODEV-1
+
+Java Swing GUI uygulamasi olarak bir "Öğrenci Ekleme ve Görüntüleme" uygulaması geliştirmelisiniz. 
+
+Uygulamada yalnızca "Öğrenci ekleme" seçeneği bulunacaktır. Ayrıca eklenen öğrenciler, ekranda görüntülenecektir.
+
+Öğrenci eklerken "Ad ve Soyad", "Bölüm", "Giriş Yılı" vb. bilgiler girdi olarak alınacaktır. Boş girişe izin verilmemelidir. Ayrıca "Giriş Yılı" alanına sayı dışında bir değer girilmesine izin verilmemelidir.
+
+Öğrenci Eklerken ID bilgisi sorulmayacak, ID sistem tarafından otomatik atanmalıdır. Görüntülerken ID bilgisi gösterilecektir.
+
+Eklenen öğrenciler Apache Derby dosya tabanlı veritabanına yazılmalı (INSERT) ve gösterilirken veri tabanından alınmalıdır (SELECT).
+
 ## VİZE PROJE
 
 ### Teslim Tarihi: 20 Nisan Cuma 23:59:59'a kadar ozkan.sari@outlook.com adresine sadece kod dosyalarınızı gönderiniz. Geç teslim kabul edilmeyecektir.
@@ -29,9 +43,9 @@ Uygulama çıkışta sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken 
 * Uygulamanızda Kitap ve Yayinevi isimli sınıflar tanımlanmalı ve bunlar sistemde ArrayList olarak tutulmalı.
 * Kullanıcı girişlerinde boş girişlere ya da sayfa sayısı gibi sayı beklenen yerlere harf girişine izin verilmemelidir.
 
-## ODEVLER
+## VIZE ODEVLER
 
-### ODEV-1
+### VIZE ODEV-1
 
 * 1-) *Hayvan* sınıfı ve bundan türeyen *Kedi*, *Kopek*, *Zurafa* vb. sınıflar olusturulacak. 
 * 2-) Programin calisacagi main metodu iceren *HayvanatBahcesi* isimli bir sinif yapilacak.
@@ -43,7 +57,7 @@ Uygulama çıkışta sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken 
 
 Odevleri *ozkan.sari@outlook.com* adresine (projenin tümünü değil) sadece kaynak dosyaları zipleyip gönderiniz.
 
-### ODEV -2 
+### VIZE ODEV -2 
 
 List<String> kullanımı ile hafta 5'te yapılan [örneği](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/src/main/java/tr/edu/medipol/hafta05/DosyaOkumaYazma3.java) , List<OgrenciBilgi> seklinde String yerine tanımlayacağınız OgrenciBilgi sinifi kullanarak yapınız.
 
