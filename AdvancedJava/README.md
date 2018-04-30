@@ -8,7 +8,7 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan 
 ## VIZE SONRASI ODEVLER
 
 ### VIZE SONRASI ODEV-1
-
+( _Teslim Tarihi:11 Mayıs Cuma 23:59:59_ )
 Java Swing GUI uygulamasi olarak bir "Öğrenci Ekleme ve Görüntüleme" uygulaması geliştirmelisiniz. 
 
 Uygulamada yalnızca "Öğrenci ekleme" seçeneği bulunacaktır. Ayrıca eklenen öğrenciler, ekranda görüntülenecektir.
