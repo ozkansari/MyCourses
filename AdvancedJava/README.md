@@ -72,33 +72,33 @@ Bunun icin,
 
 ### Hafta 1-2-3 : Java Konu Tekrarları
 
-* [1a_JavaProgramlamayaGiris](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/1a_JavaProgramlamayaGiris.pdf)
-* [2a_Basit_veri_turleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/2a_Basit_veri_turleri.pdf)
-* [2b_Degisken_tipleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/2b_Degisken_tipleri.pdf)
-* [2c_NesnelerVeSiniflaraGiris](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/2c_NesnelerVeSiniflaraGiris.pdf)
-* [3a_Denetleyiciler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3a_Denetleyiciler.pdf)
-* [3b_Operatorler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3b_Operatorler.pdf)
-* [3c_Donguler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3c_Donguler.pdf)
-* [3d_Karar_Ifadeleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3d_Karar_Ifadeleri.pdf)
-* [3e_Faydalı_Metotlar](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3e_Faydal%C4%B1_Metotlar.pdf)
-* [3f_Karakter_String_Islemleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/3f_Karakter_String_Islemleri.pdf)
+* [1a_JavaProgramlamayaGiris](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/01a_JavaProgramlamayaGiris.pdf)
+* [2a_Basit_veri_turleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/02a_Basit_veri_turleri.pdf)
+* [2b_Degisken_tipleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/02b_Degisken_tipleri.pdf)
+* [2c_NesnelerVeSiniflaraGiris](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/02c_NesnelerVeSiniflaraGiris.pdf)
+* [3a_Denetleyiciler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/03a_Denetleyiciler.pdf)
+* [3b_Operatorler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/03b_Operatorler.pdf)
+* [3c_Donguler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/03c_Donguler.pdf)
+* [3d_Karar_Ifadeleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/03d_Karar_Ifadeleri.pdf)
+* [3e_Faydalı_Metotlar](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/03e_Faydal%C4%B1_Metotlar.pdf)
+* [3f_Karakter_String_Islemleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/03f_Karakter_String_Islemleri.pdf)
 
 ### Hafta 4 : Diziler, Zaman, Duzenli Ifadeler (regular Expressions)
 
-* [4a_Diziler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/4a_Diziler.pdf)
-* [4b_Zaman](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/4b_Zaman.pdf)
-* [4c_Duzenli_Ifadeler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/4c_Duzenli_Ifadeler.pdf)
+* [4a_Diziler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/04a_Diziler.pdf)
+* [4b_Zaman](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/04b_Zaman.pdf)
+* [4c_Duzenli_Ifadeler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/04c_Duzenli_Ifadeler.pdf)
 
 ### Hafta 5 : Dosya Islemleri ve Istisnalar
 
-* [5a_Dosya_Islemleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/5a_Dosya_Islemleri.pdf)
-* [5b_Istisnalar](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/5b_Istisnalar.pdf)
+* [5a_Dosya_Islemleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/05a_Dosya_Islemleri.pdf)
+* [5b_Istisnalar](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/05b_Istisnalar.pdf)
 
 ### Hafta 6 & 7 : Swing GUI
 
-* [6a_JavaGUI](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/6a_JavaGUI.pdf)
-* [7a_JavaGUI_1](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/7a_JavaGUI_1.pdf)
-* [7b_JavaGUI_2](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/7b_JavaGUI_2.pdf)
+* [6a_JavaGUI](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/06a_JavaGUI.pdf)
+* [7a_JavaGUI_1](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/07a_JavaGUI_1.pdf)
+* [7b_JavaGUI_2](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/07b_JavaGUI_2.pdf)
 
 ### Hafta 7
 
