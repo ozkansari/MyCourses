@@ -1,4 +1,5 @@
 .veritabani
+doc/
 
 *.class
 bin/
