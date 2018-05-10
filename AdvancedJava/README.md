@@ -1,6 +1,6 @@
 # ILERI JAVA UYGULAMALARI 2018 BAHAR
 
-## 5 MAYIS CUMARTESI DERS YAPILMAYACAKTIR
+## ETKİNLİK DUYURUSU: https://www.youthall.com/event/youth-code-day
 
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
