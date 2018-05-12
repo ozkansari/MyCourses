@@ -187,6 +187,11 @@ https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
 * En son olarak da Projeye sag tikla, Run as Maven Install sec.
 * Proje BUILD SUCCESS olmalı.
 
+3. Adim
+RESTServisiOrnek sinifi olustur.
+SpringBootOrnekApplication.java sag tikla: Run as java application 
+http://localhost:8080/ogrenci/listele adresine tarayıcıdan gir
+
 ## Notlar
 
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/Notlar_SwDev.png)
