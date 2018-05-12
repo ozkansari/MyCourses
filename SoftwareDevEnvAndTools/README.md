@@ -170,13 +170,23 @@ https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
 
 ### Hafta 10 Spring Boot
 
+1. ADIM
 http://start.spring.io/ sayfasini aciyoruz.
-
 Generate a  "MAVEN PROJECT" with "JAVA" and Spring Boot "1.5.13"
-
 Group:	com.medipol.yazilimaraclari
 Artifact: SpringBootOrnek
 Search for dependencies : Web, DevTools
+Generate Project
+
+2. ADIM
+Indirilen zip dosyasını bir dizine aç (Extract). Ornegin: C:\SpringBootOrnek\ dizininine acalim.
+Eclipse'de Import>Existing Maven Project seçerek next diyoruz
+Root directory olarak Zip dosyasını açtığınız dizini gosteriyoruz. (C:\SpringBootOrnek\ )
+Altta gorunen pom.xml checkbo tikla
+Daha sonra finish.
+En son olarak da Projeye sag tikla, Run as Maven Install sec.
+Proje BUILD SUCCESS olmalı.
+
 
 ## Notlar
 
