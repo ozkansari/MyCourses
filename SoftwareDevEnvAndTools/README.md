@@ -168,6 +168,16 @@ Maven Plugin:
 https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
 Örnek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI_REPO/blob/master/.travis.yml 
 
+### Hafta 10 Spring Boot
+
+http://start.spring.io/ sayfasini aciyoruz.
+
+Generate a  "MAVEN PROJECT" with "JAVA" and Spring Boot "1.5.13"
+
+Group:	com.medipol.yazilimaraclari
+Artifact: SpringBootOrnek
+Search for dependencies : Web, DevTools
+
 ## Notlar
 
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/Notlar_SwDev.png)
