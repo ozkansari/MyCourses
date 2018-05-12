@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>tr.com.medipol.ilerijava</groupId>
+  <artifactId>WebProjesi</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <name>Web Projesi</name>
+  <description>Hafta 10 Alistirma</description>
+  
+  <dependencies>
+  
+  	<!-- Veritabani Derby Kutuphanesi -->
+  	<dependency>
+  		<groupId>org.apache.derby</groupId>
+  		<artifactId>derby</artifactId>
+  		<version>10.11.1.1</version>
+  	</dependency>
+  
+  	<!-- Spark Java Web Kutuphanesi -->
+  	<dependency>
+  		<groupId>com.sparkjava</groupId>
+  		<artifactId>spark-core</artifactId>
+  		<version>1.1.1</version>
+  	</dependency>
+  	
+  	<!-- Web sayfalari olusturabilmek icin sablon kutuphanesi -->
+  	<dependency>
+  		<groupId>com.sparkjava</groupId>
+  		<artifactId>spark-template-freemarker</artifactId>
+  		<version>1.0</version>
+  	</dependency>
+  	
+  	<!-- JSon islemek icin ek kutuphane -->
+  	<dependency>
+  		<groupId>com.google.code.gson</groupId>
+  		<artifactId>gson</artifactId>
+  		<version>2.6.2</version>
+  	</dependency>
+
+	<!-- Opsiyonel: loglama -->
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-simple</artifactId>
+		<version>1.7.21</version>
+	</dependency>
+  	
+  </dependencies>
+  
+  
+</project>
