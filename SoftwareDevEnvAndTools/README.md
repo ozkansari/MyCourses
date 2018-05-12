@@ -175,7 +175,7 @@ https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
 * Generate a  "MAVEN PROJECT" with "JAVA" and Spring Boot "1.5.13"
 * Group:	com.medipol.yazilimaraclari
 * Artifact: SpringBootOrnek
-* Search for dependencies : Web, DevTools
+* Search for dependencies : Web
 * Generate Project
 
 2. ADIM
