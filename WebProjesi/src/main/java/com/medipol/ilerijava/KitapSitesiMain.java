@@ -55,7 +55,7 @@ public class KitapSitesiMain {
         };
         get(kitaplarEkleHtmlSayfa);
         
-        FreeMarkerRoute kitaplarEklePost = new FreeMarkerRoute("/kitaplar/ekle/post") {
+        Route kitaplarEklePost = new Route("/kitaplar/ekle/post") {
             public Object handle(Request istek, Response cevap) {
             	String kitapAdi = istek.queryParams("kitapadi"); 
             	String yazarAdi = istek.queryParams("yazaradi"); 
