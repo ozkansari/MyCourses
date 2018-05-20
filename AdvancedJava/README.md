@@ -12,6 +12,8 @@ Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacakt�
 
 Sayfa adları "/<<ad_soyadiniz>>/<<sayfa_adi>>" şeklinde eşleştirilmeli.
 
+Ön yüz Spark Java ile veritabanı bağlantıları Apache Derby ile maven projesi olarak gerçekleştirilmeli.
+
 ### Kitap Listesi Sayfası
 
 * Ana Sayfa : 
