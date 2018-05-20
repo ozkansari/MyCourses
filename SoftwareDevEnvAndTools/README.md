@@ -1,10 +1,50 @@
 # YAZILIM GELİŞTİRME ORTAM ve ARACLARI
 2018 BAHAR
 
-# ETKİNLİK DUYURUSU: https://www.youthall.com/event/youth-code-day
-
 Dersler Cumartesi 12:00-13:00 ve 13:15-14:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
+
+## FİNAL PROJESİ
+
+Teslim Tarihi: 31 Mayıs 23:59 (Raporunuzu ozkan.sari@outlook.com e-posta ile gönderebilirsiniz)
+Sunum Tarihi: 02.06.2018 13:00 MYO LAB. (İMAC)
+
+ *Maven* (Bkz. Hafta 4-5) kullanarak bir *Spring Boot* projesi (Bkz. Hafta 10) geliştireceksiniz. Projenizde şu REST servisler bulunacak: 
+- Öğrenci Ekleme
+- Öğrenci Görüntüleme
+- Öğrenci Silme
+
+Projenizi kurallara uygun geliştirecek ve bir rapor hazırlayacaksınız. Ayrıca final zamanı gelip projenizi sunacaksınız ve açıklayacaksınız. Projeyi açıklayamama veya projeyi öğrencinin kendisi yapmaması durumunda final notu sıfır olarak girilecektir.
+
+Raporunuzda aşağıda belirtilmiş olan tüm adımları, ayrı başlıklar altında açıklamanızı ve ekran görünütüleriyle desteklemenizi istiyorum. 
+
+ÖNEMLİ: Raporunuz sade ve anlaşılır olmalı.
+
+Geliştirdiğiniz proje ve kodlarınız hakkında kurallar:
+- Maven projesi olacak (Bkz. Hafta 4-5)
+- Spring Boot dışında özel bir teknoloji kullanılmayacak (Bkz. Hafta 10)
+- Kodlarınız okunaklı olacak: değişkenler, sınıflar ve metotlar düzgün isimlendirilmiş olacak ve Turkçe karakter içermeyecek
+- Tüm sınıf ve metotlarınız javadoc (Bkz. Hafta 8) standardıyla dokümante edilmiş olacak. Javadoc raporu oluşturulup, oluşturma adımlarıyla birlikte rapora konulacak.
+- Tüm metotlarınız için JUnit ile birim testler yazılacak. (Bkz. Hafta 4-5)
+- Yazdığınız birim testlerin coverage'ını yani test kapsama oranını (Bkz. Hafta 9) hesaplatıp, nasıl hesaplattığınızın bilgisiyle birlikte raporunuza ekleyeceksiniz.
+
+Projenizden otomatik olarak bir maven site (Bkz. Hafta 8) oluşturacaksınız ve yaptığınız işlemleri adım adım ekran görüntüleriyle açıklayacaksınız.
+
+Kodlarınızı github'da yeni bir repository oluşturularak (Bkz. Hafta 4-5) oraya commitleyeceksiniz.  Nasıl yaptığınızı adım adım anlatmanızı ve sonuçtaki github repository adresinizi raporunuza koymanızı istiyorum.
+
+Kodlarınızı Travis CI (Bkz. Hafta 11) ile entegre edip otomatik derlettireceksiniz ve CodeCov.io (Bkz. Hafta 9) entegrasyonuyla kodunuun coverage (test kapsama) değerlerinin otomatik hesaplanmasını sağlayacaksınız.  Yaptığınız işlemleri ve sonuçlarını adım adım ekran görüntüleriyle açıklayacaksınız ve raporunuzda paylaşacaksınız.
+
+Kodunuzu Postman (Bkz.Hafta 10) ve JMeter (Bkz. Hafta 11) ile test edip, nasıl test ettiğinizi ve test sonuçlarını raporunuzda adım adım paylaşacaksınız.
+
+Tüm sınıflarınızın UML diagramlarını (Bkz.Hafta 3) çizeceksiniz. Tercihen ArgoUML ya da benzer bir araç kullanabilirsiniz. UML diagramları da rapora koyulacak ve açıklanacak.
+
+Jenkins (Bkz. Hafta 6 & 7) kuracaksınız ve yaptığınız işlemleri adım adım ekran görüntüleriyle açıklayacaksınız ve projenizin jenkins'te otomatik derlenmesini sağlayacaksınız ve ilişkili adımları rapora koyacaksınız ve açıklayacaksınız. 
+
+SonarQube (Bkz. Hafta 7) kurulumu yapacaksınız ve yaptığınız işlemleri adım adım ekran görüntüleriyle açıklayacaksınız ve jenkinsden tetiklenerek projenizin analiz edilmesini sağlayacaksınız. Analiz sonuçlarınızı da rapora ekleyeceksiniz.
+
+### Bonus
+
+Unit testlerde Spring REST testleri kullanılması. Örnek: https://www.petrikainulainen.net/programming/spring-framework/unit-testing-of-spring-mvc-controllers-rest-api/
 
 ## ODEVLER
 
@@ -164,11 +204,7 @@ Maven Plugin:
     </project>
 ```      
 
-#### Travis CI & CodeCov IO
-https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
-Örnek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI_REPO/blob/master/.travis.yml 
-
-### Hafta 10 Spring Boot
+### Hafta 10 Spring Boot & Postman
 
 1. ADIM
 * http://start.spring.io/ sayfasini aciyoruz.
@@ -191,6 +227,20 @@ https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
 RESTServisiOrnek sinifi olustur.
 SpringBootOrnekApplication.java sag tikla: Run as java application 
 http://localhost:8080/ogrenci/listele adresine tarayıcıdan gir
+
+#### Postman
+
+![POSTMAN](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools_2017Autumn/_docs/postman)
+
+### Hafta 11
+
+#### JMeter
+
+![JMETER](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools_2017Autumn/_docs/jmeter)
+
+#### Travis CI & CodeCov IO
+https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
+Örnek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI_REPO/blob/master/.travis.yml 
 
 ## Notlar
 
