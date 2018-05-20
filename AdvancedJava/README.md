@@ -5,7 +5,7 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan 
 
 ## FİNAL PROJE - Kitap Satış Sitesi
 
-Teslim Tarihi: 31 Mayıs 23:59
+Teslim Tarihi: 31 Mayıs 23:59 ozkan.sari@outlook.com adresine sadece kod dosyalarınızı gönderiniz. Geç teslim kabul edilmeyecektir.
 Sunum Tarihi: 2 Haziran 10:00 MYO LAB. (İMAC)
 
 Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacaktır.
