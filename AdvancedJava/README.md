@@ -1,9 +1,58 @@
 # ILERI JAVA UYGULAMALARI 2018 BAHAR
 
-## ETKİNLİK DUYURUSU: https://www.youthall.com/event/youth-code-day
-
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
+
+## FİNAL PROJE - Kitap Satış Sitesi
+
+Teslim Tarihi: 31 Mayıs 23:59
+Sunum Tarihi: 2 Haziran 10:00 MYO LAB. (İMAC)
+
+Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacaktır.
+
+Sayfa adları "/<<ad_soyadiniz>>/<<sayfa_adi>>" şeklinde eşleştirilmeli.
+
+### Kitap Listesi Sayfası
+
+* Ana Sayfa : 
+  * Kitaplar listelenecek
+  * Listelenen her bir kitap hakkında temel bilgiler gösterilecek. 
+  * Listelenen her bir ürün için Sepete Ekle butonu bulunacak. Butona basıldığında aynı sayfada kalınacak.
+  * Sayfanın bir köşesinde sepet bilgisi görünütülenecek. Sepete Eklendikçe sepettekiler de güncellenecek.
+
+* Sepet
+  * Sepetteki ürünler miktarıyla birlikte listelenecek (Ör.2 defa sepete eklenmiş olabilir)
+  * Sipariş ver butonu olacak. Tıklanınca sipariş onay sayfasına gidilecek.
+
+### Yönetim Sayfaları
+
+Sayfa adları "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" şeklinde eşleştirilmeli.
+
+* Kitap ekle
+* Kitap Listele ve Sil
+* Kitap Görüntüle/Detay
+* Sipariş Listele
+
+### Önemli Noktalar
+
+* Maven projesi olmalı.
+* Kodlarınız "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmalı.
+* Derste kullanılan teknolojiler / kütüphaneler dışında bir kütüphane kullanılmamalı. (Derby DB & Spark Java)
+* Tüm kodunuz javadoc ile dokümante edilmiş olmalı.
+* Kodunuz okunaklı, düzgün formatlanmış ve anlaşılır olmalı. Değişken, metod, class vb yerlerde türkçe karakter kullanılmamalı.
+* Sayfalar ortak ve güzel bir tasarıma ve ilgili sayfalar arasında geçiş için menüye sahip olmalı. Gösterimde türkçe karakter problemi bulunmamalı.
+
+### Bonus
+
+* Kitap kategorilendirme (Roman,Hikaye,Klasikler vb.)
+* Sipariş sayfasında adres bilgisi, kk bilgisi vs. alma
+* Satın alma entegrasyonu: https://dev.iyzipay.com/tr veya https://developer.mastercard.com/product/masterpass (Test API)
+
+### Sık Sorulan Sorular?
+
+* Fazla karışık olmamak kaydıyla hazır şablon kullanabilirsiniz. 
+* Derste öğrendiğiniz üzere, Maven projesinde html, ftl, imaj, properties, js vb. dosyalar src/main/resources/ altına konulabilir.
+
 
 ## VIZE SONRASI ODEVLER
 
