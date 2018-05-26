@@ -239,10 +239,12 @@ https://www.getpostman.com/
 
 #### JMeter
 https://jmeter.apache.org/download_jmeter.cgi
+
 ![JMETER](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/jmeter)
 
 #### Travis CI & CodeCov IO
 https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
+
 Örnek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI_REPO/blob/master/.travis.yml 
 
 ## Notlar
