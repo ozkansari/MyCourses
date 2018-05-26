@@ -231,13 +231,15 @@ http://localhost:8080/ogrenci/listele adresine tarayıcıdan gir
 
 #### Postman
 
-![POSTMAN](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools_2017Autumn/_docs/postman)
+https://www.getpostman.com/
+
+![POSTMAN](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/postman)
 
 ### Hafta 11
 
 #### JMeter
-
-![JMETER](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools_2017Autumn/_docs/jmeter)
+https://jmeter.apache.org/download_jmeter.cgi
+![JMETER](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/jmeter)
 
 #### Travis CI & CodeCov IO
 https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
