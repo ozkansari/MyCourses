@@ -1,4 +1,4 @@
-package com.medipol.ilerijava;
+package spark.template.freemarker.ozkansari;
 
 public class Yazar {
 	private String yazarAdi;

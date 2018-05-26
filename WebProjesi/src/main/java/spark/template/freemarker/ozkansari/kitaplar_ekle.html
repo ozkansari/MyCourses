@@ -2,7 +2,9 @@
 	<head> <title>Kitap Ekle</title> </head>
 	<body>
 		
-		<form action="/kitaplar/ekle/post" method="post">
+		<#include "/ozkansari/menu.html">
+		
+		<form action="/ozkansari/kitaplar/ekle/post" method="post">
 			Kitap Adi:<br> 
 			<input type="text" name="kitapadi"> 
 			</br> 
@@ -17,6 +19,9 @@
 			
 			<input type="submit" value="Ekle">
 		</form>
+		
+		<#assign websitesi_adi = "Ozkan Sari">
+		<#include "/ozkansari/footer.html">
 	
 	</body>
 </html>

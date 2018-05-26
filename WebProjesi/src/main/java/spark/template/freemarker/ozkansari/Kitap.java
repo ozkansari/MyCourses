@@ -1,4 +1,4 @@
-package com.medipol.ilerijava;
+package spark.template.freemarker.ozkansari;
 
 public class Kitap {
 	private String kitapAdi;
