@@ -33,7 +33,7 @@ Projenizden otomatik olarak bir maven site (Bkz. Hafta 8) oluşturacaksınız ve
 
 Kodlarınızı github'da yeni bir repository oluşturularak (Bkz. Hafta 4-5) oraya commitleyeceksiniz.  Nasıl yaptığınızı adım adım anlatmanızı ve sonuçtaki github repository adresinizi raporunuza koymanızı istiyorum.
 
-Kodlarınızı Travis CI (Bkz. Hafta 11) ile entegre edip otomatik derlettireceksiniz ve CodeCov.io (Bkz. Hafta 9) entegrasyonuyla kodunuun coverage (test kapsama) değerlerinin otomatik hesaplanmasını sağlayacaksınız.  Yaptığınız işlemleri ve sonuçlarını adım adım ekran görüntüleriyle açıklayacaksınız ve raporunuzda paylaşacaksınız.
+Kodlarınızı Travis CI (Bkz. Hafta 11) ile entegre edip otomatik derlettireceksiniz ve CodeCov.io (Bkz. Hafta 11) entegrasyonuyla kodunuun coverage (test kapsama) değerlerinin otomatik hesaplanmasını sağlayacaksınız.  Yaptığınız işlemleri ve sonuçlarını adım adım ekran görüntüleriyle açıklayacaksınız ve raporunuzda paylaşacaksınız.
 
 Kodunuzu Postman (Bkz.Hafta 10) ve JMeter (Bkz. Hafta 11) ile test edip, nasıl test ettiğinizi ve test sonuçlarını raporunuzda adım adım paylaşacaksınız.
 
@@ -231,16 +231,25 @@ http://localhost:8080/ogrenci/listele adresine tarayıcıdan gir
 
 #### Postman
 
-![POSTMAN](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools_2017Autumn/_docs/postman)
+https://www.getpostman.com/
+
+![POSTMAN](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/postman)
 
 ### Hafta 11
 
 #### JMeter
+https://jmeter.apache.org/download_jmeter.cgi
 
-![JMETER](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools_2017Autumn/_docs/jmeter)
+![JMETER](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/jmeter)
 
 #### Travis CI & CodeCov IO
+
+Repository'nin ana dizinine ".travis.yml" isimli bir dosya oluşturacaksınız.
+Dosya içine yazılacaklar için: https://github.com/ozkansari/FinalProje/blob/master/.travis.yml örnek alınabilir. 
+Proje adı SpringBootOrnek değilse kendi proje adınız olmalı.
+
 https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
+
 Örnek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI_REPO/blob/master/.travis.yml 
 
 ## Notlar
