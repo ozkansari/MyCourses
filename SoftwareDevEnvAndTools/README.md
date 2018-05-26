@@ -33,7 +33,7 @@ Projenizden otomatik olarak bir maven site (Bkz. Hafta 8) oluşturacaksınız ve
 
 Kodlarınızı github'da yeni bir repository oluşturularak (Bkz. Hafta 4-5) oraya commitleyeceksiniz.  Nasıl yaptığınızı adım adım anlatmanızı ve sonuçtaki github repository adresinizi raporunuza koymanızı istiyorum.
 
-Kodlarınızı Travis CI (Bkz. Hafta 11) ile entegre edip otomatik derlettireceksiniz ve CodeCov.io (Bkz. Hafta 9) entegrasyonuyla kodunuun coverage (test kapsama) değerlerinin otomatik hesaplanmasını sağlayacaksınız.  Yaptığınız işlemleri ve sonuçlarını adım adım ekran görüntüleriyle açıklayacaksınız ve raporunuzda paylaşacaksınız.
+Kodlarınızı Travis CI (Bkz. Hafta 11) ile entegre edip otomatik derlettireceksiniz ve CodeCov.io (Bkz. Hafta 11) entegrasyonuyla kodunuun coverage (test kapsama) değerlerinin otomatik hesaplanmasını sağlayacaksınız.  Yaptığınız işlemleri ve sonuçlarını adım adım ekran görüntüleriyle açıklayacaksınız ve raporunuzda paylaşacaksınız.
 
 Kodunuzu Postman (Bkz.Hafta 10) ve JMeter (Bkz. Hafta 11) ile test edip, nasıl test ettiğinizi ve test sonuçlarını raporunuzda adım adım paylaşacaksınız.
 
