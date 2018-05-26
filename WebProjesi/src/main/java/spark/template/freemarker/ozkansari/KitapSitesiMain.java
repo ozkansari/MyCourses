@@ -4,6 +4,11 @@ package spark.template.freemarker.ozkansari;
 import static spark.Spark.get;
 import static spark.Spark.post;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 // java standart utilility lib
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,12 +28,102 @@ import spark.template.freemarker.FreeMarkerRoute;
 
 public class KitapSitesiMain {
 
+	private static final String VERITABANI_DIZINI = 
+			".\\.ozkansari\\veritabani\\";
+	
+	private static final String VERITABANI_URL = 
+    		"jdbc:derby:" + VERITABANI_DIZINI + ";create=true";
+	
+	private static final List<Kitap> kitaplar = new ArrayList<>();
+	
 	public static void main(String[] args) {
 
-		List<Kitap> kitaplar = new ArrayList<>();
-    	kitaplar.add( new Kitap("Simyaci", "Paulo", "Coelho"));
-    	kitaplar.add(new Kitap("Kurk Mantolu Madonna", "Sabahattin", "Ali"));
-    	kitaplar.add(new Kitap("Incognito", "Joe", "Doe"));
+		System.out.println("Veritabani URL'i " + VERITABANI_URL);
+		
+		/* ----------------------------------------------------------------- */
+        /* VERITABANINA BAGLAN  */
+        /* ----------------------------------------------------------------- */
+		Connection conn = null;
+		try {
+			Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
+			conn = DriverManager.getConnection(VERITABANI_URL);
+		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
+			System.out.println("Veritabanina baglanirken hata olustu: " + VERITABANI_URL );
+			e.printStackTrace();
+			return;
+		}
+		
+		final Statement stmt;
+		try {
+			stmt = conn.createStatement();
+		} catch (SQLException e) {
+			System.out.println("Veritabaniifadesi olustururken hata: " + VERITABANI_URL );
+			e.printStackTrace();
+			return;
+		}
+		
+		// TABLO OLUSTURMA ISLEMI
+		String kitapTabloAdi = "kitaplar";
+		try {
+			stmt.executeUpdate(
+					"CREATE TABLE " + kitapTabloAdi + 
+					" (" + 
+							"kitap_id int primary key, " + 
+							"kitap_adi varchar(30)," + 
+							"yazar_adi varchar(30)," + 
+							"yazar_soyadi varchar(30)" + 
+					")"
+			);
+			System.out.println("Tablo " + kitapTabloAdi + " olusturuldu");
+			
+			// BUNDAN SONRASI BIR DEFA CALISIR
+			// NEDEN? USTTEKI CREATE TABLE BIR DEFA CALISACAGI ICIN
+			// Kullanacagimiz kitap listesi ornek veriler koyuluyor
+	    	kitaplar.add( new Kitap("Simyaci", "Paulo", "Coelho"));
+	    	kitaplar.add(new Kitap("Kurk Mantolu Madonna", "Sabahattin", "Ali"));
+	    	kitaplar.add(new Kitap("Incognito", "Joe", "Doe"));
+	 
+	    	for (int i = 0; i < kitaplar.size(); i++) {
+				Kitap k = kitaplar.get(i);
+				kayitekle(stmt, kitapTabloAdi, 
+						k.getKitapAdi(), 
+						k.getYazar().getYazarAdi(), 
+						k.getYazar().getYazarSoyadi(),
+						i+1);
+				
+			}
+			
+		} catch (Exception e) {
+			// zaten tablo varsa hata verir
+			System.out.println("Tablo " + kitapTabloAdi + " zaten mevcut " + e.getMessage());
+		}
+		
+		/* ----------------------------------------------------------------- */
+        /* VERI LISTESI  */
+        /* ----------------------------------------------------------------- */
+		
+		// YAPILACAK: 
+		// Listeye elle ekleyip insert yerine, 
+		// select ile databaseden al, listeye ekle
+		
+		// KAYIT SORGULA
+		try {
+			ResultSet rs = stmt.executeQuery("SELECT * FROM " + kitapTabloAdi);
+			while (rs.next()) {
+				int kitap_id = rs.getInt("kitap_id");
+				String kitap_adi = rs.getString("kitap_adi");
+				String yazar_adi = rs.getString("yazar_adi");
+				String yazar_soyadi = rs.getString("yazar_soyadi");
+				kitaplar.add( new Kitap(kitap_adi, yazar_adi, yazar_soyadi));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+    	/* ----------------------------------------------------------------- */
+        /* ORNEK: HTML OLMADAN EKRANA MERHABA BAS */
+        /* ----------------------------------------------------------------- */
     	
 		// http://localhost:4567/ozkansari/
         Route sayfa1 = new Route("/ozkansari/merhaba") {
@@ -100,6 +195,11 @@ public class KitapSitesiMain {
             	String yazarSoyadi = istek.queryParams("yazarsoyadi"); 
             	kitaplar.add(new Kitap(kitapAdi, yazarAdi, yazarSoyadi));
 
+            	int id = kitaplar.size();
+            	
+            	// KAYIT EKLE
+        		kayitekle(stmt, kitapTabloAdi, kitapAdi, yazarAdi, yazarSoyadi, id);
+            	
                 cevap.redirect("/ozkansari/kitaplar/html");
                 return null;
             }
@@ -134,7 +234,23 @@ public class KitapSitesiMain {
         
 	}
 
-	
+	private static void kayitekle(final Statement stmt, String kitapTabloAdi, String kitapAdi, String yazarAdi,
+			String yazarSoyadi, int id) {
+		try {
+			stmt.executeUpdate(
+					"INSERT INTO " + kitapTabloAdi + " VALUES ("
+					+  id + " ,"
+					+  "\'"+ kitapAdi + "\',"
+					+  "\'"+ yazarAdi + "\',"
+					+  "\'"+ yazarSoyadi + "\'"
+					+ ")"
+			);
+			System.out.println("Kayit eklendi");
+		} catch(Exception e) {
+			// zaten ayni id'Li kayit varsa hata verebilir.
+			System.out.println("Kayit zaten mevcut. Hata: " + e.getMessage());
+		}
+	}
 	
 	
 }
