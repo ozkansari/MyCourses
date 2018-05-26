@@ -245,16 +245,8 @@ https://jmeter.apache.org/download_jmeter.cgi
 #### Travis CI & CodeCov IO
 
 Repository'nin ana dizinine ".travis.yml" isimli bir dosya oluşturacaksınız.
-Dosya içine şunları yazacaksınız: (PROJEADI kısmına kendi proje ismini yazmalısınız)
-
-language: java
-sudo: false # false for faster builds
-script: 
-  - "mvn -f PROJEADI/pom.xml -Dmaven.javadoc.skip=true clean install cobertura:cobertura checkstyle:checkstyle pmd:pmd"
-jdk:
-  - oraclejdk8
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+Dosya içine yazılacaklar için: https://github.com/ozkansari/FinalProje/blob/master/.travis.yml örnek alınabilir. 
+Proje adı SpringBootOrnek değilse kendi proje adınız olmalı.
 
 https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
 
