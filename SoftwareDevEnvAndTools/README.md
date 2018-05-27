@@ -15,6 +15,8 @@ Sunum Tarihi: 02.06.2018 13:00 MYO LAB. (İMAC)
 - Öğrenci Görüntüleme
 - Öğrenci Silme
 
+https://github.com/ozkansari/FinalProje Örnek alınabilir.
+
 Projenizi kurallara uygun geliştirecek ve bir rapor hazırlayacaksınız. Ayrıca final zamanı gelip projenizi sunacaksınız ve açıklayacaksınız. Projeyi açıklayamama veya projeyi öğrencinin kendisi yapmaması durumunda final notu sıfır olarak girilecektir.
 
 Raporunuzda aşağıda belirtilmiş olan tüm adımları, ayrı başlıklar altında açıklamanızı ve ekran görünütüleriyle desteklemenizi istiyorum. 
