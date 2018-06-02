@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kitap Ekle</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="http://localhost:4567/ismail_sahin/ana_sayfa">KITAPSEPETI</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/ismail_sahin/yonetim/kitap_listele">KITAP LÝSTELE</a></li>
+        <li><a href="/ismail_sahin/yonetim/kitap_ekle">KITAP EKLE</a></li>
+        <li><a href="/ismail_sahin/siparis_listele">SIPARIS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+   <h2>Kitap Ekle</h2>
+   <p>Yeni kitap ekle.</p>   
+   
+   <form action="/ismail_sahin/yonetim/yeni_kitap_ekle" method="post" onsubmit="return myFunction()">
+   		<div class="form-group">
+    		<label for="formGroupExampleInput">Kitap Adý</label>
+    		<input id = "kitapAdi" type="text" class="form-control" name="kitapAdi">
+   		</div>
+   		<div class="form-group">
+   		 	<label for="formGroupExampleInput2">Yazar Adý</label>
+    		<input id = "yazarAdi" type="text" class="form-control" name="yazarAdi">
+	  	</div>
+  		<div class="form-group">
+    		<label for="formGroupExampleInput">Sayfa Sayýsý</label>
+    		<input id = "sayfaSayisi" type="text" class="form-control" name="sayfaSayisi">
+  		</div>
+  		<div class="form-group">
+    		<label for="formGroupExampleInput2">Fiyatý</label>
+    		<input id = "fiyat" type="text" class="form-control" name="fiyat">
+  		</div>
+  
+  		<div class="text-right">
+            <button type="submit" style="margin-bottom: 75px;" class="btn btn-primary">Kitap Ekle</button>
+   		</div>
+   </form>
+      
+</div>
+
+
+<script>
+function myFunction() {
+	var kitapAdi = document.getElementById("kitapAdi").value;
+	var yazarAdi = document.getElementById("yazarAdi").value;
+	var sayfaSayisi = document.getElementById("sayfaSayisi").value;
+	var fiyat = document.getElementById("fiyat").value;
+	
+	var submitOK = "true";
+	var message = "";
+	
+	if(kitapAdi == ""){
+		message += "Kitap Adi  kýsmý boþ býrakýlamaz.\n";
+		submitOK = "false";
+	}
+	if(yazarAdi == ""){
+		message += "Yazar Adi kýsmý býrakýlamaz.\n";
+		submitOK = "false";
+	}
+	
+	if(sayfaSayisi == ""){
+		message += "Sayfa kýsmý boþ býrakýlamaz.\n";
+		submitOK = "false";
+	}else{
+		if(isInt(sayfaSayisi) == false)
+		{
+			message += "Sayfa Sayisi Tam Sayý olmalýdýr.\n";
+			submitOK = "false";
+		}
+	}
+	
+	
+	if(fiyat == ""){
+		message += "Fiyat kýsmý boþ býrakýlamaz.\n";
+		submitOK = "false";
+	}else{
+		if(isInt(fiyat) == false){
+			message += "Fiyat Tam Sayý olmalýdýr.\n";
+			submitOK = "false";
+		}
+	}
+	
+	if(submitOK == "false"){
+		alert(message);
+		return false;
+	}
+}
+
+function isInt(value) {
+    var er = /^-?[0-9]+$/;
+    return er.test(value);
+}
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sepet Sayfasý</title>
+	<style type="text/css">
+         body { background-color:black; color:white; font:helvetica; }
+         p { font-family: Tahoma, Verdana; font-size: 12px; }
+      </style>
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+      <meta charset="utf-8">
+</head>
+<body>
+
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <a class="navbar-brand" href="#">Ýskender Uzuner</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+				  <div class="collapse navbar-collapse" id="navbarNav">
+					    <ul class="navbar-nav">
+						      <li class="nav-item active">
+						        <a class="nav-link" href="/">Anasayfa <span class="sr-only">(current)</span></a>
+						      </li>
+						      <li class="nav-item">
+						        <a class="nav-link" href="/iskenderuzuner/yonetim/kitapekle">Kitap Ekle</a>
+						      </li>
+						       <li class="nav-item">
+						        <a class="nav-link" href="/iskenderuzuner/yonetim/kitaplistele">Kitap Listele</a>
+						      </li>
+						       <li class="nav-item">
+						        <a class="nav-link" href="/iskenderuzuner/yonetim/sepet">Sepet</a>
+						      </li>
+					    </ul>
+				  </div>
+		</nav>
+	</div>
+	
+	<div class="container">
+		<div class="container">
+		<br>
+			<div class="alert alert-success" role="alert">
+			  Sipariþiniz Sepete Eklendi!
+			</div>
+		<h1>Sepet Sayfasý</h1>
+		<form action="/urunekle" method="post">
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Adý</label>
+			    <input type="text" class="form-control" name="adi" placeholder="Adý">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Soyadý</label>
+			    <input type="text" class="form-control" name="soyadi" placeholder="Soyadý">
+			  </div>
+			    <div class="form-group">
+			    <label for="exampleInputEmail1">Adres</label>
+			    <input type="text" class="form-control" name="adres" placeholder="Adres">
+			  </div>
+			    <div class="form-group">
+			    <label for="exampleInputEmail1">Kredi Kartý</label>
+			    <input type="text" class="form-control" name="kkbilgisi" placeholder="Kredi Kartý">
+			  </div>
+			    <div class="form-group">
+			    <label for="exampleInputEmail1">TC Kimlik No</label>
+			    <input type="text" class="form-control" name="tckimlik" placeholder="TC Kimlik No">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Telefon Numarasý</label>
+			    <input type="text" class="form-control" name="telno" placeholder="Telefon Numarasý">
+			  </div>
+
+
+			    <input type="submit" Value="Ekle">
+			</form>
+		</div>
+	</div>
+</body>
+</html>

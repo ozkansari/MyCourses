@@ -1,0 +1,19 @@
+<html>
+	<head> <title>Yazarlar</title> </head>
+	<body>
+		<#include "/anilbal/menu.html">
+		
+		<h1> YAZARLAR</h1>
+		
+		<br/><br/>
+		
+		<#list yazarListesi as y>
+			${y.getYazarAdi()} 
+			<br/>
+		</#list>
+		
+		<#assign websitesi_adi = "Anil Bal">
+		<#include "/anilbal/footer.html">
+		
+	</body>
+</html>

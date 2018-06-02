@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ana Sayfa</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="http://localhost:4567/ismail_sahin/ana_sayfa">KITAPSEPETI</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/ismail_sahin/yonetim/kitap_listele">KITAP LÝSTELE</a></li>
+        <li><a href="/ismail_sahin/yonetim/kitap_ekle">KITAP EKLE</a></li>
+        <li><a href="/ismail_sahin/siparis_listele">SIPARIS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+   <h2>Kitaplar</h2>
+   <p>Kitaplar Listesi</p>            
+   <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Kitap Adý</th>
+        <th>Yazar</th>
+		<th>Sayfa Sayýsý</th>
+		<th>Fiyat</th>
+        <th>Ekle</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <#list kitaplar as k>
+			<tr>
+        	<td><a href="/ismail_sahin/yonetim/kitap_detay?kitapId=${k.getId()}">${k.getKitapAdi()}</a></td>
+        	<td>${k.getYazar()}</td>
+			<td>${k.getSayfaSayisi()}</td>
+			<th>${k.getFiyat()}</th>
+        	<td>
+				<form action="/ismail_sahin/sepete_ekle" method="post">
+					<button value="${k.getId()}" name="kitap_id" type="submit" class="btn btn-primary">Sepete Ekle</button>
+				</form>
+			</td>
+      		</tr>
+	  </#list>
+      
+    </tbody>
+  </table>
+</div>
+
+<div class="container">
+  
+  <#assign i = sepet?size>
+  <h2>${i}</h2>
+  
+  <#if i gt 0>
+  	<h2>Sepet</h2>
+   	<p>Sepetinizdeki Ürünler</p>            
+    <table class="table table-bordered">
+     <thead>
+       <tr>
+         <th>Kitap Adý</th>
+         <th>Adet</th>
+       </tr>
+     </thead>
+     <tbody>
+     
+     	
+      <#list sepet?keys as key> 
+   	 		<tr>
+         	<td>${siparis.getKitapAdi(key)}</td>
+         	<td>${siparis.getAdet(key)}</td>
+       		</tr>
+	  </#list> 
+       
+     </tbody>
+   	</table>
+  
+   <div class="text-right">
+   			<form action="/ismail_sahin/siparis_onay" method="get">
+    		<button type="button submit" style="margin-bottom: 75px;" class="btn btn-primary">Sipariþ Ver</button>
+			</form>
+   </div>
+   
+  <#else>
+  	<h2>Sepet</h2>
+   	<p style="margin-bottom: 75px;">Sepetiniz Boþ</p>  
+  </#if>
+</div>
+
+</body>
+</html>
+

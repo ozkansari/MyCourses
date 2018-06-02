@@ -1,0 +1,17 @@
+<html>
+<head> <title>Kitaplar</title> </head>
+<body>
+<#include "/cumhuroksuz/menu.html">
+
+<h1>KITAPLAR</h1>
+
+<br/><br/>
+<#list kitaplar as k>
+${k.getKitapAdi()}
+<br/>
+</#list>
+
+<#assign websitesi_adi = "Cumhur Oksuz">
+<#include "/cumhuroksuz/footer.html">
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Ürün Ekle</title>
+			<meta charset="utf-8" />
+			<style>
+			@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext');
+			body{
+				margin: 0;
+				padding: 0;
+				background-color: #f1f1f1;
+				font-family: 'Open Sans', sans-serif;
+			}
+			#header{
+				width: 100%;
+				height: 80px;
+				background-color: #36404c !important;
+			}
+			.card-box{
+				padding: 20px;
+				border: 1px solid #e2e2e2;
+				-webkit-border-radius: 3px;
+				border-radius: 3px;
+				-moz-border-radius: 3px;
+				background-clip: padding-box;
+				margin-bottom: 20px;
+				background-color: #ffffff;
+				position: relative;
+			}
+			.urunler{
+				width: 20%;
+				float: left;
+				height: 200px;
+				margin: 20px;
+			}
+			.headertitle{
+				background-color: white;
+				padding: 20px;
+				height: auto;
+
+			}
+			.silButton{
+				position: absolute;
+				bottom: 0;
+				width: 50%;
+				border-top: 1px solid #e2e2e2;
+				background-color: #f8515d !important;
+				color: white;
+				padding: 7px 14px;
+				text-align: center;
+				border-radius: 2px;
+				font-size: 14px;
+				padding: 7px 14px;
+				outline: none !important;
+				border: 1px solid #f96a74 !important;
+				right: 0;
+				border-top-left-radius: 0px;
+				border-top-right-radius: 0px;
+			}
+			a{
+				color: white;
+				text-decoration: none;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			.urunTitle{
+				padding: 5px;
+				border-bottom: 1px solid #e2e2e2;
+				text-transform: uppercase;
+			}
+			p{
+				color: #98a6ad !important;
+				font-size: 14px !important;
+				line-height: 1.6;
+				margin: 10px;
+				display: block;
+			}
+			.logo{
+				height: 100%;
+				width: 200px;
+				background-position: center;
+				float: left;
+				background-image: url("https://dcassetcdn.com/design_img/9458/25810/25810_281999_9458_thumbnail.jpg");
+				background-size: cover;
+				
+			}
+			.sepet{
+				height: 30px;
+				width: 30px;
+				float: right;
+				margin-top: 25px;
+    			margin-right: 45px;
+				background-image: url("https://www.materialui.co/materialIcons/action/shopping_basket_white_192x192.png");
+				background-size: cover;
+			}
+			.countSpan{
+				text-transform: uppercase;
+				padding: 3px 5px;
+				margin-top: 20px;
+				background-color: #64c5b1;
+				display: inline-block;
+				padding: 3px 5px;
+				font-size: 8px;
+				font-weight: 700;
+				line-height: 1;
+				font-weight: bolder;
+				color: #fff;
+				text-align: center;
+				white-space: nowrap;
+				vertical-align: middle;
+				border-radius: 10px;
+			}
+			.sepeteEkle{
+				bottom: 0;
+				width: 50%;
+				border-top: 1px solid #e2e2e2;
+				background-color: #51bea8 !important;
+				color: white;
+				padding: 7px 14px;
+				text-align: center;
+				border-radius: 2px;
+				font-size: 14px;
+				padding: 7px 14px;
+				outline: none !important;
+				border: 1px solid #51bea8 !important;
+				left: 0;
+				border-top-left-radius: 0px;
+				cursor: pointer;
+				border-top-right-radius: 0px;
+			}
+			.isim{
+				float: right;
+			}
+			.urunEkleButton{
+				height: 30px;
+				width: 30px;
+				float: right;
+				margin-top: 25px;
+    			margin-right: 45px;
+				background-image: url("http://flaticons.net/gd/makefg.php?i=icons/Application/Plus.png&r=255&g=255&b=255");
+				background-size: cover;
+			}
+			.hiddenA{
+				display: block;
+				width: 100%;
+				height: 100%;
+				z-index: 100000;
+			}
+			.form{
+				margin: 100px auto;
+				width: 300px;
+				height: auto;
+			}
+			.form-control{
+				border: 1px solid #dadada;
+				border-radius: 4px;
+				padding: 7px 12px;
+				/* height: 38px; */
+				width: 91%;
+				margin-top: 10px;
+				/* position: sticky; */
+				/* max-width: 100%; */
+				font-size: 14px;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+				-webkit-transition: all 300ms linear;
+				-moz-transition: all 300ms linear;
+				-o-transition: all 300ms linear;
+				transition: all 300ms linear;
+			}
+			.form-title{
+				margin-top: 5px;
+			}
+			.vazgec{
+				bottom: 0;
+				width: 50%;
+				border-top: 1px solid #e2e2e2;
+				background-color: #f8515d !important;
+				color: white;
+				padding: 7px 14px;
+				text-align: center;
+				border-radius: 2px;
+				font-size: 14px;
+				padding: 7px 14px;
+				outline: none !important;
+				border: 1px solid #f96a74 !important;
+				cursor: pointer;
+				left: 0;
+				border-top-left-radius: 0px;
+				float: left;	
+				border-top-right-radius: 0px;
+			}
+		</style>
+	</head>
+<body>
+		<div id="header">
+				<div class="logo">
+					
+				</div>
+				<div class="sepet">
+						<span class="countSpan">1</span>
+				</div>
+				<div class="urunEkleButton" title="Yeni urun ekle">
+					<a href="/urunekle" class"hiddenA"></a>
+				</div>
+		</div>
+		<div class="headertitle">
+			Urun Ekle
+
+		</div>
+
+
+		<div class="card-box form">
+				<form action="/urunekle" method="post">
+					<span class="form-title">Urun Adi:</span><br> 
+					<input class="form-control" type="text" name="urunadi"> <br> <br> 
+					<span class="form-title">Urun Aciklama:</span><br> 
+					<input class="form-control" type="text" name="aciklama"> <br> <br> 
+					
+					Fiyat:<br> 
+					<input class="form-control" type="text" name="fiyat"> <br><br> 
+					<br> 
+					<input class="sepeteEkle" type="submit" value="Ekle">
+					<button class="vazgec"><a class="hiddenA" href="/urunler">Vazgec</a></button>
+				</form>
+		</div>
+
+</body>
+</html>

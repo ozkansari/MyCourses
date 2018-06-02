@@ -1,0 +1,1 @@
+TR karakterler nedeniyle derlenmiyordu.
