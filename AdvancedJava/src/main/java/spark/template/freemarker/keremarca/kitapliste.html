@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Kitaplar</title>
+<style type="text/css">
+p {
+	text-align: center;
+	background-color: #000000;
+	color: #ffffff;
+	vertical-align: middle;
+}
+
+font {
+	background-color: #000000;
+	color: #ffffff;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+th {
+	width: 275px;
+	height: 30px;
+	background-color: #000000;
+	color: white;
+	text-align: center;
+}
+
+td {
+	width: 275px;
+	height: 30px;
+	text-align: left;
+}
+
+input {
+	width: 115px;
+	height: 30px;
+	background-color: #000000;
+	color: #ffffff;
+	font-size: 15px;
+}
+</style>
+</head>
+<p>
+	<br>
+	<font>Kitap Sitesi - Kitaplar</font><br>
+</p>
+<table>
+	<tr>
+		<td style="width: 670px; text-align: left;"><form
+				action="/keremarca/sepetim" method="get">
+				<input type="submit" value="Sepetim">
+			</form></td>
+		<td style="width: 670px; text-align: right;"><form
+				action="/keremarca/anasayfa" method="get">
+				<input type="submit" value="Anasayfa'ya Don">
+			</form></td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<th>Kitap Adi</th>
+        <th>Yazar Adi</th>
+      <th>Yazar Soyadi</th>
+      <th>Yayinevi</th>
+		<th>Fiyat</th>
+		<th>SEPETE EKLE</th>
+	</tr>
+	<#list kitaplar as mevcutkitap>
+  <tr>
+    			<td>${mevcutkitap.getAd()}</td>
+              <td>${mevcutkitap.getYazar_ad()}</td>
+	<td>${mevcutkitap.getYazar_soyad()}</td>
+	<td>${mevcutkitap.getYayinevi()}</td>
+	<td>${mevcutkitap.getFiyat()}</td>
+		<td style="width: 50px; text-align: center;"><a href="/keremarca/sepetim?id=${mevcutkitap.getId()}"> 
+			<img border="0" width=”40” height="40" src="https://image.flaticon.com/icons/svg/600/600239.svg"></a></td>
+	</tr>
+	</#list>
+</table>
+<br />
+</html>

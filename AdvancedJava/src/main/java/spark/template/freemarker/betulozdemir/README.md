@@ -6,5 +6,5 @@
 ### Sayfa adları "/<<ad_soyadiniz>>/" şeklinde eşleştirilmeli.
 --> Bulunmuyorsa: -10
 
-### Kod derlenmiyor
+### Kod derlenmiyor / calismiyor
 --> Ciddi Hata: -10

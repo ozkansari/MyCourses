@@ -52,7 +52,7 @@ public class KitapSitesiMain {
             	ozellikler.put("siparis", siparis);
                 ozellikler.put("sepet", siparis.getUrunList());
             	
-                return new ModelAndView(ozellikler, "anasayfa.html");
+                return new ModelAndView(ozellikler, "/ismailsahin/anasayfa.html");
             }
         };
         get(anaSayfaRoute);
@@ -62,7 +62,7 @@ public class KitapSitesiMain {
          */
         FreeMarkerRoute kitapEkleRoute = new FreeMarkerRoute("/ismail_sahin/yonetim/kitap_ekle") {
             public Object handle(Request istek, Response cevap) {
-            	return new ModelAndView(null, "kitap_ekle.html");
+            	return new ModelAndView(null, "/ismailsahin/kitap_ekle.html");
             }
         };
         get(kitapEkleRoute);
@@ -131,7 +131,7 @@ public class KitapSitesiMain {
         /**
          * kitap listele get method
          */
-        FreeMarkerRoute kitapListeleRoute = new FreeMarkerRoute("ismail_sahin/yonetim/kitap_listele") {
+        FreeMarkerRoute kitapListeleRoute = new FreeMarkerRoute("/ismail_sahin/yonetim/kitap_listele") {
             public Object handle(Request istek, Response cevap) {
             	Map<String, Object> ozellikler = new HashMap<String, Object>();
                
@@ -143,7 +143,7 @@ public class KitapSitesiMain {
 				}
             	ozellikler.put("kitaplar", kitapList);
                 
-            	return new ModelAndView(ozellikler, "kitap_listele.html");
+            	return new ModelAndView(ozellikler, "/ismailsahin/kitap_listele.html");
             }
         };
         get(kitapListeleRoute);
@@ -151,7 +151,7 @@ public class KitapSitesiMain {
         /**
          * kitap detay goruntuler get method
          */
-        FreeMarkerRoute kitapDetayRoute = new FreeMarkerRoute("ismail_sahin/yonetim/kitap_detay") {
+        FreeMarkerRoute kitapDetayRoute = new FreeMarkerRoute("/ismail_sahin/yonetim/kitap_detay") {
             public Object handle(Request istek, Response cevap) {
             	Map<String, Object> ozellikler = new HashMap<String, Object>();
             	
@@ -165,7 +165,7 @@ public class KitapSitesiMain {
 				}
             	ozellikler.put("kitap", kitap);
             	
-            	return new ModelAndView(ozellikler, "kitap_detay.html");
+            	return new ModelAndView(ozellikler, "/ismailsahin/kitap_detay.html");
             }
         };
         get(kitapDetayRoute);
@@ -174,14 +174,14 @@ public class KitapSitesiMain {
         /**
          * siparis onay get method
          */
-        Route siparisOnayRoute = new FreeMarkerRoute("ismail_sahin/siparis_onay") {
+        Route siparisOnayRoute = new FreeMarkerRoute("/ismail_sahin/siparis_onay") {
         	public Object handle(Request istek, Response cevap) {
         		Map<String, Object> ozellikler = new HashMap<String, Object>();
                 
         		ozellikler.put("siparis", siparis);
                 ozellikler.put("sepet", siparis.getUrunList());
                 
-            	return new ModelAndView(ozellikler, "siparis_onay.html");
+            	return new ModelAndView(ozellikler, "/ismailsahin/siparis_onay.html");
             }
         };
         get(siparisOnayRoute);
@@ -189,7 +189,7 @@ public class KitapSitesiMain {
         /**
          * siparis onay post method
          */
-        Route siparisOnayPostRoute = new FreeMarkerRoute("ismail_sahin/siparis_onay_post") {
+        Route siparisOnayPostRoute = new FreeMarkerRoute("/ismail_sahin/siparis_onay_post") {
         	public Object handle(Request istek, Response cevap) {
         		Map<String, Object> ozellikler = new HashMap<String, Object>();
 
@@ -212,7 +212,7 @@ public class KitapSitesiMain {
         /**
          * siparis listele get
          */
-        FreeMarkerRoute siparisListeleRoute = new FreeMarkerRoute("ismail_sahin/siparis_listele") {
+        FreeMarkerRoute siparisListeleRoute = new FreeMarkerRoute("/ismail_sahin/siparis_listele") {
             public Object handle(Request istek, Response cevap) {
             	Map<String, Object> ozellikler = new HashMap<String, Object>();
             	
@@ -222,7 +222,7 @@ public class KitapSitesiMain {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-            	return new ModelAndView(ozellikler, "siparis_listele.html");
+            	return new ModelAndView(ozellikler, "/ismailsahin/siparis_listele.html");
             }
         };
         get(siparisListeleRoute);

@@ -143,8 +143,8 @@ public class KitapSitesiMain {
 			@Override
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
-				ozellikler.put("siparisler", SIPARISLER);
-				return new ModelAndView(ozellikler, "siparisonay.html");
+				ozellikler.put("kitaplar", SIPARISLER);
+				return new ModelAndView(ozellikler, "/keremarca/siparisonay.html");
 			}
 		};
 		get(SiparisEklemeSayfasi);
@@ -166,7 +166,7 @@ public class KitapSitesiMain {
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("siparisler", SIPARISLER);
-				return new ModelAndView(ozellikler, "siparisliste.html");
+				return new ModelAndView(ozellikler, "/keremarca/siparisliste.html");
 			}
 		};
 		get(SiparisListelemeSayfasi);
@@ -230,7 +230,7 @@ public class KitapSitesiMain {
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("kitaplar", KITAPLAR);
-				return new ModelAndView(ozellikler, "kitapekle.html");
+				return new ModelAndView(ozellikler, "/keremarca/kitapekle.html");
 			}
 		};
 		get(KitapEkleSayfasi);
@@ -249,7 +249,7 @@ public class KitapSitesiMain {
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("kitaplar", KITAPLAR);
-				return new ModelAndView(ozellikler, "sepetim.html");
+				return new ModelAndView(ozellikler, "/keremarca/sepetim.html");
 			}
 		};
 		get(SepetSayfasi);
@@ -268,7 +268,7 @@ public class KitapSitesiMain {
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("kitaplar", KITAPLAR);
-				return new ModelAndView(ozellikler, "anasayfa.html");
+				return new ModelAndView(ozellikler, "/keremarca/anasayfa.html");
 			}
 		};
 		get(Anasayfa);
@@ -348,7 +348,7 @@ public class KitapSitesiMain {
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("kitaplar", KITAPLAR);
-				return new ModelAndView(ozellikler, "kitapguncelle.html");
+				return new ModelAndView(ozellikler, "/keremarca/kitapguncelle.html");
 			}
 		};
 		get(KitapGuncellemeSayfasi);
@@ -362,7 +362,7 @@ public class KitapSitesiMain {
 	 * 
 	 */
 	private static void KitaplarAnasayfa() {
-		FreeMarkerRoute KitaplarAnasayfa = new FreeMarkerRoute("/keremarca/kitaplaranasayfa") {
+		FreeMarkerRoute KitaplarAnasayfa = new FreeMarkerRoute("/keremarca/kitaplar") {
 			@Override
 			public Object handle(Request arg0, Response arg1) {
 
@@ -370,7 +370,7 @@ public class KitapSitesiMain {
 
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("kitaplar", kitaplar);
-				return new ModelAndView(ozellikler, "kitaplaranasayfa.html");
+				return new ModelAndView(ozellikler, "/keremarca/kitaplaranasayfa.html");
 			}
 		};
 		get(KitaplarAnasayfa);
@@ -391,8 +391,8 @@ public class KitapSitesiMain {
 				List<kitaplar> kitaplar = DerbyVeritabani.KayitlariAl();
 
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
-				ozellikler.put("KitaplariGoruntule", kitaplar);
-				return new ModelAndView(ozellikler, "kitapliste.html");
+				ozellikler.put("kitaplar", kitaplar);
+				return new ModelAndView(ozellikler, "/keremarca/kitapliste.html");
 			}
 		};
 		get(KitaplariGoruntule);

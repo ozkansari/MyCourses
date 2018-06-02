@@ -28,6 +28,7 @@ public class DerbyVeritabaniOrnek {
      */
     private static Connection veritabaniBaglantisi;
     
+    /*
     public static void main(String[] args) {
         
         // IKINCI ADIM -------------------------------------------------
@@ -62,7 +63,7 @@ public class DerbyVeritabaniOrnek {
         
         
     }
-
+	*/
 
     // OZKANS Bu metod kullanilmiyor ????
     

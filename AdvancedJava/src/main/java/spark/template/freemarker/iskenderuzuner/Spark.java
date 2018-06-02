@@ -115,7 +115,7 @@ private static void sepeteEkle(){
             public Object handle(Request arg0, Response arg1) {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("urunler", URUNLER);
-                return new ModelAndView(ozellikler, "kitapekle.html");
+                return new ModelAndView(ozellikler, "/iskenderuzuner/kitapekle.html");
             }
         };
         get(urunEkleSayfasi);
@@ -128,7 +128,7 @@ private static void sepeteEkle(){
                 List<Urun> urunler = DerbyVeritabani.kayitlariAl();
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("urunler", urunler);
-                return new ModelAndView(ozellikler, "urunler.html");
+                return new ModelAndView(ozellikler, "/iskenderuzuner/urunler.html");
             }
         };
         get(sayfa3);
@@ -153,7 +153,7 @@ private static void sepeteEkle(){
             public Object handle(Request arg0, Response arg1) {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("index", URUNLER);
-                return new ModelAndView(ozellikler, "index.html");
+                return new ModelAndView(ozellikler, "/iskenderuzuner/index.html");
             }
         };
         get(urunEkleSayfasi);
@@ -166,7 +166,7 @@ private static void sepeteEkle(){
             public Object handle(Request arg0, Response arg1) {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("kitaplistele", URUNLER);
-                return new ModelAndView(ozellikler, "kitaplistele.html");
+                return new ModelAndView(ozellikler, "/iskenderuzuner/kitaplistele.html");
             }
         };
         get(urunEkleSayfasi);
@@ -178,7 +178,7 @@ private static void sepeteEkle(){
             public Object handle(Request arg0, Response arg1) {
                 Map<String, Object> ozellikler = new HashMap<String, Object>();
                 ozellikler.put("sepet", URUNLER);
-                return new ModelAndView(ozellikler, "sepet.html");
+                return new ModelAndView(ozellikler, "/iskenderuzuner/sepet.html");
             }
         };
         get(urunEkleSayfasi);

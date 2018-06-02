@@ -125,15 +125,15 @@ public class KitapSitesiMain {
     	
        
      
-        FreeMarkerRoute anasayfa = new FreeMarkerRoute("/yesılyuzemre/") {
+        FreeMarkerRoute anasayfa = new FreeMarkerRoute("/yeslyuzemre/") {
             public Object handle(Request istek, Response cevap) {
-                return new ModelAndView(null, "/yesılyuzemre/index.html");
+                return new ModelAndView(null, "/yeslyuzemre/index.html");
             }
         };
         get(anasayfa);
         
    
-        Route sayfa2 = new Route("/yesılyuzemre/kitaplar/json") {
+        Route sayfa2 = new Route("/yeslyuzemre/kitaplar/json") {
             public Object handle(Request istek, Response cevap) {
             	Gson jsonYardimci = new GsonBuilder().setPrettyPrinting().create();
 				return jsonYardimci.toJson(kitaplar);
@@ -142,27 +142,27 @@ public class KitapSitesiMain {
         get(sayfa2);
         
        
-        FreeMarkerRoute kitaplarHtmlSayfa = new FreeMarkerRoute("/yesılyuzemre/kitaplar/html") {
+        FreeMarkerRoute kitaplarHtmlSayfa = new FreeMarkerRoute("/yeslyuzemre/kitaplar/html") {
             public Object handle(Request istek, Response cevap) {
             	Map<String, Object> ozellikler = new HashMap<>();
                 ozellikler.put("kitaplar", kitaplar);
                 
-                return new ModelAndView(ozellikler, "/yesılyuzemre/kitaplar.html");
+                return new ModelAndView(ozellikler, "/yeslyuzemre/kitaplar.html");
             }
         };
         get(kitaplarHtmlSayfa);
         
        
-        FreeMarkerRoute kitaplarEkleHtmlSayfa = new FreeMarkerRoute("/yesılyuzemre/kitaplar/ekle/html") {
+        FreeMarkerRoute kitaplarEkleHtmlSayfa = new FreeMarkerRoute("/yeslyuzemre/kitaplar/ekle/html") {
             public Object handle(Request istek, Response cevap) {
-                return new ModelAndView(null, "/yesılyuzemre/kitaplar_ekle.html");
+                return new ModelAndView(null, "/yeslyuzemre/kitaplar_ekle.html");
             }
         };
         get(kitaplarEkleHtmlSayfa);
         
-        FreeMarkerRoute kitaplarıSilHtmlSayfa = new FreeMarkerRoute("/yesılyuzemre/kitaplar/sil/html") {
+        FreeMarkerRoute kitaplarıSilHtmlSayfa = new FreeMarkerRoute("/yeslyuzemre/kitaplar/sil/html") {
             public Object handle(Request istek, Response cevap) {
-                return new ModelAndView(null, "/yesılyuzemre/kitaplar_ekle.html");
+                return new ModelAndView(null, "/yeslyuzemre/kitaplar_ekle.html");
             }
         };
         get(kitaplarıSilHtmlSayfa);
@@ -170,7 +170,7 @@ public class KitapSitesiMain {
        
      
         
-        Route kitaplarEklePost = new Route("/yesılyuzemre/kitaplar/ekle/post") {
+        Route kitaplarEklePost = new Route("/yeslyuzemre/kitaplar/ekle/post") {
             public Object handle(Request istek, Response cevap) {
             	String kitapAdi = istek.queryParams("kitapadi"); 
             	String yazarAdi = istek.queryParams("yazaradi"); 
@@ -182,14 +182,14 @@ public class KitapSitesiMain {
             	
         		kayitekle(stmt, kitapTabloAdi, kitapAdi, yazarAdi, yazarSoyadi, id);
             	
-                cevap.redirect("/yesılyuzemre/kitaplar/html");
+                cevap.redirect("/yeslyuzemre/kitaplar/html");
                 return null;
             }
         };
         post(kitaplarEklePost);
         
        
-    FreeMarkerRoute yazarlarHtmlSayfa = new FreeMarkerRoute("/yesılyuzemre/yazarlar/html") {
+    FreeMarkerRoute yazarlarHtmlSayfa = new FreeMarkerRoute("/yeslyuzemre/yazarlar/html") {
 			
 			@Override
 			public Object handle(Request request, Response response) {
@@ -202,7 +202,7 @@ public class KitapSitesiMain {
 				
 				Map<String,Object> ozellikler = new HashMap<>() ;
 				ozellikler.put("yazarListesi", yazarListesi);
-				return new ModelAndView(ozellikler , "/yesılyuzemre/yazarlar.html");
+				return new ModelAndView(ozellikler , "/yeslyuzemre/yazarlar.html");
 	
 			
 			}

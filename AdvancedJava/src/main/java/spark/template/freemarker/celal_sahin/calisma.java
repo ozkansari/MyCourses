@@ -20,6 +20,9 @@ public class calisma {
 		veriTabani.veritabaninaBaglan();
 		veriTabani.tablolariOlustur();
 
+		kitapEklemeIslemi();
+		urunEklemeSayfasi();
+		urunlerJson();
 	}
 
 	public static void kitapEklemeIslemi() {
@@ -63,7 +66,7 @@ public class calisma {
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("urunler", kitaplarr);
-				return new ModelAndView(ozellikler, "kitapEkle.html");
+				return new ModelAndView(ozellikler, "/celal_sahin/kitapEkle.html");
 			}
 		};
 		get(urunEkleSayfasi);

@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Siparisler</title>
+<style type="text/css">
+p {
+	text-align: center;
+	background-color: #000000;
+	color: #ffffff;
+	vertical-align: middle;
+}
+
+font {
+	background-color: #000000;
+	color: #ffffff;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+th {
+	width: 250px;
+	height: 30px;
+	background-color: #000000;
+	color: white;
+	text-align: center;
+}
+
+td {
+	width: 250px;
+	height: 30px;
+	text-align: left;
+	color: #000000;
+}
+
+input {
+	width: 120px;
+	height: 30px;
+	background-color: #000000;
+	color: #ffffff;
+	font-size: 15px;
+}
+</style>
+</head>
+<p>
+	<br>
+	<font>Kitap Sitesi - Siparisler</font><br>
+</p>
+<table>
+	<tr>
+		<td style="width: 670px; text-align: left;"><form
+				action="/keremarca/anasayfa" method="get">
+				<input type="submit" value="Anasayfa'ya Don"   </form>
+		</td>
+	
+	</tr>
+</table>
+<table>
+	<tr>
+		<th>Siparis ID</th>
+        <th>Siparis Veren</th>
+      	<th>Toplam Ucret</th>
+		<th>Sil</th>	</tr>
+	<#list siparisler as mevcutsiparis>
+	<tr>
+		<td>${mevcutsiparis.getId()}</td>
+                <td>${mevcutsiparis.getSiparis_veren()}</td>
+				<td>${mevcutsiparis.getToplam_ucret()}</td>
+		<td style="text-align: center;"><a
+			href="/keremarca/siparisler/sil?id=${mevcutsiparis.getId()}"> <img
+				border="0" width=”30” height="30"
+				src="https://image.flaticon.com/icons/svg/64/64022.svg"></a></td>
+	</tr>
+	</#list>
+</table>
+</html>

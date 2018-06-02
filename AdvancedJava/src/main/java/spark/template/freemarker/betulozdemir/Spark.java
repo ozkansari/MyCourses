@@ -8,7 +8,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.omg.CORBA.Request;
+//**************
+//OZKANS DUZELTME
+// import org.omg.CORBA.Request;
+
+import spark.template.freemarker.*;
 
 //**************
 //OZKANS DUZELTME
@@ -28,12 +32,12 @@ public class Spark {
 	 * @param args
 	 */
 	
-/*	
+
 	public static void main(String[] args) {
 
-		VeriTabanı.veritabaniniYukle();
-		VeriTabanı.veritabaninaBaglan();
-		VeriTabanı.tablolariOlustur();
+		VeriTabani.veritabaniniYukle();
+		VeriTabani.veritabaninaBaglan();
+		VeriTabani.tablolariOlustur();
 
 		KİTAPLAR.add(new Kitap(Kitap.ID++, "Kürk Mantolu Madonna", 55, "Sbahattin Ali"));
 		kitaplarJson();
@@ -69,7 +73,7 @@ public class Spark {
 
 	private static void kitapSilmeIslemi() {
 
-		FreeMarkerRoute kitapSilmeIslemi =new FreeMarkerRoute() {
+		FreeMarkerRoute kitapSilmeIslemi =new FreeMarkerRoute("/") {
 			@Override
 			public Object handle(Request istek, Response cevap) {
 
@@ -77,7 +81,7 @@ public class Spark {
 				
 // **********************************
 // OZKANS DUZELTME
-//				VeriTabanı.kitapSil(id);
+//				VeriTabani.kitapSil(id);
 // **********************************
 				// Islem bitince /anasayfaya sayfasina geri don
 				cevap.redirect("/anasayfa");
@@ -104,7 +108,7 @@ public class Spark {
 				// kitap olustur ve listeye ekle
 				Kitap kitap = new Kitap(kitap.ID++, kitapAdi, fiyat, kitapDetayi);
 				// KİTAPLAR.add(kitap);
-				VeriTabanı.kitapEkle(Kitap);
+				VeriTabani.kitapEkle(Kitap);
 
 				// Islem bitince /anasayfa sayfasina geri don
 				cevap.redirect("/anasayfa");
@@ -131,7 +135,7 @@ public class Spark {
 			@Override
 			public Object handle(Request arg0, Response arg1) {
 
-				List<Kitap> kitaplar =VeriTabanı.kayitlariAl();
+				List<Kitap> kitaplar =VeriTabani.kayitlariAl();
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("kitaplar",kitaplar);
 				return new ModelAndView(ozellikler, "anasayfa.html");
@@ -143,5 +147,5 @@ public class Spark {
 // OZKANS DUZELTME
 	}
 // **************
-*/
+
 }

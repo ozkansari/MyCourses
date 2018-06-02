@@ -5,3 +5,7 @@
 
 ### Sayfa adları "/<<ad_soyadiniz>>/" şeklinde eşleştirilmeli.
 --> Bulunmuyorsa: -10
+
+### Celal Sahin, Ahmet Çiloglu, Numan Gungor ortak yapti
+
+### Proje calismiyor , cok eksik
