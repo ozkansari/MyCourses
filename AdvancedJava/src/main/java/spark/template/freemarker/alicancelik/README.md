@@ -10,6 +10,14 @@ Emre Meydan
 
 Gürsel Barış Köksal
 
+### Niye projede 2 ayrı main var? Projenin calistirilacak dosyasi hangisi bu durumda?
+--> Projede 2 main metodu: -5
+
+### Niye urunekle.html ? Muhtemelen birinden eski bir odevi almissiniz. 
+--> Uyumsuz html sayfalar: -5
+
+### Web sayfalariyla java metodlari arasinda baglanti yok:
+
 
 ### Kodlarınız src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmalı.
 --> Bulunmuyor: -10

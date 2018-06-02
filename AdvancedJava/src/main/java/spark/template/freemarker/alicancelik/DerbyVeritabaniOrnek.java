@@ -64,7 +64,7 @@ public class DerbyVeritabaniOrnek {
     }
 
 
-    
+    // OZKANS Bu metod kullanilmiyor ????
     
     public static boolean tablolariSil() {
         try {
