@@ -1,0 +1,27 @@
+<html>
+	<head> <title>Kitap Ekle</title> </head>
+	<body>
+		
+		<#include "/ozkansari/menu.html">
+		
+		<form action="/ozkansari/kitaplar/ekle/post" method="post">
+			Kitap Adi:<br> 
+			<input type="text" name="kitapadi"> 
+			</br> 
+			
+			Yazar Adi:<br> 
+			<input type="text" name="yazaradi"> 
+			
+			</br> 
+			Yazar Soyadi:<br> 
+			<input type="text" name="yazarsoyadi">
+			</br></br>
+			
+			<input type="submit" value="Ekle">
+		</form>
+		
+		<#assign websitesi_adi = "Ozkan Sari">
+		<#include "/ozkansari/footer.html">
+	
+	</body>
+</html>

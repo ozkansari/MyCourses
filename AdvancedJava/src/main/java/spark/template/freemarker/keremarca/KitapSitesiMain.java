@@ -161,7 +161,7 @@ public class KitapSitesiMain {
 	 * 
 	 */
 	private static void SiparisListelemeSayfasi() {
-		FreeMarkerRoute SiparisListelemeSayfasi = new FreeMarkerRoute("/keremarca/siparisliste") {
+		FreeMarkerRoute SiparisListelemeSayfasi = new FreeMarkerRoute("/keremarca/kitaplar/siparisliste") {
 			@Override
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
@@ -190,10 +190,9 @@ public class KitapSitesiMain {
 			@Override
 			public Object handle(Request istek, Response cevap) {
 
-				int id = Integer.valueOf(istek.queryParams("id"));
 				String ad = istek.queryParams("ad");
-				String yazarAd = istek.queryParams("yazar_ad");
-				String yazarSoyad = istek.queryParams("yazar_soyad");
+				String yazarAd = istek.queryParams("yazarAd");
+				String yazarSoyad = istek.queryParams("yazarSoyad");
 				String yayinevi = istek.queryParams("yayinevi");
 
 
@@ -206,7 +205,7 @@ public class KitapSitesiMain {
 					return null;
 				}
 
-				kitaplar kitap = new kitaplar(id, ad, yazarAd, yazarSoyad, yayinevi, fiyat);
+				kitaplar kitap = new kitaplar(KITAPLAR.size()+1, ad, yazarAd, yazarSoyad, yayinevi, fiyat);
 				DerbyVeritabani.KitapEkle(kitap);
 
 				cevap.redirect("/keremarca/kitaplar");

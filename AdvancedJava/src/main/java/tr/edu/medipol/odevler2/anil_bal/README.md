@@ -1,1 +1,0 @@
-Eklemevegosterme derlenmiyordu.

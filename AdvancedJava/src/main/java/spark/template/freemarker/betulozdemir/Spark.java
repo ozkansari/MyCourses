@@ -3,7 +3,8 @@ import static spark.Spark.*;
 // **************
 // OZKANS DUZELTME import Request *;
 //**************
-import java.awt.List;
+//OZKANS Duzeltme  import java.awt.List;
+import java.util.List;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -46,10 +47,10 @@ public class Spark {
 		kitaplariGoruntule();
 
 		// http://localhost:4567/kitapekle
-		kitapEklemeIslemi();
+		//OZKANS Duzeltme kitapEklemeIslemi();
 
 		// http://localhost:4567/kitapekle 'ye gelen POST isteklerine karsila
-	kitapEklemeIslemi();
+		//OZKANS Duzeltme kitapEklemeIslemi();
 
 		// http://localhost:4567/kitapsil 'e gelen POST isteklerine karsila
 		kitapSilmeIslemi();
@@ -92,7 +93,7 @@ public class Spark {
 		get(kitapSilmeIslemi);
 	}
 
-
+	/* OZKANS Derlenmiyordu kapatildi
 	private static void kitapEklemeIslemi() {
 		FreeMarkerRoute kitapEkleIslemi = new FreeMarkerRoute() {
 			@Override
@@ -103,7 +104,7 @@ public class Spark {
 				String kitapDetayi = istek.queryParams("kitapdetay");
 				// urunadi html input text'deki name
 
-				}
+				// OZKANS Duzeltme}
 
 				// kitap olustur ve listeye ekle
 				Kitap kitap = new Kitap(kitap.ID++, kitapAdi, fiyat, kitapDetayi);
@@ -117,17 +118,19 @@ public class Spark {
 			}
 		};
 		post(kitapEkleIslemi); // bu yonlendirme post isteklerini karsilasin
-	}
+		
+	}*/
 
 	private static void kitapEklemeSayfasi() {
-		FreeMarkerRoute urunEkleSayfasi = new FreeMarkerRoute() {
+		FreeMarkerRoute urunEkleSayfasi = new FreeMarkerRoute("") { // OZKANS Duzeltme
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
 				ozellikler.put("kitaplar", KİTAPLAR);
 				return new ModelAndView(ozellikler, "kitapekle.html");
 			}
 		};
-		get(kitapEkleSayfasi);
+		// OZKANS Duzeltme get(kitapEkleSayfasi); 
+		get(urunEkleSayfasi);
 	}
 
 	private static void kitaplariGoruntule() {
@@ -141,7 +144,8 @@ public class Spark {
 				return new ModelAndView(ozellikler, "anasayfa.html");
 			}
 		};
-		get(kitaplari);
+		// OZKANS Duzeltme get(kitaplari);
+		get(kitaplariGoruntule);
 
 // **************
 // OZKANS DUZELTME

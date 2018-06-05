@@ -1,10 +1,10 @@
-## DEGERLENDIRME : 90
+## DEGERLENDIRME : 100
 
 ### Kodlarınız src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmalı.
---> Bulunmuyor: -10
+--> Bulunmuyor: -5
 
 ### Yonlendirmelerde sorunlar var
---> -10
+--> -5
 
 ### Tasarım
---> +10
+--> +5

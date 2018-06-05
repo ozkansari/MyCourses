@@ -159,7 +159,7 @@ public class KitapSitesiMain {
 
         
         // http://localhost:4567/yazarlar/html
-        FreeMarkerRoute yazarlarHtmlSayfa = new FreeMarkerRoute("/anilbali/yazarlar/html") {
+        FreeMarkerRoute yazarlarHtmlSayfa = new FreeMarkerRoute("/anilbal/yazarlar/html") {
 			
 			@Override
 			public Object handle(Request request, Response response) {

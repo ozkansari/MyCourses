@@ -29,7 +29,7 @@ import spark.template.freemarker.FreeMarkerRoute;
 public class KitapSitesiMain {
 
 	private static final String VERITABANI_DIZINI = 
-			".\\.yesılyuzemre\\veritabani\\";
+			".\\.yesilyuzemre\\veritabani\\";
 	
 	private static final String VERITABANI_URL = 
     		"jdbc:derby:" + VERITABANI_DIZINI + ";create=true";

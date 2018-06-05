@@ -170,7 +170,7 @@ public class DerbyVeritabaniOrnek {
     public static boolean tablolariOlustur() {
         try {
             Statement komut = veritabaniBaglantisi.createStatement();
-            String sql = "CREATE TABLE kitap (id int, kitapAdi varchar(30), yazarAdi varchar(30),yazarSoyadi varchar(30),yayinEvi varchar(30) fiyat int)";
+            String sql = "CREATE TABLE kitap (id int, kitapAdi varchar(30), yazarAdi varchar(30),yazarSoyadi varchar(30),yayinEvi varchar(30), fiyat int)";
             komut.executeUpdate(sql);
         } catch (SQLException e) {
             System.out.println("Tablo mevcut olabilir: " + e);

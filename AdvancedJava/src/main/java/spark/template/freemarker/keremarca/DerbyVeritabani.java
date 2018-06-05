@@ -107,7 +107,7 @@ public class DerbyVeritabani {
 	 */
 	public static boolean VeritabaninaBaglan() {
 		try {
-			String VeritabaniDizini = ".\\.veritabani\\";
+			String VeritabaniDizini = ".\\keremarca\\";
 			String url = "jdbc:derby:" + VeritabaniDizini + ";create=true";
 			VeritabaniBaglantisi = DriverManager.getConnection(url);
 		} catch (SQLException e) {
@@ -227,7 +227,7 @@ public class DerbyVeritabani {
 	public static boolean KitapEkle(int id, String ad, String yazarAdi, String yazarSoyadi, String yayinEvi, int fiyat) {
 		try {
 			Statement komut = VeritabaniBaglantisi.createStatement();
-			String sql = "INSERT INTO kitaplar values (" + id + ",'" + ad + "', " + yazarAdi + ",'" + yazarSoyadi + ",'" + yayinEvi + ",'" + fiyat +")";
+			String sql = "INSERT INTO kitaplar values (" + id + ",'" + ad + "', '" + yazarAdi + "','" + yazarSoyadi + "','" + yayinEvi + "'," + fiyat +")";
 			komut.executeUpdate(sql);
 		} catch (SQLException e) {
 			System.out.println("INSERT hatasi: " + e);

@@ -18,10 +18,10 @@ public class SparkOrnek1 {
         DerbyVeritabaniOrnek.veritabaninaBaglan();
         DerbyVeritabaniOrnek.tablolariOlustur();
         
-        merhabaOrnek();
+        // merhabaOrnek();
         
         
-        kitaplarJson();
+        // kitaplarJson();
         
         // http://localhost:4567/urunler2
         kitapGoruntule();
@@ -149,6 +149,8 @@ public class SparkOrnek1 {
     /**
      * 
      */
+    // OZKANS ALAKASIZ
+    /*
     private static void kitaplarJson() {
         Route kitaplarJson = new Route("/kitaplar/json") {
             public Object handle(Request istek, Response cevap) {
@@ -159,10 +161,13 @@ public class SparkOrnek1 {
         };
         get(kitaplarJson);
     }
-
+	*/
+    
     /**
      * 
      */
+    // OZKANS ALAKASIZ
+    /*
     private static void merhabaOrnek() {
         // http://localhost:4567/
         Route sayfa1 = new Route("/") {
@@ -172,6 +177,7 @@ public class SparkOrnek1 {
         };
         get(sayfa1);
     }
+    */
     
     
     

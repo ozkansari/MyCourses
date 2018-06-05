@@ -9,10 +9,10 @@
 -20
 
 ### Kodlarınız src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmalı.
---> Bulunmuyorsa: -10
+--> Bulunmuyorsa: -5
 
 ### Sayfa adları "/<<ad_soyadiniz>>/" şeklinde eşleştirilmeli.
---> Bulunmuyorsa: -10
+--> Bulunmuyorsa: -5
 
 ### Kod derlenmiyorsa
 --> Ufak Hata: -5
@@ -20,8 +20,13 @@
 
 ### Javadoc'lar: 10/10
 
-
-
+### Fonksiyonlar
+- (/20) Ana Sayfa: kitap liste + sepet atma + sepettekiler
+- (/15) Sipariş Onay Sayfası
+- (/15) Kitap ekle (veritabanina kaydet)
+- (/20) Kitap Listele ve Sil (veritabanindan listele ve silme yap)
+- (/15) Kitap Görüntüle/Detay
+- (/15) Sipariş Listele
 
 
 
