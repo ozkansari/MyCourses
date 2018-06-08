@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="tr">
+<meta charset="utf-8" />
+	<head> <title>Yazarlar</title> </head>
+	<body>
+		<#include "/yucelozalp/menu.html">
+		
+		<h1> YAZARLAR</h1>
+		
+		<br/><br/>
+		
+		<#list yazarListesi as y>
+			${y.getYazarAdi()}
+			<br/>
+		</#list>
+		
+		<#assign websitesi_adi = "Yücel Özalp">
+		<#include "/yucelozalp/footer.html">
+		
+	</body>
+</html>

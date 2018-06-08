@@ -1,0 +1,40 @@
+ <#assign sayi = 0>
+ <#list basket as k>
+	<#assign sayi = sayi + 1>
+</#list>
+  <div class="container">
+      <div class="masthead">
+        <h3 class="text-muted text-center">Yücel Kitap</h3>
+		<div class="cart-cup text-right">
+			<p><span id="cart-count">${sayi}</span> <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></p>
+		</div>
+        <nav>
+          <ul class="nav nav-justified">
+            <li><a href="/yucelozalp/kitaplar/html">Kitaplar</a></li>
+             <li><a href="/yucelozalp/basket/html">Sepet</a></li>
+             <li><a href="/yucelozalp/ordersList/html">Siparisimlerim</a></li>
+             <li><a href="/yucelozalp/kitaplar/ekle/html">Kitap Ekle</a></li>
+            <li><a href="/yucelozalp/kitaplar/json">Kitaplar Json Servisi</a></li>
+          </ul>
+        </nav>
+      </div>
+	  <style>
+	  #cart-count{
+		font-weight:bold;
+		font-size:14px;
+		color:black;
+	  }
+	  body > div > div.masthead > div > p{
+		width: 100px;
+		border: 1px solid;
+		text-align: center;
+		padding: 15px;
+		float: right;
+		position: absolute;
+		z-index: 999;
+		left: 74%;
+		top: 2%;
+	  }
+	  <style>
+	
+	  </style>

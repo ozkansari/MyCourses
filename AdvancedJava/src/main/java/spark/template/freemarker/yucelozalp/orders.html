@@ -1,0 +1,134 @@
+<#assign websitesi_adi="Yücel Özalp">
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>${websitesi_adi}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link href="https://getbootstrap.com/docs/3.3/examples/justified-nav/justified-nav.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <#include "/yucelozalp/menu.html">
+
+            <div class="container">
+                <h2>Siparislerini Onayla</h2>
+                <table class="table table-bordered" id="orderList">
+                    <thead>
+                        <tr>
+                            <th>Ürün ID</th>
+                            <th>Ürün Adi</th>
+                            <th>Ürün Adeti</th>
+                            <th>Ürün Fiyati</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <#list basket as k>
+                            <tr>
+                                <td>${k.getBasketid()} </td>
+                                <td>${k.getBasketBookName()} </td>
+                                <td>${k.getQuantity()}</td>
+                                <td>${k.getTotalPrice()}</td>
+                            </tr>
+                        </#list>
+                    </tbody>
+                </table>
+
+                <div class="input-group">
+                    <input type="text" class="form-control" id="name_surname" placeholder="Adiniz soyadiniz" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="address" placeholder="Adresiniz" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="phone" placeholder="Telefon" aria-describedby="basic-addon1">
+                </div>
+
+                <br />
+
+                <input class="btn btn-success" type="submit" onclick="sendList()" value="Satin al">
+            </div>
+
+            <style>
+                .input-group {
+                    margin-bottom: 15px;
+                }
+            </style>
+
+
+            <#include "/yucelozalp/footer.html">
+                <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+                <script>
+
+                    var array = [];
+                    var headers = [];
+                    $('#orderList th').each(function (index, item) {
+                        headers[index] = $(item).text();
+                    });
+                    $('#orderList tr').has('td').each(function () {
+                        var arrayItem = {};
+                        $('td', $(this)).each(function (index, item) {
+                            arrayItem[headers[index]] = $(item).text();
+                        });
+                        array.push(arrayItem);
+                    });
+
+					var number;
+					var id;
+					
+                    function sendList() {
+						number = Math.random() 
+						number.toString(36); 
+						id = number.toString(36).substr(2, 9);	
+						
+						try {
+						if($("#name_surname").val() == "" || $("#address").val() == "" || $("#phone").val() == "") {
+							alert("Lütfen gerekli alanlari doldurun!!");
+						}
+						else {
+							for (i = 0; i < array.length; i++) {
+									
+									var data = {
+										book_name: array[i]["Ürün Adi"],
+										book_id: array[i]["Ürün ID"],
+										quantity: array[i]["Ürün Adeti"],
+										price: array[i]["Ürün Fiyati"],
+										name_surname: $("#name_surname").val(),
+										address: $("#address").val(),
+										phone: $("#phone").val(),
+										orderid: id
+									};
+
+		 
+									$.ajax({
+										url: "/yucelozalp/orders/post",
+										type: "post",
+										data: data,
+										success: function (response) {
+											console.log("Basarili!!");
+										},
+										error: function (jqXHR, textStatus, errorThrown) {
+											console.log(textStatus, errorThrown);
+										}
+									});
+								}
+								
+							}
+							
+						}
+						catch(err) {
+								console.log(err);
+						}
+                       
+                    }
+
+
+
+                </script>
+    </body>
+</html>
