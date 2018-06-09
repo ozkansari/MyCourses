@@ -3,6 +3,27 @@ Teslim Tarihi: 31 Mayis 23:59 (Raporunuzu ozkan.sari@outlook.com e-posta ile gön
 
 Sunum Tarihi: 02.06.2018 13:00 MYO LAB. (IMAC)
 
+**************************************************************************
+Degerlendirme:
+
+* [ /5] Spring Boot Projesi (Ekle/Görüntüle/Sil)  - Aciklama
+* [ /15] Githuba commit
+* [ /10] Rapor Düzeni & Aciklamalar
+* [ /5] Javadoc
+* [ /10] JUnit/Birim Test
+* [ /5] Test kapsama (Coverage)
+* [ /5] Maven site
+* [ /15] Travis CI & Codecov.io
+* [ /15] Jenkins - Github maven build
+* [ /10] SonarQube - Jenkins tetikleme
+* [ /5] Postman
+* [ /10] Jmeter
+* [ /10] UML
+---------------------------
+* [ /120] Toplam
+
+**************************************************************************
+
 Maven (Bkz. Hafta 4-5) kullanarak bir Spring Boot projesi (Bkz. Hafta 10) gelistireceksiniz. Projenizde su REST servisler bulunacak:
 
 Ögrenci Ekleme

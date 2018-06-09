@@ -1,10 +1,12 @@
-# YAZILIM GELİŞTİRME ORTAM ve ARACLARI
+# YAZILIM GELISTIRME ORTAM ve ARACLARI
 2018 BAHAR
 
 Dersler Cumartesi 12:00-13:00 ve 13:15-14:30 arasında iki oturum halinde yapılacaktır.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
 
-## FİNAL PROJESİ
+## Final Notlarınız girilmistir. Mebisten kontrol ediniz. Itiraziniz yoksa sınav kapatilacaktir.
+
+## FINAL PROJESI
 
 Teslim Tarihi: 31 Mayıs 23:59 (Raporunuzu ozkan.sari@outlook.com e-posta ile gönderebilirsiniz)
 
