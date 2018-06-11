@@ -1,4 +1,4 @@
-# FİNAL PROJE - Kitap Satış Sitesi
+# FİNAL PROJE - Kitap Satis Sitesi
 
 ********************************************************************************
 
@@ -8,10 +8,10 @@
 ### Gec gonderim
 -20
 
-### Kodlarınız src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmalı.
+### Kodlariniz src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmali.
 --> Bulunmuyorsa: -5
 
-### Sayfa adları "/<<ad_soyadiniz>>/" şeklinde eşleştirilmeli.
+### Sayfa adlari "/<<ad_soyadiniz>>/" seklinde eslestirilmeli.
 --> Bulunmuyorsa: -5
 
 ### Kod derlenmiyorsa
@@ -22,52 +22,52 @@
 
 ### Fonksiyonlar
 - (/20) Ana Sayfa: kitap liste + sepet atma + sepettekiler
-- (/15) Sipariş Onay Sayfası
+- (/15) Siparis Onay Sayfasi
 - (/15) Kitap ekle (veritabanina kaydet)
 - (/20) Kitap Listele ve Sil (veritabanindan listele ve silme yap)
-- (/15) Kitap Görüntüle/Detay
-- (/15) Sipariş Listele
+- (/15) Kitap Goruntule/Detay
+- (/15) Siparis Listele
 
 
 
 ********************************************************************************
 
-Teslim Tarihi: 31 Mayıs 23:59 ozkan.sari@outlook.com adresine sadece kod dosyalarınızı gönderiniz. Geç teslim kabul edilmeyecektir. Sunum Tarihi: 2 Haziran 10:00 MYO LAB. (İMAC)
+Teslim Tarihi: 31 Mayis 23:59 ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Geç teslim kabul edilmeyecektir. Sunum Tarihi: 2 Haziran 10:00 MYO LAB. (İMAC)
 
-Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacaktır.
+Sunum notu dusuk olan ogrenciden yuksek olana dogru sirayla yapilacaktir.
 
-Ön yüz Spark Java ile veritabanı bağlantıları Apache Derby ile maven projesi olarak gerçekleştirilmeli.
+On yuz Spark Java ile veritabani baglantilari Apache Derby ile maven projesi olarak gerçeklestirilmeli.
 
-Veritabani Tabloları
-kitaplar: id, adi, yazar adi, yazar soyadi, yayinevi, fiyatı
-siparişler: id, sipariş veren, toplam ucret
-Önemli Noktalar
-Maven projesi olmalı.
-Kodlarınız src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmalı.
-Sayfa adları "/<<ad_soyadiniz>>/<<sayfa_adi>>" şeklinde eşleştirilmeli.
-Derste kullanılan teknolojiler / kütüphaneler dışında bir kütüphane kullanılmamalı. (Derby DB & Spark Java)
-Tüm kodunuz javadoc ile dokümante edilmiş olmalı.
-Kodunuz okunaklı, düzgün formatlanmış ve anlaşılır olmalı. Değişken, metod, class vb yerlerde türkçe karakter kullanılmamalı.
-Sayfalar ortak ve güzel bir tasarıma ve ilgili sayfalar arasında geçiş için menüye sahip olmalı. Gösterimde türkçe karakter problemi bulunmamalı.
-Kitap Listesi Sayfası
-Ana Sayfa : ** Kitaplar listelenecek (veritabani kitaplar tablosu) ** Listelenen her bir kitap hakkında temel bilgiler gösterilecek. ** Listelenen her bir ürün için Sepete Ekle butonu bulunacak. Butona basıldığında aynı sayfada kalınacak. ** Sayfanın bir köşesinde sepet bilgisi görünütülenecek. Sepete Eklendikçe sepettekiler de güncellenecek.
+Veritabani Tablolari
+kitaplar: id, adi, yazar adi, yazar soyadi, yayinevi, fiyati
+siparisler: id, siparis veren, toplam ucret
+Onemli Noktalar
+Maven projesi olmali.
+Kodlariniz src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmali.
+Sayfa adlari "/<<ad_soyadiniz>>/<<sayfa_adi>>" seklinde eslestirilmeli.
+Derste kullanilan teknolojiler / kutuphaneler disinda bir kutuphane kullanilmamali. (Derby DB & Spark Java)
+Tum kodunuz javadoc ile dokumante edilmis olmali.
+Kodunuz okunakli, duzgun formatlanmis ve anlasilir olmali. Degisken, metod, class vb yerlerde turkçe karakter kullanilmamali.
+Sayfalar ortak ve guzel bir tasarima ve ilgili sayfalar arasinda geçis için menuye sahip olmali. Gosterimde turkçe karakter problemi bulunmamali.
+Kitap Listesi Sayfasi
+Ana Sayfa : ** Kitaplar listelenecek (veritabani kitaplar tablosu) ** Listelenen her bir kitap hakkinda temel bilgiler gosterilecek. ** Listelenen her bir urun için Sepete Ekle butonu bulunacak. Butona basildiginda ayni sayfada kalinacak. ** Sayfanin bir kosesinde sepet bilgisi gorunutulenecek. Sepete Eklendikçe sepettekiler de guncellenecek.
 
-Sepet ** Sepetteki ürünler miktarıyla birlikte listelenecek (Ör.2 defa sepete eklenmiş olabilir) ** Sipariş ver butonu olacak. Tıklanınca sipariş onay sayfasına gidilecek.
+Sepet ** Sepetteki urunler miktariyla birlikte listelenecek (Or.2 defa sepete eklenmis olabilir) ** Siparis ver butonu olacak. Tiklaninca siparis onay sayfasina gidilecek.
 
-Sipariş Onay Sayfası ** Sipariş görüntülenecek. ** Adres girişi yapılacak. ** Sipariş Onay tuşuna basınca, veritabani siparisler tablosuna kayıt atılacak.
+Siparis Onay Sayfasi ** Siparis goruntulenecek. ** Adres girisi yapilacak. ** Siparis Onay tusuna basinca, veritabani siparisler tablosuna kayit atilacak.
 
-Yönetim Sayfaları
-Sayfa adları "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" şeklinde eşleştirilmeli.
+Yonetim Sayfalari
+Sayfa adlari "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" seklinde eslestirilmeli.
 
 Kitap ekle (veritabanina kaydet)
 Kitap Listele ve Sil (veritabanindan listele ve silme yap)
-Kitap Görüntüle/Detay
-Sipariş Listele
+Kitap Goruntule/Detay
+Siparis Listele
 Bonus
 Kitap kategorilendirme (Roman,Hikaye,Klasikler vb.)
-Sipariş sayfasında kk bilgisi vs. alma
-Satın alma entegrasyonu: https://dev.iyzipay.com/tr veya https://developer.mastercard.com/product/masterpass (Test API)
-Siparişlerle kitaplari baglantilandirma (bir kolonda virgül ile kitap idlerini tutabilirsiniz)
-Sık Sorulan Sorular?
-Fazla karışık olmamak kaydıyla hazır şablon kullanabilirsiniz.
-Derste öğrendiğiniz üzere, Maven projesinde html, ftl, imaj, properties, js vb. dosyalar src/main/resources/ altına konulabilir.
+Siparis sayfasinda kk bilgisi vs. alma
+Satin alma entegrasyonu: https://dev.iyzipay.com/tr veya https://developer.mastercard.com/product/masterpass (Test API)
+Siparislerle kitaplari baglantilandirma (bir kolonda virgul ile kitap idlerini tutabilirsiniz)
+Sik Sorulan Sorular?
+Fazla karisik olmamak kaydiyla hazir sablon kullanabilirsiniz.
+Derste ogrendiginiz uzere, Maven projesinde html, ftl, imaj, properties, js vb. dosyalar src/main/resources/ altina konulabilir.

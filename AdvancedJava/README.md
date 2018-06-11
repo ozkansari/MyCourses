@@ -1,137 +1,294 @@
 # ILERI JAVA UYGULAMALARI 2018 BAHAR
 
-Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasında iki oturum halinde yapılacaktır.
-Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan not verilecektir.
+Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasinda iki oturum halinde yapilacaktir.
+Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katilimdan not verilecektir.
 
-## FİNAL PROJE - Kitap Satış Sitesi
+## BUTUNLEME PROJESI - SparkJava ile Web Projesi
 
-Teslim Tarihi: 31 Mayıs 23:59 ozkan.sari@outlook.com adresine sadece kod dosyalarınızı gönderiniz. Geç teslim kabul edilmeyecektir.
+Teslim Tarihi: İlan edilen Bütünleme gününden 2 gün önce. Orneğin, Bütünleme 30 Haziran ise 28 Haziran 23:59'a kadar gönderilmeli. Gec gönderim kabul edilmeyecektir.
+
+Butunleme sinavi zamani, projelerinizi sunmaniz/anlatmaniz istenecektir.
+
+### Onemli Noktalar
+
+* Spark JAVA 1.1.1 ve Apache Derby 10.11.1.1 versiyonlari kullanilmali. Derste ogretilenler disinda bir teknoloji kullanilmamali.
+* Bütünleme zamani kodunuzu aciklamaniz istenecektir. Eğer aciklayamazsaniz, projeyi sizin yapmadiğiniz düsünülecektir.
+* Proje maven projesi olmali.
+* Kodlariniz (java ve html) src/main altinda "spark/template/freemarker/ad_soyadiniz" paketi icerisinde bulunmali.
+* Sayfa adlari "/ad_soyadiniz/sayfa_adi" seklinde eslestirilmeli.
+* Her bir sayfa icin ayri java sinifi olusturulmali. Tum bu ayri java siniflari, main metodu iceren ana bir Program sinifindan cagrilmali.
+* Uygulamanizda tek bir main metodu bulunmali.
+* Tüm kodunuz javadoc ile dokümante edilmis olmali.
+* Kodunuz okunakli, düzgün formatlanmis ve anlasilir olmali. Değisken, metod, class vb yerlerde türkce karakter kullanilmamali.
+
+### Veritabani Tablolari
+
+#### "kullanicilar" tablosu: kullanici_adi, kullanici_tipi, yas, cinsiyet, sifre
+
+* kullanici_adi: Ayni kullanici adina sahip iki kullanici bulunamaz. (Silme islemleri kullanici_adi uzerinden yapilabilir)
+* kullanici_tipi: Ekrandan girilmemeli, "2. Kullanici Olusturma Sayfasi"ndan girislerde "NORMAL" degeri atanmali. Uygulamada iki tip kullanici olacak: NORMAL ve ADMIN. ADMIN kullanici uygulama acilirken java kodu ile bir defaya mahsus tabloya eklenecek (insert). Yani zaten admin kullanici varsa tabloya kayıt olarak eklenmemeli. 
+* yas: yanlizca sayi girisine izin verilmeli.
+* cinsiyet: K ya da E degerleri alabilir.
+* sifre: Harf ve rakam girilebilir. kullanici_adi ve sifre birlikte giris islemlerinde kullanilacak.
+
+### Proje Odevi Aciklamasi
+
+#### 1. Giris Sayfasi:
+
+    Yönlendirme adresi: "http://localhost:4567//<<ad_soyadiniz>>/giris_sayfasi"
+
+Burada standart bir giris ekrani yapmanizi istiyorum. 
+* "Kullanici Adi" ve "Şifre" girisi yapildiktan sonra, kullanici "Giris" butonuna bastiginda, java kodu tarafinda kullanici ve sifre bilgileri kontrol edilecek.
+* "Kullanici Adi" ve "Şifre" bilgileri veritabanindaki "kullanicilar" tablosundaki kayitlardan kontrol edilmeli.
+* Eger girilen "Kullanici Adi" ve "Şifre" bilgileri, veritabanindaki "kullanicilar" tablosundaki her hangi bir kayit ile eslesiyorsa, sayfa "3. Normal Kullanici Anasayfa"sina yonlendirilmeli. Aksi durumda, ayni sayfaya bir hata mesajiyla geri donulmeli.
+* "Kullanici Olustur" baglantisina tiklandiginda ise "2. Kullanici Olusturma Sayfasi"na yonlendirilmeli.
+* Eger islemlerde bir hata cikarsa, "5. Hata Sayfasi" ekranina yonlendirilecek.
+
+Ornek Sayfa tasarimi:
+
+    / - - - - - - - - - - - - - - - - - - - - - - - - - - /
+    
+    (Hata mesaji varsa burada goruntulensin)
+    
+    Kullanici Adi: |_________________________| (Bos girise izin verme)
+    
+    Şifre:         |_________________________| (Bos girise izin verme)
+    
+    << Giris >> (Submit button)
+    
+    << Kullanici Olustur >> (Kullanici Olusturma Sayfasina baglanti)
+    
+     / - - - - - - - - - - - - - - - - - - - - - - - - - - /
+
+#### 2. Kullanici Olusturma Sayfasi:
+
+    Yönlendirme adresi: "http://localhost:4567//<<ad_soyadiniz>>/uye_sayfasi"
+
+Ekrandan "Kullanici Adi", "Yas", "Cinsiyet", "Sifre" girisleri yapildiktan sonra:
+* "Uye Ol" butonuna basildiginda, , java kodu tarafinda veritabanindaki "kullanicilar" tablosuna ekleme islemi yapilacak. Eger islemde bir hata cikarsa, "5. Hata Sayfasi" ekranina yonlendirilecek.
+* "Vazgec" baglantisina tiklandiginda "1. Giris Sayfasi" sayfasina geri donulecek.
+
+Ornek Sayfa tasarimi:
+
+    / - - - - - - - - - - - - - - - - - - - - - - - - - - /
+    
+    Kullanici Adi: |_________________________| (Bos girise izin verme)
+    
+    Yas:           |_________________________| (Bos girise izin verme)
+    
+    Cinsiyet:      |_________________________| (Bos girise izin verme)
+    
+    Sifre:         |_________________________| (Bos girise izin verme)
+    
+    << Uye Ol >> (Submit button)
+    
+    << Vazgec >> (Giris sayfasina geri dönecek)
+    
+     / - - - - - - - - - - - - - - - - - - - - - - - - - - /
+
+
+#### 3. Normal Kullanici Anasayfa: 
+
+    Yönlendirme adresi: "http://localhost:4567/<<ad_soyadiniz>>/"
+
+Bu sayfanin goruntulenmesine, eger giris yapilmamissa izin verilmemeli.
+Eger "1. Giris Sayfasi" uzerinden kullanici girisi yapilmadiysa, sayfanin goruntulenmesi engellenecek ve "1. Giris Sayfasi" adresine geri yonlendirilecek.
+Sayfa goruntulendiginde, sistemdeki tum kullanicilar bilgileriyle tek tek her biri bir kutucuk icinde olmak uzere goruntulenebilmeli.
+
+Ornek Sayfa tasarimi:
+
+    / - - - - - - - - - - - - - - - - - - - - - - - - - - /
+    
+    / - - - /
+    Kullanici 1
+    / - - - /
+    
+    / - - - /
+    Kullanici 2
+    / - - - /
+    
+    ....
+    
+    / - - - - - - - - - - - - - - - - - - - - - - - - - - /
+
+#### 4. ADMIN Kullanici Anasayfa: 
+
+    Yönlendirme adresi: "http://localhost:4567/<<ad_soyadiniz>>/yonetici/"
+
+Bu sayfanin goruntulenmesine, eger giris yapilmamissa ve giris yapan kullanici tipi ADMIN degilse izin verilmemeli.
+Eger "1. Giris Sayfasi" uzerinden kullanici girisi yapilmadiysa, sayfanin goruntulenmesi engellenecek ve "1. Giris Sayfasi" adresine geri yonlendirilecek.
+Eger giris yapan kullanici tipi ADMIN degilse "5. Hata Sayfasi" ekranina yonlendirilecek.
+Sayfa goruntulendiginde, sistemdeki tum kullanicilar tablo halinde gosterilmeli ve her bir kullanici yaninda sil baglantisi bulunmali.
+Sil baglantisina tiklandiginda, java kodu tarafinda kullanicilar tablosundan secilen kullanicinin silme islemi gerceklesmeli ve sonrasinda islem basariliysa mevcut kalan kullanicilari gosterecek sekilde ayn sayfaya donulmeli. 
+Eger islemde bir hata cikarsa, "5. Hata Sayfasi" ekranina yonlendirilecek.v
+
+Ornek Sayfa tasarimi:
+
+    / - - - - - - - - - - - - - - - - - - - - - - - - - -  
+    KULLANICI ADI		ISLEM
+    / - - - - - /      / - - - - - /
+    Kullanici 1        <<sil>>   
+    Kullanici 2        <<sil>>
+    ....
+    
+    / - - - - - - - - - - - - - - - - - - - - - - - - - - /
+
+
+#### 5. Hata Sayfasi: 
+
+    Yönlendirme adresi: "http://localhost:4567/<<ad_soyadiniz>>/hata/"
+
+Normal tipteki bir kullanici "4. ADMIN Kullanici Anasayfa" ekranna eirsmeye calisirsa ya da uygulamada bir hata cikarsa, uygun bir mesajla birlikte bu sayfaya yonlendirilecek.
+
+Ornek Sayfa tasarimi:
+
+    / - - - - - - - - - - - - - - - - - - - - - - - - - - /
+    
+    HATA
+    
+    (Hata mesaji)
+    
+    / - - - - - - - - - - - - - - - - - - - - - - - - - - /
+
+------------------------------------------------------------
+
+
+## FİNAL PROJE - Kitap Satis Sitesi
+
+Teslim Tarihi: 31 Mayis 23:59 ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gönderiniz. Gec teslim kabul edilmeyecektir.
 Sunum Tarihi: 2 Haziran 10:00 MYO LAB. (İMAC)
 
-Sunum notu düşük olan öğrenciden yüksek olana doğru sırayla yapılacaktır.
+Sunum notu düsük olan öğrenciden yüksek olana doğru sirayla yapilacaktir.
 
-Ön yüz Spark Java ile veritabanı bağlantıları Apache Derby ile maven projesi olarak gerçekleştirilmeli.
+On yüz Spark Java ile veritabani bağlantilari Apache Derby ile maven projesi olarak gerceklestirilmeli.
 
-### Veritabani Tabloları
+### Veritabani Tablolari
 
-* kitaplar: id, adi, yazar adi, yazar soyadi, yayinevi, fiyatı
-* siparişler: id, sipariş veren, toplam ucret
+* kitaplar: id, adi, yazar adi, yazar soyadi, yayinevi, fiyati
+* siparisler: id, siparis veren, toplam ucret
 
-### Önemli Noktalar
+### Onemli Noktalar
 
-* Maven projesi olmalı.
-* Kodlarınız src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmalı.
-* Sayfa adları "/<<ad_soyadiniz>>/<<sayfa_adi>>" şeklinde eşleştirilmeli.
-* Derste kullanılan teknolojiler / kütüphaneler dışında bir kütüphane kullanılmamalı. (Derby DB & Spark Java)
-* Tüm kodunuz javadoc ile dokümante edilmiş olmalı.
-* Kodunuz okunaklı, düzgün formatlanmış ve anlaşılır olmalı. Değişken, metod, class vb yerlerde türkçe karakter kullanılmamalı.
-* Sayfalar ortak ve güzel bir tasarıma ve ilgili sayfalar arasında geçiş için menüye sahip olmalı. Gösterimde türkçe karakter problemi bulunmamalı.
+* Maven projesi olmali.
+* Kodlariniz (java ve html) src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi icerisinde bulunmali.
+* Sayfa adlari "/<<ad_soyadiniz>>/<<sayfa_adi>>" seklinde eslestirilmeli.
+* Derste kullanilan teknolojiler / kütüphaneler disinda bir kütüphane kullanilmamali. (Derby DB & Spark Java)
+* Tüm kodunuz javadoc ile dokümante edilmis olmali.
+* Kodunuz okunakli, düzgün formatlanmis ve anlasilir olmali. Değisken, metod, class vb yerlerde türkce karakter kullanilmamali.
+* Sayfalar ortak ve güzel bir tasarima ve ilgili sayfalar arasinda gecis icin menüye sahip olmali. Gösterimde türkce karakter problemi bulunmamali.
 
-### Kitap Listesi Sayfası
+### Kitap Listesi Sayfasi
 
 * Ana Sayfa : 
   ** Kitaplar listelenecek (veritabani kitaplar tablosu)
-  ** Listelenen her bir kitap hakkında temel bilgiler gösterilecek. 
-  ** Listelenen her bir ürün için Sepete Ekle butonu bulunacak. Butona basıldığında aynı sayfada kalınacak.
-  ** Sayfanın bir köşesinde sepet bilgisi görünütülenecek. Sepete Eklendikçe sepettekiler de güncellenecek.
+  ** Listelenen her bir kitap hakkinda temel bilgiler gösterilecek. 
+  ** Listelenen her bir ürün icin Sepete Ekle butonu bulunacak. Butona basildiğinda ayni sayfada kalinacak.
+  ** Sayfanin bir kösesinde sepet bilgisi görünütülenecek. Sepete Eklendikce sepettekiler de güncellenecek.
 
 * Sepet
-  ** Sepetteki ürünler miktarıyla birlikte listelenecek (Ör.2 defa sepete eklenmiş olabilir)
-  ** Sipariş ver butonu olacak. Tıklanınca sipariş onay sayfasına gidilecek.
+  ** Sepetteki ürünler miktariyla birlikte listelenecek (Or.2 defa sepete eklenmis olabilir)
+  ** Siparis ver butonu olacak. Tiklaninca siparis onay sayfasina gidilecek.
   
-* Sipariş Onay Sayfası
-  ** Sipariş görüntülenecek.
-  ** Adres girişi yapılacak.
-  ** Sipariş Onay tuşuna basınca, veritabani siparisler tablosuna kayıt atılacak.
+* Siparis Onay Sayfasi
+  ** Siparis görüntülenecek.
+  ** Adres girisi yapilacak.
+  ** Siparis Onay tusuna basinca, veritabani siparisler tablosuna kayit atilacak.
 
-### Yönetim Sayfaları
+### Yönetim Sayfalari
 
-Sayfa adları "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" şeklinde eşleştirilmeli.
+Sayfa adlari "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" seklinde eslestirilmeli.
 
 * Kitap ekle (veritabanina kaydet)
 * Kitap Listele ve Sil (veritabanindan listele ve silme yap)
 * Kitap Görüntüle/Detay
-* Sipariş Listele
+* Siparis Listele
 
 ### Bonus
 
 * Kitap kategorilendirme (Roman,Hikaye,Klasikler vb.)
-* Sipariş sayfasında kk bilgisi vs. alma
-* Satın alma entegrasyonu: https://dev.iyzipay.com/tr veya https://developer.mastercard.com/product/masterpass (Test API)
-* Siparişlerle kitaplari baglantilandirma (bir kolonda virgül ile kitap idlerini tutabilirsiniz)
+* Siparis sayfasinda kk bilgisi vs. alma
+* Satin alma entegrasyonu: https://dev.iyzipay.com/tr veya https://developer.mastercard.com/product/masterpass (Test API)
+* Siparislerle kitaplari baglantilandirma (bir kolonda virgül ile kitap idlerini tutabilirsiniz)
 
-### Sık Sorulan Sorular?
+### Sik Sorulan Sorular?
 
-* Fazla karışık olmamak kaydıyla hazır şablon kullanabilirsiniz. 
-* Derste öğrendiğiniz üzere, Maven projesinde html, ftl, imaj, properties, js vb. dosyalar src/main/resources/ altına konulabilir.
+* Fazla karisik olmamak kaydiyla hazir sablon kullanabilirsiniz. 
 
+------------------------------------------------------------
 
 ## VIZE SONRASI ODEVLER
 
 ### VIZE SONRASI ODEV-1
-( _Teslim Tarihi:11 Mayıs Cuma 23:59:59_ )
-Java Swing GUI uygulamasi olarak bir "Öğrenci Ekleme ve Görüntüleme" uygulaması geliştirmelisiniz. 
+( _Teslim Tarihi:11 Mayis Cuma 23:59:59_ )
+Java Swing GUI uygulamasi olarak bir "Oğrenci Ekleme ve Görüntüleme" uygulamasi gelistirmelisiniz. 
 
-Uygulamada yalnızca "Öğrenci ekleme" seçeneği bulunacaktır. Ayrıca eklenen öğrenciler, ekranda görüntülenecektir.
+Uygulamada yalnizca "Oğrenci ekleme" seceneği bulunacaktir. Ayrica eklenen öğrenciler, ekranda görüntülenecektir.
 
-Öğrenci eklerken "Ad ve Soyad", "Bölüm", "Giriş Yılı" vb. bilgiler girdi olarak alınacaktır. Boş girişe izin verilmemelidir. Ayrıca "Giriş Yılı" alanına sayı dışında bir değer girilmesine izin verilmemelidir.
+Oğrenci eklerken "Ad ve Soyad", "Bölüm", "Giris Yili" vb. bilgiler girdi olarak alinacaktir. Bos girise izin verilmemelidir. Ayrica "Giris Yili" alanina sayi disinda bir değer girilmesine izin verilmemelidir.
 
-Öğrenci Eklerken ID bilgisi sorulmayacak, ID sistem tarafından otomatik atanmalıdır. Görüntülerken ID bilgisi gösterilecektir.
+Oğrenci Eklerken ID bilgisi sorulmayacak, ID sistem tarafindan otomatik atanmalidir. Görüntülerken ID bilgisi gösterilecektir.
 
-Eklenen öğrenciler Apache Derby dosya tabanlı veritabanına yazılmalı (INSERT) ve gösterilirken veri tabanından alınmalıdır (SELECT).
+Eklenen öğrenciler Apache Derby dosya tabanli veritabanina yazilmali (INSERT) ve gösterilirken veri tabanindan alinmalidir (SELECT).
+
+------------------------------------------------------------
 
 ## VİZE PROJE
 
-### Teslim Tarihi: 20 Nisan Cuma 23:59:59'a kadar ozkan.sari@outlook.com adresine sadece kod dosyalarınızı gönderiniz. Geç teslim kabul edilmeyecektir.
+### Teslim Tarihi: 20 Nisan Cuma 23:59:59'a kadar ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gönderiniz. Gec teslim kabul edilmeyecektir.
 
-Vize Saatinde Projelerinizi Derste Sunacaksınız. 
+Vize Saatinde Projelerinizi Derste Sunacaksiniz. 
 Sunum yapmayanlardan -40 puan eksiltilerek not verilecektir.
-Aynı ve benzer proje teslimlerini kopya olarak değerlendirilecektir
+Ayni ve benzer proje teslimlerini kopya olarak değerlendirilecektir
 
 ### Aciklama: 
 
-Java Swing GUI uygulamasi olarak çalışan bir "Kütüphane Yönetim" uygulaması geliştirmelisiniz. 
+Java Swing GUI uygulamasi olarak calisan bir "Kütüphane Yönetim" uygulamasi gelistirmelisiniz. 
 
-Uygulamada menu halinde aşağıdaki seçenekler bulunacaktır: 
-* Yayın evi ekle : Yayın evi adı ve e-posta adresi girdi olarak alınacaktır. Eklenen yayınevleri kitap eklemede seçenek olarak sunulacaktır. E-posta adresi eklemede düzenli ifade (regular expression) kontrolü yapılmalıdır. Hatalı formatta e-posta girişine izin verilmemelidir. Aynı şekilde boş girişe de izin verilmemelidir.
-* Kitap Ekle : Sistemde eklenmiş yayın evi yoksa kitap eklemeye izin verilmemelidir. Kitap eklerken kitap adı, yazarı, türü, yayın evi, sayfa sayısı vb. sorular sorulacaktır. Yayın evi için sisteme eklenenler arasından seçim yaptırılmalıdır. Sayfa sayısı alanına sayı dışında bir değer girilmesine izin verilmemelidir. Aynı şekilde boş girişe de izin verilmemelidir.
-* Kitapları Listele : Kitaplar bilgileriyle birlikte listelenebilecektir. Listelenen kitapların yanında silme seçeneği de bulunacaktır.
-* Çıkış: Uygulamadan çıkış
+Uygulamada menu halinde asağidaki secenekler bulunacaktir: 
+* Yayin evi ekle : Yayin evi adi ve e-posta adresi girdi olarak alinacaktir. Eklenen yayinevleri kitap eklemede secenek olarak sunulacaktir. E-posta adresi eklemede düzenli ifade (regular expression) kontrolü yapilmalidir. Hatali formatta e-posta girisine izin verilmemelidir. Ayni sekilde bos girise de izin verilmemelidir.
+* Kitap Ekle : Sistemde eklenmis yayin evi yoksa kitap eklemeye izin verilmemelidir. Kitap eklerken kitap adi, yazari, türü, yayin evi, sayfa sayisi vb. sorular sorulacaktir. Yayin evi icin sisteme eklenenler arasindan secim yaptirilmalidir. Sayfa sayisi alanina sayi disinda bir değer girilmesine izin verilmemelidir. Ayni sekilde bos girise de izin verilmemelidir.
+* Kitaplari Listele : Kitaplar bilgileriyle birlikte listelenebilecektir. Listelenen kitaplarin yaninda silme seceneği de bulunacaktir.
+* Çikis: Uygulamadan cikis
 
-Uygulama çıkışta sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kaldigi yerden devam edebilmesi icin dosyadan kayitlari okuyacaktir. 
+Uygulama cikista sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kaldigi yerden devam edebilmesi icin dosyadan kayitlari okuyacaktir. 
 
-Önemli noktalar:
-* Uygulamanızda Kitap ve Yayinevi isimli sınıflar tanımlanmalı ve bunlar sistemde ArrayList olarak tutulmalı.
-* Kullanıcı girişlerinde boş girişlere ya da sayfa sayısı gibi sayı beklenen yerlere harf girişine izin verilmemelidir.
+Onemli noktalar:
+* Uygulamanizda Kitap ve Yayinevi isimli siniflar tanimlanmali ve bunlar sistemde ArrayList olarak tutulmali.
+* Kullanici girislerinde bos girislere ya da sayfa sayisi gibi sayi beklenen yerlere harf girisine izin verilmemelidir.
+
+------------------------------------------------------------
 
 ## VIZE ODEVLER
 
+
 ### VIZE ODEV-1
 
-* 1-) *Hayvan* sınıfı ve bundan türeyen *Kedi*, *Kopek*, *Zurafa* vb. sınıflar olusturulacak. 
+* 1-) *Hayvan* sinifi ve bundan türeyen *Kedi*, *Kopek*, *Zurafa* vb. siniflar olusturulacak. 
 * 2-) Programin calisacagi main metodu iceren *HayvanatBahcesi* isimli bir sinif yapilacak.
-* 3-) HayvanatBahcesi sinifi icine *sesCikar* isimli bir metod yapilacak. Bu metod *sesSeviyesi* ve *Hayvan* siniflarini parametre alacak. Bu metod icerisinde parametre alinan hayvan nesnesinin tipine gore (Kedi,Kopek,Zurafa vb.) uygun ses ekrana yazilacak. Uygun sesin ekrana yazilmasi icin ilgili hayvan sınıflarına metod da tanımlanabilir.
+* 3-) HayvanatBahcesi sinifi icine *sesCikar* isimli bir metod yapilacak. Bu metod *sesSeviyesi* ve *Hayvan* siniflarini parametre alacak. Bu metod icerisinde parametre alinan hayvan nesnesinin tipine gore (Kedi,Kopek,Zurafa vb.) uygun ses ekrana yazilacak. Uygun sesin ekrana yazilmasi icin ilgili hayvan siniflarina metod da tanimlanabilir.
 
     private static int sesCikar(int sesSeviyesi, Hayvan hayvan)
 
-*İpucu:* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/src/main/java/tr/edu/medipol/hafta02/IleriMatematik.java sınıfındaki islemYap() metodundan fikir alabilirsiniz.
+*İpucu:* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/src/main/java/tr/edu/medipol/hafta02/IleriMatematik.java sinifindaki islemYap() metodundan fikir alabilirsiniz.
 
-Odevleri *ozkan.sari@outlook.com* adresine (projenin tümünü değil) sadece kaynak dosyaları zipleyip gönderiniz.
+Odevleri *ozkan.sari@outlook.com* adresine (projenin tümünü değil) sadece kaynak dosyalari zipleyip gönderiniz.
 
 ### VIZE ODEV -2 
 
-List<String> kullanımı ile hafta 5'te yapılan [örneği](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/src/main/java/tr/edu/medipol/hafta05/DosyaOkumaYazma3.java) , List<OgrenciBilgi> seklinde String yerine tanımlayacağınız OgrenciBilgi sinifi kullanarak yapınız.
+List<String> kullanimi ile hafta 5'te yapilan [örneği](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/src/main/java/tr/edu/medipol/hafta05/DosyaOkumaYazma3.java) , List<OgrenciBilgi> seklinde String yerine tanimlayacağiniz OgrenciBilgi sinifi kullanarak yapiniz.
 
 Bunun icin,
-* OgrenciBilgi isimli bir class osuturun ve icine ogrenciAdSoyad isimli bir String nesne degişkeni ekleyin. Değişkenin private olmasına dikkat edin.
-* Daha sonra OgrenciBilgi sınıfını programınızda Dosya okurken, kullanıcıdan girdi alırken ve dosyaya yazarken kullanın.
-* Programdaki tüm List<String> kullanımları List<OgrenciBilgi>  şeklinde değişmiş olmalı.
+* OgrenciBilgi isimli bir class osuturun ve icine ogrenciAdSoyad isimli bir String nesne degiskeni ekleyin. Değiskenin private olmasina dikkat edin.
+* Daha sonra OgrenciBilgi sinifini programinizda Dosya okurken, kullanicidan girdi alirken ve dosyaya yazarken kullanin.
+* Programdaki tüm List<String> kullanimlari List<OgrenciBilgi>  seklinde değismis olmali.
+
+------------------------------------------------------------
 
 ## DERS ICERIKLERI
 
 * [SUNUMLAR](https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava/_docs)
 
-### Hafta 1-2-3 : Java Konu Tekrarları
+### Hafta 1-2-3 : Java Konu Tekrarlari
 
 * [1a_JavaProgramlamayaGiris](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/01a_JavaProgramlamayaGiris.pdf)
 * [2a_Basit_veri_turleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/02a_Basit_veri_turleri.pdf)
@@ -141,7 +298,7 @@ Bunun icin,
 * [3b_Operatorler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/03b_Operatorler.pdf)
 * [3c_Donguler](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/03c_Donguler.pdf)
 * [3d_Karar_Ifadeleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/03d_Karar_Ifadeleri.pdf)
-* [3e_Faydalı_Metotlar](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/03e_Faydal%C4%B1_Metotlar.pdf)
+* [3e_Faydali_Metotlar](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/03e_Faydal%C4%B1_Metotlar.pdf)
 * [3f_Karakter_String_Islemleri](https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/03f_Karakter_String_Islemleri.pdf)
 
 ### Hafta 4 : Diziler, Zaman, Duzenli Ifadeler (regular Expressions)
