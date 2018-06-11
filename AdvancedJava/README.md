@@ -5,7 +5,7 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katilimdan no
 
 ## BUTUNLEME PROJESI - SparkJava ile Web Projesi
 
-Teslim Tarihi: İlan edilen Bütünleme gününden 2 gün önce. Orneğin, Bütünleme 30 Haziran ise 28 Haziran 23:59'a kadar gönderilmeli. Gec gönderim kabul edilmeyecektir.
+Teslim Tarihi: İlan edilen Bütünleme gününden 2 gün önce ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gönderiniz. Orneğin, Bütünleme 30 Haziran ise 28 Haziran 23:59'a kadar gönderilmeli. Gec gönderim kabul edilmeyecektir.
 
 Butunleme sinavi zamani, projelerinizi sunmaniz/anlatmaniz istenecektir.
 
