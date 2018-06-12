@@ -8,9 +8,9 @@
 **************************************************************************
 Degerlendirme:
 
-* [5/5] Spring Boot Projesi (Ekle/Görüntüle/Sil)  - Aciklama
+* [5/5] Spring Boot Projesi (Ekle/Goruntule/Sil)  - Aciklama
 * [8/15] Githuba commit
-* [3/10] Rapor Düzeni & Aciklamalar
+* [3/10] Rapor Duzeni & Aciklamalar
 * [3/5] Javadoc
 * [ /10] JUnit/Birim Test
 * [2/5] Test kapsama (Coverage)

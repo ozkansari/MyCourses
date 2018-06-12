@@ -10,9 +10,9 @@ Unit Test yok, coverage yok
 **************************************************************************
 Degerlendirme:
 
-* [3/5] Spring Boot Projesi (Ekle/Görüntüle/Sil)  - Aciklama
+* [3/5] Spring Boot Projesi (Ekle/Goruntule/Sil)  - Aciklama
 * [5/15] Githuba commit
-* [4/10] Rapor Düzeni & Aciklamalar
+* [4/10] Rapor Duzeni & Aciklamalar
 * [4/5] Javadoc
 * [ /10] JUnit/Birim Test
 * [ /5] Test kapsama (Coverage)

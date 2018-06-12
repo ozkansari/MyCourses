@@ -16,7 +16,7 @@ Sunum Tarihi: 02.06.2018 13:00 MYO LAB. (İMAC)
 
  *Maven* (Bkz. Hafta 4-5) kullanarak bir *Spring Boot* projesi (Bkz. Hafta 10) geliştireceksiniz. Projenizde şu REST servisler bulunacak: 
 - Öğrenci Ekleme
-- Öğrenci Görüntüleme
+- Öğrenci Goruntuleme
 - Öğrenci Silme
 
 https://github.com/ozkansari/FinalProje Örnek alınabilir.

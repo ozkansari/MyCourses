@@ -14,5 +14,5 @@
 - (/15) Sipariş Onay Sayfası
 - (5/15) Kitap ekle (veritabanina kaydet)
 - (5/20) Kitap Listele ve Sil (veritabanindan listele ve silme yap)
-- (5/15) Kitap Görüntüle/Detay
+- (5/15) Kitap Goruntule/Detay
 - (/15) Sipariş Listele

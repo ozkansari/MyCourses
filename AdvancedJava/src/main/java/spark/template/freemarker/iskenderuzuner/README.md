@@ -21,6 +21,6 @@
 - (5/15) Sipariş Onay Sayfası: arka plana baglanti eksik
 - (15/15) Kitap ekle (veritabanina kaydet)
 - (5/20) Kitap Listele ve Sil (veritabanindan listele ve silme yap) : statik icerik
-- (5/15) Kitap Görüntüle/Detay
+- (5/15) Kitap Goruntule/Detay
 - (5/15) Sipariş Listele
 

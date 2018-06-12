@@ -200,7 +200,7 @@ Sayfa adlari "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" seklinde eslestirilmeli.
 
 * Kitap ekle (veritabanina kaydet)
 * Kitap Listele ve Sil (veritabanindan listele ve silme yap)
-* Kitap Görüntüle/Detay
+* Kitap Goruntule/Detay
 * Siparis Listele
 
 ### Bonus
@@ -220,13 +220,13 @@ Sayfa adlari "/<<ad_soyadiniz>>/yonetim/<<sayfa_adi>>" seklinde eslestirilmeli.
 
 ### VIZE SONRASI ODEV-1
 ( _Teslim Tarihi:11 Mayis Cuma 23:59:59_ )
-Java Swing GUI uygulamasi olarak bir "Oğrenci Ekleme ve Görüntüleme" uygulamasi gelistirmelisiniz. 
+Java Swing GUI uygulamasi olarak bir "Oğrenci Ekleme ve Goruntuleme" uygulamasi gelistirmelisiniz. 
 
 Uygulamada yalnizca "Oğrenci ekleme" seceneği bulunacaktir. Ayrica eklenen öğrenciler, ekranda görüntülenecektir.
 
 Oğrenci eklerken "Ad ve Soyad", "Bölüm", "Giris Yili" vb. bilgiler girdi olarak alinacaktir. Bos girise izin verilmemelidir. Ayrica "Giris Yili" alanina sayi disinda bir değer girilmesine izin verilmemelidir.
 
-Oğrenci Eklerken ID bilgisi sorulmayacak, ID sistem tarafindan otomatik atanmalidir. Görüntülerken ID bilgisi gösterilecektir.
+Oğrenci Eklerken ID bilgisi sorulmayacak, ID sistem tarafindan otomatik atanmalidir. Goruntulerken ID bilgisi gösterilecektir.
 
 Eklenen öğrenciler Apache Derby dosya tabanli veritabanina yazilmali (INSERT) ve gösterilirken veri tabanindan alinmalidir (SELECT).
 
