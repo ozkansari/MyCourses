@@ -6,8 +6,6 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katılımdan 
 
 ## BUTUNLEME YAZILI SINAV OLACAKTIR. VIZEDEKINE BENZER SORULAR CIKACAKTIR.
 
-## Final Notlarınız girilmistir. Mebisten kontrol ediniz. Itiraziniz yoksa sınav kapatilacaktir.
-
 ## FINAL PROJESI
 
 Teslim Tarihi: 31 Mayıs 23:59 (Raporunuzu ozkan.sari@outlook.com e-posta ile gönderebilirsiniz)
