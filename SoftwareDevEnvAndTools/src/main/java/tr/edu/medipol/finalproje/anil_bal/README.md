@@ -6,7 +6,7 @@ Code cov analizi eksik
 
 unit test yok
 
-coverage ölçülemedi
+coverage olculemedi
 
 javadoc kodda ve rapor olarak yok
 

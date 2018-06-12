@@ -2,9 +2,9 @@ githuba commitlemeye calismis ama hatali
 kodda javadoc yok ama javadoc raporu olusturamamamis
 REST servisinde sil yok
 Jenkinsden maven proje tetikleme
-Postman ekran görüntüsü başka yerden
+Postman ekran goruntusu baska yerden
 Raporda aciklamalar yok
-JMeter çalistiramamis
+JMeter calistiramamis
 Unit Test yok, coverage yok 
 
 **************************************************************************

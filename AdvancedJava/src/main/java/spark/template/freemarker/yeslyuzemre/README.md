@@ -11,8 +11,8 @@
 
 ### Fonksiyonlar
 - (5/20) Ana Sayfa: kitap liste + sepet atma + sepettekiler: Bos sayfa, statik icerikle doldurulmus
-- (/15) Sipariş Onay Sayfası
+- (/15) Siparis Onay Sayfasi
 - (5/15) Kitap ekle (veritabanina kaydet)
 - (5/20) Kitap Listele ve Sil (veritabanindan listele ve silme yap)
 - (5/15) Kitap Goruntule/Detay
-- (/15) Sipariş Listele
+- (/15) Siparis Listele

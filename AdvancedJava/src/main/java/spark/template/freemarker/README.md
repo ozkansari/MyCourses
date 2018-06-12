@@ -1,4 +1,4 @@
-# FİNAL PROJE - Kitap Satis Sitesi
+# FiNAL PROJE - Kitap Satis Sitesi
 
 ********************************************************************************
 
@@ -8,7 +8,7 @@
 ### Gec gonderim
 -20
 
-### Kodlariniz src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmali.
+### Kodlariniz src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi icerisinde bulunmali.
 --> Bulunmuyorsa: -5
 
 ### Sayfa adlari "/<<ad_soyadiniz>>/" seklinde eslestirilmeli.
@@ -32,25 +32,25 @@
 
 ********************************************************************************
 
-Teslim Tarihi: 31 Mayis 23:59 ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Geç teslim kabul edilmeyecektir. Sunum Tarihi: 2 Haziran 10:00 MYO LAB. (İMAC)
+Teslim Tarihi: 31 Mayis 23:59 ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Gec teslim kabul edilmeyecektir. Sunum Tarihi: 2 Haziran 10:00 MYO LAB. (iMAC)
 
 Sunum notu dusuk olan ogrenciden yuksek olana dogru sirayla yapilacaktir.
 
-On yuz Spark Java ile veritabani baglantilari Apache Derby ile maven projesi olarak gerçeklestirilmeli.
+On yuz Spark Java ile veritabani baglantilari Apache Derby ile maven projesi olarak gerceklestirilmeli.
 
 Veritabani Tablolari
 kitaplar: id, adi, yazar adi, yazar soyadi, yayinevi, fiyati
 siparisler: id, siparis veren, toplam ucret
 Onemli Noktalar
 Maven projesi olmali.
-Kodlariniz src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmali.
+Kodlariniz src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi icerisinde bulunmali.
 Sayfa adlari "/<<ad_soyadiniz>>/<<sayfa_adi>>" seklinde eslestirilmeli.
 Derste kullanilan teknolojiler / kutuphaneler disinda bir kutuphane kullanilmamali. (Derby DB & Spark Java)
 Tum kodunuz javadoc ile dokumante edilmis olmali.
-Kodunuz okunakli, duzgun formatlanmis ve anlasilir olmali. Degisken, metod, class vb yerlerde turkçe karakter kullanilmamali.
-Sayfalar ortak ve guzel bir tasarima ve ilgili sayfalar arasinda geçis için menuye sahip olmali. Gosterimde turkçe karakter problemi bulunmamali.
+Kodunuz okunakli, duzgun formatlanmis ve anlasilir olmali. Degisken, metod, class vb yerlerde turkce karakter kullanilmamali.
+Sayfalar ortak ve guzel bir tasarima ve ilgili sayfalar arasinda gecis icin menuye sahip olmali. Gosterimde turkce karakter problemi bulunmamali.
 Kitap Listesi Sayfasi
-Ana Sayfa : ** Kitaplar listelenecek (veritabani kitaplar tablosu) ** Listelenen her bir kitap hakkinda temel bilgiler gosterilecek. ** Listelenen her bir urun için Sepete Ekle butonu bulunacak. Butona basildiginda ayni sayfada kalinacak. ** Sayfanin bir kosesinde sepet bilgisi gorunutulenecek. Sepete Eklendikçe sepettekiler de guncellenecek.
+Ana Sayfa : ** Kitaplar listelenecek (veritabani kitaplar tablosu) ** Listelenen her bir kitap hakkinda temel bilgiler gosterilecek. ** Listelenen her bir urun icin Sepete Ekle butonu bulunacak. Butona basildiginda ayni sayfada kalinacak. ** Sayfanin bir kosesinde sepet bilgisi gorunutulenecek. Sepete Eklendikce sepettekiler de guncellenecek.
 
 Sepet ** Sepetteki urunler miktariyla birlikte listelenecek (Or.2 defa sepete eklenmis olabilir) ** Siparis ver butonu olacak. Tiklaninca siparis onay sayfasina gidilecek.
 

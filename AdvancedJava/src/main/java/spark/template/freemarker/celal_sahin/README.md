@@ -1,12 +1,12 @@
 ## DEGERLENDIRME
 
-### Kodlarınız src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmalı.
+### Kodlariniz src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi icerisinde bulunmali.
 --> Bulunmuyor: -5
 
-### Sayfa adları "/<<ad_soyadiniz>>/" şeklinde eşleştirilmeli.
+### Sayfa adlari "/<<ad_soyadiniz>>/" seklinde eslestirilmeli.
 --> Bulunmuyorsa: -5
 
-### Celal Sahin, Ahmet Çiloglu, Numan Gungor ortak yapti: -5
+### Celal Sahin, Ahmet ciloglu, Numan Gungor ortak yapti: -5
 
 ### Proje calismiyor , cok eksik
 
@@ -14,8 +14,8 @@
 
 ### Fonksiyonlar
 - (/20) Ana Sayfa: kitap liste + sepet atma + sepettekiler
-- (/15) Sipariş Onay Sayfası
+- (/15) Siparis Onay Sayfasi
 - (15/15) Kitap ekle (veritabanina kaydet)
 - (/20) Kitap Listele ve Sil (veritabanindan listele ve silme yap)
 - (5/15) Kitap Goruntule/Detay
-- (/15) Sipariş Listele
+- (/15) Siparis Listele

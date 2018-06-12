@@ -1,10 +1,10 @@
 ## DEGERLENDIRME : 100
 
-### Kodlarınız src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi içerisinde bulunmalı.
+### Kodlariniz src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>" paketi icerisinde bulunmali.
 --> Bulunmuyor: -5
 
 ### Yonlendirmelerde sorunlar var
 --> -5
 
-### Tasarım
+### Tasarim
 --> +5

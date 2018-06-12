@@ -4,7 +4,7 @@
 
 ### Umut Meric commitlemis
 https://github.com/cumhuroksuz/FinalProjesi/commit/83e51ce97dd835d561a3500e24c104d3d71f6d3e
-Umut Meriç authored and Umut Meriç committed 9 days ago
+Umut Meric authored and Umut Meric committed 9 days ago
 
 **************************************************************************
 Degerlendirme:

@@ -1,29 +1,29 @@
 // ----------------------------------------------------------
 // DEGERLENDIRME : 100
 
-* Yayın evi ekle : 
-** (5/5) Yayın evi adı ve e-posta adresi girdi olarak alınacaktır. 
-** Eklenen yayınevleri kitap eklemede seçenek olarak sunulacaktır. 
-** (10/10) E-posta adresi eklemede düzenli ifade (regular expression) kontrolü yapılmalıdır. Hatalı formatta e-posta girişine izin verilmemelidir. 
-** (5/5) Aynı şekilde boş girişe de izin verilmemelidir.
+* Yayin evi ekle : 
+** (5/5) Yayin evi adi ve e-posta adresi girdi olarak alinacaktir. 
+** Eklenen yayinevleri kitap eklemede secenek olarak sunulacaktir. 
+** (10/10) E-posta adresi eklemede duzenli ifade (regular expression) kontrolu yapilmalidir. Hatali formatta e-posta girisine izin verilmemelidir. 
+** (5/5) Ayni sekilde bos girise de izin verilmemelidir.
 
 * Kitap Ekle : 
-** (0/5) Sistemde eklenmiş yayın evi yoksa kitap eklemeye izin verilmemelidir. 
-** (5/5) Kitap eklerken kitap adı, yazarı, türü, yayın evi, sayfa sayısı vb. sorular sorulacaktır. 
-** (10/10) Yayın evi için sisteme eklenenler arasından seçim yaptırılmalıdır. 
-** (5/5) Sayfa sayısı alanına sayı dışında bir değer girilmesine izin verilmemelidir. 
-** (5/5) Aynı şekilde boş girişe de izin verilmemelidir.
+** (0/5) Sistemde eklenmis yayin evi yoksa kitap eklemeye izin verilmemelidir. 
+** (5/5) Kitap eklerken kitap adi, yazari, turu, yayin evi, sayfa sayisi vb. sorular sorulacaktir. 
+** (10/10) Yayin evi icin sisteme eklenenler arasindan secim yaptirilmalidir. 
+** (5/5) Sayfa sayisi alanina sayi disinda bir deger girilmesine izin verilmemelidir. 
+** (5/5) Ayni sekilde bos girise de izin verilmemelidir.
 
-* Kitapları Listele : 
+* Kitaplari Listele : 
 ** (10/10) Kitaplar bilgileriyle birlikte listelenebilecektir. 
-** (10/10) Listelenen kitapların yanında silme seçeneği de bulunacaktır.
+** (10/10) Listelenen kitaplarin yaninda silme secenegi de bulunacaktir.
 
-* (5/5) Çıkış: Uygulamadan çıkış
+* (5/5) cikis: Uygulamadan cikis
 
-* (10/15) Uygulama çıkışta sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kaldigi yerden devam edebilmesi icin dosyadan kayitlari okuyacaktir.
+* (10/15) Uygulama cikista sistemdeki kayitlari dosyaya yazacak ve uygulama acilirken kaldigi yerden devam edebilmesi icin dosyadan kayitlari okuyacaktir.
 --> Acilirken dosya bulunamazsa hata vermemeli
 
-* (10/10) Uygulamanızda Kitap ve Yayinevi isimli sınıflar tanımlanmalı ve bunlar sistemde ArrayList olarak tutulmalı.
+* (10/10) Uygulamanizda Kitap ve Yayinevi isimli siniflar tanimlanmali ve bunlar sistemde ArrayList olarak tutulmali.
 
 //----------------------------------------------------------
 DIGER:

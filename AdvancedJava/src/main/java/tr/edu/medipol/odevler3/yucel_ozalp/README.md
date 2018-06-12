@@ -1,7 +1,7 @@
 
-### Form/IDE editor kullanımı: -20
+### Form/IDE editor kullanimi: -20
 ### Gec gonderim: -5
-### Ana ekran ile pencereler arasında baglanti yok
+### Ana ekran ile pencereler arasinda baglanti yok
 
 ### Veritabani hatali - Dosya veritabani kullanilmamis:
 

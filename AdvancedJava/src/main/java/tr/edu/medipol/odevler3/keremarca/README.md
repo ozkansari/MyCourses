@@ -1,4 +1,4 @@
-Hocam istediğiniz ödev için yaklaşık 12 13 saat uğraştım. Derby bağlantısı hata veriyor ve bu kütüphaneyi ne yaptıysam ekleyemedim. Sürümlerden dolayı sorun yaşadım. Uygulama içerisinde yorum satırına aldığım kısımlar db kısımları. Hata verdikleri için yorum satırına aldım.
+Hocam istediginiz odev icin yaklasik 12 13 saat ugrastim. Derby baglantisi hata veriyor ve bu kutuphaneyi ne yaptiysam ekleyemedim. Surumlerden dolayi sorun yasadim. Uygulama icerisinde yorum satirina aldigim kisimlar db kisimlari. Hata verdikleri icin yorum satirina aldim.
 
 ### Projede main metodu yok: -5
 ### TR karakter sorunlari: -5
