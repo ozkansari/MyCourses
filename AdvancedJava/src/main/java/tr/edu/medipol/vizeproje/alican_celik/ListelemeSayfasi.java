@@ -13,7 +13,7 @@ public class ListelemeSayfasi extends JFrame implements DosyaIslemleri {
     JTable KitapTablosu = new JTable();
     JButton ekle = new JButton("Ekle");
     JButton sil = new JButton();
-    JLabel hata = new JLabel("onay vermeden tıklayamazsınız");
+    JLabel hata = new JLabel("onay vermeden tiklayamazsiniz");
     JTextField id_text = new JTextField();
     JTextField yayinevi_text = new JTextField();
     JTextField yazaradi_text = new JTextField();
@@ -23,12 +23,12 @@ public class ListelemeSayfasi extends JFrame implements DosyaIslemleri {
     JCheckBox onay = new JCheckBox();
     JComboBox yayinevleri_combobox = new JComboBox();
 
-    JLabel yayinevi_label = new JLabel("Yayınevi");
+    JLabel yayinevi_label = new JLabel("Yayinevi");
     JLabel idlabel = new JLabel("ID");
-    JLabel yazaradi_label = new JLabel("YazarAdı");
-    JLabel kitapadi_label = new JLabel("KitapAdı");
-    JLabel kitapturu_label = new JLabel("KitapTürü");
-    JLabel sayfasayisi_label = new JLabel("SayfaSayısı");
+    JLabel yazaradi_label = new JLabel("YazarAdi");
+    JLabel kitapadi_label = new JLabel("KitapAdi");
+    JLabel kitapturu_label = new JLabel("KitapTuru");
+    JLabel sayfasayisi_label = new JLabel("SayfaSayisi");
 
 JButton yayinevi_buton = new JButton("Yayinevi");
 
@@ -36,7 +36,7 @@ JButton yayinevi_buton = new JButton("Yayinevi");
 
 
         this.setLayout(null);
-        this.setTitle("Kitaplık");
+        this.setTitle("Kitaplik");
         this.setSize(800, 700);
         this.setAlwaysOnTop(true);
         this.setVisible(true);
@@ -75,7 +75,7 @@ JButton yayinevi_buton = new JButton("Yayinevi");
         onay.setBounds(450, 500, 50, 50);
         yayinevleri_combobox.setBounds(470, 110, 150, 50);
 
-        String denemecombobox[] = {"can yayınevi","asdasd yayınevi"};
+        String denemecombobox[] = {"can yayinevi","asdasd yayinevi"};
         ComboBoxModel model = new DefaultComboBoxModel(denemecombobox);
         yayinevleri_combobox.setModel(model);
 
@@ -119,7 +119,7 @@ JButton yayinevi_buton = new JButton("Yayinevi");
                 
                 // OZKANS DUZELTME Oku("C:\\Users\\alica\\Desktop\\kitap.txt");
             	/* OZKANS DUZELTME */ Oku(".\\config\\kitap.txt");
-                System.out.println("bana bastın");
+                System.out.println("bana bastin");
 
                 break;
             }
@@ -191,7 +191,7 @@ JButton yayinevi_buton = new JButton("Yayinevi");
             printWriter = new PrintWriter(new FileOutputStream(dosya, true));
 
 
-            System.out.println("Kayıt oluşturuldu!!!");
+            System.out.println("Kayit olusturuldu!!!");
             printWriter.format(id_text.getText()+"#"+yayinevleri_combobox.getSelectedItem()+"#"+yazaradi_text.getText()+"#"+kitapadi_text.getText()+"#"+kitapturu_text.getText()+"#"+sayfasayisi_text.getText()).println();
             sayfasayisi_text.setText("");
             kitapturu_text.setText("");

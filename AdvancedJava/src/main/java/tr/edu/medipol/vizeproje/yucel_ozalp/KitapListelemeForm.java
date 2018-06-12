@@ -58,30 +58,30 @@ public class KitapListelemeForm extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Kitaplar - Kütüphane Otomasyonu");
+        setTitle("Kitaplar - Kutuphane Otomasyonu");
         setLocation(new java.awt.Point(600, 200));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("KİTAPLAR");
+        jLabel1.setText("KiTAPLAR");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Kitap Adı", "Kitap Yazarı", "Kitap Türü", "Kitap Sayfa Sayısı", "Kitap Yayın Evi"
+                "Kitap Adi", "Kitap Yazari", "Kitap Turu", "Kitap Sayfa Sayisi", "Kitap Yayin Evi"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton1.setText("KİTABI SİL");
+        jButton1.setText("KiTABI SiL");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("GERİ");
+        jButton2.setText("GERi");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);

@@ -10,9 +10,9 @@ public class Siparis_detay {
 	private String adres;
 
 	/**
-	 * @param isim sipariş detayı için isim alınır
-	 * @param email sipariş detayı için email alınır
-	 * @param adres sipariş detayı için adres alınır
+	 * @param isim siparis detayi icin isim alinir
+	 * @param email siparis detayi icin email alinir
+	 * @param adres siparis detayi icin adres alinir
 	 */
 	public Siparis_detay(String isim, String email, String adres) {
 		this.isim = isim;
@@ -21,7 +21,7 @@ public class Siparis_detay {
 	}
 
 	/**
-	 * @return string veri tipinde döndürür 
+	 * @return string veri tipinde dondurur 
 	 */
 	public String getIsim() {
 		return isim;
@@ -35,7 +35,7 @@ public class Siparis_detay {
 	}
 
 	/**
-	 * @return string veri tipinde döndürür 
+	 * @return string veri tipinde dondurur 
 	 */
 	public String getEmail() {
 		return email;
@@ -49,7 +49,7 @@ public class Siparis_detay {
 	}
 
 	/**
-	 * @return string veri tipinde döndürür 
+	 * @return string veri tipinde dondurur 
 	 */
 	public String getAdres() {
 		return adres;

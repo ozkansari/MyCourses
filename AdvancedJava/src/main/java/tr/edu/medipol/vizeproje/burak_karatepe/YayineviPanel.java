@@ -40,7 +40,7 @@ public class YayineviPanel extends JPanel{
         
 		sonuc.setOpaque(true);
 		JPanel adpanel=new JPanel();
-		adpanel.add(new JLabel("Adı"));
+		adpanel.add(new JLabel("Adi"));
 		adpanel.add(ad);
 		this.add(adpanel);
 		JPanel epostapanel=new JPanel();
@@ -54,11 +54,11 @@ public class YayineviPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
             	if(!base.isValidEmailAddress(eposta.getText())) {
             		sonuc.setBackground(Color.red);
-            		sonuc.setText("Geçersiz email!");
+            		sonuc.setText("Gecersiz email!");
             		return;
             	}else if(ad.getText() == null || ad.getText().isEmpty()) {
             		sonuc.setBackground(Color.red);
-            		sonuc.setText("Geçersiz Ad!");
+            		sonuc.setText("Gecersiz Ad!");
             		return;
             	}
             	sonuc.setBackground(Color.green);

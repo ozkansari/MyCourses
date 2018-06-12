@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class App extends JFrame {
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Kent Kütüphanesi");
+        JFrame frame = new JFrame("Kent Kutuphanesi");
 
         JPanel GUI = new JPanel();
         GUI.setLayout(null);
@@ -27,7 +27,7 @@ public class App extends JFrame {
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 JOptionPane but1 = new JOptionPane();
-                but1.showMessageDialog(null,"Mevcut kitaplarimiz: x, y, z, t, ü,..." );
+                but1.showMessageDialog(null,"Mevcut kitaplarimiz: x, y, z, t, u,..." );
                 }
         });
 
@@ -40,7 +40,7 @@ public class App extends JFrame {
         button2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 JOptionPane but2 = new JOptionPane();
-                but2.showMessageDialog(null,"Kitabi bulunan yazarlar: xxx, yyyy, zzz, ttt, üüüü,..." );
+                but2.showMessageDialog(null,"Kitabi bulunan yazarlar: xxx, yyyy, zzz, ttt, uuuu,..." );
             }
         });
 
@@ -53,7 +53,7 @@ public class App extends JFrame {
         button3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 JOptionPane but3 = new JOptionPane();
-                but3.showMessageDialog(null,"Yayin Evleri: x, y, z, t, ü,..." );
+                but3.showMessageDialog(null,"Yayin Evleri: x, y, z, t, u,..." );
             }
         });
 

@@ -60,22 +60,22 @@ public class Numan3 {
 				ogrenciEkle.setTitle("Kitap Ekleme Application ");
 				ogrenciEkle.setLayout(new GridLayout(5, 1));
 
-				JLabel ad = new JLabel("Adınızı Giriniz:");
+				JLabel ad = new JLabel("Adinizi Giriniz:");
 				ogrenciEkle.add(ad);
 				final JTextField adGiris = new JTextField();
 				ogrenciEkle.add(adGiris);
 
-				JLabel soyad = new JLabel("Soyadınızı Giriniz:");
+				JLabel soyad = new JLabel("Soyadinizi Giriniz:");
 				ogrenciEkle.add(soyad);
 				final JTextField soyadGiris = new JTextField();
 				ogrenciEkle.add(soyadGiris);
 
-				JLabel bolum = new JLabel("Bolum Adını Giriniz:");
+				JLabel bolum = new JLabel("Bolum Adini Giriniz:");
 				ogrenciEkle.add(bolum);
 				final JTextField bolumGiris = new JTextField();
 				ogrenciEkle.add(bolumGiris);
 
-				JLabel girisYili = new JLabel("Giris Yilinızı Giriiz:");
+				JLabel girisYili = new JLabel("Giris Yilinizi Giriiz:");
 				ogrenciEkle.add(girisYili);
 				final JTextField girisYiliYazi = new JTextField();
 				ogrenciEkle.add(girisYiliYazi);
@@ -94,7 +94,7 @@ public class Numan3 {
 						Matcher eslestiriciGirisYili = sablonNesnesi.matcher(girisYiliYazi.getText());
 						boolean eslestiMiGirisYili = eslestiriciGirisYili.find();
 
-						String bos = "[a-zA-Z[ğüişöç0-9]]";
+						String bos = "[a-zA-Z[guisoc0-9]]";
 
 						Pattern bosNesne = Pattern.compile(bos, Pattern.CASE_INSENSITIVE);
 						Matcher eslesBosAd = bosNesne.matcher(adGiris.getText());
@@ -105,7 +105,7 @@ public class Numan3 {
 						boolean eslestiMiBolum = eslesBosBolum.find();
 
 						if ((eslestiMiAd && eslestiMiSoyad && eslestiMiBolum && eslestiMiGirisYili) == true) {
-							JOptionPane.showConfirmDialog(null, "İşlemler Dogru Girişiniz Yapıldı\"", "",
+							JOptionPane.showConfirmDialog(null, "islemler Dogru Girisiniz Yapildi\"", "",
 									JOptionPane.CLOSED_OPTION);
 
 						}
@@ -116,7 +116,7 @@ public class Numan3 {
 						}
 
 						else {
-							JOptionPane.showConfirmDialog(null, "Boş deger bulunmakta\"", "Sayi degeri hatasi",
+							JOptionPane.showConfirmDialog(null, "Bos deger bulunmakta\"", "Sayi degeri hatasi",
 									JOptionPane.CLOSED_OPTION);
 						}
 
@@ -145,7 +145,7 @@ public class Numan3 {
 
 		try {
 			stmt.executeUpdate("CREATE TABLE " + tabloAdi + " (" + "ogrenci_id int primary key, "
-					+ "ad varchar(30)" + ",soyad varchar(30)" + ",Bolum varchar(20)" + ",Giris Yılı varchar(10)" + ")");
+					+ "ad varchar(30)" + ",soyad varchar(30)" + ",Bolum varchar(20)" + ",Giris Yili varchar(10)" + ")");
 			System.out.println("Tablo " + tabloAdi + " olusturuldu");
 		} catch (Exception e) {
 
@@ -153,7 +153,7 @@ public class Numan3 {
 		}
 
 		try {
-			stmt.executeUpdate("INSERT INTO " + tabloAdi + " VALUES (" + "numan ," + "\'güngör\'" + "\'bilişim\'"
+			stmt.executeUpdate("INSERT INTO " + tabloAdi + " VALUES (" + "numan ," + "\'gungor\'" + "\'bilisim\'"
 					+ "\'2015\'" + ")");
 			System.out.println("Kayit eklendi");
 		} catch (Exception e) {
@@ -174,8 +174,8 @@ public class Numan3 {
 						String ad = rs.getString("ad");
 						String Soyad = rs.getString("soyad");
 						String Bolum = rs.getString("Bolum");
-						String GirisYılı = rs.getString("Girisyılı");
-						System.out.println(ogrenciId + ad + Soyad + Bolum + GirisYılı);
+						String GirisYili = rs.getString("Girisyili");
+						System.out.println(ogrenciId + ad + Soyad + Bolum + GirisYili);
 					}
 
 					// OZKANS DUZELTME

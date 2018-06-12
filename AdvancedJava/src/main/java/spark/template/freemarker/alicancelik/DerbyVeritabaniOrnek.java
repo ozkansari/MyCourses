@@ -47,7 +47,7 @@ public class DerbyVeritabaniOrnek {
         tablolariOlustur();
         
         // BESINCI ADIM ------------------------------------
-        kitapEkle(1,"Kürkmantolu Madonna","Sabattin","Ali", "LİMON",10);
+        kitapEkle(1,"Kurkmantolu Madonna","Sabattin","Ali", "LiMON",10);
         
         // ALTINCI ADIM ------------------------------------
         kitaplariListele();
@@ -153,7 +153,7 @@ public class DerbyVeritabaniOrnek {
     public static boolean veritabaninaBaglan() {
         try {
             String veritabaniDizini= "C:\\\\veritabani\\\\"; 
-            // veritabaniDizini: Dizin adı "C:\\veritabani\\" da olabilirdi.
+            // veritabaniDizini: Dizin adi "C:\\veritabani\\" da olabilirdi.
             String url = "jdbc:derby:"+veritabaniDizini+";create=true";
             veritabaniBaglantisi = DriverManager.getConnection(url);
         } catch (SQLException e) {

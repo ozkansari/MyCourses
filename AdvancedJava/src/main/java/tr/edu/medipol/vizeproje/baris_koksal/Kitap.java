@@ -86,7 +86,7 @@ public class Kitap extends JFrame{
                 }
                 try {
                     b1.close();
-                    // ---- Yazar dosyaya yazma kısmı
+                    // ---- Yazar dosyaya yazma kismi
                 } catch (IOException ex) {
                     Logger.getLogger(Kitap.class.getName()).log(Level.SEVERE, null, ex);
                 }

@@ -13,7 +13,7 @@ public class ekran extends JFrame {
 	private db database=new db();
 	  ekran() {
 		//this.setLayout();
-		this.setTitle("Kütüphane - Burak Karatepe V.0.1");
+		this.setTitle("Kutuphane - Burak Karatepe V.0.1");
 		this.setSize(500,650);
 		this.setLocationRelativeTo(null);
 		this.setResizable(false);
@@ -34,7 +34,7 @@ public class ekran extends JFrame {
 		
 		//anapanel.add(menupanel,BorderLayout.PAGE_START);
 		tabbedPane.add("Kitaplar",kitaplarpanel);
-		tabbedPane.add("Yayınevleri",yayinevipanel);
+		tabbedPane.add("Yayinevleri",yayinevipanel);
 		
 		ChangeListener changeListener = new ChangeListener() {
 		      public void stateChanged(ChangeEvent changeEvent) {

@@ -75,10 +75,10 @@ public class KitapSitesiMain {
 			System.out.println("Tablo " + kitapTabloAdi + " olusturuldu");
 			
 			
-	    	kitaplar.add( new Kitap("KitapAdı", "KitapAdı", "Yazar"));
-	    	kitaplar.add(new Kitap("KitapAdı ", "Yazar", "Yazar"));
-	    	kitaplar.add(new Kitap("KitapAdı", "Yazar", "Yazar"));
-	    	String Siparis = "sıparıs";
+	    	kitaplar.add( new Kitap("KitapAdi", "KitapAdi", "Yazar"));
+	    	kitaplar.add(new Kitap("KitapAdi ", "Yazar", "Yazar"));
+	    	kitaplar.add(new Kitap("KitapAdi", "Yazar", "Yazar"));
+	    	String Siparis = "siparis";
 // ********************
 // OZKANS DUZELTME: try {
 // ********************
@@ -160,12 +160,12 @@ public class KitapSitesiMain {
         };
         get(kitaplarEkleHtmlSayfa);
         
-        FreeMarkerRoute kitaplarıSilHtmlSayfa = new FreeMarkerRoute("/yeslyuzemre/kitaplar/sil/html") {
+        FreeMarkerRoute kitaplariSilHtmlSayfa = new FreeMarkerRoute("/yeslyuzemre/kitaplar/sil/html") {
             public Object handle(Request istek, Response cevap) {
                 return new ModelAndView(null, "/yeslyuzemre/kitaplar_ekle.html");
             }
         };
-        get(kitaplarıSilHtmlSayfa);
+        get(kitaplariSilHtmlSayfa);
 		
        
      

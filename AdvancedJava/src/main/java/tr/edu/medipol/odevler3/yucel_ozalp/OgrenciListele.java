@@ -49,10 +49,10 @@ public class OgrenciListele extends javax.swing.JFrame {
                 String oNo = rs.getString("ogrenciNo");
 
                 System.out.print("ID: " + id);
-                System.out.print(" Öğrenci: " + oAdSoyad);
-                System.out.print(" Öğrenci Bölüm: " + oBlum);
-                System.out.print(" Giriş Yılı: " + oGirisYili);
-                System.out.println(" Öğrenci No: " + oNo);
+                System.out.print(" ogrenci: " + oAdSoyad);
+                System.out.print(" ogrenci Bolum: " + oBlum);
+                System.out.print(" Giris Yili: " + oGirisYili);
+                System.out.println(" ogrenci No: " + oNo);
                 id = id + 1;
                 
                 model.addRow(new Object[]{id,oAdSoyad,oBlum,oGirisYili,oNo});
@@ -83,7 +83,7 @@ public class OgrenciListele extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Öğrenci Ad Soyad", "Öğrenci Bölüm", "Öğrenci Giriş Yılı", "Öğrenci No"
+                "ID", "ogrenci Ad Soyad", "ogrenci Bolum", "ogrenci Giris Yili", "ogrenci No"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -104,7 +104,7 @@ public class OgrenciListele extends javax.swing.JFrame {
         }
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Öğrenci Listesi");
+        jLabel1.setText("ogrenci Listesi");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

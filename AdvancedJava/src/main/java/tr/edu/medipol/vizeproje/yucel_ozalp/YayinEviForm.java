@@ -39,13 +39,13 @@ public class YayinEviForm extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Yayın Evi Ekle - Kütüphane Otomasyonu");
+        setTitle("Yayin Evi Ekle - Kutuphane Otomasyonu");
         setLocation(new java.awt.Point(600, 200));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Yayın Evi Ekle");
+        jLabel1.setText("Yayin Evi Ekle");
 
-        jLabel2.setText("Yayın Evi Adı:");
+        jLabel2.setText("Yayin Evi Adi:");
 
         jLabel3.setText("E-Mail");
 
@@ -56,7 +56,7 @@ public class YayinEviForm extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("GERİ");
+        jButton2.setText("GERi");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -122,8 +122,8 @@ public class YayinEviForm extends javax.swing.JFrame {
         if (yayinEviEmail.isEmpty() || yayinEviAdi.isEmpty()) {
             Component frame = null;
                 JOptionPane.showMessageDialog(frame,
-                        "Lütfen boş alan bırakmayınız!!",
-                        "Uyarı!",
+                        "Lutfen bos alan birakmayiniz!!",
+                        "Uyari!",
                         JOptionPane.ERROR_MESSAGE);
         }
         else{
@@ -143,7 +143,7 @@ public class YayinEviForm extends javax.swing.JFrame {
 
                     Component frame = null;
                     JOptionPane.showMessageDialog(frame,
-                     "Başarıyla yayın evi oluşturuldu!");
+                     "Basariyla yayin evi olusturuldu!");
                     
                 } catch (Exception e) {
                     
@@ -153,8 +153,8 @@ public class YayinEviForm extends javax.swing.JFrame {
             else {
                 Component frame = null;
                 JOptionPane.showMessageDialog(frame,
-                        "Lütfen geçerli bir mail adresi giriniz!!",
-                        "Uyarı!",
+                        "Lutfen gecerli bir mail adresi giriniz!!",
+                        "Uyari!",
                         JOptionPane.ERROR_MESSAGE);
             }
         }

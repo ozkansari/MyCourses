@@ -5,7 +5,7 @@ package tr.edu.medipol.odevler1ve2.celal_sahin.odev1;
 
 //Koyun, kopek, kedi gibi metotlar anlamsiz: -10
 
-// AHMET ÇİLOĞLU ile ÇOK BENZER: -20
+// AHMET ciLOgLU ile cOK BENZER: -20
 
 //SONUC: 30
 

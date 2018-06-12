@@ -13,7 +13,7 @@ public class YayineviTablo extends JFrame implements DosyaIslemleri {
     JTable yayineviTablosu = new JTable();
     JButton ekle = new JButton("Ekle");
     JButton sil = new JButton("Sil");
-    JLabel hata = new JLabel("onay vermeden tıklayamazsınız");
+    JLabel hata = new JLabel("onay vermeden tiklayamazsiniz");
     JButton Kitap_buton = new JButton("Kitaplar");
     JTextField id_text = new JTextField();
     JTextField yayineviadi_text = new JTextField();
@@ -27,7 +27,7 @@ public class YayineviTablo extends JFrame implements DosyaIslemleri {
 
     public YayineviTablo() {
         this.setLayout(null);
-        this.setTitle("Yayınevi");
+        this.setTitle("Yayinevi");
         this.setSize(800, 700);
         this.setAlwaysOnTop(true);
         this.setVisible(true);
@@ -97,7 +97,7 @@ public class YayineviTablo extends JFrame implements DosyaIslemleri {
                 }
                 // OZKANS DUZELTME --> Oku("C:\\Users\\SEZER\\Desktop\\Yayinevi.txt");
                 /* OZKANS DUZELTME */  Oku(".\\config\\Yayinevi.txt");
-                System.out.println("bana bastın");
+                System.out.println("bana bastin");
 
                 break;
             }

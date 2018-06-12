@@ -7,7 +7,7 @@ import java.util.*;
 // DERLENMEYEN KOD: ufak bir hata -10
 // GEC GONDERIM: -20
 
-//EKSIK: List kullanimi ile hafta 5'te yapilan orneği , List seklinde String yerine tanimlayacağiniz OgrenciBilgi sinifi kullanarak yapiniz.
+//EKSIK: List kullanimi ile hafta 5'te yapilan ornegi , List seklinde String yerine tanimlayacaginiz OgrenciBilgi sinifi kullanarak yapiniz.
 //List icinde OgrenciBilgi kullanilmamis -50
 
 public class DosyaOkuma {

@@ -28,7 +28,7 @@ public class KitapSitesiMain {
 	/**
 	 * Siparis listesi olusturulur.
 	 * 
-	 * @param SIPARİSLER
+	 * @param SIPARiSLER
 	 * 
 	 */
 	private static final List<siparisler> SIPARISLER = new ArrayList<siparisler>();

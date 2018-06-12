@@ -27,7 +27,7 @@ import spark.*;
 
 public class Spark {
 
-	private static final ArrayList<Kitap> KİTAPLAR = new ArrayList<Kitap>();
+	private static final ArrayList<Kitap> KiTAPLAR = new ArrayList<Kitap>();
 
 	/**
 	 * @param args
@@ -40,7 +40,7 @@ public class Spark {
 		VeriTabani.veritabaninaBaglan();
 		VeriTabani.tablolariOlustur();
 
-		KİTAPLAR.add(new Kitap(Kitap.ID++, "Kürk Mantolu Madonna", 55, "Sbahattin Ali"));
+		KiTAPLAR.add(new Kitap(Kitap.ID++, "Kurk Mantolu Madonna", 55, "Sbahattin Ali"));
 		kitaplarJson();
 
 		// http://localhost:4567/anasayfa
@@ -108,7 +108,7 @@ public class Spark {
 
 				// kitap olustur ve listeye ekle
 				Kitap kitap = new Kitap(kitap.ID++, kitapAdi, fiyat, kitapDetayi);
-				// KİTAPLAR.add(kitap);
+				// KiTAPLAR.add(kitap);
 				VeriTabani.kitapEkle(Kitap);
 
 				// Islem bitince /anasayfa sayfasina geri don
@@ -125,7 +125,7 @@ public class Spark {
 		FreeMarkerRoute urunEkleSayfasi = new FreeMarkerRoute("") { // OZKANS Duzeltme
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
-				ozellikler.put("kitaplar", KİTAPLAR);
+				ozellikler.put("kitaplar", KiTAPLAR);
 				return new ModelAndView(ozellikler, "kitapekle.html");
 			}
 		};

@@ -49,16 +49,16 @@ public class OgrenciEkle extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Öğrenci Ekle");
+        setTitle("ogrenci Ekle");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Ad ve Soyad:");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setText("Bölüm:");
+        jLabel2.setText("Bolum:");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setText("Giriş yılı:");
+        jLabel3.setText("Giris yili:");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setText("Okul No:");
@@ -153,8 +153,8 @@ public class OgrenciEkle extends javax.swing.JFrame {
         if (ogrenciAdSoyad.isEmpty() || ogrenciBolum.isEmpty() || ogrenciNo.isEmpty() || ogrenciGirisYili.isEmpty() || !isStringNumeric(ogrenciNo) || !isStringNumeric(ogrenciGirisYili)) {
             Component frame = null;
             JOptionPane.showMessageDialog(frame,
-                    "Lütfen alanları doğru bir şekilde doldurunuz!!",
-                    "Uyarı!",
+                    "Lutfen alanlari dogru bir sekilde doldurunuz!!",
+                    "Uyari!",
                     JOptionPane.ERROR_MESSAGE);
         } else {
             System.out.println(ogrenciAdSoyad);
@@ -184,14 +184,14 @@ public class OgrenciEkle extends javax.swing.JFrame {
                     se.printStackTrace();
                 }
             }
-            System.out.println("Kayıt başarılı!");
+            System.out.println("Kayit basarili!");
             jTextField1.setText(null);
             jTextField2.setText(null);
             jTextField3.setText(null);
             jTextField4.setText(null);
             Component frame = null;
             JOptionPane.showMessageDialog(frame,
-                    "Kayıt başarılı!");
+                    "Kayit basarili!");
         }
         // connectionDB();
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -206,7 +206,7 @@ public class OgrenciEkle extends javax.swing.JFrame {
         try {
             Class.forName(driver).newInstance();
             conn = DriverManager.getConnection(url + dbName, userName, password);
-            System.out.println("Bağlantı başarılı!!");
+            System.out.println("Baglanti basarili!!");
             conn.close();
         } catch (Exception e) {
             e.printStackTrace();

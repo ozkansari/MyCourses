@@ -103,7 +103,7 @@ public class DerbyVeritabani {
     public static boolean veritabaninaBaglan() {
         try {
             String veritabaniDizini= ".\\.veritabani\\";
-            // veritabaniDizini: Dizin adı "C:\\veritabani\\" da olabilirdi.
+            // veritabaniDizini: Dizin adi "C:\\veritabani\\" da olabilirdi.
             String url = "jdbc:derby:"+veritabaniDizini+";create=true";
             veritabaniBaglantisi = DriverManager.getConnection(url);
         } catch (SQLException e) {

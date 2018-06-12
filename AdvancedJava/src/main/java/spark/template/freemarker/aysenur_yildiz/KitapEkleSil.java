@@ -98,7 +98,7 @@ public class KitapEkleSil{
 		FreeMarkerRoute urunEkleSayfasi = new FreeMarkerRoute() {
 			public Object handle(Request arg0, Response arg1) {
 				Map<String, Object> ozellikler = new HashMap<String, Object>();
-				ozellikler.put("kitaplar", KİTAPLAR);
+				ozellikler.put("kitaplar", KiTAPLAR);
 				return new ModelAndView(ozellikler, "kitapekle.html");
 			}
 		};

@@ -22,19 +22,19 @@ public class Giris extends javax.swing.JFrame {
         passwordInput = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Giriş - Kütüphane Otomasyonu");
+        setTitle("Giris - Kutuphane Otomasyonu");
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(44, 62, 80));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(600, 200));
 
-        jLabel1.setText("Kullanıcı adı:");
-        jLabel1.setToolTipText("önceden belirlediğiniz kullancı adınız");
+        jLabel1.setText("Kullanici adi:");
+        jLabel1.setToolTipText("onceden belirlediginiz kullanci adiniz");
 
-        jLabel2.setText("Şifre:");
-        jLabel2.setToolTipText("önceden belirlediğiniz şifreniz");
+        jLabel2.setText("sifre:");
+        jLabel2.setToolTipText("onceden belirlediginiz sifreniz");
 
-        girisBtn.setText("Giriş yap");
+        girisBtn.setText("Giris yap");
         girisBtn.setToolTipText("");
         girisBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,8 +87,8 @@ public class Giris extends javax.swing.JFrame {
         if (kullaniciAdi.isEmpty() && sifre.isEmpty()) {
             Component frame = null;
             JOptionPane.showMessageDialog(frame,
-                    "Lütfen şifrenizi boş geçmeyiniz.",
-                    "Uyarı!",
+                    "Lutfen sifrenizi bos gecmeyiniz.",
+                    "Uyari!",
                     JOptionPane.WARNING_MESSAGE);
 
         } else {
@@ -97,19 +97,19 @@ public class Giris extends javax.swing.JFrame {
                 Kutuphane kutuphaneForm = new Kutuphane();
                 Component frame = null;
                 JOptionPane.showMessageDialog(frame,
-                        "Başarıyla giriş yaptınız!");
+                        "Basariyla giris yaptiniz!");
                 kutuphaneForm.setVisible(true);
                 girisForm.pack();
                 girisForm.setLocationRelativeTo(null);
                 girisForm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 this.dispose();
             } else {
-                System.out.println("Geçersiz Şifre!: " + kullaniciAdi + sifre);
+                System.out.println("Gecersiz sifre!: " + kullaniciAdi + sifre);
 
                 Component frame = null;
                 JOptionPane.showMessageDialog(frame,
-                        "Şifreniz geçersiz! lütfen tekrar deneyin!!",
-                        "Uyarı!",
+                        "sifreniz gecersiz! lutfen tekrar deneyin!!",
+                        "Uyari!",
                         JOptionPane.ERROR_MESSAGE);
             }
         }

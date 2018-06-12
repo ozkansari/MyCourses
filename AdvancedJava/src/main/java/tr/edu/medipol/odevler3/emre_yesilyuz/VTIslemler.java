@@ -1,5 +1,5 @@
 package tr.edu.medipol.odevler3.emre_yesilyuz;
-//Hocam VtIslemler etkin olduğunda bağlantı kurmuyo hata oluşuyo bu yüzden derlemiyor etkin yapmadım bu yüzden .
+//Hocam VtIslemler etkin oldugunda baglanti kurmuyo hata olusuyo bu yuzden derlemiyor etkin yapmadim bu yuzden .
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -9,13 +9,13 @@ import static java.lang.Class.forName;
 public class VTIslemler {
 	/*
     static Connection baglanti;
-    //Veritabanına bağlanmak için kullanacağımız baglantiAc metodu
+    //Veritabanina baglanmak icin kullanacagimiz baglantiAc metodu
     public static Connection baglantiAc(){
         try {
             forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
-            //Konunun başında bahsettiğim derby veritabanına bağlanmak için gerekli bağlantı cümlesi
+            //Konunun basinda bahsettigim derby veritabanina baglanmak icin gerekli baglanti cumlesi
             baglanti=DriverManager.getConnection("jdbc:derby:C:\\Users\\Emre\\Ogrenci","","");
-            //DriverManager ile Ogrenci isminde ki veritabanımıza bağlanıyoruz. 2. ve 3. parametre veritabanı kullanıcı adı ve şifresi
+            //DriverManager ile Ogrenci isminde ki veritabanimiza baglaniyoruz. 2. ve 3. parametre veritabani kullanici adi ve sifresi
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -23,7 +23,7 @@ public class VTIslemler {
         return baglanti;
     }
 
-    //Veritabanı işlemlerini hallettikten sonra veritabanını kapatmaya yarayan baglantiKapa metodu
+    //Veritabani islemlerini hallettikten sonra veritabanini kapatmaya yarayan baglantiKapa metodu
     public static void baglantiKapa(){
         try {
             baglanti.close();
@@ -33,21 +33,21 @@ public class VTIslemler {
         }
     }
 
-    //Öğrenci bilgilerini veritabanından alarak, ArrayList olarak döndüren metodumuz
+    //ogrenci bilgilerini veritabanindan alarak, ArrayList olarak donduren metodumuz
     public ArrayList<Ogrenci> ogrenciBilgisiCek(){
 
         ArrayList<Ogrenci> ogrenciBilgileri=new ArrayList<Ogrenci>();
-        //Çekilen öğrenci bilgilerini tutacağımız bir ArrayList oluşturuyoruz.
+        //cekilen ogrenci bilgilerini tutacagimiz bir ArrayList olusturuyoruz.
         try {
             Connection baglanti=baglantiAc();
             String sorgu="select * from APP.ogrenci";
-            //ogrenci tablosundaki tüm verileri çeken sql sorgusu.
+            //ogrenci tablosundaki tum verileri ceken sql sorgusu.
             PreparedStatement ps=baglanti.prepareStatement(sorgu);
             ResultSet rs=ps.executeQuery();
-            //Veritabanından çekilen verileri resultsete doldurduk.
+            //Veritabanindan cekilen verileri resultsete doldurduk.
             while (rs.next()) {
                 Ogrenci ogr=new Ogrenci();
-                //Öğrenci nesnesi oluşturduk.
+                //ogrenci nesnesi olusturduk.
                 ogr.setOgrNo(rs.getInt("ogrnum"));
                 ogr.setIsim(rs.getString("isim"));
                 ogr.setSoyIsim(rs.getString("soyisim"));
@@ -55,7 +55,7 @@ public class VTIslemler {
                 //ogr nesnemize resultsetten gelen verileri doldurduk.
                 ogrenciBilgileri.add(ogr);
             }
-            //While döngüsü ile ResultSetteki verileri başta oluşturduğumuz ArrayListe aktardık.
+            //While dongusu ile ResultSetteki verileri basta olusturdugumuz ArrayListe aktardik.
             ps.close();
             rs.close();
             baglantiKapa();
@@ -65,24 +65,24 @@ public class VTIslemler {
             e.printStackTrace();
         }
         return ogrenciBilgileri;
-        //Öğrenci verilerini doldurduğumuz ArrayListi return ile döndürüyoruz.
+        //ogrenci verilerini doldurdugumuz ArrayListi return ile donduruyoruz.
 
     }
 
-    //Gönderilen öğrenci nesnesini veritabanına kaydeden ogrenciKaydet metodu
+    //Gonderilen ogrenci nesnesini veritabanina kaydeden ogrenciKaydet metodu
     public boolean ogrenciKaydet(Ogrenci ogrenci){
 
         try {
             Connection baglanti=baglantiAc();
             String sorgu="insert into APP.ogrenci(ogrno,isim,soyisim,dyeri) values(?,?,?,?)";
-            //ogrenci tablosuna verileri kaydetmeye yarayan sql sorgusu ? ile gösterilen yerler parametreler
+            //ogrenci tablosuna verileri kaydetmeye yarayan sql sorgusu ? ile gosterilen yerler parametreler
             PreparedStatement ps=baglanti.prepareStatement(sorgu);
             ps.setInt(1, ogrenci.getOgrNo());
             ps.setString(2, ogrenci.getIsim());
             ps.setString(3, ogrenci.getSoyIsim());
             ps.setString(4, ogrenci.getdYeri());
-            // 4 tane ? ile gösterilen parametreye değerlerini aktarıyoruz.
-            //Değerleri ogrenciKaydet metodumuza gönderilen ogrenci nesnesinden alıyoruz.
+            // 4 tane ? ile gosterilen parametreye degerlerini aktariyoruz.
+            //Degerleri ogrenciKaydet metodumuza gonderilen ogrenci nesnesinden aliyoruz.
             ps.executeUpdate();
             ps.close();
             baglantiKapa();
@@ -94,16 +94,16 @@ public class VTIslemler {
         }
     }
 
-    //Veritabanından öğrenci silmeye yarayan ogrenciSil metodu
+    //Veritabanindan ogrenci silmeye yarayan ogrenciSil metodu
     public boolean ogrenciSil(int ogrenciNo){
 
         try {
             Connection baglanti=baglantiAc();
             String sorgu="delete from APP.ogrenci where ogrno=?";
-            //ogrenci tablosundan ogrno'ya göre veri silen sql sorgumuz
+            //ogrenci tablosundan ogrno'ya gore veri silen sql sorgumuz
             PreparedStatement ps=baglanti.prepareStatement(sorgu);
             ps.setInt(1, ogrenciNo);
-            //Parametre olarak ogrenciSil metoduna gönderilen ogrenciNo'yu kullanıyoruz.
+            //Parametre olarak ogrenciSil metoduna gonderilen ogrenciNo'yu kullaniyoruz.
             ps.executeUpdate();
             ps.close();
             baglantiKapa();
@@ -115,18 +115,18 @@ public class VTIslemler {
         }
     }
 
-    //Veritabanındaki ogrenci verilerini güncellemeye yarayan ogrenciGuncelle metodu
+    //Veritabanindaki ogrenci verilerini guncellemeye yarayan ogrenciGuncelle metodu
     public boolean ogrenciGuncelle(Ogrenci ogrenci){
         try {
             Connection baglanti=baglantiAc();
             String sorgu="update APP.ogrenci set isim=?,soyisim=?,dyeri=? where ogrno=?";
-            //ogrenci tablosundaki verileri güncellemeye yarayan sql sorgusu. ogrno'ya göre güncelleme yapıyor.
+            //ogrenci tablosundaki verileri guncellemeye yarayan sql sorgusu. ogrno'ya gore guncelleme yapiyor.
             PreparedStatement ps=baglanti.prepareStatement(sorgu);
             ps.setString(1, ogrenci.getIsim());
             ps.setString(2, ogrenci.getSoyIsim());
             ps.setString(3, ogrenci.getdYeri());
             ps.setInt(4, ogrenci.getOgrNo());
-            //Parametreleri ogrenciGuncelle metodumuza gönderilmiş olan ogrenci nesnesinden alıyoruz.
+            //Parametreleri ogrenciGuncelle metodumuza gonderilmis olan ogrenci nesnesinden aliyoruz.
             ps.executeUpdate();
             ps.close();
             baglantiKapa();

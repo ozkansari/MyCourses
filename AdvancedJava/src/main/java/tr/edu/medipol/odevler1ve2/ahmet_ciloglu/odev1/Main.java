@@ -7,7 +7,7 @@ package tr.edu.medipol.odevler1ve2.ahmet_ciloglu.odev1;
 
 // Koyun, kopek, kedi gibi metotlar anlamsiz: -10
 
-// CELAL ŞAHİN ile ÇOK BENZER: -20
+// CELAL sAHiN ile cOK BENZER: -20
 
 // SONUC: 10
 

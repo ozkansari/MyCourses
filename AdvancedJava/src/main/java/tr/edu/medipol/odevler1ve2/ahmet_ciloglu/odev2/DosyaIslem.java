@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.Scanner;
 
 // TR karaklterli dosya ismi sorun cikarir. Kullanilmamali.: -10
-// -10: OgrenciBilgi isimli bir class olusturun ve icine ogrenciAdSoyad isimli bir String nesne degiskeni ekleyin. Değiskenin private olmasina dikkat edin.
+// -10: OgrenciBilgi isimli bir class olusturun ve icine ogrenciAdSoyad isimli bir String nesne degiskeni ekleyin. Degiskenin private olmasina dikkat edin.
 // -10: liste kullanimi yok
 // -10: Sadece tek ogrenci okunuyor yaziliyor.
 

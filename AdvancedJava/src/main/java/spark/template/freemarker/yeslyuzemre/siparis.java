@@ -6,15 +6,15 @@ public class siparis{
 	private String siparis;
 	
 	public siparis(int siparisid, 
-			String siparisverenadı, String siparısverenadress) {
+			String siparisverenadi, String siparisverenadress) {
 		this.siparis=siparis;
-		this.yazar = new Yazar(siparisverenadı, siparısverenadress);
+		this.yazar = new Yazar(siparisverenadi, siparisverenadress);
 	}
 	
-	public String getsiparisıd() {
+	public String getsiparisid() {
 		return siparis;
 	}
-	public void setsiparis(String siparisıd) {
+	public void setsiparis(String siparisid) {
 		this.siparis = siparis;
 	}
 	public Yazar getYazar() {

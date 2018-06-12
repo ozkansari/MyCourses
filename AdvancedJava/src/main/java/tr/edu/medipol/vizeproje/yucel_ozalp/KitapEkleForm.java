@@ -38,7 +38,7 @@ public class KitapEkleForm extends javax.swing.JFrame {
         }
         else {
             jButton1.setEnabled(false);
-            jLabel7.setText("Lütfen Yayın Evi giriniz!");
+            jLabel7.setText("Lutfen Yayin Evi giriniz!");
         }
         
         for (int i = 0; i < yevleri.size(); i++) {
@@ -92,23 +92,23 @@ public class KitapEkleForm extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Kitap Ekle - Kütüphane Otomasyonu");
+        setTitle("Kitap Ekle - Kutuphane Otomasyonu");
         setLocation(new java.awt.Point(600, 200));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Kitap Ekleme");
 
-        jLabel2.setText("Kitap Adı");
+        jLabel2.setText("Kitap Adi");
 
-        jLabel3.setText("Kitap Yazarı");
+        jLabel3.setText("Kitap Yazari");
 
-        jLabel4.setText("Kitap Türü");
+        jLabel4.setText("Kitap Turu");
 
-        jLabel5.setText("Sayfa Sayısı");
+        jLabel5.setText("Sayfa Sayisi");
 
-        jLabel6.setText("Yayın Evi");
+        jLabel6.setText("Yayin Evi");
 
-        jButton1.setText("KİTAP EKLE");
+        jButton1.setText("KiTAP EKLE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -117,7 +117,7 @@ public class KitapEkleForm extends javax.swing.JFrame {
 
         jLabel7.setForeground(new java.awt.Color(255, 0, 0));
 
-        jButton2.setText("GERİ");
+        jButton2.setText("GERi");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -208,8 +208,8 @@ public class KitapEkleForm extends javax.swing.JFrame {
         if (kitapAdi.isEmpty() || kitapYazari.isEmpty() || kitapTuru.isEmpty() || kitapSayfaSayisi.isEmpty() || !isStringNumeric(kitapSayfaSayisi)) {
             Component frame = null;
                 JOptionPane.showMessageDialog(frame,
-                        "Lütfen alanları doğru bir şekilde doldurunuz!!",
-                        "Uyarı!",
+                        "Lutfen alanlari dogru bir sekilde doldurunuz!!",
+                        "Uyari!",
                         JOptionPane.ERROR_MESSAGE);
         }
         else {
@@ -223,7 +223,7 @@ public class KitapEkleForm extends javax.swing.JFrame {
 
                     Component frame = null;
                     JOptionPane.showMessageDialog(frame,
-                     "Başarıyla kitap oluşturuldu!");
+                     "Basariyla kitap olusturuldu!");
                     
                 } catch (Exception e) {
                     

@@ -10,17 +10,17 @@ public class Liste {
 	
 	public static void main(String[] args) {
 		
-	 JFrame f = new JFrame("Kütüphane Yönetim");
+	 JFrame f = new JFrame("Kutuphane Yonetim");
 	 f.setSize(600, 250);
 	 Container content = f.getContentPane();
 	 content.setBackground(Color.pink);
 	 content.setLayout(new FlowLayout());
 	 
 	 ArrayList <String> KitapListesi = new ArrayList <String> ();
-	 KitapListesi.add("Kürk Mantolu Madonna");
-	 KitapListesi.add("Küçük Prens");
-	 KitapListesi.add("Uçurtma Avcısı");
-	 KitapListesi.add("Şeker Portakalı");
+	 KitapListesi.add("Kurk Mantolu Madonna");
+	 KitapListesi.add("Kucuk Prens");
+	 KitapListesi.add("Ucurtma Avcisi");
+	 KitapListesi.add("seker Portakali");
 	 KitapListesi.add("Tutunamayanlar");
 	 KitapListesi.add("Sevgilimden Son Mektup");
 	 

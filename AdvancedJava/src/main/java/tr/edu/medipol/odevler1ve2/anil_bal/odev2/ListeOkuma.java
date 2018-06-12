@@ -5,7 +5,7 @@ import java.util.*;
 // DERLENMIYOR 
 // TAMAMEN HATALI
 
-//EKSIK: List kullanimi ile hafta 5'te yapilan orneği , List seklinde String yerine tanimlayacağiniz OgrenciBilgi sinifi kullanarak yapiniz.
+//EKSIK: List kullanimi ile hafta 5'te yapilan ornegi , List seklinde String yerine tanimlayacaginiz OgrenciBilgi sinifi kullanarak yapiniz.
 //List icinde OgrenciBilgi kullanilmamis
 
 // SONUC : 20

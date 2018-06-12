@@ -32,9 +32,9 @@ public class AnaEkran extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Öğrenci Listele");
+        jButton1.setText("ogrenci Listele");
 
-        jButton2.setText("Öğrenci Ekle");
+        jButton2.setText("ogrenci Ekle");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

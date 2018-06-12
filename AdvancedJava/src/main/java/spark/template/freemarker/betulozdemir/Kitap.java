@@ -18,10 +18,10 @@ public class Kitap {
 
 	// Source>Generate Constructor using fields
 	/**
-	 * @param id kitap ekle için id alınır
-	 * @param urunAdi kitap ekle için urunadi alınır
-	 * @param fiyat kitap ekle için fiyat alınır
-	 * @param urunDetayi kitap ekle için urundetayi alınır
+	 * @param id kitap ekle icin id alinir
+	 * @param urunAdi kitap ekle icin urunadi alinir
+	 * @param fiyat kitap ekle icin fiyat alinir
+	 * @param urunDetayi kitap ekle icin urundetayi alinir
 	 */
 	public Kitap(int id, String urunAdi, int fiyat, String urunDetayi) {
 		this.id = id;
@@ -32,7 +32,7 @@ public class Kitap {
 
 	// Source>Generate getters and setters
 	/**
-	 * @return sonuç integer veri tipinde döndürür 
+	 * @return sonuc integer veri tipinde dondurur 
 	 */
 	public int getId() {
 		return id;
@@ -46,7 +46,7 @@ public class Kitap {
 	}
 
 	/**
-	 * @return string veri tipinde döndürür 
+	 * @return string veri tipinde dondurur 
 	 */
 	public String getkitapAdi() {
 		return kitapAdi;
@@ -60,7 +60,7 @@ public class Kitap {
 	}
 
 	/**
-	 * @return integer veri tipinde döndürür 
+	 * @return integer veri tipinde dondurur 
 	 */
 	public int getFiyat() {
 		return fiyat;
@@ -74,7 +74,7 @@ public class Kitap {
 	}
 
 	/**
-	 * @return string veri tipinde döndürür 
+	 * @return string veri tipinde dondurur 
 	 */
 	public String getkitapDetayi() {
 		return kitapDetayi;

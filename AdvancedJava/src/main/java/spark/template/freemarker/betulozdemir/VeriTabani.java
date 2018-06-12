@@ -34,7 +34,7 @@ public class VeriTabani {
 			tablolariOlustur();
 
 			// BESINCI ADIM ------------------------------------
-			kitapEkle("Kürk Mantolu Madonna", "Sabahattin Ali", 30);
+			kitapEkle("Kurk Mantolu Madonna", "Sabahattin Ali", 30);
 
 			// ALTINCI ADIM ------------------------------------
 			kayitlariListele();
@@ -126,7 +126,7 @@ public class VeriTabani {
 		public static boolean veritabaninaBaglan() {
 			try {
 				String veritabaniDizini = ".\\.veritabani\\";
-				// veritabaniDizini: Dizin adı "C:\\veritabani\\" da olabilirdi.
+				// veritabaniDizini: Dizin adi "C:\\veritabani\\" da olabilirdi.
 				String url = "jdbc:derby:" + veritabaniDizini + ";create=true";
 				veritabaniBaglantisi = DriverManager.getConnection(url);
 			} catch (SQLException e) {

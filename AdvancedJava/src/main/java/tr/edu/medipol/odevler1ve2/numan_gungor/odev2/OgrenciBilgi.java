@@ -24,7 +24,7 @@ public class OgrenciBilgi {
 			String veri = scan.nextLine();
 			System.out.println(veri);
 		} catch (FileNotFoundException e) {
-			System.out.println("dosyaya bağlanirken hata olustu");
+			System.out.println("dosyaya baglanirken hata olustu");
 		}
 	} /* ozkans duzeltme */
 

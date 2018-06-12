@@ -60,12 +60,12 @@ public class Kutuphane extends JFrame{
                 } catch (IOException ex) {
                     Logger.getLogger(Kutuphane.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                // ---  E postanın dosya ksımına yazılması ---
+                // ---  E postanin dosya ksimina yazilmasi ---
                 File ePosta2 = new File("E-Postalar.txt");
                 if(!ePosta2.exists())
                     try {
                         ePosta2.createNewFile();
-                        // dosya yazmanın devamı üstüne yazma ! 
+                        // dosya yazmanin devami ustune yazma ! 
                 } catch (IOException ex) {
                     Logger.getLogger(Kutuphane.class.getName()).log(Level.SEVERE, null, ex);
                 }

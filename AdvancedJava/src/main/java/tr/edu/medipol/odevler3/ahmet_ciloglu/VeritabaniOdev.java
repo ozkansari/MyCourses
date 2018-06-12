@@ -94,7 +94,7 @@ class Ekran {
 		JMenuBar menubar = new JMenuBar();
 		JMenu eklemenu = new JMenu("Ekle");
 		JMenuItem ogrenciEkle = new JMenuItem("Ogrenci Ekle");
-		JMenuItem cikis = new JMenuItem("ÇIKIŞ");
+		JMenuItem cikis = new JMenuItem("cIKIs");
 		ekran1.setJMenuBar(menubar);
 		menubar.add(eklemenu);
 		eklemenu.add(ogrenciEkle);
@@ -120,14 +120,14 @@ class Ekran {
 	public JTextField ogrenciSoyadi = new JTextField();
 	public JTextField ogrenciBolum = new JTextField();
 	public JTextField okulaGiris = new JTextField();
-	public JLabel adiLabel = new JLabel("Ogrenci Adını Yazınız:");
-	public JLabel soyadiLabel = new JLabel("Ogrenci Soyadını Yazınız:");
-	public JLabel bolumLabel = new JLabel("Ogrenci Bolumunu Yazınız:");
-	public JLabel girisLabel = new JLabel("Okula Giris Yılı");
+	public JLabel adiLabel = new JLabel("Ogrenci Adini Yaziniz:");
+	public JLabel soyadiLabel = new JLabel("Ogrenci Soyadini Yaziniz:");
+	public JLabel bolumLabel = new JLabel("Ogrenci Bolumunu Yaziniz:");
+	public JLabel girisLabel = new JLabel("Okula Giris Yili");
 
 	private void ekran2() {
 
-		String karakter = "[a-zA-Z[ğüişöç0-9]]";
+		String karakter = "[a-zA-Z[guisoc0-9]]";
 
 		ekran2.getContentPane().add(adiLabel);
 		adiLabel.setBounds(10, 35, 200, 50);
@@ -172,17 +172,17 @@ class Ekran {
 			// OZKANS
 			
 			if ((adEs && esSoyad && esBolum && esYili) == true) {
-				JOptionPane.showConfirmDialog(null, "Kayıt Oluşturuldu...\"", "Başarılı", JOptionPane.CLOSED_OPTION);
+				JOptionPane.showConfirmDialog(null, "Kayit Olusturuldu...\"", "Basarili", JOptionPane.CLOSED_OPTION);
 
 			}
 
 			else if (adEs && esSoyad && esBolum && esYili == false) {
-				JOptionPane.showConfirmDialog(null, "Yılı alanına sayı değeri giriniz\"", "Sayi degeri hatasi",
+				JOptionPane.showConfirmDialog(null, "Yili alanina sayi degeri giriniz\"", "Sayi degeri hatasi",
 						JOptionPane.CLOSED_OPTION);
 			}
 
 			else {
-				JOptionPane.showConfirmDialog(null, "Boş alan bırakmayınız\"", "Sayı Giriniz",
+				JOptionPane.showConfirmDialog(null, "Bos alan birakmayiniz\"", "Sayi Giriniz",
 						JOptionPane.CLOSED_OPTION);
 			}
 			// KAYIT EKLE

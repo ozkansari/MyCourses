@@ -45,7 +45,7 @@ class ilkframe extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        JLabel lblNewLabel = new JLabel("İsim " ); ;
+        JLabel lblNewLabel = new JLabel("isim " ); ;
         lblNewLabel.setBounds(51, 41, 46, 14);
         contentPane.add(lblNewLabel);
 
@@ -74,18 +74,18 @@ class ilkframe extends JFrame {
         txtDyeri.setColumns(20);
 
 
-        //Button Olayı
+        //Button Olayi
         JButton btnGonder = new JButton("Ekle");
         btnGonder.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent arg0) {
-                //ikinci frame i çagırıyoruz.
+                //ikinci frame i cagiriyoruz.
                 ikinciframe ikifrm=new ikinciframe();
-                //İsim ve soyismi ikinci framedeki metoda gönderiyoruz.
-                //her ne kadar bir JFrame olarak kullansakta bunun bir sınıf olduğunu
-                //unutmamak lazım.
+                //isim ve soyismi ikinci framedeki metoda gonderiyoruz.
+                //her ne kadar bir JFrame olarak kullansakta bunun bir sinif oldugunu
+                //unutmamak lazim.
                 ikifrm.gelenlerVeriler(txtIsim.getText(), txtSoyisim.getText(),txtDyeri.getText());
-                //İkinci Jframe görünür hale getiriyor.
+                //ikinci Jframe gorunur hale getiriyor.
                 ikifrm.setVisible(true);
             }
         });
@@ -99,8 +99,8 @@ class ilkframe extends JFrame {
 class ikinciframe extends JFrame {
 
     private JPanel contentPane;
-    //TextField i global olarak tanımlamak önemli çünkü her yerden
-    //erişebiliriz buna.
+    //TextField i global olarak tanimlamak onemli cunku her yerden
+    //erisebiliriz buna.
     private JTextField txtGelenler;
 
 /* OZKANS DUZELTME
@@ -119,7 +119,7 @@ class ikinciframe extends JFrame {
     }
 */
     public ikinciframe() {
-        setTitle("ÖğrenciBilgileri");
+        setTitle("ogrenciBilgileri");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 450, 120);
         contentPane = new JPanel();
@@ -127,7 +127,7 @@ class ikinciframe extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        JLabel lblNewLabel = new JLabel("ÖğrenciBilgileri :");
+        JLabel lblNewLabel = new JLabel("ogrenciBilgileri :");
         lblNewLabel.setBounds(10, 30, 91, 14);
         lblNewLabel.setSize(100,11);
         contentPane.add(lblNewLabel);
@@ -140,7 +140,7 @@ class ikinciframe extends JFrame {
     }
 
     public void gelenlerVeriler(String isim,String soyisim,String dyeri){
-        //Gelen verileri txtGelenlere Aktarıyoruz.
+        //Gelen verileri txtGelenlere Aktariyoruz.
         txtGelenler.setText(isim+"//"+soyisim+"//"+dyeri);
     }
 }

@@ -30,7 +30,7 @@ public class DerbyVeritabani {
 
 	/**
 	 * 
-	 * Veritabani yüklenmesi test edilir. Veritabani baglantisi test edilir. Siniflar
+	 * Veritabani yuklenmesi test edilir. Veritabani baglantisi test edilir. Siniflar
 	 * cagirilir.
 	 * 
 	 * @param args
@@ -78,11 +78,11 @@ public class DerbyVeritabani {
 
 	/**
 	 * 
-	 * Veritabani yükleme islemi olusturulur.
+	 * Veritabani yukleme islemi olusturulur.
 	 * 
 	 * @exception Exception
 	 *                - Veritabani kutuphanesi hatasi
-	 * @return boolean bir değer
+	 * @return boolean bir deger
 	 * 
 	 */
 	public static boolean VeritabaniniYukle() {
@@ -102,7 +102,7 @@ public class DerbyVeritabani {
 	 * 
 	 * @exception SQLException
 	 *                - Veritabani baglanti hatasi
-	 * @return boolean bir değer
+	 * @return boolean bir deger
 	 * 
 	 */
 	public static boolean VeritabaninaBaglan() {
@@ -120,11 +120,11 @@ public class DerbyVeritabani {
 
 	/**
 	 * 
-	 * Tabloları olusturulur.
+	 * Tablolari olusturulur.
 	 * 
 	 * @exception SQLException
 	 *                - Tablo mevcut olabilir hatasi
-	 * @return boolean bir değer
+	 * @return boolean bir deger
 	 * 
 	 */
 	public static boolean TabloOlustur() {
@@ -180,7 +180,7 @@ public class DerbyVeritabani {
 	 * @param toplam_ucret
 	 * @exception SQLException
 	 *                - INSERT hatasi
-	 * @return boolean bir değer
+	 * @return boolean bir deger
 	 * 
 	 */
 	public static boolean SiparisEkle(int id, String siparis_veren, int toplam_ucret) {
@@ -221,7 +221,7 @@ public class DerbyVeritabani {
 	 * @param fiyati
 	 * @exception SQLException
 	 *                - INSERT hatasi
-	 * @return boolean bir değer
+	 * @return boolean bir deger
 	 * 
 	 */
 	public static boolean KitapEkle(int id, String ad, String yazarAdi, String yazarSoyadi, String yayinEvi, int fiyat) {
@@ -256,7 +256,7 @@ public class DerbyVeritabani {
 	 * @param id
 	 * @exception SQLException
 	 *                - DELETE hatasi
-	 * @return boolean bir değer
+	 * @return boolean bir deger
 	 * 
 	 */
 	public static boolean KitapSil(int id) {
@@ -284,7 +284,7 @@ public class DerbyVeritabani {
 	 * @param fiyati
 	 * @exception SQLException
 	 *                - UPDATE hatasi
-	 * @return boolean bir değer
+	 * @return boolean bir deger
 	 * 
 	 */
 	public static boolean KitapGuncelle(int id, String ad, String yazarAdi, String yazarSoyadi, String yayinEvi, int fiyat) {
@@ -297,7 +297,7 @@ public class DerbyVeritabani {
 			System.out.println("UPDATE hatasi: " + e);
 			return false;
 		}
-		System.out.println("Kitaplar güncellendi.");
+		System.out.println("Kitaplar guncellendi.");
 		return true;
 	}
 

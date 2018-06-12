@@ -40,7 +40,7 @@ public class KitaplarPanel extends JPanel{
         table.setComponentPopupMenu(popupMenu);
 		sonuc.setOpaque(true);
 		JPanel adpanel =new JPanel();
-		adpanel.add(new JLabel("Adı"));
+		adpanel.add(new JLabel("Adi"));
 		adpanel.add(ad);
 		this.add(adpanel);
 		JPanel yazarpanel =new JPanel();
@@ -48,7 +48,7 @@ public class KitaplarPanel extends JPanel{
 		yazarpanel.add(yazar);
 		this.add(yazarpanel);
 		JPanel sayfapanel =new JPanel();
-		sayfapanel.add(new JLabel("Kaç Sayfa"));
+		sayfapanel.add(new JLabel("Kac Sayfa"));
 		sayfapanel.add(sayfasayisi);
 		this.add(sayfapanel);
 		
@@ -57,19 +57,19 @@ public class KitaplarPanel extends JPanel{
             public void actionPerformed(ActionEvent e) {
             	if(combo.getSelectedIndex()==-1) {
             		sonuc.setBackground(Color.red);
-            		sonuc.setText("Geçersiz Yayınevi!");
+            		sonuc.setText("Gecersiz Yayinevi!");
             		return;
             	}else if(ad.getText() == null || ad.getText().isEmpty()) {
             		sonuc.setBackground(Color.red);
-            		sonuc.setText("Geçersiz Ad!");
+            		sonuc.setText("Gecersiz Ad!");
             		return;
             	}else if(yazar.getText() == null || yazar.getText().isEmpty()) {
             		sonuc.setBackground(Color.red);
-            		sonuc.setText("Geçersiz Yazar!");
+            		sonuc.setText("Gecersiz Yazar!");
             		return;
             	}else if(sayfasayisi.getText() == null || !sayfasayisi.getText().matches("\\d+")) {
             		sonuc.setBackground(Color.red);
-            		sonuc.setText("Sayfa sayısı giriniz.!");
+            		sonuc.setText("Sayfa sayisi giriniz.!");
             		return;
             	}
             	sonuc.setBackground(Color.green);
@@ -87,7 +87,7 @@ public class KitaplarPanel extends JPanel{
             }
         });
 		JPanel yayinevipanel =new JPanel();
-		yayinevipanel.add(new JLabel("Yayınevi:"));
+		yayinevipanel.add(new JLabel("Yayinevi:"));
 		yayinevipanel.add(combo);
 		this.add(yayinevipanel);
 		JPanel sonucpanel =new JPanel();
@@ -103,7 +103,7 @@ public class KitaplarPanel extends JPanel{
 	     model.addColumn("AD");
 	     model.addColumn("YAZAR");
 	     model.addColumn("SAYFA");
-	     model.addColumn("Yayınevinin Adı");
+	     model.addColumn("Yayinevinin Adi");
 	     
 	     combo.setVisible(true);
 		this.setVisible(true);
