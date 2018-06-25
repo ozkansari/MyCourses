@@ -5,9 +5,13 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katilimdan no
 
 ## BUTUNLEME PROJESI - SparkJava ile Web Projesi
 
-Teslim Tarihi: ilan edilen Butunleme gununden 2 gun once ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Ornegin, Butunleme 30 Haziran ise 28 Haziran 23:59'a kadar gonderilmeli. Gec gonderim kabul edilmeyecektir.
+Teslim Tarihi: 25 Haziran 23:59:59'a kadar ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Gec gonderim kabul edilmeyecektir.
 
 Butunleme sinavi zamani, projelerinizi sunmaniz/anlatmaniz istenecektir.
+
+    Bilgisayar Programcılığı Programı / 2. Sınıf - İLERİ JAVA UYGULAMALARI, Bütünleme
+    A115	
+    27.06.2018 18:30	
 
 ### Onemli Noktalar
 
