@@ -10,7 +10,7 @@ Teslim Tarihi: 25 Haziran 23:59:59'a kadar ozkan.sari@outlook.com adresine sadec
 Butunleme sinavi zamani, projelerinizi sunmaniz/anlatmaniz istenecektir.
 
     Bilgisayar Programcılığı Programı / 2. Sınıf - İLERİ JAVA UYGULAMALARI, Bütünleme
-    -A115-	C-443
+    C-443
     27.06.2018 18:30	
 
 ### Onemli Noktalar
