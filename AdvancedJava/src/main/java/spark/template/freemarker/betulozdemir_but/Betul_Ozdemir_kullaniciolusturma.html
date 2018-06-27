@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kullanıcı Oluşturma</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+<div class="container">
+   <h2>Kullanıcı Oluşturma</h2>
+    
+<form action="/betül_özdemir/kullaniciOlusturmaSayfasi" method="post" onsubmit="return myFunction()">
+   		<div class="form-group">
+    		<label for="formGroupExampleInput">Kullanıcı Adı</label>
+    		<input id = "kullaniciAdi" type="text" class="form-control" name="kullaniciAdi">
+   		</div>
+   		<div class="form-group">
+   		 	<label for="formGroupExampleInput2">Şifre</label>
+    		<input id = "sifre" type="text" class="form-control" name="sifre">
+	  	</div>
+  		<div class="form-group">
+    		<label for="formGroupExampleInput">Yaş</label>
+    		<input id = "yas" type="text" class="form-control" name="yas">
+  		</div>
+  		<div class="form-group">
+    		<label for="formGroupExampleInput2">Cinsiyet</label>
+    		<input id = "cinsiyet" type="text" class="form-control" name="cinsiyet">
+  		</div>
+ <a href="Betül_Özdemir_giris_sayfasi.html">Vazgeç</a>
+  		<div class="text-right">
+  	
+            <button type="submit" style="margin-bottom: 75px;" class="btn btn-primary">Giriş</button>
+             
+   		</div>
+   	
+   </form>
+    
+
+
+
+<script>
+function myFunction() {
+	var kullaniciAdi = document.getElementById("kullaniciAdi").value;
+	var sifre = document.getElementById("sifre").value;
+	var yas= document.getElementById("yas").value;
+	var cinsiyet = document.getElementById("cinsiyet").value;
+	
+	var submitOK = "true";
+	var message = "";
+	
+	if(kullaniciAdi == ""){
+		message += "Kullanıcı Adı kısmı boş bırakılamaz.\n";
+		submitOK = "false";
+	}
+	if(sifre == ""){
+		message += "Şifre kısmı boş bırakılamaz.\n";
+		submitOK = "false";
+	}
+	
+	if(yas == ""){
+		message += "Yaş kısmı boş bırakılamaz.\n";
+		submitOK = "false";
+	}else{
+		if(isInt(yas) == false)
+		{
+			message += "Yaş Tam Sayı olmalıdır.\n";
+			submitOK = "false";
+		}
+	}
+	
+	
+	if(cinsiyet == "") {
+		message += "Cinsiyet kısmı boş bırakılamaz.\n";
+		submitOK = "false";
+	}
+	if(cinsiyet!="K"||cinsiyet!="E"){
+	message+="Cinsiyet kısmı K veya E olmalıdır.\n";
+	submitOK="false";
+	}
+	
+	if(submitOK == "false"){
+		alert(message);
+		return false;
+	}
+}
+function isInt(value) {
+    var er = /^-?[0-9]+$/;
+    return er.test(value);
+}
+</script>
+
+
+</body>
+</html>
+    

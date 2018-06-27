@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Giriş Sayfası</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+<div class="container">
+   <h2>Giriş Sayfası</h2>
+    
+   
+   <form action="/betül_özdemir/giris_sayfasi" method="post" onsubmit="return myFunction()">
+   		<div class="form-group">
+    		<label for="formGroupExampleInput">Kullanıcı Adı</label>
+    		<input id = "kullaniciAdi" type="text" class="form-control" name="kullaniciAdi">
+   		</div>
+
+  		<div class="form-group">
+    		<label for="formGroupExampleInput2">Şifre</label>
+    		<input id = "sifre" type="text" class="form-control" name="sifre">
+  		</div>
+  
+  		<div class="text-right">
+          <button type="submit" style="margin-bottom: 75px;" class="btn btn-primary">Giriş</button>
+            <a href="Betül_Özdemir_kullaniciolusturma.html">Kullanıcı Oluştur </a>
+   		</div>
+   </form>
+      
+</div>
+
+
+ <script type="text/javascript">
+function myFunction() {
+	var kullaniciAdi = document.getElementById("kullaniciAdi").value;
+	var sifre = document.getElementById("sifre").value;
+	
+	var submitOK = "true";
+	var message = "";
+		
+	if(kullaniciAdi!="admin" || sifre!="123")
+	{
+		message += "Geçerli kullanıcı adı ve şifre girin.\n";
+			submitOK = "false";	
+				window.location = "Betül_Özdemir_hatasayfasi.html"							
+         }
+	else
+	{
+	message += "Doğru giriş yaptınız.\n";
+	submitOK = "false";
+			window.location = "Betül_Özdemir_normalkullanici.html"
+			
+			
+			
+		}
+	if(kullaniciAdi == ""){
+		message += "Kullanıcı Adı kısmı boş bırakılamaz.\n";
+		submitOK = "false";
+	}
+	
+	if(sifre == ""){
+		message += "Şifre kısmı boş bırakılamaz.\n";
+		submitOK = "false";
+	}
+	
+	
+	if(submitOK == "false"){
+		alert(message);
+		return false;
+	}
+}
+function isInt(value) {
+    var er = /^-?[0-9]+$/;
+    return er.test(value);
+}
+
+	</script>
+
+</body>
+</html>
+
+
+

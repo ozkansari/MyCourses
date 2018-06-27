@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 10px;
+        }
+        .navbar-nav  li a:hover {
+            color: #1abc9c !important;
+        }
+    </style>
+</head>
+<body>
+
+
+<h1>Yeni Kullanici</h1>
+
+<form action="/yeniKullaniciEkle" method="post" >
+    <div class="form-group">
+        <label for="formGroupExampleInput">Kullanici Adi:</label>
+        <input id = "ad" type="text" class="form-control" name="ad" required="required">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Yasi:</label>
+        <input id = "cinsiyet" type="text" class="form-control" name="yas" required="required">
+    </div>
+    <div  class="form-group">
+            <label for="formGroupExampleInput3">Cinsiyeti:</label><br>
+
+
+            <input type="radio" name="cinsiyet" value="K"> Kadin <br>
+            <input type="radio" name="cinsiyet" value="E"> Erkek<br>
+
+   </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput4">Sifresi:</label>
+        <input id = "sifre" type="password" class="form-control" name="sifre" required="required">
+    </div>
+    <button type="button submit" style="margin-bottom: 75px;" class="btn btn-primary">Kullaniciyi Ekle</button>
+</form>
+<a href="/vazgec" >Vazgec</a>
+
+
+
+</body>
+</html>
