@@ -7,7 +7,7 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katilimdan no
 ## BUTUNLEME YAZILI SINAV OLACAKTIR. VIZEDEKINE BENZER SORULAR CIKACAKTIR.
 
     Bilgisayar Programcılığı Programı / 2. Sınıf - YAZILIM GELİŞTİRME ORTAM VE ARAÇLARI, Bütünleme
-    A115
+    C-443
     27.06.2018 17:45
 
 ## FINAL PROJESI
