@@ -27,7 +27,7 @@
    <h2>Giriş Sayfası</h2>
     
    
-   <form action="/betül_özdemir/giris_sayfasi" method="post" onsubmit="return myFunction()">
+   <form action="/betul_ozdemir/giris_sayfasi" method="post" onsubmit="return myFunction()">
    		<div class="form-group">
     		<label for="formGroupExampleInput">Kullanıcı Adı</label>
     		<input id = "kullaniciAdi" type="text" class="form-control" name="kullaniciAdi">
@@ -40,7 +40,7 @@
   
   		<div class="text-right">
           <button type="submit" style="margin-bottom: 75px;" class="btn btn-primary">Giriş</button>
-            <a href="Betül_Özdemir_kullaniciolusturma.html">Kullanıcı Oluştur </a>
+            <a href="/betul_ozdemir/kullaniciOlusturmaSayfasi">Kullanıcı Oluştur </a>
    		</div>
    </form>
       
@@ -59,13 +59,13 @@ function myFunction() {
 	{
 		message += "Geçerli kullanıcı adı ve şifre girin.\n";
 			submitOK = "false";	
-				window.location = "Betül_Özdemir_hatasayfasi.html"							
+				window.location = "Betul_Ozdemir_hatasayfasi.html"							
          }
 	else
 	{
 	message += "Doğru giriş yaptınız.\n";
 	submitOK = "false";
-			window.location = "Betül_Özdemir_normalkullanici.html"
+			window.location = "Betul_Ozdemir_normalkullanici.html"
 			
 			
 			

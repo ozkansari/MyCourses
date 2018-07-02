@@ -20,7 +20,7 @@ public class Betul_Ozdemir_KullaniciMain/* OZKANS FIX <FreeMarkerRoute, Route> *
 	static Betul_Ozdemir_VeriTabani veriTabani;
 	
 	/**
-	 * Uygulaman�n main fonksiyonu. Uygulama buradan ba�lar..
+	 * Uygulaman_n main fonksiyonu. Uygulama buradan ba_lar..
 	 * @param args
 	 * @throws Exception
 	 */
@@ -30,30 +30,30 @@ public class Betul_Ozdemir_KullaniciMain/* OZKANS FIX <FreeMarkerRoute, Route> *
 		veriTabani.veritabaniHazirla();
 		
 		// OZKANS FIX }
-	    FreeMarkerRoute giris_sayfasi = new FreeMarkerRoute("/betül_özdemir/giris_sayfasi") {
+	    FreeMarkerRoute giris_sayfasi = new FreeMarkerRoute("/betul_ozdemir/giris_sayfasi") {
             public Object handle(Request istek, Response cevap) {
             		return new ModelAndView(null, "/betulozdemir_but/Betul_Ozdemir_giris_sayfasi.html");
             }
         };
      	get(giris_sayfasi);
         
-        /* OZKANS FIX Remote */ /* OZKANS FIX */ Route /**/giris_sayfasiPost = new Route("/betül_özdemir/giris_sayfasi/post") {
+        /* OZKANS FIX Remote */ /* OZKANS FIX */ Route /**/giris_sayfasiPost = new Route("/betul_ozdemir/giris_sayfasi/post") {
             public Object handle(Request istek, Response cevap) {
-            		cevap.redirect("/betül_özdemir/");
+            		cevap.redirect("/betul_ozdemir/");
             		return null;
             }
         };
         // OZKANS FIX post(girisSayfasiPost);
         /* OZKANS FIX */post(giris_sayfasiPost);
         
-        FreeMarkerRoute kullaniciOlusturmaSayfasi = new FreeMarkerRoute("/betül_özdemir/kullaniciOlusturmaSayfasi") {
+        FreeMarkerRoute kullaniciOlusturmaSayfasi = new FreeMarkerRoute("/betul_ozdemir/kullaniciOlusturmaSayfasi") {
             public Object handle(Request istek, Response cevap) {
                 return new ModelAndView(null, "/betulozdemir_but/Betul_Ozdemir_kullaniciolusturma.html");
             }
         };
      	get(kullaniciOlusturmaSayfasi);
         
-        Route kullaniciOlusturmaSayfasiPost = new Route("/betül_özdemir/kullanıcıOlusturmaSayfasi/post") {
+        Route kullaniciOlusturmaSayfasiPost = new Route("/betul_ozdemir/kullanıcıOlusturmaSayfasi/post") {
             public Object handle(Request istek, Response cevap) {
             		String kullaniciAdi = istek.queryParams("kadi");
             		String sifre = istek.queryParams("sifre");
@@ -61,7 +61,7 @@ public class Betul_Ozdemir_KullaniciMain/* OZKANS FIX <FreeMarkerRoute, Route> *
             		int yas = Integer.parseInt(istek.queryParams("yas"));
             		
             		System.out.println(kullaniciAdi + sifre + cinsiyet + yas);
-            		cevap.redirect("/betül_özdemir/");
+            		cevap.redirect("/betul_ozdemir/");
             		return null;
             }
         };
@@ -78,14 +78,14 @@ public class Betul_Ozdemir_KullaniciMain/* OZKANS FIX <FreeMarkerRoute, Route> *
         };
      	post(kullaniciyiSil);
         
-        FreeMarkerRoute hataSayfasi = new FreeMarkerRoute("/betül_özdemir/hata") {
+        FreeMarkerRoute hataSayfasi = new FreeMarkerRoute("/betul_ozdemir/hata") {
             public Object handle(Request istek, Response cevap) {
                 return new ModelAndView(null, "/betulozdemir_but/Betul_Ozdemir_hatasayfasi.html");
             }
         };
      	get(hataSayfasi);
         
-        FreeMarkerRoute anaSayfa = new FreeMarkerRoute("/betül_özdemir/") {
+        FreeMarkerRoute anaSayfa = new FreeMarkerRoute("/betul_ozdemir/") {
             public Object handle(Request istek, Response cevap) {
             	/* OZKANS FIX */boolean giris_bilgisi = false;
 				if(giris_bilgisi == false) {
@@ -98,7 +98,7 @@ public class Betul_Ozdemir_KullaniciMain/* OZKANS FIX <FreeMarkerRoute, Route> *
                     		ozellikler.put("kullanicilar", kullaniciListe);
                     		return new ModelAndView(ozellikler, "/betulozdemir_but/Betul_Ozdemir_adminkullanicianasayfa.html");
                 		}else {
-                			cevap.redirect("/betül_özdemir/hata");
+                			cevap.redirect("/betul_ozdemir/hata");
                     		return null;
                 		}
                 }
@@ -106,11 +106,11 @@ public class Betul_Ozdemir_KullaniciMain/* OZKANS FIX <FreeMarkerRoute, Route> *
         };
      	get(anaSayfa);
         
-        FreeMarkerRoute adminAnaSayfa = new FreeMarkerRoute("/betül_özdemir/yonetici") {
+        FreeMarkerRoute adminAnaSayfa = new FreeMarkerRoute("/betul_ozdemir/yonetici") {
             public Object handle(Request istek, Response cevap) {
             		/* OZKANS FIX */ boolean giris_bilgisi = false;
 					if(giris_bilgisi == false) {
-            			cevap.redirect("/betül_özdemir/giris_sayfasi");
+            			cevap.redirect("/betul_ozdemir/giris_sayfasi");
                 		return null;
             		}else {
             			/* OZKANS FIX */ String kullanici_tipi = "";
@@ -119,7 +119,7 @@ public class Betul_Ozdemir_KullaniciMain/* OZKANS FIX <FreeMarkerRoute, Route> *
                     		ozellikler.put("kullanicilar", kullaniciListe);
                     		return new ModelAndView(ozellikler, "/betulozdemir_but/Betul_Ozdemir_adminkullanicianasayfa.html");
                 		}else {
-                			cevap.redirect("/betül_özdemir/hata");
+                			cevap.redirect("/betul_ozdemir/hata");
                     		return null;
                 		}
             		}
