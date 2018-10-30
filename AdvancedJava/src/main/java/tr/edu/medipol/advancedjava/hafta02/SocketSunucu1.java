@@ -1,4 +1,4 @@
-package tr.edu.medipol.ilerijava.hafta2;
+package tr.edu.medipol.advancedjava.hafta02;
 
 import java.io.*;
 import java.net.*;
