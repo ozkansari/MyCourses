@@ -71,7 +71,7 @@ https://github.com/
 
 * Hafta 1 - 13 EKIM : Ders 1 - Eclipse ve Gite giris. Github Hesabi acilmasi.
 * Hafta 2 - 20 EKIM : Lab Tamirati nedeniyle Ders yapilamadi
-* Hafta 3 - 27 EKIM : Ders 2 - Maven ve Git ile SPring Boot projesi gelistirme.
+* Hafta 3 - 27 EKIM : Ders 2 - Maven ve Git ile Spring Boot projesi gelistirme.
 * Hafta 4 - 3 KASIM : 
 * Hafta 5 - 10 KASIM :
 * Hafta 6 - 17 KASIM  :
