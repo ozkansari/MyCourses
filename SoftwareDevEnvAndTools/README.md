@@ -28,7 +28,7 @@ https://github.com/
 
 ##### Projeyi Github repoya gonderme
 * Eclipse'de "Team/share" adimi ile projeyi repository secerek sectigin git repository'sine bagla.
-* .gitignore dosyasına .* satiri ekleyerek gereksiz dosyalarin git gorunumden cikmasini sagla.
+* .gitignore dosyasina .* satiri ekleyerek gereksiz dosyalarin git gorunumden cikmasini sagla.
 * Dosyalari unstaged changes'den staged changes'e aktar.
 * Anlamli bir commit mesaji yaz ve "commit and push" butonuna tikla. (Sadece commit, sonrasinda da branch'e sag tiklayip push denilebilir)
 
