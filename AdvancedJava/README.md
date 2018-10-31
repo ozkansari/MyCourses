@@ -4,23 +4,6 @@ Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasinda iki oturum halinde yapilac
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katilimdan not verilecektir.
 
 
-## TAKVIM
-
-* Hafta 1 - 13 EKIM : Ders 1 - Java Tekrari
-* Hafta 2 - 20 EKIM : Lab Tamirati nedeniyle Ders yapilamadi
-* Hafta 3 - 27 EKIM : Ders 2 - TCP Socket ve Thread Programlama
-* Hafta 4 - 3 KASIM : 
-* Hafta 5 - 10 KASIM :
-* Hafta 6 - 17 KASIM  :
-* ARA SINAV PROJESI
-* Hafta 7 - 8 ARALIK  :
-* Hafta 8 - 15 ARALIK  :
-* Hafta 9 - 22 ARALIK  :
-* Hafta 10 - 29 ARALIK  :
-* Hafta 11 - 5 OCAK  :
-* Hafta 12 - 12 OCAK  :
-* FINAL SINAVI PROJESI :
-
 ## DERSLER
 
 ### Ders 1 - 13 EKIM
@@ -51,3 +34,21 @@ TCP Socket ve Thread Programlama
 
 ### FINAL SINAVI
 
+---
+
+## TAKVIM
+
+* Hafta 1 - 13 EKIM : Ders 1 - Java Tekrari
+* Hafta 2 - 20 EKIM : Lab Tamirati nedeniyle Ders yapilamadi
+* Hafta 3 - 27 EKIM : Ders 2 - TCP Socket ve Thread Programlama
+* Hafta 4 - 3 KASIM : 
+* Hafta 5 - 10 KASIM :
+* Hafta 6 - 17 KASIM  :
+* ARA SINAV PROJESI
+* Hafta 7 - 8 ARALIK  :
+* Hafta 8 - 15 ARALIK  :
+* Hafta 9 - 22 ARALIK  :
+* Hafta 10 - 29 ARALIK  :
+* Hafta 11 - 5 OCAK  :
+* Hafta 12 - 12 OCAK  :
+* FINAL SINAVI PROJESI :
