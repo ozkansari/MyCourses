@@ -23,17 +23,11 @@ public class SocketIstemci2 {
 					e.getMessage());
 		}
 		
-		PrintWriter sunucuMesajGonderici = SocketYardimciAraclari.socketYaziciOlustur(sunucuBaglantisi);
+		SocketOkuyucuThread2 t = new SocketOkuyucuThread2(sunucuBaglantisi, false);
+		t.start();
 		
-		int i = 1;
-		do  {
-			String mesaj = "Mesaj " + i;
-			System.out.println(mesaj + " godneriliyor.");
-			sunucuMesajGonderici.println(mesaj);
-			sunucuMesajGonderici.flush();
-			i++;
-			Thread.sleep(5000); // 5000 ms = 5 sn bekle
-		} while(true);
+		SocketYaziciThread2 t2 = new SocketYaziciThread2(sunucuBaglantisi, false);
+		t2.start();
 
 	}
 

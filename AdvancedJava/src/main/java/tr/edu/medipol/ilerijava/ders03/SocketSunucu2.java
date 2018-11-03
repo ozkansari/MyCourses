@@ -24,9 +24,13 @@ public class SocketSunucu2 {
 				System.out.println("Istemci baglandi: " + 
 						istemciBaglantisi.getInetAddress());
 				
-				SocketOkuyucuThread2 t = 
-						new SocketOkuyucuThread2(istemciBaglantisi);
-				t.start();
+				SocketOkuyucuThread2 t1 = 
+						new SocketOkuyucuThread2(istemciBaglantisi, true);
+				t1.start();
+				
+				SocketYaziciThread2 t2 = 
+						new SocketYaziciThread2(istemciBaglantisi, true);
+				t2.start();
 			
 			}
 			

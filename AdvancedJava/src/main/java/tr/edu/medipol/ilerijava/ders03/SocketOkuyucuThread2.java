@@ -2,36 +2,46 @@ package tr.edu.medipol.ilerijava.ders03;
 
 import java.net.*;
 import java.io.*;
+import java.lang.System.LoggerFinder;
 import java.util.*;
+import java.util.logging.Logger;
 
-public class SocketOkuyucuThread2 extends Thread {
-	private Socket istemciBaglantisi;
-	public SocketOkuyucuThread2(Socket istemciBaglantisi) {
-		this.istemciBaglantisi = istemciBaglantisi;
+public class SocketOkuyucuThread2 extends SocketThreadUstSinif {
+	
+	private static final Logger LOGGER = Logger.getLogger(SocketOkuyucuThread2.class.getName());
+
+	public SocketOkuyucuThread2(Socket socketBaglantisi) {
+		super(socketBaglantisi, false);
+		LOGGER.info("Okuyucu Thread olusturuldu" + socketIsmi);
 	}
 	
+	public SocketOkuyucuThread2(Socket socketBaglantisi, boolean sunucu) {
+		super(socketBaglantisi, sunucu);
+		LOGGER.info("Okuyucu Thread olusturuldu" + socketIsmi);
+	}
+
 	@Override
 	public void run() {
 		
-		System.out.println("Thread calisiyor" + 
-				istemciBaglantisi.getInetAddress());
+		LOGGER.info("Okuyucu Thread calisiyor" + socketIsmi);
 		
 		// Istemci okuyucu ac
-		BufferedReader istemciOkuyucu = 
+		BufferedReader socketOkuyucu = 
 				SocketYardimciAraclari.
-				socketOkuyucuOlustur(istemciBaglantisi);
+				socketOkuyucuOlustur(socketBaglantisi);
 		
 		int i=1;
 		String mesaj = "";
 		do {
 			try {
 				// istemciden mesaj gelene kadar bekler
-				mesaj = istemciOkuyucu.readLine(); 
-				System.out.println("[" + istemciBaglantisi.getInetAddress() + 
+				mesaj = socketOkuyucu.readLine(); 
+				LOGGER.info("[" + socketIsmi + 
 						" " + i + "]" + mesaj);
 				i++;
 			} catch (IOException e) {
-				System.out.println("Okuma hata: " + e.getMessage());
+				LOGGER.severe("Okuma hata: " + e.getMessage());
+				break;
 			}
 		} while(!mesaj.equals("Bye"));
 		
