@@ -17,28 +17,16 @@ public class SocketOkuyucuThread2 extends Thread {
 				istemciBaglantisi.getInetAddress());
 		
 		// Istemci okuyucu ac
-		BufferedReader istemciOkuyucu = null;
-		try {
-			InputStream girdi = this.istemciBaglantisi.getInputStream();
-			InputStreamReader girdiOkuyucu	= new InputStreamReader(girdi);
-			istemciOkuyucu = new BufferedReader(girdiOkuyucu);
-			/*
-			istemciOkuyucu = new BufferedReader(
-					new InputStreamReader(
-							istemciBaglantisi.getInputStream()
-					)
-			);	
-			*/
-		} catch (IOException e) {
-			System.out.println("Istemci okuyucu acilirken hata: "
-					+ e.getMessage()) ;
-		}
+		BufferedReader istemciOkuyucu = 
+				SocketYardimciAraclari.
+				socketOkuyucuOlustur(istemciBaglantisi);
 		
 		int i=1;
 		String mesaj = "";
 		do {
 			try {
-				mesaj = istemciOkuyucu.readLine();
+				// istemciden mesaj gelene kadar bekler
+				mesaj = istemciOkuyucu.readLine(); 
 				System.out.println("[" + istemciBaglantisi.getInetAddress() + 
 						" " + i + "]" + mesaj);
 				i++;
@@ -48,5 +36,7 @@ public class SocketOkuyucuThread2 extends Thread {
 		} while(!mesaj.equals("Bye"));
 		
 	}
+
+	
 
 }
