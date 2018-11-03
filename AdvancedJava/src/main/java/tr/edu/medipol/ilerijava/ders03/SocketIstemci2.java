@@ -1,9 +1,9 @@
-package tr.edu.medipol.advancedjava.hafta02;
+package tr.edu.medipol.ilerijava.ders03;
 
 import java.io.*;
 import java.net.*;
 
-public class SocketIstemci1 {
+public class SocketIstemci2 {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -12,7 +12,7 @@ public class SocketIstemci1 {
 		PrintWriter sunucuMesajGonderici = null;
 		try {
 			Socket sunucuBaglantisi = new Socket("10.200.144.11", 
-					SocketSunucu1.SERVER_PORT);
+					SocketSunucu2.SERVER_PORT);
 
 			sunucuMesajGonderici = 
 					new PrintWriter(sunucuBaglantisi.getOutputStream());

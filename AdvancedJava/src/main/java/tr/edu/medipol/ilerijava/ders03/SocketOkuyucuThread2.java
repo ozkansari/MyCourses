@@ -1,12 +1,12 @@
-package tr.edu.medipol.advancedjava.hafta02;
+package tr.edu.medipol.ilerijava.ders03;
 
 import java.net.*;
 import java.io.*;
 import java.util.*;
 
-public class SocketIstemciBaglantisiThread extends Thread {
+public class SocketOkuyucuThread2 extends Thread {
 	private Socket istemciBaglantisi;
-	public SocketIstemciBaglantisiThread(Socket istemciBaglantisi) {
+	public SocketOkuyucuThread2(Socket istemciBaglantisi) {
 		this.istemciBaglantisi = istemciBaglantisi;
 	}
 	

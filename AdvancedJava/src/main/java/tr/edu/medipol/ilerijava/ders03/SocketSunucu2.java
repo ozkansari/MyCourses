@@ -1,10 +1,10 @@
-package tr.edu.medipol.advancedjava.hafta02;
+package tr.edu.medipol.ilerijava.ders03;
 
 import java.io.*;
 import java.net.*;
 import java.util.*;
 
-public class SocketSunucu1 {
+public class SocketSunucu2 {
 
 	public static final int SERVER_PORT = 7777;
 	
@@ -24,8 +24,8 @@ public class SocketSunucu1 {
 				System.out.println("Istemci baglandi: " + 
 						istemciBaglantisi.getInetAddress());
 				
-				SocketIstemciBaglantisiThread t = 
-						new SocketIstemciBaglantisiThread(istemciBaglantisi);
+				SocketOkuyucuThread2 t = 
+						new SocketOkuyucuThread2(istemciBaglantisi);
 				t.start();
 			
 			}

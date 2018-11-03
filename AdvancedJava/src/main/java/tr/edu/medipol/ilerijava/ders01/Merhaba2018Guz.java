@@ -1,4 +1,4 @@
-package tr.edu.medipol.advancedjava.hafta01;
+package tr.edu.medipol.ilerijava.ders01;
 
 public class Merhaba2018Guz {
 
