@@ -10,7 +10,7 @@ public class SocketSunucu3 {
 	
 	public static void main(String[] args) {
 		
-		EkranUstSinif sunucuEkrani = new SunucuEkrani();
+		EkranUstSinif sunucuEkrani = new SunucuEkrani("SUNUCU EKRANI");
 		sunucuEkrani.setVisible(true);
 		
 		try {
@@ -28,7 +28,8 @@ public class SocketSunucu3 {
 						istemciBaglantisi.getInetAddress());
 				
 				SocketOkuyucuThread3 t1 = 
-						new SocketOkuyucuThread3(istemciBaglantisi, true, sunucuEkrani);
+						new SocketOkuyucuThread3(istemciBaglantisi, true, 
+								sunucuEkrani);
 				t1.start();
 				
 				SocketYaziciThread3 t2 = 

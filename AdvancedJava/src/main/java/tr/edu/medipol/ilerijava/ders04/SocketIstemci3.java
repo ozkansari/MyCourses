@@ -12,6 +12,9 @@ public class SocketIstemci3 {
 
 		System.out.println("Istemci aciliyor.");
 
+		EkranUstSinif istemciEkrani = new IstemciEkrani("ISTEMCI EKRANI");
+		istemciEkrani.setVisible(true);
+		
 		Socket sunucuBaglantisi = null;
 		try {
 			sunucuBaglantisi = new Socket(sunucuIP, sunucuPort);
@@ -22,10 +25,11 @@ public class SocketIstemci3 {
 					e.getMessage());
 		}
 		
-		SocketOkuyucuThread3 t = new SocketOkuyucuThread3(sunucuBaglantisi, false);
+		SocketOkuyucuThread3 t = new SocketOkuyucuThread3(sunucuBaglantisi, 
+				false, istemciEkrani);
 		t.start();
 		
-		SocketYaziciThread3 t2 = new SocketYaziciThread3(sunucuBaglantisi, false);
+		SocketYaziciThread3 t2 = new SocketYaziciThread3(sunucuBaglantisi, false, istemciEkrani);
 		t2.start();
 
 	}

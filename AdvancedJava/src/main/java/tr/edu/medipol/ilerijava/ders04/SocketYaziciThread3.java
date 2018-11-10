@@ -10,37 +10,68 @@ public class SocketYaziciThread3 extends SocketThreadUstSinif2 {
 	
 	private PrintWriter socketMesajGonderici;
 	
+	private EkranUstSinif ekran;
+	
 	public SocketYaziciThread3(Socket socketBaglantisi) {
 		super(socketBaglantisi, false);
+		init(socketBaglantisi);
+	}
+
+	public SocketYaziciThread3(Socket socketBaglantisi, boolean sunucu) {
+		super(socketBaglantisi, sunucu);
+		init(socketBaglantisi);
+	}
+
+	public SocketYaziciThread3(Socket socketBaglantisi, boolean sunucu, EkranUstSinif ekran) {
+		super(socketBaglantisi, sunucu);
+		init(socketBaglantisi);
+		this.ekran = ekran;
+	}
+	
+	public void init(Socket socketBaglantisi) {
 		socketMesajGonderici = SocketYardimciAraclari2.socketYaziciOlustur(socketBaglantisi);
 		LOGGER.info("Yazici Thread olusturuldu" + socketIsmi);
 	}
 	
-	public SocketYaziciThread3(Socket socketBaglantisi, boolean sunucu) {
-		super(socketBaglantisi, sunucu);
-		socketMesajGonderici = SocketYardimciAraclari2.socketYaziciOlustur(socketBaglantisi);
-		LOGGER.info("Yazici Thread olusturuldu" + socketIsmi);
-	}
-
 	@Override
 	public void run() {
 		LOGGER.info("Yazici Thread calisiyor" + socketIsmi);
 		
-		int i = 1;
-		do  {
-			String mesaj = socketIsmi + ">Mesaj " + i;
-			System.out.println(mesaj + " gonderiliyor.");
-			socketMesajGonderici.println(mesaj);
-			socketMesajGonderici.flush();
-			i++;
-			threadBekle(5); // 5000 ms = 5 sn bekle
-		} while(true);
+		// rastgeleMesajGonder();
+		
+		while(true) {
+			String siradakiMesaj = ekran.getMesajKuyrugu().poll();
+			if (siradakiMesaj != null) {
+				socketeMesajGonder(siradakiMesaj);
+			} else {
+				threadBekle(10000);
+			}
+		}
 		
 	}
 
-	public void threadBekle(int saniye){
+	public void rastgeleMesajGonder() {
+		int beklemeSuresi = 5000;// 5000 ms = 5 sn bekle
+		int i = 1;
+		do  {
+			String mesaj = socketIsmi + ">Mesaj " + i;
+			socketeMesajGonder(mesaj); 
+			threadBekle(beklemeSuresi);
+			i++;
+		} while(true);
+	}
+
+	public void socketeMesajGonder(String mesaj) {
+		if (mesaj != null) {
+			System.out.println(mesaj + " gonderiliyor.");
+			socketMesajGonderici.println(mesaj);
+			socketMesajGonderici.flush();
+		} 
+	}
+
+	public void threadBekle(int ms){
 		try {
-			Thread.sleep(saniye*1000);
+			Thread.sleep(ms);
 		} catch (InterruptedException e) {
 			LOGGER.warning("Thread beklerken hata olsutu: " + e.getMessage());
 		}

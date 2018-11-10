@@ -11,8 +11,8 @@ public class SunucuEkrani extends EkranUstSinif {
 	private JScrollPane mesajlarJTAScroll;
 	private java.util.List<String> mesajList;
 
-	public SunucuEkrani() {
-		setTitle("SUNUCU EKRANI");
+	public SunucuEkrani(String title) {
+		setTitle(title);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
