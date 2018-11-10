@@ -6,16 +6,16 @@ import java.lang.System.LoggerFinder;
 import java.util.*;
 import java.util.logging.Logger;
 
-public class SocketOkuyucuThread2 extends SocketThreadUstSinif {
+public class SocketOkuyucuThread3 extends SocketThreadUstSinif2 {
 	
-	private static final Logger LOGGER = Logger.getLogger(SocketOkuyucuThread2.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SocketOkuyucuThread3.class.getName());
 
-	public SocketOkuyucuThread2(Socket socketBaglantisi) {
+	public SocketOkuyucuThread3(Socket socketBaglantisi) {
 		super(socketBaglantisi, false);
 		LOGGER.info("Okuyucu Thread olusturuldu" + socketIsmi);
 	}
 	
-	public SocketOkuyucuThread2(Socket socketBaglantisi, boolean sunucu) {
+	public SocketOkuyucuThread3(Socket socketBaglantisi, boolean sunucu) {
 		super(socketBaglantisi, sunucu);
 		LOGGER.info("Okuyucu Thread olusturuldu" + socketIsmi);
 	}
@@ -27,7 +27,7 @@ public class SocketOkuyucuThread2 extends SocketThreadUstSinif {
 		
 		// Istemci okuyucu ac
 		BufferedReader socketOkuyucu = 
-				SocketYardimciAraclari.
+				SocketYardimciAraclari2.
 				socketOkuyucuOlustur(socketBaglantisi);
 		
 		int i=1;

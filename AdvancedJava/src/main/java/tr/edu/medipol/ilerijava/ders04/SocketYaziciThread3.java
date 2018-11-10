@@ -4,21 +4,21 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.logging.Logger;
 
-public class SocketYaziciThread2 extends SocketThreadUstSinif {
+public class SocketYaziciThread3 extends SocketThreadUstSinif2 {
 
-	private static final Logger LOGGER = Logger.getLogger(SocketYaziciThread2.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SocketYaziciThread3.class.getName());
 	
 	private PrintWriter socketMesajGonderici;
 	
-	public SocketYaziciThread2(Socket socketBaglantisi) {
+	public SocketYaziciThread3(Socket socketBaglantisi) {
 		super(socketBaglantisi, false);
-		socketMesajGonderici = SocketYardimciAraclari.socketYaziciOlustur(socketBaglantisi);
+		socketMesajGonderici = SocketYardimciAraclari2.socketYaziciOlustur(socketBaglantisi);
 		LOGGER.info("Yazici Thread olusturuldu" + socketIsmi);
 	}
 	
-	public SocketYaziciThread2(Socket socketBaglantisi, boolean sunucu) {
+	public SocketYaziciThread3(Socket socketBaglantisi, boolean sunucu) {
 		super(socketBaglantisi, sunucu);
-		socketMesajGonderici = SocketYardimciAraclari.socketYaziciOlustur(socketBaglantisi);
+		socketMesajGonderici = SocketYardimciAraclari2.socketYaziciOlustur(socketBaglantisi);
 		LOGGER.info("Yazici Thread olusturuldu" + socketIsmi);
 	}
 

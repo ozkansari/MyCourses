@@ -2,7 +2,7 @@ package tr.edu.medipol.ilerijava.ders04;
 
 import java.net.Socket;
 
-public abstract class SocketThreadUstSinif extends Thread {
+public abstract class SocketThreadUstSinif2 extends Thread {
 	
 	/**
 	 * Istemci ya da sunucu socket baglantisi
@@ -16,7 +16,7 @@ public abstract class SocketThreadUstSinif extends Thread {
 	
 	protected String socketIsmi;
 	
-	public SocketThreadUstSinif(Socket socketBaglantisi, boolean sunucu) {
+	public SocketThreadUstSinif2(Socket socketBaglantisi, boolean sunucu) {
 		this.socketBaglantisi = socketBaglantisi;
 		this.sunucu = sunucu;
 		String socketTipi = sunucu ? "sunucu" : "istemci";

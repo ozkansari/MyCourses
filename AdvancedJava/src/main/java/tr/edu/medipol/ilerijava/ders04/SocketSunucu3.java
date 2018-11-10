@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-public class SocketSunucu2 {
+public class SocketSunucu3 {
 
 	public static final int SERVER_PORT = 7777;
 	
@@ -24,12 +24,12 @@ public class SocketSunucu2 {
 				System.out.println("Istemci baglandi: " + 
 						istemciBaglantisi.getInetAddress());
 				
-				SocketOkuyucuThread2 t1 = 
-						new SocketOkuyucuThread2(istemciBaglantisi, true);
+				SocketOkuyucuThread3 t1 = 
+						new SocketOkuyucuThread3(istemciBaglantisi, true);
 				t1.start();
 				
-				SocketYaziciThread2 t2 = 
-						new SocketYaziciThread2(istemciBaglantisi, true);
+				SocketYaziciThread3 t2 = 
+						new SocketYaziciThread3(istemciBaglantisi, true);
 				t2.start();
 			
 			}

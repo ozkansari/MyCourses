@@ -8,9 +8,9 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-public final class SocketYardimciAraclari {
+public final class SocketYardimciAraclari2 {
 
-	private SocketYardimciAraclari() {
+	private SocketYardimciAraclari2() {
 		// bu obje newlenmeyecek, static kullanilicak
 	}
 	

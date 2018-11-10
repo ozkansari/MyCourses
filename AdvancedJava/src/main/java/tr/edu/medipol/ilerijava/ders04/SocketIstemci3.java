@@ -3,10 +3,10 @@ package tr.edu.medipol.ilerijava.ders04;
 import java.io.*;
 import java.net.*;
 
-public class SocketIstemci2 {
+public class SocketIstemci3 {
 	
 	private static final String sunucuIP = "10.200.144.11";
-	private static final int sunucuPort = SocketSunucu2.SERVER_PORT;
+	private static final int sunucuPort = SocketSunucu3.SERVER_PORT;
 			
 	public static void main(String[] args) throws InterruptedException {
 
@@ -23,10 +23,10 @@ public class SocketIstemci2 {
 					e.getMessage());
 		}
 		
-		SocketOkuyucuThread2 t = new SocketOkuyucuThread2(sunucuBaglantisi, false);
+		SocketOkuyucuThread3 t = new SocketOkuyucuThread3(sunucuBaglantisi, false);
 		t.start();
 		
-		SocketYaziciThread2 t2 = new SocketYaziciThread2(sunucuBaglantisi, false);
+		SocketYaziciThread3 t2 = new SocketYaziciThread3(sunucuBaglantisi, false);
 		t2.start();
 
 	}
