@@ -14,7 +14,6 @@ public class SocketIstemci3 {
 
 		Socket sunucuBaglantisi = null;
 		try {
-			
 			sunucuBaglantisi = new Socket(sunucuIP, sunucuPort);
 		} catch (UnknownHostException e) {
 			System.out.println("Sunucu IP hatali" + e.getMessage());

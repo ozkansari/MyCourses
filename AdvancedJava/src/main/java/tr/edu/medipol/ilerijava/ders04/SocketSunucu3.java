@@ -10,6 +10,9 @@ public class SocketSunucu3 {
 	
 	public static void main(String[] args) {
 		
+		EkranUstSinif sunucuEkrani = new SunucuEkrani();
+		sunucuEkrani.setVisible(true);
+		
 		try {
 			ServerSocket sunucuSocketi = new ServerSocket(SERVER_PORT);
 			
@@ -25,7 +28,7 @@ public class SocketSunucu3 {
 						istemciBaglantisi.getInetAddress());
 				
 				SocketOkuyucuThread3 t1 = 
-						new SocketOkuyucuThread3(istemciBaglantisi, true);
+						new SocketOkuyucuThread3(istemciBaglantisi, true, sunucuEkrani);
 				t1.start();
 				
 				SocketYaziciThread3 t2 = 
