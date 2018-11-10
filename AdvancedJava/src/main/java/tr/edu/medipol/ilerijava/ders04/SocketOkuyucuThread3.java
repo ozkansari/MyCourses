@@ -50,7 +50,9 @@ public class SocketOkuyucuThread3 extends SocketThreadUstSinif2 {
 				// istemciden mesaj gelene kadar bekler
 				mesaj = socketOkuyucu.readLine(); 
 				LOGGER.info("[" + socketIsmi +  " " + i + "]" + mesaj);
-				ekran.mesajEkle(socketBaglantisi.getInetAddress() + ">" + mesaj);
+				if (ekran != null) {
+					ekran.mesajEkle(socketBaglantisi.getInetAddress() + ">" + mesaj);
+				}
 				i++;
 			} catch (IOException e) {
 				LOGGER.severe("Okuma hata: " + e.getMessage());

@@ -8,6 +8,7 @@ public class SunucuEkrani extends EkranUstSinif {
 
 	private static final long serialVersionUID = 1L;
 	private JTextArea mesajlarJTA;
+	private JScrollPane mesajlarJTAScroll;
 	private java.util.List<String> mesajList;
 
 	public SunucuEkrani() {
@@ -20,10 +21,11 @@ public class SunucuEkrani extends EkranUstSinif {
 		
 		setLayout(new GridLayout(2, 1));
 		
-		mesajlarJTA = new JTextArea();
+		mesajlarJTA = new JTextArea(); 
 		mesajlarJTA.setEditable(false);
 		mesajlarJTA.getScrollableTracksViewportHeight();
-		add(mesajlarJTA);
+		mesajlarJTAScroll = new JScrollPane(mesajlarJTA);
+		add(mesajlarJTAScroll);
 		
 		mesajList = new java.util.ArrayList<>();
 	}
@@ -34,7 +36,7 @@ public class SunucuEkrani extends EkranUstSinif {
 		
 		// 1. Yontem
 		mesajlarJTA.setText( mesajlarJTA.getText() + mesaj+ "\n");
-		
+		mesajlarJTA.setCaretPosition(mesajlarJTA.getDocument().getLength());
 		repaint();
 		
 		/*
