@@ -8,10 +8,16 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katilimdan no
 ### Ders 1 - 13 EKIM
 Eclipse ve Git'e giris. Github Hesabi acilmasi.
 
+Bilgi: https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/1_Eclipse-Kullanimi.pdf
+
 ### Ders 2 - 27 EKIM
 Maven ve Git ile Spring Boot projesi gelistirme.
 https://start.spring.io/
 https://github.com/
+
+Bilgi:
+* https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/2_git-puf-noktalari.pdf
+* https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/2_git101.pdf
 
 #### YAPILACAKLAR:
 
@@ -45,7 +51,12 @@ https://github.com/
 
 ### Ders 3 - 3 KASIM
 
+JUnit & Maven
+Bilgi: https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/2_Ders_Sunum.pdf
+
 ### Ders 4 - 10 KASIM
+
+Travis CI
 
 ### Ders 5 - 17 KASIM
 
