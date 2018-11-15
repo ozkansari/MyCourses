@@ -9,7 +9,7 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katilimdan no
 
 Vize Saatinde Projelerinizi Derste Sunacaksiniz. 
 Sunum yapmayanlardan -40 puan eksiltilerek not verilecektir.
-Ayni ve benzer proje teslimlerini kopya olarak degerlendirilecektir
+*Ayni ve benzer proje teslimlerini kopya olarak degerlendirilecektir*
 
 ### Aciklama: 
 
@@ -48,9 +48,9 @@ Java Swing GUI
 Lab: https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava/src/main/java/tr/edu/medipol/ilerijava/ders02
 
 Bilgi:
-https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/06a_JavaGUI.pdf
-https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/07a_JavaGUI_1.pdf
-https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/07b_JavaGUI_2.pdf
+* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/06a_JavaGUI.pdf
+* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/07a_JavaGUI_1.pdf
+* https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/07b_JavaGUI_2.pdf
 
 ### Ders 5 - 17 KASIM
 
