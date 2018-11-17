@@ -58,6 +58,12 @@ Bilgi: https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools
 
 Travis CI
 
+#### Continuous Integration (CI) Nedir?
+Yazilan kodun, gelistirilen modulun — kisaca gelistirme ortamindan cika gelen bir parcanin — projeye dahil edilmesi esnasinda bir takim sureclerden gecirilmesine verilen isim. Bagimliliklarin repolardan indirilmesi, projeye dahil edilmesi, gelistirilen kod parcacigin testlerden (unit, integration, vs…) gecirilmesi, olasi durumlara gore gelistiriciye veya isin sorumlusuna bilgi verilmesi (push notification, sms, mail, vs…), isin paketlenmesi gibi eylemlerin tamami, genellikle bu kavramin bir parcasi olarak hayatimizda yer ediyor. 
+https://medium.com/@selcukusta/continuous-integration-ci-%C3%BCzerine-laflamalar-9b7f7d2dad07
+
+
+
 ### Ders 5 - 17 KASIM
 
 ### ARA SINAV
