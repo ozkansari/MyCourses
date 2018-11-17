@@ -49,6 +49,9 @@ public class SocketOkuyucuThread4 extends SocketThreadUstSinif3 {
 			try {
 				// istemciden mesaj gelene kadar bekler
 				mesaj = socketOkuyucu.readLine(); 
+				if (mesaj == null) {
+					continue;
+				}
 				LOGGER.info("[" + socketIsmi +  " " + i + "]" + mesaj);
 				if (ekran != null) {
 					String mesajVeGonderen = "";					

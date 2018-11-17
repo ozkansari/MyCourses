@@ -44,7 +44,7 @@ public class SocketYaziciThread4 extends SocketThreadUstSinif3 {
 			if (siradakiMesaj != null) {
 				socketeMesajGonder(siradakiMesaj);
 			} else {
-				threadBekle(1000);
+				SocketYardimciAraclari3.threadBekle(1000);
 			}
 		}
 		
@@ -56,7 +56,7 @@ public class SocketYaziciThread4 extends SocketThreadUstSinif3 {
 		do  {
 			String mesaj = socketIsmi + ">Mesaj " + i;
 			socketeMesajGonder(mesaj); 
-			threadBekle(beklemeSuresi);
+			SocketYardimciAraclari3.threadBekle(beklemeSuresi);
 			i++;
 		} while(true);
 	}
@@ -68,14 +68,4 @@ public class SocketYaziciThread4 extends SocketThreadUstSinif3 {
 			socketMesajGonderici.flush();
 		} 
 	}
-
-	public void threadBekle(int ms){
-		try {
-			Thread.sleep(ms);
-		} catch (InterruptedException e) {
-			LOGGER.warning("Thread beklerken hata olsutu: " + e.getMessage());
-		}
-	}
-
-	
 }

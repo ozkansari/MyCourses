@@ -16,30 +16,30 @@ public class SocketSunucu4 {
 		
 		EkranUstSinif2 sunucuEkrani = new SunucuEkrani2("SUNUCU EKRANI");
 		sunucuEkrani.setVisible(true);
-		
+
 		try {
 			ServerSocket sunucuSocketi = new ServerSocket(SERVER_PORT);
 			
 			System.out.println("Istemciler bekleniyor." + 
 					sunucuSocketi.getLocalPort());
 			
+			SocketYayinciThread yayinciOrtakThread = new SocketYayinciThread(sunucuEkrani);
+			yayinciOrtakThread.start();
+			
 			while(true) {
 			
 				// Istemciden baglanti gelene kadar bekle
 				Socket istemciBaglantisi = sunucuSocketi.accept();
 				
-				System.out.println("Istemci baglandi: " + 
-						istemciBaglantisi.getInetAddress());
+				String ip = istemciBaglantisi.getInetAddress().toString();
+				System.out.println("Istemci baglandi: " + ip);
+				
+				yayinciOrtakThread.socketEkle(ip, istemciBaglantisi);
 				
 				SocketOkuyucuThread4 t1 = 
 						new SocketOkuyucuThread4(istemciBaglantisi, true, 
 								sunucuEkrani);
 				t1.start();
-				
-				SocketYaziciThread4 t2 = 
-						new SocketYaziciThread4(istemciBaglantisi, true, sunucuEkrani);
-				t2.start();
-			
 			}
 			
 			

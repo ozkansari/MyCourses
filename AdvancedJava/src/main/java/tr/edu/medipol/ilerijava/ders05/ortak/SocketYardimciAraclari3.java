@@ -46,4 +46,12 @@ public final class SocketYardimciAraclari3 {
 		}
 		return sunucuMesajGonderici;
 	}
+	
+	public static void threadBekle(int ms){
+		try {
+			Thread.sleep(ms);
+		} catch (InterruptedException e) {
+			System.out.println("Thread beklerken hata olustu: " + e.getMessage());
+		}
+	}
 }
