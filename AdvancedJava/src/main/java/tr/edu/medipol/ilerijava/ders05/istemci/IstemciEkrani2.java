@@ -26,6 +26,7 @@ public class IstemciEkrani2 extends SunucuEkrani2 {
 		mesajGonderimPaneli.add(mesajGonderBtn);
 		mesajGonderBtn.addActionListener(event -> {
 			getMesajKuyrugu().offer(mesajAlani.getText());
+			this.mesajEkle(mesajAlani.getText());
 			mesajAlani.setText("");
 		});
 		
