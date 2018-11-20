@@ -5,11 +5,13 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katilimdan no
 
 ## ARA SINAV PROJESI
 
-### Teslim Tarihi: 29 Kasım Perşembe 23:59:59'a kadar ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Gec teslim kabul edilmeyecektir.
+### Teslim Tarihi: 26 Kasım Pazartesi 23:59:59'a kadar ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Gec teslim kabul edilmeyecektir.
 
 Vize Saatinde Projelerinizi Derste Sunacaksiniz. 
 Sunum yapmayanlardan -40 puan eksiltilerek not verilecektir.
 *Ayni ve benzer proje teslimlerini kopya olarak degerlendirilecektir*
+
+Uygulama kodlarınız tr/edu/medipol/ilerijava/vize/<<ad_soyad>>/ paketinde bulunmalı <<ad_soyad>> yerine kendi ad ve soyadınızı yazmalısınız.
 
 ### Aciklama: 
 
