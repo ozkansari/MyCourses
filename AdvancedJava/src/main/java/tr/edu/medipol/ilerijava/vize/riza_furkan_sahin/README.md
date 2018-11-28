@@ -1,0 +1,1 @@
+* Internetten aldigi faktoriyel programini gondermis
