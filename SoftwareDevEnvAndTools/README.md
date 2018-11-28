@@ -66,6 +66,9 @@ https://medium.com/@selcukusta/continuous-integration-ci-%C3%BCzerine-laflamalar
 
 ### Ders 5 - 17 KASIM
 
+UML
+https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/5_Ders_Sunum.pdf
+
 ### ARA SINAV
 
 ### Ders 6 - 8 ARALIK
