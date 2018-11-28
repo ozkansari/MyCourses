@@ -46,6 +46,7 @@ static int hesapla(int sayi1) {
 		{
 			fact = fact*1;
 		}
+		return fact;
 	
-	}
+	}}
 
