@@ -71,17 +71,21 @@ https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/
 
 ### ARA SINAV
 
-### Ders 6 - 8 ARALIK
+### Ders 6 - 1 ARALIK
 
-### Ders 7 - 15 ARALIK
+Hicbir ogrenci derse gelmedi. HackerRank ornekleri yapıldı.
 
-### Ders 8 - 22 ARALIK
+### Ders 7 - 8 ARALIK
 
-### Ders 9 - 29 ARALIK
+### Ders 8 - 15 ARALIK
 
-### Ders 10 - 5 OCAK
+### Ders 9 - 22 ARALIK
 
-### Ders 11 - 12 OCAK
+### Ders 10 - 29 ARALIK
+
+### Ders 11 - 5 OCAK
+
+### Ders 12 - 12 OCAK
 
 ### FINAL SINAVI
 
@@ -92,16 +96,18 @@ https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/
 * Hafta 1 - 13 EKIM : Ders 1 - Eclipse ve Gite giris. Github Hesabi acilmasi.
 * Hafta 2 - 20 EKIM : Lab Tamirati nedeniyle Ders yapilamadi
 * Hafta 3 - 27 EKIM : Ders 2 - Maven ve Git ile Spring Boot projesi gelistirme.
-* Hafta 4 - 3 KASIM : 
-* Hafta 5 - 10 KASIM :
-* Hafta 6 - 17 KASIM  :
-* ARA YAZILI SINAV :
-* Hafta 7 - 8 ARALIK  :
-* Hafta 8 - 15 ARALIK  :
-* Hafta 9 - 22 ARALIK  :
-* Hafta 10 - 29 ARALIK  :
-* Hafta 11 - 5 OCAK  :
-* Hafta 12 - 12 OCAK  :
+* Hafta 4 - 3 KASIM : Ders 3
+* Hafta 5 - 10 KASIM : Ders 4
+* Hafta 6 - 17 KASIM  : Ders 5
+* Hafta 7 - 24 KASIM  : Ders Yapilamadi
+* ARA SINAV PROJESI
+* Hafta 8 - 1 ARALIK  : Ders 6
+* Hafta 9 - 8 ARALIK  :
+* Hafta 10 - 15 ARALIK  :
+* Hafta 11 - 22 ARALIK  :
+* Hafta 12 - 29 ARALIK  :
+* Hafta 13 - 5 OCAK  :
+* Hafta 14 - 12 OCAK  :
 * FINAL SINAVI PROJESI :
 
 
