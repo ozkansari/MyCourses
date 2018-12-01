@@ -5,22 +5,22 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katilimdan no
 
 ## ARA SINAV PROJESI
 
-### Teslim Tarihi: 26 Kasım Pazartesi 23:59:59'a kadar ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Gec teslim kabul edilmeyecektir.
+### Teslim Tarihi: 26 Kasim Pazartesi 23:59:59'a kadar ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Gec teslim kabul edilmeyecektir.
 
 Vize Saatinde Projelerinizi Derste Sunacaksiniz. 
 Sunum yapmayanlardan -40 puan eksiltilerek not verilecektir.
 *Ayni ve benzer proje teslimlerini kopya olarak degerlendirilecektir*
 
-Uygulama kodlarınız tr/edu/medipol/ilerijava/vize/<<ad_soyad>>/ paketinde bulunmalı <<ad_soyad>> yerine kendi ad ve soyadınızı yazmalısınız.
+Uygulama kodlarÄ±nÄ±z tr/edu/medipol/ilerijava/vize/<<ad_soyad>>/ paketinde bulunmali <<ad_soyad>> yerine kendi ad ve soyadÄ±nÄ±zÄ± yazmalÄ±sÄ±nÄ±z.
 
 ### Aciklama: 
 
-Java ile Sunucu/Istemci (**Socket**) mimarisinde coklu akış (Multi Thread) destekleyen bir hesaplama uygulamasi yapmanizi bekliyorum.
-Sunucu ve Istemci(ler) iki ayrı uygulama seklinde calismali. Bir **sunucuya birden fazla istemcinin TCP socket ile baglanmasi desteklenmeli**.
+Java ile Sunucu/Istemci (**Socket**) mimarisinde coklu akisi (Multi Thread) destekleyen bir hesaplama uygulamasi yapmanizi bekliyorum.
+Sunucu ve Istemci(ler) iki ayri uygulama seklinde calismali. Bir **sunucuya birden fazla istemcinin TCP socket ile baglanmasi desteklenmeli**.
 
-Sunucu tarafında Java Swing GUI ile **giden gelen mesajlar** ve **bagli istemcilerin listesi** goruntulenmeli.
+Sunucu tarafÄ±nda Java Swing GUI ile **giden gelen mesajlar** ve **bagli istemcilerin listesi** goruntulenmeli.
 
-Istemci tarafında ise Java Swing GUI ile istemciden **iki ayri sayi** ve **yapılacak islem tipi** ( +,-,/,* ) girdi olarak alinacak ve **GONDER butonu**na basildiginda sunucuya hesaplama islemi **tcp socket iletisimle mesaj olarak** gonderilecektir. Ornegin "2 * 55" gibi bir mesaj istemciden sunucuya gonderilecek.
+Istemci tarafinda ise Java Swing GUI ile istemciden **iki ayri sayi** ve **yapilacak islem tipi** ( +,-,/,* ) girdi olarak alinacak ve **GONDER butonu**na basildiginda sunucuya hesaplama islemi **tcp socket iletisimle mesaj olarak** gonderilecektir. Ornegin "2 * 55" gibi bir mesaj istemciden sunucuya gonderilecek.
 
 Bu mesaji alan sunucu ise gelen mesajdaki hesaplama istegini algilayip, sonucu hesaplayacak ve istekte bulunan istemciye sonucu donecektir.
 
@@ -58,17 +58,19 @@ Bilgi:
 
 ### ARA SINAV
 
-### Ders 6 - 8 ARALIK
+### Ders 6 - 1 ARALIK
 
-### Ders 7 - 15 ARALIK
+### Ders 7 - 8 ARALIK
 
-### Ders 8 - 22 ARALIK
+### Ders 8 - 15 ARALIK
 
-### Ders 9 - 29 ARALIK
+### Ders 9 - 22 ARALIK
 
-### Ders 10 - 5 OCAK
+### Ders 10 - 29 ARALIK
 
-### Ders 11 - 12 OCAK
+### Ders 11 - 5 OCAK
+
+### Ders 12 - 12 OCAK
 
 ### FINAL SINAVI
 
@@ -79,14 +81,16 @@ Bilgi:
 * Hafta 1 - 13 EKIM : Ders 1 - Java Tekrari
 * Hafta 2 - 20 EKIM : Lab Tamirati nedeniyle Ders yapilamadi
 * Hafta 3 - 27 EKIM : Ders 2 - TCP Socket ve Thread Programlama
-* Hafta 4 - 3 KASIM : 
-* Hafta 5 - 10 KASIM :
-* Hafta 6 - 17 KASIM  :
+* Hafta 4 - 3 KASIM : Ders 3
+* Hafta 5 - 10 KASIM : Ders 4
+* Hafta 6 - 17 KASIM  : Ders 5
+* Hafta 7 - 24 KASIM  : Ders Yapılamadi
 * ARA SINAV PROJESI
-* Hafta 7 - 8 ARALIK  :
-* Hafta 8 - 15 ARALIK  :
-* Hafta 9 - 22 ARALIK  :
-* Hafta 10 - 29 ARALIK  :
-* Hafta 11 - 5 OCAK  :
-* Hafta 12 - 12 OCAK  :
+* Hafta 8 - 1 ARALIK  : Ders 6
+* Hafta 9 - 8 ARALIK  :
+* Hafta 10 - 15 ARALIK  :
+* Hafta 11 - 22 ARALIK  :
+* Hafta 12 - 29 ARALIK  :
+* Hafta 13 - 5 OCAK  :
+* Hafta 14 - 12 OCAK  :
 * FINAL SINAVI PROJESI :

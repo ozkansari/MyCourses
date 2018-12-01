@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>tr.edu.medipol.ilerijava</groupId>
+    <artifactId>SocketChatApp</artifactId>
+    <version>1.6.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>SocketChatServerApp</artifactId>
+  <name>Chat Server Application</name>
+  <description>Server Side Application - coklu istemci destekli</description>
+  
+  <dependencies>
+  
+  	<dependency>
+  		<groupId>tr.edu.medipol.ilerijava</groupId>
+  		<artifactId>SocketChatCommon</artifactId>
+  		<version>1.6.0-SNAPSHOT</version>
+  	</dependency>
+  	
+  
+  </dependencies>
+  
+</project>
