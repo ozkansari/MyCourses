@@ -1,4 +1,4 @@
-package tr.edu.medipol.ilerijava.BerkeSecgin.ortak;
+package tr.edu.medipol.ilerijava.vize.berke_secgin.ortak;
 
 import java.util.Queue;
 

@@ -1,11 +1,11 @@
-package tr.edu.medipol.ilerijava.BerkeSecgin.sunucu;
+package tr.edu.medipol.ilerijava.vize.berke_secgin.sunucu;
 
 import java.io.*;
 import java.net.*;
 import java.util.*;
 
-import tr.edu.medipol.ilerijava.BerkeSecgin.ortak.EkranUstSinif2;
-import tr.edu.medipol.ilerijava.BerkeSecgin.ortak.SocketYardimciAraclari3;
+import tr.edu.medipol.ilerijava.vize.berke_secgin.ortak.EkranUstSinif2;
+import tr.edu.medipol.ilerijava.vize.berke_secgin.ortak.SocketYardimciAraclari3;
 
 public class SocketYayinciThread extends Thread {
 

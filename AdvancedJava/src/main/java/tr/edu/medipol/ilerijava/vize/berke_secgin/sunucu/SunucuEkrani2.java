@@ -1,4 +1,4 @@
-package tr.edu.medipol.ilerijava.BerkeSecgin.sunucu;
+package tr.edu.medipol.ilerijava.vize.berke_secgin.sunucu;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -7,7 +7,7 @@ import java.util.Queue;
 
 import javax.swing.*;
 
-import tr.edu.medipol.ilerijava.BerkeSecgin.ortak.EkranUstSinif2;
+import tr.edu.medipol.ilerijava.vize.berke_secgin.ortak.EkranUstSinif2;
 
 public class SunucuEkrani2 extends EkranUstSinif2 {
 
