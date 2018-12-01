@@ -1,4 +1,4 @@
-package tr.edu.medipol.ilerijava.vize.HuseyinCanKarakaya;
+package tr.edu.medipol.ilerijava.vize.huseyin_can_karakaya;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

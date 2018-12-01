@@ -1,4 +1,4 @@
-package tr.edu.medipol.ilerijava.vize.TahaKeskin.istemci;
+package tr.edu.medipol.ilerijava.vize.taha_keskin.istemci;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -6,7 +6,7 @@ import java.util.concurrent.SynchronousQueue;
 
 import javax.swing.*;
 
-import tr.edu.medipol.ilerijava.vize.TahaKeskin.sunucu.SunucuEkrani2;
+import tr.edu.medipol.ilerijava.vize.taha_keskin.sunucu.SunucuEkrani2;
 
 public class IstemciEkrani2 extends SunucuEkrani2 {
 

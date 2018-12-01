@@ -1,4 +1,4 @@
-package tr.edu.medipol.ilerijava.vize.TahaKeskin.ortak;
+package tr.edu.medipol.ilerijava.vize.taha_keskin.ortak;
 
 import java.net.*;
 import java.io.*;

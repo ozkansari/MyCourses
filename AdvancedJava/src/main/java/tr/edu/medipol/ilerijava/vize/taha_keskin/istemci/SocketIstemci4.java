@@ -1,13 +1,13 @@
-package tr.edu.medipol.ilerijava.vize.TahaKeskin.istemci;
+package tr.edu.medipol.ilerijava.vize.taha_keskin.istemci;
 
 import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import tr.edu.medipol.ilerijava.vize.TahaKeskin.ortak.EkranUstSinif2;
-import tr.edu.medipol.ilerijava.vize.TahaKeskin.ortak.SocketOkuyucuThread4;
-import tr.edu.medipol.ilerijava.vize.TahaKeskin.ortak.SocketYaziciThread4;
-import tr.edu.medipol.ilerijava.vize.TahaKeskin.sunucu.SocketSunucu4;
+import tr.edu.medipol.ilerijava.vize.taha_keskin.ortak.EkranUstSinif2;
+import tr.edu.medipol.ilerijava.vize.taha_keskin.ortak.SocketOkuyucuThread4;
+import tr.edu.medipol.ilerijava.vize.taha_keskin.ortak.SocketYaziciThread4;
+import tr.edu.medipol.ilerijava.vize.taha_keskin.sunucu.SocketSunucu4;
 
 public class SocketIstemci4 {
 	

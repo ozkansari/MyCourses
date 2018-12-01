@@ -1,4 +1,4 @@
-package tr.edu.medipol.ilerijava.vize.TahaKeskin.sunucu;
+package tr.edu.medipol.ilerijava.vize.taha_keskin.sunucu;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -7,7 +7,7 @@ import java.util.Queue;
 
 import javax.swing.*;
 
-import tr.edu.medipol.ilerijava.vize.TahaKeskin.ortak.EkranUstSinif2;
+import tr.edu.medipol.ilerijava.vize.taha_keskin.ortak.EkranUstSinif2;
 
 public class SunucuEkrani2 extends EkranUstSinif2 {
 

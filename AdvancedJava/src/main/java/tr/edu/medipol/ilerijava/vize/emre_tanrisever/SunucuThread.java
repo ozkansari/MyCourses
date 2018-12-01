@@ -1,4 +1,4 @@
-package tr.edu.medipol.ilerijava.vize.EmreTanrisever;
+package tr.edu.medipol.ilerijava.vize.emre_tanrisever;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

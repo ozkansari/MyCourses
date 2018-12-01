@@ -1,12 +1,12 @@
-package tr.edu.medipol.ilerijava.vize.TahaKeskin.sunucu;
+package tr.edu.medipol.ilerijava.vize.taha_keskin.sunucu;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import  tr.edu.medipol.ilerijava.vize.TahaKeskin.ortak.EkranUstSinif2;
-import tr.edu.medipol.ilerijava.vize.TahaKeskin.ortak.SocketOkuyucuThread4;
-import tr.edu.medipol.ilerijava.vize.TahaKeskin.ortak.SocketYaziciThread4;
+import tr.edu.medipol.ilerijava.vize.taha_keskin.ortak.EkranUstSinif2;
+import tr.edu.medipol.ilerijava.vize.taha_keskin.ortak.SocketOkuyucuThread4;
+import tr.edu.medipol.ilerijava.vize.taha_keskin.ortak.SocketYaziciThread4;
 
 public class SocketSunucu4 {
 
