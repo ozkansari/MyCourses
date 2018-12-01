@@ -11,7 +11,7 @@ Vize Saatinde Projelerinizi Derste Sunacaksiniz.
 Sunum yapmayanlardan -40 puan eksiltilerek not verilecektir.
 *Ayni ve benzer proje teslimlerini kopya olarak degerlendirilecektir*
 
-Uygulama kodlarÄ±nÄ±z tr/edu/medipol/ilerijava/vize/<<ad_soyad>>/ paketinde bulunmali <<ad_soyad>> yerine kendi ad ve soyadÄ±nÄ±zÄ± yazmalÄ±sÄ±nÄ±z.
+Uygulama kodlarinizi tr/edu/medipol/ilerijava/vize/<<ad_soyad>>/ paketinde bulunmali <<ad_soyad>> yerine kendi ad ve soyadinizi yazmalÄ±sÄ±nÄ±z.
 
 ### Aciklama: 
 
@@ -59,6 +59,12 @@ Bilgi:
 ### ARA SINAV
 
 ### Ders 6 - 1 ARALIK
+
+Uygulama Maven Projeye Cevrildi: 
+* https://github.com/ozkansari/MyCourses/tree/master/SocketChatApp
+
+Apache Derby Veritaban Ornegi: 
+* https://github.com/ozkansari/MyCourses/tree/master/DerbyVeritabaniOrnek
 
 ### Ders 7 - 8 ARALIK
 
