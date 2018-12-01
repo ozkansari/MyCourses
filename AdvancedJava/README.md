@@ -63,8 +63,15 @@ Bilgi:
 Uygulama Maven Projeye Cevrildi: 
 * https://github.com/ozkansari/MyCourses/tree/master/SocketChatApp
 
-Apache Derby Veritaban Ornegi: 
+Apache Derby Veritabani Ornegi: 
 * https://github.com/ozkansari/MyCourses/tree/master/DerbyVeritabaniOrnek
+
+#### ODEV 
+Bir java masaustu ekraninda kullanicidan ayri ayri ad ve soyad girdi olarak alinacak. Gonder butonuna basinca veritabanina kaydedilecek.
+
+Veritabani olarak derste gordugumuz sekidle maven projesi ve apache derby kullanilacak.
+
+7 Aralik Cuma 23:59:59'a kadar ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Gec teslim kabul edilmeyecektir.
 
 ### Ders 7 - 8 ARALIK
 
