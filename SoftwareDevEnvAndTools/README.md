@@ -73,9 +73,11 @@ https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/
 
 ### Ders 6 - 1 ARALIK
 
-Hicbir ogrenci derse gelmedi. HackerRank ornekleri yapıldı.
+Tekrar
 
 ### Ders 7 - 8 ARALIK
+
+Spring Boot Rest API Olusturma & Postman Request ve Postman Code Generation
 
 ### Ders 8 - 15 ARALIK
 
