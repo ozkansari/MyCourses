@@ -1,0 +1,1 @@
+* Hatali deger girince kilitleniyor.

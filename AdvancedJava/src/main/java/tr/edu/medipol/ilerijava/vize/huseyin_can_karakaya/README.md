@@ -1,0 +1,1 @@
+* Internetten aldigi chat programini gondermis
