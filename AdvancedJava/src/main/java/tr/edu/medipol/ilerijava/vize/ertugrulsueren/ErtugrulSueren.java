@@ -6,60 +6,60 @@ import java.util.Scanner;
 
 public class ErtugrulSueren {
 
-private static final int SERVER_PORT = 1234;
+	private static final int SERVER_PORT = 1234;
 
-private static Socket sunucubag;
+	private static Socket sunucubag;
 
-public static void main(String[] args) throws InterruptedException{
-	
-Scanner input = new Scanner(System.in);
+	public static void main(String[] args) throws InterruptedException {
 
-int sayý1=0,sayý2=0;
+		Scanner input = new Scanner(System.in);
 
-String al;
+		int sayý1 = 0, sayý2 = 0;
 
-System.out.print("Sayý Gir:");
+		String al;
 
-sayý1 = input.nextInt();
+		System.out.print("Sayý Gir:");
 
-sayý2 = input.nextInt();
+		sayý1 = input.nextInt();
 
-System.out.println("Ýþlem Seç");
+		sayý2 = input.nextInt();
 
-al = input.next();
+		System.out.println("Ýþlem Seç");
 
-System.out.println("Istemciye Giriliyor");
+		al = input.next();
 
-PrintWriter msj = null;
+		System.out.println("Istemciye Giriliyor");
 
-try {
-	
-	sunucubag = new Socket("localhost",
+		PrintWriter msj = null;
 
-	ErtugrulSueren.SERVER_PORT);
+		try {
 
-msj =
+			sunucubag = new Socket("localhost",
 
-new PrintWriter(sunucubag.getOutputStream());
+			    ErtugrulSueren.SERVER_PORT);
 
-} catch (UnknownHostException e) {
-	
-System.out.println("IP hatali" + e.getMessage());
+			msj =
 
-} catch (IOException e) {
-	
-System.out.println("Sunucu Baðlantýsý Hata" +
+			    new PrintWriter(sunucubag.getOutputStream());
 
-e.getMessage());
+		} catch (UnknownHostException e) {
 
-}
-msj.println(sayý1);
+			System.out.println("IP hatali" + e.getMessage());
 
-msj.println(sayý2);
+		} catch (IOException e) {
 
-msj.println(al);
+			System.out.println("Sunucu Baðlantýsý Hata" +
 
-msj.flush();
+			    e.getMessage());
 
-}
+		}
+		msj.println(sayý1);
+
+		msj.println(sayý2);
+
+		msj.println(al);
+
+		msj.flush();
+
+	}
 }

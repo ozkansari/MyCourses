@@ -4,97 +4,93 @@ import java.net.*;
 import java.io.*;
 import java.util.*;
 
-public class ertugrulsueren2 extends Thread{
-	
-public double sonuc = 0;
+public class ertugrulsueren2 extends Thread {
 
-String[] ertu = new String[4];
+	public double sonuc = 0;
 
-private Socket istembag;
+	String[] ertu = new String[4];
 
-public ertugrulsueren2(Socket istembagla) {
-	
-this.istembag = istembagla;
+	private Socket istembag;
 
-}
-@Override
+	public ertugrulsueren2(Socket istembagla) {
 
-public void run() {
-	
-BufferedReader istoku = null;
+		this.istembag = istembagla;
 
-try {
-	
-InputStream gir = this.istembag.getInputStream();
+	}
+	@Override
 
-InputStreamReader girokuyucu = new InputStreamReader(gir);
+	public void run() {
 
-istoku = new BufferedReader(girokuyucu);
+		BufferedReader istoku = null;
 
-istoku = new BufferedReader(
-		
-new InputStreamReader(
+		try {
 
-istembag.getInputStream()
+			InputStream gir = this.istembag.getInputStream();
 
-)
+			InputStreamReader girokuyucu = new InputStreamReader(gir);
 
-);
-} catch (IOException e) {
-	
-System.out.println("istoku acilirken hata "
+			istoku = new BufferedReader(girokuyucu);
 
-+ e.getMessage()) ;
+			istoku = new BufferedReader(
 
-}
-int i=0;
+			    new InputStreamReader(
 
-while(true) {
-	
-try {
-	
-ertu[i] = istoku.readLine();
+			        istembag.getInputStream()
 
-if (ertu[i] == null) 
-{
-	
-	break;
-	
-}
-System.out.println(ertu[i]);
+					)
 
-i++;
+			);
+		} catch (IOException e) {
 
-} catch (IOException e) {
-	
-break;
+			System.out.println("istoku acilirken hata "
 
-}
-} 
+			    + e.getMessage());
 
-if (ertu[2].equals("+")) {
-	
-sonuc =(Integer.valueOf(ertu[0])+Integer.valueOf(ertu[1]));
+		}
+		int i = 0;
 
-}
-else if (ertu[2].equals("-")) {
-	
-sonuc =(Integer.valueOf(ertu[0])-Integer.valueOf(ertu[1]));
+		while (true) {
 
-}
-else if (ertu[2].equals("*")) {
-	
-sonuc =(Integer.valueOf(ertu[0])*Integer.valueOf(ertu[1]));
+			try {
 
-}
-else if (ertu[2].equals("/")) {
-	
-sonuc =(Integer.valueOf(ertu[0])/Integer.valueOf(ertu[1]));
+				ertu[i] = istoku.readLine();
 
-}
+				if (ertu[i] == null) {
 
-System.out.println(sonuc);
+					break;
 
-}
+				}
+				System.out.println(ertu[i]);
+
+				i++;
+
+			} catch (IOException e) {
+
+				break;
+
+			}
+		}
+
+		if (ertu[2].equals("+")) {
+
+			sonuc = (Integer.valueOf(ertu[0]) + Integer.valueOf(ertu[1]));
+
+		} else if (ertu[2].equals("-")) {
+
+			sonuc = (Integer.valueOf(ertu[0]) - Integer.valueOf(ertu[1]));
+
+		} else if (ertu[2].equals("*")) {
+
+			sonuc = (Integer.valueOf(ertu[0]) * Integer.valueOf(ertu[1]));
+
+		} else if (ertu[2].equals("/")) {
+
+			sonuc = (Integer.valueOf(ertu[0]) / Integer.valueOf(ertu[1]));
+
+		}
+
+		System.out.println(sonuc);
+
+	}
 
 }

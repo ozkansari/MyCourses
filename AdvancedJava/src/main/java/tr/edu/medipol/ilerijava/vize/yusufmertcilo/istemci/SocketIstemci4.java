@@ -11,7 +11,7 @@ import tr.edu.medipol.ilerijava.vize.yusufmertcilo.sunucu.SocketSunucu4;
 
 public class SocketIstemci4 {
 	
-	private static final String sunucuIP = "172.16.82.52";
+	private static final String sunucuIP = "localhost";
 	private static final int sunucuPort = SocketSunucu4.SERVER_PORT;
 			
 	public static void main(String[] args) throws InterruptedException {
