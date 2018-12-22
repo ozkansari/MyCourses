@@ -119,6 +119,23 @@ JMeter ile REST API testi
 
 15-) Save denilerek ayarlar kaydedilir.
 
+16-) Yeni Item secerek yeni bir is olusturmaya baslayin.
+
+17-) Bir isim verin. Ornegin: Maven Build Ders 9. "Serbest Stil" isaretleyerek "OK" secin.
+
+18-) Daha sonra "Kaynak Kodu Yonetimi" adimindan "Git" secin ve Repository URL alanina github repository URL'inizi girin. Ornegin: https://github.com/ozkansari/yaz_arac_ders4.git
+
+19-) "Yapılandırma Adımı Ekle" altından "En Ust Seviye Maven Adimlarini Calistir" secin.
+
+20-) Maven hedefi belirtin. Ornegin: install projenin repository altindaki pom yolunu gosterin. Ornegin: Ders4Proje/pom.xml
+
+21-) Gelismis ayarlari secerek
+
+NOTE: Maven otomatik kurulum sorunlari yasayanlar kendileri maven indirip bilgisayarlarina tanitabilirler.
+https://maven.apache.org/install.html
+
+
+
 #### Windows Kurulum
 
 https://jenkins.io/download/ adresinden indirilebilir.
