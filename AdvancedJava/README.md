@@ -11,14 +11,14 @@ Vize Saatinde Projelerinizi Derste Sunacaksiniz.
 Sunum yapmayanlardan -40 puan eksiltilerek not verilecektir.
 *Ayni ve benzer proje teslimlerini kopya olarak degerlendirilecektir*
 
-Uygulama kodlarinizi tr/edu/medipol/ilerijava/vize/<<ad_soyad>>/ paketinde bulunmali <<ad_soyad>> yerine kendi ad ve soyadinizi yazmalÄ±sÄ±nÄ±z.
+Uygulama kodlarinizi tr/edu/medipol/ilerijava/vize/<<ad_soyad>>/ paketinde bulunmali <<ad_soyad>> yerine kendi ad ve soyadinizi yazmalisiniz.
 
 ### Aciklama: 
 
 Java ile Sunucu/Istemci (**Socket**) mimarisinde coklu akisi (Multi Thread) destekleyen bir hesaplama uygulamasi yapmanizi bekliyorum.
 Sunucu ve Istemci(ler) iki ayri uygulama seklinde calismali. Bir **sunucuya birden fazla istemcinin TCP socket ile baglanmasi desteklenmeli**.
 
-Sunucu tarafÄ±nda Java Swing GUI ile **giden gelen mesajlar** ve **bagli istemcilerin listesi** goruntulenmeli.
+Sunucu tarafinda Java Swing GUI ile **giden gelen mesajlar** ve **bagli istemcilerin listesi** goruntulenmeli.
 
 Istemci tarafinda ise Java Swing GUI ile istemciden **iki ayri sayi** ve **yapilacak islem tipi** ( +,-,/,* ) girdi olarak alinacak ve **GONDER butonu**na basildiginda sunucuya hesaplama islemi **tcp socket iletisimle mesaj olarak** gonderilecektir. Ornegin "2 * 55" gibi bir mesaj istemciden sunucuya gonderilecek.
 
@@ -78,6 +78,9 @@ Veritabani olarak derste gordugumuz sekilde maven projesi ve apache derby kullan
 ### Ders 8 - 15 ARALIK
 
 ### Ders 9 - 22 ARALIK
+
+Spark Java ile Web projesi : https://github.com/ozkansari/MyCourses/tree/master/WebProjesi
+- https://freemarker.apache.org/docs/index.html
 
 ### Ders 10 - 29 ARALIK
 
