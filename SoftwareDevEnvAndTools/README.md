@@ -126,10 +126,15 @@ JMeter ile REST API testi
 18-) Daha sonra "Kaynak Kodu Yonetimi" adimindan "Git" secin ve Repository URL alanina github repository URL'inizi girin. Ornegin: https://github.com/ozkansari/yaz_arac_ders4.git
 
 19-) "Yapılandırma Adımı Ekle" altından "En Ust Seviye Maven Adimlarini Calistir" secin.
+Bkz. https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/jenkins/24.PNG
 
-20-) Maven hedefi belirtin. Ornegin: install projenin repository altindaki pom yolunu gosterin. Ornegin: Ders4Proje/pom.xml
+20-) Maven hedefi belirtin. Ornegin: install 
 
-21-) Gelismis ayarlari secerek
+21-) Gelismis ayarlari secerek projenin repository altindaki pom yolunu gosterin. Ornegin: Ders4Proje/pom.xml
+Bkz. https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/jenkins/25.PNG
+Bkz: https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/jenkins/26.PNG
+
+NOTE: Ayrintili bilgiler ve ekran goruntuleri icin: https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/jenkins/README.md
 
 NOTE: Maven otomatik kurulum sorunlari yasayanlar kendileri maven indirip bilgisayarlarina tanitabilirler.
 https://maven.apache.org/install.html
