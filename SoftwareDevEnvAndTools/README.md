@@ -81,6 +81,8 @@ Spring Boot Rest API Olusturma & Postman Request ve Postman Code Generation
 
 ### Ders 8 - 15 ARALIK
 
+JMeter ile REST API testi
+
 ### Ders 9 - 22 ARALIK
 
 ### Ders 10 - 29 ARALIK
