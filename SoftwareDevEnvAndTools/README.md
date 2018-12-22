@@ -113,9 +113,11 @@ JMeter ile REST API testi
     export JAVA_HOME=`/usr/libexec/java_home`
     /usr/libexec/java_home
     
+13-) Manage Jenkins > Global Tool Configuration > Add Git secilir ve altindaki "Jgit" ve "Jgit with Apache Client" eklenir.
 
+14-) Manage Jenkins > Global Tool Configuration > Add Maven secilir. Install Automatically ve Install From Apache secilerek 3.6.0 surumu secilir.
 
-
+15-) Save denilerek ayarlar kaydedilir.
 
 #### Windows Kurulum
 
