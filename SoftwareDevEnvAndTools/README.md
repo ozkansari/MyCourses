@@ -85,6 +85,42 @@ JMeter ile REST API testi
 
 ### Ders 9 - 22 ARALIK
 
+#### Jenkins Kurulum
+https://jenkins.io/download/ adresinden indirilebilir.
+1. Secenek: Windows Kurulum : https://jenkins.io/download/thank-you-downloading-windows-installer-stable
+2. Secenek: Generic WAR http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+
+Java komutu ile war dosyasi konsoldan calistirilabilir. Buradaki java komutunun jdk altindaki java komutu olmasi iyi olur. Bunun icin java komurunu tam yol olarak tirnak icinde de yazabilirsiniz. ornegin, "C:\Program Files\Java\jdk8\bin\java" - jar jenkins.war gibi.
+
+    java -jar jenkins.war
+    
+8080 portu kullanimdaysa baska bir port asagidaki sekilde belirtilebilir:
+
+    java -jar jenkins.war --httpPort=49001
+
+#### Jenkins Kurulum Dizini
+Jenkins normalde kurulum dizinini kullanici dizinindeki .jenkins klasoru (ornegin C:\Kullanicilar\bprlab\ .jenkins ) olarak ayarlar. 
+Sifirdan baslamak icin bu dizini silebilirsiniz.
+
+Ya da Jenkins home dizinini degistirmek icin calistirmadan once baska bir dizin belirtebilirsiniz. 
+ornegin:
+
+    SET JENKINS_HOME=C:/jenkins_ozkans
+
+:exclamation: [JENKINS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/jenkins/README.md)
+
+#### Jenkins Arayuzu
+Tarayicidan http://localhost:8080 girerek ara yuz acilabilir.
+Daha sonra karsiniza cikan "Unlock Jenkins" ekraninda verilen dizindeki dosyayi acin ve orada yazan sifreyi ekrana girin (sifre console'dan calistirdiginizda loglarda da gorunecektir) ve Continue tusuna basin. Sonraki ekranda "Installed Suggested Plugins" seciniz. Ayrintilar icin: https://jenkins.io/doc/book/installing/#setupwizard
+
+Plugin kurulum tamamlandiktan sonra, Admin password belirlemenizi isteyecek. belirledikten sonra Jenkins artik kullanima hazir.
+
+Bu asamada "Jenkinse Hosgeldiniz" yazisini ekranda gormeniz lazim.
+
+Jenkinsi Yonet ekranindan JDK, Git ve Maven ayarlarini yaptiktan sonra baslamak icin "Yeni is" olusturuyoruz.
+
+...
+
 ### Ders 10 - 29 ARALIK
 
 ### Ders 11 - 5 OCAK
