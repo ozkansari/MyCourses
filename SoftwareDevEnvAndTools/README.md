@@ -106,6 +106,17 @@ JMeter ile REST API testi
 
 10-) Sonraki ekranlari da "Jenkinse hosgeldiniz" yazisini gorene kadar next/continue/finish diyerek gecin.
 
+11-) Manage Jenkins > Global Tool Configuration > Add JDK secilir. Install Automatically secenegi kaldirilir.
+
+12-) Java Home dizini bulmak icin asagidaki komutlar calistirilir:
+
+    export JAVA_HOME=`/usr/libexec/java_home`
+    /usr/libexec/java_home
+    
+
+
+
+
 #### Windows Kurulum
 
 https://jenkins.io/download/ adresinden indirilebilir.
