@@ -87,7 +87,7 @@ JMeter ile REST API testi
 
 #### MacOS adımlar
 
-1-) jenkins.war indirildi
+1-) jenkins.war indirilir. (Generic WAR http://mirrors.jenkins.io/war-stable/latest/jenkins.war)
 2-) bprlab altında jenkins dizini oluşturuldu ve jenkins.war bu dizine tasindi
 3-) Terminal bprlab dizininde acilir
 4-) "cd jenkins" komutu ile jenkins dizinine girilir
@@ -95,13 +95,18 @@ JMeter ile REST API testi
 
     export JENKINS_HOME=/Users/bprlab/jenkins
     java -jar jenkins.war --httpPort=49001 --enable-future-java
+
 6-) http://localhost:49001/
 
 7-) Terminalde ******** lar arasinda bulunan sifreyi kopyalayip, ekrandaki "Administrator password" yazan yere yapistirin.
 
 8-) "Install Suggested Plugins" seçin
 
-#### Jenkins Kurulum
+9-) Kullanici bilgileri (Or. bprlab) olusturun ve "save and continue" secin.
+
+10-) Sonraki ekranlari da "Jenkinse hosgeldiniz" yazisini gorene kadar next/continue/finish diyerek gecin.
+
+#### Windows Kurulum
 
 https://jenkins.io/download/ adresinden indirilebilir.
 1. Secenek: Windows Kurulum : https://jenkins.io/download/thank-you-downloading-windows-installer-stable
