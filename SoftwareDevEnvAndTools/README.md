@@ -197,18 +197,18 @@ Jenkinsi Yonet ekranindan JDK, Git ve Maven ayarlarini yaptiktan sonra baslamak 
 * Hafta 1 - 13 EKIM : Ders 1 - Eclipse ve Gite giris. Github Hesabi acilmasi.
 * Hafta 2 - 20 EKIM : Lab Tamirati nedeniyle Ders yapilamadi
 * Hafta 3 - 27 EKIM : Ders 2 - Maven ve Git ile Spring Boot projesi gelistirme.
-* Hafta 4 - 3 KASIM : Ders 3
-* Hafta 5 - 10 KASIM : Ders 4
-* Hafta 6 - 17 KASIM  : Ders 5
+* Hafta 4 - 3 KASIM : Ders 3 - JUnit ve Maven
+* Hafta 5 - 10 KASIM : Ders 4 - Travis CI
+* Hafta 6 - 17 KASIM  : Ders 5 - UML
 * Hafta 7 - 24 KASIM  : Ders Yapilamadi
 * ARA SINAV PROJESI
 * Hafta 8 - 1 ARALIK  : Ders 6
-* Hafta 9 - 8 ARALIK  : Ders 7
-* Hafta 10 - 15 ARALIK  : Ders 8
-* Hafta 11 - 22 ARALIK  : Ders 9
-* Hafta 12 - 29 ARALIK  : Ders 10
-* Hafta 13 - 5 OCAK  : 
-* Hafta 14 - 12 OCAK  :
+* Hafta 9 - 8 ARALIK  : Ders 7 - Postman
+* Hafta 10 - 15 ARALIK  : Ders 8 - JMeter
+* Hafta 11 - 22 ARALIK  : Ders 9 - jenkins
+* Hafta 12 - 29 ARALIK  : Ders 10 - jenkins
+* Hafta 13 - 5 OCAK  : Ders 11
+* Hafta 14 - 12 OCAK  : Ders 12
 * FINAL SINAVI PROJESI :
 
 
