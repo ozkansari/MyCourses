@@ -132,7 +132,7 @@ JMeter ile REST API testi
 19-) "Yapılandırma Adımı Ekle" altından "En Ust Seviye Maven Adimlarini Calistir" secin.
 Bkz. https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/jenkins/24.PNG
 
-20-) Maven hedefi belirtin. Ornegin: install 
+20-) Maven olarak Varsayılan yerine 14. adımda eklediginiz Maven'i secin, hedefi belirtin. Ornegin: install 
 
 21-) Gelismis ayarlari secerek projenin repository altindaki pom yolunu gosterin. Ornegin: Ders4Proje/pom.xml
 Bkz. https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/jenkins/25.PNG
