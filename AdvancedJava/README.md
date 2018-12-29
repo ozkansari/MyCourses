@@ -103,10 +103,10 @@ Spark Java ile Web projesi : https://github.com/ozkansari/MyCourses/tree/master/
 * Hafta 7 - 24 KASIM  : Ders Yapılamadi
 * ARA SINAV PROJESI
 * Hafta 8 - 1 ARALIK  : Ders 6
-* Hafta 9 - 8 ARALIK  :
-* Hafta 10 - 15 ARALIK  :
-* Hafta 11 - 22 ARALIK  :
-* Hafta 12 - 29 ARALIK  :
+* Hafta 9 - 8 ARALIK  : Ders 7
+* Hafta 10 - 15 ARALIK  : Ders 8
+* Hafta 11 - 22 ARALIK  : Ders 9
+* Hafta 12 - 29 ARALIK  : Ders 10
 * Hafta 13 - 5 OCAK  :
 * Hafta 14 - 12 OCAK  :
 * FINAL SINAVI PROJESI :
