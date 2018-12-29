@@ -88,9 +88,13 @@ JMeter ile REST API testi
 #### MacOS adımlar
 
 1-) jenkins.war indirilir. (Generic WAR http://mirrors.jenkins.io/war-stable/latest/jenkins.war)
+
 2-) bprlab altında jenkins dizini oluşturuldu ve jenkins.war bu dizine tasindi
+
 3-) Terminal bprlab dizininde acilir
+
 4-) "cd jenkins" komutu ile jenkins dizinine girilir
+
 5-) Asagidaki komutlar calistirilir
 
     export JENKINS_HOME=/Users/bprlab/jenkins
@@ -108,7 +112,7 @@ JMeter ile REST API testi
 
 11-) Manage Jenkins > Global Tool Configuration > Add JDK secilir. Install Automatically secenegi kaldirilir.
 
-12-) Java Home dizini bulmak icin asagidaki komutlar calistirilir:
+12-) Java Home dizini bulmak icin asagidaki komutlar calistirilir. Bu komutlarin sonucunda ortaya cikan dizin kopyalanir ve jenkinse girilir.
 
     export JAVA_HOME=`/usr/libexec/java_home`
     /usr/libexec/java_home
@@ -199,11 +203,11 @@ Jenkinsi Yonet ekranindan JDK, Git ve Maven ayarlarini yaptiktan sonra baslamak 
 * Hafta 7 - 24 KASIM  : Ders Yapilamadi
 * ARA SINAV PROJESI
 * Hafta 8 - 1 ARALIK  : Ders 6
-* Hafta 9 - 8 ARALIK  :
-* Hafta 10 - 15 ARALIK  :
-* Hafta 11 - 22 ARALIK  :
-* Hafta 12 - 29 ARALIK  :
-* Hafta 13 - 5 OCAK  :
+* Hafta 9 - 8 ARALIK  : Ders 7
+* Hafta 10 - 15 ARALIK  : Ders 8
+* Hafta 11 - 22 ARALIK  : Ders 9
+* Hafta 12 - 29 ARALIK  : Ders 10
+* Hafta 13 - 5 OCAK  : 
 * Hafta 14 - 12 OCAK  :
 * FINAL SINAVI PROJESI :
 
