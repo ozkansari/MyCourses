@@ -1,3 +1,4 @@
+package spark.template.freemarker.ozkansari;
 import spark.*;
 import static spark.Spark.*;
 
@@ -6,7 +7,7 @@ public class WebOrnek1 {
 	public static void main(String[] args) {
 		// YONTEM 1
 		// anonymous inner class kullanimi ornek
-		// http://127.0.0.1:4567/webornek/sayfa1b/
+		// http://127.0.0.1:4567/webornek/sayfa1/
 		Route sayfa1 = new Route("/webornek/sayfa1/") {
 			@Override
 			public Object handle(Request arg0, Response arg1) {
