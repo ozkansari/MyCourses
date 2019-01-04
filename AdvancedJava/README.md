@@ -3,29 +3,6 @@
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasinda iki oturum halinde yapilacaktir.
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katilimdan not verilecektir.
 
-## ARA SINAV PROJESI
-
-### Teslim Tarihi: 26 Kasim Pazartesi 23:59:59'a kadar ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Gec teslim kabul edilmeyecektir.
-
-Vize Saatinde Projelerinizi Derste Sunacaksiniz. 
-Sunum yapmayanlardan -40 puan eksiltilerek not verilecektir.
-*Ayni ve benzer proje teslimlerini kopya olarak degerlendirilecektir*
-
-Uygulama kodlarinizi tr/edu/medipol/ilerijava/vize/<<ad_soyad>>/ paketinde bulunmali <<ad_soyad>> yerine kendi ad ve soyadinizi yazmalisiniz.
-
-### Aciklama: 
-
-Java ile Sunucu/Istemci (**Socket**) mimarisinde coklu akisi (Multi Thread) destekleyen bir hesaplama uygulamasi yapmanizi bekliyorum.
-Sunucu ve Istemci(ler) iki ayri uygulama seklinde calismali. Bir **sunucuya birden fazla istemcinin TCP socket ile baglanmasi desteklenmeli**.
-
-Sunucu tarafinda Java Swing GUI ile **giden gelen mesajlar** ve **bagli istemcilerin listesi** goruntulenmeli.
-
-Istemci tarafinda ise Java Swing GUI ile istemciden **iki ayri sayi** ve **yapilacak islem tipi** ( +,-,/,* ) girdi olarak alinacak ve **GONDER butonu**na basildiginda sunucuya hesaplama islemi **tcp socket iletisimle mesaj olarak** gonderilecektir. Ornegin "2 * 55" gibi bir mesaj istemciden sunucuya gonderilecek.
-
-Bu mesaji alan sunucu ise gelen mesajdaki hesaplama istegini algilayip, sonucu hesaplayacak ve istekte bulunan istemciye sonucu donecektir.
-
-Istemci ise sonuc mesajini alip ekranda (ornegin labelda ya da disabled textfield'da) gosterecektir.
-
 ## DERSLER
 
 ### Ders 1 - 13 EKIM
@@ -56,7 +33,29 @@ Bilgi:
 
 ### Ders 5 - 17 KASIM
 
-### ARA SINAV
+### ARA SINAV PROJESI
+
+#### Teslim Tarihi: 26 Kasim Pazartesi 23:59:59'a kadar ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Gec teslim kabul edilmeyecektir.
+
+Vize Saatinde Projelerinizi Derste Sunacaksiniz. 
+Sunum yapmayanlardan -40 puan eksiltilerek not verilecektir.
+*Ayni ve benzer proje teslimlerini kopya olarak degerlendirilecektir*
+
+Uygulama kodlarinizi tr/edu/medipol/ilerijava/vize/<<ad_soyad>>/ paketinde bulunmali <<ad_soyad>> yerine kendi ad ve soyadinizi yazmalisiniz.
+
+#### Aciklama: 
+
+Java ile Sunucu/Istemci (**Socket**) mimarisinde coklu akisi (Multi Thread) destekleyen bir hesaplama uygulamasi yapmanizi bekliyorum.
+Sunucu ve Istemci(ler) iki ayri uygulama seklinde calismali. Bir **sunucuya birden fazla istemcinin TCP socket ile baglanmasi desteklenmeli**.
+
+Sunucu tarafinda Java Swing GUI ile **giden gelen mesajlar** ve **bagli istemcilerin listesi** goruntulenmeli.
+
+Istemci tarafinda ise Java Swing GUI ile istemciden **iki ayri sayi** ve **yapilacak islem tipi** ( +,-,/,* ) girdi olarak alinacak ve **GONDER butonu**na basildiginda sunucuya hesaplama islemi **tcp socket iletisimle mesaj olarak** gonderilecektir. Ornegin "2 * 55" gibi bir mesaj istemciden sunucuya gonderilecek.
+
+Bu mesaji alan sunucu ise gelen mesajdaki hesaplama istegini algilayip, sonucu hesaplayacak ve istekte bulunan istemciye sonucu donecektir.
+
+Istemci ise sonuc mesajini alip ekranda (ornegin labelda ya da disabled textfield'da) gosterecektir.
+
 
 ### Ders 6 - 1 ARALIK
 
@@ -66,7 +65,7 @@ Uygulama Maven Projeye Cevrildi:
 Apache Derby Veritabani Ornegi: 
 * https://github.com/ozkansari/MyCourses/tree/master/DerbyVeritabaniOrnek
 
-#### ODEV 
+#### ODEV 1
 Bir java masaustu ekraninda kullanicidan ayri ayri ad ve soyad girdi olarak alinacak. Gonder butonuna basinca veritabanina kaydedilecek.
 
 Veritabani olarak derste gordugumuz sekilde maven projesi ve apache derby kullanilacak.
@@ -75,7 +74,11 @@ Veritabani olarak derste gordugumuz sekilde maven projesi ve apache derby kullan
 
 ### Ders 7 - 8 ARALIK
 
+Veritabani Uygulama Calismasi
+
 ### Ders 8 - 15 ARALIK
+
+Veritabani Uygulama Calismasi
 
 ### Ders 9 - 22 ARALIK
 
@@ -83,6 +86,12 @@ Spark Java ile Web projesi : https://github.com/ozkansari/MyCourses/tree/master/
 - https://freemarker.apache.org/docs/index.html
 
 ### Ders 10 - 29 ARALIK
+
+Spark Java ile Web projesi (Devam) - Web form olusturma
+
+#### ODEV 2
+
+Dersteki web orneginde ogrenci ekleme formu olusturulmustu. Ayni formu ogretmen ekleme formu icin olusturunuz.
 
 ### Ders 11 - 5 OCAK
 
@@ -100,13 +109,13 @@ Spark Java ile Web projesi : https://github.com/ozkansari/MyCourses/tree/master/
 * Hafta 4 - 3 KASIM : Ders 3
 * Hafta 5 - 10 KASIM : Ders 4
 * Hafta 6 - 17 KASIM  : Ders 5
-* Hafta 7 - 24 KASIM  : Ders Yapılamadi
+* Hafta 7 - 24 KASIM  : Ders Yapilamadi
 * ARA SINAV PROJESI
-* Hafta 8 - 1 ARALIK  : Ders 6
-* Hafta 9 - 8 ARALIK  : Ders 7
-* Hafta 10 - 15 ARALIK  : Ders 8
-* Hafta 11 - 22 ARALIK  : Ders 9
-* Hafta 12 - 29 ARALIK  : Ders 10
+* Hafta 8 - 1 ARALIK  : Ders 6 - Apache Derby Veritabani
+* Hafta 9 - 8 ARALIK  : Ders 7 - Apache Derby Veritabani
+* Hafta 10 - 15 ARALIK  : Ders 8 - Apache Derby Veritabani
+* Hafta 11 - 22 ARALIK  : Ders 9 - Spark Java ile Web projesi
+* Hafta 12 - 29 ARALIK  : Ders 10 - Spark Java ile Web projesi : Form Submit
 * Hafta 13 - 5 OCAK  :
 * Hafta 14 - 12 OCAK  :
 * FINAL SINAVI PROJESI :
