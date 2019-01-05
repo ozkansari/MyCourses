@@ -192,6 +192,8 @@ SonarQube kurulum
 
 #### MacOS adimlar
 
+Kisaca yapilmasi gereken zip dosyasini indirip, acilan zip dosyasi icindeki "/bin/macosx-universal-64/sobar.sh" komutunu start parametresi ile calistirmak yani: .//bin/macosx-universal-64/sobar.sh start
+
 1-) https://www.sonarqube.org/downloads/ sayfasından "Community Edition 7.5" linkine tıklayarak sonarqube-7.5.zip dosyasi indirilir.
 
 2-) Indirildigi dizine gidilir ve zip dosyasi acilir. (Finder>Indirilenler)
@@ -207,6 +209,8 @@ SonarQube kurulum
 5-) Daha sonra asagidaki komutu calistirin.
 
     ./sonar.sh start
+    
+6-) Bir sure bekledikten sonra tarayicidan http://localhost:9000/ adresine girilir.
 
 :exclamation: [SONARQUBE WINDOWS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/sonarqube/README.md)
 
