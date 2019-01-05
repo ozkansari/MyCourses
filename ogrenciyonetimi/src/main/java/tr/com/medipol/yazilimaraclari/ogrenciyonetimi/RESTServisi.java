@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class RESTServisi {
 
-	private List<String> ogrenciler = new ArrayList<>();
+	private List<String> ogrenciler = Collections.synchronizedList(new ArrayList<>());
 	
 	@PostMapping("/api/ogrenci/olustur")
 	public String ogrenciOlustur(String ogrenciAdSoyad) {
@@ -36,7 +36,6 @@ public class RESTServisi {
 			name="/api/ogrenci/listele/v2"
 			, produces= {MediaType.APPLICATION_JSON_UTF8_VALUE}
 	)
-	@ResponseBody
 	public ResponseEntity<List<String>> ogrencileriListeleV2(){
 		return new ResponseEntity<>(ogrenciler, HttpStatus.OK);
 	}

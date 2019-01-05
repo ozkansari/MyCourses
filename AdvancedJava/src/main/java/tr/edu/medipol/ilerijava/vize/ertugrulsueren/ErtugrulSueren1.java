@@ -4,42 +4,43 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 public class ErtugrulSueren1 {
-	
-public static final int SERVER_PORT = 1234;
 
-private static ServerSocket sunucusoc;
+	public static final int SERVER_PORT = 1234;
 
-public static void main(String[] args) throws UnknownHostException, IOException {
-	
-try {
-	
-	sunucusoc = new ServerSocket(SERVER_PORT);
-	
-System.out.println("Istemci..." +
+	private static ServerSocket sunucusoc;
 
-		sunucusoc.getLocalPort());
+	public static void main(String[] args)
+	    throws UnknownHostException, IOException {
 
-while(true) {
-	
-Socket istembag = sunucusoc.accept();
+		try {
 
-System.out.println("Ýstemci Baðlandý " +
+			sunucusoc = new ServerSocket(SERVER_PORT);
 
-istembag.getInetAddress());
+			System.out.println("Istemci..." +
 
-ertugrulsueren2 her =
+			    sunucusoc.getLocalPort());
 
-new ertugrulsueren2(istembag);
+			while (true) {
 
-her.start();
-}
-} catch (IOException e) {
-	
-System.out.println(SERVER_PORT +
+				Socket istembag = sunucusoc.accept();
 
-" Hata");
+				System.out.println("Ýstemci Baðlandý " +
 
-e.printStackTrace();
-}
-}
+				    istembag.getInetAddress());
+
+				ertugrulsueren2 her =
+
+				    new ertugrulsueren2(istembag);
+
+				her.start();
+			}
+		} catch (IOException e) {
+
+			System.out.println(SERVER_PORT +
+
+			    " Hata");
+
+			e.printStackTrace();
+		}
+	}
 }

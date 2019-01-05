@@ -10,7 +10,7 @@ import tr.edu.medipol.ilerijava.vize.osman_cansiz.ServerPack.SocketServer;
 
 public class ClientSocket {
 
-	private static final String serverIP = "192.168.1.4";
+	private static final String serverIP = "localhost";
 	private static final int serverPORT = SocketServer.SERVER_PORT;
 
 	public static void main(String[] args) throws InterruptedException {

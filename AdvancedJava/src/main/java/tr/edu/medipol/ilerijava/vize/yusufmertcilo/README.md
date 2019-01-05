@@ -1,3 +1,31 @@
 * Dersteki kod uzerinden degisiklik yapti
 * Sirketteki birinden yardim aldi.
 * Sorulari cevaplayamadi
+
+* Birden fazla istemci destekliyor ama bir sonucu bir istemciye degil her istemciye donuyor.
+* Sonuclar istemcide sadece log olarak gosteriliyor. GUI'de gosterilmiyor.
+
+NOT SKALASI
+-------------------
+
+Sunum:
+- [ 0 / 25 ] Sorulari Cevaplayabilme
+
+Program:
+- [ 5 /  5 ] Islem tipinin girdi olarak alinmasi 
+- [ 7 / 10 ] Sonucun sunucu tarafinda hesaplanmasi ve istemciye donulmesi
+- [ 6 / 10 ] Sonucun istemci tarafindan alinip goruntulenebilmesi
+
+Konular:
+- [ 10 / 15 ] Socket Sunucu
+- [ 10 / 15 ] Socket Istemci
+- [ 15 / 15 ] Multi Thread destegi
+- [ 3 / 10 ] Java Swing GUI
+
+Islevler:
+- [ 6 / 10 ] Bir sunucuya birden fazla istemcinin baglanabilmesi
+- [ 5 /  5 ] GUI'de giden gelen mesajlarin goruntulenebilmesi
+- [ 2 /  5 ] GUI'de bagli istemcilerin listesinin goruntulenebilmesi
+
++--------------------------------------------------------------------------
+Sonuc: 69

@@ -1,7 +1,6 @@
 package tr.edu.medipol.ilerijava.vize.onur_karal.OrtakAraclar;
 import java.net.*;
 import java.io.*;
-import java.lang.System.LoggerFinder;
 import java.util.*;
 import java.util.logging.Logger;
 

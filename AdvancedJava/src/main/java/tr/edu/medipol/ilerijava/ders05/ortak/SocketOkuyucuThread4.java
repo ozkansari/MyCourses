@@ -2,7 +2,6 @@ package tr.edu.medipol.ilerijava.ders05.ortak;
 
 import java.net.*;
 import java.io.*;
-import java.lang.System.LoggerFinder;
 import java.util.*;
 import java.util.logging.Logger;
 

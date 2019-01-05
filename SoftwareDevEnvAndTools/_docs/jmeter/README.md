@@ -1,8 +1,11 @@
 # Jmeter ile REST Test
-apache-jmeter-4.0\bin\jmeter.bat ile çalıştırabilirsiniz.
+apache-jmeter-4.0\bin\jmeter.bat ile calistirabilirsiniz.
 
-Ya da jar olarak çalıştırabilirsiniz.
+Ya da jar olarak calistirabilirsiniz.
+java -jar ApacheJMeter.jar
 C:\Program Files\Java\jdk1.8.0_66\bin\java.exe -jar C:\apache-jmeter-4.0\bin\ApacheJMeter.jar
+
+![jmeter config](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/jmeter/yazilim_araclari_ders8_2018guz.jmx)
 
 ![1](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/jmeter/1.PNG)
 ![2](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/jmeter/2.PNG)

@@ -21,8 +21,6 @@ public class OgrenciYonetimEkrani extends JFrame {
 	public OgrenciYonetimEkrani() {
 		super("Ogrenci Yonetim");
 		
-		Statement veritabaniSorguStmt = veritabaniAyarla();
-		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(750, 500);
 		setLocation(100, 50);
@@ -31,14 +29,18 @@ public class OgrenciYonetimEkrani extends JFrame {
 		// --------------------------------------------------
 		// Gosterim Paneli
 		// --------------------------------------------------
-		JPanel gosterimPaneli = new JPanel();
+
 		JTextArea mesajlarJTA;
 		mesajlarJTA = new JTextArea(50,50);
 		mesajlarJTA.setSize(300, 300);
 		mesajlarJTA.setEditable(false);
 		mesajlarJTA.getScrollableTracksViewportHeight();
+		
 		JScrollPane mesajlarJTAScroll = new JScrollPane(mesajlarJTA);
+		
+		JPanel gosterimPaneli = new JPanel();
 		gosterimPaneli.add(mesajlarJTAScroll);
+		
 		add(gosterimPaneli);
 		
 		// --------------------------------------------------
@@ -47,23 +49,25 @@ public class OgrenciYonetimEkrani extends JFrame {
 		JPanel girisPaneli = new JPanel();
 		
 		JTextField ogrenciAdGiris, ogrenciSoyadGiris, ogrenciYasGiris;
-		
-		ogrenciAdGiris = new JTextField(10);
+
 		girisPaneli.add(new JLabel("Ad : "));
+		ogrenciAdGiris = new JTextField(10);
 		girisPaneli.add(ogrenciAdGiris);
 		
-		ogrenciSoyadGiris = new JTextField(10);
 		girisPaneli.add(new JLabel("Soyad : "));
+		ogrenciSoyadGiris = new JTextField(10);
 		girisPaneli.add(ogrenciSoyadGiris);
 		
-		ogrenciYasGiris = new JTextField(10);
 		girisPaneli.add(new JLabel("Yas : "));
+		ogrenciYasGiris = new JTextField(10);
 		girisPaneli.add(ogrenciYasGiris);
+		
+		Statement veritabaniSorguStmt = veritabaniAyarla();
 		
 		JButton gonderBtn = new JButton("GONDER");
 		girisPaneli.add(gonderBtn);
 		gonderBtn.addActionListener(event -> {
-			int id = findMaxId(veritabaniSorguStmt);
+			int id = findMaxId(veritabaniSorguStmt) + 1;
 			kayitEkle(veritabaniSorguStmt, mesajlarJTA, id, ogrenciAdGiris, ogrenciSoyadGiris, ogrenciYasGiris);
 		});
 		
@@ -79,21 +83,23 @@ public class OgrenciYonetimEkrani extends JFrame {
 				ogrenciSoyadGiris.getText() + " " + 
 				yas + "\n"
 		);
+		
+		try  {
+			// INSERT INTO ogrenciler VALUES ( 1 , 'a a' , 22 )
+			veritabaniSorguStmt.executeUpdate("INSERT INTO ogrenciler VALUES ( "
+					+ id  + " , "
+					+ "'" + ogrenciAdGiris.getText() + " " + ogrenciSoyadGiris.getText() + "' , "
+					+ yas
+					+ " )");
+		} catch(Exception e) {
+			System.out.println("Ayni id'li kayit olusturulamaz :" + e.getMessage());
+		}
+		
 		mesajlarJTA.setCaretPosition(mesajlarJTA.getDocument().getLength());
 		ogrenciAdGiris.setText("");
 		ogrenciSoyadGiris.setText("");
 		ogrenciYasGiris.setText("");
 		repaint();
-		
-		try  {
-			veritabaniSorguStmt.executeUpdate("INSERT INTO ogrenciler VALUES ( "
-					+ (id + 1) + " , "
-					+ ogrenciAdGiris.getText() + " " + ogrenciSoyadGiris.getText() + " , "
-					+ yas
-					+ "' )");
-		} catch(Exception e) {
-			System.out.println("Ayni id'li kayit olusturulamaz :" + e.getMessage());
-		}
 	}
 
 	private int findMaxId(Statement veritabaniSorguStmt) {
@@ -141,7 +147,6 @@ public class OgrenciYonetimEkrani extends JFrame {
 			);
 		} catch(Exception e) {
 			System.out.println("Tablo zaten mevcut. Tekrar olusturulmayacak: " + e.getMessage());
-			return null;
 		}
 		return veritabaniSorguStmt;
 	}
