@@ -6,6 +6,11 @@
   <name>Ornek Web Projesi</name>
   <description>Sparkjava kullanarak ornek web projesi olusturma</description>
   
+  <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
+  
   <dependencies>
   
   	<!-- Spark Java Web programlama yapmamizi saglayan kutuphane -->
@@ -21,6 +26,13 @@
 	    <artifactId>spark-template-freemarker</artifactId>
 	    <version>1.0</version>
 	</dependency>
+	<!--
+	<dependency>
+	    <groupId>org.freemarker</groupId>
+	    <artifactId>freemarker</artifactId>
+	    <version>2.3.28</version>
+	</dependency>
+	-->
 	
 	<!-- Ekstra spark loglarini acmak icin. Hata incelemede faydali. -->
 	<dependency>

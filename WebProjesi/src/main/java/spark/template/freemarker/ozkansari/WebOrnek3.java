@@ -51,6 +51,25 @@ public class WebOrnek3 {
 			}
 		};
 		post(ogrenciEkleSayfasi);
+		
+		
+		Route ogrenciSilAksiyonu = new Route("/webornek/ogrencisil") {
+
+			@Override
+			public Object handle(Request istek, Response cevap) {
+				
+				String idstr = istek.queryParams("id");
+				if(idstr != null ) {
+					int idint = Integer.valueOf(idstr);
+					ogrenciListesi.remove(idint);
+				}
+				cevap.redirect("/webornek/ogrenciler");
+				return null;
+			}
+			
+		};
+		get(ogrenciSilAksiyonu);
+		post(ogrenciSilAksiyonu);
 	}
 	
 	private static class OgrencilerSayfasiFreemarkerRoute extends FreeMarkerRoute {

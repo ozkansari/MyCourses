@@ -18,8 +18,9 @@
 		
 		<h2> Ogrenciler </h2>
 		
+		<!-- https://freemarker.apache.org/docs/ref_directive_list.html -->
 		<#list ogrenciler as ogrenci>
-			${ogrenci}
+			${ogrenci_index} ${ogrenci} <a href="/webornek/ogrencisil?name=${ogrenci}">sil</a>
 			<br/>
 		</#list>
 		<!--
