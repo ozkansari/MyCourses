@@ -1,4 +1,4 @@
-
+SONARQUBE WINDOWS KURULUM NOTLARI
 
 ![1](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/sonarqube/1.png)
 

@@ -190,7 +190,7 @@ Jenkins tekrar
 
 SonarQube kurulum
 
-:exclamation: [SONARQUBE KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/sonarqube/README.md)
+:exclamation: [SONARQUBE WINDOWS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/sonarqube/README.md)
 
 ### Ders 12 - 12 OCAK
 
