@@ -190,6 +190,24 @@ Jenkins tekrar
 
 SonarQube kurulum
 
+#### MacOS adimlar
+
+1-) https://www.sonarqube.org/downloads/ sayfasından "Community Edition 7.5" linkine tıklayarak sonarqube-7.5.zip dosyasi indirilir.
+
+2-) Indirildigi dizine gidilir ve zip dosyasi acilir. (Finder>Indirilenler)
+
+3-) Acilan zip dosya klasoru (sonarqube-7.5) bprlab altina tasinir ve klasor ismi "sonarqube" olarak degistirilir. (Eski adi sonarqube-7.5)
+
+4-) Terminal acin. "bprlab" dizinindeyken sonarqube/bin/macosx-universal-64 dizinine gidin
+
+    cd sonarqube
+    cd bin
+    cd macosx-universal-64
+    
+5-) Daha sonra asagidaki komutu calistirin.
+
+    ./sonar.sh start
+
 :exclamation: [SONARQUBE WINDOWS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/sonarqube/README.md)
 
 ### Ders 12 - 12 OCAK
