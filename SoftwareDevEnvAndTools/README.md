@@ -212,6 +212,14 @@ Kisaca yapilmasi gereken zip dosyasini indirip, acilan zip dosyasi icindeki "/bi
     
 6-) Bir sure bekledikten sonra tarayicidan http://localhost:9000/ adresine girilir.
 
+7-) Jenkins Maven Build adiminda "install sonar:sonar" denildiginde sonar analizi otomatik calisacaktir. Console logunun sonunda asagidaki gibi bir ifade gorurseniz, sonar analizi basarili olmustur. Gosterilen baglantiya tiklayarak analiz goruntulenebilir.
+
+    [INFO] ANALYSIS SUCCESSFUL, you can browse http://localhost:9000/dashboard?id=tr.edu.medipol.yazarac%3ADers4Proje
+
+ 8-) Ek bazı analizler icin maven install hedefi asagidaki gibi yazilabilir:
+ 
+    clean jacoco:prepare-agent install jacoco:report pmd:pmd sonar:sonar 
+
 :exclamation: [SONARQUBE WINDOWS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/sonarqube/README.md)
 
 ### Ders 12 - 12 OCAK
