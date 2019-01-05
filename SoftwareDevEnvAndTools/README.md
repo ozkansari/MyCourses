@@ -85,7 +85,7 @@ JMeter ile REST API testi
 
 ### Ders 9 - 22 ARALIK
 
-#### MacOS adımlar
+#### MacOS adimlar
 
 1-) jenkins.war indirilir. (Generic WAR http://mirrors.jenkins.io/war-stable/latest/jenkins.war)
 
@@ -184,7 +184,13 @@ Jenkinsi Yonet ekranindan JDK, Git ve Maven ayarlarini yaptiktan sonra baslamak 
 
 ### Ders 10 - 29 ARALIK
 
+Jenkins tekrar
+
 ### Ders 11 - 5 OCAK
+
+SonarQube kurulum
+
+:exclamation: [SONARQUBE KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/sonarqube/README.md)
 
 ### Ders 12 - 12 OCAK
 
