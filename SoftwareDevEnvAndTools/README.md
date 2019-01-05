@@ -220,6 +220,40 @@ Kisaca yapilmasi gereken zip dosyasini indirip, acilan zip dosyasi icindeki "/bi
  
     clean jacoco:prepare-agent install jacoco:report pmd:pmd sonar:sonar 
 
+Ancak bunun için projenin pom.xml'inde project tagi icine jacoco ayari yapilmasi gerekir:
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.2</version>
+
+				<executions>
+					<execution>
+						<id>jacoco-initialize</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>jacoco-site</id>
+						<phase>package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+Ayrıca maven projesinin Java 8 ile derlenmesi icin pom.xml'e project tagi icine asagidaki ekleme yapilmalidir:
+
+    <properties>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
+
 :exclamation: [SONARQUBE WINDOWS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/sonarqube/README.md)
 
 ### Ders 12 - 12 OCAK
