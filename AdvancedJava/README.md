@@ -69,7 +69,7 @@ NOT 1: ADMIN kullanici uygulama acilirken java kodu ile bir defaya mahsus tabloy
 
 NOT 2: Test amaciyla,  kullanici adi "admin" sifre "admin" girildiginde ADMIN kullanicisi girisi,  kullanici adi "user" sifre "user" girildiginde NORMAL kullanici girisi yaptirabilirsiniz. Ancak bunun disindaki degerler icin veritabanindan kontrol yapilmali.
 
-Ornek Sayfa tasarimi:
+##### Ornek Sayfa tasarimi:
 
     / - - - - - - - - - - - - - - - - - - - - - - - - - - /
     
@@ -93,7 +93,7 @@ Ekrandan "Kullanici Adi", "Yas", "Cinsiyet", "Sifre" girisleri yapildiktan sonra
 * "Uye Ol" butonuna basildiginda, , java kodu tarafinda veritabanindaki "kullanicilar" tablosuna ekleme islemi yapilacak. Eger islemde bir hata cikarsa, "5. Hata Sayfasi" ekranina yonlendirilecek.
 * "Vazgec" baglantisina tiklandiginda "1. Giris Sayfasi" sayfasina geri donulecek. Bu sayfadan sadece normal kullanici olusturulabilir. Yani olusturulan kullaniciya tipi olarak "NORMAL" atanmali.
 
-Ornek Sayfa tasarimi:
+##### Ornek Sayfa tasarimi:
 
     / - - - - - - - - - - - - - - - - - - - - - - - - - - /
     
@@ -119,18 +119,27 @@ Ornek Sayfa tasarimi:
 ##### Onemli Noktalar
 * Bu sayfanin goruntulenmesine, eger giris yapilmamissa izin verilmemeli. Ayrica ADMIN tipindeki kullanicilar bu sayfayi goruntuleyemeyecek.
 * Eger "1. Giris Sayfasi" uzerinden kullanici girisi yapilmadiysa, sayfanin goruntulenmesi engellenecek ve "1. Giris Sayfasi" adresine geri yonlendirilecek.
+* Bkz. Asagidaki Ornek Sayfa Tasarimi
+
+##### Cikis Yap
+* Ekranda giris yapan kullanici adi gosterilmeli ve yaninda "Cikis Yap" linki/butonu bulunmali. Buna tiklandiginda giris yapan kullanici bilgileri temizlenmeli ve "1. Giris Sayfasi" adresine geri yonlendirilmeli.
+* Bkz. Asagidaki Ornek Sayfa Tasarimi
 
 ##### Urun Listesi
 * Sayfa goruntulendiginde, sistemdeki tum urunler bilgileriyle tek tek her biri bir kutucuk icinde olmak uzere goruntulenebilmeli. 
 * Listelenen her bir urun icin Sepete Ekle butonu bulunacak. Butona basildiginda **sepettekiler** kismina urun eklenecek.
+* Bkz. Asagidaki Ornek Sayfa Tasarimi
 
 ##### Sepettekiler
 * Sayfanin bir kosesinde sepet bilgisi goruntulenecek. Sepete Eklendikce sepettekiler de guncellenecek. Sepet bos ise bu kisim goruntulenmeyecek.
 * Sepetteki urunler miktariyla birlikte listelenecek (Or.2 defa sepete eklenmis olabilir)Siparis ver butonu olacak. Tiklaninca siparise ait, veritabani siparisler tablosuna kayit atilacak ve sepet bosaltilacak.
+* Bkz. Asagidaki Ornek Sayfa Tasarimi
 
-Ornek Sayfa tasarimi:
+##### Ornek Sayfa tasarimi:
 
     / - - - - - - - - - - - - - - - - - - - - - - - - - - /
+    
+    GIRIS YAPAN KULLANICI: Kullanici 3 - <<Cikis Yap link/button>>
     
     / - - - /
     SEPETTEKILER (Sepet bos ise bu kisim goruntulenmeyecek.)
@@ -164,6 +173,10 @@ Ornek Sayfa tasarimi:
 * Eger "1. Giris Sayfasi" uzerinden kullanici girisi yapilmadiysa, sayfanin goruntulenmesi engellenecek ve "1. Giris Sayfasi" adresine geri yonlendirilecek.
 * Eger giris yapan kullanici tipi ADMIN degilse "5. Hata Sayfasi" ekranina yonlendirilecek.
 
+##### Cikis Yap
+* Ekranda giris yapan kullanici adi gosterilmeli ve yaninda "Cikis Yap" linki/butonu bulunmali. Buna tiklandiginda giris yapan kullanici bilgileri temizlenmeli ve "1. Giris Sayfasi" adresine geri yonlendirilmeli.
+* Bkz. Asagidaki Ornek Sayfa Tasarimi
+
 ##### Kullanici ve Urun Listeleme & Kullanici Silme
 * Sayfa goruntulendiginde, sistemdeki tum kullanicilar ve urunler ayri ayri  gosterilmeli ve her bir kullanici yaninda sil baglantisi bulunmali. Urun silinmeyecek.
 * Sil baglantisina tiklandiginda, java kodu tarafinda kaydin silme islemi gerceklesmeli ve sonrasinda islem basariliysa mevcut kalan kayitlari gosterecek sekilde ayni sayfaya donulmeli. 
@@ -172,9 +185,12 @@ Ornek Sayfa tasarimi:
 ##### Kullanici ve Urun Ekleme FOrmlari
 * Ayrica sayfada kullanici ve urun ekleme formlari bulunmali. Eger islemde bir hata cikarsa, "5. Hata Sayfasi" ekranina yonlendirilecek.
 
-Ornek Sayfa tasarimi:
+
+##### Ornek Sayfa tasarimi:
 
     / - - - - - - - - - - - - - - - - - - - - - - - - - -  
+    
+    GIRIS YAPAN KULLANICI: Kullanici X Admin - <<Cikis Yap linki/butonu>>
     
     SIPARISLER
     ------------
@@ -233,7 +249,7 @@ Ornek Sayfa tasarimi:
 
 Normal tipteki bir kullanici "4. ADMIN Kullanici Anasayfa" ekranina eirsmeye calisirsa ya da uygulamada bir hata cikarsa, uygun bir mesajla birlikte bu sayfaya yonlendirilecek.
 
-Ornek Sayfa tasarimi:
+##### Ornek Sayfa tasarimi:
 
     / - - - - - - - - - - - - - - - - - - - - - - - - - - /
     
