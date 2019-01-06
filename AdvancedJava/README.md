@@ -128,11 +128,16 @@ Ekrandan "Kullanici Adi", "Yas", "Cinsiyet", "Sifre" girisleri yapildiktan sonra
 ##### Urun Listesi
 * Sayfa goruntulendiginde, sistemdeki tum urunler bilgileriyle tek tek her biri bir kutucuk icinde olmak uzere goruntulenebilmeli. 
 * Listelenen her bir urun icin Sepete Ekle butonu bulunacak. Butona basildiginda **sepettekiler** kismina urun eklenecek.
+* Eger islemde bir hata cikarsa, "5. Hata Sayfasi" ekranina yonlendirilecek.
+* Islem basariliysa ayni sayfaya geri donulecek.
 * Bkz. Asagidaki Ornek Sayfa Tasarimi
 
 ##### Sepettekiler
 * Sayfanin bir kosesinde sepet bilgisi goruntulenecek. Sepete Eklendikce sepettekiler de guncellenecek. Sepet bos ise bu kisim goruntulenmeyecek.
-* Sepetteki urunler miktariyla birlikte listelenecek (Or.2 defa sepete eklenmis olabilir)Siparis ver butonu olacak. Tiklaninca siparise ait, veritabani siparisler tablosuna kayit atilacak ve sepet bosaltilacak.
+* Sepetteki urunler miktariyla birlikte listelenecek (Or.2 defa sepete eklenmis olabilir) 
+* Siparis ver butonu olacak. Tiklaninca siparise ait, veritabani siparisler tablosuna kayit atilacak ve sepet bosaltilacak.
+* Eger islemde bir hata cikarsa, "5. Hata Sayfasi" ekranina yonlendirilecek.
+* Islem basariliysa ayni sayfaya geri donulecek.
 * Bkz. Asagidaki Ornek Sayfa Tasarimi
 
 ##### Ornek Sayfa tasarimi:
@@ -143,9 +148,9 @@ Ekrandan "Kullanici Adi", "Yas", "Cinsiyet", "Sifre" girisleri yapildiktan sonra
     
     / - - - /
     SEPETTEKILER (Sepet bos ise bu kisim goruntulenmeyecek.)
-    Urun 1
-    Urun 4
-    Urun 7
+    Urun 1 - 1 adet
+    Urun 4 - 3 adet
+    Urun 7 - 2 adet
     <<siparis ver link/button>>
     / - - - /
     
@@ -176,9 +181,12 @@ Ekrandan "Kullanici Adi", "Yas", "Cinsiyet", "Sifre" girisleri yapildiktan sonra
 * Sayfa goruntulendiginde, sistemdeki tum kullanicilar ve urunler ayri ayri  gosterilmeli ve her bir kullanici yaninda sil baglantisi bulunmali. Urun silinmeyecek.
 * Sil baglantisina tiklandiginda, java kodu tarafinda kaydin silme islemi gerceklesmeli ve sonrasinda islem basariliysa mevcut kalan kayitlari gosterecek sekilde ayni sayfaya donulmeli. 
 * Eger islemde bir hata cikarsa, "5. Hata Sayfasi" ekranina yonlendirilecek.
+* Islem basariliysa ayni sayfaya geri donulecek.
 
-##### Kullanici ve Urun Ekleme FOrmlari
-* Ayrica sayfada kullanici ve urun ekleme formlari bulunmali. Eger islemde bir hata cikarsa, "5. Hata Sayfasi" ekranina yonlendirilecek.
+##### Kullanici ve Urun Ekleme Formlari
+* Ayrica sayfada kullanici ve urun ekleme formlari bulunmali. 
+* Eger islemde bir hata cikarsa, "5. Hata Sayfasi" ekranina yonlendirilecek.
+* Islem basariliysa ayni sayfaya geri donulecek.
 
 
 ##### Ornek Sayfa tasarimi:
