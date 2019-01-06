@@ -5,7 +5,9 @@ Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katilimdan no
 
 ## DUYURULAR
 
-### FINAL PROJESI
+### FINAL PROJESI - ALISVERIS SITESI (Web + Veritabani)
+
+Spark Java Web ortaminda + Veritabanina kayit ve sorgulamanin yapildigi bir alisveris sitesi projesi yapmaniz gerekecek. Aciklamalar detayli bir sekilde asagida aciklanmistir. Her bir noktaya ve parcaya ozenle dikakt etmenizi oneririm.
 
 Teslim Tarihi: Aciklanacak (Final Sinavindan 2 gun once 23:59'da gonderilmeli. Yani Final sinavi 20 Ocak'daysa 18 Ocak 23:59:59'a kadar gonderilmeli.)
 ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Gec teslim kabul edilmeyecektir.
