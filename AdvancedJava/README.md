@@ -1,7 +1,7 @@
-# ILERI JAVA UYGULAMALARI - 2018 GUZ
+# ILERI JAVA UYGULAMALARI - 2018 2019 GUZ (Ekim 018 - Ocak 2019)
 
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasinda iki oturum halinde yapilacaktir.
-Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katilimdan not verilecektir.
+Derse mazeretiniz yoksa devam zorunludur. Derse devam ve derse katilimdan not verilecektir.
 
 ## DUYURULAR
 
