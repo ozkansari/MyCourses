@@ -308,7 +308,7 @@ Uygulama kodlarinizi tr/edu/medipol/ilerijava/vize/<<ad_soyad>>/ paketinde bulun
 
 #### Aciklama: 
 
-Java ile Sunucu/Istemci (**Socket**) mimarisinde coklu akisiÂŸ (Multi Thread) destekleyen bir hesaplama uygulamasi yapmanizi bekliyorum.
+Java ile Sunucu/Istemci (**Socket**) mimarisinde coklu akisiŸ (Multi Thread) destekleyen bir hesaplama uygulamasi yapmanizi bekliyorum.
 Sunucu ve Istemci(ler) iki ayri uygulama seklinde calismali. Bir **sunucuya birden fazla istemcinin TCP socket ile baglanmasi desteklenmeli**.
 
 Sunucu tarafinda Java Swing GUI ile **giden gelen mesajlar** ve **bagli istemcilerin listesi** goruntulenmeli.
@@ -381,6 +381,6 @@ Spark Java ile Web projesi (Devam) - Silme Islemi Ornegi
 * Hafta 10 - 15 ARALIK  : Ders 8 - Apache Derby Veritabani
 * Hafta 11 - 22 ARALIK  : Ders 9 - Spark Java ile Web projesi
 * Hafta 12 - 29 ARALIK  : Ders 10 - Spark Java ile Web projesi : Form Submit
-* Hafta 13 - 5 OCAK  :
+* Hafta 13 - 5 OCAK  : Ders 11 - Spark Java ile Web projesi : Silme Ornegi
 * Hafta 14 - 12 OCAK  :
 * FINAL SINAVI PROJESI :
