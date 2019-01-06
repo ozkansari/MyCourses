@@ -1,0 +1,1 @@
+Dersteki web orneginde ogrenci ekleme formu olusturulmustu. Ayni formu ogretmen ekleme formu icin olusturunuz.
