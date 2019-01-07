@@ -16,6 +16,17 @@ ozkan.sari@outlook.com adresine sadece kod dosyalarinizi ve fina lproje raporunu
 
 Yaptiklariniz ekran goruntuleri ile aciklayan basit bir Final Proje raporu hazirlamaniz gerekmektedir. Tercihen Doc/docx yerine PDFe cevirip gondermelisiniz.
 
+Yapilacaklar Ozet, Ayrintilar Asagida:
+1-) giris_sayfasi.html , GirisSayfasi.java
+2-) uye_sayfasi.html, UyeSayfasi.java
+3-) anasayfa.html, Anasayfa.java
+4-) yonetici_anasayfa.html, YoneticiAnasayfa.java
+5-) hata.html, HataSayfasi.java
+6-) Uygulama main metodunu iceren ana uygulama sinifi: UygulamaMain.java
+7-) Final_Proje_Raporu_<<ad_soyadiniz>>.pdf
+
+Hersey "spark/template/freemarker/<<ad_soyadiniz>>/finalproje/" paketi icerisinde  olmali.
+
 ### Onemli Noktalar
 
 * Final projesi sifirdan sade bir sekilde gelistirilmeli. Ornegin, Dersdeki kod ve projeler uzerinden devam ederek proje olustulmamali ve dersteki projeden ilerleyip proje ile alakasiz kodlar gonderilmemeli, isimlendirmelere dikkat edilmeli. Ayni sekilde internetten bulunan alakasiz derste gosterilmeyen kod ve teknolojiler kullanilmamali.
