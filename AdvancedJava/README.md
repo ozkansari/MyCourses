@@ -7,7 +7,7 @@ Derse mazeretiniz yoksa devam zorunludur. Derse devam ve derse katilimdan not ve
 
 ### FINAL PROJESI - ALISVERIS SITESI (Web + Veritabani)
 
-Spark Java Web ortaminda + Veritabanina kayit ve sorgulamanin yapildigi bir alisveris sitesi projesi yapmaniz gerekecek. Proje ile ilgili aciklamalar detayli bir sekilde asagida aciklanmistir. Her bir noktaya ve parcaya ozenle dikkat etmenizi oneririm.
+Spark Java Web ortaminda + Veritabanina kayit ve sorgulamanin yapildigi bir alisveris sitesi projesi yapmaniz gerekiyor. Proje ile ilgili aciklamalar detayli bir sekilde asagida aciklanmistir. 
 
 Teslim Tarihi: Aciklanacak (Final Sinavindan 2 gun once 23:59'da gonderilmeli. Yani Final sinavi 20 Ocak'daysa 18 Ocak 23:59:59'a kadar gonderilmeli.)
 ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Gec teslim kabul edilmeyecektir.
@@ -308,7 +308,7 @@ Uygulama kodlarinizi tr/edu/medipol/ilerijava/vize/<<ad_soyad>>/ paketinde bulun
 
 #### Aciklama: 
 
-Java ile Sunucu/Istemci (**Socket**) mimarisinde coklu akisiŸ (Multi Thread) destekleyen bir hesaplama uygulamasi yapmanizi bekliyorum.
+Java ile Sunucu/Istemci (**Socket**) mimarisinde coklu akisiÂŸ (Multi Thread) destekleyen bir hesaplama uygulamasi yapmanizi bekliyorum.
 Sunucu ve Istemci(ler) iki ayri uygulama seklinde calismali. Bir **sunucuya birden fazla istemcinin TCP socket ile baglanmasi desteklenmeli**.
 
 Sunucu tarafinda Java Swing GUI ile **giden gelen mesajlar** ve **bagli istemcilerin listesi** goruntulenmeli.
