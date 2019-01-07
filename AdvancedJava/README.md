@@ -14,9 +14,9 @@ ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Gec teslim 
 
 ### Onemli Noktalar
 
-* Final projesi sifirdan sade bir sekilde gelistirilmeli. Ornegin, Dersdeki kod ve projeler uzerinden devam ederek proje olustulmamali ve dersteki projeden ilerleyip proje ile alakasiz kodlar gonderilmemeli. Ayni sekilde internetten bulunan alakasiz derste gosterilmeyen kod ve teknolojiler kullanilmamali.
+* Final projesi sifirdan sade bir sekilde gelistirilmeli. Ornegin, Dersdeki kod ve projeler uzerinden devam ederek proje olustulmamali ve dersteki projeden ilerleyip proje ile alakasiz kodlar gonderilmemeli, isimlendirmelere dikkat edilmeli. Ayni sekilde internetten bulunan alakasiz derste gosterilmeyen kod ve teknolojiler kullanilmamali.
 * Spark JAVA 1.1.1 ve Apache Derby 10.11.1.1 (dosya tabanli veritabani) versiyonlari kullanilmali. Derste ogretilenler disinda bir teknoloji kullanilmamali.
-* Sinav zamani kodunuzu aciklamaniz istenecektir. Eger aciklayamazsaniz, projeyi sizin yapmadiginiz dusunulecektir.
+* Sinav zamani kodunuzu aciklamaniz istenecektir. Eger aciklayamazsaniz, projeyi sizin yapmadiginiz dusunulecektir.Benzer kod gonderimleri kopya olarak degerlendirilecektir ve bolum baskanligina bildirilecektir. 
 * Proje maven projesi olmali.
 * Kodlariniz (java ve html) src/main altinda "spark/template/freemarker/<<ad_soyadiniz>>/finalproje/" paketi icerisinde bulunmali. (<<ad_soyadiniz>> yerine kendi ad soyadinizi yaziniz)
 * Sayfa adlari "/<<ad_soyadiniz>>/sayfa_adi" seklinde eslestirilmeli. (<<ad_soyadiniz>> yerine kendi ad soyadinizi yaziniz)
