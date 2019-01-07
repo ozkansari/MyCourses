@@ -23,8 +23,9 @@ Yapilacaklar Ozet, Ayrintilar Asagida:
 * 4-) yonetici_anasayfa.html, YoneticiAnasayfa.java (http://localhost:4567/<<ad_soyadiniz>>/yonetici/)
 * 5-) hata.html, HataSayfasi.java (http://localhost:4567/<<ad_soyadiniz>>/hata/)
 * 6-) Uygulama main metodunu iceren ana uygulama sinifi: UygulamaMain.java
-* 7-) Final_Proje_Raporu_<<ad_soyadiniz>>.pdf
-* (http://localhost:4567//<<ad_soyadiniz>>/cikis)
+* 7-) 1. ve 2. maddelerle baglanti olarak cikis baglantisi/formu (http://localhost:4567//<<ad_soyadiniz>>/cikis)
+* 8-) Final_Proje_Raporu_<<ad_soyadiniz>>.pdf
+
 * Hersey "spark/template/freemarker/<<ad_soyadiniz>>/finalproje/" paketi icerisinde  olmali.
 
 ### Onemli Noktalar
