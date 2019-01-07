@@ -32,7 +32,7 @@ Veritabani tablo olusturma (CREATE) islemleri bir defaya mahsus yapilmali. Tablo
 #### "kullanicilar" tablosu: kullanici_adi, kullanici_tipi, yas, cinsiyet, sifre
 
 * kullanici_adi: Veritabani tablosunda ayni kullanici adina sahip iki kullanici bulunamaz. (Silme islemleri kullanici_adi uzerinden yapilabilir)
-* kullanici_tipi: Ekrandan girilmemeli, "2. Kullanici Olusturma Sayfasi"ndan girislerde "NORMAL" degeri atanmali. Uygulamada iki tip kullanici olacak: NORMAL ve ADMIN. ADMIN kullanici uygulama acilirken java kodu ile bir defaya mahsus tabloya eklenecek (insert). 
+* kullanici_tipi: "2. Kullanici Olusturma Sayfasi"ndan girislerde, kullanici tipi ekrandar girdi olarak alinmamali ve "NORMAL" degeri atanmali. Uygulamada iki tip kullanici olacak: NORMAL ve ADMIN. ADMIN kullanici uygulama acilirken java kodu ile bir defaya mahsus tabloya eklenecek (insert). 
 * yas: yalnizca sayi girisine izin verilmeli.
 * cinsiyet: K ya da E degerleri alabilir.
 * sifre: Harf ve rakam girilebilir. kullanici_adi ve sifre birlikte giris islemlerinde kullanilacak.
