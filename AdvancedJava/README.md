@@ -10,7 +10,9 @@ Derse mazeretiniz yoksa devam zorunludur. Derse devam ve derse katilimdan not ve
 Spark Java Web ortaminda + Veritabanina kayit ve sorgulamanin yapildigi bir alisveris sitesi projesi yapmaniz gerekiyor. Proje ile ilgili aciklamalar detayli bir sekilde asagida aciklanmistir. 
 
 Teslim Tarihi: Aciklanacak (Final Sinavindan 2 gun once 23:59'a kadar gonderilmeli. Yani Final sinavi 20 Ocak'da ise 18 Ocak 23:59:59'a kadar proje gonderimi yapilmis olmali)
-ozkan.sari@outlook.com adresine sadece kod dosyalarinizi gonderiniz. Gec teslim kabul edilmeyecektir.
+ozkan.sari@outlook.com adresine sadece kod dosyalarinizi ve fina lproje raporunu gonderiniz. Gec teslim kabul edilmeyecektir.
+
+Yaptiklariniz ekran goruntuleri ile aciklayan basit bir Final Proje raporu hazirlamaniz gerekmektedir. Tercihen Doc/docx yerine PDFe cevirip gondermelisiniz.
 
 ### Onemli Noktalar
 
