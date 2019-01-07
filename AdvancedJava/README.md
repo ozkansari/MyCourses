@@ -17,13 +17,14 @@ ozkan.sari@outlook.com adresine sadece kod dosyalarinizi ve fina lproje raporunu
 Yaptiklariniz ekran goruntuleri ile aciklayan basit bir Final Proje raporu hazirlamaniz gerekmektedir. Tercihen Doc/docx yerine PDFe cevirip gondermelisiniz.
 
 Yapilacaklar Ozet, Ayrintilar Asagida:
-* 1-) giris_sayfasi.html , GirisSayfasi.java
-* 2-) uye_sayfasi.html, UyeSayfasi.java
-* 3-) anasayfa.html, Anasayfa.java
-* 4-) yonetici_anasayfa.html, YoneticiAnasayfa.java
-* 5-) hata.html, HataSayfasi.java
+* 1-) giris_sayfasi.html , GirisSayfasi.java (http://localhost:4567//<<ad_soyadiniz>>/giris_sayfasi)
+* 2-) uye_sayfasi.html, UyeSayfasi.java (http://localhost:4567//<<ad_soyadiniz>>/uye_sayfasi)
+* 3-) anasayfa.html, Anasayfa.java (http://localhost:4567/<<ad_soyadiniz>>/)
+* 4-) yonetici_anasayfa.html, YoneticiAnasayfa.java (http://localhost:4567/<<ad_soyadiniz>>/yonetici/)
+* 5-) hata.html, HataSayfasi.java (http://localhost:4567/<<ad_soyadiniz>>/hata/)
 * 6-) Uygulama main metodunu iceren ana uygulama sinifi: UygulamaMain.java
 * 7-) Final_Proje_Raporu_<<ad_soyadiniz>>.pdf
+* (http://localhost:4567//<<ad_soyadiniz>>/cikis)
 * Hersey "spark/template/freemarker/<<ad_soyadiniz>>/finalproje/" paketi icerisinde  olmali.
 
 ### Onemli Noktalar
@@ -139,6 +140,8 @@ Ekrandan "Kullanici Adi", "Yas", "Cinsiyet", "Sifre" girisleri yapildiktan sonra
 * Ekranda giris yapan kullanici adi gosterilmeli ve yaninda "Cikis Yap" linki/butonu bulunmali. Buna tiklandiginda giris yapan kullanici bilgileri temizlenmeli ve "1. Giris Sayfasi" adresine geri yonlendirilmeli.
 * Bkz. Asagidaki Ornek Sayfa Tasarimi
 
+    Yonlendirme adresi: "http://localhost:4567//<<ad_soyadiniz>>/cikis"
+
 ##### Urun Listesi
 * Sayfa goruntulendiginde, sistemdeki tum urunler bilgileriyle tek tek her biri bir kutucuk icinde olmak uzere goruntulenebilmeli. 
 * Listelenen her bir urun icin Sepete Ekle butonu bulunacak. Butona basildiginda **sepettekiler** kismina urun eklenecek.
@@ -191,6 +194,8 @@ Ekrandan "Kullanici Adi", "Yas", "Cinsiyet", "Sifre" girisleri yapildiktan sonra
 * Ekranda giris yapan kullanici adi gosterilmeli ve yaninda "Cikis Yap" linki/butonu bulunmali. Buna tiklandiginda giris yapan kullanici bilgileri temizlenmeli ve "1. Giris Sayfasi" adresine geri yonlendirilmeli.
 * Bkz. Asagidaki Ornek Sayfa Tasarimi
 
+    Yonlendirme adresi: "http://localhost:4567//<<ad_soyadiniz>>/cikis"
+    
 ##### Kullanici ve Urun Listeleme & Kullanici Silme
 * Sayfa goruntulendiginde, sistemdeki tum kullanicilar ve urunler ayri ayri  gosterilmeli ve her bir kullanici yaninda sil baglantisi bulunmali. Urun silinmeyecek.
 * Sil baglantisina tiklandiginda, java kodu tarafinda kaydin silme islemi gerceklesmeli ve sonrasinda islem basariliysa mevcut kalan kayitlari gosterecek sekilde ayni sayfaya donulmeli. 
