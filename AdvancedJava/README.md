@@ -7,6 +7,8 @@ Derse mazeretiniz yoksa devam zorunludur. Derse devam ve derse katilimdan not ve
 
 ### FINAL PROJESI - ALISVERIS SITESI (Web + Veritabani)
 
+>>> _Son Guncelleme Tarihi: 6 Ocak 2019_
+
 Spark Java Web ortaminda + Veritabanina kayit ve sorgulamanin yapildigi bir alisveris sitesi projesi yapmaniz gerekiyor. Proje ile ilgili aciklamalar detayli bir sekilde asagida aciklanmistir. 
 
 Teslim Tarihi: Aciklanacak (Final Sinavindan 2 gun once 23:59'a kadar gonderilmeli. Yani Final sinavi 20 Ocak'da ise 18 Ocak 23:59:59'a kadar proje gonderimi yapilmis olmali)
