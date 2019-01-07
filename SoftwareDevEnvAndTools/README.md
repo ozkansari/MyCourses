@@ -264,7 +264,7 @@ Ayrıca maven projesinin Java 8 ile derlenmesi icin pom.xml'e project tagi icine
 
 ### FINAL SINAVI
 
---
+Final Projesi Mebis'te duyurulan yer ve saatte *yazili sinav* olarak yapilacaktir. Donem boyunca tum konulardan soru cikabilir.
 
 ## TAKVIM
 
@@ -275,15 +275,15 @@ Ayrıca maven projesinin Java 8 ile derlenmesi icin pom.xml'e project tagi icine
 * Hafta 5 - 10 KASIM : Ders 4 - Travis CI
 * Hafta 6 - 17 KASIM  : Ders 5 - UML
 * Hafta 7 - 24 KASIM  : Ders Yapilamadi
-* ARA SINAV PROJESI
+* ARA SINAV
 * Hafta 8 - 1 ARALIK  : Ders 6
 * Hafta 9 - 8 ARALIK  : Ders 7 - Postman
 * Hafta 10 - 15 ARALIK  : Ders 8 - JMeter
 * Hafta 11 - 22 ARALIK  : Ders 9 - jenkins
 * Hafta 12 - 29 ARALIK  : Ders 10 - jenkins
-* Hafta 13 - 5 OCAK  : Ders 11
+* Hafta 13 - 5 OCAK  : Ders 11 - sonarqube
 * Hafta 14 - 12 OCAK  : Ders 12
-* FINAL SINAVI PROJESI :
+* FINAL SINAVI
 
 
 
