@@ -93,7 +93,7 @@ NOT 2: Test amaciyla,  kullanici adi "admin" sifre "admin" girildiginde ADMIN ku
 
 Ekrandan "Kullanici Adi", "Yas", "Cinsiyet", "Sifre" girisleri yapildiktan sonra:
 * "Uye Ol" butonuna basildiginda, , java kodu tarafinda veritabanindaki "kullanicilar" tablosuna ekleme islemi yapilacak. Eger islemde bir hata cikarsa, "5. Hata Sayfasi" ekranina yonlendirilecek.
-* "Vazgec" baglantisina tiklandiginda "1. Giris Sayfasi" sayfasina geri donulecek. Bu sayfadan sadece normal kullanici olusturulabilir. Yani olusturulan kullaniciya tipi olarak "NORMAL" atanmali.
+* "Vazgec" baglantisina tiklandiginda "1. Giris Sayfasi" sayfasina geri donulecek. Bu sayfadan sadece normal kullanici olusturulabilir. Yani olusturulan kullaniciya tip olarak "NORMAL" atanmali.
 
 ##### Ornek Sayfa tasarimi:
 
