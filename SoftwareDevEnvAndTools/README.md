@@ -83,6 +83,15 @@ Tekrar
 
 Spring Boot Rest API Olusturma & Postman Request ve Postman Code Generation
 
+Postman : Web Servislerine bir ara yuz araciligiyla istek gondermemizi ve sonucunu goruntulememizi saglar. Ayrica web servisi cagiracak istemci (client) kodunu otomatik olusturmamizi da saglayan bir aractir.
+
+https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/postman/postman1.PNG?raw=true
+
+Bir post istegini test etmek icin, web servis URL'ini yaziyoruz. Headers alanina "Content-Type "application/json" olarak belirtiyoruz. Body kisminda ise gonderecegimiz parametreleri key -> value ikilisi olarak yaziyoruz. Burada key, gonderilecek istege ait parametre, value ise o parametrenin degeridir. Alternatif olarak, Body altindaki raw secilerek, json oalrak da istek yapilabilir. Bu sekilde, ornegin Spring Boot ile gelistirdigimiz REST web servislerine istek yapıp, sonucunu goruntuleyebiliyoruz.
+
+Ek olarak Headers/Body gibi tabların oldugu siradaki en sağdaki "Code" baglantisi secilerek, yapilan istege ait kod da otomatik oalrak olusturulabilir.
+
+
 ### Ders 8 - 15 ARALIK
 
 JMeter ile REST API testi
