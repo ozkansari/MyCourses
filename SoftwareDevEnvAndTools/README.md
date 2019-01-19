@@ -83,7 +83,8 @@ Tekrar
 
 Spring Boot Rest API Olusturma & Postman Request ve Postman Code Generation
 
-Postman : Web Servislerine bir ara yuz araciligiyla istek gondermemizi ve sonucunu goruntulememizi saglar. Ayrica web servisi cagiracak istemci (client) kodunu otomatik olusturmamizi da saglayan bir aractir.
+#### Postman : 
+Web Servislerine bir ara yuz araciligiyla istek gondermemizi ve sonucunu goruntulememizi saglar. Ayrica web servisi cagiracak istemci (client) kodunu otomatik olusturmamizi da saglayan bir aractir.
 
 https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/postman/postman1.PNG?raw=true
 
@@ -95,6 +96,12 @@ Ek olarak Headers/Body gibi tabların oldugu siradaki en sağdaki "Code" baglant
 ### Ders 8 - 15 ARALIK
 
 JMeter ile REST API testi
+
+#### JMeter
+
+JMeter, sadece web servislerini degil genel olarak bir cok farklı servisi (veritabani, MQ vb) otomatik olarak istek gonderek yuk ve performans testleri yapabilecegimiz bir aractir.
+
+https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/jmeter baglantisi altinda derste yapilan jmeter ornegi ekran goruntuleriyle goruntulenebilir.
 
 ### Ders 9 - 22 ARALIK
 
