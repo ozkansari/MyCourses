@@ -92,6 +92,9 @@ Bir post istegini test etmek icin, web servis URL'ini yaziyoruz. Headers alanina
 
 Ek olarak Headers/Body gibi tabların oldugu siradaki en sağdaki "Code" baglantisi secilerek, yapilan istege ait kod da otomatik oalrak olusturulabilir.
 
+Populer bir arac oldugundan, ayrintili bilgi icin internette bir cok farkli kaynak bulunabilir. Ornegin:
+* https://medium.com/postman-t%C3%BCrkiye/postman-nedir-622be8afef2e
+* https://medium.com/turkce/api-testleri-i%CC%87%C3%A7in-postman-kullanmak-8e407e260b3a
 
 ### Ders 8 - 15 ARALIK
 
@@ -99,9 +102,13 @@ JMeter ile REST API testi
 
 #### JMeter
 
-JMeter, sadece web servislerini degil genel olarak bir cok farklı servisi (veritabani, MQ vb) otomatik olarak istek gonderek yuk ve performans testleri yapabilecegimiz bir aractir.
+JMeter, sadece web servislerini degil genel olarak bir cok farklı servisi (veritabani, MQ vb) otomatik olarak istek gonderek yuk ve performans testleri yapabilecegimiz bir aractir. Sampler'lar sayesinde farklı test tipleri/istekler calistirilabilir. Listener'lar ile yapilan testlerin/isteklerin sonuclari goruntulenebilir. Bir cok farkli sampler ve listener secenegi mevcuttur. Ornegin HTTP Sampler ile web istekleri simule edilebilir. Bu performans ve yuk testleri yapılırken "Config Element" secenegi ile testlerde kullanılabilecek dinamik degerler olusturmak da mumkundur.
 
 https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/jmeter baglantisi altinda derste yapilan jmeter ornegi ekran goruntuleriyle goruntulenebilir.
+
+Populer bir arac oldugundan, ayrintili bilgi icin internette bir cok farkli kaynak bulunabilir. Ornegin:
+* https://gokhansengun.com/jmeter-nedir-ve-ne-ise-yarar/
+* http://ilkaygunel.com/blog/2016/jmeter-load-testing/
 
 ### Ders 9 - 22 ARALIK
 
