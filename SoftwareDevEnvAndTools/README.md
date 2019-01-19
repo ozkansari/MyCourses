@@ -262,6 +262,8 @@ Ayrıca maven projesinin Java 8 ile derlenmesi icin pom.xml'e project tagi icine
 
 ### Ders 12 - 12 OCAK
 
+Quiz Sınavı: https://tr.surveymonkey.com/r/W2TH6LG
+
 ### FINAL SINAVI
 
 Final Projesi Mebis'te duyurulan yer ve saatte *yazili sinav* olarak yapilacaktir. Donem boyunca tum konulardan soru cikabilir.
@@ -282,7 +284,8 @@ Final Projesi Mebis'te duyurulan yer ve saatte *yazili sinav* olarak yapilacakti
 * Hafta 11 - 22 ARALIK  : Ders 9 - jenkins
 * Hafta 12 - 29 ARALIK  : Ders 10 - jenkins
 * Hafta 13 - 5 OCAK  : Ders 11 - sonarqube
-* Hafta 14 - 12 OCAK  : Ders 12
+* Hafta 14 - 12 OCAK  : Ders Yapilamadi
+* Hafta 15 - 19 OCAK  : Ders 12 - quiz ve tekrar
 * FINAL SINAVI
 
 
