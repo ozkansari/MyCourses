@@ -1,0 +1,30 @@
+<html>
+
+	<head>
+		<title>Web Sayfa Ornek 3</title>
+	</head>
+
+	<body>
+	
+		<h1>Ogrenciler ve Ogretmenler platformu </h1>
+		
+		<h2>Ogretmenler</h2>
+		<#list ogretmenler as ogretmen>
+			${ogretmen}
+			<br/>
+		</#list>
+		
+		<h2> Ogrenciler </h2>
+		
+		<#list ogrenciler as ogrenci>
+			${ogrenci}
+			<br/>
+		</#list>
+		<!--
+		for(String ogrenci : ogrenciler) {
+			System.out.println(ogrenci);
+		}
+		-->
+
+	</body>
+</html>
