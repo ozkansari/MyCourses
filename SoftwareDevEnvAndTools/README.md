@@ -19,9 +19,16 @@ Maven ve Git ile Spring Boot projesi gelistirme.
 https://start.spring.io/
 https://github.com/
 
-Bilgi:
+#### Git:
 * https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/2_git-puf-noktalari.pdf
 * https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/2_git101.pdf
+
+#### Spring Boot:
+
+Spring Boot, Spring tabanlı uygulama geliştirmenin en hızlı ve kolay yolu olması amacıyla geliştirilmiş bir frameworktür. Spring Boot sayesinde boilerplate yani basmakalıp kodlardan sıyrılıp, sadece ihtiyacımız olan kodu yazıyoruz (only write code that you need to). Spring Boot web sunucusu olarak Tomcat ve diğer birçok ek özellikle beraber geliyor.
+
+* https://medium.com/kodgemisi/spring-boot-ile-%C3%B6rnek-web-uygulamas%C4%B1-914c94c9099f
+* http://burcualtinok.com.tr/blog/spring-boot-nedir/
 
 #### YAPILACAKLAR:
 
