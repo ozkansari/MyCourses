@@ -2,10 +2,14 @@ package spark.template.freemarker.ozkansari.finalproje;
 
 import static spark.Spark.get;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
 import spark.template.freemarker.FreeMarkerRoute;
+import java.util.*;
 
 public class Anasayfa {
 
@@ -21,7 +25,17 @@ public class Anasayfa {
 		) {
 			@Override
 			public Object handle(Request istek, Response cevap) {
-				return new ModelAndView(null, "/ozkansari/finalproje/anasayfa.html" // spark/template/freemarker/
+				
+				// Kullanici kullanici = VeritabaniYonetimi.kullaniciSorgula("guest");
+				Kullanici kullanici = UygulamaMain.girisYapmisKullanici;
+				if (kullanici == null) {
+					System.out.println("Once giris yapilmali");
+					cevap.redirect("/ozkansari/giris_sayfasi/");
+				}
+				
+				Map<String, Object> sayfaVerisi = new HashMap<String, Object>();
+				sayfaVerisi.put("kullaniciadi", kullanici.getKullaniciAdi());
+				return new ModelAndView(sayfaVerisi, "/ozkansari/finalproje/anasayfa.html" // spark/template/freemarker/
 																							// altindaki dosya yolu
 				);
 			}

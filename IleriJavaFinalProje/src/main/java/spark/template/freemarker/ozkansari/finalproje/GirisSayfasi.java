@@ -24,14 +24,27 @@ public class GirisSayfasi {
 				// <input type="text" name="kullaniciadi" />
 				String kullaniciadi = istek.queryParams("kullaniciadi"); 
 				
-				// giris_sayfasi.html form icinde
-				// <input type="text" name="sifre" />
-				String sifre = istek.queryParams("sifre");
+				Kullanici kullanici = VeritabaniYonetimi.kullaniciSorgula(kullaniciadi);
+				if(kullanici == null) {
+					System.out.println("Verilen kullanici bulunamadi " + kullaniciadi);
+					// TODO hatayi sayfada goster
+					cevap.redirect("/ozkansari/giris_sayfasi/");
+				} else {
+					
+					// giris_sayfasi.html form icinde
+					// <input type="text" name="sifre" />
+					String sifre = istek.queryParams("sifre");
+					
+					if(kullanici.getSifre().equals(sifre)) {
+						System.out.println("Sifre dogru. Giris basarili");
+						UygulamaMain.girisYapmisKullanici = kullanici;
+						cevap.redirect("/ozkansari/");
+					} else {
+						System.out.println("Sifre hatali.");
+						cevap.redirect("/ozkansari/giris_sayfasi/");
+					}
+				}
 				
-				System.out.println("" + kullaniciadi + " " + sifre);
-				// TODO Kullanici adi ve sifre kontrol et
-				
-				cevap.redirect("/ozkansari/");
 				return null;
 			}
 		};
