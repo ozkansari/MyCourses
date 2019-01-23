@@ -1,0 +1,1 @@
+Rapor dosyasi eksik

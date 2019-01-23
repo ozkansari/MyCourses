@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yonetici Anasayfasi</title>
+</head>
+<body>
+
+<h1>Ana Sayfa</h1>
+<h2>Giriş yapan kullanıcı : ${kullanici.getKullaniciAdi()}</h2>
+
+<a href="/furkancelik/cikis">Çıkış yapmak için tıklayın</a>
+
+<h2>Siparisler</h2>
+<ul>
+    <li>Sipariş id - Kullanıcı Adı - Ürün idleri - Toplam Tutar</li>
+    <#list siparisler as siparis>
+    <li>${siparis.getSiparisId()} - ${siparis.getKullaniciAdi()} - ${siparis.getUrunIdler()} - ${siparis.getToplamUcret()}</li>
+    </#list>
+</ul>
+
+<h2>Urunler</h2>
+<ul>
+    <li>Ürün Id - Ürün Adı - Ürün Kategorisi - Birim Fiyatı</li>
+    <#list urunler as urun>
+    <li>${urun.getUrunId()} - ${urun.getUrunAdi()} - ${urun.getUrunKategori()} - ${urun.getFiyat()}</li>
+    </#list>
+</ul>
+
+
+<h2>Kullanicilar</h2>
+<ul>
+    <li>Kullanıcı Adı - Kullanıcı Şifresi - Kullanıcı Tipi - Cinsiyet - Yaş - İşlem</li>
+    <#list kullanicilar as kullanici>
+        <li>${kullanici.getKullaniciAdi()} - ${kullanici.getSifre()} - ${kullanici.getKullaniciTipi()} - ${kullanici.getCinsiyet()} - ${kullanici.getYas()} -
+            <a href="/furkancelik/yonetici/kullanici_sil?kullaniciadi=${kullanici.getKullaniciAdi()}">Sil</a></li>
+    </#list>
+</ul>
+
+<h2>Kullanıcı Ekle</h2>
+
+<form action="/furkancelik/yonetici/kullanici_ekle" method = "post" >
+
+    Kullanici adi: <br></br>
+    <input type="text" name="kullaniciadi" />
+    <br></br>
+
+    Sifre: <br></br>
+    <input type="text" name="sifre" />
+    <br></br>
+
+    Kullanıcı Tipi: <br></br>
+    <select name="kullanicitipi">
+        <option value="ADMIN">Yönetici Kullanıcı</option>
+        <option value="NORMAL">Normal Kullanıcı</option>
+    </select>
+    <br></br>
+
+    Cinsiyet: <br></br>
+    <select name="cinsiyet">
+        <option value="E">Erkek</option>
+        <option value="K">Kadın</option>
+    </select>
+    <br></br>
+
+    Yaş: <br></br>
+    <input type="text" name="yas" />
+    <br></br>
+
+    <input type="submit" value="Ekle" />
+</form>
+
+<h2>Ürün Ekle</h2>
+
+<form action="/furkancelik/yonetici/urun_ekle" method = "post" >
+
+    Ürün Adı: <br></br>
+    <input type="text" name="urunadi" />
+    <br></br>
+
+    Ürün Kategorisi: <br></br>
+    <input type="text" name="urunkategori" />
+    <br></br>
+
+    Fiyat: <br></br>
+    <input type="text" name="fiyat" />
+    <br></br>
+
+    <input type="submit" value="Ekle" />
+</form>
+
+
+</body>
+</html>

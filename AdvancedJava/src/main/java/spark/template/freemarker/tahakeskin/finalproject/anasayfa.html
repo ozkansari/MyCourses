@@ -1,0 +1,45 @@
+<html>
+
+	<head>
+		<title>Normal Kullanici Anasayfa</title>
+	<style>
+	.inb {display: inline-block;}
+
+	</style>
+	</head>
+
+	<body>
+	
+		<h1>User HomePage</h1>
+		
+		<h2>SEPETTEKILER </h2>
+		
+		<div class="inb">
+			<#list sepettekiler as sepet>
+				${sepet}
+				</br>
+			</#list>
+		</div>
+		<div class="inb">
+			<#list urunadeti as adet>
+				${adet}
+				</br>
+			</#list>
+			
+		</div>
+		<a href="/tahakeskin/siparisver">check out</a>
+	
+		<h2> URUNLER </h2>
+		
+		<div class="inb">
+			<#list urunler as urun>
+				${urun}
+				<a href="/tahakeskin/sepetekle?urunadi=${urun}">add bag</a>
+				</br>
+			</#list>
+		</div>
+		
+		
+		
+	</body>
+</html>

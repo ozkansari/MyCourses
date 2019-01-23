@@ -1,0 +1,44 @@
+<html>
+
+	<head>
+		<title>Uye sayfasi</title>
+	</head>
+
+	<body>
+	
+		<div style="margin:auto;width:250px;height:auto;border:1px solid black;">
+			<h1>Uyelik</h1>
+			<!-- https://www.w3schools.com/html/ -->
+			<form action="/emretanrisever/uye_sayfasi/create" method = "post" >
+				<table>
+					<tr>
+						<td>Kullanýcý Adý :</td>
+						<td><input type="text" name="kullanici_adi"></td>
+					</tr>
+					<tr>
+						<td>Kullanýcý Yaþ :</td>
+						<td><input type="text" name="kullanici_yas"></td>
+					</tr>
+					<tr>
+						<td>Cinsiyet :</td>
+						<td>
+							<select name="kullanici_cinsiyet">
+								<option value="E">Erkek</option>
+								<option value="K">Kadýn</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Kullanýcý Þifre :</td>
+						<td><input type="text" name="kullanici_sifre"></td>
+					</tr>
+					<tr>
+						<td><input type="submit" value="Kayýt"></td>
+						<td><a href="/emretanrisever/giris_sayfasi/">Vazgeç</a></td>
+					</tr>
+				</table>	
+			</form>
+		</div>	
+		
+	</body>
+</html>

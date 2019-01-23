@@ -1,0 +1,79 @@
+  <#include "/burakkaratepe/finalproje/header.html">
+ <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Ürünler</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+          </div>
+          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <span data-feather="calendar"></span>
+            This week
+          </button>
+        </div>
+      </div>
+      <#if admin==1>
+      Sadece Admin Görebilir.<br><br>
+      <form class="row" action="/burakkaratepe/addProduct/" method="POST">
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="basic-addon1">Ürün Adı</span>
+		  </div>
+		  <input type="text" class="form-control" name="title" placeholder="Elma" aria-label="Elma" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="basic-addon1">Açıklama</span>
+		  </div>
+		  <input type="text" class="form-control" name="description" placeholder="Elma güzeldir" aria-label="Elma güzeldir" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="basic-addon1">Fiyat</span>
+		  </div>
+		  <input type="text" class="form-control" name="price" placeholder="15" aria-label="Elma güzeldir" aria-describedby="basic-addon1">
+		</div>
+		<div class="input-group mb-3">
+			<button type="submit" class="btn btn-primary btn-lg btn-block">Yeni Ürün Ekle</button>
+		</div>
+     </form>
+   
+     </#if>
+     ${response}
+     
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Ürün Adı</th>
+              <th>Açıklaması</th>
+              <th>Fiyatı</th>
+              <th>Ekle</th>
+               <#if admin==1>
+                <th>Sil</th>
+               </#if>
+            </tr>
+          </thead>
+          <tbody>
+           <#list products as value>
+	           	<tr>
+	              <td>${value[0]}</td>
+	              <td>${value[1]}</td>
+	              <td>${value[2]}</td>
+	              <td>${value[3]}</td>
+	              <td><a href="/burakkaratepe/addCart/?id=${value[0]}&title=${value[1]}&price=${value[3]}">Sepete Ekle</a></td>
+	              <#if admin==1>
+	                 <td><a href="/burakkaratepe/removeProduct/?id=${value[0]}">Sil</a></td>
+	               </#if>
+	            </tr>
+		  
+		  </#list>
+            
+            
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <#include "/burakkaratepe/finalproje/footer.html">

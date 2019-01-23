@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Furkan Çelik Alışveriş Sitesi</title>
+</head>
+<body>
+
+
+<title>Ana Sayfa Furkan Çelik</title>
+
+<h1>Ana Sayfa</h1>
+<h2>Giriş yapan kullanıcı : ${kullanici.getKullaniciAdi()}</h2>
+
+<a href="/furkancelik/cikis">Çıkış yapmak için tıklayın</a>
+
+<h2>Sepetim</h2>
+<ul>
+    <li>Urun Adi - Birim Fiyati</li>
+    <#list sepetim as urun>
+    <li>${urun.getUrunAdi()} - ${urun.getFiyat()} - <a href="/furkancelik/urun_kaldir?urunid=${urun.getUrunId()}">Kaldır</a></li>
+    </#list>
+</ul>
+
+<a href="/furkancelik/siparis_olustur">Siparis olustur</a>
+
+<h2>Urunler</h2>
+<ul>
+    <li>Urun Adi - Birim Fiyati</li>
+    <#list urunler as urun>
+    <li>${urun.getUrunAdi()} - ${urun.getFiyat()} - <a href="/furkancelik/urun_ekle?urunid=${urun.getUrunId()}">Ekle</a></li>
+</#list>
+</ul>
+
+
+
+
+
+</body>
+</html>

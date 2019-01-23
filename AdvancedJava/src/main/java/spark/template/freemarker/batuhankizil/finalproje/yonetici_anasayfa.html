@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Anasayfa</title>
+  </head>
+  <body>
+    <h1>Anasayfa</h1>
+    <p>Giris Yapan Kullanici : ${kullanici.kullanici_adi} </p>
+    <form action="/batuhankizil/cikisyap" method="post">
+      <input type="submit" name="exit" value="Cikis Yap">
+    </form>
+
+    <h2>Siparisler</h2>
+
+<#list siparisler as siparis><br/>
+		Siparis Veren Kullanici : ${siparis.kullanici_adi} <br/>
+		Siparis ID : ${siparis.siparis_id} 
+	
+    </form>
+</#list>
+
+<br/>
+    <h4>Kullanici Adi - Islem</h4>
+    
+    	<#list kullanicilar as k><br/>
+    	<form action="kullanicisil" method="post">	
+    	<input type="hidden" name="kullanici_adi" value="${k.kullanici_adi}">
+		${k.kullanici_adi}
+		${k.kullanici_tipi}
+		${k.sifre}
+		<input type="submit" name="delete" value="sil"> <br>	
+		</form>
+		</#list>
+	
+
+    <h2>Urunler</h2>
+
+	<#list urunler as urun><br/>
+		Urun Adi : ${urun.urun_adi}<br/>
+		Urun Kategori : ${urun.urun_kategori}<br/>
+		Urun Fiyat : ${urun.fiyat}	
+	</#list>
+
+    <h2>Kullanici Ekleme Formu</h2>
+    <form class="" action="kullaniciEkle" method="post">
+      Kullanici Tipi : <input type="radio" name="kullanici_tipi" value="normal"> Normal <input type="radio" name="kullanici_tipi" value="admin"> Admin <br>
+      <input type="text" name="kullanici_adi" placeholder="Kullanici Adi"><br>
+      <input type="text" name="kullanici_yas" placeholder="Yas"><br>
+      Cinsiyet : <input type="radio" name="kullanici_cinsiyet" value="K"> K
+      <input type="radio" name="kullanici_cinsiyet" value="E"> E <br>
+      <input type="password" name="kullanici_sifre" placeholder="Sifre"> <br>
+      <input type="submit" name="save" value="Kullanici Kaydet">
+    </form>
+
+    <h2>Urun Ekle Formu</h2>
+    <form action="#" method="post">
+      <input type="text" name="productname" placeholder="Urun Adi"> <br>
+      <input type="text" name="kategori" placeholder="Kategori"> <br>
+      <input type="text" name="price" placeholder="Fiyat"> <br>
+      <input type="submit" name="ekle" value="Ekle">
+
+    </form>
+
+
+
+
+
+  </body>
+</html>

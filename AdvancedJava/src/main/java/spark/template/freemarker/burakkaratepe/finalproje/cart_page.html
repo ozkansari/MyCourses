@@ -1,0 +1,48 @@
+  <#include "/burakkaratepe/finalproje/header.html">
+ <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Siparişler</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+          </div>
+          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <span data-feather="calendar"></span>
+            This week
+          </button>
+        </div>
+      </div>
+
+    
+     
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Ürün</th>
+              <th>Fiyat</th>
+              <th>Sil</th>
+     
+            </tr>
+          </thead>
+            ${response}
+          <tbody>
+           <#list carts as value>
+	           	<tr>
+	              <td>${value[0]}</td>
+	              <td>${value[3]}</td>
+	        	  <td>${value[4]}</td>
+	              <td><a href="/burakkaratepe/removeCart/?id=${value[0]}">Sil</a></td>
+	             
+	            </tr>
+		  
+		  </#list>
+            
+            
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <#include "/burakkaratepe/finalproje/footer.html">

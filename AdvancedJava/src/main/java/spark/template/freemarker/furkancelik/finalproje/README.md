@@ -1,0 +1,1 @@
+Modller paketi ne icin? Ozel bir arac mi kullanildi?
