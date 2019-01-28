@@ -2,9 +2,17 @@
 
 ## ON INCELEME
 
-Rapor pdf eksik
-Kullanicilar disinda tablo olusturulmamis
-Dersteki kod uzerine bir iki satir kod eklemis: hata.html bos, HataSayfasi.java bos.
+Genel olarak sayfalarin ici bos. Sayfa yonlendirmeleri yapilmis.
+Derste yaptigimiz ornek disinda hicbir veritabani islemi yok.
+
+Giris sayfasinda;
+- kullanici adi ile kullanici tipini karsilastirmak manasiz. Ikisi farkli alan. ???
+- Ayni sorguyu atip farkli sonuc beklemis. Veritabani olayini kavrayamamis. 
+- Admin icin sifre kontrolu yok
+
+Yonetici sayfasinda;
+- Sadece kullanici tipi ekranda gosteriliyor.
+- Kullanici giris yapmis mi kontrolu yapilmis ama tip kontrolu yok. Hata sayfasina yonlendiriyor.
 
 ## KONTROL LISTESI
 
@@ -12,40 +20,43 @@ Dersteki kod uzerine bir iki satir kod eklemis: hata.html bos, HataSayfasi.java 
 -> Degilse (-10)
 
 * 2-) Veritabani Baglantilari
--> 5/15
+-> 8/15
 
 * 3-) Spark Java Web Baglantilari
--> 5/15
+-> 11/15
 
 * 4-) Kullanici girisi ve hak yonetimi
--> 1/6 
+-> 4/6 
+
 * 5.1-) giris_sayfasi.html , GirisSayfasi.java (http://localhost:4567//<<ad_soyadiniz>>/giris_sayfasi)
--> 2/8 
+-> 5/8 
 * 5.2-) uye_sayfasi.html, UyeSayfasi.java (http://localhost:4567//<<ad_soyadiniz>>/uye_sayfasi)
--> 1/8 
+-> 4/8 
 * 5.3-) anasayfa.html, Anasayfa.java (http://localhost:4567/<<ad_soyadiniz>>/)
--> 1/8 
+-> 2/8 
 * 5.4-) yonetici_anasayfa.html, YoneticiAnasayfa.java (http://localhost:4567/<<ad_soyadiniz>>/yonetici/)
 -> 1/8
 * 5.5-) hata.html, HataSayfasi.java (http://localhost:4567/<<ad_soyadiniz>>/hata/)
--> 1/8 
+-> 6/8 
 * 5.6-) Uygulama main metodunu iceren ana uygulama sinifi: UygulamaMain.java
--> 4/8
+-> 8/8
 * 5.7-) 1. ve 2. maddelerle baglanti olarak cikis baglantisi/formu (http://localhost:4567//<<ad_soyadiniz>>/cikis)
 -> 0/8 
 * 5.8-) Final_Proje_Raporu_<<ad_soyadiniz>>.pdf
--> 0/8
+-> 7/8
 
 * 6-) Maven projesi mi?
 -> Degilse (-25)
+OK
 
 * 7-) Sunum? Sorulara cevap verme?
--> 5/20
+-> 10/20
 
 * 8-) Derste gosterilmeyen teknolojiler kullanildi mi?
 --> Kullanildiysa (-25)
+OK
 
 ## SONUC
 
-26
+65
 

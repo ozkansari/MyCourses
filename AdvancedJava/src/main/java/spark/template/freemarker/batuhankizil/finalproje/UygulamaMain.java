@@ -30,7 +30,7 @@ public class UygulamaMain
       	 * Tablolarý oluþturur.
     	 * */    	
     	
-    	//VeritabaniYonetimi.createTable();
+    	VeritabaniYonetimi.createTable();
     	
     	KullaniciServis kullaniciServis = new KullaniciServis();
     	UrunServis urunServis = new UrunServis();
@@ -39,10 +39,9 @@ public class UygulamaMain
       	 * Ürün ekler.
     	 * */
     	
-        
-        //UrunServis urunServis = new UrunServis();
-    	/*Urun urun = new Urun("Masa","Eþya",480.0);
-        urunServis.urunEkle(urun);*/
+        // OZKANS FIX
+        Urun urun = new Urun("Masa","Eþya",480.0);
+        urunServis.urunEkle(urun);
 
     	
     	/**

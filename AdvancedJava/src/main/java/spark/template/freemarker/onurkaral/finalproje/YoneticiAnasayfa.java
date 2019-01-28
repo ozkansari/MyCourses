@@ -21,7 +21,6 @@ public class YoneticiAnasayfa {
 	                Kullanici ADMIN = UygulamaMain.girisYapmisKullanici;
 	               
 	               if(ADMIN == null ) {
-	            	  
 	                    	cevap.redirect("/onurkaral/hata_sayfasi/");
 
 	               }

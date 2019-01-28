@@ -2,6 +2,10 @@ package spark.template.freemarker.efkanic.finalproje;
 
 import static spark.Spark.get;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
@@ -18,8 +22,16 @@ public class HomePage {
 																							// erisecegimi tanimliyorum
 			) {// altindaki dosya yolu
 				@Override
-				public Object handle(Request istek, Response cevap) {			
-					return new ModelAndView(null, "/efkanic/finalproje/homepage.html" // spark/template/freemarker/
+				public Object handle(Request istek, Response cevap) {	
+					
+					List<Urun> urunler = VeritabaniYonetimi.urunlerilistele();
+					
+					Map<String,Object> sayfaVerisi = new HashMap<>();
+					sayfaVerisi.put("urunler", urunler);
+					sayfaVerisi.put("hata", "yok");
+					
+					
+					return new ModelAndView(sayfaVerisi, "/efkanic/finalproje/homepage.html" // spark/template/freemarker/
 					);
 				}
 			};

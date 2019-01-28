@@ -4,6 +4,7 @@ public class Urun {
 	private String urunadi;
 
 	public Urun(String urunadi) {
+		this.urunadi = urunadi;
 	}
 
 	public String getUrunadi() {
@@ -12,6 +13,11 @@ public class Urun {
 
 	public void setUrunadi(String urunadi) {
 		this.urunadi = urunadi;
+	}
+
+	@Override
+	public String toString() {
+		return urunadi + " ";
 	}
 
 }

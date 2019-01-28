@@ -1,3 +1,1 @@
-Bonus: +20
-
-SONUC: 120
+SONUC: 100

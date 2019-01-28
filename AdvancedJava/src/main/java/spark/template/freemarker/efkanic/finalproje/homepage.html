@@ -9,6 +9,14 @@
 		Ekmek <input type = "submit" value="ekle"/><input type = "submit" value="sil"/><br></br>
 		Soğan <input type = "submit" value="ekle"/><input type = "submit" value="sil"/>
 		
+		<br></br>
+		${hata}
+		<br></br>
+		<#list urunler as urun>
+			${urun}
+			<br></br>
+		</#list>
+		
 		<form action ="/efkanic/finalproje/giris_sayfasi" method ="post">
 		<input type = "submit" value="Çıkış"/>
 		</form>

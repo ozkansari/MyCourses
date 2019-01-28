@@ -9,8 +9,8 @@ public class UygulamaMain {
 		VeriTabaniClass.veritabaniAyarla();
 		VeriTabaniClass.tablolariOlustur();
 		
-		//VeriTabaniClass.kullaniciEkle("admin", "admin", 11, "e", "admin");//bi seferlik
-		//VeriTabaniClass.kullaniciEkle("user", "normal", 11, "e", "user");//bi seferlik
+		VeriTabaniClass.kullaniciEkle("admin", "admin", 11, "e", "admin");//bi seferlik
+		VeriTabaniClass.kullaniciEkle("user", "normal", 11, "e", "user");//bi seferlik
 	
 		
 		//(1) http://localhost:4567/tahakeskin/giris_sayfasi
