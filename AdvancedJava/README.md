@@ -3,6 +3,9 @@
 Dersler Cumartesi 09:00-10:00 ve 10:15-11:30 arasinda iki oturum halinde yapilacaktir.
 Derse mazeretiniz yoksa devam zorunludur. Derse devam ve derse katilimdan not verilecektir.
 
+https://classroom.google.com/c/MzA3Mzk2Mjg3NDVa
+Kod: ar5vql
+
 ## DUYURULAR
 
 
