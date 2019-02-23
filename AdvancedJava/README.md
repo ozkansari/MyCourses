@@ -20,4 +20,9 @@ Lab: https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava/src/main/ja
 ## TAKVIM
 
 * Hafta 1 - 23 SUBAT : Ders 1 - Java Tekrari
-
+* Hafta 2 -  2 MART  : Ders 2
+* Hafta 3 -  9 MART  : Ders 3
+* Hafta 4 - 16 MART  : Ders 4
+* Hafta 5 - 23 MART  : Ders 5
+* Hafta 6 - 30 MART  : Ders 6
+ARA SINAVLAR : 06.04.2019	14.04.2019
