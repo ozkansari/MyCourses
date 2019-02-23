@@ -4,6 +4,9 @@ Dersler Cumartesi 12:00-13:00 ve 13:15-14:30 arasinda iki oturum halinde yapilac
 Derse mazeretiniz yoksa %80 devam zorunludur. Derse devam ve derse katilimdan not verilecektir.
 Her ders sonunda quiz yapilacaktir.
 
+https://classroom.google.com/c/MzA3Mzk2Mjk1MDda
+Kod:ni56f2f
+
 ## DUYURULAR
 
 
