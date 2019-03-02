@@ -13,6 +13,8 @@ public class Ders2Ornek1 {
 		personsList.add(student1);
 		Person student2 = new Student("Ahmet Mustafa", "Tavar");
 		personsList.add(0, student2);
+		Person teacher1 = new Teacher("Ali Demir");
+		personsList.add(teacher1);
 		
 		for(Person p : personsList) {
 			System.out.println(p.info());

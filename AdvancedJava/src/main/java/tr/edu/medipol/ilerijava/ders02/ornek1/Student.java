@@ -14,6 +14,6 @@ public class Student extends Person {
 	}
 	
 	public String info() {
-		return "Ogrenci : " + no + " - " + department + " - " +  name;
+		return "Ogrenci : " + no + " - " + department + " - " +  getName();
 	}
 }
