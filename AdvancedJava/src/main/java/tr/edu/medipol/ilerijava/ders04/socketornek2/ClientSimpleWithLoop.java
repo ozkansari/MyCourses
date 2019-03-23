@@ -3,7 +3,7 @@ package tr.edu.medipol.ilerijava.ders04.socketornek2;
 import java.net.*;
 import java.io.*;
 
-public class ServerClientSimpleWithLoop {
+public class ClientSimpleWithLoop {
 
 	public static void main(String[] args) throws Exception {
 		
@@ -11,7 +11,7 @@ public class ServerClientSimpleWithLoop {
 		// MacOS terminal > ifconfig -a
 		// Win terminal > ipconfig -all
 		// 10.201.64.224
-		// 192.168.4.233 
+		// 192.168.5.239 
 		// localhost
 		// 127.0.0.1
 		while(true) {

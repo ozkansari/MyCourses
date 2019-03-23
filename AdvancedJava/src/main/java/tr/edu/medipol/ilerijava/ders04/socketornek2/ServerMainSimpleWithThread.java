@@ -14,8 +14,8 @@ public class ServerMainSimpleWithThread {
 				Socket istemciBaglantisi = 
 						serverSocket.accept();
 				
-				ClientHandleThread t = 
-						new ClientHandleThread(istemciBaglantisi);
+				ServerClientHandleThread t = 
+						new ServerClientHandleThread(istemciBaglantisi);
 				t.start();
 				
 			} catch(Exception e) {

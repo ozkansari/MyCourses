@@ -3,7 +3,7 @@ package tr.edu.medipol.ilerijava.ders04.socketornek1;
 import java.net.*;
 import java.io.*;
 
-public class ServerClientSimple {
+public class ClientSimple {
 
 	public static void main(String[] args) throws Exception {
 		

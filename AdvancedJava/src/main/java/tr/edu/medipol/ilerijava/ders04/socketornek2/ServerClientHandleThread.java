@@ -3,12 +3,12 @@ package tr.edu.medipol.ilerijava.ders04.socketornek2;
 import java.net.*;
 import java.io.*;
 
-public class ClientHandleThread extends Thread {
+public class ServerClientHandleThread extends Thread {
 
 	private DataInputStream in;
 	private DataOutputStream out;
 	
-	public ClientHandleThread(Socket istemciBaglantisi) throws IOException {
+	public ServerClientHandleThread(Socket istemciBaglantisi) throws IOException {
 		// 3-) Istemciden gelecek mesajlari okuyacak yapiyi olustur ....
 		in = new DataInputStream( istemciBaglantisi.getInputStream() );
 		// 4-) Istemciye mesaj gonderecek yapiyi olustur
