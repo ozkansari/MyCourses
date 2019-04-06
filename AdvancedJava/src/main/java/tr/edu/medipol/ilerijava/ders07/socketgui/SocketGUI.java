@@ -12,21 +12,21 @@ public class SocketGUI extends JFrame {
 
 	private JTextArea tumMesajlar = new JTextArea();
 	private JTextField gonderilecekMesaj = new JTextField();
+	private JComboBox kullaniciSecimi = new JComboBox();
 	private JButton mesajGonder = new JButton("Gonder");
 	
 	private InputThread inThread;
 	private DataOutputStream out;
 	
-	private String kullaniciAdi;
-	
 	public SocketGUI() throws Exception {
 		
-		kullaniciAdi = JOptionPane.showInputDialog(this, "Kullanici Adi:");
+		String kullaniciAdi = JOptionPane.showInputDialog(this, "Kullanici Adi:");
 		
 		Socket sunucuSckt = new Socket("10.201.64.224", 82);
 		DataInputStream in = new DataInputStream(sunucuSckt.getInputStream());
 		out = new DataOutputStream(sunucuSckt.getOutputStream());
 		
+		// istemci baglanir baglanmaz ismini sunucuya gonderiyor
 		out.writeUTF(kullaniciAdi);
 		
 		inThread = new InputThread(in);
@@ -38,7 +38,8 @@ public class SocketGUI extends JFrame {
 
 	private Object mesajGonderAksiyonu(ActionEvent e) {
 		try {
-			out.writeUTF(gonderilecekMesaj.getText());
+			String hedefKullanici = (String) kullaniciSecimi.getSelectedItem();
+			out.writeUTF(hedefKullanici + ";" + gonderilecekMesaj.getText());
 			gonderilecekMesaj.setText("");
 		} catch (IOException e1) {
 			JOptionPane.showMessageDialog(this, "Mesaj gonderirken hata olustu. " + e.toString());
@@ -57,9 +58,22 @@ public class SocketGUI extends JFrame {
 			while(true) {
 				try {
 					String mesaj = in.readUTF();
-					tumMesajlar.setText( tumMesajlar.getText() + "\n" + mesaj);
-					tumMesajlar.setCaretPosition(tumMesajlar.getDocument().getLength());
-					// https://stackoverflow.com/questions/5147768/scroll-jscrollpane-to-bottom
+					
+					if(mesaj.startsWith("USERLIST ")) {
+						mesaj = mesaj.replaceAll("USERLIST ", "");
+						String [] kullanicilar = mesaj.split(";");
+						kullaniciSecimi.removeAllItems();
+						kullaniciSecimi.addItem("<<HERKES>>");
+						for(String k : kullanicilar) {
+							kullaniciSecimi.addItem(k);
+						}
+						
+					} else {
+						tumMesajlar.setText( tumMesajlar.getText() + "\n" + mesaj);
+						tumMesajlar.setCaretPosition(tumMesajlar.getDocument().getLength());
+						// https://stackoverflow.com/questions/5147768/scroll-jscrollpane-to-bottom
+					}
+					
 				} catch (IOException e) {
 					e.printStackTrace();
 					break;
@@ -71,7 +85,7 @@ public class SocketGUI extends JFrame {
 	private void ekraniOlustur() {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle("Socket GUI");
-		this.setSize(400, 500);
+		this.setSize(500, 500);
 		this.setLocation(600, 50);
 		this.setResizable(false);
 		this.setLayout(new GridLayout(2,1));
@@ -83,9 +97,12 @@ public class SocketGUI extends JFrame {
 		this.add(satir1);
 		
 		JPanel satir2 = new JPanel();
-		satir2.setLayout(new GridLayout(1,2));
+		satir2.setLayout(new GridLayout(1,3));
+		satir2.add(kullaniciSecimi);
 		satir2.add(gonderilecekMesaj);
 		satir2.add(mesajGonder);
 		this.add(satir2);
+		
+		kullaniciSecimi.addItem("<<HERKES>>");
 	}
 }
