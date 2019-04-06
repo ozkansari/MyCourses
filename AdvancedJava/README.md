@@ -8,6 +8,30 @@ Kod: ar5vql
 
 ## DUYURULAR
 
+Vize yazili sinav olacaktir.
+Ek olarak asagidaki "Proje 1" odevini yapip teslim etmeniz gerekecektir.
+
+### PROJE 1
+
+#### Teslim Tarihi: 19 Nisan 2019 Cuma 23:59:59'a kadar class room uzeridnen sadece kod dosyalarinizi gonderiniz. Gec teslim kabul edilmeyecektir.
+
+Projelerinizi Derste Sunmaniz istenebilir. Sunum yapmayanlardan uan eksiltilerek not verilecektir.
+*Ayni ve benzer proje teslimlerini kopya olarak degerlendirilecektir*
+
+Uygulama kodlarinizi tr/edu/medipol/ilerijava/proje1/<<ad_soyad>>/ paketinde bulunmali <<ad_soyad>> yerine kendi ad ve soyadinizi yazmalisiniz.
+
+#### Aciklama: 
+
+Java ile Sunucu/Istemci (**Socket**) mimarisinde coklu akisi (Multi Thread) destekleyen bir hesaplama uygulamasi yapmanizi bekliyorum.
+Sunucu ve Istemci(ler) iki ayri uygulama seklinde calismali. Bir **sunucuya birden fazla istemcinin TCP socket ile baglanmasi desteklenmeli**.
+
+Sunucu tarafinda Java Swing GUI ile **giden gelen mesajlar** ve **bagli istemcilerin listesi** goruntulenmeli.
+
+Istemci tarafinda ise Java Swing GUI ile istemciden **iki ayri sayi** ve **yapilacak islem tipi** ( +,-,/,* ) girdi olarak alinacak ve **GONDER butonu**na basildiginda sunucuya hesaplama islemi **tcp socket iletisimle mesaj olarak** gonderilecektir. Ornegin "2 * 55" gibi bir mesaj istemciden sunucuya gonderilecek.
+
+Bu mesaji alan sunucu ise gelen mesajdaki hesaplama istegini algilayip, sonucu hesaplayacak ve istekte bulunan istemciye sonucu donecektir.
+
+Istemci ise sonuc mesajini alip ekranda (ornegin labelda ya da disabled textfield'da) gosterecektir.
 
 ## DERSLER
 
@@ -35,9 +59,9 @@ Lab: https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava/src/main/ja
 * Hafta 2 -  2 MART  : Vize Ders 2 - Java Inheritance, Abstract Classes
 * Hafta 3 -  9 MART  : Vize Ders 3 - Threads
 * Hafta 4 - 16 MART  : Vize Ders 4 - Socket Programming
-* Hafta 5 - 23 MART  : Vize Ders 5
-* Hafta 6 - 30 MART  : Vize Ders 6
-* Hafta 7 - 6 NISAN  : Vize Ders 7
+* Hafta 5 - 23 MART  : Vize Ders 5 - Socket Programming
+* Hafta 6 - 30 MART  : Vize Ders 6 - Socket Programming + GUI 
+* Hafta 7 - 6 NISAN  : Vize Ders 7 - Socket Programming + GUI
 * << ARA SINAVLAR : 06.04.2019	14.04.2019 >>
 * Hafta 8 - 13 NISAN  : Final Ders 1
 * Hafta 9 - 20 NISAN  : Final Ders 2
