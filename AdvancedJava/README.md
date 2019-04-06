@@ -8,8 +8,9 @@ Kod: ar5vql
 
 ## DUYURULAR
 
-Vize yazili sinav olacaktir.
-Ek olarak asagidaki "Proje 1" odevini yapip teslim etmeniz gerekecektir.
+Vize yazili sinav olacaktir. Mebisde duyurulan tarihte. Çarşamba 18:00.
+
+Ek olarak asagidaki "Proje 1" odevini yapip 19 Nisana kadar teslim etmeniz gerekecektir.
 
 ### PROJE 1
 
