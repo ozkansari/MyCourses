@@ -14,6 +14,8 @@ public class Ekran1 extends JFrame {
 		bilgiAlani.setText( bilgiAlani.getText() 
 				+ adSoyadGirisi.getText() + " " 
 				+ okulNumarasiGirisi.getText() + "\n");
+		bilgiAlani.setCaretPosition(bilgiAlani.getDocument().getLength());
+		// https://stackoverflow.com/questions/5147768/scroll-jscrollpane-to-bottom
 		adSoyadGirisi.setText("");
 		okulNumarasiGirisi.setText("");
 	}
@@ -25,7 +27,6 @@ public class Ekran1 extends JFrame {
 		this.setResizable(false);
 		this.getContentPane().setBackground(Color.CYAN);
 		this.bilgiAlani.setEditable(false);
-		//this.bilgiAlani.getScrollableTracksViewportHeight();
 		
 		this.setLayout(new GridLayout(3,1));
 		
