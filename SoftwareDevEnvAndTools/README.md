@@ -56,9 +56,9 @@ Spring Boot (https://start.spring.io/), Spring tabanlı uygulama geliştirmenin 
 ## TAKVIM
 
 * Hafta 1 - 23 SUBAT : Ders 1
-*
-*
-*
+* Hafta 2 - 2 MART : Vize Ders 2 
+* Hafta 3 - 9 MART : Vize Ders 3
+* Hafta 4 - 16 MART : Vize Ders 4 
 * Hafta 5 - 23 MART  : Vize Ders 5
 * Hafta 6 - 30 MART  : Vize Ders 6
 * Hafta 7 - 6 NISAN  : Vize Ders 7
