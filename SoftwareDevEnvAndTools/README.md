@@ -12,10 +12,10 @@ Kod:ni56f2f
 
 ## DERSLER
 
-### Ders 1 - 13 EKIM
+### VIZE Ders 1 - 13 EKIM
 
 
-### Ders 6 - 31 MART
+### VIZE Ders 6 - 31 MART
 
 #### Spring Boot: 
 Spring Boot (https://start.spring.io/), Spring tabanlı uygulama geliştirmenin en hızlı ve kolay yolu olması amacıyla geliştirilmiş bir frameworktür. Spring Boot sayesinde boilerplate yani basmakalıp kodlardan sıyrılıp, sadece ihtiyacımız olan kodu yazıyoruz (only write code that you need to). Spring Boot web sunucusu olarak Tomcat ve diğer birçok ek özellikle beraber geliyor.
@@ -53,6 +53,42 @@ Spring Boot (https://start.spring.io/), Spring tabanlı uygulama geliştirmenin 
 * Eclipse'deki repository'nize sag tiklayin ve "Pull" secin.
 * Degisikliklerin Eclispe projenizde gorundugune emin olun.
 
+### FINAL Hafta 1 Code Coverage
+
+Code Coverage: Yazılan Kodun Ne Kadarının Test Edildiğini Gösterir. Code Coverage, yazdığımız testlerin kontrol ettiği kodun, yazdığımız koda oranı demek.
+
+#### Cobertura Code Coverage (Kodun Ne Kadarın Test Edildiğinin Ölçülmesi)
+
+Maven Goal: "cobertura:check"
+
+Maven Plugin:
+
+```xml
+   <project>
+       <!-- Dependencies -->
+       <!- .... --> 
+       <build>
+           <plugins>
+               <plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+					<check />
+				</configuration>
+			</plugin>
+           </plugins>
+        </build>
+    </project>
+```      
+
+#### Travis CI & CodeCov IO
+https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
+Örnek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI_REPO/blob/master/.travis.yml 
 
 ## Notlar
 
