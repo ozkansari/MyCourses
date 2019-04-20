@@ -53,6 +53,11 @@ Spring Boot (https://start.spring.io/), Spring tabanlı uygulama geliştirmenin 
 * Eclipse'deki repository'nize sag tiklayin ve "Pull" secin.
 * Degisikliklerin Eclispe projenizde gorundugune emin olun.
 
+
+## Notlar
+
+![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/\SoftwareDevEnvAndTools/_docs/vize_notlar.PNG?v=1)
+
 ## TAKVIM
 
 * Hafta 1 - 23 SUBAT : Ders 1
