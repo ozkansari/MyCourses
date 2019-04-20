@@ -56,26 +56,26 @@ Spring Boot (https://start.spring.io/), Spring tabanlı uygulama geliştirmenin 
 
 ## Notlar
 
-![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/\SoftwareDevEnvAndTools/_docs/vize_notlar.PNG?v=1)
+![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/vize_notlar.PNG?v=1)
 
 ## TAKVIM
 
-* Hafta 1 - 23 SUBAT : Ders 1
-* Hafta 2 - 2 MART : Vize Ders 2 
-* Hafta 3 - 9 MART : Vize Ders 3
-* Hafta 4 - 16 MART : Vize Ders 4 
-* Hafta 5 - 23 MART  : Vize Ders 5
-* Hafta 6 - 30 MART  : Vize Ders 6
-* Hafta 7 - 6 NISAN  : Vize Ders 7 - Tekrar
+* Vize Hafta 1 - 23 SUBAT : Ders 1
+* Vize Hafta 2 - 2 MART : Vize Ders 2 
+* Vize Hafta 3 - 9 MART : Vize Ders 3
+* Vize Hafta 4 - 16 MART : Vize Ders 4 
+* Vize Hafta 5 - 23 MART  : Vize Ders 5
+* Vize Hafta 6 - 30 MART  : Vize Ders 6
+* Vize Hafta 7 - 6 NISAN  : Vize Ders 7 - Tekrar
 * << ARA SINAVLAR : 06.04.2019	14.04.2019 >>
-* Hafta 8 - 13 NISAN  : Ders Yapılmayacak
-* Hafta 9 - 20 NISAN  : Final Ders 1
-* Hafta 10 - 27 NISAN  : Final Ders 2
-* Hafta 11 - 4 MAYIS  : Final Ders 3
-* Hafta 12 - 11 MAYIS  : Final Ders 4
-* Hafta 13 - 18 MAYIS  : Final Ders 5
-* Hafta 14 - 25 MAYIS  : Final Ders 6
-* Hafta 15 - 1 HAZIRAN  : Final Ders 7
+* Final Hafta 8 - 13 NISAN  : Ders Yapılmayacak
+* Final Hafta 9 - 20 NISAN  : Final Ders 1
+* Final Hafta 10 - 27 NISAN  : Final Ders 2
+* Final Hafta 11 - 4 MAYIS  : Final Ders 3
+* Final Hafta 12 - 11 MAYIS  : Final Ders 4
+* Final Hafta 13 - 18 MAYIS  : Final Ders 5
+* Final Hafta 14 - 25 MAYIS  : Final Ders 6
+* Final Hafta 15 - 1 HAZIRAN  : Final Ders 7
 * << RAMAZAN BAYRAMI : 03.06.2019	06.06.2019 >>
-* Hafta 16 - 8 HAZIRAN  : Final Ders 8 - Tekrar
+* Final Hafta 16 - 8 HAZIRAN  : Final Ders 8 - Tekrar
 * << DONEM SONU SINAVLARI : 11.06.2019	23.06.2019 >>
