@@ -53,13 +53,15 @@ Spring Boot (https://start.spring.io/), Spring tabanlı uygulama geliştirmenin 
 * Eclipse'deki repository'nize sag tiklayin ve "Pull" secin.
 * Degisikliklerin Eclispe projenizde gorundugune emin olun.
 
-### FINAL Hafta 1 Code Coverage
+### FINAL Hafta 1 Continous Integration (Surekli Entegrasyon) ve Code Coverage (Kod Kapsama Oranı)
 
-Code Coverage: Yazılan Kodun Ne Kadarının Test Edildiğini Gösterir. Code Coverage, yazdığımız testlerin kontrol ettiği kodun, yazdığımız koda oranı demek.
+Code Coverage (Kod Kapsama Oranı): Yazılan Kodun Ne Kadarının Test Edildiğini Gösterir. Code Coverage, yazdığımız testlerin kontrol ettiği kodun, yazdığımız koda oranı demek. Cobertura ve Codecov.io araclari kullanilabilir.
+
+Continuous Integration (CI - Surekliş Entegrasyon) : Yazilan kodun, gelistirilen modulun — kisaca gelistirme ortamindan cika gelen bir parcanin — projeye dahil edilmesi esnasinda bir takim sureclerden gecirilmesine verilen isim. Bagimliliklarin repolardan indirilmesi, projeye dahil edilmesi, gelistirilen kod parcacigin testlerden (unit, integration, vs…) gecirilmesi, olasi durumlara gore gelistiriciye veya isin sorumlusuna bilgi verilmesi (push notification, sms, mail, vs…), isin paketlenmesi gibi eylemlerin tamami, genellikle bu kavramin bir parcasi olarak hayatimizda yer ediyor. https://medium.com/@selcukusta/continuous-integration-ci-%C3%BCzerine-laflamalar-9b7f7d2dad07 Travis.ci veya Jenkins aracalri kullanilabilir.
 
 #### Cobertura Code Coverage (Kodun Ne Kadarın Test Edildiğinin Ölçülmesi)
 
-Maven Goal: "cobertura:check"
+Maven Goal: "cobertura:check" veya "cobertura:cobertura"
 
 Maven Plugin:
 
@@ -88,7 +90,7 @@ Maven Plugin:
 
 #### Travis CI & CodeCov IO
 https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
-Örnek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI_REPO/blob/master/.travis.yml 
+Örnek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI/blob/master/.travis.yml 
 
 ## Notlar
 
