@@ -19,9 +19,11 @@ public class ServerMainSimple {
 				
 			} catch(Exception e) {
 				System.out.println("Istemci baglantisinda hata olustu.");
+				break;
 			}
 
 		}
+		serverSocket.close();
 	}
 
 	private static void istemciyleMesajlas(Socket istemciBaglantisi) throws IOException {

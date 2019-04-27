@@ -12,10 +12,10 @@ Kod:ni56f2f
 
 ## DERSLER
 
-### Ders 1 - 13 EKIM
+### VIZE Ders 1 - 13 EKIM
 
 
-### Ders 6 
+### VIZE Ders 6 - 31 MART
 
 #### Spring Boot: 
 Spring Boot (https://start.spring.io/), Spring tabanlı uygulama geliştirmenin en hızlı ve kolay yolu olması amacıyla geliştirilmiş bir frameworktür. Spring Boot sayesinde boilerplate yani basmakalıp kodlardan sıyrılıp, sadece ihtiyacımız olan kodu yazıyoruz (only write code that you need to). Spring Boot web sunucusu olarak Tomcat ve diğer birçok ek özellikle beraber geliyor.
@@ -53,24 +53,67 @@ Spring Boot (https://start.spring.io/), Spring tabanlı uygulama geliştirmenin 
 * Eclipse'deki repository'nize sag tiklayin ve "Pull" secin.
 * Degisikliklerin Eclispe projenizde gorundugune emin olun.
 
+### FINAL Hafta 1 Continous Integration (Surekli Entegrasyon) ve Code Coverage (Kod Kapsama Oranı)
+
+Code Coverage (Kod Kapsama Oranı): Yazılan Kodun Ne Kadarının Test Edildiğini Gösterir. Code Coverage, yazdığımız testlerin kontrol ettiği kodun, yazdığımız koda oranı demek. Cobertura ve Codecov.io araclari kullanilabilir.
+
+Continuous Integration (CI - Surekli Entegrasyon) : Yazilan kodun, gelistirilen modulun — kisaca gelistirme ortamindan cika gelen bir parcanin — projeye dahil edilmesi esnasinda bir takim sureclerden gecirilmesine verilen isim. Bagimliliklarin repolardan indirilmesi, projeye dahil edilmesi, gelistirilen kod parcacigin testlerden (unit, integration, vs…) gecirilmesi, olasi durumlara gore gelistiriciye veya isin sorumlusuna bilgi verilmesi (push notification, sms, mail, vs…), isin paketlenmesi gibi eylemlerin tamami, genellikle bu kavramin bir parcasi olarak hayatimizda yer ediyor. https://medium.com/@selcukusta/continuous-integration-ci-%C3%BCzerine-laflamalar-9b7f7d2dad07 Travis.ci veya Jenkins aracalri kullanilabilir.
+
+#### Cobertura Code Coverage (Kodun Ne Kadarın Test Edildiğinin Ölçülmesi)
+
+Maven Goal: "cobertura:check" veya "cobertura:cobertura"
+
+Maven Plugin:
+
+```xml
+   <project>
+       <!-- Dependencies -->
+       <!- .... --> 
+       <build>
+           <plugins>
+               <plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+					<check />
+				</configuration>
+			</plugin>
+           </plugins>
+        </build>
+    </project>
+```      
+
+#### Travis CI & CodeCov IO
+https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
+Örnek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI/blob/master/.travis.yml 
+
+## Notlar
+
+![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/vize_notlar.PNG?v=1)
+
 ## TAKVIM
 
-* Hafta 1 - 23 SUBAT : Ders 1
-*
-*
-*
-* Hafta 5 - 23 MART  : Vize Ders 5
-* Hafta 6 - 30 MART  : Vize Ders 6
-* Hafta 7 - 6 NISAN  : Vize Ders 7
+* Vize Hafta 1 - 23 SUBAT : Ders 1
+* Vize Hafta 2 - 2 MART : Vize Ders 2 
+* Vize Hafta 3 - 9 MART : Vize Ders 3
+* Vize Hafta 4 - 16 MART : Vize Ders 4 
+* Vize Hafta 5 - 23 MART  : Vize Ders 5
+* Vize Hafta 6 - 30 MART  : Vize Ders 6
+* Vize Hafta 7 - 6 NISAN  : Vize Ders 7 - Tekrar
 * << ARA SINAVLAR : 06.04.2019	14.04.2019 >>
-* Hafta 8 - 13 NISAN  : Final Ders 1
-* Hafta 9 - 20 NISAN  : Final Ders 2
-* Hafta 10 - 27 NISAN  : Final Ders 3
-* Hafta 11 - 4 MAYIS  : Final Ders 4
-* Hafta 12 - 11 MAYIS  : Final Ders 5
-* Hafta 13 - 18 MAYIS  : Final Ders 6
-* Hafta 14 - 25 MAYIS  : Final Ders 7
-* Hafta 15 - 1 HAZIRAN  : Final Ders 8
+* Final Hafta 8 - 13 NISAN  : Ders Yapılmayacak
+* Final Hafta 9 - 20 NISAN  : Final Ders 1
+* Final Hafta 10 - 27 NISAN  : Final Ders 2
+* Final Hafta 11 - 4 MAYIS  : Final Ders 3
+* Final Hafta 12 - 11 MAYIS  : Final Ders 4
+* Final Hafta 13 - 18 MAYIS  : Final Ders 5
+* Final Hafta 14 - 25 MAYIS  : Final Ders 6
+* Final Hafta 15 - 1 HAZIRAN  : Final Ders 7
 * << RAMAZAN BAYRAMI : 03.06.2019	06.06.2019 >>
-* Hafta 16 - 8 HAZIRAN  : Final Ders 9
+* Final Hafta 16 - 8 HAZIRAN  : Final Ders 8 - Tekrar
 * << DONEM SONU SINAVLARI : 11.06.2019	23.06.2019 >>
