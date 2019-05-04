@@ -11,7 +11,9 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.Statement;
 import java.util.Date;
+import java.util.List;
 import java.util.StringTokenizer;
 
 // The tutorial can be found just here on the SSaurel's Blog : 
@@ -32,11 +34,17 @@ public class JavaHTTPServer implements Runnable{
 	// Client Connection via Socket Class
 	private Socket connect;
 	
+	private static Statement veritabaniKomutCalistirici;
+	
 	public JavaHTTPServer(Socket c) {
 		connect = c;
 	}
 	
 	public static void main(String[] args) {
+		
+		veritabaniKomutCalistirici = Veritabani.veritabaninaBaglan();
+		Veritabani.tablolariOlustur(veritabaniKomutCalistirici);
+		
 		try {
 			ServerSocket serverConnect = new ServerSocket(PORT);
 			System.out.println("Server started.\nListening for connections on port : " + PORT + " ...\n");
@@ -109,34 +117,50 @@ public class JavaHTTPServer implements Runnable{
 				
 			} else {
 				// GET or HEAD method
-				if (fileRequested.endsWith("/")) {
-					fileRequested += DEFAULT_FILE;
-				}
 				
-				File file = new File(WEB_ROOT, fileRequested);
-				int fileLength = (int) file.length();
-				String content = getContentType(fileRequested);
-				
-				if (method.equals("GET")) { // GET method so we return content
-					byte[] fileData = readFileData(file, fileLength);
+				if(fileRequested.equals("/ogrenciler")) {
 					
-					// send HTTP Headers
-					out.println("HTTP/1.1 200 OK");
-					out.println("Server: Java HTTP Server from SSaurel : 1.0");
-					out.println("Date: " + new Date());
-					out.println("Content-type: " + content);
-					out.println("Content-length: " + fileLength);
-					out.println(); // blank line between headers and content, very important !
-					out.flush(); // flush character output stream buffer
+					List<String> ogrenciListesi = 
+							Veritabani.ogrenciListesiniAl(veritabaniKomutCalistirici);
+					String content = "<ul>";
+					for(String ogrenci : ogrenciListesi) {
+						content += "<li>" + ogrenci + "</li>";
+					}
+					content += "</ul>";
 					
-					dataOut.write(fileData, 0, fileLength);
-					dataOut.flush();
-				}
+					int fileLength = content.length();
+					
+					httpHeader(out, fileLength, "text/html");
+					out.write(content);
+					out.flush();
+					
+					
+				} else {
 				
-				if (verbose) {
-					System.out.println("File " + fileRequested + " of type " + content + " returned");
-				}
 				
+					if (fileRequested.endsWith("/")) {
+						fileRequested += DEFAULT_FILE;
+					}
+					
+					File file = new File(WEB_ROOT, fileRequested);
+					int fileLength = (int) file.length();
+					String content = getContentType(fileRequested);
+					
+					if (method.equals("GET")) { // GET method so we return content
+						byte[] fileData = readFileData(file, fileLength);
+						
+						// send HTTP Headers
+						httpHeader(out, fileLength, content);
+						
+						dataOut.write(fileData, 0, fileLength);
+						dataOut.flush();
+					}
+				
+				
+					if (verbose) {
+						System.out.println("File " + fileRequested + " of type " + content + " returned");
+					}
+				}
 			}
 			
 		} catch (FileNotFoundException fnfe) {
@@ -164,6 +188,16 @@ public class JavaHTTPServer implements Runnable{
 		}
 		
 		
+	}
+
+	private void httpHeader(PrintWriter out, int fileLength, String contentType) {
+		out.println("HTTP/1.1 200 OK");
+		out.println("Server: Java HTTP Server from SSaurel : 1.0");
+		out.println("Date: " + new Date());
+		out.println("Content-type: " + contentType);
+		out.println("Content-length: " + fileLength);
+		out.println(); // blank line between headers and content, very important !
+		out.flush(); // flush character output stream buffer
 	}
 	
 	private byte[] readFileData(File file, int fileLength) throws IOException {
