@@ -166,7 +166,7 @@ https://www.getpostman.com/
 #### JMeter
 https://jmeter.apache.org/download_jmeter.cgi
 
-![JMETER](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/jmeter?raw=true)
+https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/jmeter?raw=true
 
 ## Notlar
 
