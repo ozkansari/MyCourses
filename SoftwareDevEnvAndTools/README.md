@@ -139,21 +139,21 @@ Ornek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI/blob/master/.tra
 * http://start.spring.io/ sayfasini aciyoruz.
 * Generate a  "MAVEN PROJECT" with "JAVA" and Spring Boot "1.5.13"
 * Group:	com.medipol.yazilimaraclari
-* Artifact: SpringBootOrnek
+* Artifact: RestAPIOrnek
 * Search for dependencies : Web
 * Generate Project
 
 2. ADIM
-* Indirilen zip dosyasini bir dizine ac (Extract). Ornegin: C:\SpringBootOrnek\ dizininine acalim.
+* Indirilen zip dosyasini bir dizine ac (Extract). Ornegin: C:\RestAPIOrnek\ dizininine acalim.
 * Eclipse'de Import>Existing Maven Project secerek next diyoruz
-* Root directory olarak Zip dosyasini actiginiz dizini gosteriyoruz. (C:\SpringBootOrnek\ )
-* Altta gorunen pom.xml checkbo tikla
+* Root directory olarak Zip dosyasini actiginiz dizini gosteriyoruz. (C:\RestAPIOrnek\ )
+* Altta gorunen pom.xml checkbox tikla
 * Daha sonra finish.
 * En son olarak da Projeye sag tikla, Run as Maven Install sec.
 * Proje BUILD SUCCESS olmali.
 
 3. Adim
-RESTServisiOrnek sinifi olustur.
+OgrenciRESTAPI sinifi olustur.
 SpringBootOrnekApplication.java sag tikla: Run as java application 
 http://localhost:8080/ogrenci/listele adresine tarayicidan gir
 
