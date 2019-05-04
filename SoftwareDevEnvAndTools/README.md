@@ -87,6 +87,33 @@ Maven Plugin:
         </build>
     </project>
 ```      
+#### JaCoCo Code Coverage (Kodun Ne Kadarın Test Edildiğinin Ölçülmesi)
+
+Maven Goal: 
+
+Maven Plugin:
+
+```xml
+<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+```
 
 #### Travis CI & CodeCov IO
 https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
