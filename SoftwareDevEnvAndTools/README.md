@@ -137,16 +137,16 @@ Ornek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI/blob/master/.tra
 
 1. ADIM
 * http://start.spring.io/ sayfasini aciyoruz.
-* Generate a  "MAVEN PROJECT" with "JAVA" and Spring Boot "1.5.13"
-* Group:	com.medipol.yazilimaraclari
+* Generate a  "MAVEN PROJECT" with "JAVA" and Spring Boot "2.1.4"
+* Group: com.medipol.yazilimaraclari
 * Artifact: RestAPIOrnek
 * Search for dependencies : Web
 * Generate Project
 
 2. ADIM
-* Indirilen zip dosyasini bir dizine ac (Extract). Ornegin: C:\RestAPIOrnek\ dizininine acalim.
+* Indirilen zip dosyasini bir dizine ac (Extract). Ornegin: C:\RestAPIOrnek\ veya /Users/bprlab/Downloads/RestAPIOrnek dizininine acalim.
 * Eclipse'de Import>Existing Maven Project secerek next diyoruz
-* Root directory olarak Zip dosyasini actiginiz dizini gosteriyoruz. (C:\RestAPIOrnek\ )
+* Root directory olarak Zip dosyasini actiginiz dizini gosteriyoruz. (C:\RestAPIOrnek\ veya /Users/bprlab/Downloads/RestAPIOrnek)
 * Altta gorunen pom.xml checkbox tikla
 * Daha sonra finish.
 * En son olarak da Projeye sag tikla, Run as Maven Install sec.
