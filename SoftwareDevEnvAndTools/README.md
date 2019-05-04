@@ -161,12 +161,12 @@ http://localhost:8080/ogrenci/listele adresine tarayicidan gir
 
 https://www.getpostman.com/
 
-![POSTMAN](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/postman)
+![POSTMAN](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/postman/postman1.PNG?raw=true)
 
 #### JMeter
 https://jmeter.apache.org/download_jmeter.cgi
 
-![JMETER](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/jmeter)
+![JMETER](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/jmeter?raw=true)
 
 ## Notlar
 
