@@ -18,7 +18,7 @@ Kod:ni56f2f
 ### VIZE Ders 6 - 31 MART
 
 #### Spring Boot: 
-Spring Boot (https://start.spring.io/), Spring tabanlı uygulama geliştirmenin en hızlı ve kolay yolu olması amacıyla geliştirilmiş bir frameworktür. Spring Boot sayesinde boilerplate yani basmakalıp kodlardan sıyrılıp, sadece ihtiyacımız olan kodu yazıyoruz (only write code that you need to). Spring Boot web sunucusu olarak Tomcat ve diğer birçok ek özellikle beraber geliyor.
+Spring Boot (https://start.spring.io/), Spring tabanli uygulama geliştirmenin en hizli ve kolay yolu olmasi amaciyla geliştirilmiş bir frameworktUr. Spring Boot sayesinde boilerplate yani basmakalip kodlardan siyrilip, sadece ihtiyacimiz olan kodu yaziyoruz (only write code that you need to). Spring Boot web sunucusu olarak Tomcat ve diger birçok ek özellikle beraber geliyor.
 
 * https://medium.com/kodgemisi/spring-boot-ile-%C3%B6rnek-web-uygulamas%C4%B1-914c94c9099f
 * http://burcualtinok.com.tr/blog/spring-boot-nedir/
@@ -53,41 +53,15 @@ Spring Boot (https://start.spring.io/), Spring tabanlı uygulama geliştirmenin 
 * Eclipse'deki repository'nize sag tiklayin ve "Pull" secin.
 * Degisikliklerin Eclispe projenizde gorundugune emin olun.
 
-### FINAL Hafta 1 Continous Integration (Surekli Entegrasyon) ve Code Coverage (Kod Kapsama Oranı)
+### FINAL DERS 1 - Continous Integration (Surekli Entegrasyon) ve Code Coverage (Kod Kapsama Orani)
 
-Code Coverage (Kod Kapsama Oranı): Yazılan Kodun Ne Kadarının Test Edildiğini Gösterir. Code Coverage, yazdığımız testlerin kontrol ettiği kodun, yazdığımız koda oranı demek. Cobertura ve Codecov.io araclari kullanilabilir.
+Code Coverage (Kod Kapsama Orani): Yazilan Kodun Ne Kadarinin Test Edildigini Gosterir. Code Coverage, yazdigimiz testlerin kontrol ettigi kodun, yazdigimiz koda orani demek. Cobertura ve Codecov.io araclari kullanilabilir.
 
-Continuous Integration (CI - Surekli Entegrasyon) : Yazilan kodun, gelistirilen modulun — kisaca gelistirme ortamindan cika gelen bir parcanin — projeye dahil edilmesi esnasinda bir takim sureclerden gecirilmesine verilen isim. Bagimliliklarin repolardan indirilmesi, projeye dahil edilmesi, gelistirilen kod parcacigin testlerden (unit, integration, vs…) gecirilmesi, olasi durumlara gore gelistiriciye veya isin sorumlusuna bilgi verilmesi (push notification, sms, mail, vs…), isin paketlenmesi gibi eylemlerin tamami, genellikle bu kavramin bir parcasi olarak hayatimizda yer ediyor. https://medium.com/@selcukusta/continuous-integration-ci-%C3%BCzerine-laflamalar-9b7f7d2dad07 Travis.ci veya Jenkins aracalri kullanilabilir.
+Continuous Integration (CI - Surekli Entegrasyon) : Yazilan kodun, gelistirilen modulun — kisaca gelistirme ortamindan cika gelen bir parcanin ��projeye dahil edilmesi esnasinda bir takim sureclerden gecirilmesine verilen isim. Bagimliliklarin repolardan indirilmesi, projeye dahil edilmesi, gelistirilen kod parcacigin testlerden (unit, integration, vs.) gecirilmesi, olasi durumlara gore gelistiriciye veya isin sorumlusuna bilgi verilmesi (push notification, sms, mail, vs.), isin paketlenmesi gibi eylemlerin tamami, genellikle bu kavramin bir parcasi olarak hayatimizda yer ediyor. https://medium.com/@selcukusta/continuous-integration-ci-%C3%BCzerine-laflamalar-9b7f7d2dad07 Travis.ci veya Jenkins araclari kullanilabilir.
 
-#### Cobertura Code Coverage (Kodun Ne Kadarın Test Edildiğinin Ölçülmesi)
+#### JaCoCo Code Coverage (Kodun Ne Kadarinin Test Edildig�inin Olculmesi)
 
-Maven Goal: "cobertura:check" veya "cobertura:cobertura"
-
-Maven Plugin:
-
-```xml
-   <project>
-       <!-- Dependencies -->
-       <!- .... --> 
-       <build>
-           <plugins>
-               <plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>cobertura-maven-plugin</artifactId>
-				<version>2.7</version>
-				<configuration>
-					<formats>
-						<format>html</format>
-						<format>xml</format>
-					</formats>
-					<check />
-				</configuration>
-			</plugin>
-           </plugins>
-        </build>
-    </project>
-```      
-#### JaCoCo Code Coverage (Kodun Ne Kadarın Test Edildiğinin Ölçülmesi)
+Travis ile birlikte JaCoCo kullanilmali. 
 
 Maven Goal: 
 
@@ -115,9 +89,84 @@ Maven Plugin:
 			</plugin>
 ```
 
+
+#### Cobertura Code Coverage (Kodun Ne Kadarinin Test Edildig�inin Olculmesi)
+
+Java 8 ile ilgili bazen hatali hesaplama yapabiliyor.  Travis ile JaCoCo kullanilsa daha iyi olur.
+
+Maven Goal: "cobertura:check" veya "cobertura:cobertura"
+
+Maven Plugin:
+
+```xml
+   <project>
+       <!-- Dependencies -->
+       <!- .... --> 
+       <build>
+           <plugins>
+               <plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+					<check />
+				</configuration>
+			</plugin>
+           </plugins>
+        </build>
+    </project>
+```
+
+### FINAL DERS 2 - Travis CI & CodeCov IO
+
+Code Cov IO icin jaCoCo plugin'i kullanilmali.
+
 #### Travis CI & CodeCov IO
-https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
-Örnek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI/blob/master/.travis.yml 
+https://travis-ci.org/ & https://codecov.io : Github hesabinizla Uye olun.
+
+Repository'nin ana dizinine ".travis.yml" isimli bir dosya olusturacaksiniz.
+
+Ornek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI/blob/master/.travis.yml
+ 
+
+### FINAL DERS 3 - Spring Boot & Postman & JMeter
+
+1. ADIM
+* http://start.spring.io/ sayfasini aciyoruz.
+* Generate a  "MAVEN PROJECT" with "JAVA" and Spring Boot "1.5.13"
+* Group:	com.medipol.yazilimaraclari
+* Artifact: SpringBootOrnek
+* Search for dependencies : Web
+* Generate Project
+
+2. ADIM
+* Indirilen zip dosyasini bir dizine ac (Extract). Ornegin: C:\SpringBootOrnek\ dizininine acalim.
+* Eclipse'de Import>Existing Maven Project secerek next diyoruz
+* Root directory olarak Zip dosyasini actiginiz dizini gosteriyoruz. (C:\SpringBootOrnek\ )
+* Altta gorunen pom.xml checkbo tikla
+* Daha sonra finish.
+* En son olarak da Projeye sag tikla, Run as Maven Install sec.
+* Proje BUILD SUCCESS olmali.
+
+3. Adim
+RESTServisiOrnek sinifi olustur.
+SpringBootOrnekApplication.java sag tikla: Run as java application 
+http://localhost:8080/ogrenci/listele adresine tarayicidan gir
+
+#### Postman
+
+https://www.getpostman.com/
+
+![POSTMAN](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/postman)
+
+#### JMeter
+https://jmeter.apache.org/download_jmeter.cgi
+
+![JMETER](https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/jmeter)
 
 ## Notlar
 
@@ -133,10 +182,10 @@ https://travis-ci.org/ & https://codecov.io : Github hesabınızla üye olun.
 * Vize Hafta 6 - 30 MART  : Vize Ders 6
 * Vize Hafta 7 - 6 NISAN  : Vize Ders 7 - Tekrar
 * << ARA SINAVLAR : 06.04.2019	14.04.2019 >>
-* Final Hafta 8 - 13 NISAN  : Ders Yapılmayacak
-* Final Hafta 9 - 20 NISAN  : Final Ders 1
-* Final Hafta 10 - 27 NISAN  : Final Ders 2
-* Final Hafta 11 - 4 MAYIS  : Final Ders 3
+* Final Hafta 8 - 13 NISAN  : Ders Yapilmayacak
+* Final Hafta 9 - 20 NISAN  : Final Ders 1 - Travis CI & Code Cov IO
+* Final Hafta 10 - 27 NISAN  : Final Ders 2 - Travis CI & Code Cov IO
+* Final Hafta 11 - 4 MAYIS  : Final Ders 3 - Spring Boot Rest & Postman
 * Final Hafta 12 - 11 MAYIS  : Final Ders 4
 * Final Hafta 13 - 18 MAYIS  : Final Ders 5
 * Final Hafta 14 - 25 MAYIS  : Final Ders 6
