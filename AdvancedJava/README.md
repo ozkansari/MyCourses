@@ -79,6 +79,39 @@ Spark Java ile Web Programlama
 
 2-) pom. xml dependency'lerine spark java kutuphanelerini ekleyin.
 
+pom.xml dosyasinda dependencies tagi icine:
+
+```xml
+<!-- Spark Java Web programlama yapmamizi saglayan kutuphane -->
+	<dependency>
+	    <groupId>com.sparkjava</groupId>
+	    <artifactId>spark-core</artifactId>
+	    <version>1.1.1</version>
+	</dependency>
+	<!-- HTML olusturmak icin freemarker kullaniminda gerekli -->
+	<dependency>
+	    <groupId>com.sparkjava</groupId>
+	    <artifactId>spark-template-freemarker</artifactId>
+	    <version>1.0</version>
+	</dependency>
+	<!--
+	<dependency>
+	    <groupId>org.freemarker</groupId>
+	    <artifactId>freemarker</artifactId>
+	    <version>2.3.28</version>
+	</dependency>
+	-->
+	<!-- Ekstra spark loglarini acmak icin. Hata incelemede faydali. -->
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-simple</artifactId>
+		<version>1.7.21</version>
+	</dependency>
+```
+
+pom. xml'in son hali:
+
+
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
