@@ -73,7 +73,7 @@ https://github.com/ozkansari/MyCourses/tree/master/JavaHTTPServer
 ### Final Ders 3
 Spark Java ile Web Programlama
 
-1-) Maven Proje Olusturun (Eclipse'de File>New>Other>Maven Project)
+1-) Maven Proje Olusturun (Eclipse'de File>New>Other>Maven Project) - Create a simple project secili olmali
 * group id : spark.template.freemarker.medipol
 * artifactid: OgrenciWeb
 
@@ -154,8 +154,41 @@ pom. xml'in son hali:
 </project>
 ```
 
-3-)
+3-) src/main/java altina "spark.template.freemarker.medipol" paketi olusturun.
 
+4-) Sag tiklayip "Run As>Maven>Install" calistirdiginizda BUILD SUCCESS gormeniz lazim.
+
+NOT: Maven ile ilgili bir sorun olursa Sag tiklayip "Maven>update project" komutunu calistirabilirsiniz.
+
+5-) Artik Spark kutuphanesi kullanarak Web Proejsi yapabiliriz. Spark kutuphanesi kullanirken asagidaki 3 import ifadesini sinifimiza eklememiz gerekir.
+
+```java
+import spark.*;
+import static spark.Spark.*;
+import spark.template.freemarker.*;
+```
+6-) Basit bir ornek program yazalim:
+
+```java
+import spark.*;
+import static spark.Spark.*;
+
+public class WebOrnek1 {
+	public static void main(String[] args) {
+		Route sayfa1 = new Route("/medipol/ornek/sayfa1") {
+			@Override
+			public Object handle(Request request, Response response) {
+				return "sayfa 1";
+			}
+		};
+		get(sayfa1);
+	}
+}
+```
+
+7-) Sonrasinda yazdigimiz sinifa sag tiklayip "Run As Java Application" diyelim.
+
+8-)
 
 ---
 
