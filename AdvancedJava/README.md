@@ -72,9 +72,11 @@ https://github.com/ozkansari/MyCourses/tree/master/JavaHTTPServer
 
 ### Final Ders 3
 Spark Java ile Web Programlama
+
 1-) Maven Proje Olusturun (Eclipse'de File>New>Other>Maven Project)
 * group id : spark.template.freemarker.medipol
 * artifactid: OgrenciWeb
+
 2-) pom. xml dependency'lerine spark java kutuphanelerini ekleyin.
 
 ```xml
@@ -118,7 +120,9 @@ Spark Java ile Web Programlama
   </dependencies>
 </project>
 ```
+
 3-)
+
 
 ---
 
