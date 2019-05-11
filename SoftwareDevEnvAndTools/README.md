@@ -133,7 +133,7 @@ Repository'nin ana dizinine ".travis.yml" isimli bir dosya olusturacaksiniz.
 Ornek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI/blob/master/.travis.yml
  
 
-### FINAL DERS 3 - Spring Boot & Postman & JMeter
+### FINAL DERS 3 - Spring Boot & Postman
 
 1. ADIM
 * http://start.spring.io/ sayfasini aciyoruz.
@@ -163,6 +163,8 @@ https://www.getpostman.com/
 
 ![POSTMAN](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/postman/postman1.PNG?raw=true)
 
+### FINAL DERS 3 - Spring Boot & JMeter
+
 #### JMeter
 https://jmeter.apache.org/download_jmeter.cgi
 
@@ -186,7 +188,7 @@ https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/
 * Final Hafta 9 - 20 NISAN  : Final Ders 1 - Travis CI & Code Cov IO
 * Final Hafta 10 - 27 NISAN  : Final Ders 2 - Travis CI & Code Cov IO
 * Final Hafta 11 - 4 MAYIS  : Final Ders 3 - Spring Boot Rest & Postman
-* Final Hafta 12 - 11 MAYIS  : Final Ders 4
+* Final Hafta 12 - 11 MAYIS  : Final Ders 4 - JMeter
 * Final Hafta 13 - 18 MAYIS  : Final Ders 5
 * Final Hafta 14 - 25 MAYIS  : Final Ders 6
 * Final Hafta 15 - 1 HAZIRAN  : Final Ders 7
