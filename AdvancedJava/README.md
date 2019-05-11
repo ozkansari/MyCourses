@@ -188,7 +188,7 @@ public class WebOrnek1 {
 
 7-) Sonrasinda yazdigimiz sinifa sag tiklayip "Run As Java Application" diyelim.
 
-8-)
+8-) Tarayici acip "http://localhost:4567/medipol/ornek/sayfa1" adresini girdigimizde, sayfanin acildigini gorebiliriz.
 
 ---
 
