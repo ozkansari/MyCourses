@@ -154,7 +154,7 @@ Ornek travis.yml: https://github.com/ozkansari/YAZILIM_ARACLARI/blob/master/.tra
 
 3. Adim
 OgrenciRESTAPI sinifi olustur.
-SpringBootOrnekApplication.java sag tikla: Run as java application 
+RestApiOrnekApplication.java sag tikla: Run as java application 
 http://localhost:8080/ogrenci/listele adresine tarayicidan gir
 
 #### Postman
