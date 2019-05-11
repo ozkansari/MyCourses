@@ -64,6 +64,64 @@ Lab: https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava/src/main/ja
 Java GUI + Socket Programlama
 Lab: https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava/src/main/java/tr/edu/medipol/ilerijava/ders07
 
+---
+
+### Final Ders 2
+TCP IP Socket ile HTTP Sunucusu Yazma - Web Programlama 
+https://github.com/ozkansari/MyCourses/tree/master/JavaHTTPServer
+
+### Final Ders 3
+Spark Java ile Web Programlama
+1-) Maven Proje Olusturun (Eclipse'de File>New>Other>Maven Project)
+* group id : spark.template.freemarker.medipol
+* artifactid: OgrenciWeb
+2-) pom. xml dependency'lerine spark java kutuphanelerini ekleyin.
+
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>spark.template.freemarker.medipol</groupId>
+  <artifactId>OgrenciWeb</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Ornek Web Projesi</name>
+  <description>Sparkjava kullanarak ornek web projesi olusturma</description>
+  <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+  </properties>
+  <dependencies>
+  	<!-- Spark Java Web programlama yapmamizi saglayan kutuphane -->
+	<dependency>
+	    <groupId>com.sparkjava</groupId>
+	    <artifactId>spark-core</artifactId>
+	    <version>1.1.1</version>
+	</dependency>
+	<!-- HTML olusturmak icin freemarker kullaniminda gerekli -->
+	<dependency>
+	    <groupId>com.sparkjava</groupId>
+	    <artifactId>spark-template-freemarker</artifactId>
+	    <version>1.0</version>
+	</dependency>
+	<!--
+	<dependency>
+	    <groupId>org.freemarker</groupId>
+	    <artifactId>freemarker</artifactId>
+	    <version>2.3.28</version>
+	</dependency>
+	-->
+	<!-- Ekstra spark loglarini acmak icin. Hata incelemede faydali. -->
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-simple</artifactId>
+		<version>1.7.21</version>
+	</dependency>
+  </dependencies>
+</project>
+```
+3-)
+
+---
+
 ## Notlar
 
 ![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava/_docs/vize_notlar.PNG?v=1)
