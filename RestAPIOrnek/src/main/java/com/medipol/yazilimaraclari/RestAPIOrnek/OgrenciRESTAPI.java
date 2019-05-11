@@ -21,11 +21,11 @@ public class OgrenciRESTAPI {
 		public int getNumara() { return numara; }
 	}
 	// ---------------------------------------
-	@RequestMapping(path="/listele", method = RequestMethod.GET)
+    @RequestMapping(path="/listele", method = RequestMethod.GET)
     public List<Ogrenci> listele() {
         return ogrenciListesi;
     }
-	@RequestMapping(path="/ekle", method = RequestMethod.POST)
+    @RequestMapping(path="/ekle", method = RequestMethod.POST)
     public Ogrenci ekle(@RequestBody Ogrenci ogrenci) {
 		ogrenciListesi.add(ogrenci);
         return ogrenci;
