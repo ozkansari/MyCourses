@@ -190,6 +190,12 @@ public class WebOrnek1 {
 
 8-) Tarayici acip "http://localhost:4567/medipol/ornek/sayfa1" adresini girdigimizde, sayfanin acildigini gorebiliriz.
 
+9-) Bootstrap Tasarimi Kullanimi
+
+* https://getbootstrap.com/docs/4.3/getting-started/introduction/
+* https://getbootstrap.com/docs/4.3/components/navbar/
+
+
 ---
 
 ## Notlar

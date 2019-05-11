@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>spark.template.freemarker.medipol</groupId>
+  <artifactId>OgrenciWeb</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+  
+    <!-- Spark Java Web programlama yapmamizi saglayan kutuphane -->
+  	<dependency>
+  		<groupId>com.sparkjava</groupId>
+  		<artifactId>spark-core</artifactId>
+  		<version>1.1.1</version>
+  	</dependency>
+  
+    <!-- HTML olusturmak icin freemarker kullaniminda gerekli -->
+  	<dependency>
+  		<groupId>com.sparkjava</groupId>
+  		<artifactId>spark-template-freemarker</artifactId>
+  		<version>1.0</version>
+  	</dependency>
+  
+    <!-- Ekstra spark loglarini acmak icin. Hata incelemede faydali. -->
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-simple</artifactId>
+		<version>1.7.21</version>
+	</dependency>
+  </dependencies>
+  
+</project>
