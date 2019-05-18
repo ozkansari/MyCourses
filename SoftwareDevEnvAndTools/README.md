@@ -214,7 +214,7 @@ Jenkinsi Yonet ekranindan JDK, Git ve Maven ayarlarini yaptiktan sonra baslamak 
 
 https://www.sonarqube.org/downloads/ adresinden sonar uygulamasini zip olarak indirin ve zip dosyasini acin. 
 
-Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi calistirabilirsiniz.
+Maven build projenize sonar:sonar hedefini belirterek bir sonar analizi calistirabilirsiniz.
 
 :exclamation: [SONARQUBE KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/sonarqube/README.md)
 
