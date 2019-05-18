@@ -238,9 +238,9 @@ Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi cal
 * Final Hafta 10 - 27 NISAN  : Final Ders 2 - Travis CI & Code Cov IO
 * Final Hafta 11 - 4 MAYIS  : Final Ders 3 - Spring Boot Rest & Postman
 * Final Hafta 12 - 11 MAYIS  : Final Ders 4 - JMeter
-* Final Hafta 13 - 18 MAYIS  : Final Ders 5
-* Final Hafta 14 - 25 MAYIS  : Final Ders 6
-* Final Hafta 15 - 1 HAZIRAN  : Final Ders 7
+* Final Hafta 13 - 18 MAYIS  : Final Ders 5 - Jenkins & Sonarqube
+* Final Hafta 14 - 25 MAYIS  : Ders Yapilmayacak
+* Final Hafta 15 - 1 HAZIRAN  : Ders Yapilmayacak
 * << RAMAZAN BAYRAMI : 03.06.2019	06.06.2019 >>
-* Final Hafta 16 - 8 HAZIRAN  : Final Ders 8 - Tekrar
+* Final Hafta 16 - 8 HAZIRAN  : Ders Yapilmayacak
 * << DONEM SONU SINAVLARI : 11.06.2019	23.06.2019 >>
