@@ -18,7 +18,7 @@ Kod:ni56f2f
 ### VIZE Ders 6 - 31 MART
 
 #### Spring Boot: 
-Spring Boot (https://start.spring.io/), Spring tabanli uygulama geliştirmenin en hizli ve kolay yolu olmasi amaciyla geliştirilmiş bir frameworktUr. Spring Boot sayesinde boilerplate yani basmakalip kodlardan siyrilip, sadece ihtiyacimiz olan kodu yaziyoruz (only write code that you need to). Spring Boot web sunucusu olarak Tomcat ve diger birçok ek özellikle beraber geliyor.
+Spring Boot (https://start.spring.io/), Spring tabanli uygulama geliÅŸtirmenin en hizli ve kolay yolu olmasi amaciyla geliÅŸtirilmiÅŸ bir frameworktUr. Spring Boot sayesinde boilerplate yani basmakalip kodlardan siyrilip, sadece ihtiyacimiz olan kodu yaziyoruz (only write code that you need to). Spring Boot web sunucusu olarak Tomcat ve diger birÃ§ok ek Ã¶zellikle beraber geliyor.
 
 * https://medium.com/kodgemisi/spring-boot-ile-%C3%B6rnek-web-uygulamas%C4%B1-914c94c9099f
 * http://burcualtinok.com.tr/blog/spring-boot-nedir/
@@ -57,9 +57,9 @@ Spring Boot (https://start.spring.io/), Spring tabanli uygulama geliştirmenin e
 
 Code Coverage (Kod Kapsama Orani): Yazilan Kodun Ne Kadarinin Test Edildigini Gosterir. Code Coverage, yazdigimiz testlerin kontrol ettigi kodun, yazdigimiz koda orani demek. Cobertura ve Codecov.io araclari kullanilabilir.
 
-Continuous Integration (CI - Surekli Entegrasyon) : Yazilan kodun, gelistirilen modulun — kisaca gelistirme ortamindan cika gelen bir parcanin ��projeye dahil edilmesi esnasinda bir takim sureclerden gecirilmesine verilen isim. Bagimliliklarin repolardan indirilmesi, projeye dahil edilmesi, gelistirilen kod parcacigin testlerden (unit, integration, vs.) gecirilmesi, olasi durumlara gore gelistiriciye veya isin sorumlusuna bilgi verilmesi (push notification, sms, mail, vs.), isin paketlenmesi gibi eylemlerin tamami, genellikle bu kavramin bir parcasi olarak hayatimizda yer ediyor. https://medium.com/@selcukusta/continuous-integration-ci-%C3%BCzerine-laflamalar-9b7f7d2dad07 Travis.ci veya Jenkins araclari kullanilabilir.
+Continuous Integration (CI - Surekli Entegrasyon) : Yazilan kodun, gelistirilen modulunâ€Šâ€”â€Škisaca gelistirme ortamindan cika gelen bir parcanin €Šprojeye dahil edilmesi esnasinda bir takim sureclerden gecirilmesine verilen isim. Bagimliliklarin repolardan indirilmesi, projeye dahil edilmesi, gelistirilen kod parcacigin testlerden (unit, integration, vs.) gecirilmesi, olasi durumlara gore gelistiriciye veya isin sorumlusuna bilgi verilmesi (push notification, sms, mail, vs.), isin paketlenmesi gibi eylemlerin tamami, genellikle bu kavramin bir parcasi olarak hayatimizda yer ediyor. https://medium.com/@selcukusta/continuous-integration-ci-%C3%BCzerine-laflamalar-9b7f7d2dad07 Travis.ci veya Jenkins araclari kullanilabilir.
 
-#### JaCoCo Code Coverage (Kodun Ne Kadarinin Test Edildig�inin Olculmesi)
+#### JaCoCo Code Coverage (Kodun Ne Kadarinin Test EdildigŸinin Olculmesi)
 
 Travis ile birlikte JaCoCo kullanilmali. 
 
@@ -90,7 +90,7 @@ Maven Plugin:
 ```
 
 
-#### Cobertura Code Coverage (Kodun Ne Kadarinin Test Edildig�inin Olculmesi)
+#### Cobertura Code Coverage (Kodun Ne Kadarinin Test EdildigŸinin Olculmesi)
 
 Java 8 ile ilgili bazen hatali hesaplama yapabiliyor.  Travis ile JaCoCo kullanilsa daha iyi olur.
 
@@ -163,12 +163,61 @@ https://www.getpostman.com/
 
 ![POSTMAN](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/postman/postman1.PNG?raw=true)
 
-### FINAL DERS 3 - Spring Boot & JMeter
+### FINAL DERS 4 - Spring Boot & JMeter
 
 #### JMeter
 https://jmeter.apache.org/download_jmeter.cgi
 
 https://github.com/ozkansari/MyCourses/tree/master/SoftwareDevEnvAndTools/_docs/jmeter?raw=true
+
+### FINAL DERS 5 - Jenkins & Sonarqube
+
+#### Jenkins
+
+##### Jenkins Kurulum
+https://jenkins.io/download/ adresinden indirilebilir.
+1. Secenek: Windows Kurulum : https://jenkins.io/download/thank-you-downloading-windows-installer-stable
+2. Secenek: Generic WAR http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+
+Java komutu ile war dosyasi konsoldan calistirilabilir. Buradaki java komutunun jdk altindaki java komutu olmasi iyi olur. Bunun icin java komurunu tam yol olarak tirnak icinde de yazabilirsiniz. ornegin, "C:\Program Files\Java\jdk8\bin\java" - jar jenkins.war gibi.
+
+    java -jar jenkins.war
+    
+8080 portu kullanimdaysa baska bir port asagidaki sekilde belirtilebilir:
+
+    java -jar jenkins.war --httpPort=49001
+
+##### Jenkins Kurulum Dizini
+Jenkins normalde kurulum dizinini kullanici dizinindeki .jenkins klasoru (ornegin C:\Kullanicilar\bprlab\ .jenkins ) olarak ayarlar. 
+Sifirdan baslamak icin bu dizini silebilirsiniz.
+
+Ya da Jenkins home dizinini degistirmek icin calistirmadan once baska bir dizin belirtebilirsiniz. 
+ornegin:
+
+    SET JENKINS_HOME=C:/jenkins_ozkans
+
+:exclamation: [JENKINS KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/jenkins/README.md)
+
+##### Jenkins Arayuzu
+Tarayicidan http://localhost:8080 girerek ara yuz acilabilir.
+Daha sonra karsiniza cikan "Unlock Jenkins" ekraninda verilen dizindeki dosyayi acin ve orada yazan sifreyi ekrana girin (sifre console'dan calistirdiginizda loglarda da gorunecektir) ve Continue tusuna basin. Sonraki ekranda "Installed Suggested Plugins" seciniz. Ayrintilar icin: https://jenkins.io/doc/book/installing/#setupwizard
+
+Plugin kurulum tamamlandiktan sonra, Admin password belirlemenizi isteyecek. belirledikten sonra Jenkins artik kullanima hazir.
+
+Bu asamada "Jenkinse Hosgeldiniz" yazisini ekranda gormeniz lazim.
+
+Jenkinsi Yonet ekranindan JDK, Git ve Maven ayarlarini yaptiktan sonra baslamak icin "Yeni is" olusturuyoruz.
+
+...
+
+### SonarQube
+
+https://www.sonarqube.org/downloads/ adresinden sonar uygulamasini zip olarak indirin ve zip dosyasini acin. 
+
+Maven build projenize sonar:sonar aben hedefini belirterek bir sonar analizi calistirabilirsiniz.
+
+:exclamation: [SONARQUBE KURULUM NOTLARI](https://github.com/ozkansari/MyCourses/blob/master/SoftwareDevEnvAndTools/_docs/sonarqube/README.md)
+
 
 ## Notlar
 
