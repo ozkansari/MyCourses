@@ -1,4 +1,4 @@
-package spark.template.freemarker.medipol;
+package spark.template.freemarker.medipol.ornek;
 
 import spark.*;
 import spark.template.freemarker.*;
@@ -12,7 +12,7 @@ public class WebOrnek2 {
 			public Object handle(Request request, Response response) {
 				System.out.println("Sayfa 2 cagrildi. Request: " + 
 						request.body());
-				return new ModelAndView( null , "/medipol/sayfa2.html" );
+				return new ModelAndView( null , "/medipol/ornek/sayfa2.html" );
 			}
 		};
 		get(sayfa2);

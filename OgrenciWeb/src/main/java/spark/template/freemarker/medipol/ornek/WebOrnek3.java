@@ -1,4 +1,4 @@
-package spark.template.freemarker.medipol;
+package spark.template.freemarker.medipol.ornek;
 
 import spark.*;
 import spark.template.freemarker.*;
@@ -24,18 +24,18 @@ public class WebOrnek3 {
 			public Object handle(Request request, Response response) {
 				System.out.println("Sayfa 2 cagrildi. Request: " + 
 						request.body());
-				return new ModelAndView( null , "/medipol/sayfa2.html" );
+				return new ModelAndView( null , "/medipol/ornek/sayfa2.html" );
 			}
 		};
 		get(sayfa2);
 		
 		// http://localhost:4567/medipol/ornek/sayfa3
-		FreeMarkerRoute sayfa3 = new FreeMarkerRoute("/medipol/ornek/anasayfa") {
+		FreeMarkerRoute sayfa3 = new FreeMarkerRoute("/medipol/ornek/sayfa3") {
 			@Override
 			public Object handle(Request request, Response response) {
 				System.out.println("Anasayfa cagrildi. Request: " + 
 						request.body());
-				return new ModelAndView( null , "/medipol/anasayfa.html" );
+				return new ModelAndView( null , "/medipol/ornek/sayfa3.html" );
 			}
 		};
 		get(sayfa3);
