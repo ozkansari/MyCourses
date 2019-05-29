@@ -21,7 +21,7 @@ Teslim Tarihi: Final tarihineden 1 gün öncesine kadar classroom üzerinden sad
 ### Onemli Noktalar
 
 * Spark JAVA 1.1.1 ve Apache Derby 10.11.1.1 versiyonlari kullanilmali. Derste ogretilenler disinda bir teknoloji kullanilmamali.
-* Butunleme zamani kodunuzu aciklamaniz istenecektir. Eger aciklayamazsaniz, projeyi sizin yapmadiginiz dusunulecektir.
+* Final zamani kodunuzu aciklamaniz istenebilir. Eger aciklayamazsaniz, projeyi sizin yapmadiginiz dusunulecektir.
 * Proje maven projesi olmali.
 * Kodlariniz (java ve html) src/main altinda "spark/template/freemarker/ad_soyadiniz" paketi icerisinde bulunmali.
 * Sayfa adlari "/ad_soyadiniz/sayfa_adi" seklinde eslestirilmeli.
