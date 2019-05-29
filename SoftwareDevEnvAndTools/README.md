@@ -9,6 +9,44 @@ Kod:ni56f2f
 
 ## DUYURULAR
 
+Final yazili sinav olacaktir.
+
+## FINAL PROJESI
+
+Teslim Tarihi: Final sinavindan 1 gun oncesine kadar Classroom uzerinden raporunuzu PDF formatinda gonderiniz.
+
+ *Maven* kullanarak bir *Spring Boot* projesi (Bkz. Hafta 10) gelistireceksiniz. Projenizde su REST servisler bulunacak: 
+- ogrenci Ekleme
+- ogrenci Goruntuleme
+
+https://github.com/ozkansari/MyCourses/tree/master/RestAPIOrnek ornek alinabilir.
+
+Projenizi kurallara uygun gelistirecek ve bir rapor hazirlayacaksiniz. Ayrica final sinavi sonrasi projenizi aciklamaniz istenebilir. Projeyi aciklayamama veya projeyi ogrencinin kendisi yapmamasi durumunda final notu sifir olarak girilecektir.
+
+Raporunuzda asagida belirtilmis olan tum adimlari, ayri basliklar altinda aciklamanizi ve ekran gorunutuleriyle desteklemenizi istiyorum. 
+
+ONEMLi: Raporunuz sade ve anlasilir olmali.
+
+Gelistirdiginiz proje ve kodlariniz hakkinda kurallar:
+- Maven projesi olacak
+- Spring Boot disinda ozel bir teknoloji kullanilmayacak
+- Kodlariniz okunakli olacak: degiskenler, siniflar ve metotlar duzgun isimlendirilmis olacak ve Turkce karakter icermeyecek
+- Tum metotlariniz icin JUnit ile birim testler yazilacak.
+- Yazdiginiz birim testlerin coverage'ini yani test kapsama oranini hesaplatip, nasil hesaplattiginizin bilgisiyle birlikte raporunuza ekleyeceksiniz.
+
+Kodlarinizi github'da yeni bir *repository* olusturularak  oraya commitleyeceksiniz.  Nasil yaptiginizi adim adim anlatmanizi ve sonuctaki github repository adresinizi raporunuza koymanizi istiyorum.
+
+Kodlarinizi *Travis CI*  ile entegre edip otomatik derlettireceksiniz ve *CodeCov.io* entegrasyonuyla kodunuun coverage (test kapsama) degerlerinin otomatik hesaplanmasini saglayacaksiniz.  Yaptiginiz islemleri ve sonuclarini adim adim ekran goruntuleriyle aciklayacaksiniz ve raporunuzda paylasacaksiniz.
+
+Kodunuzu *Postman* ve *JMeter* ile test edip, nasil test ettiginizi ve test sonuclarini raporunuzda adim adim paylasacaksiniz.
+
+Tum siniflarinizin *UML* diagramlarini cizeceksiniz. Tercihen ArgoUML ya da benzer bir arac kullanabilirsiniz ya da paint veya elle cizebilirsiniz. UML diagramlari da rapora koyulacak ve aciklanacak.
+
+*Jenkins* kuracaksiniz ve yaptiginiz islemleri adim adim ekran goruntuleriyle aciklayacaksiniz ve projenizin jenkins'te otomatik derlenmesini saglayacaksiniz ve iliskili adimlari rapora koyacaksiniz ve aciklayacaksiniz. 
+
+*SonarQube* kurulumu yapacaksiniz ve yaptiginiz islemleri adim adim ekran goruntuleriyle aciklayacaksiniz ve jenkinsden tetiklenerek projenizin analiz edilmesini saglayacaksiniz. Analiz sonuclarinizi da rapora ekleyeceksiniz.
+
+---------------------------------------------------------------------------
 
 ## DERSLER
 
