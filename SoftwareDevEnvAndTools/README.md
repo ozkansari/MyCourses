@@ -46,6 +46,20 @@ Tum siniflarinizin *UML* diagramlarini cizeceksiniz. Tercihen ArgoUML ya da benz
 
 *SonarQube* kurulumu yapacaksiniz ve yaptiginiz islemleri adim adim ekran goruntuleriyle aciklayacaksiniz ve jenkinsden tetiklenerek projenizin analiz edilmesini saglayacaksiniz. Analiz sonuclarinizi da rapora ekleyeceksiniz.
 
+### Degerlendirme:
+
+[ /5] Spring Boot Projesi (Ekle/Goruntule/Sil) - Aciklama
+[ /10] Githuba commit
+[ /10] Rapor Duzeni & Aciklamalar
+[ /10] JUnit/Birim Test
+[ /5] Test kapsama (Coverage)
+[ /10] Travis CI & Codecov.io
+[ /15] Jenkins - Github maven build
+[ /10] SonarQube - Jenkins tetikleme
+[ /5] Postman
+[ /10] Jmeter
+[ /10] UML
+
 ---------------------------------------------------------------------------
 
 ## DERSLER
