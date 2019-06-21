@@ -349,7 +349,7 @@ public class WebOrnek1 {
 
 ## Notlar
 
-![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava/_docs/vize_notlar.PNG?v=1)
+![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/AdvancedJava/_docs/final_notlar.PNG?v=1)
 
 ---
 
