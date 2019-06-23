@@ -273,7 +273,7 @@ Maven build projenize sonar:sonar hedefini belirterek bir sonar analizi calistir
 
 ## Notlar
 
-![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/vize_notlar.PNG?v=1)
+![NOTLAR](https://github.com/ozkansari/MyCourses/raw/master/SoftwareDevEnvAndTools/_docs/final_notlar.PNG?v=1)
 
 ## TAKVIM
 

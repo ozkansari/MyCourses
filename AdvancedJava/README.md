@@ -16,7 +16,7 @@ Ek olarak asagidaki "Proje Final" odevini yapip Final tarihine  kadar teslim etm
 
 ## PROJE FINAL - SparkJava ile Web Projesi
 
-Teslim Tarihi: 10 Haziran gün sonuna kadar classroom üzerinden sadece kod dosyalarinizi gonderiniz. Gec gonderim kabul edilmeyecektir.
+Teslim Tarihi: 10 Haziran gun sonuna kadar classroom üzerinden sadece kod dosyalarinizi gonderiniz. Gec gonderim kabul edilmeyecektir.
 
 ### Onemli Noktalar
 
