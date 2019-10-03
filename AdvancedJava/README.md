@@ -69,5 +69,8 @@ Lab: https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava/src/main/ja
 * Hafta 12 - 19 ARALIK : Final Ders 5 - Spark Java ile Web Programlama (Devami..)
 * Hafta 13 -  2 OCAK   : 1 Ocak Yilbasi Tatili Nedeniyle Ders Yapilmayacak 
 * << DONEM SONU SINAVLARI : 06.01.2020	16.01.2020 >>
+* << BUTUNLEME SINAVLARI : 23.01.2020	26.01.2020 >> 	
+
+
 
 
