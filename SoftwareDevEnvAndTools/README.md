@@ -1,6 +1,6 @@
 # YAZILIM GELISTIRME ORTAM ve ARACLARI : 2019 - 2020 GUZ (Ekim 2019 - Ocak 2020)
 
-Dersler Persembe 17:30-18:30 ve 18:45-20:00 arasinda iki oturum halinde yapilacaktir.
+Dersler Persembe 20:00-22:00 arasinda blok halde yapilacaktir.
 
 Derse mazeretiniz yoksa devam zorunludur. Derse devam ve derse katilimdan not verilecektir.
 

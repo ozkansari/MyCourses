@@ -1,6 +1,6 @@
 # ILERI JAVA UYGULAMALARI : 2019 - 2020 GUZ (Ekim 2019 - Ocak 2020)
 
-Dersler Persembe 17:30-18:30 ve 18:45-20:00 arasinda iki oturum halinde yapilacaktir.
+Dersler Persembe 17:30-19:30 arasinda blok halde yapilacaktir.
 
 Derse mazeretiniz yoksa devam zorunludur. Derse devam ve derse katilimdan not verilecektir.
 
