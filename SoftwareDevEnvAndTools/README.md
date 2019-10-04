@@ -1,6 +1,6 @@
 # YAZILIM GELISTIRME ORTAM ve ARACLARI : 2019 - 2020 GUZ (Ekim 2019 - Ocak 2020)
 
-Dersler Persembe 20:00-22:00 arasinda blok halde yapilacaktir.
+Dersler Persembe 19:45-21:45 arasinda blok halde yapilacaktir.
 
 Derse mazeretiniz yoksa devam zorunludur. Derse devam ve derse katilimdan not verilecektir.
 
@@ -30,7 +30,7 @@ Eclipse
 ### Vize Ders 2
 
 Yazilim Surec Adimlari: Analiz, Tasarim, Gercekleme, Test, Bakim vb.
-Yazilim Surec Modelleri: Waterfall, Sarmal, Çekik Surecler (Scrum,Kanban)
+Yazilim Surec Modelleri: Waterfall, Sarmal, Ã‡ekik Surecler (Scrum,Kanban)
 
 
 ---
