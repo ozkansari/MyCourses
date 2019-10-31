@@ -53,6 +53,29 @@ https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/0
 
 
 
+### VIZE PROJE
+
+#### Teslim Tarihi: 20 Kasım 2019 Cuma 23:59:59'a kadar class room uzerinden sadece kod dosyalarinizi gonderiniz. Gec teslim kabul edilmeyecektir.
+
+Projelerinizi Derste Sunmaniz istenebilir. Sunum yapmayanlardan uan eksiltilerek not verilecektir.
+*Ayni ve benzer proje teslimlerini kopya olarak degerlendirilecektir*
+
+Uygulama kodlarinizi tr/edu/medipol/ilerijava/proje/<<ad_soyad>>/ paketinde bulunmali <<ad_soyad>> yerine kendi ad ve soyadinizi yazmalisiniz.
+
+#### Aciklama: 
+
+Java ile Sunucu/Istemci (**Socket**) mimarisinde coklu akisi (Multi Thread) destekleyen bir hesaplama uygulamasi yapmanizi bekliyorum.
+Sunucu ve Istemci(ler) iki ayri uygulama seklinde calismali. Bir **sunucuya birden fazla istemcinin TCP socket ile baglanmasi desteklenmeli**.
+
+Sunucu tarafinda Java Swing GUI ile **giden gelen mesajlar** ve **bagli istemcilerin listesi** goruntulenmeli.
+
+Istemci tarafinda ise Java Swing GUI ile istemciden **iki ayri sayi** ve **yapilacak islem tipi** ( +,-,/,* ) girdi olarak alinacak ve **GONDER butonu**na basildiginda sunucuya hesaplama islemi **tcp socket iletisimle mesaj olarak** gonderilecektir. Ornegin "2 * 55" gibi bir mesaj istemciden sunucuya gonderilecek.
+
+Bu mesaji alan sunucu ise gelen mesajdaki hesaplama istegini algilayip, sonucu hesaplayacak ve istekte bulunan istemciye sonucu donecektir.
+
+Istemci ise sonuc mesajini alip ekranda (ornegin labelda ya da disabled textfield'da) gosterecektir.
+
+
 ---
 
 
