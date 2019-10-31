@@ -42,6 +42,8 @@ https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/0
 
 ### Vize Ders 4 - Socket Programlama & Thread
 
+https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava/src/main/java/tr/edu/medipol/ilerijava/ders04/lab
+
 
 ### Vize Ders 5 - Java Swing GUI
 
