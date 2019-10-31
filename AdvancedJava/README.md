@@ -42,8 +42,15 @@ https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/0
 
 ### Vize Ders 4 - Socket Programlama & Thread
 
+https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava/src/main/java/tr/edu/medipol/ilerijava/ders04/lab
+
 
 ### Vize Ders 5 - Java Swing GUI
+
+https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/06a_JavaGUI.pdf
+https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/07a_JavaGUI_1.pdf
+https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/07b_JavaGUI_2.pdf
+
 
 
 ---
@@ -73,8 +80,8 @@ https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/0
 * Hafta 3  - 10 EKIM  : Vize Ders 2 - Threads
 * Hafta 4  - 17 EKIM  : Vize Ders 3 - Socket Programlama
 * Hafta 5  - 24 EKIM  : Vize Ders 4 - Socket Programlama & Thread
-* Hafta 6  - 31 EKIM  : 29 Ekim Haftasi Nedeniyle Ders Yapilmayacak 
-* Hafta 7  -  7 KASIM : Vize Ders 5 - Java Swing GUI
+* Hafta 6  - 31 EKIM  : Vize Ders 5 - Java Swing GUI
+* Hafta 7  -  7 KASIM : Vize Ders 6 - 
 * << ARA SINAVLAR : 09.11.2019	17.11.2019 >>
 * Hafta 8  - 21 KASIM  : Final Ders 1 - Veritabani
 * Hafta 9  - 28 KASIM  : Final Ders 2 - Veritabani (Devami..)
