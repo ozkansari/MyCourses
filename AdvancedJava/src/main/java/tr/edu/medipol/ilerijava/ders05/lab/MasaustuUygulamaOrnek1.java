@@ -6,15 +6,28 @@ import java.awt.event.*;
 
 public class MasaustuUygulamaOrnek1 extends JFrame {
 
-	private JLabel bilgiPaneli = new JLabel("Medipol Mebis v1");
+	private JTextArea bilgiPaneli = new JTextArea();
 	private JTextField kullaniciAdi = new JTextField(20);
 	private JButton girisButonu = new JButton("EKLE");
 
+	private Object butonIslemi(ActionEvent e) {
+		System.out.println("buton tiklandi");
+		String textInput = kullaniciAdi.getText();
+		
+		if(textInput != null && textInput.trim().length() > 0 ) {
+			bilgiPaneli.setText( bilgiPaneli.getText() + " " +  textInput + "\n");
+			bilgiPaneli.setCaretPosition(bilgiPaneli.getDocument().getLength());
+		}
+		kullaniciAdi.setText("");
+		return e;
+	}
+	
 	public MasaustuUygulamaOrnek1() {
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLayout(new GridLayout(2, 1));
 
-		this.add(bilgiPaneli);
+		bilgiPaneli.setEditable(false);
+		this.add( new JScrollPane(bilgiPaneli) );
 
 		JPanel girisPaneli = new JPanel();
 		girisPaneli.setLayout(new GridLayout(2, 1));
@@ -44,20 +57,16 @@ public class MasaustuUygulamaOrnek1 extends JFrame {
 		*/
 	}
 
-	/*--
+	
 	// YONTEM 4 ICIN
-	private static class ButonIslemiActionListener implements ActionListener {
+	/*--
+	private class ButonIslemiActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			butonIslemi(e);
 		}		
 	}
 	*/
-
-	private static Object butonIslemi(ActionEvent e) {
-		System.out.println("buton tiklandi");
-		return e;
-	}
-
+	
 	public static void main(String[] args) {
 		MasaustuUygulamaOrnek1 ekran = new MasaustuUygulamaOrnek1();
 		ekran.setTitle("Ornek 1");
