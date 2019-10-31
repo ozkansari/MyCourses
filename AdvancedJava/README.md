@@ -47,6 +47,11 @@ https://github.com/ozkansari/MyCourses/tree/master/AdvancedJava/src/main/java/tr
 
 ### Vize Ders 5 - Java Swing GUI
 
+https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/06a_JavaGUI.pdf
+https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/07a_JavaGUI_1.pdf
+https://github.com/ozkansari/MyCourses/blob/master/AdvancedJava/_docs/_archive/07b_JavaGUI_2.pdf
+
+
 
 ---
 
