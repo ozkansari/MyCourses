@@ -111,7 +111,8 @@ Istemci ise sonuc mesajini alip ekranda (ornegin labelda ya da disabled textfiel
 * Hafta 10 -  5 ARALIK : Final Ders 3 - Web Programlama Giris - TCP IP Socket ile HTTP Sunucusu Yazma
 * Hafta 11 - 12 ARALIK : Final Ders 4 - Spark Java ile Web Programlama
 * Hafta 12 - 19 ARALIK : Final Ders 5 - Spark Java ile Web Programlama (Devami..)
-* Hafta 13 -  2 OCAK   : 1 Ocak Yilbasi Tatili Nedeniyle Ders Yapilmayacak 
+* Hafta 13 - 26 ARALIK : Final Ders 6 - Spark Java ile Web Programlama (Devami..)
+* Hafta 14 -  2 OCAK   : 1 Ocak Yilbasi Tatili Nedeniyle Ders Yapilmayacak 
 * << DONEM SONU SINAVLARI : 06.01.2020	16.01.2020 >>
 * << BUTUNLEME SINAVLARI : 23.01.2020	26.01.2020 >> 	
 
