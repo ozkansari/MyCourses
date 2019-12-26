@@ -1,0 +1,2943 @@
+
+<!doctype html>
+<!--[if IE 8]><html class="ie8 " lang="tr"><![endif]-->
+<!--[if IE 9]><html class="ie9 " lang="tr"><![endif]-->
+<!--[if gt IE 9]><!--><html class="" lang="tr"><!--<![endif]-->
+<head>
+    <title>Sahibinden Satılık, Kiralık, Emlak, Oto, Alışveriş Ürünleri</title>
+    <script>
+    //initials
+    window.Criteo = window.Criteo || {};
+    window.Criteo.events = window.Criteo.events || [];
+
+    window.googletag = window.googletag || {};
+    window.googletag.cmd = window.googletag.cmd || [];
+
+    window.pbjs = window.pbjs || {};
+    window.pbjs.que = window.pbjs.que || [];
+
+    var customConfigObject = {
+        "buckets": [
+            {
+                "precision": 2,
+                "min": 0,
+                "max": 10,
+                "increment": 0.01
+            },
+            {
+                "precision": 2,
+                "min": 10,
+                "max": 25,
+                "increment": 0.05
+            },
+            {
+                "precision": 2,
+                "min": 25,
+                "max": 50,
+                "increment": 0.1
+            },
+            {
+                "precision": 2,
+                "min": 50,
+                "max": 100,
+                "increment": 0.25
+            }
+        ]
+    };
+
+    var dfpLibraryHelper = (function () {
+
+
+        function createCriteoEvent(fn) {
+            window.Criteo.events.push(fn);
+        }
+
+        function createGtpEvent(fn) {
+            window.googletag.cmd.push(fn);
+        }
+
+        function createPrebidEvent(fn) {
+            window.pbjs.que.push(fn);
+        }
+
+        function loadJs(url, useSSL, injectHead) {
+            return new Promise(function (resolve, reject) {
+                var head = document.getElementsByTagName('head');
+                var script = document.createElement('script');
+                script.setAttribute('type', 'text/javascript');
+                var sslFlag = (useSSL ? true :  'https:' == document.location.protocol);
+                script.src = (sslFlag ? 'https:' : 'http:') +
+                    '//' + url;
+                script.async = true;
+                script.onload = resolve;
+                script.onerror = reject;
+                if (injectHead) {
+                    head[0].appendChild(script);
+                } else {
+                    var node = document.getElementsByTagName('script')[0];
+                    node.parentNode.insertBefore(script, node);
+                }
+            });
+        }
+
+        var criteoApi = {
+            initCriteSlots: initCriteSlots
+        };
+
+        var gptApi = {
+            addPubServiceSlots: addPubServiceSlots,
+            displaySlots: displaySlots,
+            refreshSlots: refreshSlots,
+            refreshSlotsForEach: refreshSlotsForEach,
+            clearSlots: clearSlots
+        };
+
+        var prebidApi = {
+            requestBids: requestBids
+        };
+
+        var lastAdUnits = [];
+
+        function requestBids(adUnits) {
+            var PREBID_TIMEOUT = 2000;
+
+            pbjs.setConfig({
+                priceGranularity: customConfigObject,
+                enableSendAllBids: true,
+                bidderTimeout: PREBID_TIMEOUT,
+                timeoutBuffer: 300
+            });
+
+            lastAdUnits.forEach((function (value) {
+                pbjs.removeAdUnit(value.code);
+            }));
+
+            lastAdUnits = adUnits;
+
+            adUnits.forEach(function (x) {
+                if (!x.code)
+                    throw 'code must be provided';
+
+                pbjs.addAdUnits(x);
+            });
+
+            var promise = new Promise(function (resolve, reject) {
+                pbjs.requestBids({
+                    bidsBackHandler: function () {
+                        createGtpEvent(function () {
+                            pbjs.setTargetingForGPTAsync();
+                            resolve();
+                        });
+                    },
+                    timeout: PREBID_TIMEOUT
+                });
+            });
+
+            return promise;
+        }
+
+        function DeferWrapper() {
+            this.init();
+        }
+
+        DeferWrapper.prototype.init = function () {
+            var self = this;
+            var resolveFn;
+            var rejectFn;
+
+            var promise = new Promise(function (resolve, reject) {
+                resolveFn = resolve;
+                rejectFn = reject;
+            });
+
+            Object.defineProperty(self, 'promise', {
+                value: promise,
+                writable: false
+            });
+
+            DeferWrapper.prototype.resolve = function (x) {
+                resolveFn(x);
+            };
+
+            DeferWrapper.prototype.reject = function (x) {
+                rejectFn(x);
+            };
+        };
+
+        function defer() {
+            return new DeferWrapper();
+        }
+
+        function DfpHelperNew() {
+            this.gptApi = gptApi;
+            this.prebidApi = prebidApi;
+            this.criteoApi = criteoApi;
+        }
+
+        DfpHelperNew.prototype.defer = defer;
+
+        DfpHelperNew.prototype.initPrebid = function (useSSL, injectHead) {
+            return new Promise(function (resolve, reject) {
+                createPrebidEvent(function () {
+                    resolve();
+                })
+            })
+        };
+
+        function buildCriteoParams(slotConfigs) {
+            var placements = slotConfigs.map(function (eachSlot) {
+                return buildCriteoParam(eachSlot);
+            });
+            var bidRequest = {
+                "placements": placements
+            };
+            return bidRequest;
+        }
+
+        function buildCriteoParam(slotConfig) {
+            return {
+                slotid: slotConfig.slotId,
+                zoneid: slotConfig.zoneId
+            }
+        }
+
+        function initCriteSlots(slotConfigs,isResponsiveSearch) {
+            var bidRequest = buildCriteoParams(slotConfigs);
+            return makeCriteoRequest(bidRequest,isResponsiveSearch);
+        }
+
+
+        DfpHelperNew.prototype.initCriteo = function (useSSL, injectHead) {
+            return new Promise(function (resolve, reject) {
+                loadJs('static.criteo.net/js/ld/publishertag.js', useSSL, injectHead)
+                    .then(function () {
+                        createCriteoEvent(function () {
+                            resolve();
+                        })
+                    }).catch(function () {
+                    reject();
+                })
+            })
+        };
+
+        DfpHelperNew.prototype.initGpt = function (useSSL, injectHead) {
+            return new Promise(function (resolve, reject) {
+                loadJs('www.googletagservices.com/tag/js/gpt.js', useSSL, injectHead)
+                    .then(function () {
+                        createGtpEvent(function () {
+                            resolve();
+                        })
+                    }).catch(function () {
+                    reject();
+                })
+            })
+        };
+
+        function addPubServiceSlots(slots) {
+            slots.forEach(function (value) {
+                if (!value.__slotServiceDefined) {
+                    value.addService(googletag.pubads());
+                    value.__slotServiceDefined = true
+                }
+            })
+        }
+
+
+        function clearSlots(slots) {
+            if (googletag) {
+                googletag.pubads().clear(slots);
+            }
+        }
+
+        function displaySlots(slots) {
+            slots.forEach(function (value) {
+                googletag.display(value);
+            });
+        }
+
+        function refreshSlots(slots) {
+            googletag.pubads().refresh(slots)
+        }
+
+        function refreshSlotsForEach(slots) {
+            slots.forEach(function (x) {
+                googletag.pubads().refresh([x])
+            });
+        }
+
+
+        function makeCriteoRequest(bidRequest,isResponsiveSearch) {
+            var result = {
+                resolved: false,
+                criteoTimeout: false
+            };
+            var delayPromise = new Promise(function (resolveFn) {
+                setTimeout(function () {
+                    if (!result.resolved) {
+                        result.resolved = true;
+                        result.criteoTimeout = true;
+                        resolveFn(result);
+                    }
+                }, (isResponsiveSearch ? 600 : 500 ) )
+            });
+
+
+            var criteoRequest = new Promise(function (resolveFn) {
+                Criteo.SetLineItemRanges("0..10:0.01;10..25:0.05;25..50:0.10;50..100:0.25");
+                Criteo.RequestBids(bidRequest, function (x) {
+                    if (!result.resolved) {
+                        result.resolved = true;
+                        setTimeout(function () {
+                            Criteo.SetDFPKeyValueTargeting();
+                            resolveFn(result);
+                        })
+                    }
+                });
+            });
+
+            return Promise.race([criteoRequest]);
+        }
+
+
+        return new DfpHelperNew();
+    })();
+
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript">
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+</script>
+<![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta id="Content-Language" http-equiv="Content-Language" content="tr"/>
+<meta name="rating" content="general"/>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta name="revisit-after" content="1 Days"/>
+<link rel="shortcut icon" href="https://www.sahibinden.com/favicon.ico" type="image/x-icon"/>
+<link rel="search" type="application/opensearchdescription+xml" title="sahibinden.com" href="https://www.sahibinden.com/static/opensearch"/>
+
+<link rel="alternate" hreflang="en" href="https://www.sahibinden.com/en"/>
+<meta name="description" content="Sahibinden satılık, kiralık, ikinci el, otomobil, emlak ve her türlü ürün - Türkiye'nin en büyük ücretsiz ilan ve online alışveriş sitesi."/>
+<meta name="keywords" content="sahibinden, alışveriş, online alışveriş, emlak fiyatları, 2.el oto, ikinci el araba fiyatları, motorsiklet fiyatları, motor, kol saati modelleri, SLR fotoğraf makinesi, cep telefonu fiyatları, bayan iç giyim, bayan çanta, bayan ayakkabı, gelinlik modelleri, oto yedek parça fiyatları, mp3 playerlar, çocuk oto koltuğu, bilgisayar parçaları, klasik araba, tekne, ücretsiz ilan, bedava ilan, ücretsiz emlak ilan, ücretsiz oto ilan, seri ilan, ücretsiz iş ilanı"/>
+<meta name="robots" content="NOODP,index,follow"/>
+<link rel="icon" href="https://www.sahibinden.com/favicon.ico" type="image/x-icon"/>
+
+<link rel="canonical" href="https://www.sahibinden.com/"/>
+        <meta name="x-canonical-url" content="/"/>
+<script type="text/javascript">
+    window.skipJQueryInlineBlockNeedsLayoutTest = true;
+    var __iwop = [];
+    (function () {
+        for (var n in window) {
+            __iwop.push(n);
+        }
+    })();
+</script>
+<script type="text/javascript">
+    /*<![CDATA[*/
+    function getBanner(zoneId, extraParams, targetId) {
+        
+    };
+    /*]]>*/
+</script>
+
+<meta property="al:ios:url" content="sahibinden://https://www.sahibinden.com/"/>
+<meta property="al:ios:app_store_id" content="418535251"/>
+<meta property="al:ios:app_name" content="sahibinden.com mobil"/>
+<meta property="al:android:url" content="sahibinden://https://www.sahibinden.com/"/>
+<meta property="al:android:package" content="com.sahibinden"/>
+<meta property="al:android:app_name" content="sahibinden.com"/>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "sahibinden.com",
+        "url": "https://www.sahibinden.com",
+        "logo": "https://image5.sahibinden.com/cms/files/sahi_images/Logo-1x.png",
+        "sameAs": [
+            "https://www.facebook.com/sahibindencom",
+            "https://twitter.com/sahibindencom",
+            "https://www.youtube.com/user/sahibindencom",
+            "https://www.linkedin.com/company/sahibinden-com",
+            "https://www.instagram.com/sahibindencom"
+        ]
+    }
+</script>
+<!-- Real User Monitoring -->
+<script language="javascript">
+    window.shbdn_rum = window.shbdn_rum || {};
+    window.shbdn_rum.requestType = "HOME_PAGE";
+</script>
+<link href="https://s0.shbdn.com/assets/common:8a40a8cf30bf0aa9dfa52b7772c7b937.css" media="screen, print" rel="stylesheet" type="text/css">
+<link href="https://s0.shbdn.com/assets/homepage:c74b03a397a88b4d552aec48c772ecdc.css" media="screen, print" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+    var SahibindenCfg = SahibindenCfg || {};
+    SahibindenCfg.searchBaseUrl = '/arama';
+    SahibindenCfg.defaultSorting = '';
+    
+
+    SahibindenCfg.facetedSearch = {};
+    SahibindenCfg.facetedSearch.ajaxTimeout = 60000;
+    SahibindenCfg.facetedSearch.cityListUrl = '/ajax/search/locationFacets';
+    SahibindenCfg.facetedSearch.citySearchUrl = '/ajax/location/search/city';
+
+    
+
+    SahibindenCfg.widgets = {};
+    SahibindenCfg.enableWidget = function(widget) { this.widgets[widget] = true; };
+    SahibindenCfg.isWidgetEnabled = function(widget) { return this.widgets[widget] === true; };
+</script><script type="text/javascript">
+
+    var knoValue = getCookie('kno');
+    var accTypeValue = getCookie('acc_type');
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    var dfpTagUtils = (function () {
+        var loggedUser = true;
+        var kno = knoValue.trim();
+        if (knoValue && knoValue !== "") {
+            loggedUser = true;
+            kno = knoValue.trim();
+        } else {
+            loggedUser = false;
+        }
+
+        function getBaseDfpTags() {
+            var dfpTargetingTags = {};
+            
+
+            if (loggedUser && kno && kno.length > 0) {
+                dfpTargetingTags.kno = kno;
+            }
+
+            if (accTypeValue && accTypeValue !== "") {
+                dfpTargetingTags['acc_type'] = accTypeValue;
+            }
+            return dfpTargetingTags;
+        }
+
+        function setDfpTargetingTags() {
+            var tags = getBaseDfpTags();
+            if (window.googletag && googletag.apiReady) {
+                for (var key in tags) {
+                    googletag.pubads().setTargeting(key, tags[key]);
+                }
+            }
+        }
+
+        //initial tags for every dfp
+        googletag.cmd.push(function () {
+            setDfpTargetingTags();
+        });
+
+        return {
+            mergeDfpTags: function (tags) {
+                if (!tags) {
+                    return {};
+                }
+                tags.loggedUser = loggedUser;
+                if (!tags.hasOwnProperty('kno') && loggedUser) {
+                    tags.kno = kno;
+                }
+            }
+        }
+    })();
+
+</script>
+
+<script type="text/javascript">
+    
+    var invoked = false;
+    document.addEventListener('readystatechange', function () {
+        if (!invoked) {
+            dfpLibraryHelper.initGpt();
+            invoked = true;
+        }
+    });
+
+    </script></head>
+<body class="">
+
+<!--suppress XmlUnboundNsPrefix, XmlUnboundNsPrefix -->
+<div class="download-app-banner" style="display: none">
+            <div class="content">
+                <p class="info">sahibinden mobil uygulamasının milyonlarca kullanıcısına sen de <b>katıl</b>!</p>
+                <p class="how"><b>SAHI</b> yaz <b>4350'</b> ye telefonundan ücretsiz <strong>SMS</strong> at.</p>
+                <div class="download-links">
+                    <a class="apple-store" target="_blank"  href="https://itunes.apple.com/tr/app/sahibinden.com-mobil/id418535251?mt=8"></a>
+                    <a class="google-play" target="_blank" href="https://play.google.com/store/apps/details?id=com.sahibinden"></a>
+                </div>
+                <span class="close"></span>
+            </div>
+        </div>
+    <div class="header-banners clearfix">
+    <div class="search-leaderboard-banner showed-once" id="searchLeaderboardBanner">
+        <!--suppress XmlUnboundNsPrefix -->
+        <div id="div-gpt-ad-1343223117871-0" style="width: auto; height: auto;">
+    <script type="text/javascript">
+        /*
+        *
+        * For the Banner Loading Problem
+        * Please be careful when you change this code block
+        *
+        */
+        // Search Leaderboard Banner
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1343223117871-0'); });
+    </script>
+</div>
+</div>
+</div>
+<div class="header-container ">
+    <div class="header ">
+        <!--suppress XmlUnboundNsPrefix, XmlUnboundNsPrefix -->
+            <p class="clearfix">
+                <a class="logo" href="https://www.sahibinden.com"
+                   title="sahibinden.com anasayfasına dön">
+
+                    sahibinden.com anasayfasına dön</a>
+            </p>
+        <!--suppress XmlUnboundNsPrefix, XmlUnboundNsPrefix -->
+        <form id="searchSuggestionForm" action="/kelime-ile-arama" method="get" novalidate>
+            <input type="text" id="searchText" name="query_text" placeholder="Kelime, ilan no veya mağaza adı ile ara"
+                   title="Kelime, ilan no veya mağaza adı ile ara" required="required"/>
+            <button type="submit" value="Ara"></button>
+            <span id="clearSearchPhrase"></span>
+            <a href="https://www.sahibinden.com/arama/detayli" rel="nofollow">
+                Detaylı Arama</a>
+        </form>
+        <ul>
+            <li class="login-text">
+                <a rel="nofollow" href="https://secure.sahibinden.com/giris">
+                    Giriş Yap</a>
+            </li>
+            <li class="register-text">
+                <a rel="nofollow" href="https://secure.sahibinden.com/kayit" data-funnel-trigger-register="header">
+                    Üye Ol</a>
+            </li>
+            <li class="username-area" data-hj-suppress>
+                <a class="tipitip-trigger" data-open-event="click" data-close-event="click" data-position="south-east"
+                   data-class="header-custom-tooltip user-menu-tooltip " data-target="#user-login-tooltip" data-sticky="true" href="#"></a>
+            </li>
+            <li class="messages">
+                <a href="#" class="new tipitip-trigger" data-open-event="click" data-close-event="click" data-position="south-east" data-class="header-custom-tooltip user-messages-tooltip loading-status" data-target="#user-messages-tooltip" data-sticky="true">Mesajlar</a>
+                <span></span>
+            </li>
+            <li class="notifications not-allowed-for-expertise">
+                <a class="tipitip-trigger" data-open-event="click" data-close-event="click" data-position="south-east" data-class="header-custom-tooltip user-notifications-tooltip" data-target="#user-notifications-tooltip" data-sticky="true" href="#"></a>
+                <span></span>
+            </li>
+            <li class="favorite-classified not-allowed-for-expertise">
+                <a href="https://banaozel.sahibinden.com/favori-ilanlar" class="new-my-account-link" rel="nofollow">Favori İlanlarım</a>
+                <span></span>
+            </li>
+            <li class="favorite-search not-allowed-for-expertise">
+                <a href="#" class="tipitip-trigger" data-open-event="click" data-close-event="click"
+                   data-position="south-east" data-class="header-custom-tooltip favorite-search-tooltip loading-status"
+                   data-target="#favorite-search-tooltip" data-sticky="true">Favori Aramalarım</a>
+            </li>
+            <li class="new-classified">
+                <a id="post-new-classified" rel="nofollow" class="btn btn-flat btn-link sourceTrigger trackLinkClick trackId_ucretsiz_ilan" data-source="new_classified"
+                   href="https://banaozel.sahibinden.com/ilan-ver/adim-1/?state=new">
+                    Ücretsiz* İlan Ver</a>
+            </li>
+            <li class="add-expertise-report">
+                <a id="post-add-expertise-report" rel="nofollow" class="btn btn-flat btn-link sourceTrigger trackLinkClick trackId_ucretsiz_ilan" data-source="add-expertise-report"
+                   href="https://banaozel.sahibinden.com/ekspertiz-ekle/adim-1">
+                    Ekspertiz Raporu Oluştur</a>
+            </li>
+        </ul>
+        <div id="user-login-tooltip" class="tipitip-target">
+            <div class="my-account-menu">
+
+                <!-- Profile Area -->
+                <div id="profileArea" class="profile-area" data-hj-suppress>
+                    <p class="add-profile-photo">
+                        <span></span>
+                        <a href="https://banaozel.sahibinden.com/bilgilerim">Fotoğraf Ekle</a>
+                    </p>
+                    <p class="store-name"></p>
+                    <h3 class="name-surname"></h3>
+                </div>
+
+                <!-- Profile Menu -->
+                <ul class="header-custom-menu">
+                    <li>
+                        <ul>
+                            <li class="not-allowed-for-expertise"><a href="https://banaozel.sahibinden.com/" rel="nofollow">Bana Özel Özet</a></li>
+                            <li class="my-account-classifieds not-allowed-for-expertise">
+                                <a href="https://banaozel.sahibinden.com/ilanlarim" rel="nofollow">İlanlarım</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="my-account-favorites not-allowed-for-expertise">
+                        <ul>
+                            <li>
+                                <a href="https://banaozel.sahibinden.com/favori-ilanlar" rel="nofollow">Favorilerim</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="not-allowed-for-expertise">
+                        <ul>
+                            <li class="my-basket-link">
+                                <a href="https://secure.sahibinden.com/odeme?hideSteps=true" rel="nofollow" >Sepetim</a>
+                            </li>
+                            <li class="bulk-promotion">
+                                <a href="https://banaozel.sahibinden.com/magazam/toplu-doping" rel="nofollow">Doping Satın Al</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="get-links not-allowed-for-expertise">
+                        <ul>
+                            <li class="my-purchase-transactions">
+                                <a href="https://banaozel.sahibinden.com/mevcut-siparislerim" rel="nofollow">Siparişlerim</a>
+                            </li>
+                            <li class="my-sale-transactions">
+                                <a href="https://banaozel.sahibinden.com/satistaki-urunlerim" rel="nofollow">Satış İşlemlerim</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="store-links not-allowed-for-expertise">
+                        <ul>
+                            <li>
+                                <a class="store-url" rel="nofollow">Mağaza Sayfam</a>
+                            </li>
+                            <li class="store-management">
+                                <a href="https://banaozel.sahibinden.com/magazam/icerik" rel="nofollow">Mağazam</a>
+                            </li>
+                            <li class="emlak-ofisim">
+                                <a href="https://banaozel.sahibinden.com/emlak-ofisim" rel="nofollow" class="header-new-sticker" data-sticker-text="yeni">Emlak Ofisim</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li class="my-user-info-link not-allowed-for-expertise">
+                                <a href="https://banaozel.sahibinden.com/bilgilerim" rel="nofollow">Üyeliğim</a>
+                            </li>
+                            <li class="logout">
+                                <a href="https://www.sahibinden.com/cikis" rel="nofollow">Çıkış Yap</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="user-messages-tooltip" class="tipitip-target">
+            <ul class="header-tabs">
+                <li class="messages-link active">
+                    <a href="#">Mesajlarım
+                        <span></span>
+                    </a>
+                </li>
+                <li class="get-messages-link">
+                    <a href="#">GeT Mesajlarım
+                        <span></span>
+                    </a>
+                </li>
+                <li class="informations-link">
+                    <a href="#">Bilgilendirmeler
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="messages-box user-tooltip-content">
+                <ul></ul>
+                <a href="https://banaozel.sahibinden.com/mesajlarim" class="show-all">Tümünü Gör</a>
+                <p class="no-content-text">Mesajınız <br> Bulunmamaktadır</p>
+            </div>
+            <!-- Messages Box -->
+
+            <div class="get-messages-box user-tooltip-content">
+                <ul></ul>
+                <a href="https://banaozel.sahibinden.com/get/mesajlarim" class="show-all">Tümünü Gör</a>
+                <p class="no-content-text">Mesajınız <br> Bulunmamaktadır</p>
+            </div>
+            <!-- GeT Messages Box -->
+
+            <!-- Informations Box -->
+            <div class="informations-box user-tooltip-content">
+                <ul></ul>
+                <a href="https://banaozel.sahibinden.com/bilgilendirmeler" class="show-all">Tümünü Gör</a>
+                <p class="no-content-text">Bilgilendirmeniz <br> Bulunmamaktadır</p>
+            </div>
+            <!-- Informations Box -->
+        </div>
+        <div id="user-notifications-tooltip" class="tipitip-target">
+            <ul class="header-tabs">
+                <li class="active">
+                    <a>Bildirimlerim
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="notifications-box">
+
+                <h6>İlanlar</h6>
+                <ul class="header-custom-menu" id="classifiedNotification">
+                    <li>
+                        <ul>
+                            <li>
+                                <a class="activeClassifieds" href="https://banaozel.sahibinden.com/ilanlarim" rel="nofollow">Yayında Olanlar&nbsp;<span></span></a>
+                            </li>
+                            <li>
+                                <a class="passiveClassifieds" href="https://banaozel.sahibinden.com/ilanlarim/pasif" rel="nofollow">Yayında Olmayanlar&nbsp;<span></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h6>Ekspertiz Raporları</h6>
+                <ul class="header-custom-menu" id="expertiseReportNotification">
+                    <li>
+                        <ul>
+                            <li>
+                                <a class="activeClassifieds unreadUnboundExpertiseReportAddedCount" href="https://banaozel.sahibinden.com/ekspertiz-raporlarim?reportStatus=U" rel="nofollow">ilana eklenmeyenler&nbsp;<span></span></a>
+                            </li>
+                            <li>
+                                <a class="activeClassifieds unreadBoundExpertiseReportAddedCount" href="https://banaozel.sahibinden.com/ekspertiz-raporlarim?reportStatus=B" rel="nofollow">ilana eklenenler&nbsp;<span></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h6>Siparişlerim</h6>
+                <ul class="header-custom-menu" id="purchasesNotification">
+                    <li>
+                        <ul>
+                            <li>
+                                <a class="waitingCargo currentPurchases" href="https://banaozel.sahibinden.com/mevcut-siparislerim" rel="nofollow">Mevcut Siparişlerim&nbsp;<span></span></a>
+                            </li>
+                            <li>
+                                <a class="refunded" href="https://banaozel.sahibinden.com/iade-islemlerim" rel="nofollow">İade İşlemlerim&nbsp;<span></span></a>
+                            </li>
+                            <li>
+                                <a class="successfulPurchases" href="https://banaozel.sahibinden.com/tamamlananlar" rel="nofollow">Tamamlananlar&nbsp;<span></span></a>
+                            </li>
+                            <li>
+                                <a class="mss" href="https://banaozel.sahibinden.com/get" rel="nofollow">Mesafeli Satış Sözleşmelerim&nbsp;<span></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h6>Satış İşlemlerim</h6>
+                <ul class="header-custom-menu" id="salesNotification">
+                    <li>
+                        <ul>
+                            <li>
+                                <a class="activeSecureTradeClassifieds" href="https://banaozel.sahibinden.com/satistaki-urunlerim" rel="nofollow">Satıştaki Ürünlerim&nbsp;<span></span></a>
+                            </li>
+                            <li>
+                                <a class="waitingForCargoInfo" href="https://banaozel.sahibinden.com/kargolayacaklarim" rel="nofollow">Kargolayacaklarım&nbsp;<span></span></a>
+                            </li>
+                            <li>
+                                <a class="waitingForBuyerConfirmation" href="https://banaozel.sahibinden.com/alicidan-onay-beklediklerim" rel="nofollow">Alıcıdan Onay Beklediklerim&nbsp;<span></span></a>
+                            </li>
+                            <li>
+                                <a class="successfulSales" href="https://banaozel.sahibinden.com/basarili-satislarim" rel="nofollow">Başarılı Satışlarım&nbsp;<span></span></a>
+                            </li>
+                            <li>
+                                <a class="refundedSales" href="https://banaozel.sahibinden.com/iade-edilenler" rel="nofollow">İade Edilenler&nbsp;<span></span></a>
+                            </li>
+                            <li>
+                                <a class="passiveSecureTradeClassifieds" href="https://banaozel.sahibinden.com/satista-olmayan-urunlerim" rel="nofollow">Satışta Olmayan Ürünlerim&nbsp;<span></span></a>
+                            </li>
+                            <li>
+                                <a class="mss" href="https://banaozel.sahibinden.com/get" rel="nofollow">Mesafeli Satış Sözleşmelerim&nbsp;<span></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h6>Kaporalarım</h6>
+                <ul class="header-custom-menu" id="myDepositNotification">
+                    <li>
+                        <ul>
+                            <li>
+                                <a class="sentDeposits" href="https://banaozel.sahibinden.com/kapora/gonderilen" rel="nofollow">Gönderdiklerim&nbsp;<span></span></a>
+                            </li>
+                            <li>
+                                <a class="receivedDeposits" href="https://banaozel.sahibinden.com/kapora/alinan" rel="nofollow">Gelenler&nbsp;<span></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a href="#" class="show-all" id="readAllNotifications">Tümünü Okundu Olarak İşaretle</a>
+                <p class="no-content-text">Bildiriminiz <br> Bulunmamaktadır</p>
+            </div>
+        </div>
+        <div id="favorite-search-tooltip" class="tipitip-target header-custom-tooltip">
+            <ul class="header-tabs">
+                <li class="active">
+                    <a>Favori Aramalarım</span></a>
+                </li>
+            </ul>
+
+            <div class="favorite-search-box">
+                <ul class="header-custom-menu">
+                    <li>
+                        <ul class="favorite-search-sub-menu"></ul>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="https://banaozel.sahibinden.com/favori-aramalarim" class="show-all">Favori Aramalarım'a Git</a>
+            <p class="no-content-text">Favori Aramanız <br> Bulunmamaktadır</p>
+        </div>
+        </div>
+    <div class="disable">
+    <div id="curatedSearchValidator">
+        <p><strong>"<span class="query-text"></span>"</strong> aramasında en çok tercih edilen <strong>"<span class="category-name"></span>”</strong> kategorisini sizin için seçtik.</p>
+        <p>Farklı bir kategori seçmek isterseniz “Diğer Kategorileri Göster’i” tıklayabilirsiniz.</p>
+        <div class="action-buttons">
+            <p><a class="btn curated-search-url"><span class="category-name"></span> Kategorisine Git</a></p>
+            <p><a class="show-other-categories-url" href="">Diğer Kategorileri Göster</a></p>
+        </div>
+    </div>
+</div>
+</div>
+<div id="container">
+    <div id="topMessage"></div>
+    <!-- Browser Support Information -->
+
+    <noscript>
+        <div class="top-message">
+            <div class="message-container no-script">
+                <p><strong>Tarayıcınızda JavaScript devre dışı bırakılmıştır.</strong> sahibinden.com’u doğru görüntüleyebilmek için tarayıcınızda JavaScript'i etkinleştirmelisiniz.</p></div>
+        </div>
+    </noscript>
+    <!-- Disable JavaScript Information -->
+
+
+    <div class="download-app-side-bar" style="display: none">
+        <label>Uygulamayı İndir<span class="close"></span></label>
+        <div class="content">
+            <p class="info">sahibinden mobil uygulamasının milyonlarca kullanıcısına sen de <b>katıl</b>!</p>
+            <p class="how"><b>SAHI</b> yaz <b>4350'</b> ye telefonundan ücretsiz <strong>SMS</strong> at.</p>
+            <div class="download-links">
+                <a class="apple-store" target="_blank" href="https://itunes.apple.com/tr/app/sahibinden.com-mobil/id418535251?mt=8"></a>
+                <a class="google-play" target="_blank" href="https://play.google.com/store/apps/details?id=com.sahibinden"></a>
+            </div>
+            <span class="hide"></span>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+
+    <div class="homepage">
+        <div class="content">
+            <script type="text/javascript">
+    var isMastheadEnabled = true;
+    var isMastheadActive = false;
+    var mastHeadIframeHeight = 25;
+    var isMastheadPreview = location.href.indexOf('?google_preview=') != -1||location.href.indexOf('&google_preview=') != -1;
+
+    function checkmastHeadIframeHeight() {
+        var currentHeight = $('#div-gpt-ad-1439371178201-0 iframe').height();
+        if (currentHeight > 100) {
+            isMastheadActive = true;
+        } else {
+            isMastheadActive = false;
+        }
+        $('#div-gpt-ad-1439371178201-0').attr("isactive", isMastheadActive);
+        setTimeout(function () {
+            checkmastHeadIframeHeight();
+        }, 100);
+    }
+
+    document.createElement = function(create) {
+        return function() {
+            var obj = create.apply(this, arguments);
+            if (obj.tagName.toLowerCase() === "iframe") {
+                obj.setAttribute("allowfullscreen", "true");
+            }
+            return obj;
+        };
+    }(document.createElement);
+
+    googletag.cmd.push(function() {
+        if(isMastheadEnabled||isMastheadPreview) {
+            googletag.defineSlot('/32607536/mainpage_masthead', [[970, 25], [970, 250]], 'div-gpt-ad-1439371178201-0').addService(googletag.pubads());
+        }
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+
+            if(event.isEmpty) {
+                return;
+            }
+
+            if (event.slot.getSlotElementId() === 'div-gpt-ad-1439371178201-0') {
+
+                adjustMastheadClasses();
+            }
+        });
+
+        googletag.enableServices();
+
+        var adjustMastheadClasses = function() {
+
+            var adSlotElement = $('#div-gpt-ad-1439371178201-0');
+
+            var iframe = $('#div-gpt-ad-1439371178201-0 iframe');
+
+            iframe.load(function() {
+
+                var documentOfIframe = iframe.context;
+
+                $(iframe).attr('allowfullscreen','true');
+                $(iframe).attr('webkitallowfullscreen','true');
+                $(iframe).attr('mozallowfullscreen','true');
+
+                if(documentOfIframe) {
+                    $(documentOfIframe).ready(function() {
+                        var isBannerClosedBefore = (getCookie('bannerClosed') == "true");
+
+                        if(!isBannerClosedBefore) {
+                            adSlotElement.removeClass('banner-masthead-opened').addClass('banner-masthead');
+                        }
+                        
+                        checkmastHeadIframeHeight();
+                    });
+                }
+
+            });
+        }
+
+    });
+
+</script>
+
+
+<div id='div-gpt-ad-1439371178201-0' class="banner-masthead-default">
+    <script type='text/javascript'>
+        var getCookie = function (key) {
+            var regexForMatch = new RegExp("(; )?" + key + "=([^;]*);?"),
+                mathced = document.cookie.match(regexForMatch);
+
+            return mathced !== null && mathced.length>2 ? mathced[2] : null;
+        }
+
+        var adjustSlotMainContainer = function() {
+
+            var isBannerClosedBefore = (getCookie('bannerClosed') == "true");
+
+            var defaultCssClass = isBannerClosedBefore ? 'banner-masthead' : 'banner-masthead-opened';
+
+            document.getElementById('div-gpt-ad-1439371178201-0').setAttribute('class', defaultCssClass);
+        };
+
+        if(isMastheadEnabled||isMastheadPreview){
+            adjustSlotMainContainer();
+            googletag.cmd.push(function()
+                { googletag.display('div-gpt-ad-1439371178201-0'); }
+            );
+        }else{
+            document.getElementById("div-gpt-ad-1439371178201-0").style.display = "none";
+        }
+    </script>
+</div>
+
+<!-- Banner Masthead -->
+<aside>
+                <div class="uiBox">
+                    <h3 class="cat-title">Kategoriler</h3>
+                    <nav>
+                        <ul class="special-categories">
+    <li class="category-acil-acil">
+        <a title="Acil Acil" class="icon-category category-acil-acil trackLinkClick trackId_acilacil_sol_menu" href="https://www.sahibinden.com/acil-acil">Acil Acil</a>
+    </li>
+    <li class="category-fiyati-dusen">
+        <a title="Fiyatı Düşenler" class="icon-category trackLinkClick trackId_fiyati_dusen_sol_menu" href="https://www.sahibinden.com/fiyati-dusenler">Fiyatı Düşenler</a>
+    </li>
+    <li class="icon-category category-48">
+        <a title="Son 48 Saat" class="trackLinkClick trackId_last48_sol_menu" href="https://www.sahibinden.com/son-48-saat">Son 48 Saat</a> /
+        <a title="1 Hafta" class="trackLinkClick trackId_lastweek_sol_menu" href="https://www.sahibinden.com/son-1-hafta">1 Hafta</a> /
+        <a title="1 Ay" class="trackLinkClick trackId_lastmonth_sol_menu" href="https://www.sahibinden.com/son-1-ay">1 Ay</a>
+    </li>
+</ul>
+<ul class="services-categories">
+    <li class="splash-360-home"></li>
+    <li class="category-auto360">
+        <a
+            href="/oto360"
+            title="Oto360"
+            data-click-category="oto360" data-click-event="click-anasayfa"
+            class="icon-category trackClick trackId_oto360anasayfa">
+            Oto360<span class="new-category">yeni</span>
+        </a>
+    </li>
+
+    <li class="category-estate360">
+        <a
+            href="/emlak360"
+            title="Emlak360"
+            data-click-category="emlak360" data-click-event="click-anasayfa"
+            class="icon-category trackClick trackId_emlak360anasayfa">
+            Emlak360<span class="new-category">yeni</span>
+        </a>
+    </li>
+</ul>
+<ul class="categories-left-menu">
+    <li class="category-3518">
+            <a href="/kategori/emlak" title="Emlak" class="">
+                Emlak</a>
+            <span>(1.053.302)</span>
+            <input type="checkbox" id="category-3518" class="show-hide-input">
+            <ul>
+                <li class="">
+                        <a href="/kategori/emlak-konut">
+                            Konut</a>
+                        <span>
+                                (713.838)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/isyeri">
+                            İşyeri</a>
+                        <span>
+                                (133.621)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/arsa">
+                            Arsa</a>
+                        <span>
+                                (192.015)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/projeler/">
+                            Projeler</a>
+                        </li>
+                <li class="">
+                        <a href="/kategori/bina">
+                            Bina</a>
+                        <span>
+                                (9.836)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/devremulk">
+                            Devremülk</a>
+                        <span>
+                                (2.244)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/emlak-turistik-tesis">
+                            Turistik Tesis</a>
+                        <span>
+                                (1.749)
+                            </span>
+                        </li>
+                </ul>
+        </li>
+    <li class="category-3517">
+            <a href="/kategori/vasita" title="Vasıta" class="">
+                Vasıta</a>
+            <span>(426.688)</span>
+            <input type="checkbox" id="category-3517" class="show-hide-input">
+            <ul>
+                <li class="">
+                        <a href="/kategori/otomobil">
+                            Otomobil</a>
+                        <span>
+                                (247.454)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/arazi-suv-pickup">
+                            Arazi, SUV &amp; Pickup</a>
+                        <span>
+                                (35.097)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/motosiklet">
+                            Motosiklet</a>
+                        <span>
+                                (28.543)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/minivan-panelvan">
+                            Minivan &amp; Panelvan</a>
+                        <span>
+                                (57.930)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/ticari-araclar">
+                            Ticari Araçlar</a>
+                        <span>
+                                (35.516)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/kiralik-araclar">
+                            Kiralık Araçlar</a>
+                        <span>
+                                (8.998)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/deniz-araclari">
+                            Deniz Araçları</a>
+                        <span>
+                                (4.122)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/hasarli-araclar">
+                            Hasarlı Araçlar</a>
+                        <span>
+                                (4.398)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/kategori/klasik-araclar">
+                            Klasik Araçlar</a>
+                        <span>
+                                (1.690)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/kategori/elektrikli-araclar">
+                            Elektrikli Araçlar</a>
+                        <span>
+                                (1.325)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/kategori/modifiye-araclar">
+                            Modifiye Araçlar</a>
+                        <span>
+                                (75)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/kategori/hava-araclari">
+                            Hava Araçları</a>
+                        <span>
+                                (24)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/kategori/atv">
+                            ATV</a>
+                        <span>
+                                (836)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/kategori/utv">
+                            UTV</a>
+                        <span>
+                                (84)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/kategori/karavan">
+                            Karavan</a>
+                        <span>
+                                (499)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/kategori/engelli-plakali-araclar">
+                            Engelli Plakalı Araçlar</a>
+                        <span>
+                                (97)
+                            </span>
+                        </li>
+                <li class="hide-show-cat">
+                        <label class="open-categories" for="category-3517">Tümünü Göster</label>
+                        <label class="close-categories" for="category-3517">Kapat</label>
+                    </li>
+                </ul>
+        </li>
+    <li class="category-39">
+            <a href="/kategori/yedek-parca-aksesuar-donanim-tuning" title="Yedek Parça, Aksesuar, Donanım & Tuning" class="">
+                Yedek Parça, Aksesuar, Donanım &amp; Tuning</a>
+            <span>(1.839.491)</span>
+            <input type="checkbox" id="category-39" class="show-hide-input">
+            <ul>
+                <li class="">
+                        <a href="/kategori/otomotiv-ekipmanlari">
+                            Otomotiv Ekipmanları</a>
+                        <span>
+                                (1.713.631)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/motosiklet-ekipmanlari">
+                            Motosiklet Ekipmanları</a>
+                        <span>
+                                (118.889)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/deniz-araci-ekipmanlari">
+                            Deniz Aracı Ekipmanları</a>
+                        <span>
+                                (6.959)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/kategori/hava-araci-ekipmanlari">
+                            Hava Aracı Ekipmanları</a>
+                        <span>
+                                (13)
+                            </span>
+                        </li>
+                <li class="hide-show-cat">
+                        <label class="open-categories" for="category-39">Tümünü Göster</label>
+                        <label class="close-categories" for="category-39">Kapat</label>
+                    </li>
+                </ul>
+        </li>
+    <li class="category-7">
+            <a href="/kategori/ikinci-el-ve-sifir-alisveris" title="İkinci El ve Sıfır Alışveriş" class="">
+                İkinci El ve Sıfır Alışveriş</a>
+            <span>(1.723.935)</span>
+            <input type="checkbox" id="category-7" class="show-hide-input">
+            <ul>
+                <li class="">
+                        <a href="/kategori/bilgisayar">
+                            Bilgisayar</a>
+                        <span>
+                                (271.669)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/cep-telefonu">
+                            Cep Telefonu</a>
+                        <span>
+                                (248.072)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/fotograf-kamera">
+                            Fotoğraf &amp; Kamera</a>
+                        <span>
+                                (41.258)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/ev-dekorasyon">
+                            Ev Dekorasyon</a>
+                        <span>
+                                (193.028)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/ev-elektronigi">
+                            Ev Elektroniği</a>
+                        <span>
+                                (81.138)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/elektrikli-ev-aletleri">
+                            Elektrikli Ev Aletleri</a>
+                        <span>
+                                (67.194)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/giyim-aksesuar">
+                            Giyim &amp; Aksesuar</a>
+                        <span>
+                                (125.045)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/saat">
+                            Saat</a>
+                        <span>
+                                (39.365)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/anne-bebek">
+                            Anne &amp; Bebek</a>
+                        <span>
+                                (33.569)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/kisisel-bakim-kozmetik">
+                            Kişisel Bakım &amp; Kozmetik</a>
+                        <span>
+                                (27.998)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/hobi-oyuncak">
+                            Hobi &amp; Oyuncak</a>
+                        <span>
+                                (44.109)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/oyun-konsol">
+                            Oyun &amp; Konsol</a>
+                        <span>
+                                (53.648)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/kitap-dergi-film">
+                            Kitap, Dergi &amp; Film</a>
+                        <span>
+                                (20.902)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/muzik">
+                            Müzik</a>
+                        <span>
+                                (67.950)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/spor">
+                            Spor</a>
+                        <span>
+                                (67.370)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/taki-mucevher-altin">
+                            Takı, Mücevher &amp; Altın</a>
+                        <span>
+                                (26.263)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/koleksiyon">
+                            Koleksiyon</a>
+                        <span>
+                                (24.326)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/antika">
+                            Antika</a>
+                        <span>
+                                (23.643)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/bahce-yapi-market">
+                            Bahçe &amp; Yapı Market</a>
+                        <span>
+                                (94.951)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/teknik-elektronik">
+                            Teknik Elektronik</a>
+                        <span>
+                                (74.749)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/ofis-kirtasiye">
+                            Ofis &amp; Kırtasiye</a>
+                        <span>
+                                (68.760)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/yiyecek-icecek">
+                            Yiyecek &amp; İçecek</a>
+                        <span>
+                                (15.644)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/diger-her-sey">
+                            Diğer Her Şey</a>
+                        <span>
+                                (13.286)
+                            </span>
+                        </li>
+                </ul>
+        </li>
+    <li class="category-4595">
+            <a href="/kategori/is-makineleri-sanayi" title="İş Makineleri & Sanayi" class="">
+                İş Makineleri &amp; Sanayi</a>
+            <span>(72.823)</span>
+            <input type="checkbox" id="category-4595" class="show-hide-input">
+            <ul>
+                <li class="">
+                        <a href="/kategori/is-makineleri">
+                            İş Makineleri</a>
+                        <span>
+                                (12.559)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/tarim-makineleri">
+                            Tarım Makineleri</a>
+                        <span>
+                                (20.830)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/sanayi">
+                            Sanayi</a>
+                        <span>
+                                (36.256)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/elektrik-enerji">
+                            Elektrik &amp; Enerji</a>
+                        <span>
+                                (3.178)
+                            </span>
+                        </li>
+                </ul>
+        </li>
+    <li class="category-88854">
+            <a href="/hizmetler" title="Ustalar ve Hizmetler" class=" trackLinkClick trackId_ustalar_hizmetler_sol_menu_alt">
+                Ustalar ve Hizmetler</a>
+            <span>(24.061)</span>
+            <input type="checkbox" id="category-88854" class="show-hide-input">
+            <ul>
+                <li class="">
+                        <a href="/hizmetler/ev-tadilat-dekorasyon">
+                            Ev Tadilat &amp; Dekorasyon</a>
+                        </li>
+                <li class="">
+                        <a href="/hizmetler/nakliyat">
+                            Nakliye</a>
+                        </li>
+                <li class="">
+                        <a href="/hizmetler/arac-servis-bakim">
+                            Araç Servis &amp; Bakım</a>
+                        </li>
+                <li class="hide-category">
+                        <a href="/hizmetler/tamirat-teknik-servis">
+                            Tamirat &amp; Teknik Servis </a>
+                        </li>
+                <li class="hide-category">
+                        <a href="/hizmetler/etkinlik">
+                            Düğün &amp; Etkinlik</a>
+                        </li>
+                <li class="hide-category">
+                        <a href="/hizmetler/diger">
+                            Diğer</a>
+                        </li>
+                <li class="hide-show-cat">
+                        <label class="open-categories" for="category-88854">Tümünü Göster</label>
+                        <label class="close-categories" for="category-88854">Kapat</label>
+                    </li>
+                </ul>
+        </li>
+    <li class="category-218822">
+            <a href="/kategori/ozel-ders-verenler" title="Özel Ders Verenler" class="">
+                Özel Ders Verenler</a>
+            <span>(7.857)</span>
+            <input type="checkbox" id="category-218822" class="show-hide-input">
+            <ul>
+                <li class="">
+                        <a href="/ozel-ders-verenler-lise-universite-hazirlik">
+                            Lise &amp; Üniversite Hazırlık</a>
+                        <span>
+                                (2.095)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/ozel-ders-verenler-ilkogretim">
+                            İlköğretim</a>
+                        <span>
+                                (2.192)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/ozel-ders-verenler-yabanci-dil">
+                            Yabancı Dil</a>
+                        <span>
+                                (1.720)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/ozel-ders-verenler-bilgisayar">
+                            Bilgisayar</a>
+                        <span>
+                                (154)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/ozel-ders-verenler-direksiyon">
+                            Direksiyon</a>
+                        <span>
+                                (469)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/ozel-ders-verenler-spor">
+                            Spor</a>
+                        <span>
+                                (203)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/ozel-ders-verenler-guzel-sanatlar">
+                            Sanat</a>
+                        <span>
+                                (61)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="https://www.sahibinden.com/ozel-ders-verenler-dans">
+                            Dans</a>
+                        <span>
+                                (13)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/ozel-ders-verenler-muzik-enstruman">
+                            Müzik &amp; Enstrüman</a>
+                        <span>
+                                (407)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/ozel-ders-verenler-tiyatro-oyunculuk">
+                            Tiyatro &amp; Oyunculuk</a>
+                        <span>
+                                (5)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/ozel-ders-verenler-kisisel-gelisim">
+                            Kişisel Gelişim</a>
+                        <span>
+                                (58)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/ozel-ders-verenler-mesleki-dersler">
+                            Mesleki Dersler</a>
+                        <span>
+                                (239)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/ozel-ders-verenler-ozel-egitim">
+                            Özel Eğitim</a>
+                        <span>
+                                (181)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/ozel-ders-verenler-cocuk-gelisimi">
+                            Çocuk Gelişimi</a>
+                        <span>
+                                (19)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/ozel-ders-verenler-diksiyon">
+                            Güzel Konuşma &amp; Diksiyon</a>
+                        <span>
+                                (18)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/ozel-ders-verenler-fotografcilik">
+                            Fotoğrafçılık</a>
+                        <span>
+                                (23)
+                            </span>
+                        </li>
+                <li class="hide-show-cat">
+                        <label class="open-categories" for="category-218822">Tümünü Göster</label>
+                        <label class="close-categories" for="category-218822">Kapat</label>
+                    </li>
+                </ul>
+        </li>
+    <li class="category-9">
+            <a href="/kategori/is-ilanlari" title="İş İlanları" class="trackLinkClick trackId_is_ilanlari_sol_menu_alt">
+                İş İlanları</a>
+            <span>(12.555)</span>
+            <input type="checkbox" id="category-9" class="show-hide-input">
+            <ul>
+                <li class="">
+                        <a href="/avukatlik-hukuki-danismanlik-is-ilanlari">
+                            Avukatlık &amp; Hukuki Danışmanlık</a>
+                        <span>
+                                (11)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/egitim-is-ilanlari">
+                            Eğitim</a>
+                        <span>
+                                (222)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/eglence-ve-aktiviteler-is-ilanlari">
+                            Eğlence ve Aktiviteler</a>
+                        <span>
+                                (559)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/guzellik-ve-bakim-is-ilanlari">
+                            Güzellik ve Bakım</a>
+                        <span>
+                                (933)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/it-ve-yazilim-gelistirme-is-ilanlari">
+                            IT ve Yazılım Geliştirme</a>
+                        <span>
+                                (91)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/insan-kaynaklari-is-ilanlari">
+                            İnsan Kaynakları</a>
+                        <span>
+                                (30)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/insaat-ve-yapi-is-ilanlari">
+                            İnşaat ve Yapı</a>
+                        <span>
+                                (140)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/isletme-ve-stratejik-yonetim-is-ilanlari">
+                            İşletme ve Stratejik Yönetim</a>
+                        <span>
+                                (103)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/koruma-ve-guvenlik-is-ilanlari">
+                            Koruma ve Güvenlik</a>
+                        <span>
+                                (618)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/lojistik-ve-tasima-is-ilanlari">
+                            Lojistik ve Taşıma</a>
+                        <span>
+                                (1.765)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/magazacilik-ve-perakendecilik-is-ilanlari">
+                            Mağazacılık ve Perakendecilik</a>
+                        <span>
+                                (336)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/muhasebe-finans-ve-bankacilik-is-ilanlari">
+                            Muhasebe, Finans ve Bankacılık</a>
+                        <span>
+                                (214)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/muhendislik-is-ilanlari">
+                            Mühendislik</a>
+                        <span>
+                                (57)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/musteri-hizmetleri-is-ilanlari">
+                            Müşteri Hizmetleri</a>
+                        <span>
+                                (374)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/ofis-yonetimi-ve-idari-isler-is-ilanlari">
+                            Ofis Yönetimi ve İdari İşler</a>
+                        <span>
+                                (720)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/part-time-ve-ek-is-firsatlari-is-ilanlari">
+                            Part Time ve Ek İş Fırsatları</a>
+                        <span>
+                                (832)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/pazarlama-ve-urun-yonetimi-is-ilanlari">
+                            Pazarlama ve Ürün Yönetimi</a>
+                        <span>
+                                (217)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/restoran-ve-konaklama-is-ilanlari">
+                            Restoran ve Konaklama</a>
+                        <span>
+                                (2.506)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/saglik-is-ilanlari">
+                            Sağlık</a>
+                        <span>
+                                (112)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/satis-is-ilanlari">
+                            Satış</a>
+                        <span>
+                                (905)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/tamir-ve-bakim-is-ilanlari">
+                            Tamir ve Bakım</a>
+                        <span>
+                                (714)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/tarim-ve-hayvancilik-is-ilanlari">
+                            Tarım ve Hayvancılık</a>
+                        <span>
+                                (54)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/tasarim-ve-yaraticilik-is-ilanlari">
+                            Tasarım ve Yaratıcılık</a>
+                        <span>
+                                (126)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/tekstil-ve-konfeksiyon-is-ilanlari">
+                            Tekstil ve Konfeksiyon</a>
+                        <span>
+                                (433)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/uretim-ve-imalat-is-ilanlari">
+                            Üretim ve İmalat</a>
+                        <span>
+                                (483)
+                            </span>
+                        </li>
+                <li class="hide-show-cat">
+                        <label class="open-categories" for="category-9">Tümünü Göster</label>
+                        <label class="close-categories" for="category-9">Kapat</label>
+                    </li>
+                </ul>
+        </li>
+    <li class="category-218835">
+            <a href="/yardimci-arayanlar" title="Yardımcı Arayanlar" class="">
+                Yardımcı Arayanlar</a>
+            <span>(1.204)</span>
+            <input type="checkbox" id="category-218835" class="show-hide-input">
+            <ul>
+                <li class="">
+                        <a href="/yardimci-arayanlar-bebek-cocuk-bakicisi">
+                            Bebek &amp; Çocuk Bakıcısı</a>
+                        <span>
+                                (471)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/yardimci-arayanlar-yasli-hasta-bakicisi">
+                            Yaşlı &amp; Hasta Bakıcısı</a>
+                        <span>
+                                (125)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/yardimci-arayanlar-temizlikci-ev-islerine-yardimci">
+                            Temizlikçi &amp; Ev İşlerine Yardımcı</a>
+                        <span>
+                                (608)
+                            </span>
+                        </li>
+                </ul>
+        </li>
+    <li class="category-3520">
+            <a href="/kategori/hayvanlar-alemi" title="Hayvanlar Alemi" class="">
+                Hayvanlar Alemi</a>
+            <span>(86.610)</span>
+            <input type="checkbox" id="category-3520" class="show-hide-input">
+            <ul>
+                <li class="">
+                        <a href="/kategori/hayvanlar-alemi-evcil-hayvanlar">
+                            Evcil Hayvanlar</a>
+                        <span>
+                                (1.591)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/hayvanlar-alemi-akvaryum-baliklari">
+                            Akvaryum Balıkları</a>
+                        <span>
+                                (6.798)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/hayvanlar-alemi-aksesuarlar">
+                            Aksesuarlar</a>
+                        <span>
+                                (17.765)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/hayvanlar-alemi-bakim-urunleri">
+                            Bakım Ürünleri</a>
+                        <span>
+                                (343)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/hayvanlar-alemi-yem-mama">
+                            Yem &amp; Mama</a>
+                        <span>
+                                (1.630)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/hayvanlar-alemi-kumes-hayvanlari">
+                            Kümes Hayvanları</a>
+                        <span>
+                                (49.146)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/hayvanlar-alemi-buyukbas-hayvanlar">
+                            Büyükbaş Hayvanlar</a>
+                        <span>
+                                (2.707)
+                            </span>
+                        </li>
+                <li class="">
+                        <a href="/kategori/hayvanlar-alemi-kucukbas-hayvanlar">
+                            Küçükbaş Hayvanlar</a>
+                        <span>
+                                (5.947)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/kategori/hayvanlar-alemi-deniz-canlilari">
+                            Deniz Canlıları</a>
+                        <span>
+                                (159)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/kategori/hayvanlar-alemi-surungenler">
+                            Sürüngenler</a>
+                        <span>
+                                (341)
+                            </span>
+                        </li>
+                <li class="hide-category">
+                        <a href="/kategori/hayvanlar-alemi-bocekler">
+                            Böcekler</a>
+                        <span>
+                                (185)
+                            </span>
+                        </li>
+                <li class="hide-show-cat">
+                        <label class="open-categories" for="category-3520">Tümünü Göster</label>
+                        <label class="close-categories" for="category-3520">Kapat</label>
+                    </li>
+                </ul>
+        </li>
+    </ul>
+</nav>
+                </div>
+                <!-- Categories -->
+
+                <div class="uiBox picks-left-menu">
+    <h3>Seçtiklerimiz</h3>
+    <ul class="picks-left-menu">
+        <li class="category-stories">
+            <a href="/hikayeni-paylas">Hikayeni Paylaş</a>
+        </li>
+        <li class="category-efsane">
+            <a href="https://www.sahibinden.com/efsane-ilanlar">Efsane Ilanlar</a>
+        </li>
+        <li class="category-ilginc">
+            <a title="İlginç İlanlar" href="https://www.sahibinden.com/ilginc-ilanlar">İlginç İlanlar</a>
+        </li>
+    </ul>
+</div><!-- Picks -->
+
+                <div class="uiBox news-left-menu">
+    <h3>
+        <small>
+            <a href="/haberler">Tüm Haberler</a>
+        </small>
+        Haberler</h3>
+    <ul>
+        <li><a href="/haberler/272">
+                ECHO Awards'tan sahibinden.com'a 3 ödül</a></li>
+        <li><a href="/haberler/271">
+                sahibinden.com 6 Kategoride Altın Örümcek Ödülü'nün Sahibi Oldu!</a></li>
+        </ul>
+</div>
+<!-- News -->
+            </aside>
+            <!-- Left Side -->
+
+                <div class="homepage-content">
+
+                    <div id="div-gpt-ad-1553629-3" class="banner-left">
+    <script type="text/javascript">
+        var isMastheadEnabled = true;
+        var isMastheadPreview = location.href.indexOf('?google_preview=') != -1||location.href.indexOf('&google_preview=') != -1;
+        if(!isMastheadEnabled&&!isMastheadPreview){
+            googletag.cmd.push(function () {
+                googletag.pubads().setTargeting("language", "tr");
+                googletag.defineSlot('/32607536/mainpage_topcenter_w', [[522, 250]], 'div-gpt-ad-1553629-3').addService(googletag.pubads());
+                googletag.display('div-gpt-ad-1553629-3');
+            });
+        }else {
+            document.getElementById("div-gpt-ad-1553629-3").style.display='none';
+        }
+    </script>
+</div>
+
+<!-- Banner Right -->
+<div id='div-gpt-ad-31667776-0' class="banner-right">
+    <script type="text/javascript">
+        if(!isMastheadEnabled&&!isMastheadPreview){
+            googletag.cmd.push(function() {
+                googletag.pubads().setTargeting("language", "tr");
+                googletag.defineSlot('/32607536/mainpage_topright', [300, 250], 'div-gpt-ad-31667776-0').addService(googletag.pubads());
+                googletag.display('div-gpt-ad-31667776-0'); });
+        }else {
+            document.getElementById("div-gpt-ad-31667776-0").style.display='none';
+        }
+    </script>
+</div>
+<!-- Banner Right --><!-- Banners -->
+
+                    <div class="uiBox showcase">
+    <h3>
+        <small><a href="/arama/ara?viewType=Gallery&category=vc%3AHomepageShowcase">Tüm vitrin ilanlarını göster</a></small>
+        Anasayfa Vitrini</h3>
+    <ul class="vitrin-list clearfix">
+        <li>
+                <a href="/ilan/vasita-minivan-panelvan-ford-evkur-dan-taksitle-ford-transit-kamyonetler-616295263/detay" title="Evkur'dan Taksitle Ford Transit Kamyonetler">
+                        <img alt="Evkur'dan Taksitle Ford Transit Kamyonetler" src="https://i0.shbdn.com/photos/29/52/63/thmb_616295263edd.jpg" srcset="https://i0.shbdn.com/photos/29/52/63/thmb_616295263edd.jpg 1x, https://i0.shbdn.com/photos/29/52/63/lthmb_616295263edd.jpg 2x"/>
+                        <span>Evkur'dan Taksitle Ford Transit Kamyonetler</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-arazi-suv-pickup-kia-destra-2017-kia-niro-concept-plus-1.6-hybrid-141hp-lacivert-759634429/detay" title="Destra 2017 Kıa Nıro Concept Plus 1.6 Hybrıd 141hp Lacivert">
+                        <img alt="Destra 2017 Kıa Nıro Concept Plus 1.6 Hybrıd 141hp Lacivert" src="https://i0.shbdn.com/photos/63/44/29/thmb_759634429nuv.jpg" srcset="https://i0.shbdn.com/photos/63/44/29/thmb_759634429nuv.jpg 1x, https://i0.shbdn.com/photos/63/44/29/lthmb_759634429nuv.jpg 2x"/>
+                        <span>Destra 2017 Kıa Nıro Concept Plus 1.6 Hybrıd 141hp Lacivert</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-konut-satilik-sahinden%2Ckefken-kumcagzinda-site-icersinde-satilik-yazlik-765477568/detay" title="Sahinden,kefken - Kumcağzında Site Içersinde Satılık Yazlık.">
+                        <img alt="Sahinden,kefken - Kumcağzında Site Içersinde Satılık Yazlık." src="https://i0.shbdn.com/photos/47/75/68/thmb_76547756844c.jpg" srcset="https://i0.shbdn.com/photos/47/75/68/thmb_76547756844c.jpg 1x, https://i0.shbdn.com/photos/47/75/68/lthmb_76547756844c.jpg 2x"/>
+                        <span>Sahinden,kefken - Kumcağzında Site Içersinde Satılık Yazlık.</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-konut-kiralik-havuzlu-guvenlikli-lux-site-icinde-kiralik-villalar-645565050/detay" title="Havuzlu Güvenlikli Lüx Site Içinde Kiralık Villalar">
+                        <img alt="Havuzlu Güvenlikli Lüx Site Içinde Kiralık Villalar" src="https://i0.shbdn.com/photos/56/50/50/thmb_64556505095r.jpg" srcset="https://i0.shbdn.com/photos/56/50/50/thmb_64556505095r.jpg 1x, https://i0.shbdn.com/photos/56/50/50/lthmb_64556505095r.jpg 2x"/>
+                        <span>Havuzlu Güvenlikli Lüx Site Içinde Kiralık Villalar</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/is-makineleri-sanayi-sanayi-cadir-tente-kepenk-diiikkkaaattt-12x50-hayvancadiri-montajdahil-476386362/detay" title="Diiikkkaaattt 12x50 Hayvançadırı Montajdahıl">
+                        <img alt="Diiikkkaaattt 12x50 Hayvançadırı Montajdahıl" src="https://i0.shbdn.com/photos/38/63/62/thmb_476386362thf.jpg" srcset="https://i0.shbdn.com/photos/38/63/62/thmb_476386362thf.jpg 1x, https://i0.shbdn.com/photos/38/63/62/lthmb_476386362thf.jpg 2x"/>
+                        <span>Diiikkkaaattt 12x50 Hayvançadırı Montajdahıl</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/yedek-parca-aksesuar-donanim-tuning-otomotiv-ekipmanlari-ses-goruntu-sistemleri-universal-android-double-2-din-multimedya-navigasyon-kamera-usb-754729127/detay" title="Üniversal Android Double 2 Din Multimedya Navigasyon Kamera Usb">
+                        <img alt="Üniversal Android Double 2 Din Multimedya Navigasyon Kamera Usb" src="https://i0.shbdn.com/photos/72/91/27/thmb_7547291274gi.jpg" srcset="https://i0.shbdn.com/photos/72/91/27/thmb_7547291274gi.jpg 1x, https://i0.shbdn.com/photos/72/91/27/lthmb_7547291274gi.jpg 2x"/>
+                        <span>Üniversal Android Double 2 Din Multimedya Navigasyon Kamera Usb</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-otomobil-volkswagen-passat-r-2.0-tsi-4-motion-755229844/detay" title="Passat R ( 2.0 Tsi 4 Motion )">
+                        <img alt="Passat R ( 2.0 Tsi 4 Motion )" src="https://i0.shbdn.com/photos/22/98/44/thmb_755229844upn.jpg" srcset="https://i0.shbdn.com/photos/22/98/44/thmb_755229844upn.jpg 1x, https://i0.shbdn.com/photos/22/98/44/lthmb_755229844upn.jpg 2x"/>
+                        <span>Passat R ( 2.0 Tsi 4 Motion )</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-otomobil-seat-hatasiz-boyasiz-boool-ekstrali-firsat-araci-kacmaz-xcellence-759667789/detay" title="Hatasız Boyasız Boool Ekstralı Fırsat Aracı Kaçmaz Xcellence">
+                        <img alt="Hatasız Boyasız Boool Ekstralı Fırsat Aracı Kaçmaz Xcellence" src="https://i0.shbdn.com/photos/66/77/89/thmb_75966778981g.jpg" srcset="https://i0.shbdn.com/photos/66/77/89/thmb_75966778981g.jpg 1x, https://i0.shbdn.com/photos/66/77/89/lthmb_75966778981g.jpg 2x"/>
+                        <span>Hatasız Boyasız Boool Ekstralı Fırsat Aracı Kaçmaz Xcellence</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-otomobil-mercedes-benz-b180-plus-blueefficiency-plussport-plus7g-plusdct-766745344/detay" title="B180 + Blueeffıcıency+sport+7g+dct">
+                        <img alt="B180 + Blueeffıcıency+sport+7g+dct" src="https://i0.shbdn.com/photos/74/53/44/thmb_76674534421m.jpg" srcset="https://i0.shbdn.com/photos/74/53/44/thmb_76674534421m.jpg 1x, https://i0.shbdn.com/photos/74/53/44/lthmb_76674534421m.jpg 2x"/>
+                        <span>B180 + Blueeffıcıency+sport+7g+dct</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/is-makineleri-sanayi-sanayi-cadir-tente-kepenk-9-x-40-hayvan-cadiri-8-mahya-10-akilli-pencereli-iki-kat-yalitim-765110725/detay" title="9 X 40 Hayvan Çadırı 8 Mahya 10 Akıllı Pencereli Iki Kat Yalıtım">
+                        <img alt="9 X 40 Hayvan Çadırı 8 Mahya 10 Akıllı Pencereli Iki Kat Yalıtım" src="https://i0.shbdn.com/photos/11/07/25/thmb_765110725zfo.jpg" srcset="https://i0.shbdn.com/photos/11/07/25/thmb_765110725zfo.jpg 1x, https://i0.shbdn.com/photos/11/07/25/lthmb_765110725zfo.jpg 2x"/>
+                        <span>9 X 40 Hayvan Çadırı 8 Mahya 10 Akıllı Pencereli Iki Kat Yalıtım</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/ikinci-el-ve-sifir-alisveris-ev-dekorasyon-mobilya-cafe-mobilyalari-749479490/detay" title="Cafe Mobılyaları">
+                        <img alt="Cafe Mobılyaları" src="https://i0.shbdn.com/photos/47/94/90/thmb_749479490keg.jpg" srcset="https://i0.shbdn.com/photos/47/94/90/thmb_749479490keg.jpg 1x, https://i0.shbdn.com/photos/47/94/90/lthmb_749479490keg.jpg 2x"/>
+                        <span>Cafe Mobılyaları</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-otomobil-skoda-yeni-arac-gelicek-takipte-kalin-763706961/detay" title="!!yeni Araç Gelicek Takipte Kalın!!">
+                        <img alt="!!yeni Araç Gelicek Takipte Kalın!!" src="https://i0.shbdn.com/photos/70/69/61/thmb_7637069612p7.jpg" srcset="https://i0.shbdn.com/photos/70/69/61/thmb_7637069612p7.jpg 1x, https://i0.shbdn.com/photos/70/69/61/lthmb_7637069612p7.jpg 2x"/>
+                        <span>!!yeni Araç Gelicek Takipte Kalın!!</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-arsa-satilik-manzarali-ultra-luks-villalara-komsu-yatirimlik-arsa-767696637/detay" title="Manzaralı ... Ultra Lüks Villalara Komşu ... Yatırımlık ... Arsa">
+                        <img alt="Manzaralı ... Ultra Lüks Villalara Komşu ... Yatırımlık ... Arsa" src="https://i0.shbdn.com/photos/69/66/37/thmb_767696637yar.jpg" srcset="https://i0.shbdn.com/photos/69/66/37/thmb_767696637yar.jpg 1x, https://i0.shbdn.com/photos/69/66/37/lthmb_767696637yar.jpg 2x"/>
+                        <span>Manzaralı ... Ultra Lüks Villalara Komşu ... Yatırımlık ... Arsa</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-arsa-satilik-2-kat-konut-imarli-arsa-768989330/detay" title="2 Kat Konut Imarlı Arsa">
+                        <img alt="2 Kat Konut Imarlı Arsa" src="https://i0.shbdn.com/photos/98/93/30/thmb_768989330aic.jpg" srcset="https://i0.shbdn.com/photos/98/93/30/thmb_768989330aic.jpg 1x, https://i0.shbdn.com/photos/98/93/30/lthmb_768989330aic.jpg 2x"/>
+                        <span>2 Kat Konut Imarlı Arsa</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/ikinci-el-ve-sifir-alisveris-giyim-aksesuar-erkek-italyan-tarzi-hakiki-deri-erkek-bot-736711465/detay" title="Italyan Tarzı Hakiki Deri Erkek Bot">
+                        <img alt="Italyan Tarzı Hakiki Deri Erkek Bot" src="https://i0.shbdn.com/photos/71/14/65/thmb_736711465vn9.jpg" srcset="https://i0.shbdn.com/photos/71/14/65/thmb_736711465vn9.jpg 1x, https://i0.shbdn.com/photos/71/14/65/lthmb_736711465vn9.jpg 2x"/>
+                        <span>Italyan Tarzı Hakiki Deri Erkek Bot</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-konut-satilik-gebze-nin-en-prestijli-yasam-bolgesinde-0.99-faiz-avantajiyla-722171819/detay" title="Gebze'nin En Prestijli Yaşam Bölgesinde 0.99 Faiz Avantajıyla">
+                        <img alt="Gebze'nin En Prestijli Yaşam Bölgesinde 0.99 Faiz Avantajıyla" src="https://i0.shbdn.com/photos/17/18/19/thmb_72217181997h.jpg" srcset="https://i0.shbdn.com/photos/17/18/19/thmb_72217181997h.jpg 1x, https://i0.shbdn.com/photos/17/18/19/lthmb_72217181997h.jpg 2x"/>
+                        <span>Gebze'nin En Prestijli Yaşam Bölgesinde 0.99 Faiz Avantajıyla</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/is-makineleri-sanayi-sanayi-cadir-tente-kepenk-12x36-432-m-makasli-buyukbas-ve-kucukbas-hayvan-cadiri-756623051/detay" title="12x36 432 M² Makaslı Büyükbaş Ve Küçükbaş Hayvan Çadırı">
+                        <img alt="12x36 432 M² Makaslı Büyükbaş Ve Küçükbaş Hayvan Çadırı" src="https://i0.shbdn.com/photos/62/30/51/thmb_756623051xw4.jpg" srcset="https://i0.shbdn.com/photos/62/30/51/thmb_756623051xw4.jpg 1x, https://i0.shbdn.com/photos/62/30/51/lthmb_756623051xw4.jpg 2x"/>
+                        <span>12x36 432 M² Makaslı Büyükbaş Ve Küçükbaş Hayvan Çadırı</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/is-makineleri-sanayi-sanayi-endustri-makineleri-muratec-punch-motorum-2044-ez-ilk-sahibinden-761833743/detay" title="Muratec Punch Motorum 2044 Ez Ilk Sahibinden">
+                        <img alt="Muratec Punch Motorum 2044 Ez Ilk Sahibinden" src="https://i0.shbdn.com/photos/83/37/43/thmb_761833743gt7.jpg" srcset="https://i0.shbdn.com/photos/83/37/43/thmb_761833743gt7.jpg 1x, https://i0.shbdn.com/photos/83/37/43/lthmb_761833743gt7.jpg 2x"/>
+                        <span>Muratec Punch Motorum 2044 Ez Ilk Sahibinden</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-arsa-satilik-assos-bolgesinde-organik-koyde-gol-manzarali-firsat-arsa-769307771/detay" title="Assos Bölgesinde Organik Köyde Göl Manzaralı Fırsat Arsa">
+                        <img alt="Assos Bölgesinde Organik Köyde Göl Manzaralı Fırsat Arsa" src="https://i0.shbdn.com/photos/30/77/71/thmb_7693077719be.jpg" srcset="https://i0.shbdn.com/photos/30/77/71/thmb_7693077719be.jpg 1x, https://i0.shbdn.com/photos/30/77/71/lthmb_7693077719be.jpg 2x"/>
+                        <span>Assos Bölgesinde Organik Köyde Göl Manzaralı Fırsat Arsa</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-konut-satilik-besiktas-ortakoy-mediko1-de-sahibinden-kopru-bogaz-doga-ici-yeni-614693335/detay" title="Beşiktaş Ortakoy Mediko1 De Sahibinden Kopru Bogaz Doga Içi Yeni">
+                        <img alt="Beşiktaş Ortakoy Mediko1 De Sahibinden Kopru Bogaz Doga Içi Yeni" src="https://i0.shbdn.com/photos/69/33/35/thmb_614693335fdc.jpg" srcset="https://i0.shbdn.com/photos/69/33/35/thmb_614693335fdc.jpg 1x, https://i0.shbdn.com/photos/69/33/35/lthmb_614693335fdc.jpg 2x"/>
+                        <span>Beşiktaş Ortakoy Mediko1 De Sahibinden Kopru Bogaz Doga Içi Yeni</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-otomobil-bmw-sahibinden-borusan-cikisli%2Ckazasiz%2Ctramersiz%2Cdegisensiz-tertemiz-767410706/detay" title="Sahibinden Borusan Çıkışlı,kazasız,tramersiz,değişensiz Tertemiz">
+                        <img alt="Sahibinden Borusan Çıkışlı,kazasız,tramersiz,değişensiz Tertemiz" src="https://i0.shbdn.com/photos/41/07/06/thmb_767410706j9r.jpg" srcset="https://i0.shbdn.com/photos/41/07/06/thmb_767410706j9r.jpg 1x, https://i0.shbdn.com/photos/41/07/06/lthmb_767410706j9r.jpg 2x"/>
+                        <span>Sahibinden Borusan Çıkışlı,kazasız,tramersiz,değişensiz Tertemiz</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-arsa-satilik-gebze-durakli-koyunde-villa-imarli-arazi-770010574/detay" title="Gebze Duraklı Köyünde Villa Imarlı Arazi">
+                        <img alt="Gebze Duraklı Köyünde Villa Imarlı Arazi" src="https://i0.shbdn.com/photos/01/05/74/thmb_770010574pfa.jpg" srcset="https://i0.shbdn.com/photos/01/05/74/thmb_770010574pfa.jpg 1x, https://i0.shbdn.com/photos/01/05/74/lthmb_770010574pfa.jpg 2x"/>
+                        <span>Gebze Duraklı Köyünde Villa Imarlı Arazi</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-arazi-suv-pickup-porsche-sahibinden-kirmizi-deri-hasarsiz-tam-otv-li-765831776/detay" title="Sahibinden, Kırmızı Deri, Hasarsız, Tam Ötv'li">
+                        <img alt="Sahibinden, Kırmızı Deri, Hasarsız, Tam Ötv'li" src="https://i0.shbdn.com/photos/83/17/76/thmb_765831776wtg.jpg" srcset="https://i0.shbdn.com/photos/83/17/76/thmb_765831776wtg.jpg 1x, https://i0.shbdn.com/photos/83/17/76/lthmb_765831776wtg.jpg 2x"/>
+                        <span>Sahibinden, Kırmızı Deri, Hasarsız, Tam Ötv'li</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/ikinci-el-ve-sifir-alisveris-giyim-aksesuar-erkek-roma-kuzu-derisi-gece-tasarim-hakiki-deri-klasik-bot-736710350/detay" title="Roma Kuzu Derisi Gece Tasarım Hakiki Deri Klasik Bot">
+                        <img alt="Roma Kuzu Derisi Gece Tasarım Hakiki Deri Klasik Bot" src="https://i0.shbdn.com/photos/71/03/50/thmb_736710350dru.jpg" srcset="https://i0.shbdn.com/photos/71/03/50/thmb_736710350dru.jpg 1x, https://i0.shbdn.com/photos/71/03/50/lthmb_736710350dru.jpg 2x"/>
+                        <span>Roma Kuzu Derisi Gece Tasarım Hakiki Deri Klasik Bot</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/yedek-parca-aksesuar-donanim-tuning-otomotiv-ekipmanlari-ses-goruntu-sistemleri-komple-set-ismail-berke-den-jameson-ma-audio-692003682/detay" title="Komple Set Ismail Berke'den Jameson Ma Audio">
+                        <img alt="Komple Set Ismail Berke'den Jameson Ma Audio" src="https://i0.shbdn.com/photos/00/36/82/thmb_6920036822dl.jpg" srcset="https://i0.shbdn.com/photos/00/36/82/thmb_6920036822dl.jpg 1x, https://i0.shbdn.com/photos/00/36/82/lthmb_6920036822dl.jpg 2x"/>
+                        <span>Komple Set Ismail Berke'den Jameson Ma Audio</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/hayvanlar-alemi-aksesuarlar-kumes-hayvanlari-7-arali-4-6-elips-model-hobi-amacli-tavuk-kumesi-648960101/detay" title="7 Aralı 4*6 Elips Model Hobi Amaçlı Tavuk Kümesi">
+                        <img alt="7 Aralı 4*6 Elips Model Hobi Amaçlı Tavuk Kümesi" src="https://i0.shbdn.com/photos/96/01/01/thmb_648960101p11.jpg" srcset="https://i0.shbdn.com/photos/96/01/01/thmb_648960101p11.jpg 1x, https://i0.shbdn.com/photos/96/01/01/lthmb_648960101p11.jpg 2x"/>
+                        <span>7 Aralı 4*6 Elips Model Hobi Amaçlı Tavuk Kümesi</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-arazi-suv-pickup-land-rover-hatasiz-bayii-yetkili-servis-bakimli-524867418/detay" title="Hatasız Bayii Yetkili Servis Bakımlı">
+                        <img alt="Hatasız Bayii Yetkili Servis Bakımlı" src="https://i0.shbdn.com/photos/86/74/18/thmb_5248674186en.jpg" srcset="https://i0.shbdn.com/photos/86/74/18/thmb_5248674186en.jpg 1x, https://i0.shbdn.com/photos/86/74/18/lthmb_5248674186en.jpg 2x"/>
+                        <span>Hatasız Bayii Yetkili Servis Bakımlı</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/is-makineleri-sanayi-sanayi-cadir-tente-kepenk-10x30-nadide-makasli-model-cadir-da-dev-kampanya-533088469/detay" title="10x30 Nadide Makaslı Model Çadır'da Dev Kampanya!!">
+                        <img alt="10x30 Nadide Makaslı Model Çadır'da Dev Kampanya!!" src="https://i0.shbdn.com/photos/08/84/69/thmb_533088469dgb.jpg" srcset="https://i0.shbdn.com/photos/08/84/69/thmb_533088469dgb.jpg 1x, https://i0.shbdn.com/photos/08/84/69/lthmb_533088469dgb.jpg 2x"/>
+                        <span>10x30 Nadide Makaslı Model Çadır'da Dev Kampanya!!</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-otomobil-bmw-generalden-ilk-sahibinden-hatasiz-boyasiz-116-d-m-sport-759336887/detay" title="Generalden Ilk Sahibinden Hatasız Boyasız 116 D M Sport">
+                        <img alt="Generalden Ilk Sahibinden Hatasız Boyasız 116 D M Sport" src="https://i0.shbdn.com/photos/33/68/87/thmb_759336887foy.jpg" srcset="https://i0.shbdn.com/photos/33/68/87/thmb_759336887foy.jpg 1x, https://i0.shbdn.com/photos/33/68/87/lthmb_759336887foy.jpg 2x"/>
+                        <span>Generalden Ilk Sahibinden Hatasız Boyasız 116 D M Sport</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/ikinci-el-ve-sifir-alisveris-diger-her-sey-reklam-promosyon-urunleri-kurumsal-logo-ve-kartvizit-tasarimi-ozgun-modeller-767465393/detay" title="Kurumsal Logo Ve Kartvizit Tasarımı (özgün Modeller)">
+                        <img alt="Kurumsal Logo Ve Kartvizit Tasarımı (özgün Modeller)" src="https://i0.shbdn.com/photos/46/53/93/thmb_767465393kau.jpg" srcset="https://i0.shbdn.com/photos/46/53/93/thmb_767465393kau.jpg 1x, https://i0.shbdn.com/photos/46/53/93/lthmb_767465393kau.jpg 2x"/>
+                        <span>Kurumsal Logo Ve Kartvizit Tasarımı (özgün Modeller)</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/hayvanlar-alemi-aksesuarlar-buyukbas-kucukbas-7x20-eliptik-model-cadir-da-kampanya-31-aralik-son-765224667/detay" title="7x20 Eliptik Model Çadır'da Kampanya 31 Aralık Son !!!">
+                        <img alt="7x20 Eliptik Model Çadır'da Kampanya 31 Aralık Son !!!" src="https://i0.shbdn.com/photos/22/46/67/thmb_765224667226.jpg" srcset="https://i0.shbdn.com/photos/22/46/67/thmb_765224667226.jpg 1x, https://i0.shbdn.com/photos/22/46/67/lthmb_765224667226.jpg 2x"/>
+                        <span>7x20 Eliptik Model Çadır'da Kampanya 31 Aralık Son !!!</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/hayvanlar-alemi-aksesuarlar-buyukbas-kucukbas-280-m2-kucukbas-yasam-alani-704828287/detay" title="280 M2 Küçükbaş Yaşam Alanı">
+                        <img alt="280 M2 Küçükbaş Yaşam Alanı" src="https://i0.shbdn.com/photos/82/82/87/thmb_704828287o6b.jpg" srcset="https://i0.shbdn.com/photos/82/82/87/thmb_704828287o6b.jpg 1x, https://i0.shbdn.com/photos/82/82/87/lthmb_704828287o6b.jpg 2x"/>
+                        <span>280 M2 Küçükbaş Yaşam Alanı</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-arazi-suv-pickup-hyundai-omer-auto-dan-2019-kona-1.6-crdi-style-dct-0-km-18-faturali-767813181/detay" title="Ömer Auto Dan 2019 Kona 1.6 Crdı Style Dct ''0''km %18 Faturalı">
+                        <img alt="Ömer Auto Dan 2019 Kona 1.6 Crdı Style Dct ''0''km %18 Faturalı" src="https://i0.shbdn.com/photos/81/31/81/thmb_7678131819xp.jpg" srcset="https://i0.shbdn.com/photos/81/31/81/thmb_7678131819xp.jpg 1x, https://i0.shbdn.com/photos/81/31/81/lthmb_7678131819xp.jpg 2x"/>
+                        <span>Ömer Auto Dan 2019 Kona 1.6 Crdı Style Dct ''0''km %18 Faturalı</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-otomobil-mercedes-benz-virage-motors-mercedes-benz-s350l-2012-s65facelift-bayi-msj-sogt-769625327/detay" title="Virage Motors Mercedes Benz S350l 2012 S65facelift Bayi Msj Soğt">
+                        <img alt="Virage Motors Mercedes Benz S350l 2012 S65facelift Bayi Msj Soğt" src="https://i0.shbdn.com/photos/62/53/27/thmb_769625327etd.jpg" srcset="https://i0.shbdn.com/photos/62/53/27/thmb_769625327etd.jpg 1x, https://i0.shbdn.com/photos/62/53/27/lthmb_769625327etd.jpg 2x"/>
+                        <span>Virage Motors Mercedes Benz S350l 2012 S65facelift Bayi Msj Soğt</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-konut-satilik-firsat-satilik-daire-750002348/detay" title="Fırsat Satılık Daire">
+                        <img alt="Fırsat Satılık Daire" src="https://i0.shbdn.com/photos/00/23/48/thmb_7500023487jy.jpg" srcset="https://i0.shbdn.com/photos/00/23/48/thmb_7500023487jy.jpg 1x, https://i0.shbdn.com/photos/00/23/48/lthmb_7500023487jy.jpg 2x"/>
+                        <span>Fırsat Satılık Daire</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-otomobil-bmw-sahibinden-2018-borusan-17.900-km-kor-nokta-serit-takip-vakum-765596049/detay" title="Sahibinden 2018 Borusan 17.900 Km!! Kör Nokta-şerit Takip-vakum">
+                        <img alt="Sahibinden 2018 Borusan 17.900 Km!! Kör Nokta-şerit Takip-vakum" src="https://i0.shbdn.com/photos/59/60/49/thmb_7655960499o5.jpg" srcset="https://i0.shbdn.com/photos/59/60/49/thmb_7655960499o5.jpg 1x, https://i0.shbdn.com/photos/59/60/49/lthmb_7655960499o5.jpg 2x"/>
+                        <span>Sahibinden 2018 Borusan 17.900 Km!! Kör Nokta-şerit Takip-vakum</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-konut-satilik-denize-sifir-villa-756734706/detay" title="Denize Sıfır Villa">
+                        <img alt="Denize Sıfır Villa" src="https://i0.shbdn.com/photos/73/47/06/thmb_756734706fn0.jpg" srcset="https://i0.shbdn.com/photos/73/47/06/thmb_756734706fn0.jpg 1x, https://i0.shbdn.com/photos/73/47/06/lthmb_756734706fn0.jpg 2x"/>
+                        <span>Denize Sıfır Villa</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/ikinci-el-ve-sifir-alisveris-giyim-aksesuar-erkek-italyan-kalip-ici-ve-disi-komple-hakiki-deri-siyah-erkek-bot-756760902/detay" title="Italyan Kalıp Içi Ve Dışı Komple Hakiki Deri Siyah Erkek Bot">
+                        <img alt="Italyan Kalıp Içi Ve Dışı Komple Hakiki Deri Siyah Erkek Bot" src="https://i0.shbdn.com/photos/76/09/02/thmb_756760902d0g.jpg" srcset="https://i0.shbdn.com/photos/76/09/02/thmb_756760902d0g.jpg 1x, https://i0.shbdn.com/photos/76/09/02/lthmb_756760902d0g.jpg 2x"/>
+                        <span>Italyan Kalıp Içi Ve Dışı Komple Hakiki Deri Siyah Erkek Bot</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/is-makineleri-sanayi-sanayi-cadir-tente-kepenk-20x70-her-amaca-uygun-cadir-hayvan-cadiri-761845266/detay" title="20x70 Her Amaca Uygun Çadır Hayvan Çadırı">
+                        <img alt="20x70 Her Amaca Uygun Çadır Hayvan Çadırı" src="https://i0.shbdn.com/photos/84/52/66/thmb_7618452660y5.jpg" srcset="https://i0.shbdn.com/photos/84/52/66/thmb_7618452660y5.jpg 1x, https://i0.shbdn.com/photos/84/52/66/lthmb_7618452660y5.jpg 2x"/>
+                        <span>20x70 Her Amaca Uygun Çadır Hayvan Çadırı</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-konut-gunluk-kiralik-sakaryanin-en-luks-evleri-763995169/detay" title="Sakaryanın En Lüks Evleri-">
+                        <img alt="Sakaryanın En Lüks Evleri-" src="https://i0.shbdn.com/photos/99/51/69/thmb_763995169l9b.jpg" srcset="https://i0.shbdn.com/photos/99/51/69/thmb_763995169l9b.jpg 1x, https://i0.shbdn.com/photos/99/51/69/lthmb_763995169l9b.jpg 2x"/>
+                        <span>Sakaryanın En Lüks Evleri-</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-konut-satilik-4-plus1-190-metre-bati-guney-cepheli-dubleks-basaksehir-nakit-743763143/detay" title="4+1 190 Metre Batı Güney Cepheli Dubleks Başakşehir Nakit">
+                        <img alt="4+1 190 Metre Batı Güney Cepheli Dubleks Başakşehir Nakit" src="https://i0.shbdn.com/photos/76/31/43/thmb_743763143p2l.jpg" srcset="https://i0.shbdn.com/photos/76/31/43/thmb_743763143p2l.jpg 1x, https://i0.shbdn.com/photos/76/31/43/lthmb_743763143p2l.jpg 2x"/>
+                        <span>4+1 190 Metre Batı Güney Cepheli Dubleks Başakşehir Nakit</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-arsa-satilik-sabiha-gokcen-viaport-yaninda-satilik-arsa-745141565/detay" title="Sabiha Gökçen Viaport Yanında Satılık Arsa">
+                        <img alt="Sabiha Gökçen Viaport Yanında Satılık Arsa" src="https://i0.shbdn.com/photos/14/15/65/thmb_745141565j9z.jpg" srcset="https://i0.shbdn.com/photos/14/15/65/thmb_745141565j9z.jpg 1x, https://i0.shbdn.com/photos/14/15/65/lthmb_745141565j9z.jpg 2x"/>
+                        <span>Sabiha Gökçen Viaport Yanında Satılık Arsa</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-konut-satilik-mamik-life-sitesi-yapili-4-plus1-daire-761671942/detay" title="Mamik Life Sitesi Yapılı 4+1 Daire">
+                        <img alt="Mamik Life Sitesi Yapılı 4+1 Daire" src="https://i0.shbdn.com/photos/67/19/42/thmb_761671942yiu.jpg" srcset="https://i0.shbdn.com/photos/67/19/42/thmb_761671942yiu.jpg 1x, https://i0.shbdn.com/photos/67/19/42/lthmb_761671942yiu.jpg 2x"/>
+                        <span>Mamik Life Sitesi Yapılı 4+1 Daire</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/doping-tanitim/#doping-3">
+                        <img src="https://s0.shbdn.com/assets/images/see-your-ad-here-tr:f22d9eeae42a5ab3ac9e98f6d800c131.png" class="gri_border" alt="&amp;nbsp;"/>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/ikinci-el-ve-sifir-alisveris-bahce-yapi-market-yapi-malzemeleri-odun-sobasi-komur-soba-kuzine-soba-lotus-soba-hosseven-soba-766764721/detay" title="Odun Sobası-kömür Soba-kuzine Soba-lotus Soba-hosseven Soba">
+                        <img alt="Odun Sobası-kömür Soba-kuzine Soba-lotus Soba-hosseven Soba" src="https://i0.shbdn.com/photos/76/47/21/thmb_766764721pec.jpg" srcset="https://i0.shbdn.com/photos/76/47/21/thmb_766764721pec.jpg 1x, https://i0.shbdn.com/photos/76/47/21/lthmb_766764721pec.jpg 2x"/>
+                        <span>Odun Sobası-kömür Soba-kuzine Soba-lotus Soba-hosseven Soba</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/ikinci-el-ve-sifir-alisveris-ev-elektronigi-guvenlik-sistemleri-ex-450-cift-ayakli-eko-turnike-705401314/detay" title="Ex-450 Çift Ayaklı Eko Turnike">
+                        <img alt="Ex-450 Çift Ayaklı Eko Turnike" src="https://i0.shbdn.com/photos/40/13/14/thmb_705401314u3s.jpg" srcset="https://i0.shbdn.com/photos/40/13/14/thmb_705401314u3s.jpg 1x, https://i0.shbdn.com/photos/40/13/14/lthmb_705401314u3s.jpg 2x"/>
+                        <span>Ex-450 Çift Ayaklı Eko Turnike</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-konut-satilik-firsat-satilik-daire-695023298/detay" title="Fırsat Satılık Daire">
+                        <img alt="Fırsat Satılık Daire" src="https://i0.shbdn.com/photos/02/32/98/thmb_6950232989ks.jpg" srcset="https://i0.shbdn.com/photos/02/32/98/thmb_6950232989ks.jpg 1x, https://i0.shbdn.com/photos/02/32/98/lthmb_6950232989ks.jpg 2x"/>
+                        <span>Fırsat Satılık Daire</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-arsa-satilik-denize-180-mt-7700-metre-sarkoyde-kzlctrzi-hedef-yatirim-nakit-425343059/detay" title="Denize 180 Mt 7700 Metre Şarköyde Kzlctrzi Hedef Yatırım Nakit">
+                        <img alt="Denize 180 Mt 7700 Metre Şarköyde Kzlctrzi Hedef Yatırım Nakit" src="https://i0.shbdn.com/photos/34/30/59/thmb_425343059z3h.jpg" srcset="https://i0.shbdn.com/photos/34/30/59/thmb_425343059z3h.jpg 1x, https://i0.shbdn.com/photos/34/30/59/lthmb_425343059z3h.jpg 2x"/>
+                        <span>Denize 180 Mt 7700 Metre Şarköyde Kzlctrzi Hedef Yatırım Nakit</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/is-makineleri-sanayi-sanayi-endustriyel-mutfak-depo-rafi-hafif-tip-sifir-urun-92703360/detay" title="Depo Rafı - Hafif Tip - Sıfır Ürün">
+                        <img alt="Depo Rafı - Hafif Tip - Sıfır Ürün" src="https://i0.shbdn.com/photos/70/33/60/thmb_92703360hs6.jpg" srcset="https://i0.shbdn.com/photos/70/33/60/thmb_92703360hs6.jpg 1x, https://i0.shbdn.com/photos/70/33/60/lthmb_92703360hs6.jpg 2x"/>
+                        <span>Depo Rafı - Hafif Tip - Sıfır Ürün</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-isyeri-satilik-kazancli-yatirim-trafigi-tikanik-istanbuul-dan-dinamik-izmir-e-755581579/detay" title="Kazançlı Yatırım *trafiği Tıkanık Istanbuul Dan Dinamik Izmir E">
+                        <img alt="Kazançlı Yatırım *trafiği Tıkanık Istanbuul Dan Dinamik Izmir E" src="https://i0.shbdn.com/photos/58/15/79/thmb_755581579zmg.jpg" srcset="https://i0.shbdn.com/photos/58/15/79/thmb_755581579zmg.jpg 1x, https://i0.shbdn.com/photos/58/15/79/lthmb_755581579zmg.jpg 2x"/>
+                        <span>Kazançlı Yatırım *trafiği Tıkanık Istanbuul Dan Dinamik Izmir E</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-otomobil-audi-ermer-motors-2014-audi-a3-sedan-1.6-tdi-c.tavan-plush.sabitleme-768118919/detay" title="Ermer Motors-2014 Audı A3 Sedan 1.6 Tdı C.tavan+h.sabitleme">
+                        <img alt="Ermer Motors-2014 Audı A3 Sedan 1.6 Tdı C.tavan+h.sabitleme" src="https://i0.shbdn.com/photos/11/89/19/thmb_768118919p29.jpg" srcset="https://i0.shbdn.com/photos/11/89/19/thmb_768118919p29.jpg 1x, https://i0.shbdn.com/photos/11/89/19/lthmb_768118919p29.jpg 2x"/>
+                        <span>Ermer Motors-2014 Audı A3 Sedan 1.6 Tdı C.tavan+h.sabitleme</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/emlak-arsa-satilik-manzarali-luks-villalara-komsu-konut-imarli-acil-arsa-765665482/detay" title="Manzaralı, Lüks Villalara Komşu Konut Imarlı Acil Arsa">
+                        <img alt="Manzaralı, Lüks Villalara Komşu Konut Imarlı Acil Arsa" src="https://i0.shbdn.com/photos/66/54/82/thmb_765665482bax.jpg" srcset="https://i0.shbdn.com/photos/66/54/82/thmb_765665482bax.jpg 1x, https://i0.shbdn.com/photos/66/54/82/lthmb_765665482bax.jpg 2x"/>
+                        <span>Manzaralı, Lüks Villalara Komşu Konut Imarlı Acil Arsa</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-otomobil-audi-otomar-2017-audi-a6-2.0-tfsi-252hp-quattro-edition-matrix-orjinl-763952983/detay" title="Otomar 2017 Audi A6 2.0 Tfsi 252hp Quattro Edition-matrix Orjinl">
+                        <img alt="Otomar 2017 Audi A6 2.0 Tfsi 252hp Quattro Edition-matrix Orjinl" src="https://i0.shbdn.com/photos/95/29/83/thmb_7639529839h8.jpg" srcset="https://i0.shbdn.com/photos/95/29/83/thmb_7639529839h8.jpg 1x, https://i0.shbdn.com/photos/95/29/83/lthmb_7639529839h8.jpg 2x"/>
+                        <span>Otomar 2017 Audi A6 2.0 Tfsi 252hp Quattro Edition-matrix Orjinl</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-otomobil-bmw-sahibinden-bayi-cikisli-hatasiz-765162449/detay" title="Sahibinden Bayi Çıkışlı Hatasız">
+                        <img alt="Sahibinden Bayi Çıkışlı Hatasız" src="https://i0.shbdn.com/photos/16/24/49/thmb_765162449vke.jpg" srcset="https://i0.shbdn.com/photos/16/24/49/thmb_765162449vke.jpg 1x, https://i0.shbdn.com/photos/16/24/49/lthmb_765162449vke.jpg 2x"/>
+                        <span>Sahibinden Bayi Çıkışlı Hatasız</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/is-makineleri-sanayi-sanayi-endustri-makineleri-durma-ad-s-30100-cnc-hidrolik-abkant-pres-719543057/detay" title="Durma Ad-s 30100 Cnc Hidrolik Abkant Pres">
+                        <img alt="Durma Ad-s 30100 Cnc Hidrolik Abkant Pres" src="https://i0.shbdn.com/photos/54/30/57/thmb_719543057pfu.jpg" srcset="https://i0.shbdn.com/photos/54/30/57/thmb_719543057pfu.jpg 1x, https://i0.shbdn.com/photos/54/30/57/lthmb_719543057pfu.jpg 2x"/>
+                        <span>Durma Ad-s 30100 Cnc Hidrolik Abkant Pres</span>
+                    </a>
+                </li>
+        <li>
+                <a href="/ilan/vasita-otomobil-nissan-sahibinden-2017-micra-1%2C2-match-otomatik-vites-servis-bakimli-768748846/detay" title="Sahibinden 2017 Micra 1,2 Match Otomatik Vites - Servis Bakımlı">
+                        <img alt="Sahibinden 2017 Micra 1,2 Match Otomatik Vites - Servis Bakımlı" src="https://i0.shbdn.com/photos/74/88/46/thmb_7687488464uv.jpg" srcset="https://i0.shbdn.com/photos/74/88/46/thmb_7687488464uv.jpg 1x, https://i0.shbdn.com/photos/74/88/46/lthmb_7687488464uv.jpg 2x"/>
+                        <span>Sahibinden 2017 Micra 1,2 Match Otomatik Vites - Servis Bakımlı</span>
+                    </a>
+                </li>
+        </ul>
+</div>
+<!-- Homepage Showcase -->
+
+                    <div class="center-banner">
+                        <script type="text/javascript">
+
+                            getBanner(120,'&amp;CATEGORY_ID=0&amp;PARENT_ID=0&amp;PAGE_NAME=ana_sayfa&amp;c=0&amp;c2=0&amp;LANGUAGE='+'tr');
+                        </script>
+
+                        <!-- /32607536/anasayfa728x90 -->
+                        <div id='div-gpt-ad-1446829212361-0' style='height:90px; width:728px;'>
+                            <script type='text/javascript'>
+                                googletag.cmd.push(function() {
+                                    googletag.pubads().setTargeting("language", "tr");
+                                    googletag.defineSlot('/32607536/anasayfa728x90', [728, 90], 'div-gpt-ad-1446829212361-0').addService(googletag.pubads());
+                                    googletag.display('div-gpt-ad-1446829212361-0');
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <!-- Sahibinden Center Banner -->
+
+                    <div class="uiBox">
+    <h3>
+        <small>
+            <a href="projeler/">Tüm Projeleri göster</a>
+        </small>
+        Projeler</h3>
+    <div class="estate-projects clearfix">
+        <div class="projects" data-id="3985">
+                <a title="Avcılar Exclusive" href="/projeler/p/avcilar-insaat/avcilar-exclusive-bayrakli/">
+                    <img title="Avcılar Exclusive" alt="Avcılar Exclusive" src="https://s0.shbdn.com/projeler/media/photos/Project/2019/07/368edffd96efae2d/Self/4e69d36b1bcef927.jpg">
+                </a>
+                <h4>
+                    <a title="Avcılar Exclusive" href="/projeler/p/avcilar-insaat/avcilar-exclusive-bayrakli/">
+                        Avcılar Exclusive<span> (İzmir / Bayraklı)</span>
+                    </a>
+                </h4>
+                <p class="m2">
+                    <strong>m<sup>2</sup></strong>: 100 m<sup>2</sup> - 173 m<sup>2</sup></p>
+                <p class="due-date">
+                    <strong>Teslim Tarihi</strong>: Haziran 2021</p>
+            </div>
+        <div class="projects" data-id="2141">
+                <a title="Torun Center" href="/projeler/p/torunlar-sirketler-grubu/torun-center-sisli/">
+                    <img title="Torun Center" alt="Torun Center" src="https://s0.shbdn.com/projeler/media/photos/Project/2013/09/299beb96f6e9b004/Self/968151a0f17490bd.jpg">
+                </a>
+                <h4>
+                    <a title="Torun Center" href="/projeler/p/torunlar-sirketler-grubu/torun-center-sisli/">
+                        Torun Center<span> (İstanbul / Şişli)</span>
+                    </a>
+                </h4>
+                <p class="m2">
+                    <strong>m<sup>2</sup></strong>: 97 m<sup>2</sup> - 407 m<sup>2</sup></p>
+                <p class="due-date">
+                    <strong>Teslim Tarihi</strong>: HemenTeslim</p>
+            </div>
+        </div>
+</div>
+<!-- Real Estate Projects -->
+
+                    <div class="uiBox daily-opportunity-slide">
+    <h3>
+        <small>
+            <a class="trackLinkClick trackId_GF_Show_All" href="/gunun-firsati">Tüm Fırsatları  Göster</a>
+        </small>
+        Günün Fırsatı Ürünleri</h3>
+    <div class="daily-opportunity-slide-container">
+        <div class="daily-opportunity-content">
+            <ul>
+                <li>
+                        <a class="trackLinkClick trackId_GF" href="/ilan/ikinci-el-ve-sifir-alisveris-bilgisayar-cevre-birimleri-rampage-smx-r22-phoenix-7-tuslu-rgb-4800dpi-makrolu-gaming-mouse-748776947/detay">
+                            <span class="dailyOpportunityCargo">
+                                    <span class="dailyOpportunityCargoText">ücretsiz kargo</span>
+                                </span>
+                            <span class="dailyOpportunityDiscount">
+                                <span>%</span>
+                                <span class="dailyOpportunityDiscountRate">
+                                    17</span>
+                                <span class="dailyOpportunityDiscountText">indirim</span>
+                            </span>
+                            <img src="https://i0.shbdn.com/photos/77/69/47/lthmb_748776947sjo.jpg" alt="Rampage Smx-R22 Phoenix 7 Tuşlu Rgb 4800dpi Makrolu Gaming Mouse">
+                            <span class="daily-opportunity-title">
+                                <span>Rampage Smx-R22 Phoenix 7 Tuşlu Rgb 4800dpi Makrolu Gaming Mouse</span>
+                            </span>
+                            <span class="daily-opportunity-price">
+                                 99 TL<span class="old-price">
+                                     119 TL</span>
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                        <a class="trackLinkClick trackId_GF" href="/ilan/ikinci-el-ve-sifir-alisveris-cep-telefonu-aksesuar-hytech-hy-s15-crunch-aux-plususb-plustf-kart-bluetooh-hoparlor-748805692/detay">
+                            <span class="dailyOpportunityCargo">
+                                    <span class="dailyOpportunityCargoText">ücretsiz kargo</span>
+                                </span>
+                            <span class="dailyOpportunityDiscount">
+                                <span>%</span>
+                                <span class="dailyOpportunityDiscountRate">
+                                    29</span>
+                                <span class="dailyOpportunityDiscountText">indirim</span>
+                            </span>
+                            <img src="https://i0.shbdn.com/photos/80/56/92/lthmb_748805692w6f.jpg" alt="Hytech HY-S15 Crunch Aux+Usb+TF Kart Bluetooh Hoparlör">
+                            <span class="daily-opportunity-title">
+                                <span>Hytech HY-S15 Crunch Aux+Usb+TF Kart Bluetooh Hoparlör</span>
+                            </span>
+                            <span class="daily-opportunity-price">
+                                 99 TL<span class="old-price">
+                                     139 TL</span>
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                        <a class="trackLinkClick trackId_GF" href="/ilan/ikinci-el-ve-sifir-alisveris-cep-telefonu-aksesuar-s-link-led-ekran-usb-plustf-cift-bluetooth-arac-kiti-fm-transmitter-748811110/detay">
+                            <span class="dailyOpportunityCargo">
+                                    <span class="dailyOpportunityCargoText">ücretsiz kargo</span>
+                                </span>
+                            <span class="dailyOpportunityDiscount">
+                                <span>%</span>
+                                <span class="dailyOpportunityDiscountRate">
+                                    24</span>
+                                <span class="dailyOpportunityDiscountText">indirim</span>
+                            </span>
+                            <img src="https://i0.shbdn.com/photos/81/11/10/lthmb_74881111035m.jpg" alt="S-link Led Ekran USB+TF Çift Bluetooth Araç Kiti Fm Transmitter">
+                            <span class="daily-opportunity-title">
+                                <span>S-link Led Ekran USB+TF Çift Bluetooth Araç Kiti Fm Transmitter</span>
+                            </span>
+                            <span class="daily-opportunity-price">
+                                 89,<sup>90</sup> TL<span class="old-price">
+                                     119 TL</span>
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                        <a class="trackLinkClick trackId_GF" href="/ilan/ikinci-el-ve-sifir-alisveris-cep-telefonu-aksesuar-syrox-12000-mah-powerbank-763943979/detay">
+                            <span class="dailyOpportunityCargo">
+                                    <span class="dailyOpportunityCargoText">ücretsiz kargo</span>
+                                </span>
+                            <span class="dailyOpportunityDiscount">
+                                <span>%</span>
+                                <span class="dailyOpportunityDiscountRate">
+                                    31</span>
+                                <span class="dailyOpportunityDiscountText">indirim</span>
+                            </span>
+                            <img src="https://i0.shbdn.com/photos/94/39/79/lthmb_7639439794en.jpg" alt="Syrox 12000 mAh PowerBank">
+                            <span class="daily-opportunity-title">
+                                <span>Syrox 12000 mAh PowerBank</span>
+                            </span>
+                            <span class="daily-opportunity-price">
+                                 89,<sup>90</sup> TL<span class="old-price">
+                                     129,<sup>90</sup> TL</span>
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                        <a class="trackLinkClick trackId_GF" href="/ilan/ikinci-el-ve-sifir-alisveris-kisisel-bakim-kozmetik-vucut-bakim-gercek-hamam-kesesi-orjnal-kalin-doku-banyo-kesesi-tellak-kesesi-763571502/detay">
+                            <span class="dailyOpportunityDiscount">
+                                <span>%</span>
+                                <span class="dailyOpportunityDiscountRate">
+                                    48</span>
+                                <span class="dailyOpportunityDiscountText">indirim</span>
+                            </span>
+                            <img src="https://i0.shbdn.com/photos/57/15/02/lthmb_763571502gn8.jpg" alt="GERÇEK HAMAM KESESİ ORJNAL KALIN DOKU BANYO KESESİ TELLAK KESESİ">
+                            <span class="daily-opportunity-title">
+                                <span>GERÇEK HAMAM KESESİ ORJNAL KALIN DOKU BANYO KESESİ TELLAK KESESİ</span>
+                            </span>
+                            <span class="daily-opportunity-price">
+                                 29,<sup>99</sup> TL<span class="old-price">
+                                     58 TL</span>
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                        <a class="trackLinkClick trackId_GF" href="/ilan/ikinci-el-ve-sifir-alisveris-ev-dekorasyon-mutfak-gerecleri-av-bicagi-kamp-bicagi-ozel-el-yapimi-dovme-celik-deri-kilifli-ts-764713678/detay">
+                            <span class="dailyOpportunityCargo">
+                                    <span class="dailyOpportunityCargoText">ücretsiz kargo</span>
+                                </span>
+                            <span class="dailyOpportunityDiscount">
+                                <span>%</span>
+                                <span class="dailyOpportunityDiscountRate">
+                                    30</span>
+                                <span class="dailyOpportunityDiscountText">indirim</span>
+                            </span>
+                            <img src="https://i0.shbdn.com/photos/71/36/78/lthmb_764713678r6v.jpg" alt="Av Bıçağı Kamp Bıçağı Özel El Yapımı Dövme Çelik Deri Kılıflı TS">
+                            <span class="daily-opportunity-title">
+                                <span>Av Bıçağı Kamp Bıçağı Özel El Yapımı Dövme Çelik Deri Kılıflı TS</span>
+                            </span>
+                            <span class="daily-opportunity-price">
+                                 139,<sup>90</sup> TL<span class="old-price">
+                                     199,<sup>90</sup> TL</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+    </div>
+    <a class="daily-opportunity-prev-button" id="dailyOpportunityPrevButton"></a>
+    <a class="daily-opportunity-next-button" id="dailyOpportunityNextButton"></a>
+</div>
+<!-- Daily Opportunity -->
+
+                    <div class="uiBox interesting-ads" >
+    <h3>
+        <small><a href="https://www.sahibinden.com/ilginc-ilanlar">Tüm ilginç ilanları göster</a></small>
+        İlginç İlanlar</h3>
+
+    <ul id="interestingAds">
+        <li>
+                <a title="DOĞUM GÜNÜ GAZETESİ...ÇOK BEĞENİLEN ve NADİR BULUNAN BİR ÜRÜNDÜR"
+                   href="/ilan/ikinci-el-ve-sifir-alisveris-koleksiyon-yazili-basili-urunler-dogum-gunu-gazetesi...cok-begenilen-ve-nadir-bulunan-bir-urundur-144190656/detay">
+                    <img alt="DOĞUM GÜNÜ GAZETESİ...ÇOK BEĞENİLEN ve NADİR BULUNAN BİR ÜRÜNDÜR" src="https://i0.shbdn.com/photos/19/06/56/thmb_144190656dfv.jpg"/>
+                    <span>DOĞUM GÜNÜ GAZETESİ...ÇOK BEĞENİLEN ve NADİR BULUNAN BİR ÜRÜNDÜR</span>
+                </a>
+            </li>
+        <li>
+                <a title="BEYEFENDİLİK DERSLERİ(İngilizce,Diksiyon,Giyim ve Davranış Eğt.)"
+                   href="/ilan/ozel-ders-verenler-guzel-konusma-diksiyon-beyefendilik-dersleri-ingilizce%2Cdiksiyon%2Cgiyim-ve-davranis-egt-373185768/detay">
+                    <img alt="BEYEFENDİLİK DERSLERİ(İngilizce,Diksiyon,Giyim ve Davranış Eğt.)" src="https://i0.shbdn.com/photos/18/57/68/thmb_373185768lb6.jpg"/>
+                    <span>BEYEFENDİLİK DERSLERİ(İngilizce,Diksiyon,Giyim ve Davranış Eğt.)</span>
+                </a>
+            </li>
+        <li>
+                <a title="0 km 2018 MORGAN 4/4"
+                   href="/ilan/vasita-otomobil-morgan-0-km-2018-morgan-4-4-679070051/detay">
+                    <img alt="0 km 2018 MORGAN 4/4" src="https://i0.shbdn.com/photos/07/00/51/thmb_679070051rym.jpg"/>
+                    <span>0 km 2018 MORGAN 4/4</span>
+                </a>
+            </li>
+        <li>
+                <a title="Takvim Anahtarlık - Mekanik Zaman Göstergesi -Yeni Yıl Hediyesi"
+                   href="/ilan/ikinci-el-ve-sifir-alisveris-koleksiyon-objeler-takvim-anahtarlik-mekanik-zaman-gostergesi-yeni-yil-hediyesi-755149533/detay">
+                    <img alt="Takvim Anahtarlık - Mekanik Zaman Göstergesi -Yeni Yıl Hediyesi" src="https://i0.shbdn.com/photos/14/95/33/thmb_755149533mye.jpg"/>
+                    <span>Takvim Anahtarlık - Mekanik Zaman Göstergesi -Yeni Yıl Hediyesi</span>
+                </a>
+            </li>
+        <li>
+                <a title="TÜRKİYE DE TEK X MAN KARAKTER MASKE ULTURA SİLİKON MASKE SATILIK"
+                   href="/ilan/ikinci-el-ve-sifir-alisveris-diger-her-sey-sira-disi-urunler-turkiye-de-tek-x-man-karakter-maske-ultura-silikon-maske-satilik-119666452/detay">
+                    <img alt="TÜRKİYE DE TEK X MAN KARAKTER MASKE ULTURA SİLİKON MASKE SATILIK" src="https://i0.shbdn.com/photos/66/64/52/thmb_119666452kmv.jpg"/>
+                    <span>TÜRKİYE DE TEK X MAN KARAKTER MASKE ULTURA SİLİKON MASKE SATILIK</span>
+                </a>
+            </li>
+        <li>
+                <a title="Şampiyonluk Garantili Kendinden Totemli Ev"
+                   href="/ilan/emlak-konut-satilik-sampiyonluk-garantili-kendinden-totemli-ev-338644414/detay">
+                    <img alt="Şampiyonluk Garantili Kendinden Totemli Ev" src="https://i0.shbdn.com/photos/64/44/14/thmb_338644414txx.jpg"/>
+                    <span>Şampiyonluk Garantili Kendinden Totemli Ev</span>
+                </a>
+            </li>
+        <li>
+                <a title="ÖZEL YAPIM BİR EŞİ DAHA YOK"
+                   href="/ilan/vasita-klasik-araclar-klasik-otomobiller-ozel-yapim-bir-esi-daha-yok-691935545/detay">
+                    <img alt="ÖZEL YAPIM BİR EŞİ DAHA YOK" src="https://i0.shbdn.com/photos/93/55/45/thmb_691935545z55.jpg"/>
+                    <span>ÖZEL YAPIM BİR EŞİ DAHA YOK</span>
+                </a>
+            </li>
+        </ul>
+</div><!-- Interesting Classifieds -->
+
+                    <div class="uiBox popular-products">
+                        <h3>Popüler Ürünler</h3>
+
+                        <div id='div-gpt-ad-9589712-2'>
+                            <script type='text/javascript'>
+                                googletag.cmd.push(function () {
+                                    googletag.pubads().setTargeting("language", "tr");
+                                    googletag.defineSlot('/32607536/mainpage_populer_urunler', [[835,150]], 'div-gpt-ad-9589712-2').addService(googletag.pubads());
+                                    googletag.display('div-gpt-ad-9589712-2');
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <!-- Popular Products -->
+
+                    <div id="div-gpt-ad-1526475307026-1" class="banner-left">
+    <script type="text/javascript">
+        var isMastheadEnabled = true;
+        var isMastheadPreview = location.href.indexOf('?google_preview=') != -1||location.href.indexOf('&google_preview=') != -1;
+        if(isMastheadEnabled||isMastheadPreview){
+            googletag.cmd.push(function() {
+                googletag.defineSlot('/32607536/mainpage_midcenter_w', [522, 250], 'div-gpt-ad-1526475307026-1').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-1526475307026-1');
+            });
+        }else {
+            document.getElementById("div-gpt-ad-1526475307026-1").style.display='none';
+        }
+    </script>
+</div>
+
+<!-- Banner Right -->
+<div id='div-gpt-ad-1526475307026-0' class="banner-right">
+    <script type="text/javascript">
+        if(isMastheadEnabled||isMastheadPreview){
+            googletag.cmd.push(function() {
+                googletag.defineSlot('/32607536/mainpage_midright', [300, 250], 'div-gpt-ad-1526475307026-0').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+                googletag.display('div-gpt-ad-1526475307026-0');
+            });
+        }else {
+            document.getElementById("div-gpt-ad-1526475307026-0").style.display='none';
+        }
+    </script>
+</div>
+<!-- Banner Right --><div class="uiBox most">
+                        <h3>Popüler Aramalar</h3>
+                        <ul class="popular-links vitrin-list clearfix">
+	<li><a target="_self" href="https://www.sahibinden.com/ikinci-el-ve-sifir-alisveris 
+" title="ikinci el 
+">İkinci el</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/cep-telefonu-modeller-apple-iphone-11-pro-max
+" title="iphone 11 pro max
+">iPhone 11 Pro Max</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/cep-telefonu-modeller-apple-iphone-11-pro
+" title="iphone 11 pro
+">iPhone 11 Pro</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/cep-telefonu-modeller-xiaomi-redmi-note-7
+" title="redmi note 7
+">Redmi Note 7</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/cep-telefonu-giyilebilir-teknoloji-akilli-saat-apple-watch?a106535=1239736
+" title="apple watch s5">Apple Watch S5</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/cep-telefonu-modeller-huawei-p30-lite 
+" title="p30 lite">P30 Lite</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/otomobil/ikinci-el
+" title="ikinci el araba">İkinci El Araba</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/hobi-oyuncak-rc-araclar-drone?a107414=1212141
+" title="dji drone">DJI Drone</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/anne-bebek-bebek-arabasi-puset
+" title="bebek arabası">Bebek Arabası</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/otomotiv-ekipmanlari-jant-lastik-lastik
+" title="lastik fiyatları">Lastik Fiyatları</a></li>
+</ul>
+</div>
+                    <!-- Popular Search -->
+                    <div class="uiBox most">
+                        <h3>En Çok Aranan Hizmetler</h3>
+                        <ul class="popular-links vitrin-list clearfix">
+	<li><a target="_self" href="https://www.sahibinden.com/boyaci-hizmetleri 
+" title="Boyacı 
+">Boyacı</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/evden-eve-nakliyat-hizmetleri
+" title="Evden Eve Nakliye
+">Evden Eve Nakliye</a></li>
+	<li><a target="_self" href=" https://www.sahibinden.com/yalitim-mantolama-hizmetleri
+" title="Mantolama
+">Mantolama</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/su-tesisati-hizmetleri
+" title="Su Tesisatı
+">Su Tesisatı</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/dogalgaz-tesisati-hizmetleri
+" title="Doğal Gaz Tesisatı">Doğal Gaz Tesisatı</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/oto-kaporta-boya-hizmetleri 
+" title="Oto Boya">Oto Boya</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/oto-tamir-servis-hizmetleri 
+" title="Oto Tamiri">Oto Tamiri</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/elektrikci-hizmetleri
+" title="Elektrikçi">Elektrikçi</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/cilingir-hizmetleri 
+" title="Çilingir">Çilingir</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/oto-plaka-hizmetleri 
+" title="Plaka">Plaka</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/zemin-kaplama-hizmetleri
+" title="Parke">Parke</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/banyo-mutfak-dekorasyonu-hizmetleri
+" title="Mutfak Yenileme">Mutfak Yenileme</a></li>
+</ul>
+</div>
+                    
+                    <div class="uiBox most">
+                        <h3>En Çok Aranan İş İlanları</h3>
+                        <ul class="popular-links vitrin-list clearfix">
+	<li><a target="_self" href="https://www.sahibinden.com/restoran-ve-konaklama-is-ilanlari 
+" title="Restoran ve Konaklama İş İlanları 
+">Restoran ve Konaklama</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/magazacilik-ve-perakendecilik-is-ilanlari
+" title="Mağaza ve Perakendecilik İş İlanları
+">Mağaza ve Perakendecilik</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/tekstil-ve-konfeksiyon-is-ilanlari
+" title="Tekstil ve Konfeksiyon İş İlanları
+">Tekstil ve Konfeksiyon</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/ofis-yonetimi-ve-idari-isler-is-ilanlari
+" title="Ofis Elemanı
+">Ofis Elemanı</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/satis-is-ilanlari 
+" title="Satış İş İlanları">Satış</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/musteri-hizmetleri-is-ilanlari 
+" title="Müşteri Hizmetleri İş İlanları">Müşteri Hizmetleri</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/is-ilanlari/istanbul 
+" title="İstanbul İş İlanları">İstanbul İş İlanları</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/is-ilanlari/ankara 
+" title="Ankara İş İlanları">Ankara İş İlanları</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/is-ilanlari/izmir 
+" title="İzmir İş İlanları">İzmir İş İlanları</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/is-ilanlari/adana 
+" title="Adana İş İlanları">Adana İş İlanları</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/is-ilanlari/bursa 
+" title="Bursa İş İlanları">Bursa İş İlanları</a></li>
+	<li><a target="_self" href="https://www.sahibinden.com/is-ilanlari/antalya 
+" title="Antalya İş İlanları">Antalya İş İlanları</a></li>
+</ul>
+</div>
+                </div>
+            <!-- .homepage-content -->
+
+        </div>
+        <!-- .content -->
+    </div>
+
+    <script type="text/html" id="browserUpdateTemplate">
+        <div id="topMessageContainer">
+            <div id="browserUpdate" class="topMessage">
+                <a href="" id="browserUpdateClose" class="browser-update-close">Kapat</a>
+                <p><strong>Internet Explorer tarayıcısının 9.0 ve daha eski sürümlerini desteklememekteyiz. </strong>sahibinden.com’ u doğru görüntüleyebilmek tarayıcınızı güncelleyebilirsiniz,<br />güncelleyemiyorsanız başka bir tarayıcıyı <span>ücretsiz</span> yükleyebilirsiniz.</p><ul>
+                    <li>
+                        <a class="browser-ie" href="http://windows.microsoft.com/en-US/windows/downloads/internet-explorer">
+                            <span>Internet Explorer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="browser-firefox" href="http://getfirefox.com/">
+                            <span>Firefox</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="browser-chrome" href="http://www.google.com/chrome/">
+                            <span>Google Chrome</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </script>
+    <!-- Browser Support Information Script - This Method is for Google -->
+
+</div>
+
+<div class="footerContainer footer-container">
+<div class="footer phdef pvdef clearfix">
+    <ul class="footerMenu footer-menu">
+        <li>
+            <h2>Kurumsal</h2>
+            <ul>
+                <li>
+                    <a href="https://www.sahibinden.com/kurumsal/hakkimizda/">
+                        Hakkımızda</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/kurumsal/reklam-filmleri/">
+                        Medya İletişimi ve Görseller</a>
+                </li>
+                <li>
+                    <a href="https://insankaynaklari.sahibinden.com/">
+                        İnsan Kaynakları</a>
+                </li>
+                <li>
+                    <a rel="nofollow no-follow" href="https://www.sahibinden.com/kurumsal/iletisim/">İletişim</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h2>Hizmetlerimiz</h2>
+            <ul>
+                <li>
+                    <a href="https://www.sahibinden.com/doping-tanitim/">
+                        Doping</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/guvenli-e-ticaret">
+                        Güvenli e-Ticaret (GeT)</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/toplu-urun-girisi">
+                        Toplu Ürün Girişi</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/reklam/">
+                        Reklam</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/sahibinden-dogal-reklam/">
+                        sahibinden Doğal Reklam</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/mobil">
+                        Mobil</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h2>Mağazalar</h2>
+            <ul>
+                <li>
+                    <a href="https://banaozel.sahibinden.com/magazam">
+                        Mağazam</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/magaza-kategori-secimi">
+                        Mağaza Açmak İstiyorum</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/neden-magaza">
+                        Neden Mağaza?</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/magaza-fiyatlari">Maliyeti Nedir?</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/emlakofisim/">
+                        Emlak Ofisim</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/galerim/">
+                        Galerim</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h2>Gizlilik ve Kullanım</h2>
+            <ul>
+                <li>
+                    <a href="https://www.sahibinden.com/guvenli-alisverisin-ipuclari/">
+                        Güvenli Alışverişin İpuçları</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/sozlesmeler/">
+                        Sözleşmeler ve Kurallar</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/sozlesmeler/bireysel-uyelik-sozlesmesi-0">
+                        Üyelik Sözleşmesi</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/sozlesmeler/kullanim-kosullari-35">
+                        Kullanım Koşulları</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/site-haritasi">
+                        Site Haritası</a>
+                </li>
+                <li>
+                    <a href="https://www.sahibinden.com/sozlesmeler/kisisel-verilerin-korunmasi-58">
+                        Kişisel Verilerin Korunması</a>
+                </li>
+                <li>
+                    <a href="https://yardim.sahibinden.com/hc/tr">
+                        Yardım ve İşlem Rehberi</a>
+                </li>
+            </ul>
+        </li>
+        <li class="followUs follow-us">
+            <h2>Bizi Takip Edin</h2>
+            <ul>
+                <li>
+                    <a title="Facebook" target="_blank"
+                       href="https://www.facebook.com/sahibindencom">Facebook</a>
+                </li>
+                <li>
+                    <a title="Twitter" target="_blank"
+                       href="https://www.twitter.com/sahibindencom">Twitter</a>
+                </li>
+                <li>
+                    <a title="Linkedin" target="_blank"
+                       href="https://www.linkedin.com/company/sahibinden-com">Linkedin</a>
+                </li>
+                <li>
+                    <a title="Instagram" target="_blank"
+                       href="https://www.instagram.com/sahibindencom/">Instagram</a>
+                </li>
+                <li>
+                    <a title="Youtube" target="_blank"
+                       href="https://www.youtube.com/user/sahibindencom">Youtube</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="clearfix">
+        <ul class="contact-menu">
+            <li class="call-center">
+                <p>7/24 Müşteri Hizmetleri</p>
+                <span>0 850 222 44 44</span>
+            </li>
+            <li class="help-center">
+                <p>Yardım Merkezi</p>
+                <a href="https://yardim.sahibinden.com/hc/tr">yardim.sahibinden.com</a>
+            </li>
+            <li class="store-logos">
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sahibinden" class="store-logo googleplay"></a><a target="_blank" href="https://itunes.apple.com/tr/app/sahibinden.com-mobil/id418535251?mt=8" class="store-logo apple"></a>
+            </li>
+        </ul>
+    </div>
+
+    <p class="warningText warning-text">
+        sahibinden.com'da yer alan kullanıcıların oluşturduğu tüm içerik, görüş ve bilgilerin doğruluğu, eksiksiz ve değişmez olduğu, yayınlanması ile ilgili yasal yükümlülükler içeriği oluşturan kullanıcıya aittir. Bu içeriğin, görüş ve bilgilerin yanlışlık, eksiklik veya yasalarla düzenlenmiş kurallara aykırılığından sahibinden.com hiçbir şekilde sorumlu değildir. Sorularınız için ilan sahibi ile irtibata geçebilirsiniz. <br /> Yer Sağlayıcı Belge No : 581</p>
+
+    <div class="postClassifiedFreeText post-classified-free-text">
+        <p>(*) Bireysel üyeler için, limitli adetlerde, belirli kategorilerde ve belirli kampanyalarda</p>
+        <a rel="nofollow" href="/en" title="English" class="language-selection-link ">
+                    English</a>
+            </div>
+    <ul class="mobil footer-nav disable">
+        <li><a href="/">Anasayfa</a></li>
+        <li><a href="">Masaüstü Görünüm</a></li>
+    </ul>
+    <p class="copyright mobil">
+        Copyright © 2000-2019 sahibinden.com</p>
+</div>
+</div>
+<script id="gaPageViewTrackingData" type="text/javascript">
+        var pageTrackData = {"trackPageview":[],"customVars":[{"index":1,"name":"site_preference","value":"desktop","scope":2}],"trackEvent":[],"dmpData":[],"transactionObject":null,"transactionUserItem":null,"trackCurrentPage":true,"dc":"gayrettepe","homepageDesign":null,"route":"homepage","view":"homepage","viewName":"/","query":"","categories":[],"locations":[],"classified":null,"searchResult":null,"storeSubdomain":null,"successfulPaymentWithSavedCC":false};
+    </script>
+    <div id="gaPageViewTrackingJson" data-json="{&quot;trackPageview&quot;:[],&quot;customVars&quot;:[{&quot;index&quot;:1,&quot;name&quot;:&quot;site_preference&quot;,&quot;value&quot;:&quot;desktop&quot;,&quot;scope&quot;:2}],&quot;trackEvent&quot;:[],&quot;dmpData&quot;:[],&quot;transactionObject&quot;:null,&quot;transactionUserItem&quot;:null,&quot;trackCurrentPage&quot;:true,&quot;dc&quot;:&quot;gayrettepe&quot;,&quot;homepageDesign&quot;:null,&quot;route&quot;:&quot;homepage&quot;,&quot;view&quot;:&quot;homepage&quot;,&quot;viewName&quot;:&quot;/&quot;,&quot;query&quot;:&quot;&quot;,&quot;categories&quot;:[],&quot;locations&quot;:[],&quot;classified&quot;:null,&quot;searchResult&quot;:null,&quot;storeSubdomain&quot;:null,&quot;successfulPaymentWithSavedCC&quot;:false}"></div>
+<script type="text/javascript">
+    (function () {
+        var cookiestring = RegExp("vid=[^;]+").exec(document.cookie),
+                vid = ~~(unescape(!!cookiestring ? cookiestring.toString().replace(/^[^=]+/, "").replace("=", "") : "")),
+                v = (29 < vid && vid < 40) ? 'Test' : '',
+                t = parseInt(new Date().getTime() / 1000 / 60 / 30),
+                an = document.createElement('script'),
+                scr = document.getElementsByTagName('script')[0];
+
+        an.type = 'text/javascript';
+        an.async = true;
+        an.src = 'https://static.sahibinden.com/assets/analytics' + v + ':1.js?t=' + t;
+        scr.parentNode.insertBefore(an, scr);
+    })();
+</script>
+<script type="text/javascript">
+    var pp_gemius_identifier = 'bPeQ_0eeWvPc3Iqa7jJQEcUGjy2NXYOoUvs1RDjCPDH.v7',
+        initial_pp_gemius_identifier = 'bPeQ_0eeWvPc3Iqa7jJQEcUGjy2NXYOoUvs1RDjCPDH.v7';
+</script>
+<script src="https://s0.shbdn.com/assets/prebid:1cb6efb1bdb3f2e426be9ab7cf4cc300.js" type="text/javascript"> </script>
+<script src="https://s0.shbdn.com/assets/gemius:fe0a55a10380725904fad1feea2c7ef3.js" type="text/javascript"> </script>
+<script src="https://s0.shbdn.com/assets/prebid:1cb6efb1bdb3f2e426be9ab7cf4cc300.js" type="text/javascript"> </script>
+<script src="https://s0.shbdn.com/assets/common:2bbf72e64cdb33ddc22d2c0dd84dbc28.js" type="text/javascript"> </script>
+<script src="https://s0.shbdn.com/assets/searchSuggestion:0df09a26628f4c5d8caa420aefe7e0d0.js" type="text/javascript"> </script>
+<script src="https://s0.shbdn.com/assets/homepage:164c8cca5fe821dc725e7e3695ffd4b4.js" type="text/javascript"> </script>
+<script src="https://s0.shbdn.com/assets/lastScripts:cfa5d49129048f4e398f292f2accea2c.js" type="text/javascript"> </script>
+</body>
+</html>

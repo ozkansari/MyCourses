@@ -1,0 +1,43 @@
+<html>
+
+	<head>
+		<title>Oz Mebis</title>
+	</head>
+	
+	<body>
+		Gercek Mebis Burada Dostlar
+		
+		<h1> Ogrenciler </h1>
+		<ul>
+		<#list OGRENCI_LISTESI as OGR>
+		   <li> 
+		      ${OGR_index+1}-) ${OGR} 
+		      <a href="/mebis/ogrenci/sil?id=${OGR_index}">
+		         sil
+		      </a>
+		   </li>
+		</#list>
+		</ul>
+		
+		<h1> Ogrenci Ekle</h1>
+		<form action="/mebis/ogrenci/ekle" 
+		   method="post">
+		   <input type="text" name="isim" />
+		   <input type="submit" value="Ekle"/>
+		</form>
+		<br/>
+		<br/>
+	</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
