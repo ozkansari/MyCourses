@@ -1,4 +1,4 @@
-# ILERI JAVA UYGULAMALARI : 2019 - 2020 GUZ (Ekim 2019 - Ocak 2020)
+# ILERI JAVA UYGULAMALARI : 2019 - 2020 BAHAR (Subat 2020 - Haziran 2020)
 
 Dersler Pazartesi 17:30-19:30 arasinda blok halde yapilacaktir.
 

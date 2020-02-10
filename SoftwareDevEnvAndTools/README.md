@@ -1,4 +1,4 @@
-# YAZILIM GELISTIRME ORTAM ve ARACLARI : 2019 - 2020 GUZ (Ekim 2019 - Ocak 2020)
+# YAZILIM GELISTIRME ORTAM ve ARACLARI : 2019 - 2020 BAHAR (Subat 2020 - Haziran 2020)
 
 Dersler Pazartesi 19:45-21:45 arasinda blok halde yapilacaktir.
 
