@@ -6,8 +6,6 @@ Derse mazeretiniz yoksa devam zorunludur. Derse devam ve derse katilimdan not ve
 
 Notlandirma: Derse Katilim + Mini Sinavlar + Lab Calismasi + Odevler + Projeler + Yazili Sinav
 
-https://classroom.google.com/c/NjE3NTQ1NzA4OTRa
-
 Kod: zrlvfql (Okul hesabi ile degil, kisisel hesabinizi kullanininiz)
 
 ## DUYURULAR
