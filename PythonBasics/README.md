@@ -1,3 +1,3 @@
 # Python Basics
 
-[Python Basics Course Page](https://github.com/ozkansari/python_programlama)
+[Python Basics Github Page](https://github.com/ozkansari/python_programlama)
